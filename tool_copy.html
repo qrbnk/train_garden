@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Train Garden | Skills Analysis (Demo)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.21/mammoth.browser.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { "primary": "#091747", "emerald-700": "#047857" } } } }
+    </script>
+    <style>
+        .evidence-highlight { background-color: #dcfce7; font-weight: 700; padding: 0 2px; border-radius: 2px; }
+        .demo-badge { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .7; } }
+    </style>
+</head>
+<body class="bg-[#f8fafc] font-['Inter'] text-slate-900 pt-20">
+    
+    <nav class="fixed top-0 w-full bg-white border-b border-slate-200 z-[60]">
+        <div class="flex justify-between items-center px-6 h-16 max-w-[1600px] mx-auto">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="flex items-center">
+<img alt="Train Garden Logo" class="h-6 md:h-7 w-auto" src="logo.png"/>
+
+                </a>
+                <div class="hidden sm:flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
+                    <span class="w-2 h-2 bg-amber-500 rounded-full demo-badge"></span>
+                    <span class="text-[10px] font-black text-amber-700 uppercase tracking-tight">Technical Demo v1.2</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex gap-8 text-sm font-bold items-center pt-1">
+                <a href="index.html" class="text-emerald-700 border-b-2 border-emerald-700 pb-1.5">Engine</a>
+                <a href="resources_page.html" class="text-slate-500 hover:text-primary transition-colors pb-1.5">Resources Hub</a>
+                <button onclick="showDemoInfo()" class="bg-slate-100 text-slate-500 hover:bg-primary hover:text-white p-2 rounded-lg transition-all">
+                    <span class="material-symbols-outlined text-sm">info</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10 pb-20">
+        <div class="lg:col-span-2 space-y-8">
+            <header>
+                <h1 class="text-4xl font-black text-primary tracking-tight">Skills <span class="text-emerald-700">Analysis</span></h1>
+                <p class="text-slate-500 mt-2">Identify the most profitable green career transition based on your specific experience.</p>
+            </header>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-2">
+                    <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Role Comparison A</label>
+                    <select id="role-select-1" class="w-full p-4 rounded-xl border-slate-200 bg-white shadow-sm text-sm font-semibold outline-none focus:ring-2 focus:ring-emerald-500">
+                        <option value="energy-adviser">Trainee Energy Adviser (Entry)</option>
+                        <option value="env-tech">Environmental Technician (Entry)</option>
+                        <option value="sustainability-manager">Sustainability Manager</option>
+                        <option value="retrofit-coord">Retrofit Coordinator</option>
+                        <option value="landscaping" selected>Sustainable Landscaping</option>
+                        <option value="circular-economy">Circular Economy Strategist</option>
+                    </select>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Role Comparison B</label>
+                    <select id="role-select-2" class="w-full p-4 rounded-xl border-slate-200 bg-white shadow-sm text-sm font-semibold outline-none focus:ring-2 focus:ring-emerald-500">
+                        <option value="energy-adviser" selected>Trainee Energy Adviser (Entry)</option>
+                        <option value="env-tech">Environmental Technician (Entry)</option>
+                        <option value="sustainability-manager">Sustainability Manager</option>
+                        <option value="retrofit-coord">Retrofit Coordinator</option>
+                        <option value="landscaping">Sustainable Landscaping</option>
+                        <option value="circular-economy">Circular Economy Strategist</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="drop-zone" class="bg-white rounded-2xl p-10 border-2 border-dashed border-slate-200 text-center cursor-pointer hover:border-emerald-500 hover:bg-emerald-50/30 transition-all group">
+                <input type="file" id="file-input" class="hidden" accept=".pdf,.docx"/>
+                <div id="upload-idle">
+                    <span class="material-symbols-outlined text-slate-300 text-5xl mb-2">upload_file</span>
+                    <h3 class="text-lg font-bold text-slate-700">Upload CV</h3>
+                    <p class="text-xs text-slate-400">PDF or Word</p>
+                </div>
+                <div id="upload-success" class="hidden text-emerald-700 font-bold">
+                    <span class="material-symbols-outlined text-4xl mb-2">verified</span>
+                    <p id="file-name" class="text-md"></p>
+                </div>
+            </div>
+
+            <button id="analyze-btn" class="w-full bg-primary text-white py-5 rounded-2xl font-black text-lg hover:bg-emerald-800 shadow-xl transition-all">
+                Run Skills Analysis
+            </button>
+        </div>
+
+        <aside class="space-y-6">
+            <h2 class="font-black text-slate-400 uppercase text-[10px] tracking-[0.2em]">Live Comparisons</h2>
+            <div id="results-area" class="space-y-4">
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 text-center opacity-50">
+                    <p class="text-slate-400 text-sm">Comparison results will appear here after analysis.</p>
+                </div>
+            </div>
+            
+            <div id="contact-cta" class="hidden bg-emerald-900 p-6 rounded-2xl text-white shadow-2xl">
+                <h3 class="font-bold text-lg mb-2 text-emerald-400">Discuss Pathways</h3>
+                <p class="text-xs text-emerald-100/70 mb-4 leading-relaxed">Book a session with a Train Garden advisor to bridge your skill gaps.</p>
+                <button id="reach-out-btn" class="w-full bg-white text-primary py-3 rounded-xl font-bold text-sm hover:bg-emerald-50 transition-colors">
+                    Reach Out To Us
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <div id="demo-modal" class="hidden fixed inset-0 bg-primary/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="material-symbols-outlined text-amber-500 text-4xl">lab_profile</span>
+                <h3 class="text-2xl font-black text-primary">Prototype Info</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
+                <p>This is a <strong>Technical Demo Tool</strong> created for Train Garden stakeholders. Data provided (salaries and market demand) are representative estimations for prototype purposes.</p>
+            </div>
+            <button onclick="closeDemoModal()" class="w-full mt-8 bg-slate-900 text-white py-4 rounded-xl font-bold">Understood</button>
+        </div>
+    </div>
+
+    <div id="skill-modal" class="hidden fixed inset-0 bg-primary/40 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl">
+            <div class="flex justify-between items-center mb-6">
+                <span class="text-[10px] font-black bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full uppercase">Verified Match</span>
+                <button onclick="closeModal()" class="material-symbols-outlined text-slate-300 hover:text-slate-900 transition-colors">close</button>
+            </div>
+            <h3 id="modal-skill-name" class="text-2xl font-black text-primary mb-4 uppercase"></h3>
+            <div id="modal-evidence" class="bg-slate-50 p-5 rounded-2xl text-sm italic text-slate-600 border border-slate-100"></div>
+            <button onclick="closeModal()" class="w-full mt-8 bg-primary text-white py-4 rounded-xl font-bold">Return to Analysis</button>
+        </div>
+    </div>
+
+    <script>
+        // DEMO MODAL HELPERS
+        window.showDemoInfo = () => document.getElementById('demo-modal').classList.remove('hidden');
+        window.closeDemoModal = () => document.getElementById('demo-modal').classList.add('hidden');
+
+        // ENGINE LOGIC
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+        let extractedText = "";
+
+        const demoData = {
+            "energy-adviser": { role: "Trainee Energy Adviser", salary: "£24k - £30k", demand: "High", skills: ["customer service", "energy bills", "insulation", "domestic heating", "communication"] },
+            "env-tech": { role: "Environmental Technician", salary: "£26k - £34k", demand: "Medium", skills: ["soil sampling", "data collection", "health and safety", "fieldwork", "gis"] },
+            "sustainability-manager": { role: "Sustainability Manager", salary: "£45k - £65k", demand: "High", skills: ["esg reporting", "iso14001", "net zero strategy", "stakeholder engagement", "ghg protocol"] },
+            "retrofit-coord": { role: "Retrofit Coordinator", salary: "£42k - £58k", demand: "Critical", skills: ["pas 2035", "thermal bridging", "heat loss calculations", "ventilation strategy", "project management"] },
+            "landscaping": { role: "Sustainable Landscaping", salary: "£28k - £38k", demand: "High", skills: ["suds", "native planting", "soil health", "irrigation", "permeable"] },
+            "circular-economy": { role: "Circular Economy Strategist", salary: "£50k - £80k", demand: "High", skills: ["lifecycle assessment", "resource efficiency", "extended producer responsibility", "supply chain mapping", "net zero"] }
+        };
+
+        // File handling
+        document.getElementById('drop-zone').onclick = () => document.getElementById('file-input').click();
+        document.getElementById('file-input').onchange = async (e) => {
+            const file = e.target.files[0]; if (!file) return;
+            document.getElementById('file-name').innerText = file.name;
+            document.getElementById('upload-idle').classList.add('hidden');
+            document.getElementById('upload-success').classList.remove('hidden');
+            extractedText = file.type === "application/pdf" ? await extractPdf(file) : await extractDocx(file);
+        };
+        async function extractPdf(file) {
+            const pdf = await pdfjsLib.getDocument(await file.arrayBuffer()).promise;
+            let t = ""; for(let i=1; i<=pdf.numPages; i++) { t += (await (await pdf.getPage(i)).getTextContent()).items.map(s=>s.str).join(" "); }
+            return t.toLowerCase();
+        }
+        async function extractDocx(file) { return (await mammoth.extractRawText({arrayBuffer: await file.arrayBuffer()})).value.toLowerCase(); }
+
+        // Analysis Comparison Logic
+        document.getElementById('analyze-btn').onclick = () => {
+            if(!extractedText) return alert("Upload a CV first.");
+            const r1 = document.getElementById('role-select-1').value;
+            const r2 = document.getElementById('role-select-2').value;
+            
+            document.getElementById('results-area').innerHTML = "";
+            document.getElementById('contact-cta').classList.remove('hidden');
+
+            [r1, r2].forEach(roleKey => {
+                const data = demoData[roleKey];
+                const matched = data.skills.filter(s => extractedText.includes(s.toLowerCase()));
+                const gaps = data.skills.filter(s => !extractedText.includes(s.toLowerCase()));
+                const score = Math.round(((data.skills.length - gaps.length) / data.skills.length) * 100);
+
+                const card = `
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-xl border-l-4 ${score > 50 ? 'border-l-emerald-500' : 'border-l-rose-400'}">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <h4 class="font-black text-primary text-xs uppercase">${data.role}</h4>
+                                <p class="text-[10px] font-bold text-emerald-600">${data.salary}</p>
+                            </div>
+                            <span class="text-[10px] font-black bg-slate-100 px-2 py-1 rounded">${score}% Match</span>
+                        </div>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-[8px] font-bold bg-primary text-white px-2 py-0.5 rounded uppercase">Demand: ${data.demand}</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex flex-wrap gap-1">
+                                ${matched.map(s => `<button onclick="showEvidence('${s}')" class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded text-[9px] font-bold border border-emerald-100">${s}</button>`).join('')}
+                            </div>
+                            <div class="flex flex-wrap gap-1">
+                                ${gaps.map(g => `<span class="bg-rose-50 text-rose-500 px-2 py-1 rounded text-[9px] font-bold border border-rose-50 opacity-50 uppercase">${g}</span>`).join('')}
+                            </div>
+                        </div>
+                        <a href="resources_page.html?search=${encodeURIComponent(gaps[0] || data.skills[0])}" class="mt-4 block text-center text-violet-600 text-[9px] font-black uppercase tracking-widest border-t pt-3 hover:text-emerald-700">Find Skills →</a>
+                    </div>
+                `;
+                document.getElementById('results-area').innerHTML += card;
+            });
+
+            document.getElementById('reach-out-btn').onclick = () => {
+                const mailBody = `Hi Train Garden,\n\nI just compared ${demoData[r1].role} and ${demoData[r2].role} for my career transition.\n\nMy Match Scores: ${demoData[r1].role} (${Math.round(((demoData[r1].skills.length - demoData[r1].skills.filter(s => !extractedText.includes(s.toLowerCase())).length) / demoData[r1].skills.length) * 100)}%) vs ${demoData[r2].role} (${Math.round(((demoData[r2].skills.length - demoData[r2].skills.filter(s => !extractedText.includes(s.toLowerCase())).length) / demoData[r2].skills.length) * 100)}%).`;
+                window.location.href = `mailto:thomas@traingarden.co.uk?subject=Demo Career Comparison&body=${encodeURIComponent(mailBody)}`;
+            };
+        };
+
+        window.showEvidence = (skill) => {
+            const idx = extractedText.indexOf(skill.toLowerCase());
+            const context = extractedText.substring(Math.max(0, idx - 65), Math.min(extractedText.length, idx + 65));
+            document.getElementById('modal-skill-name').innerText = skill;
+            document.getElementById('modal-evidence').innerHTML = `"...${context.replace(skill.toLowerCase(), `<span class="evidence-highlight">${skill.toLowerCase()}</span>`)}..."`;
+            document.getElementById('skill-modal').classList.remove('hidden');
+        };
+        window.closeModal = () => document.getElementById('skill-modal').classList.add('hidden');
+    </script>
+</body>
+</html>

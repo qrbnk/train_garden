@@ -1,0 +1,58 @@
+
+    <html>
+    <head>
+        <style>
+            body { font-family: 'Inter', sans-serif; padding: 40px; color: #1e293b; background: #fff; line-height: 1.7; }
+            h1 { color: #091747; font-size: 24px; margin-bottom: 25px; }
+            .day-card { 
+                background: #f8fafc; border: 1px solid #e2e8f0; padding: 25px; 
+                border-radius: 20px; margin-bottom: 20px; list-style: none;
+                transition: transform 0.2s;
+            }
+            .day-card:hover { transform: translateY(-3px); border-color: #091747; }
+            .tag { 
+                font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 6px; 
+                text-transform: uppercase; margin-right: 10px; display: inline-block;
+                margin-bottom: 10px;
+            }
+            .tag-learn { background: #dbeafe; color: #1e40af; }
+            .tag-read { background: #fef3c7; color: #92400e; }
+            .tag-apply { background: #dcfce7; color: #166534; }
+        </style>
+    </head>
+    <body>
+        <h1>🚀 Career Accelerator: Create A 5-Day</h1>
+        <div id="roadmap-container"><p>Title: 5-Day Volunteer Itinerary to Gain Skills in Environmental Conservation and Community Engagement in London, 2026</p>
+<p><strong>Day 1:</strong>
+- LEARN: Study the basics of environmental conservation, focusing on urban ecosystems in London. Resources: TCV in London (tcv.org.uk/london/) and Environmental Volunteering (environmentjob.co.uk/volunteering).
+- READ: Read about the City of London's sustainability initiatives to understand the current state of environmental conservation within the city (cityoflondon.gov.uk).
+- APPLY: Sign up for a community gardening project with TCV in a local park in London to gain hands-on experience and learn practical conservation skills.</p>
+<p><strong>Day 2:</strong>
+- LEARN: Study about biodiversity, focusing on London's unique flora and fauna. Resources: TCV in London (tcv.org.uk/london/) and Environmental Volunteering (environmentjob.co.uk/volunteering).
+- READ: Read news articles on Parks for London to stay updated about the state of parks and green spaces within London (parksforlondon.org.uk).
+- APPLY: Assist in a wildlife survey or habitat management project organized by Parks for London, gaining firsthand experience in biodiversity conservation.</p>
+<p><strong>Day 3:</strong>
+- LEARN: Study waste management and recycling practices in urban environments, focusing on London's initiatives. Resources: TCV in London (tcv.org.uk/london/) and Environmental Volunteering (environmentjob.co.uk/volunteering).
+- READ: Follow the London Environmental Network for updates on waste management policies and events (londonenvironment.net).
+- APPLY: Join a cleanup event organized by the London Environmental Network, focusing on collecting and sorting recyclable materials to understand waste management processes better.</p>
+<p><strong>Day 4:</strong>
+- LEARN: Study community engagement strategies in environmental conservation. Resources: TCV in London (tcv.org.uk/london/) and Environmental Volunteering (environmentjob.co.uk/volunteering).
+- READ: Read case studies on successful community engagement projects organized by Parks for London (parksforlondon.org.uk).
+- APPLY: Organize a community workshop or event focused on environmental education, partnering with local schools or community centers to engage the public in conservation efforts.</p>
+<p><strong>Day 5:</strong>
+- LEARN: Study advocacy and policy change in the context of urban environmental conservation. Resources: TCV in London (tcv.org.uk/london/) and Environmental Volunteering (environmentjob.co.uk/volunteering).
+- READ: Read about current environmental policies and initiatives within the City of London (cityoflondon.gov.uk).
+- APPLY: Collaborate with local organizations to draft a proposal for an environmental policy change or initiative, presenting it to city council members or relevant authorities.</p></div>
+        <script>
+            document.querySelectorAll('li').forEach(item => {
+                item.classList.add('day-card');
+                let content = item.innerHTML;
+                if(content.includes('LEARN')) content = '<span class="tag tag-learn">Course</span>' + content;
+                if(content.includes('READ')) content = '<span class="tag tag-read">Insight</span>' + content;
+                if(content.includes('APPLY')) content = '<span class="tag tag-apply">Action</span>' + content;
+                item.innerHTML = content;
+            });
+        </script>
+    </body>
+    </html>
+    

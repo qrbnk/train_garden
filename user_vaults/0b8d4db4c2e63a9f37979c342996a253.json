@@ -1,0 +1,93 @@
+{
+  "user_id": "0b8d4db4c2e63a9f37979c342996a253",
+  "email": "brandon22@test.com",
+  "name": "brandon",
+  "first_seen": "2026-07-31T15:07:07.017341",
+  "last_seen": "2026-07-31T15:11:36.147082",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Electrical system design and installation",
+    "Risk assessment and mitigation"
+  ],
+  "skill_sources": {
+    "Electrical system design and installation": [
+      {
+        "type": "inferred",
+        "detail": "Licensed Electrician — Understanding of electrical systems can be applied to designing and installing renewable energy infrastructure in a sustainability role.",
+        "ts": "2026-07-31T15:11:36.067088"
+      }
+    ],
+    "Risk assessment and mitigation": [
+      {
+        "type": "inferred",
+        "detail": "OSHA 30 Safety — Knowledge of workplace safety regulations can inform risk assessments and mitigation strategies in a sustainability context, such as ensuring safe installation of solar panels or managing environmental hazards.",
+        "ts": "2026-07-31T15:11:36.067156"
+      }
+    ]
+  },
+  "cv_summary": "ALEXANDER R. RIVERA\nNABCEP CERTIFIED LEAD SOLAR TECHNICIAN\n📍 Austin, TX 78745\n📱 (512) 555-0194\n✉️ a.rivera.solar@example.com\n🔗 linkedin.com/in/alex-rivera-pv\nNABCEP PVIP Certified\nOSHA 30 Safety\nLicensed Electrician\nProfessional Profile: Resourceful and safety-focused Lead Solar Installation Technic",
+  "messages": [],
+  "reports": [
+    {
+      "id": "b510ad3c-5d5d-4311-ab15-a45768150d80",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785507096/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-31 15:11",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "fca34fe0-de3f-4609-8bad-d0279a7e5be1",
+      "name": "solar_installation_technician_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-31 15:11"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "",
+  "experience": [],
+  "how_heard": "Event",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Licensed Electrician",
+      "skill": "Electrical system design and installation",
+      "relevance": "Understanding of electrical systems can be applied to designing and installing renewable energy infrastructure in a sustainability role."
+    },
+    {
+      "source": "OSHA 30 Safety",
+      "skill": "Risk assessment and mitigation",
+      "relevance": "Knowledge of workplace safety regulations can inform risk assessments and mitigation strategies in a sustainability context, such as ensuring safe installation of solar panels or managing environmental hazards."
+    }
+  ]
+}

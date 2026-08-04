@@ -1,0 +1,131 @@
+{
+  "user_id": "9b579b935e949b5841c0832abbe5ad0e",
+  "email": "brandon@test.com",
+  "name": "Brandon",
+  "first_seen": "2026-07-31T12:00:26.982906",
+  "last_seen": "2026-07-31T12:21:17.734250",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Project delivery",
+    "Regulatory literacy",
+    "Data analysis/interpretation"
+  ],
+  "skill_sources": {
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Decade of comprehensive experience in installation, maintenance, and optimization of photovoltaic systems — The ability to manage complex projects from start to finish is highly relevant to sustainability roles, where professionals often ov",
+        "ts": "2026-07-31T12:03:17.371575"
+      },
+      {
+        "type": "inferred",
+        "detail": "Decade of comprehensive experience in the installation, maintenance, and optimization of photovoltaic systems — Experience managing complex installations and optimizations can translate to delivering projects with clear goals and timelines ",
+        "ts": "2026-07-31T12:21:17.659778"
+      }
+    ],
+    "Regulatory literacy": [
+      {
+        "type": "inferred",
+        "detail": "Adept at enhancing energy production — Understanding how to optimize energy production within regulatory frameworks can be applied to navigating complex sustainability regulations and policies.",
+        "ts": "2026-07-31T12:03:17.371733"
+      },
+      {
+        "type": "inferred",
+        "detail": "Adept at enhancing energy production — Understanding of regulations and standards related to energy production can be applied to navigating regulatory frameworks in a sustainability role.",
+        "ts": "2026-07-31T12:21:17.659887"
+      }
+    ],
+    "Data analysis/interpretation": [
+      {
+        "type": "inferred",
+        "detail": "Decade of comprehensive experience in the installation, maintenance, and optimization of photovoltaic systems — Hands-on experience with monitoring and optimizing energy production can translate to analyzing and interpreting data related to",
+        "ts": "2026-07-31T12:21:17.659897"
+      }
+    ]
+  },
+  "cv_summary": "\n\n\n\nETHANMARTINEZ\nSolar Technician\nsupport@qwikresume.com\n(123) 456 7899\nLos Angeles\nwww.qwikresume.com\nPROFESSIONAL SUMMARY\nSolar Technician with a decade of comprehensive experience in the \ninstallation, maintenance, and optimization of photovoltaic systems. \nAdept at enhancing energy producti",
+  "messages": [],
+  "reports": [
+    {
+      "id": "a198aa85-bd08-47cd-bb3c-0f5a86ad13cf",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785496877/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-31 12:21",
+      "pinned": false
+    },
+    {
+      "id": "33ff1846-a534-483f-9d88-a08b850172ee",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785495797/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-31 12:03",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "1b1969b1-afe3-4cd3-8d6f-c00b6c984566",
+      "name": "solar-technician-1591336684.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-31 12:20"
+    },
+    {
+      "id": "e69c3696-9a79-49c6-a318-30ba85e853ff",
+      "name": "solar-technician-1591336684.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-31 12:02"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "nw25ab",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "",
+  "experience": [],
+  "how_heard": "Event",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Decade of comprehensive experience in the installation, maintenance, and optimization of photovoltaic systems",
+      "skill": "Project delivery",
+      "relevance": "Experience managing complex installations and optimizations can translate to delivering projects with clear goals and timelines in a sustainability role."
+    },
+    {
+      "source": "Adept at enhancing energy production",
+      "skill": "Regulatory literacy",
+      "relevance": "Understanding of regulations and standards related to energy production can be applied to navigating regulatory frameworks in a sustainability role."
+    },
+    {
+      "source": "Decade of comprehensive experience in the installation, maintenance, and optimization of photovoltaic systems",
+      "skill": "Data analysis/interpretation",
+      "relevance": "Hands-on experience with monitoring and optimizing energy production can translate to analyzing and interpreting data related to sustainability metrics."
+    }
+  ],
+  "location_radius_miles": 12.0
+}

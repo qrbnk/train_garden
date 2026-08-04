@@ -1,0 +1,36 @@
+[
+  {
+    "id": "cfc8506a-0176-423c-9e52-0277e6ff9dd6",
+    "text": "0ba5d33e12a768864a8c4b5fbf15e80b asked for help with a candidate for \"renewables-electrical-installer\" (candidate 284c38140faac88ceb8ba0d47209281c)",
+    "meta": {
+      "company_id": "0ba5d33e12a768864a8c4b5fbf15e80b",
+      "role_id": "6ed302f2-a47b-4a66-850b-647e764ff0c4",
+      "candidate_user_id": "284c38140faac88ceb8ba0d47209281c",
+      "note": ""
+    },
+    "ts": "2026-07-31T11:44:14.871955",
+    "acknowledged": false
+  },
+  {
+    "id": "72ffbf97-187a-498d-867e-40b384b6f641",
+    "text": "A partner organisation connected candidate 284c38140faac88ceb8ba0d47209281c to \"Volunteering Solar\".",
+    "meta": {
+      "partner_id": "661e458a49b7bcbc39cfa9f65abf9f79",
+      "resource_id": "a06b8a90-27d4-44b5-856b-8277c6d22688",
+      "candidate_user_id": "284c38140faac88ceb8ba0d47209281c"
+    },
+    "ts": "2026-07-30T11:01:28.231562",
+    "acknowledged": false
+  },
+  {
+    "id": "403e5687-8fb5-45c8-963d-e78511934668",
+    "text": "Solar Energy Installation and Maintenance Bro added candidate 284c38140faac88ceb8ba0d47209281c to their pipeline for \"renewables-electrical-installer\".",
+    "meta": {
+      "company_id": "0ba5d33e12a768864a8c4b5fbf15e80b",
+      "role_id": "6ed302f2-a47b-4a66-850b-647e764ff0c4",
+      "candidate_user_id": "284c38140faac88ceb8ba0d47209281c"
+    },
+    "ts": "2026-07-30T10:54:46.243589",
+    "acknowledged": false
+  }
+]

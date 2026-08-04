@@ -1,0 +1,73 @@
+{
+  "company_id": "bbcf19ea62e0234f0884e42970a8f886",
+  "email": "solar_company.com",
+  "account_type": "company",
+  "first_seen": "2026-07-27T16:28:35.516260",
+  "last_seen": "2026-07-27T16:31:40.759229",
+  "profile": {
+    "name": "Solar Company",
+    "website": "solar_company.com",
+    "sector": "Solar",
+    "sub_sectors": [],
+    "company_size": "1000+",
+    "stage": "Public",
+    "hq_location": "Edinburgh",
+    "remote_policy": "Office-first",
+    "description": "With strong links to storage, EVs and smart grids, solar plays a leading role in the shift to net zero. Our research, policy work and advocacy shape regulation and drive market growth.\n\n\nTogether with industry partners, we’re working to deliver 60GW of UK solar by 2030.",
+    "culture_tags": [],
+    "onboarding_done": true
+  },
+  "team_members": [],
+  "documents": [
+    {
+      "id": "b82be105-3734-41b3-a0aa-323e7e4e5e50",
+      "name": "Pasted JD",
+      "type": "jd",
+      "role_id": "c4c4a691-0cb0-4648-96d3-13964e1c0698",
+      "timestamp": "2026-07-27 16:30"
+    }
+  ],
+  "roles": [
+    {
+      "id": "c4c4a691-0cb0-4648-96d3-13964e1c0698",
+      "title": "solar panel installer",
+      "department": "solar",
+      "seniority": "",
+      "employment_type": "full-time",
+      "location": "edinburgh",
+      "remote_policy": "",
+      "salary_range": "45000",
+      "sector_tags": [],
+      "required_skills": [],
+      "nice_to_have_skills": [],
+      "responsibilities": [],
+      "summary": "",
+      "raw_jd_text": "What does a solar panel installer do?\r\nAs a solar panel installer, you will be responsible for installing and servicing solar panels on buildings and land to ensure they efficiently convert solar power into renewable energy. Most of your work as a solar panel installer will be outdoors and at height.\r\n\r\nThe job role of a solar panel installer involves the following duties:  \r\n\r\nAssessing locations to ensure they are suitable for solar panels \r\nMeasuring up areas for installation \r\nMaking adjustments to building surfaces so panels fit and are adequately supported \r\nInstalling and maintaining solar panels on homes, business premises or open land \r\nConnecting solar panels to an electrical system \r\nGrounding electrical equipment and checking wiring  \r\nAdhering to strict health and safety guidelines \r\nPerforming maintenance checks and fixing solar panels \r\nUsing a variety of technical equipment and tools \r\nHow to become a solar panel installer?\r\nThere are several routes to becoming a solar panel installer. You can gain the qualifications you need by doing a college course or an apprenticeship. If you already have relevant qualifications you could apply directly to an employer for a job. \r\n\r\nYou should explore these routes of becoming a solar panel installer to find out which is the right one for you. Although some options have certain qualification requirements, many employers are interested in people who are enthusiastic, willing to learn and can follow instructions. \r\n\r\nYou may need a Construction Skills Certification Scheme (CSCS) card to work on a construction site.  \r\n\r\nCollege/training provider \r\nYou could gain the skills to help you become a solar panel installer at college by completing a course such as a City & Guilds Level 2 or 3 Diploma in Electrical Installation. \r\n\r\nYou’ll need: \r\n\r\n2 or more GCSEs (or equivalent) at grades 9 to 3 (A* to D) (level 2 course) \r\n4 - 5 GCSEs (or equivalent) at grades 9 to 4 (A* to C) (level 3 course). \r\nOnce you’ve qualified in electrical installation, you could go on to train in solar panel installation via a specialist course. \r\n\r\nEquivalent entry requirements explained \r\nFind a course near you \r\nFunding advice  \r\nApprenticeship \r\nYou could work towards becoming a solar panel installer by completing an intermediate apprenticeship in electrical installation. This will take around two years to complete and would allow you to progress on to an advanced qualification, or  specialise in solar panel installation. \r\n\r\nYou’ll need at least 4 GCSEs (or equivalent) at grades 9 to 4 (A* to C), including English and maths, to become an apprentice electrician. \r\n\r\nApprenticeships are open to anyone over the age of 16. As an apprentice, you’ll be fully employed by a company and expected to work a minimum of 30 hours a week. Your time will be split between on-the-job experience and a college or training provider. \r\n\r\nGuide to apprenticeships\r\nWork \r\nIf you have some GCSEs (or equivalent), including English and maths plus good practical skills, you may find work as an electrician’s mate, assistant, or trainee electrician. Your employer may support you to train to become fully qualified and then you can go on to gain further qualifications and specialise in solar panel installation. \r\n\r\nWork experience \r\nWork experience is essential to gaining employment within the construction industry. You could gain this at school, or by working weekends and holidays with a company or relative who works as a solar panel installer. Potential employers will always be pleased to see work experience listed on your CV. \r\n\r\nFind out more about work experience \r\nSkills  \r\nAdditional skills which may benefit anyone considering a job as a solar panel installer include:  \r\n\r\nKnowledge of electrical systems \r\nGood maths skills \r\nDesign skills and understanding \r\nGood attention to detail \r\nAnalytical thinking skills \r\nAbility to work well with others \r\nAbility to remain calm in stressful situations.",
+      "status": "open",
+      "created_at": "2026-07-27T16:30:52.815022",
+      "updated_at": "2026-07-27T16:31:40.759214",
+      "brief": {
+        "must_haves": [],
+        "nice_to_haves": [],
+        "deal_breakers": [],
+        "notes": ""
+      },
+      "pipeline": []
+    }
+  ],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "4d5b0a0b-14c4-4fa4-a69c-500f3d7cf3cd",
+      "text": "Parsed new role: New role",
+      "type": "role_created",
+      "ts": "2026-07-27T16:30:52.816292"
+    },
+    {
+      "id": "a8e97432-0a11-4ddc-8243-230663183176",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-07-27T16:29:45.966959"
+    }
+  ]
+}

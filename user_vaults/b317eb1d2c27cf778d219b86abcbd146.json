@@ -1,0 +1,378 @@
+{
+  "user_id": "b317eb1d2c27cf778d219b86abcbd146",
+  "email": "brandon_emal@email.com",
+  "name": "Brandon",
+  "first_seen": "2026-08-01T09:00:04.685044",
+  "last_seen": "2026-08-01T09:12:51.056744",
+  "sector": "green economy",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [
+    "Explore entry-level positions"
+  ],
+  "skills": [
+    "Data analysis and interpretation (e.g. monitoring system performance, identifying areas for improvement)",
+    "Risk assessment and mitigation (e.g. identifying hazards, developing safety protocols)",
+    "Technical project delivery (e.g. managing electrical installations, ensuring safety standards)",
+    "Stakeholder management (e.g. working with customers, installing solar systems)"
+  ],
+  "skill_sources": {
+    "Data analysis and interpretation (e.g. monitoring system performance, identifying areas for improvement)": [
+      {
+        "type": "inferred",
+        "detail": "NABCEP Certified Lead Solar Technician — In a sustainability role, understanding data analysis and interpretation is crucial to track progress towards environmental goals and make informed decisions.",
+        "ts": "2026-08-01T09:01:59.830171"
+      }
+    ],
+    "Risk assessment and mitigation (e.g. identifying hazards, developing safety protocols)": [
+      {
+        "type": "inferred",
+        "detail": "OSHA 30 Safety — Sustainability professionals must consider the potential risks of their projects on human health and the environment; Alexander's experience with risk assessment can be valuable in this area.",
+        "ts": "2026-08-01T09:01:59.830272"
+      }
+    ],
+    "Technical project delivery (e.g. managing electrical installations, ensuring safety standards)": [
+      {
+        "type": "inferred",
+        "detail": "Licensed Electrician — In a sustainability role, technical expertise is often necessary to develop and implement projects; Alexander's experience as an electrician demonstrates his ability to deliver complex projects.",
+        "ts": "2026-08-01T09:01:59.830319"
+      }
+    ],
+    "Stakeholder management (e.g. working with customers, installing solar systems)": [
+      {
+        "type": "inferred",
+        "detail": "NABCEP PVIP Certified — Sustainability professionals often work with diverse stakeholders; Alexander's experience working with customers and managing installations can translate to effective stakeholder engagement in a sustainability role.",
+        "ts": "2026-08-01T09:01:59.830325"
+      }
+    ]
+  },
+  "cv_summary": "ALEXANDER R. RIVERA\nNABCEP CERTIFIED LEAD SOLAR TECHNICIAN\n📍 Austin, TX 78745\n📱 (512) 555-0194\n✉️ a.rivera.solar@example.com\n🔗 linkedin.com/in/alex-rivera-pv\nNABCEP PVIP Certified\nOSHA 30 Safety\nLicensed Electrician\nProfessional Profile: Resourceful and safety-focused Lead Solar Installation Technic",
+  "messages": [
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "user",
+      "content": "new",
+      "ts": "2026-08-01T09:04:42.723205"
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "assistant",
+      "content": "Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. What kind of role are you looking for? Any specific job titles, sectors, or type of work on your radar — and what's the \"why\" behind the search?",
+      "ts": "2026-08-01T09:04:42.726807",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not sure yet — help me explore",
+        "Renewable energy / EV roles",
+        "Sustainability / ESG roles"
+      ]
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "user",
+      "content": "I'm not sure yet — help me explore",
+      "ts": "2026-08-01T09:04:45.216273"
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "assistant",
+      "content": "What's your ideal salary range? Knowing your floor and target helps me filter out roles that aren't the right fit.",
+      "ts": "2026-08-01T09:05:05.367997",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Under £30k",
+        "£30k–£50k",
+        "£50k–£70k",
+        "£70k+"
+      ]
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "user",
+      "content": "£30k–£50k",
+      "ts": "2026-08-01T09:05:42.614433"
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "assistant",
+      "content": "Do you need this to be remote, hybrid, or onsite?",
+      "ts": "2026-08-01T09:05:47.473963",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Remote",
+        "Hybrid",
+        "Onsite"
+      ]
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "user",
+      "content": "Hybrid",
+      "ts": "2026-08-01T09:05:50.583201"
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-08-01T09:05:50.588460",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "user",
+      "content": "No strong preference",
+      "ts": "2026-08-01T09:05:52.975715"
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "assistant",
+      "content": "I'm so glad we're having this conversation, Brandon! I want to make sure I get you the right resources. Before I dive into those, can you tell me - what's the main thing that excites you about exploring a new role in London's green economy? Is it the work itself, the people, or something else entirely?",
+      "ts": "2026-08-01T09:06:41.533778",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm open to different industries now",
+        "Let's explore entry-level positions together",
+        "I'd like to learn more about"
+      ]
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "assistant",
+      "content": "You want to explore entry-level positions together, which sounds like an exciting adventure! I'm taking note of your interest in this direction. Before we start searching for specific roles, I'd love to ask: What's the main thing that excites you about the work itself? Is it tackling environmental challenges, collaborating with others on innovative projects, or something else entirely?",
+      "ts": "2026-08-01T09:07:31.286119",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'd love to see some examples",
+        "Can we focus on remote work",
+        "Let's explore entry-level job descriptions"
+      ]
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "user",
+      "content": "all of it",
+      "ts": "2026-08-01T09:07:47.246049"
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "assistant",
+      "content": "**You're so close to making a splash in London's green economy!** I'm loving the enthusiasm you've got for exploring entry-level positions, Brandon! You mentioned earlier that tackling environmental challenges excites you - I think we can find some amazing opportunities that align with your skills and passions.\n\nLet's start by leveraging those transferable skills of yours. With NABCEP Certification and experience as a Lead Solar Technician, you're not only a technical whiz but also excel at data analysis and stakeholder management! \n\nTo build on this momentum, I'd love to help you explore some local companies in Hackney that align with your values and goals. Have you considered checking out the **Hackney Council's Green Spaces** initiative? They might have some exciting projects or roles that match your skills.\n\nWhat would you like to do next, Brandon? Would you like me to send over some job listings from reputable sources in the area?",
+      "ts": "2026-08-01T09:09:13.010604",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "533b5ac8-c8a7-4f5f-a7a2-2508e6246129",
+          "title": "Greening the Economy: Lessons from Scandinavia | Coursera",
+          "url": "https://www.coursera.org/learn/greening-the-economy",
+          "body": "October 14, 2015 - This course will explore greening the economy on four levels – individual, business, city, and nation. We will look at the relationships between these levels and give many practical",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "80f9167e-5ba9-4e8f-b74b-81ec0580c641",
+          "title": "50+ Green Economy Online Courses for 2026 | Explore Free Courses & Certifications | Class Central",
+          "url": "https://www.classcentral.com/subject/green-economy",
+          "body": "Explore sustainable development policies, green finance, and circular economy principles to drive environmental and economic transformation. Learn through UN-certified programs on UN CC:e-Learn, along",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "d7c9ce06-25d2-4f75-8334-a449c77e4281",
+          "title": "Online Certificate on Circular Economy - Courses | The CPD Certification Service",
+          "url": "https://www.cpduk.co.uk/courses/centre-of-sustainability-excellence-online-certificate-on-circular-economy",
+          "body": "The philosophy of this online certificate is to provide you with a step-by-step introduction to circular economy, circular economy initiatives from Europe and North America, all the latest regulative ",
+          "type": "courses",
+          "type_label": "Resource"
+        }
+      ],
+      "suggestions": [
+        "Show me job openings now",
+        "Give me salary info next",
+        "Let's talk about the process"
+      ]
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "user",
+      "content": "Show me job openings now",
+      "ts": "2026-08-01T09:11:35.327944"
+    },
+    {
+      "uid": "b317eb1d2c27cf778d219b86abcbd146",
+      "role": "assistant",
+      "content": "**You're one step closer to making a splash in London's green economy!**\n\nI'm loving the enthusiasm you've got for exploring entry-level positions, Brandon! You mentioned earlier that tackling environmental challenges excites you - I think we can find some amazing opportunities that align with your skills and passion.\n\nConsidering your background as a NABCEP Certified Lead Solar Technician and licensed electrician, I'd like to recommend checking out job openings on websites such as Green Jobs UK ([www.greenjobs.co.uk](http://www.greenjobs.co.uk)) or the Institution of Environmental Sciences' job board ([www.ies.ac.uk/careers/jobs/](http://www.ies.ac.uk/careers/jobs/)). These platforms often list entry-level positions in the green economy.\n\nBefore we dive into specific roles, I'd love to know: What kind of work environment would you prefer? Do you think you'd thrive in an office setting or a more field-based role?",
+      "ts": "2026-08-01T09:12:41.631053",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "973ea950-f7b6-4671-846f-5d39f81660db",
+          "title": "Greening the Economy: Lessons from Scandinavia | Coursera",
+          "url": "https://www.coursera.org/learn/greening-the-economy",
+          "body": "October 14, 2015 - This course will explore greening the economy on four levels – individual, business, city, and nation. We will look at the relationships between these levels and give many practical",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "eb28781e-4004-4db9-bbd1-82b3199beb77",
+          "title": "Green Skills and Employment Update_SEG_Feb 2026",
+          "url": "https://hackney.moderngov.co.uk/mgConvert2PDF.aspx?ID=96861",
+          "body": "Skip to main content · Hackney · Back to top · Meetings, agenda, minutes · Calendar · Committees · Decisions · Forthcoming Decisions · Forward plans · Meetings",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "5f163882-64dd-49b6-818c-f2cf6506c43a",
+          "title": "Search Google for: volunteering green economy hackney",
+          "url": "https://www.google.com/search?q=volunteering+green+economy+hackney",
+          "body": "We couldn't confirm a specific live resource for this yet — here's a search to help you find current options yourself.",
+          "type": "volunteering",
+          "type_label": "Volunteering"
+        }
+      ],
+      "suggestions": [
+        "Show me roles near me",
+        "What skills do I need",
+        "Find me entry level jobs"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "9a97b4ce-a038-453c-b844-53b279764a1b",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785571319/report",
+      "type": "cv_summary",
+      "timestamp": "2026-08-01 09:01",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "47875dbf-7a34-4e50-8a13-c30623a1ccf3",
+      "name": "solar_installation_technician_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-08-01 09:01"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "hackney",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "No strong preference",
+  "salary_range": "£30k–£50k",
+  "work_type": "Hybrid",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": true,
+  "headline": "Generalist / Green Economy Professional",
+  "experience": [
+    {
+      "id": "6ae2a268",
+      "title": "",
+      "company": "help me explore",
+      "start_date": "",
+      "end_date": "",
+      "description": "",
+      "source": "chat"
+    }
+  ],
+  "how_heard": "Friend or colleague",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [
+    "target_role"
+  ],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "NABCEP Certified Lead Solar Technician",
+      "skill": "Data analysis and interpretation (e.g. monitoring system performance, identifying areas for improvement)",
+      "relevance": "In a sustainability role, understanding data analysis and interpretation is crucial to track progress towards environmental goals and make informed decisions."
+    },
+    {
+      "source": "OSHA 30 Safety",
+      "skill": "Risk assessment and mitigation (e.g. identifying hazards, developing safety protocols)",
+      "relevance": "Sustainability professionals must consider the potential risks of their projects on human health and the environment; Alexander's experience with risk assessment can be valuable in this area."
+    },
+    {
+      "source": "Licensed Electrician",
+      "skill": "Technical project delivery (e.g. managing electrical installations, ensuring safety standards)",
+      "relevance": "In a sustainability role, technical expertise is often necessary to develop and implement projects; Alexander's experience as an electrician demonstrates his ability to deliver complex projects."
+    },
+    {
+      "source": "NABCEP PVIP Certified",
+      "skill": "Stakeholder management (e.g. working with customers, installing solar systems)",
+      "relevance": "Sustainability professionals often work with diverse stakeholders; Alexander's experience working with customers and managing installations can translate to effective stakeholder engagement in a sustainability role."
+    }
+  ],
+  "journey": {
+    "xp": 0,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-08-01",
+    "last_checkin_date": ""
+  },
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "excited",
+        "ts": "2026-08-01T09:07:40.532222"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-08-01T09:12:50.988953"
+      }
+    ],
+    "blockers": [
+      "none known"
+    ],
+    "preferred_tone": "motivational",
+    "response_depth": "balanced",
+    "milestones_mentioned": [],
+    "total_exchanges": 2,
+    "encouragement_count": 0,
+    "key_insights": [
+      "The user is enthusiastic about exploring entry-level positions and seems to be genuinely excited about the work itself.",
+      "The user is enthusiastic about exploring entry-level positions in the green economy, indicating a desire to take action"
+    ],
+    "current_emotion": "excited"
+  }
+}

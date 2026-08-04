@@ -1,0 +1,60 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Gap Analysis</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p>Here is the analysis of the CV:</p>
+<p><strong>SUMMARY</strong>: Daryna Vakulenko is a digital transformation strategist with a background in medicine and experience in various sectors, including health tech, education, HR, and enterprise B2B sales. She specializes in identifying friction points and creating solutions to complex challenges.</p>
+<p><strong>MATCHED SKILLS</strong>: </p>
+<ul>
+<li>Sustainability</li>
+<li>AI Strategy</li>
+<li>Rapid Prototyping (NLP/LLMs)</li>
+<li>Cross-Functional Leadership</li>
+<li>Market Intelligence</li>
+<li>Consultative Selling</li>
+</ul>
+<p><strong>SKILL GAPS</strong>: 
+* Direct experience in sustainability sector beyond Train Garden's AI Transformation Delivery Lead role, which mentions it as one of the sectors worked with.
+* Lack of explicit mention of any environmental or social impact-related skills or certifications.</p>
+<p><strong>TOP 3 NEXT STEPS</strong>: </p>
+<ol>
+<li>Develop a deeper understanding of the sustainability sector and its specific challenges to better position herself for future roles.</li>
+<li>Highlight her experience in AI strategy and rapid prototyping, as these are valuable skills that can be applied to various industries, including sustainability.</li>
+<li>Consider acquiring certifications or training programs related to environmental or social impact, such as LEED AP or Certified Sustainability Practitioner (CSP).</li>
+</ol>
+<p><strong>SKILLS_JSON</strong>: 
+<code>{
+  "matched": [
+    "Sustainability",
+    "AI Strategy",
+    "Rapid Prototyping (NLP/LLMs)",
+    "Cross-Functional Leadership",
+    "Market Intelligence",
+    "Consultative Selling"
+  ],
+  "gaps": ["Environmental impact assessment", "Social impact analysis"],
+  "summary": "Digital transformation strategist with a background in medicine and experience in various sectors, including health tech, education, HR, and enterprise B2B sales.",
+  "name": "Daryna Vakulenko",
+  "sector": "",
+  "experience_years": "",
+  "suggested_target_role": "",
+  "location": "London, UK",
+  "goals": [
+    "Identifying hidden friction points and creating lasting solutions to complex challenges."
+  ],
+  "hobbies": []
+}</code>
+Note: The "gaps" field is not an exhaustive list of potential skill gaps, but rather a selection based on the CV provided.</p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

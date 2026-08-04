@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard - Train Garden</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700;800;900&amp;family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-tertiary": "#ffffff", "on-primary": "#ffffff", background: "#f9f9ff", "border-muted": "#E5E5E5", "surface-container": "#ededf3", tertiary: "#005d41", "on-secondary-container": "#445081", "on-secondary-fixed": "#091747", "inverse-surface": "#2e3035", "surface-container-high": "#e7e8ee", "on-background": "#191c20", "surface-container-low": "#f3f3f9", error: "#ba1a1a", "on-error": "#ffffff", outline: "#6e7a73", "on-surface-variant": "#3e4943", "secondary-container": "#b8c4fd", "on-surface": "#191c20", "outline-variant": "#bdc9c1", "on-tertiary-container": "#9bfdd0", "tertiary-container": "#007855", "on-primary-container": "#9ffdd3", "inverse-on-surface": "#f0f0f6", secondary: "#505c8e", "on-error-container": "#93000a", "surface-container-highest": "#e2e2e8", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "on-primary-fixed": "#002115", surface: "#f9f9ff", "secondary-fixed-dim": "#b8c4fd", "on-tertiary-fixed": "#002115", "tertiary-fixed-dim": "#78d9ae", "surface-dim": "#d9dadf", "on-secondary": "#ffffff", "primary-fixed-dim": "#7bd8b1", "primary-container": "#047857", "surface-bright": "#f9f9ff", "inverse-primary": "#7bd8b1", primary: "#005d42", "on-tertiary-fixed-variant": "#005139", "surface-tint": "#006c4e", "secondary-fixed": "#dde1ff", "on-primary-fixed-variant": "#00513a", "tertiary-fixed": "#94f6c9", "surface-variant": "#e2e2e8", "surface-alt": "#F8F8F8", "primary-fixed": "#97f5cc", "on-secondary-fixed-variant": "#384475", "midnight-navy": "#091747", "surface-ice": "#F9F9FF", "forest-deep": "#047857", "pure-white": "#FFFFFF", "growth-green": "#208A65"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"stack-sm": "8px", gutter: "24px", "margin-mobile": "16px", "section-gap": "160px", "stack-lg": "48px", "stack-md": "24px", "margin-desktop": "40px", base: "8px", "container-max": "1280px"}, fontFamily: {"body-lg": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "display-xl": ["Chivo"], "display-lg": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-lg": ["Inter"], "title-lg": ["Inter"], "label-md": ["Inter"]}, fontSize: {"body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}], "label-sm": ["12px", {lineHeight: "16px", fontWeight: "600"}], "display-xl": ["120px", {lineHeight: "110px", letterSpacing: "-0.04em", fontWeight: "900"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-lg-mobile": ["24px", {lineHeight: "32px", fontWeight: "600"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600"}], "title-lg": ["20px", {lineHeight: "28px", fontWeight: "500"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500"}]}}}};</script>
+<style>
+        /* Force 0px roundness across all generic elements as per Brutalist style guide */
+        * { border-radius: 0 !important; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex antialiased">
+<!-- SideNavBar Component -->
+<nav class="h-full w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-surface-container-low border-r border-outline-variant dark:border-outline flex flex-col py-stack-md px-stack-sm z-50">
+<nav class="bg-white border-b border-gray-200 p-4 flex gap-6">
+    <a href="/dashboard" class="font-bold">Dashboard</a>
+    <a href="/strategist">Strategist</a>
+    <a href="/roadmap">Roadmap</a>
+    <a href="/chat">Chatbot</a>
+</nav>
+
+
+    <!-- Header / Brand -->
+<div class="mb-stack-lg px-stack-sm">
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight leading-none mb-1">Sustainability Pro</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Career Tracker</p>
+</div>
+<!-- CTA -->
+<div class="mb-stack-lg px-stack-sm">
+<button class="w-full bg-primary text-on-primary font-label-sm text-label-sm py-4 px-6 uppercase tracking-widest border-2 border-primary hover:bg-background hover:text-primary transition-colors duration-200">
+                New Analysis
+            </button>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center py-4 border-b border-gray-200">
+    <div class="col-span-1 md:col-span-5">
+        <h4 class="font-bold text-gray-900">Market Analysis</h4>
+        <p class="text-sm text-gray-500 uppercase">Circular Economy Trends</p>
+    </div>
+    <div class="col-span-1 md:col-span-3">
+        <span class="px-3 py-1 border border-gray-300 text-xs uppercase tracking-widest">Draft</span>
+    </div>
+    <div class="hidden md:block col-span-2 text-sm text-gray-500">05.12.2023</div>
+    <div class="hidden md:flex col-span-2 justify-end">
+        <button onclick="window.location.href='/strategist'" class="bg-primary text-white px-4 py-2 text-sm uppercase">Edit</button>
+    </div>
+</div>
+<!-- Navigation Links -->
+<ul class="flex flex-col gap-2 flex-grow">
+<!-- Active Tab: Dashboard -->
+<li>
+<a class="flex items-center gap-4 px-4 py-3 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<!-- Inactive Tabs -->
+<li>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">psychology</span>
+                    Garden AI
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">alt_route</span>
+                    Roadmaps
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">description</span>
+                    CV Analysis
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">history</span>
+                    History
+                </a>
+</li>
+</ul>
+<!-- Footer Links -->
+<ul class="flex flex-col gap-2 mt-auto border-t border-outline-variant pt-stack-sm">
+<li>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-secondary-container transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-secondary-container transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">help</span>
+                    Support
+                </a>
+</li>
+</ul>
+</nav>
+<!-- Main Content Area -->
+<main class="ml-64 w-full p-margin-desktop bg-background flex flex-col gap-section-gap">
+<!-- Header Section -->
+<header class="border-b-2 border-primary pb-stack-sm flex justify-between items-end">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-4">Live Feed / Q3</p>
+<h2 class="font-display-lg text-display-lg text-primary leading-none tracking-tighter uppercase">Intelligence<br/>Overview</h2>
+</div>
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 bg-surface-container-high border border-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</div>
+<div aria-label="User Profile" class="w-12 h-12 bg-primary flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-on-primary">US</span>
+</div>
+</div>
+</header>
+<!-- Stats Grid (Bento Style Brutalism) -->
+<section class="grid grid-cols-12 gap-gutter">
+<!-- Stat Block 1 -->
+<article class="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container-low border border-outline p-stack-lg flex flex-col justify-between min-h-[300px]">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest border-b border-outline-variant pb-2 mb-stack-md">Total Reports Generated</h3>
+<div class="mt-auto">
+<span class="font-display-xl text-display-xl text-primary tracking-tighter block leading-none">14</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">+3 this month</p>
+</div>
+</article>
+<!-- Stat Block 2 -->
+<article class="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container-low border border-outline p-stack-lg flex flex-col justify-between min-h-[300px]">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest border-b border-outline-variant pb-2 mb-stack-md">Global Ranking Percentile</h3>
+<div class="mt-auto">
+<span class="font-display-xl text-display-xl text-primary tracking-tighter block leading-none">82<span class="text-headline-lg">%</span></span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">Top quintile in CSR</p>
+</div>
+</article>
+<!-- Stat Block 3 (Actionable Highlight) -->
+<article class="col-span-12 lg:col-span-4 bg-primary p-stack-lg flex flex-col justify-between min-h-[300px]">
+<h3 class="font-label-sm text-label-sm text-on-primary opacity-70 uppercase tracking-widest border-b border-on-surface-variant pb-2 mb-stack-md">Next Recommended Action</h3>
+<div class="mt-auto">
+<h4 class="font-headline-lg text-headline-lg text-on-primary leading-tight mb-6">Update Corporate ESG Policy</h4>
+<button class="w-full bg-background text-primary font-label-sm text-label-sm py-4 px-6 uppercase tracking-widest hover:bg-secondary-container transition-colors">
+                        Begin Draft
+                    </button>
+</div>
+</article>
+</section>
+<!-- Career Momentum Section -->
+<section class="border-t border-outline-variant pt-stack-lg">
+<header class="mb-stack-lg flex justify-between items-baseline">
+<h3 class="font-headline-lg text-headline-lg text-primary uppercase tracking-tighter">Career Momentum</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">YTD Progress</span>
+</header>
+<div class="bg-surface-container-low border border-outline p-stack-lg">
+<div class="grid grid-cols-5 gap-2 h-48 items-end border-b border-outline-variant pb-4">
+<!-- Minimalist Bar Chart -->
+<div class="bg-surface-variant w-full h-[30%] relative group">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="bg-surface-variant w-full h-[50%] relative group">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="bg-surface-variant w-full h-[40%] relative group">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="bg-primary w-full h-[85%] relative">
+<!-- Highlighted Current Month -->
+</div>
+<div class="bg-surface-variant w-full h-[20%] relative group">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+<div class="grid grid-cols-5 gap-2 mt-4 text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Jan</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Feb</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mar</span>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase">Apr</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">May</span>
+</div>
+</div>
+</section>
+<!-- Report Vault Section -->
+<section class="border-t border-outline-variant pt-stack-lg mb-section-gap">
+<header class="mb-stack-lg">
+<h3 class="font-headline-lg text-headline-lg text-primary uppercase tracking-tighter">Report Vault</h3>
+</header>
+<div class="flex flex-col border-t border-primary">
+<!-- List Item 1 -->
+<div class="grid grid-cols-12 gap-4 items-center py-stack-md border-b border-border-muted hover:bg-surface-container-low transition-colors px-4 -mx-4 group">
+<div class="col-span-6 md:col-span-5">
+<h4 class="font-body-lg text-body-lg text-primary font-bold">CV Gap Analysis</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 uppercase">Tech &amp; Sustainability</p>
+</div>
+<div class="col-span-6 md:col-span-3">
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-3 py-1 uppercase tracking-widest">Completed</span>
+</div>
+<div class="hidden md:block col-span-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">24.10.2023</span>
+</div>
+<div class="hidden md:flex col-span-2 justify-end opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="border border-primary text-primary px-4 py-2 font-label-sm text-label-sm uppercase hover:bg-primary hover:text-on-primary transition-colors">View</button>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="grid grid-cols-12 gap-4 items-center py-stack-md border-b border-border-muted hover:bg-surface-container-low transition-colors px-4 -mx-4 group">
+<div class="col-span-6 md:col-span-5">
+<h4 class="font-body-lg text-body-lg text-primary font-bold">Roadmap: Solar Policy</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 uppercase">EMEA Region Focus</p>
+</div>
+<div class="col-span-6 md:col-span-3">
+<span class="font-label-sm text-label-sm border border-outline text-on-surface-variant px-3 py-1 uppercase tracking-widest">In Progress</span>
+</div>
+<div class="hidden md:block col-span-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">12.11.2023</span>
+</div>
+<div class="hidden md:flex col-span-2 justify-end opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="border border-primary text-primary px-4 py-2 font-label-sm text-label-sm uppercase hover:bg-primary hover:text-on-primary transition-colors">Continue</button>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="grid grid-cols-12 gap-4 items-center py-stack-md border-b border-border-muted hover:bg-surface-container-low transition-colors px-4 -mx-4 group">
+<div class="col-span-6 md:col-span-5">
+<h4 class="font-body-lg text-body-lg text-primary font-bold">Market Analysis</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 uppercase">Circular Economy Trends</p>
+</div>
+<div class="col-span-6 md:col-span-3">
+<span class="font-label-sm text-label-sm border border-outline text-on-surface-variant px-3 py-1 uppercase tracking-widest">Draft</span>
+</div>
+<div class="hidden md:block col-span-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">05.12.2023</span>
+</div>
+<div class="hidden md:flex col-span-2 justify-end opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="border border-primary text-primary px-4 py-2 font-label-sm text-label-sm uppercase hover:bg-primary hover:text-on-primary transition-colors">Edit</button>
+</div>
+</div>
+</div>
+<div class="mt-stack-md">
+<button class="text-primary font-label-sm text-label-sm uppercase tracking-widest hover:underline flex items-center gap-2">
+                    View All Archives <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<script>
+    // Assuming you store the user_id in localStorage after login
+    const userId = localStorage.getItem('user_id') || 'anonymous';
+
+    async function loadDashboard() {
+        try {
+            // 1. Fetch Stats
+            const statsResponse = await fetch(`/api/dashboard-stats?user_id=${userId}`);
+            const stats = await statsResponse.json();
+            
+            // Example: Update an element with ID 'report-count'
+            document.getElementById('report-count').innerText = stats.total_reports;
+
+            // 2. Fetch History
+            const historyResponse = await fetch(`/api/get-history?user_id=${userId}`);
+            const historyData = await historyResponse.json();
+
+            // Example: Inject history list
+            const list = document.getElementById('activity-list');
+            historyData.history.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="${item.path}">${item.name}</a> - ${item.timestamp}`;
+                list.appendChild(li);
+            });
+        } catch (error) {
+            console.error("Error loading dashboard data:", error);
+        }
+    }
+
+    window.onload = loadDashboard;
+</script>
+<script>
+    // Ensure the ID is always visible
+    const userId = sessionStorage.getItem('user_id') || 'anonymous';
+    document.getElementById('user-id-display').innerText = userId;
+</script>
+</body></html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Summary</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>SUMMARY</strong></p>
+<p>Daryna Vakulenko is a digitally-minded strategist with a medical background, bridging technical execution and commercial growth across various sectors, including sustainability, health tech, education, HR, and enterprise B2B sales.</p>
+<p><strong>MATCHED SKILLS</strong></p>
+<ul>
+<li>Sustainability (sector)</li>
+<li>Green Economy (related sector)</li>
+<li>Digital Transformation</li>
+<li>AI Strategy &amp; Rapid Prototyping (NLP/LLMs)</li>
+<li>Cross-Functional Leadership</li>
+<li>CRM Management (Salesforce)</li>
+<li>Market Intelligence</li>
+<li>Consultative Selling</li>
+<li>Agile/PRINCE2 Delivery</li>
+</ul>
+<p><strong>SKILL GAPS</strong></p>
+<ul>
+<li>Explicitly stated experience in sustainability or green economy roles is limited to a few months as AI Transformation Delivery Lead at Train Garden.</li>
+<li>While Daryna has a medical background, it's not clear how she applies this expertise in her current roles.</li>
+</ul>
+<p><strong>TOP 3 NEXT STEPS</strong></p>
+<ol>
+<li>Leverage her existing network and skills to secure a role that combines sustainability/green economy with digital transformation.</li>
+<li>Develop more explicit experience in sustainability or green economy by seeking out relevant projects, internships, or volunteer work.</li>
+<li>Highlight transferable skills from her medical background, such as clinical expertise and analytical thinking, to demonstrate relevance to sustainability roles.</li>
+</ol>
+<p><strong>SKILLS_JSON</strong></p>
+<p>{
+"matched": ["Sustainability", "Green Economy", "Digital Transformation"],
+"gaps": ["Explicit experience in sustainability/green economy"],
+"name": "Daryna Vakulenko",
+"sector": "",
+"experience_years": "",
+"suggested_target_role": "AI/ Digital Transformation Specialist in Sustainability/Green Economy",
+"location": "London, UK",
+"goals": [],
+"hobbies": [],
+"headline": "Digital Transformation Strategist (AI)",
+"experience": [
+{"title": "AI Transformation Delivery Lead", 
+"company": "Train Garden",
+"start_date": "July 2024",
+"end_date": "Present",
+"description": "End-to-End Lifecycle Ownership: Spearheaded AI strategy and discovery phases, identifying and validating high-impact transformation opportunities across the sustainability, legal, and HR sectors."},
+{"title": "Consultant", 
+"company": "Tegus by AlphaSense",
+"start_date": "April 2024",
+"end_date": "Present"},
+{"title": "AI Training expert", 
+"company": "Outlier",
+"start_date": "April 2024",
+"end_date": "August 2024"},
+{"title": "Digital Health Transformation Lead", 
+"company": "Sirkka Health",
+"start_date": "June 2022",
+"end_date": "June 2024"}
+]
+}</p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

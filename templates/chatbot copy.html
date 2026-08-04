@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Train Garden | AI Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; height: 100vh; overflow: hidden; }
+        .hide { display: none !important; }
+        #chat-messages::-webkit-scrollbar { width: 6px; }
+        #chat-messages::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style> </head>
+<body>
+    <nav class="bg-white border-b border-gray-200 p-4 flex gap-6">
+    <a href="/dashboard" class="font-bold">Dashboard</a>
+    <a href="/strategist">Strategist</a>
+    <a href="/roadmap">Roadmap</a>
+    <a href="/chat">Chatbot</a>
+</nav>
+    <div id="suggestions-bar" class="px-6 py-3 bg-slate-50 border-t border-slate-100 flex gap-2 overflow-x-auto scrollbar-hide"></div>
+
+    <div id="main-assistant" class="flex h-screen w-full">
+        <aside class="w-64 bg-white border-r border-gray-100 flex flex-col shrink-0">
+            <div class="p-6 border-b border-gray-50">
+                <h1 class="font-black text-lg text-[#0A192F]">TRAIN GARDEN</h1>
+                <p id="user-display" class="text-[10px] text-gray-400 mt-1 uppercase"></p>
+            </div>
+            <div class="flex-1 p-4 overflow-y-auto"><div id="status-log" class="space-y-2"></div></div>
+        </aside>
+
+        <main class="flex-1 flex flex-col bg-[#F8FAFC]">
+            <div class="p-3 bg-white border-b border-gray-100 flex gap-2 overflow-x-auto scrollbar-hide">
+                <button onclick="triggerCVUpload()" class="px-4 py-2 bg-blue-600 text-white rounded-full text-xs font-bold hover:bg-blue-700 shadow-sm transition-all">📁 Scan CV</button>
+                <button onclick="handleManualInput('Sustainability career trends')" class="px-4 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-xs font-medium hover:border-blue-300 transition-all">Trending Careers</button>
+            </div>
+            <div id="chat-messages" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
+            <div class="p-4 bg-white border-t border-gray-100">
+                <div class="max-w-3xl mx-auto flex items-center bg-gray-50 rounded-2xl px-4 py-2 border border-gray-200 focus-within:border-blue-400 transition-all">
+                    <input type="text" id="omni-input" onkeypress="if(event.key === 'Enter') handleManualInput()" class="flex-1 bg-transparent border-none focus:ring-0 text-sm text-gray-700 py-2" placeholder="Ask your AI companion...">
+                    <button onclick="handleManualInput()" class="p-2 bg-[#0A192F] text-white rounded-xl hover:bg-blue-800 transition-all"><span class="material-symbols-outlined text-sm">send</span></button>
+                </div>
+            </div>
+        </main>
+
+        <section class="w-[500px] bg-white border-l border-gray-100 flex flex-col">
+            <div class="p-4 border-b border-gray-100 bg-gray-50/50">
+                <label class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-3">Memory Library</label>
+                <div id="memory-library" class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+                    <div class="text-[10px] text-gray-400 italic">No reports generated...</div>
+                </div>
+            </div>
+            <div class="flex-1 relative">
+                <iframe id="workspace-frame" src="about:blank" class="w-full h-full border-none"></iframe>
+                <div id="workspace-placeholder" class="absolute inset-0 flex flex-col items-center justify-center text-center p-12 bg-white pointer-events-none">
+                    <span class="material-symbols-outlined text-5xl text-gray-100 mb-4">folder_managed</span>
+                    <h3 class="text-gray-400 font-bold">Research Workspace</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <input type="file" id="cv-upload" class="hide" accept=".pdf" onchange="handleFileUpload(this)">
+
+    <script>
+        let sessionMemory = [];
+
+        // --- TEST BYPASS INITIALIZATION ---
+        // This runs automatically when the page loads to skip the login screen
+        window.addEventListener('DOMContentLoaded', () => {
+            sessionStorage.setItem('user_id', 'test_user_garden');
+            document.getElementById('user-display').innerText = 'test_user_garden';
+            executeAction("INITIALIZE_GARDEN_SESSION");
+        });
+
+        // --- CORE LOGIC ---
+function addToLibrary(title, path) {
+    const lib = document.getElementById('memory-library');
+    // Clear placeholder only if it exists
+    if (sessionMemory.length === 0) lib.innerHTML = '';
+    
+    if (sessionMemory.find(i => i.path === path)) return;
+    sessionMemory.push({ title, path });
+    
+    const chip = document.createElement('button');
+    chip.className = "whitespace-nowrap px-3 py-1.5 bg-white border border-gray-200 text-gray-600 rounded-lg text-[10px] font-bold hover:border-blue-400 transition-all shadow-sm";
+    chip.innerHTML = `📄 ${title.substring(0, 15)}...`;
+    
+    // FORCE THE UPDATE:
+    chip.onclick = () => { 
+        const frame = document.getElementById('workspace-frame');
+        const placeholder = document.getElementById('workspace-placeholder');
+        
+        if(frame) {
+            frame.src = path; // Inject the path here
+            console.log("Loading path into iframe:", path);
+        }
+        if(placeholder) placeholder.classList.add('hide');
+    };
+    lib.prepend(chip);
+}
+
+        async function executeAction(text) {
+            if (!text) return;
+            addStatusUpdate("Generating...", 'think');
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ text, user_id: sessionStorage.getItem('user_id') })
+                });
+
+                // In your chatbot.html fetch logic
+const response = await fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        user_id: sessionStorage.getItem('user_id'), // The ID you set at login
+        message: "Your input text"
+    })
+});
+                const data = await res.json();
+                if (data.response) displayMessageInChat(data.response, 'bot');
+                if (data.path) {
+                    const placeholder = document.getElementById('workspace-placeholder');
+                    if(placeholder) placeholder.classList.add('hide');
+                    document.getElementById('workspace-frame').src = data.path;
+                    addToLibrary(text, data.path);
+                }
+                addStatusUpdate("Success", 'act');
+            } catch (e) { addStatusUpdate("Error", 'act'); }
+        }
+
+        function displayMessageInChat(text, sender) {
+            const container = document.getElementById('chat-messages');
+            const wrap = document.createElement('div');
+            wrap.className = `flex w-full ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+            const bubble = document.createElement('div');
+            bubble.className = `max-w-[80%] px-4 py-2 rounded-2xl text-sm ${sender === 'user' ? 'bg-[#0A192F] text-white rounded-tr-none' : 'bg-white border border-gray-100 rounded-tl-none shadow-sm'}`;
+            bubble.textContent = text;
+            wrap.appendChild(bubble);
+            container.appendChild(wrap);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function handleManualInput(directText) {
+            const input = document.getElementById('omni-input');
+            const text = directText || input.value.trim();
+            if (text) { displayMessageInChat(text, 'user'); if (!directText) input.value = ''; executeAction(text); }
+        }
+
+        function triggerCVUpload() { document.getElementById('cv-upload').click(); }
+
+        // Example: Adding this to dashboard.html to pull data
+async function loadDashboardData() {
+    const response = await fetch('/api/get-user-data'); // Adjust endpoint as needed
+    const data = await response.json();
+    // Update your DOM elements with 'data'
+}
+document.addEventListener('DOMContentLoaded', loadDashboardData);
+
+        async function handleFileUpload(input) {
+            const file = input.files[0];
+            if (!file) return;
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('user_id', sessionStorage.getItem('user_id'));
+            addStatusUpdate("Processing CV...", 'think');
+            const res = await fetch('/api/upload-cv', { method: 'POST', body: formData });
+            const data = await res.json();
+            if (data.success && data.path) {
+                const placeholder = document.getElementById('workspace-placeholder');
+                if(placeholder) placeholder.classList.add('hide');
+                document.getElementById('workspace-frame').src = data.path;
+                addToLibrary("CV Analysis", data.path);
+                displayMessageInChat("CV Analyzed. See library.", 'bot');
+            }
+        }
+
+        function addStatusUpdate(msg, type) {
+            const log = document.getElementById('status-log');
+            const entry = document.createElement('div');
+            entry.className = "text-[10px] font-bold uppercase tracking-wider";
+            const color = type === 'think' ? 'text-purple-500' : 'text-green-500';
+            entry.innerHTML = `<span class="${color}">${type}:</span> <span class="text-gray-400">${msg}</span>`;
+            log.prepend(entry);
+        }
+    </script>
+<script>
+    // Ensure the ID is always visible
+    const userId = sessionStorage.getItem('user_id') || 'anonymous';
+    document.getElementById('user-id-display').innerText = userId;
+</script>
+    
+</body>
+</html>
+

@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Companies — Train Garden</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
+<style>
+:root{--g:#0A0A0A;--gm:#2D4233;--gd:#000000;--wh:#F9F9F8;--sf:#F9F9F8;--sl:#f3f3f3;--sc:#eeeeee;--sh:#e8e8e8;--os:#1a1c1c;--ov:#44474d;--bd:#E0E0DB;--bm:#74777e;--sb:#e6ebe7;--sf2:#2D4233;--wb:#fef3c7;--wf:#d97706;--ib:#ECE7FF;--if2:#5e39e0;--eb:#ffdad6;--ef:#93000a;--serif:"Source Serif 4",serif;--mono:"JetBrains Mono",monospace;}
+*{font-family:"Hanken Grotesk",sans-serif;box-sizing:border-box;}
+h1,h2,h3,.headline,.title{font-family:var(--serif);letter-spacing:-0.01em;}
+.label-mono{font-family:var(--mono);letter-spacing:0.03em;}
+body{background:var(--sf);height:100vh;overflow:hidden;}
+.i{font-family:"Material Symbols Outlined";font-style:normal;font-size:18px;font-variation-settings:"FILL" 0,"wght" 300;user-select:none;line-height:1;display:inline-block;}
+.if{font-variation-settings:"FILL" 1,"wght" 400;}
+.sc{overflow-y:auto;}.sc::-webkit-scrollbar{width:4px;}.sc::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:2px;}
+.sh{overflow:hidden;}.sh::-webkit-scrollbar{display:none;}
+.nl{display:flex;align-items:center;gap:10px;padding:7px 11px;color:var(--ov);border-radius:0;cursor:pointer;font-size:13px;font-weight:500;transition:all .15s;width:100%;text-align:left;background:none;border:none;text-decoration:none;}
+.nl:hover{background:var(--sl);color:var(--g);}.nl.on{background:var(--sl);color:var(--g);font-weight:600;}
+.rl{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:0;cursor:pointer;font-size:12.5px;color:var(--ov);transition:all .15s;}
+.rl:hover{background:var(--sl);color:var(--g);}.rl.on{background:var(--sl);color:var(--g);font-weight:600;}
+.rdot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.tb{padding:9px 13px;font-size:12px;font-weight:500;color:var(--ov);border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;background:none;border-left:none;border-right:none;border-top:none;transition:all .15s;display:flex;align-items:center;gap:5px;}
+.tb.on{color:var(--g);font-weight:600;border-bottom-color:var(--g);}
+.pl{padding:6px 13px;border-radius:2px;border:1px solid var(--bd);background:white;font-size:12px;font-weight:500;color:var(--ov);cursor:pointer;white-space:nowrap;transition:all .15s;}
+.pl:hover{border-color:var(--g);color:var(--g);background:var(--sl);}
+.fi{width:100%;border:none;border-bottom:1px solid var(--bd);background:transparent;font-size:13px;color:var(--os);padding:5px 0;outline:none;transition:border-color .15s;}
+.fi:focus{border-bottom-color:var(--g);}
+.fb{width:100%;border:1px solid var(--bd);border-radius:0;padding:8px 11px;font-size:13px;color:var(--os);outline:none;background:white;transition:border-color .15s;}
+.fb:focus{border-color:var(--g);}
+.rh{width:4px;cursor:col-resize;background:transparent;flex-shrink:0;z-index:10;transition:background .15s;}
+.rh:hover,.rh.dg{background:var(--bd);}
+.ch{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;background:var(--sc);color:var(--ov);border-radius:2px;font-size:11.5px;font-weight:500;}
+.ch .rm{cursor:pointer;opacity:.6;}.ch .rm:hover{opacity:1;}
+/* Candidate card */
+.cc{background:white;border:1px solid var(--bd);border-radius:0;padding:14px;transition:all .15s;position:relative;}
+.cc:hover{border-color:var(--bm);}
+.mbadge{padding:2px 9px;border-radius:2px;font-size:11px;font-weight:600;white-space:nowrap;font-family:var(--mono);}
+.mbadge.unicorn{background:var(--ib);color:var(--if2);}
+.mbadge.excellent{background:var(--sb);color:var(--sf2);}
+.mbadge.good{background:var(--sc);color:var(--ov);}
+.avatar{width:38px;height:38px;border-radius:50%;background:var(--gm);color:white;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;flex-shrink:0;}
+.iconbtn{width:28px;height:28px;background:white;border:1px solid var(--bd);border-radius:2px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s;color:var(--ov);}
+.iconbtn:hover{border-color:var(--g);color:var(--g);}
+.iconbtn.danger:hover{border-color:var(--ef);color:var(--ef);}
+/* Status pill */
+.spill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:2px;font-size:11.5px;font-weight:600;}
+.spill.open{background:var(--sb);color:var(--sf2);}
+.spill.draft{background:var(--wb);color:var(--wf);}
+.spill.paused{background:var(--sc);color:var(--ov);}
+.spill.closed{background:var(--eb);color:var(--ef);}
+.sdot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+/* Dropzone */
+.dz{border:1.5px dashed var(--bd);border-radius:0;padding:28px;text-align:center;cursor:pointer;transition:all .15s;}
+.dz:hover,.dz.over{border-color:var(--g);background:var(--sl);}
+/* Stat card */
+.stat{background:white;border:1px solid var(--bd);padding:16px;}
+/* Tag input */
+.taglist{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;}
+/* Toast */
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--g);color:white;padding:10px 18px;font-size:13px;z-index:200;}
+.hidden{display:none!important;}
+</style>
+</head>
+<body class="text-sm" style="color:var(--os)">
+
+<!-- ============================= LOGIN ============================= -->
+<div id="login-screen" class="fixed inset-0 z-50 flex items-center justify-center" style="background:var(--sf)">
+  <div class="w-full max-w-sm px-6">
+    <img src="/static/traingarden_logo.png" alt="Train Garden" class="h-9 w-auto mx-auto mb-5"/>
+    <p class="text-center text-xs font-semibold label-mono mb-1" style="color:var(--ov)">FOR COMPANIES</p>
+    <p class="text-center text-xs mb-6" style="color:var(--ov)">Hire from candidates already navigating green-economy careers.</p>
+
+    <div id="login-step-email">
+      <label class="text-xs font-medium block mb-1" style="color:var(--ov)">Work email</label>
+      <input id="login-email" type="email" class="fi mb-4" placeholder="you@company.com" onkeydown="if(event.key==='Enter')requestCode();"/>
+      <button onclick="requestCode()" class="w-full py-3 text-sm font-semibold text-white" style="background:var(--g)">Send access code</button>
+    </div>
+    <div id="login-step-code" class="hidden">
+      <label class="text-xs font-medium block mb-1" style="color:var(--ov)">4-digit code</label>
+      <input id="login-code" maxlength="4" class="fi mb-4 text-center text-lg tracking-widest" placeholder="••••" onkeydown="if(event.key==='Enter')verifyCode();"/>
+      <button onclick="verifyCode()" class="w-full py-3 text-sm font-semibold text-white mb-2" style="background:var(--g)">Continue</button>
+      <button onclick="document.getElementById('login-step-code').classList.add('hidden');document.getElementById('login-step-email').classList.remove('hidden');" class="w-full py-2 text-xs" style="color:var(--ov)">Use a different email</button>
+    </div>
+    <p id="login-err" class="text-xs mt-3 text-center hidden" style="color:var(--ef)"></p>
+  </div>
+</div>
+
+<!-- ============================= ONBOARDING ============================= -->
+<div id="onboard-overlay" class="hidden fixed inset-0 z-50 flex items-center justify-center overflow-y-auto py-10" style="background:var(--sf)">
+  <div class="w-full max-w-md px-6">
+
+    <!-- Step 1: company info -->
+    <div id="ob-step-company">
+      <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center" style="background:var(--sb);border:1px solid var(--bd)"><span class="i" style="font-size:26px;color:var(--sf2)">business_center</span></div>
+      <h2 class="title text-center text-xl mb-1" style="color:var(--g)">Tell us about your company</h2>
+      <p class="text-center text-xs mb-6" style="color:var(--ov)">This helps us calibrate matches to your team, stage and culture.</p>
+      <div class="space-y-4">
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Company name</label><input id="ob-name" class="fb" placeholder="e.g. Greenwatt Energy"/></div>
+        <div class="grid grid-cols-2 gap-3">
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Company number</label><input id="ob-number" class="fb" placeholder="Companies House no."/></div>
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Website</label><input id="ob-website" class="fb" placeholder="https://"/></div>
+        </div>
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Registered address</label><input id="ob-address" class="fb" placeholder="Registered office address"/></div>
+        <div class="grid grid-cols-2 gap-3">
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Sector</label><input id="ob-sector" class="fb" placeholder="e.g. Renewable energy"/></div>
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Company size</label>
+            <select id="ob-size" class="fb"><option value="">Select…</option><option>1-10</option><option>11-50</option><option>51-200</option><option>201-1000</option><option>1000+</option></select>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Stage</label>
+            <select id="ob-stage" class="fb"><option value="">Select…</option><option>Pre-seed</option><option>Seed</option><option>Series A</option><option>Series B+</option><option>Growth</option><option>Public</option></select>
+          </div>
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">HQ location</label><input id="ob-loc" class="fb" placeholder="e.g. London"/></div>
+        </div>
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Remote policy</label>
+          <select id="ob-remote" class="fb"><option value="">Select…</option><option>Remote-first</option><option>Hybrid</option><option>Office-first</option></select>
+        </div>
+        <div>
+          <label class="text-xs font-medium block mb-1" style="color:var(--ov)">Work types you typically hire for</label>
+          <div id="ob-worktypes" class="flex flex-wrap gap-1.5"></div>
+        </div>
+        <div>
+          <label class="text-xs font-medium block mb-1" style="color:var(--ov)">One line about what you do</label>
+          <textarea id="ob-desc" class="fb" rows="2" placeholder="What does your company do?"></textarea>
+          <button onclick="aiGenerateDescription()" class="text-xs mt-1.5 flex items-center gap-1" style="color:var(--sf2)"><span class="i" style="font-size:14px">auto_awesome</span>Help me write this</button>
+        </div>
+      </div>
+      <button onclick="goToAccountManagerStep()" class="w-full py-3 text-sm font-semibold text-white mt-5" style="background:var(--g)">Continue</button>
+    </div>
+
+    <!-- Step 2: account manager -->
+    <div id="ob-step-manager" class="hidden">
+      <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center" style="background:var(--sb);border:1px solid var(--bd)"><span class="i" style="font-size:26px;color:var(--sf2)">person</span></div>
+      <h2 class="title text-center text-xl mb-1" style="color:var(--g)">Who's the account manager?</h2>
+      <p class="text-center text-xs mb-6" style="color:var(--ov)">This person owns the account and can add teammates later.</p>
+      <div class="space-y-4">
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Name</label><input id="ob-am-name" class="fb" placeholder="Your name"/></div>
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Position</label><input id="ob-am-position" class="fb" placeholder="e.g. Head of Talent"/></div>
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Personal email</label><input id="ob-am-email" type="email" class="fb" placeholder="you@company.com"/></div>
+      </div>
+      <button onclick="finishOnboarding()" class="w-full py-3 text-sm font-semibold text-white mt-5" style="background:var(--g)">Continue to dashboard</button>
+      <button onclick="document.getElementById('ob-step-manager').classList.add('hidden');document.getElementById('ob-step-company').classList.remove('hidden');" class="w-full py-2 text-xs mt-1" style="color:var(--ov)">Back</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= NEW ROLE MODAL ============================= -->
+<div id="new-role-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center" style="background:rgba(10,10,10,.35)">
+  <div class="w-full max-w-lg bg-white" style="border:1px solid var(--bd)">
+    <div class="px-5 py-4 flex items-center justify-between" style="border-bottom:1px solid var(--bd)">
+      <h3 class="title text-lg" style="color:var(--g)">New role</h3>
+      <button onclick="closeNewRole()" class="iconbtn"><span class="i" style="font-size:16px">close</span></button>
+    </div>
+    <div class="p-5">
+      <p class="text-xs mb-3" style="color:var(--ov)">Upload a job description PDF, or paste the text below — We will parse it into a structured role.</p>
+      <div id="jd-dz" class="dz mb-3" onclick="document.getElementById('jd-file').click()">
+        <span class="i block mb-1" style="font-size:24px;color:#9ca3af">upload_file</span>
+        <span id="jd-file-name" class="text-xs" style="color:var(--ov)">Choose or drop a PDF job description</span>
+      </div>
+      <input id="jd-file" type="file" accept=".pdf" class="hidden" onchange="onJdFileChosen(this)"/>
+      <p class="text-xs text-center mb-3" style="color:var(--bm)">— or —</p>
+      <textarea id="jd-text" class="fb" rows="6" placeholder="Paste the job description text here…"></textarea>
+      <button id="jd-submit-btn" onclick="submitJD()" class="w-full py-3 text-sm font-semibold text-white mt-4" style="background:var(--g)">Parse job description</button>
+      <div id="jd-loading" class="hidden text-xs text-center mt-3" style="color:var(--ov)">Parsing job description…</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= APP SHELL ============================= -->
+<div id="app" class="hidden flex h-full">
+
+  <!-- LEFT SIDEBAR -->
+  <nav style="width:250px" class="bg-white border-r flex flex-col h-full flex-shrink-0" style="border-color:var(--bd)">
+    <div class="px-5 py-4 flex items-center gap-2.5" style="border-bottom:1px solid var(--bd)">
+      <button onclick="showView('dashboard')" title="Home"><img src="/static/traingarden_logo.png" alt="Train Garden — Home" class="h-7 w-auto"/></button>
+      <p class="text-xs" style="color:var(--bm)">For Companies</p>
+    </div>
+    <div class="px-4 py-3">
+      <button onclick="openNewRole()" class="w-full py-2.5 px-3 text-sm font-semibold text-white flex items-center gap-2 justify-center" style="background:var(--g)">
+        <span class="i" style="font-size:16px">add</span> New role
+      </button>
+    </div>
+    <div class="px-3 space-y-0.5">
+      <button onclick="showView('dashboard')" id="nav-dashboard" class="nl on"><span class="i">dashboard</span> Dashboard</button>
+      <button onclick="showView('inbox')" id="nav-inbox" class="nl"><span class="i">inbox</span> Inbox</button>
+      <button onclick="showView('pipeline')" id="nav-pipeline" class="nl"><span class="i">view_kanban</span> Pipeline</button>
+      <button onclick="showView('allroles')" id="nav-allroles" class="nl"><span class="i">work</span> All roles</button>
+      <button onclick="showView('skills')" id="nav-skills" class="nl"><span class="i">psychology</span> Skills</button>
+      <button onclick="showView('profile')" id="nav-profile" class="nl"><span class="i">domain</span> Company Profile</button>
+    </div>
+    <div class="flex-1 sc sh px-3 pt-3 mt-1" style="border-top:1px solid var(--bd)">
+      <p class="text-xs font-semibold uppercase tracking-wider px-2 mb-1.5" style="color:var(--bm)">Roles</p>
+      <div id="role-list" class="space-y-0.5"><p class="text-xs italic px-2 py-1" style="color:var(--bm)">No roles yet</p></div>
+    </div>
+    <div style="border-top:1px solid var(--bd)">
+      <div class="px-4 py-3 flex items-center gap-2.5">
+        <div id="company-avatar" class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0" style="background:var(--g)">?</div>
+        <div class="flex-1 min-w-0"><p id="company-name-display" class="text-sm font-medium truncate">Loading</p><p id="company-email-display" class="text-xs truncate" style="color:var(--bm)"></p></div>
+      </div>
+      <div class="px-3 pb-3">
+        <button onclick="logout()" class="nl w-full" style="color:var(--bm)"><span class="i" style="font-size:15px">logout</span> Sign out</button>
+        <button onclick="deleteAccount()" class="nl w-full text-red-400 hover:text-red-500"><span class="i" style="font-size:15px">delete_forever</span> Delete account</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MIDDLE PANEL -->
+  <div id="middle-panel" class="flex-1 flex flex-col h-full min-w-0">
+
+    <!-- Dashboard overview -->
+    <div id="view-dashboard" class="flex-1 sc p-8">
+      <p class="label-mono text-xs mb-1" style="color:var(--bm)" id="today-date"></p>
+      <h1 class="title text-2xl mb-5" style="color:var(--g)">Welcome back<span id="welcome-name"></span>.</h1>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="stat"><p class="text-2xl font-semibold" style="color:var(--g)" id="stat-roles">0</p><p class="text-xs" style="color:var(--ov)">Open roles</p></div>
+        <div class="stat"><p class="text-2xl font-semibold" style="color:var(--g)" id="stat-candidates">0</p><p class="text-xs" style="color:var(--ov)">Candidates in pipeline</p></div>
+        <div class="stat"><p class="text-2xl font-semibold" style="color:var(--g)" id="stat-intros">0</p><p class="text-xs" style="color:var(--ov)">Intros requested</p></div>
+        <div class="stat"><p class="text-2xl font-semibold" style="color:var(--g)" id="stat-hired">0</p><p class="text-xs" style="color:var(--ov)">Hired</p></div>
+      </div>
+      <h3 class="title text-base mb-3" style="color:var(--g)">Recent activity</h3>
+      <div id="activity-feed" class="space-y-2"></div>
+    </div>
+
+    <!-- Inbox / Pipeline / All roles (simple list views) -->
+    <div id="view-inbox" class="hidden flex-1 sc p-8">
+      <h1 class="title text-2xl mb-1" style="color:var(--g)">Inbox</h1>
+      <p class="text-xs mb-6" style="color:var(--ov)">Candidate replies and intro requests land here once matching is live.</p>
+      <div class="stat text-center py-10"><span class="i block mb-2" style="font-size:26px;color:var(--bm)">forum</span><p class="text-xs" style="color:var(--ov)">No messages yet</p></div>
+    </div>
+
+    <div id="view-pipeline" class="hidden flex-1 sc p-8">
+      <h1 class="title text-2xl mb-5" style="color:var(--g)">Pipeline</h1>
+      <div id="pipeline-board" class="grid grid-cols-5 gap-3"></div>
+    </div>
+
+    <div id="view-allroles" class="hidden flex-1 sc p-8">
+      <div class="flex items-center justify-between mb-5">
+        <h1 class="title text-2xl" style="color:var(--g)">All roles</h1>
+        <button onclick="openNewRole()" class="pl"><span class="i" style="font-size:14px">add</span> New role</button>
+      </div>
+      <div id="all-roles-list" class="space-y-2"></div>
+    </div>
+
+    <!-- Skills view (company-wide, not tied to a role) -->
+    <div id="view-skills" class="hidden flex-1 sc p-8">
+      <h1 class="title text-2xl mb-1" style="color:var(--g)">Skills</h1>
+      <p class="text-xs mb-6" style="color:var(--ov)">Skills your company needs across the business, independent of any single role.</p>
+      <div class="stat mb-5">
+        <p class="font-semibold text-xs mb-2" style="color:var(--ov)">Add a skill</p>
+        <div class="flex gap-2 mb-3">
+          <input id="skill-name-input" class="fi" placeholder="e.g. Life-cycle assessment" onkeydown="if(event.key==='Enter')addCompanySkill();"/>
+          <button onclick="addCompanySkill()" class="pl flex-shrink-0">Add</button>
+        </div>
+        <p class="text-xs mb-2" style="color:var(--bm)">— or upload/paste a document and let AI extract skills —</p>
+        <div id="skills-dz" class="dz mb-2" onclick="document.getElementById('skills-file').click()">
+          <span class="i block mb-1" style="font-size:22px;color:#9ca3af">upload_file</span>
+          <span id="skills-file-name" class="text-xs" style="color:var(--ov)">Choose or drop a PDF</span>
+        </div>
+        <input id="skills-file" type="file" accept=".pdf" class="hidden" onchange="onSkillsFileChosen(this)"/>
+        <textarea id="skills-text" class="fb mb-2" rows="3" placeholder="…or paste text here"></textarea>
+        <div class="flex items-center gap-2 mb-2">
+          <button id="skills-rec-btn" onclick="toggleSkillsRecording()" class="btn-ghost text-xs flex items-center gap-1"><span class="i" style="font-size:15px">mic</span><span id="skills-rec-label">Record instead</span></button>
+          <span id="skills-rec-status" class="text-xs" style="color:var(--bm)"></span>
+        </div>
+        <button id="skills-upload-btn" onclick="submitSkillsUpload()" class="pl">Extract skills</button>
+        <div id="skills-upload-loading" class="hidden text-xs mt-2" style="color:var(--ov)">Extracting skills…</div>
+      </div>
+      <div id="skills-list" class="space-y-2"></div>
+    </div>
+
+    <!-- Company Profile view -->
+    <div id="view-profile" class="hidden flex-1 sc p-8">
+      <h1 class="title text-2xl mb-5" style="color:var(--g)">Company Profile</h1>
+
+      <h3 class="title text-base mb-3" style="color:var(--g)">Info</h3>
+      <div class="stat mb-6 space-y-4">
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Company name</label><input id="cp-name" class="fb"/></div>
+        <div class="grid grid-cols-2 gap-3">
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Company number</label><input id="cp-number" class="fb"/></div>
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Website</label><input id="cp-website" class="fb"/></div>
+        </div>
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Contact email</label><input id="cp-email" type="email" class="fb" placeholder="hello@company.com"/></div>
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Registered address</label><input id="cp-address" class="fb"/></div>
+        <div class="grid grid-cols-2 gap-3">
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Sector</label><input id="cp-sector" class="fb"/></div>
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Company size</label>
+            <select id="cp-size" class="fb"><option value="">Select…</option><option>1-10</option><option>11-50</option><option>51-200</option><option>201-1000</option><option>1000+</option></select>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Stage</label>
+            <select id="cp-stage" class="fb"><option value="">Select…</option><option>Pre-seed</option><option>Seed</option><option>Series A</option><option>Series B+</option><option>Growth</option><option>Public</option></select>
+          </div>
+          <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">HQ location</label><input id="cp-loc" class="fb"/></div>
+        </div>
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Description</label><textarea id="cp-desc" class="fb" rows="2"></textarea>
+          <button onclick="aiGenerateCpDescription()" class="text-xs mt-1.5 flex items-center gap-1" style="color:var(--sf2)"><span class="i" style="font-size:14px">auto_awesome</span>Help me write this</button>
+        </div>
+        <button onclick="saveCompanyProfile()" class="pl">Save changes</button>
+      </div>
+
+      <h3 class="title text-base mb-3" style="color:var(--g)">Documents</h3>
+      <div class="stat mb-6">
+        <div id="cp-dz" class="dz mb-3" onclick="document.getElementById('cp-doc-file').click()">
+          <span class="i block mb-1" style="font-size:22px;color:#9ca3af">upload_file</span>
+          <span class="text-xs" style="color:var(--ov)">Upload a document (policies, certifications, etc.)</span>
+        </div>
+        <input id="cp-doc-file" type="file" class="hidden" onchange="onProfileDocChosen(this)"/>
+        <div id="cp-documents-list" class="space-y-2"></div>
+      </div>
+
+      <h3 class="title text-base mb-3" style="color:var(--g)">Team &amp; access</h3>
+      <div class="stat mb-6">
+        <div class="flex gap-2 mb-3">
+          <input id="team-name-input" class="fi" placeholder="Name"/>
+          <input id="team-email-input" type="email" class="fi" placeholder="Email"/>
+          <select id="team-access-input" class="fi" style="max-width:110px">
+            <option value="member">Member</option><option value="admin">Admin</option><option value="owner">Owner</option>
+          </select>
+          <button onclick="addTeamMember()" class="pl flex-shrink-0">Add</button>
+        </div>
+        <div id="team-list" class="space-y-2"></div>
+      </div>
+    </div>
+
+    <!-- Role detail (narrative panel) -->
+    <div id="view-role" class="hidden flex-1 flex flex-col h-full min-w-0">
+      <div class="px-8 py-5 flex items-center gap-3" style="border-bottom:1px solid var(--bd)">
+        <h2 class="title text-xl" id="role-title" style="color:var(--g)">—</h2>
+        <span id="role-status-pill" class="spill draft"><span class="sdot"></span>Draft</span>
+      </div>
+      <div class="flex-1 sc p-8">
+        <p class="label-mono text-xs mb-4" style="color:var(--bm)" id="role-date"></p>
+        <div class="stat mb-5">
+          <p class="text-sm leading-relaxed" id="role-summary" style="color:var(--os)">No summary yet.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mb-5 text-xs">
+          <div><p class="font-semibold mb-1" style="color:var(--ov)">Department</p><p id="role-department" style="color:var(--os)">—</p></div>
+          <div><p class="font-semibold mb-1" style="color:var(--ov)">Seniority</p><p id="role-seniority" style="color:var(--os)">—</p></div>
+          <div><p class="font-semibold mb-1" style="color:var(--ov)">Location</p><p id="role-location" style="color:var(--os)">—</p></div>
+          <div><p class="font-semibold mb-1" style="color:var(--ov)">Remote policy</p><p id="role-remote" style="color:var(--os)">—</p></div>
+          <div><p class="font-semibold mb-1" style="color:var(--ov)">Employment type</p><p id="role-emptype" style="color:var(--os)">—</p></div>
+          <div><p class="font-semibold mb-1" style="color:var(--ov)">Salary range</p><p id="role-salary" style="color:var(--os)">—</p></div>
+        </div>
+        <div class="mb-5">
+          <p class="font-semibold text-xs mb-2" style="color:var(--ov)">Required skills</p>
+          <div id="role-required-skills" class="taglist mb-2"></div>
+          <input class="fi" placeholder="Type a skill and press Enter to add…" onkeydown="addRoleListItem(event,'required_skills')"/>
+        </div>
+        <div class="mb-5">
+          <p class="font-semibold text-xs mb-2" style="color:var(--ov)">Nice to have</p>
+          <div id="role-nice-skills" class="taglist mb-2"></div>
+          <input class="fi" placeholder="Type a skill and press Enter to add…" onkeydown="addRoleListItem(event,'nice_to_have_skills')"/>
+        </div>
+        <div>
+          <p class="font-semibold text-xs mb-2" style="color:var(--ov)">Responsibilities</p>
+          <ul id="role-responsibilities" class="text-xs space-y-1 list-disc pl-4 mb-2" style="color:var(--os)"></ul>
+          <input class="fi" placeholder="Type a responsibility and press Enter to add…" onkeydown="addRoleListItem(event,'responsibilities')"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rh" id="resize-handle"></div>
+
+  <!-- RIGHT PANEL (role tabs) -->
+  <div id="right-panel" style="width:480px;min-width:340px" class="hidden flex flex-col h-full flex-shrink-0" style="border-left:1px solid var(--bd)">
+    <div class="flex items-center px-2" style="border-bottom:1px solid var(--bd)">
+      <button class="tb on" data-tab="candidates" onclick="setRoleTab('candidates')"><span class="i" style="font-size:16px">group</span>Candidates</button>
+      <button class="tb" data-tab="activity" onclick="setRoleTab('activity')"><span class="i" style="font-size:16px">timeline</span>Activity</button>
+      <button class="tb" data-tab="pitch" onclick="setRoleTab('pitch')"><span class="i" style="font-size:16px">campaign</span>Pitch</button>
+      <button class="tb" data-tab="brief" onclick="setRoleTab('brief')"><span class="i" style="font-size:16px">edit_note</span>Brief</button>
+      <button class="tb" data-tab="settings" onclick="setRoleTab('settings')"><span class="i" style="font-size:16px">settings</span>Settings</button>
+    </div>
+
+    <!-- Candidates tab -->
+    <div id="tab-candidates" class="flex-1 flex flex-col min-h-0">
+      <div class="p-3 flex gap-2" style="border-bottom:1px solid var(--bd)">
+        <div class="flex-1 flex items-center gap-2 px-3" style="border:1px solid var(--bd)">
+          <span class="i" style="font-size:16px;color:var(--bm)">search</span>
+          <input id="candidate-search" oninput="renderCandidates()" class="flex-1 py-2 text-xs outline-none border-none bg-transparent" placeholder="Search candidates…"/>
+        </div>
+        <button onclick="runMatching()" class="pl">Rerun search</button>
+      </div>
+      <div class="p-3 flex gap-2 items-center" style="border-bottom:1px solid var(--bd);background:var(--sf)">
+        <span class="i" style="font-size:15px;color:var(--sf2)">travel_explore</span>
+        <input id="skill-cross-search" class="flex-1 fi" placeholder="Find anyone with a specific skill, regardless of their job title (e.g. 'Solar PV design')" onkeydown="if(event.key==='Enter')runSkillCrossSearch()"/>
+        <button onclick="runSkillCrossSearch()" class="btn-ghost text-xs">Search skill</button>
+      </div>
+      <div id="skill-cross-results" class="hidden p-3" style="border-bottom:1px solid var(--bd);background:#fbfbfa"></div>
+      <div id="candidates-list" class="flex-1 sc p-3 space-y-3"></div>
+    </div>
+
+    <!-- Activity tab -->
+    <div id="tab-activity" class="hidden flex-1 sc p-4 space-y-2"></div>
+
+    <!-- Pitch tab -->
+    <div id="tab-pitch" class="hidden flex-1 sc p-5">
+      <p class="text-xs mb-2" style="color:var(--ov)">The outreach message sent when you request an intro to a candidate.</p>
+      <div class="flex gap-2 mb-2">
+        <input id="pitch-hint" class="fi" placeholder="Optional: what should the pitch emphasise?"/>
+        <button onclick="aiGeneratePitch()" class="pl flex items-center gap-1 flex-shrink-0"><span class="i" style="font-size:14px">auto_awesome</span>Generate</button>
+      </div>
+      <textarea id="pitch-text" class="fb" rows="8" placeholder="Hi {name}, we're building something exciting at {company} and think you'd be a great fit for our {role} role…"></textarea>
+      <button onclick="savePitch()" class="pl mt-3">Save pitch</button>
+    </div>
+
+    <!-- Brief tab -->
+    <div id="tab-brief" class="hidden flex-1 sc p-5 space-y-5">
+      <div class="flex items-center justify-between">
+        <p class="text-xs" style="color:var(--ov)">Must-haves, nice-to-haves and deal-breakers for this role.</p>
+        <button onclick="aiGenerateBrief()" id="brief-ai-btn" class="pl flex items-center gap-1"><span class="i" style="font-size:14px">auto_awesome</span>Help AI generate</button>
+      </div>
+      <div id="brief-suggestions" class="hidden stat">
+        <p class="font-semibold text-xs mb-2" style="color:var(--ov)">Suggested — click to add</p>
+        <div id="brief-suggestion-chips" class="flex flex-wrap gap-1.5"></div>
+      </div>
+      <div>
+        <p class="font-semibold text-xs mb-2" style="color:var(--ov)">Must-haves</p>
+        <div id="brief-must" class="taglist"></div>
+        <input class="fi" placeholder="Type and press Enter to add…" onkeydown="addBriefTag(event,'must_haves')"/>
+      </div>
+      <div>
+        <p class="font-semibold text-xs mb-2" style="color:var(--ov)">Nice-to-haves</p>
+        <div id="brief-nice" class="taglist"></div>
+        <input class="fi" placeholder="Type and press Enter to add…" onkeydown="addBriefTag(event,'nice_to_haves')"/>
+      </div>
+      <div>
+        <p class="font-semibold text-xs mb-2" style="color:var(--ov)">Deal-breakers</p>
+        <div id="brief-deal" class="taglist"></div>
+        <input class="fi" placeholder="Type and press Enter to add…" onkeydown="addBriefTag(event,'deal_breakers')"/>
+      </div>
+      <div>
+        <p class="font-semibold text-xs mb-2" style="color:var(--ov)">Notes</p>
+        <textarea id="brief-notes" class="fb" rows="4" onchange="saveBrief()"></textarea>
+      </div>
+    </div>
+
+    <!-- Settings tab -->
+    <div id="tab-settings" class="hidden flex-1 sc p-5 space-y-4">
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Title</label><input id="set-title" class="fb"/></div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Department</label><div id="set-department-chips" class="flex flex-wrap gap-1.5"></div></div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Seniority</label><div id="set-seniority-chips" class="flex flex-wrap gap-1.5"></div></div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Employment type</label><div id="set-employment-chips" class="flex flex-wrap gap-1.5"></div></div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Remote policy</label><div id="set-remote-chips" class="flex flex-wrap gap-1.5"></div></div>
+      <div class="grid grid-cols-2 gap-3">
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Location</label><input id="set-location" class="fb"/></div>
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Salary range</label><input id="set-salary" class="fb"/></div>
+      </div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Summary</label><textarea id="set-summary" class="fb" rows="3" placeholder="A short summary of this role, shown to candidates"></textarea>
+        <button onclick="aiAssist('set-summary','role_summary',()=>({title:document.getElementById('set-title')?.value.trim(),department:document.getElementById('set-department-chips')?.dataset.selected||'',seniority:document.getElementById('set-seniority-chips')?.dataset.selected||'',sector:document.getElementById('cp-sector')?.value.trim()}))" class="text-xs mt-1.5 flex items-center gap-1" style="color:var(--sf2)"><span class="i" style="font-size:14px">auto_awesome</span>Help me write this</button>
+      </div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Status</label>
+        <select id="set-status" class="fb"><option value="draft">Draft</option><option value="open">Hiring</option><option value="paused">Paused</option><option value="closed">Closed</option></select>
+      </div>
+      <button onclick="saveSettings()" class="w-full py-3 text-sm font-semibold text-white" style="background:var(--g)">Save changes</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="hidden"></div>
+
+<script>
+let companyId = sessionStorage.getItem('company_id') || '';
+let companyEmail = sessionStorage.getItem('company_email') || '';
+let roles = [];
+let currentRoleId = null;
+let currentRole = null;
+let currentTab = 'candidates';
+let selDepartment='', selSeniority='', selEmployment='', selRemote='';
+function renderRoleSettingChips(){
+  renderChipSelect('set-department-chips', CHIP_OPTIONS.department, selDepartment, v=>{selDepartment=v; renderRoleSettingChips();});
+  renderChipSelect('set-seniority-chips', CHIP_OPTIONS.seniority, selSeniority, v=>{selSeniority=v; renderRoleSettingChips();});
+  renderChipSelect('set-employment-chips', CHIP_OPTIONS.employment_type, selEmployment, v=>{selEmployment=v; renderRoleSettingChips();});
+  renderChipSelect('set-remote-chips', CHIP_OPTIONS.remote_policy, selRemote, v=>{selRemote=v; renderRoleSettingChips();});
+}
+
+function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.remove('hidden');setTimeout(()=>t.classList.add('hidden'),2500);}
+function initials(name){return (name||'?').trim().split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase();}
+
+// ── Click-to-choose option sets (replaces free text for these role fields) ──
+const CHIP_OPTIONS = {
+  department: ['Engineering','Operations','Sales','Marketing','Policy & Compliance','Finance','People & Talent','Field/Site','Research','Product'],
+  seniority: ['Junior','Mid','Senior','Lead','Head of','Director'],
+  employment_type: ['Full-time','Part-time','Contract','Apprenticeship','Internship','Graduate scheme'],
+  remote_policy: ['Remote','Hybrid','Onsite'],
+  work_types: ['Full-time','Part-time','Contract','Apprenticeship','Internship','Graduate scheme']
+};
+
+// Single-select chip group. `onPick(value)` fires with the chosen value
+// (or '' if the same chip is clicked again to clear it).
+function renderChipSelect(elId, options, selected, onPick){
+  const el = document.getElementById(elId); if(!el) return;
+  el.innerHTML = options.map(opt=>{
+    const on = opt===selected;
+    return `<button type="button" class="pl" style="${on?`background:var(--g);color:#fff;border-color:var(--g)`:''}">${esc(opt)}</button>`;
+  }).join('');
+  // Wire click handlers directly (avoids re-serializing the callback into HTML).
+  Array.from(el.children).forEach((btn,i)=>{
+    btn.onclick = ()=> onPick(options[i]===selected ? '' : options[i]);
+  });
+}
+
+// Multi-select chip group for onboarding "work types".
+function renderChipMultiSelect(elId, options, selectedList, onToggle){
+  const el = document.getElementById(elId); if(!el) return;
+  el.innerHTML = options.map(opt=>{
+    const on = (selectedList||[]).includes(opt);
+    return `<button type="button" class="pl" style="${on?`background:var(--g);color:#fff;border-color:var(--g)`:''}">${esc(opt)}</button>`;
+  }).join('');
+  Array.from(el.children).forEach((btn,i)=>{
+    btn.onclick = ()=> onToggle(options[i]);
+  });
+}
+
+// ── Auth ─────────────────────────────────────────────────────────────────
+ 
+
+async function requestCode(){
+  const email = document.getElementById('login-email').value.trim();
+  if(!email){return;}
+  try{
+    const r = await fetch('/api/company/auth/request',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});
+    const d = await r.json();
+    if(!d.success){showLoginErr(d.message||'Could not send code — try again.');return;}
+    sessionStorage.setItem('pending_email',email);
+    document.getElementById('login-step-email').classList.add('hidden');
+    document.getElementById('login-step-code').classList.remove('hidden');
+  }catch(e){showLoginErr('Could not send code — try again.');}
+}
+async function verifyCode(){
+  const email = sessionStorage.getItem('pending_email')||'';
+  const code = document.getElementById('login-code').value.trim();
+  try{
+    const r = await fetch('/api/company/auth/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,code})});
+    const d = await r.json();
+    if(!d.success){showLoginErr(d.message||'Invalid code');return;}
+    companyId=d.company_id; companyEmail=email;
+    sessionStorage.setItem('company_id',companyId);
+    sessionStorage.setItem('company_email',companyEmail);
+    document.getElementById('login-screen').classList.add('hidden');
+    if(!d.onboarding_done){document.getElementById('onboard-overlay').classList.remove('hidden');}
+    else{await startApp();}
+  }catch(e){showLoginErr('Network error — try again.');}
+}
+function showLoginErr(msg){const e=document.getElementById('login-err');e.textContent=msg;e.classList.remove('hidden');}
+function logout(){sessionStorage.clear();window.location.reload();}
+async function deleteAccount(){
+  if(!confirm('Delete this company account? This permanently removes your company profile, roles, pipelines and team access. This cannot be undone.'))return;
+  if(!confirm('Are you absolutely sure? This cannot be undone.'))return;
+  try{
+    const d=await(await fetch('/api/company/delete-account',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({company_id:companyId})})).json();
+    if(d.success){sessionStorage.clear();window.location.href='/';}
+    else alert(d.message||'Could not delete account');
+  }catch(e){alert('Network error — try again.');}
+}
+
+let obWorkTypes = [];
+function renderObWorkTypes(){
+  renderChipMultiSelect('ob-worktypes', CHIP_OPTIONS.work_types, obWorkTypes, opt=>{
+    obWorkTypes = obWorkTypes.includes(opt) ? obWorkTypes.filter(w=>w!==opt) : [...obWorkTypes, opt];
+    renderObWorkTypes();
+  });
+}
+renderObWorkTypes();
+
+async function aiGenerateDescription(){
+  const btn = event.target.closest('button'); btn.disabled = true;
+  try{
+    const d = await (await fetch('/api/company/ai-generate-description',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        name: document.getElementById('ob-name').value.trim(),
+        sector: document.getElementById('ob-sector').value.trim(),
+        hint: document.getElementById('ob-desc').value.trim()
+      })})).json();
+    if(d.success) document.getElementById('ob-desc').value = d.description;
+    else toast(d.message||'Could not generate a description');
+  }catch(e){ toast('Network error — try again'); }
+  btn.disabled = false;
+}
+
+/* ─── GENERIC "AI HELP ME WRITE THIS" ────────────────────────────────────────
+   One reusable call for every free-text field: pass the id of the field to
+   fill, a `kind` matching a prompt on the backend, and a small context
+   object of nearby fields (role title, sector, skill name...) so the
+   generation is grounded in what's already been entered. */
+async function aiAssist(fieldId, kind, contextFn){
+  const btn = event.target.closest('button');
+  const field = document.getElementById(fieldId);
+  if(!field) return;
+  if(btn) btn.disabled = true;
+  const orig = btn ? btn.innerHTML : '';
+  if(btn) btn.innerHTML = '<span class="i" style="font-size:14px">hourglass_empty</span>Writing…';
+  try{
+    const context = contextFn ? contextFn() : {};
+    const d = await (await fetch('/api/ai-assist',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({kind, hint: field.value.trim(), context})})).json();
+    if(d.success) field.value = d.text;
+    else toast(d.message||'Could not generate that');
+  }catch(e){ toast('Network error — try again'); }
+  if(btn){ btn.disabled = false; btn.innerHTML = orig; }
+}
+
+async function aiGenerateCpDescription(){
+  const btn = event.target.closest('button'); btn.disabled = true;
+  try{
+    const d = await (await fetch('/api/company/ai-generate-description',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        name: document.getElementById('cp-name')?.value.trim()||'',
+        sector: document.getElementById('cp-sector')?.value.trim()||'',
+        hint: document.getElementById('cp-desc')?.value.trim()||''
+      })})).json();
+    if(d.success) document.getElementById('cp-desc').value = d.description;
+    else toast(d.message||'Could not generate a description');
+  }catch(e){ toast('Network error — try again'); }
+  btn.disabled = false;
+}
+
+function goToAccountManagerStep(){
+  if(!document.getElementById('ob-name').value.trim()){ toast('Add a company name first'); return; }
+  document.getElementById('ob-step-company').classList.add('hidden');
+  document.getElementById('ob-step-manager').classList.remove('hidden');
+}
+
+async function finishOnboarding(){
+  const payload = {
+    company_id: companyId,
+    name: document.getElementById('ob-name').value.trim(),
+    company_number: document.getElementById('ob-number').value.trim(),
+    registered_address: document.getElementById('ob-address').value.trim(),
+    website: document.getElementById('ob-website').value.trim(),
+    sector: document.getElementById('ob-sector').value.trim(),
+    company_size: document.getElementById('ob-size').value,
+    stage: document.getElementById('ob-stage').value,
+    hq_location: document.getElementById('ob-loc').value.trim(),
+    remote_policy: document.getElementById('ob-remote').value,
+    work_types: obWorkTypes,
+    description: document.getElementById('ob-desc').value.trim(),
+    account_manager: {
+      name: document.getElementById('ob-am-name').value.trim(),
+      position: document.getElementById('ob-am-position').value.trim(),
+      email: document.getElementById('ob-am-email').value.trim()
+    }
+  };
+  try{
+    const d = await (await fetch('/api/company/onboarding',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})).json();
+    if(!d.success){ toast(d.message||'Could not save — try again'); return; }
+  }catch(e){ toast('Network error — try again'); return; }
+  document.getElementById('onboard-overlay').classList.add('hidden');
+  await startApp();
+}
+
+// ── Bootstrapping ────────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', async ()=>{
+  document.getElementById('today-date').textContent = new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  if(companyId){
+    document.getElementById('login-screen').classList.add('hidden');
+    await startApp();
+  }
+});
+
+async function startApp(){
+  document.getElementById('app').classList.remove('hidden');
+  document.getElementById('company-email-display').textContent = companyEmail;
+  try{
+    const d = await (await fetch(`/api/company/get-profile?company_id=${companyId}`)).json();
+    const prof = d.profile||{};
+    if(!prof.onboarding_done){document.getElementById('onboard-overlay').classList.remove('hidden');}
+    const name = prof.name || companyEmail;
+    document.getElementById('company-name-display').textContent = name;
+    document.getElementById('company-avatar').textContent = initials(name);
+    document.getElementById('welcome-name').textContent = prof.name ? `, ${prof.name}` : '';
+  }catch(e){}
+  await loadRoles();
+  showView('dashboard');
+}
+
+// ── Roles ────────────────────────────────────────────────────────────────
+async function loadRoles(){
+  try{
+    const d = await (await fetch(`/api/company/get-roles?company_id=${companyId}`)).json();
+    roles = d.roles||[];
+  }catch(e){roles=[];}
+  renderRoleSidebar();
+  renderDashboardStats();
+}
+
+function renderRoleSidebar(){
+  const el = document.getElementById('role-list');
+  if(!roles.length){el.innerHTML = '<p class="text-xs italic px-2 py-1" style="color:var(--bm)">No roles yet</p>';return;}
+  const dotColor = s => s==='open' ? '#2D8659' : s==='paused' ? '#d97706' : s==='closed' ? '#93000a' : '#9ca3af';
+  el.innerHTML = roles.map(r=>`
+    <div class="rl ${currentRoleId===r.id?'on':''}" onclick="openRole('${r.id}')">
+      <span class="rdot" style="background:${dotColor(r.status)}"></span>
+      <span class="flex-1 truncate">${esc(r.title||'Untitled role')}</span>
+    </div>`).join('');
+}
+
+function renderDashboardStats(){
+  document.getElementById('stat-roles').textContent = roles.filter(r=>r.status==='open').length;
+  let candidates=0, intros=0, hired=0, activity=[];
+  roles.forEach(r=>{
+    candidates += (r.pipeline||[]).length;
+    intros += (r.pipeline||[]).filter(p=>p.status==='intro_requested').length;
+    hired += (r.pipeline||[]).filter(p=>p.status==='hired').length;
+  });
+  document.getElementById('stat-candidates').textContent = candidates;
+  document.getElementById('stat-intros').textContent = intros;
+  document.getElementById('stat-hired').textContent = hired;
+
+  const feed = document.getElementById('activity-feed');
+  if(!roles.length){
+    feed.innerHTML = '<div class="stat text-center py-10"><span class="i block mb-2" style="font-size:26px;color:var(--bm)">forest</span><p class="text-xs" style="color:var(--ov)">Create your first role to get started.</p></div>';
+  } else {
+    feed.innerHTML = roles.slice(0,6).map(r=>`
+      <div class="stat flex items-center gap-3 cursor-pointer" onclick="openRole('${r.id}')">
+        <span class="i" style="font-size:18px;color:var(--gm)">description</span>
+        <div class="flex-1 min-w-0"><p class="text-xs font-semibold truncate">${esc(r.title||'Untitled role')}</p><p class="text-xs" style="color:var(--bm)">${(r.pipeline||[]).length} candidate${(r.pipeline||[]).length===1?'':'s'} in pipeline</p></div>
+      </div>`).join('');
+  }
+}
+
+function showView(view){
+  ['dashboard','inbox','pipeline','allroles','skills','profile','role'].forEach(v=>{
+    document.getElementById('view-'+v).classList.toggle('hidden', v!==view);
+  });
+  ['dashboard','inbox','pipeline','allroles','skills','profile'].forEach(v=>{
+    const n = document.getElementById('nav-'+v);
+    if(n) n.classList.toggle('on', v===view);
+  });
+  document.getElementById('right-panel').classList.toggle('hidden', view!=='role');
+  if(view==='allroles') renderAllRolesList();
+  if(view==='pipeline') renderPipelineBoard();
+  if(view==='skills') loadCompanySkills();
+  if(view==='profile') loadCompanyProfileView();
+  if(view!=='role'){currentRoleId=null; renderRoleSidebar();}
+}
+
+function renderAllRolesList(){
+  const el = document.getElementById('all-roles-list');
+  if(!roles.length){el.innerHTML='<div class="stat text-center py-10"><span class="i block mb-2" style="font-size:26px;color:var(--bm)">work_off</span><p class="text-xs" style="color:var(--ov)">No roles yet.</p></div>';return;}
+  const pillClass = s => ({open:'open',draft:'draft',paused:'paused',closed:'closed'}[s]||'draft');
+  const pillLabel = s => ({open:'Hiring',draft:'Draft',paused:'Paused',closed:'Closed'}[s]||'Draft');
+  el.innerHTML = roles.map(r=>`
+    <div class="stat flex items-center justify-between cursor-pointer" onclick="openRole('${r.id}')">
+      <div class="flex-1 min-w-0">
+        <p class="text-sm font-semibold truncate">${esc(r.title||'Untitled role')}</p>
+        <p class="text-xs" style="color:var(--bm)">${esc(r.department||'—')} · ${esc(r.location||'—')} · ${(r.pipeline||[]).length} candidates</p>
+      </div>
+      <span class="spill ${pillClass(r.status)}"><span class="sdot"></span>${pillLabel(r.status)}</span>
+    </div>`).join('');
+}
+
+function renderPipelineBoard(){
+  const stages = ['suggested','saved','intro_requested','interviewing','hired','not_progressing'];
+  const labels = {suggested:'Suggested',saved:'Saved',intro_requested:'Intro requested',interviewing:'Interviewing',hired:'Hired',not_progressing:'Not progressing'};
+  const el = document.getElementById('pipeline-board');
+  el.className = 'grid grid-cols-6 gap-3';
+  el.innerHTML = stages.map(st=>{
+    const items = [];
+    roles.forEach(r=>(r.pipeline||[]).forEach(p=>{ if((p.status||'suggested')===st) items.push({...p, roleTitle:r.title, roleId:r.id}); }));
+    return `<div>
+      <p class="text-xs font-semibold uppercase tracking-wide mb-2" style="color:var(--bm)">${labels[st]} (${items.length})</p>
+      <div class="space-y-2">${items.map(it=>`
+        <div class="stat">
+          <p class="text-xs font-semibold cursor-pointer hover:underline" onclick="openRole('${it.roleId}')">${esc(it.candidate_user_id||'')}</p>
+          <p class="text-xs mb-2" style="color:var(--bm)">${esc(it.roleTitle||'')}</p>
+          <select class="fi text-xs mb-1.5" onchange="boardChangeStatus('${it.roleId}','${it.candidate_user_id}',this.value)">
+            ${stages.map(s=>`<option value="${s}" ${s===st?'selected':''}>${labels[s]}</option>`).join('')}
+          </select>
+          <button onclick="boardRequestSupport('${it.roleId}','${it.candidate_user_id}','${esc(it.roleTitle||'')}')" class="text-xs w-full py-1 rounded border border-gray-200 hover:border-green-700" style="color:var(--sf2)">Talk to Train Garden</button>
+        </div>`).join('') || '<p class="text-xs italic" style="color:var(--bm)">Empty</p>'}</div>
+    </div>`;
+  }).join('');
+}
+async function boardChangeStatus(roleId,candidateUserId,status){
+  try{
+    await fetch('/api/company/update-pipeline-status',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({company_id:companyId, role_id:roleId, candidate_user_id:candidateUserId, status})});
+    await loadRoles(); renderPipelineBoard();
+    toast('Status updated');
+  }catch(e){ toast('Could not update status — try again'); }
+}
+async function boardRequestSupport(roleId,candidateUserId,roleTitle){
+  const note = prompt(`What would you like the Train Garden team's help with for this candidate on "${roleTitle}"? (optional)`) || '';
+  try{
+    const d = await (await fetch('/api/company/request-team-support',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({company_id:companyId, role_id:roleId, candidate_user_id:candidateUserId, note})})).json();
+    toast(d.success ? 'The Train Garden team has been notified' : (d.message||'Could not send request'));
+  }catch(e){ toast('Network error — try again'); }
+}
+
+async function openRole(roleId){
+  currentRoleId = roleId;
+  showView('role');
+  document.getElementById('nav-dashboard').classList.remove('on');
+  renderRoleSidebar();
+  window._proposed = [];
+  window._matchDiagnosis = '';
+  try{
+    const d = await (await fetch(`/api/company/get-role?company_id=${companyId}&role_id=${roleId}`)).json();
+    currentRole = d.role;
+    currentRole.pipeline_candidates = d.pipeline_candidates||[];
+  }catch(e){toast('Could not load role');return;}
+  renderRoleDetail();
+  setRoleTab(currentTab);
+}
+
+async function runSkillCrossSearch(){
+  const skill = document.getElementById('skill-cross-search').value.trim();
+  const panel = document.getElementById('skill-cross-results');
+  if(!skill){ panel.classList.add('hidden'); return; }
+  panel.classList.remove('hidden');
+  panel.innerHTML = '<p class="text-xs" style="color:var(--bm)">Searching…</p>';
+  try{
+    const d = await (await fetch(`/api/skills/cross-match?skill=${encodeURIComponent(skill)}`)).json();
+    if(!d.success){ panel.innerHTML = `<p class="text-xs" style="color:var(--ef)">${esc(d.message||'Search failed')}</p>`; return; }
+    const cands = d.candidates_with_skill||[], roles = d.roles_needing_skill||[];
+    let html = `<p class="text-xs font-semibold mb-2" style="color:var(--ov)">Cross-domain match for "${esc(d.skill)}" — ignores job titles on both sides</p>`;
+    html += `<div class="grid grid-cols-2 gap-3">`;
+    html += `<div><p class="label-mono text-xs mb-1.5" style="color:var(--bm)">CANDIDATES WITH THIS SKILL (${cands.length})</p>`;
+    html += cands.length ? cands.map(c=>`<div class="feat mb-1.5 p-2"><p class="text-xs font-semibold">${esc(c.current_title_or_role||'Candidate')}</p><p class="text-xs" style="color:var(--bm)">matched on: ${esc(c.matched_on)}</p></div>`).join('') : '<p class="text-xs italic" style="color:var(--bm)">None found yet</p>';
+    html += `</div><div><p class="label-mono text-xs mb-1.5" style="color:var(--bm)">ROLES NEEDING THIS SKILL (${roles.length})</p>`;
+    html += roles.length ? roles.map(r=>`<div class="feat mb-1.5 p-2"><p class="text-xs font-semibold">${esc(r.role_title)} <span style="color:var(--bm)">— ${esc(r.company_name)}</span></p><p class="text-xs" style="color:var(--bm)">${r.required?'required':'nice to have'}: ${esc(r.matched_on)}</p></div>`).join('') : '<p class="text-xs italic" style="color:var(--bm)">None found yet</p>';
+    html += `</div></div>`;
+    panel.innerHTML = html;
+  }catch(e){ panel.innerHTML = '<p class="text-xs" style="color:var(--ef)">Network error — try again</p>'; }
+}
+async function runMatching(){
+  if(!currentRole) return;
+  const btn = event?.target;
+  if(btn){ btn.disabled = true; btn.textContent = 'Searching…'; }
+  try{
+    const r = await fetch('/api/company/generate-matches', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({company_id: companyId, role_id: currentRoleId})});
+    const d = await r.json();
+    if(!d.success){ toast(d.message||'Could not run matching'); return; }
+    window._proposed = d.proposed_candidates||[];
+    window._matchDiagnosis = d.diagnosis||'';
+    if(d.role_skills_ai_generated) toast('AI filled in required skills for this role before matching, since none were set');
+    else toast(window._proposed.length ? `Found ${window._proposed.length} candidate(s)` : 'No new matches found');
+    renderCandidates();
+  }catch(e){ toast('Network error running matching'); }
+  finally{ if(btn){ btn.disabled = false; btn.textContent = 'Rerun search'; } }
+}
+
+async function persistRoleList(field){
+  const payload = {company_id: companyId, role_id: currentRole.id};
+  payload[field] = currentRole[field] || [];
+  const d = await (await fetch('/api/company/update-role',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})).json();
+  if(d.success){ currentRole = d.role; renderRoleDetail(); } else toast('Could not save — try again');
+}
+function addRoleListItem(evt,field){
+  if(evt.key!=='Enter') return;
+  const val = evt.target.value.trim();
+  if(!val) return;
+  currentRole[field] = [...(currentRole[field]||[]), val];
+  evt.target.value='';
+  persistRoleList(field);
+}
+function removeRoleListItem(field,idx){
+  currentRole[field] = (currentRole[field]||[]).filter((_,i)=>i!==idx);
+  persistRoleList(field);
+}
+function renderRoleDetail(){
+  const r = currentRole; if(!r) return;
+  document.getElementById('role-title').textContent = r.title||'Untitled role';
+  const pillClass = {open:'open',draft:'draft',paused:'paused',closed:'closed'}[r.status]||'draft';
+  const pillLabel = {open:'Hiring',draft:'Draft',paused:'Paused',closed:'Closed'}[r.status]||'Draft';
+  const pill = document.getElementById('role-status-pill');
+  pill.className = 'spill '+pillClass;
+  pill.innerHTML = `<span class="sdot"></span>${pillLabel}`;
+  document.getElementById('role-date').textContent = r.created_at ? new Date(r.created_at).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}) : '';
+  document.getElementById('role-summary').textContent = r.summary || 'No summary yet — add one in Settings.';
+  document.getElementById('role-department').textContent = r.department || '—';
+  document.getElementById('role-seniority').textContent = r.seniority || '—';
+  document.getElementById('role-location').textContent = r.location || '—';
+  document.getElementById('role-remote').textContent = r.remote_policy || '—';
+  document.getElementById('role-emptype').textContent = r.employment_type || '—';
+  document.getElementById('role-salary').textContent = r.salary_range || '—';
+  document.getElementById('role-required-skills').innerHTML = (r.required_skills||[]).map((s,i)=>`<span class="ch" title="Click to remove" onclick="removeRoleListItem('required_skills',${i})" style="cursor:pointer">${esc(s)} ✕</span>`).join('') || '<span class="text-xs italic" style="color:var(--bm)">None parsed — add one below</span>';
+  document.getElementById('role-nice-skills').innerHTML = (r.nice_to_have_skills||[]).map((s,i)=>`<span class="ch" title="Click to remove" onclick="removeRoleListItem('nice_to_have_skills',${i})" style="cursor:pointer">${esc(s)} ✕</span>`).join('') || '<span class="text-xs italic" style="color:var(--bm)">None parsed — add one below</span>';
+  document.getElementById('role-responsibilities').innerHTML = (r.responsibilities||[]).map((s,i)=>`<li class="flex items-start justify-between gap-2 group"><span>${esc(s)}</span><button onclick="removeRoleListItem('responsibilities',${i})" class="text-gray-300 hover:text-red-500 flex-shrink-0" title="Remove"><span class="i" style="font-size:13px">close</span></button></li>`).join('') || '<li class="italic" style="color:var(--bm)">None parsed — add one below</li>';
+
+  // Settings tab fields
+  document.getElementById('set-title').value = r.title||'';
+  document.getElementById('set-location').value = r.location||'';
+  document.getElementById('set-salary').value = r.salary_range||'';
+  document.getElementById('set-summary').value = r.summary||'';
+  document.getElementById('set-status').value = r.status||'draft';
+  selDepartment = r.department||''; selSeniority = r.seniority||'';
+  selEmployment = r.employment_type||''; selRemote = r.remote_policy||'';
+  renderRoleSettingChips();
+
+  // Pitch tab
+  document.getElementById('pitch-text').value = r.pitch_template||'';
+  document.getElementById('pitch-hint').value = '';
+
+  // Brief tab
+  const brief = r.brief||{must_haves:[],nice_to_haves:[],deal_breakers:[],notes:''};
+  renderBriefTags('brief-must', brief.must_haves||[], 'must_haves');
+  renderBriefTags('brief-nice', brief.nice_to_haves||[], 'nice_to_haves');
+  renderBriefTags('brief-deal', brief.deal_breakers||[], 'deal_breakers');
+  document.getElementById('brief-notes').value = brief.notes||'';
+  document.getElementById('brief-suggestions').classList.add('hidden');
+  window._briefSuggestions = [];
+}
+
+function setRoleTab(tab){
+  currentTab = tab;
+  document.querySelectorAll('.tb').forEach(b=>b.classList.toggle('on', b.dataset.tab===tab));
+  ['candidates','activity','pitch','brief','settings'].forEach(t=>{
+    document.getElementById('tab-'+t).classList.toggle('hidden', t!==tab);
+  });
+  if(tab==='candidates') renderCandidates();
+  if(tab==='activity') renderRoleActivity();
+}
+
+function renderCandidates(){
+  const list = document.getElementById('candidates-list');
+  const q = (document.getElementById('candidate-search').value||'').toLowerCase();
+  const pipelineIds = new Set((currentRole?.pipeline_candidates||[]).map(c=>c.candidate?.user_id));
+  // Real pipeline candidates first, then proposed matches not yet accepted into the pipeline.
+  const all = [
+    ...(currentRole?.pipeline_candidates||[]).map(c=>({...c, _proposed:false})),
+    ...((window._proposed||[]).filter(c=>!pipelineIds.has(c.candidate?.user_id)).map(c=>({...c, _proposed:true})))
+  ];
+  const cands = all.filter(c=>{
+    if(!q) return true;
+    const hay = `${c.candidate?.name||''} ${c.candidate?.headline||''} ${c.candidate?.target_role||''}`.toLowerCase();
+    return hay.includes(q);
+  });
+  if(!cands.length){
+    list.innerHTML = `<div class="stat text-center py-10">
+      <span class="i block mb-2" style="font-size:26px;color:var(--bm)">person_search</span>
+      <p class="text-xs mb-1" style="color:var(--ov)">No candidates yet</p>
+      <p class="text-xs" style="color:var(--bm)">${esc(window._matchDiagnosis || "Click \"Rerun search\" to run the matching engine for this role.")}</p>
+    </div>`;
+    return;
+  }
+  const tierClass = pct => pct>=95 ? 'unicorn' : pct>=85 ? 'excellent' : 'good';
+  const tierLabel = pct => pct>=95 ? 'Unicorn' : pct>=85 ? 'Excellent' : 'Good';
+  list.innerHTML = cands.map(c=>{
+    const cand = c.candidate||{};
+    const pct = c.match_pct || 0;
+    const reasons = (c.match_reasons||[]).join(' ') || cand.cv_summary || '';
+    const introReq = c.status==='intro_requested';
+    const uid = cand.user_id;
+    return `<div class="cc">
+      <div class="flex items-start gap-3 mb-2">
+        <div class="avatar">${initials(cand.name)}</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2">
+            <p class="text-sm font-semibold truncate">${esc(cand.name||'Candidate')}</p>
+            <span class="mbadge ${tierClass(pct)}">${pct}% · ${tierLabel(pct)}</span>
+            ${c._proposed ? '<span class="ch" style="background:var(--sb);color:var(--sf2)">Proposed</span>' : ''}
+          </div>
+          <p class="text-xs truncate" style="color:var(--bm)">${esc(cand.headline||cand.target_role||cand.sector||'')}</p>
+        </div>
+      </div>
+      <p class="text-xs leading-relaxed mb-3" style="color:var(--os)">${esc(reasons).slice(0,180)}${reasons.length>180?'…':''}</p>
+      <div class="flex items-center gap-2">
+        <button class="iconbtn danger" title="Dismiss" onclick="updatePipelineStatus('${uid}','rejected',${c._proposed},${pct},${JSON.stringify(c.match_reasons||[]).replace(/"/g,'&quot;')})"><span class="i" style="font-size:15px">thumb_down</span></button>
+        <button class="iconbtn" title="Save" onclick="updatePipelineStatus('${uid}','saved',${c._proposed},${pct},${JSON.stringify(c.match_reasons||[]).replace(/"/g,'&quot;')})"><span class="i" style="font-size:15px">bookmark</span></button>
+        ${introReq
+          ? `<span class="pl flex-1 text-center" style="color:var(--sf2);border-color:var(--sf2)"><span class="i" style="font-size:13px;vertical-align:-2px">check</span> Intro requested</span>`
+          : `<button class="pl flex-1" onclick="updatePipelineStatus('${uid}','intro_requested',${c._proposed},${pct},${JSON.stringify(c.match_reasons||[]).replace(/"/g,'&quot;')})">Request intro</button>`}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+async function updatePipelineStatus(candidateUserId, status, wasProposed, matchPct, matchReasons){
+  try{
+    const endpoint = wasProposed ? '/api/company/add-to-pipeline' : '/api/company/update-pipeline-status';
+    const body = wasProposed
+      ? {company_id: companyId, role_id: currentRoleId, candidate_user_id: candidateUserId, status, match_pct: matchPct, match_reasons: matchReasons}
+      : {company_id: companyId, role_id: currentRoleId, candidate_user_id: candidateUserId, status};
+    const r = await fetch(endpoint, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+    const d = await r.json();
+    if(!d.success){ toast(d.message||'Could not update candidate'); return; }
+    const fresh = await (await fetch(`/api/company/get-role?company_id=${companyId}&role_id=${currentRoleId}`)).json();
+    currentRole.pipeline_candidates = fresh.pipeline_candidates||[];
+    renderCandidates();
+    toast(status==='intro_requested' ? 'Intro requested' : status==='rejected' ? 'Candidate dismissed' : 'Candidate saved');
+  }catch(e){ toast('Network error updating candidate'); }
+}
+
+function renderRoleActivity(){
+  const el = document.getElementById('tab-activity');
+  el.innerHTML = `<div class="stat text-center py-10"><span class="i block mb-2" style="font-size:26px;color:var(--bm)">history</span><p class="text-xs" style="color:var(--ov)">Role activity will appear here as candidates move through the pipeline.</p></div>`;
+}
+
+// ── Brief ────────────────────────────────────────────────────────────────
+function renderBriefTags(elId, tags, field){
+  document.getElementById(elId).innerHTML = tags.map((t,i)=>`<span class="ch">${esc(t)}<span class="rm" onclick="removeBriefTag('${field}',${i})">✕</span></span>`).join('');
+}
+function addBriefTag(ev, field){
+  if(ev.key!=='Enter') return;
+  const val = ev.target.value.trim();
+  if(!val) return;
+  ev.target.value='';
+  const brief = currentRole.brief = currentRole.brief||{must_haves:[],nice_to_haves:[],deal_breakers:[],notes:''};
+  brief[field] = [...(brief[field]||[]), val];
+  const map = {must_haves:'brief-must', nice_to_haves:'brief-nice', deal_breakers:'brief-deal'};
+  renderBriefTags(map[field], brief[field], field);
+  saveBrief();
+}
+function removeBriefTag(field, idx){
+  currentRole.brief[field].splice(idx,1);
+  const map = {must_haves:'brief-must', nice_to_haves:'brief-nice', deal_breakers:'brief-deal'};
+  renderBriefTags(map[field], currentRole.brief[field], field);
+  saveBrief();
+}
+async function saveBrief(){
+  currentRole.brief.notes = document.getElementById('brief-notes').value;
+  await fetch('/api/company/update-role',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({company_id:companyId, role_id:currentRole.id, brief:currentRole.brief})});
+}
+
+async function savePitch(){
+  const pitch = document.getElementById('pitch-text').value;
+  currentRole.pitch_template = pitch;
+  await fetch('/api/company/update-role',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({company_id:companyId, role_id:currentRole.id, pitch_template:pitch})});
+  toast('Pitch template saved for this role');
+}
+
+async function aiGeneratePitch(){
+  const hint = document.getElementById('pitch-hint').value.trim();
+  const btn = event.target.closest('button'); if(btn) btn.disabled = true;
+  toast('Generating a pitch…');
+  try{
+    const d = await (await fetch('/api/company/ai-generate-pitch',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({company_id:companyId, role_id:currentRole.id, hint})})).json();
+    if(d.success){ document.getElementById('pitch-text').value = d.pitch; toast('Draft pitch generated — edit and save'); }
+    else toast(d.message||'Could not generate a pitch');
+  }catch(e){ toast('Network error — try again'); }
+  if(btn) btn.disabled = false;
+}
+
+async function aiGenerateBrief(){
+  const btn = document.getElementById('brief-ai-btn'); btn.disabled = true;
+  toast('Looking for suggestions based on this role…');
+  try{
+    const d = await (await fetch('/api/company/ai-generate-brief',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({company_id:companyId, role_id:currentRole.id})})).json();
+    if(d.success){
+      const all = [
+        ...d.suggestions.must_haves.map(v=>({v, field:'must_haves'})),
+        ...d.suggestions.nice_to_haves.map(v=>({v, field:'nice_to_haves'})),
+        ...d.suggestions.deal_breakers.map(v=>({v, field:'deal_breakers'})),
+      ];
+      const box = document.getElementById('brief-suggestions');
+      const chipsEl = document.getElementById('brief-suggestion-chips');
+      box.classList.toggle('hidden', all.length===0);
+      chipsEl.innerHTML = all.map((s,i)=>`<span class="ch" style="cursor:pointer" onclick="acceptBriefSuggestion(${i})">+ ${esc(s.v)}</span>`).join('') || '<span class="text-xs italic" style="color:var(--bm)">Nothing new to suggest</span>';
+      window._briefSuggestions = all;
+      if(!all.length) toast('No new suggestions — brief looks complete');
+    } else toast(d.message||'Could not generate suggestions');
+  }catch(e){ toast('Network error — try again'); }
+  btn.disabled = false;
+}
+function acceptBriefSuggestion(i){
+  const s = window._briefSuggestions[i];
+  const brief = currentRole.brief = currentRole.brief||{must_haves:[],nice_to_haves:[],deal_breakers:[],notes:''};
+  brief[s.field] = [...(brief[s.field]||[]), s.v];
+  const map = {must_haves:'brief-must', nice_to_haves:'brief-nice', deal_breakers:'brief-deal'};
+  renderBriefTags(map[s.field], brief[s.field], s.field);
+  saveBrief();
+  window._briefSuggestions.splice(i,1);
+  const chipsEl = document.getElementById('brief-suggestion-chips');
+  chipsEl.innerHTML = window._briefSuggestions.map((s2,i2)=>`<span class="ch" style="cursor:pointer" onclick="acceptBriefSuggestion(${i2})">+ ${esc(s2.v)}</span>`).join('') || '<span class="text-xs italic" style="color:var(--bm)">All suggestions added</span>';
+}
+
+// ── Settings ────────────────────────────────────────────────────────────
+async function saveSettings(){
+  const payload = {
+    company_id: companyId, role_id: currentRole.id,
+    title: document.getElementById('set-title').value.trim(),
+    department: selDepartment,
+    seniority: selSeniority,
+    employment_type: selEmployment,
+    location: document.getElementById('set-location').value.trim(),
+    remote_policy: selRemote,
+    salary_range: document.getElementById('set-salary').value.trim(),
+    summary: document.getElementById('set-summary').value.trim(),
+    status: document.getElementById('set-status').value
+  };
+  const d = await (await fetch('/api/company/update-role',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})).json();
+  if(d.success){
+    currentRole = {...currentRole, ...d.role};
+    Object.assign(roles.find(r=>r.id===currentRole.id)||{}, d.role);
+    renderRoleDetail(); renderRoleSidebar(); renderDashboardStats();
+    toast('Role updated');
+  }
+}
+
+// ── New role / JD upload ──────────────────────────────────────────────────
+let jdFile = null;
+function openNewRole(){document.getElementById('new-role-modal').classList.remove('hidden');}
+function closeNewRole(){
+  document.getElementById('new-role-modal').classList.add('hidden');
+  jdFile=null; document.getElementById('jd-file-name').textContent='Choose or drop a PDF job description';
+  document.getElementById('jd-text').value='';
+}
+function onJdFileChosen(input){
+  jdFile = input.files[0];
+  document.getElementById('jd-file-name').textContent = jdFile ? jdFile.name : 'Choose or drop a PDF job description';
+}
+async function submitJD(){
+  const text = document.getElementById('jd-text').value.trim();
+  if(!jdFile && !text){toast('Add a file or paste some text first');return;}
+  const btn = document.getElementById('jd-submit-btn');
+  btn.disabled = true;
+  document.getElementById('jd-loading').classList.remove('hidden');
+  const fd = new FormData();
+  fd.append('company_id', companyId);
+  if(jdFile) fd.append('file', jdFile);
+  if(text) fd.append('jd_text', text);
+  try{
+    const d = await (await fetch('/api/company/upload-jd',{method:'POST',body:fd})).json();
+    document.getElementById('jd-loading').classList.add('hidden');
+    btn.disabled = false;
+    if(d.success){
+      closeNewRole();
+      await loadRoles();
+      openRole(d.role.id);
+      toast('Role created from job description');
+    } else {
+      toast(d.message||'Could not parse job description');
+    }
+  }catch(e){
+    document.getElementById('jd-loading').classList.add('hidden');
+    btn.disabled = false;
+    toast('Network error — try again');
+  }
+}
+
+// Drag & drop on the dropzone
+const dzEl = document.getElementById('jd-dz');
+['dragover'].forEach(ev=>dzEl.addEventListener(ev,e=>{e.preventDefault();dzEl.classList.add('over');}));
+['dragleave','drop'].forEach(ev=>dzEl.addEventListener(ev,e=>{e.preventDefault();dzEl.classList.remove('over');}));
+dzEl.addEventListener('drop', e=>{
+  const f = e.dataTransfer.files[0];
+  if(f){ jdFile=f; document.getElementById('jd-file-name').textContent=f.name; }
+});
+
+// ── Company Skills (company-wide, independent of any role) ─────────────────
+let companySkills = [];
+async function loadCompanySkills(){
+  try{
+    const d = await (await fetch(`/api/company/get-skills?company_id=${companyId}`)).json();
+    companySkills = d.skills||[];
+  }catch(e){ companySkills = []; }
+  renderCompanySkillsList();
+}
+function renderCompanySkillsList(){
+  const el = document.getElementById('skills-list');
+  if(!companySkills.length){
+    el.innerHTML = '<div class="stat text-center py-10"><span class="i block mb-2" style="font-size:26px;color:var(--bm)">psychology</span><p class="text-xs" style="color:var(--ov)">No skills recorded yet.</p></div>';
+    return;
+  }
+  el.innerHTML = companySkills.map(s=>`
+    <div class="stat flex items-center justify-between">
+      <div><p class="text-sm font-semibold">${esc(s.name)}</p><p class="text-xs" style="color:var(--bm)">${esc(s.category||'Uncategorised')} · ${s.source==='upload'?'From upload':'Manually added'}</p></div>
+      <button class="iconbtn danger" title="Remove" onclick="removeCompanySkill('${s.id}')"><span class="i" style="font-size:15px">close</span></button>
+    </div>`).join('');
+}
+async function addCompanySkill(){
+  const input = document.getElementById('skill-name-input');
+  const name = input.value.trim();
+  if(!name){ toast('Type a skill name first'); return; }
+  const d = await (await fetch('/api/company/add-skill',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({company_id:companyId, name})})).json();
+  if(d.success){ companySkills = d.skills; input.value=''; renderCompanySkillsList(); toast('Skill added'); }
+  else toast(d.message||'Could not add skill');
+}
+async function removeCompanySkill(id){
+  const d = await (await fetch('/api/company/remove-skill',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({company_id:companyId, skill_id:id})})).json();
+  if(d.success){ companySkills = d.skills; renderCompanySkillsList(); }
+}
+let skillsFile = null;
+function onSkillsFileChosen(input){
+  skillsFile = input.files[0];
+  document.getElementById('skills-file-name').textContent = skillsFile ? skillsFile.name : 'Choose or drop a PDF';
+}
+let _skillsRecorder=null, _skillsChunks=[], _skillsStream=null;
+async function toggleSkillsRecording(){
+  const label=document.getElementById('skills-rec-label'), status=document.getElementById('skills-rec-status');
+  if(_skillsRecorder && _skillsRecorder.state==='recording'){
+    _skillsRecorder.stop();
+    return;
+  }
+  if(!navigator.mediaDevices?.getUserMedia){ toast('Microphone access is not supported in this browser'); return; }
+  try{
+    _skillsStream = await navigator.mediaDevices.getUserMedia({audio:true});
+    _skillsChunks = [];
+    _skillsRecorder = new MediaRecorder(_skillsStream);
+    _skillsRecorder.ondataavailable = e=>{ if(e.data.size>0) _skillsChunks.push(e.data); };
+    _skillsRecorder.onstop = async ()=>{
+      _skillsStream.getTracks().forEach(t=>t.stop());
+      label.textContent='Record instead'; status.textContent='Transcribing…';
+      const blob = new Blob(_skillsChunks, {type:'audio/webm'});
+      const fd = new FormData(); fd.append('audio', blob, 'recording.webm'); fd.append('owner_id', companyId);
+      try{
+        const d = await (await fetch('/api/transcribe-audio',{method:'POST',body:fd})).json();
+        if(d.success && d.text){
+          const ta=document.getElementById('skills-text'); ta.value = ta.value ? ta.value+'\n'+d.text : d.text;
+          status.textContent='Transcribed — review below, then Extract skills';
+        } else { status.textContent = d.message || 'Could not transcribe — try again or type it'; }
+      }catch(e){ status.textContent='Network error transcribing — try again'; }
+    };
+    _skillsRecorder.start();
+    label.textContent='Stop recording'; status.textContent='Recording…';
+  }catch(e){ toast('Could not access microphone'); }
+}
+async function submitSkillsUpload(){
+  const text = document.getElementById('skills-text').value.trim();
+  if(!skillsFile && !text){ toast('Add a file or paste some text first'); return; }
+  const btn = document.getElementById('skills-upload-btn'); btn.disabled = true;
+  document.getElementById('skills-upload-loading').classList.remove('hidden');
+  const fd = new FormData();
+  fd.append('company_id', companyId);
+  if(skillsFile) fd.append('file', skillsFile);
+  if(text) fd.append('text', text);
+  try{
+    const d = await (await fetch('/api/company/upload-skills',{method:'POST',body:fd})).json();
+    document.getElementById('skills-upload-loading').classList.add('hidden');
+    btn.disabled = false;
+    if(d.success){
+      companySkills = d.skills;
+      skillsFile = null; document.getElementById('skills-file-name').textContent='Choose or drop a PDF';
+      document.getElementById('skills-text').value='';
+      renderCompanySkillsList();
+      toast(`Extracted ${d.added.length} skill(s)`);
+    } else toast(d.message||'Could not extract skills');
+  }catch(e){
+    document.getElementById('skills-upload-loading').classList.add('hidden');
+    btn.disabled = false;
+    toast('Network error — try again');
+  }
+}
+
+// ── Company Profile page ────────────────────────────────────────────────────
+let companyDocuments = [], teamMembers = [];
+async function loadCompanyProfileView(){
+  try{
+    const d = await (await fetch(`/api/company/get-profile?company_id=${companyId}`)).json();
+    const p = d.profile||{};
+    document.getElementById('cp-name').value = p.name||'';
+    document.getElementById('cp-number').value = p.company_number||'';
+    document.getElementById('cp-website').value = p.website||'';
+    document.getElementById('cp-email').value = p.email||'';
+    document.getElementById('cp-address').value = p.registered_address||'';
+    document.getElementById('cp-sector').value = p.sector||'';
+    document.getElementById('cp-size').value = p.company_size||'';
+    document.getElementById('cp-stage').value = p.stage||'';
+    document.getElementById('cp-loc').value = p.hq_location||'';
+    document.getElementById('cp-desc').value = p.description||'';
+    companyDocuments = d.documents||[];
+    teamMembers = d.team_members||[];
+  }catch(e){}
+  renderDocumentsList();
+  renderTeamList();
+}
+async function saveCompanyProfile(){
+  const payload = {
+    company_id: companyId,
+    name: document.getElementById('cp-name').value.trim(),
+    company_number: document.getElementById('cp-number').value.trim(),
+    website: document.getElementById('cp-website').value.trim(),
+    email: document.getElementById('cp-email').value.trim(),
+    registered_address: document.getElementById('cp-address').value.trim(),
+    sector: document.getElementById('cp-sector').value.trim(),
+    company_size: document.getElementById('cp-size').value,
+    stage: document.getElementById('cp-stage').value,
+    hq_location: document.getElementById('cp-loc').value.trim(),
+    description: document.getElementById('cp-desc').value.trim()
+  };
+  const d = await (await fetch('/api/company/onboarding',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})).json();
+  if(d.success){
+    document.getElementById('company-name-display').textContent = d.profile.name || companyEmail;
+    document.getElementById('company-avatar').textContent = initials(d.profile.name);
+    toast('Company profile updated');
+  } else toast('Could not save changes');
+}
+function renderDocumentsList(){
+  const el = document.getElementById('cp-documents-list');
+  if(!companyDocuments.length){
+    el.innerHTML = '<p class="text-xs italic" style="color:var(--bm)">No documents yet.</p>';
+    return;
+  }
+  el.innerHTML = companyDocuments.map(doc=>`
+    <div class="flex items-center justify-between px-3 py-2" style="border:1px solid var(--bd)">
+      <a href="/api/company/document/${companyId}/${doc.id}" target="_blank" rel="noopener" class="flex items-center gap-2 min-w-0 hover:underline" style="color:var(--os)"><span class="i" style="font-size:16px;color:var(--bm)">description</span><span class="text-xs truncate">${esc(doc.name)}</span></a>
+      <button class="iconbtn danger" title="Remove" onclick="removeProfileDoc('${doc.id}')"><span class="i" style="font-size:14px">close</span></button>
+    </div>`).join('');
+}
+async function onProfileDocChosen(input){
+  const file = input.files[0]; if(!file) return;
+  const fd = new FormData(); fd.append('company_id', companyId); fd.append('file', file);
+  try{
+    const d = await (await fetch('/api/company/upload-document',{method:'POST',body:fd})).json();
+    if(d.success){ companyDocuments.unshift(d.document); renderDocumentsList(); toast('Document uploaded'); }
+    else toast(d.message||'Could not upload document');
+  }catch(e){ toast('Network error — try again'); }
+  input.value = '';
+}
+async function removeProfileDoc(id){
+  const d = await (await fetch('/api/company/remove-document',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({company_id:companyId, document_id:id})})).json();
+  if(d.success){ companyDocuments = d.documents; renderDocumentsList(); }
+}
+function renderTeamList(){
+  const el = document.getElementById('team-list');
+  if(!teamMembers.length){
+    el.innerHTML = '<p class="text-xs italic" style="color:var(--bm)">No teammates added yet.</p>';
+    return;
+  }
+  el.innerHTML = teamMembers.map(m=>`
+    <div class="flex items-center justify-between px-3 py-2" style="border:1px solid var(--bd)">
+      <div class="min-w-0"><p class="text-xs font-semibold truncate">${esc(m.name||m.email)}</p><p class="text-xs truncate" style="color:var(--bm)">${esc(m.email)}</p></div>
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <select class="fi" style="max-width:100px" onchange="updateTeamAccess('${m.id}',this.value)">
+          <option value="member" ${m.access_level==='member'?'selected':''}>Member</option>
+          <option value="admin" ${m.access_level==='admin'?'selected':''}>Admin</option>
+          <option value="owner" ${m.access_level==='owner'?'selected':''}>Owner</option>
+        </select>
+        <button class="iconbtn danger" title="Remove" onclick="removeTeamMember('${m.id}')"><span class="i" style="font-size:14px">close</span></button>
+      </div>
+    </div>`).join('');
+}
+async function addTeamMember(){
+  const name = document.getElementById('team-name-input').value.trim();
+  const email = document.getElementById('team-email-input').value.trim();
+  const access_level = document.getElementById('team-access-input').value;
+  if(!email){ toast('Enter an email first'); return; }
+  const d = await (await fetch('/api/company/team/add',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({company_id:companyId, name, email, access_level})})).json();
+  if(d.success){
+    teamMembers = d.team_members;
+    document.getElementById('team-name-input').value=''; document.getElementById('team-email-input').value='';
+    renderTeamList(); toast('Teammate added');
+  } else toast(d.message||'Could not add teammate');
+}
+async function updateTeamAccess(id, access_level){
+  const d = await (await fetch('/api/company/team/update',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({company_id:companyId, member_id:id, access_level})})).json();
+  if(d.success){ teamMembers = d.team_members; toast('Access level updated'); } else { toast(d.message||'Could not update'); renderTeamList(); }
+}
+async function removeTeamMember(id){
+  const d = await (await fetch('/api/company/team/remove',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({company_id:companyId, member_id:id})})).json();
+  if(d.success){ teamMembers = d.team_members; renderTeamList(); } else toast(d.message||'Could not remove teammate');
+}
+
+// Resizable middle/right split
+(function(){
+  const handle = document.getElementById('resize-handle');
+  const right = document.getElementById('right-panel');
+  let dragging=false;
+  handle.addEventListener('mousedown', ()=>{dragging=true;handle.classList.add('dg');});
+  window.addEventListener('mouseup', ()=>{dragging=false;handle.classList.remove('dg');});
+  window.addEventListener('mousemove', e=>{
+    if(!dragging) return;
+    const w = window.innerWidth - e.clientX;
+    if(w>340 && w<800) right.style.width = w+'px';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+{
+  "user_id": "84492470daaefac3a7ba9d7dc6eb09d9",
+  "email": "1757@admin.com",
+  "name": "k",
+  "first_seen": "2026-07-24T17:57:56.039640",
+  "last_seen": "2026-07-24T18:00:05.523929",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Data-driven decision making",
+    "Project delivery"
+  ],
+  "skill_sources": {
+    "Data-driven decision making": [
+      {
+        "type": "inferred",
+        "detail": "Digital transformation strategist — In a sustainability role, understanding how to leverage data to inform decisions is crucial for measuring impact and identifying areas for improvement.",
+        "ts": "2026-07-24T17:59:26.628999"
+      }
+    ],
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "bridges technical execution, commercial growth, and humancentric innovation — A sustainability professional needs to balance multiple stakeholders' interests, including business, environmental, and social aspects, which requires strong proj",
+        "ts": "2026-07-24T17:59:26.629045"
+      }
+    ]
+  },
+  "cv_summary": "                 Daryna Vakulenko           London, UK, Phone number: +447442476374, Email: info@darynavakulenko.com          Professional Profile           Digital transformation strategist who bridges technical execution, commercial growth, and humancentric innovation. With a foundational backgrou",
+  "messages": [
+    {
+      "uid": "84492470daaefac3a7ba9d7dc6eb09d9",
+      "role": "user",
+      "content": "I'm completely new to sustainability",
+      "ts": "2026-07-24T17:59:41.339923"
+    },
+    {
+      "uid": "84492470daaefac3a7ba9d7dc6eb09d9",
+      "role": "assistant",
+      "content": "Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. What kind of role are you looking for? Any specific job titles, sectors, or type of work on your radar — and what's the \"why\" behind the search?",
+      "ts": "2026-07-24T17:59:48.763173",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not sure yet — help me explore",
+        "Renewable energy / EV roles",
+        "Sustainability / ESG roles"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "18ef3331-5226-4b9a-80a0-abeb871fc476",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1784912366/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-24 17:59",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "04fbee0f-6911-4de8-a1fb-93b65b103373",
+      "name": "Daryna Vakulenko - CV -  copy.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-24 17:59"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "SE1 2TF",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "Generalist / AI Transformation Specialist",
+  "experience": [
+    {
+      "id": "8b050066",
+      "title": "New to sustainability (exploring roles)",
+      "company": "",
+      "start_date": "",
+      "end_date": "",
+      "description": "",
+      "source": "chat"
+    }
+  ],
+  "how_heard": "Other",
+  "onboarding_seen": true,
+  "intake_pending": "target_role",
+  "intake_skipped": [],
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Digital transformation strategist",
+      "skill": "Data-driven decision making",
+      "relevance": "In a sustainability role, understanding how to leverage data to inform decisions is crucial for measuring impact and identifying areas for improvement."
+    },
+    {
+      "source": "bridges technical execution, commercial growth, and humancentric innovation",
+      "skill": "Project delivery",
+      "relevance": "A sustainability professional needs to balance multiple stakeholders' interests, including business, environmental, and social aspects, which requires strong project delivery skills."
+    }
+  ],
+  "journey": {
+    "xp": 0,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-24",
+    "last_checkin_date": ""
+  }
+}

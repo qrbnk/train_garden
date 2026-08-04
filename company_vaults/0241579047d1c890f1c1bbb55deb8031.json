@@ -1,0 +1,366 @@
+{
+  "company_id": "0241579047d1c890f1c1bbb55deb8031",
+  "email": "lindawendstorm@gmail.com",
+  "account_type": "company",
+  "first_seen": "2026-08-03T12:18:05.030293",
+  "last_seen": "2026-08-03T12:29:06.832312",
+  "profile": {
+    "name": "Solar Installation North London",
+    "company_number": "365",
+    "registered_address": "kilburn high road",
+    "website": "solar_installation_nn.com",
+    "sector": "Solar/Renewable Energy",
+    "sub_sectors": [],
+    "company_size": "51-200",
+    "stage": "Growth",
+    "hq_location": "London, UK",
+    "work_types": [
+      "Full-time",
+      "Part-time",
+      "Contract",
+      "Internship",
+      "Graduate scheme",
+      "Apprenticeship"
+    ],
+    "remote_policy": "",
+    "description": "We design and install high-performance solar panel systems for residential and commercial clients across North London.",
+    "culture_tags": [],
+    "account_manager": {
+      "name": "Craig Thompson",
+      "position": "Head of HR",
+      "email": "lindawendstorm@gmail.com"
+    },
+    "onboarding_done": true
+  },
+  "team_members": [
+    {
+      "id": "97ba4f7f-982a-424b-b1a1-151417d09e65",
+      "name": "Craig Thompson",
+      "email": "lindawendstorm@gmail.com",
+      "access_level": "owner",
+      "added_at": "2026-08-03T12:20:09.368436"
+    }
+  ],
+  "documents": [
+    {
+      "id": "661e8563-9b42-455a-b3bc-f0c58c081c8c",
+      "name": "Solar-Installation-Technician-Lvl-1.-Job-Description-.pdf",
+      "type": "skills",
+      "stored_filename": "0241579047d1c890f1c1bbb55deb8031_2d7fbf1a_Solar-Installation-Technician-Lvl-1.-Job-Description-.pdf",
+      "timestamp": "2026-08-03 12:25"
+    },
+    {
+      "id": "7d6f63ed-2c79-4bba-97e9-cb1d736d8c87",
+      "name": "Solar-Installation-Technician-Lvl-1.-Job-Description--2.pdf",
+      "type": "jd",
+      "role_id": "609d6065-c2d3-41c9-9a98-a9de48f5f3d2",
+      "timestamp": "2026-08-03 12:21"
+    }
+  ],
+  "roles": [
+    {
+      "id": "609d6065-c2d3-41c9-9a98-a9de48f5f3d2",
+      "title": "Solar Installation Technician Level 1",
+      "department": "Field/Site",
+      "seniority": "Junior",
+      "employment_type": "Full-time",
+      "location": "NW25AB",
+      "remote_policy": "Onsite",
+      "salary_range": "31k",
+      "sector_tags": [
+        "Renewable Energy",
+        "Sustainability"
+      ],
+      "required_skills": [
+        "Basic understanding of electrical systems and principles",
+        "Ability to follow instructions and work collaboratively in a team with a positive attitude",
+        "Strong mechanical aptitude and attention to detail",
+        "solar installation",
+        "Safety Compliance",
+        "Quality Control"
+      ],
+      "nice_to_have_skills": [
+        "Previous experience in construction or a related field",
+        "Basic understanding of solar energy systems",
+        "OSHA certification"
+      ],
+      "responsibilities": [
+        "Assist in Solar Panel Installation",
+        "Assist in Electrical Wiring",
+        "Assist in Racking System Installation",
+        "Tool and Equipment Operation",
+        "Quality Control",
+        "Safety Compliance",
+        "Documentation",
+        "Team Collaboration"
+      ],
+      "summary": "We are seeking an entry-level Solar Installation Technician to join our team and learn the skills necessary to install photovoltaic (PV) systems in residential and commercial settings while ensuring safety and quality standards are met.",
+      "raw_jd_text": "Job Description:  \nSolar Installation Technician Lvl 1. \nJob Overview:          \nWe are seeking a motivated and reliable Solar Installation Technician Level 1 to join our team. \nThe successful candidate will assist in the installation of solar energy systems, ensuring all \ncomponents are assembled and installed efficiently and to high- quality standards. This entry-\nlevel position provides an excellent opportunity to learn and grow within the solar energy \nindustry. \nResponsibilities: \n Assist in Solar Panel Installation: \n● Support the installation of solar panels on residential and commercial projects. \n● Ensure proper alignment, positioning, and secure attachment of solar equipment. \n Assist in Electrical Wiring: \n● Assist with the routing and connection of electrical wiring between solar panels, \ninverters, and electrical components. \n● Ensure compliance with electrical codes and safety standards. \n Assist in Racking System Installation: \n● Assist in the assembly and installation of mounting structures and racking systems \nto support solar panels. \n● Ensure the structural integrity and stability of the mounting systems. \n Tool and Equipment Operation: \n● Operate hand and power tools safely and effectively. \n● Assist in maintaining and organizing tools and equipment on the job site. \n Quality Control: \n● Work under the guidance of senior technicians to ensure the quality and \naccuracy of solar installations. \n● Identify and report any issues or discrepancies during the installation process. \n Safety Compliance: \n● Adhere to safety protocols and guidelines at all times. \n● Participate in safety meetings and training sessions. \n Documentation: \n● Assist in documenting the installation process, including photographs and written \ndescriptions. \n● Complete installation reports and checklists accurately. \n Team Collaboration: \n● Collaborate with team members and communicate effectively to ensure a \nsmooth installation process. \n● Seek guidance and support from senior technicians when needed. \nQualifications: \n● High school diploma or equivalent. \n● Basic understanding of electrical systems and principles. \n● Ability to follow instructions and work collaboratively in a team with a positive attitude. ● Strong mechanical aptitude and attention to detail. \n● Comfortable working at heights and in various weather conditions. \n● Basic knowledge of construction and hand/power tools. \nPreferred Skills: \n● Previous experience in construction or a related field. \n● Basic understanding of solar energy systems. \n● OSHA certification or willingness to obtain. \nPhysical Requirements: \n● Ability to lift and carry up to 50 pounds. \n● Comfortable working on rooftops and in outdoor environments. \n● Ability to stand, walk, and climb ladders for extended periods. \nTraining: \n● On-the-job training will be provided, including safety protocols and installation \nprocedures. \n \n ",
+      "pitch_template": "Hi {name}, \n\nWe're excited about your application for the {role} position at Solar Installation North London! We'd love to invite you in for an intro to discuss how your skills and experience could be a great fit for our team.\n\nIn this role, you'll work alongside experienced technicians on-site, assisting with the installation of high-performance solar panel systems. If you have a basic understanding of electrical systems, enjoy working collaboratively, and possess strong mechanical aptitude, we'd love to explore this opportunity further.\n\nWould you be available for an intro meeting at your earliest convenience?",
+      "status": "open",
+      "created_at": "2026-08-03T12:21:53.293302",
+      "updated_at": "2026-08-03T12:28:46.440928",
+      "brief": {
+        "must_haves": [
+          "Valid driver's license and reliable transportation",
+          "Ability to lift up to 50 pounds and work at heights (up to 20 feet)",
+          "High school diploma or equivalent; technical degree or certification a plus",
+          "Basic math skills and ability to read blueprints",
+          "Passing a pre-employment drug screening"
+        ],
+        "nice_to_haves": [
+          "Experience with electrical systems, solar installation, or construction",
+          "Certifications such as OSHA, CPR/First Aid, or PV Installation",
+          "Familiarity with company-specific tools and equipment",
+          "Proficiency in MS Office or other software relevant to the position"
+        ],
+        "deal_breakers": [
+          "History of substance abuse or safety-related incidents",
+          "Felony convictions related to theft or dishonesty",
+          "Lack of reliable transportation or inability to commute regularly"
+        ],
+        "notes": ""
+      },
+      "pipeline": []
+    }
+  ],
+  "skills": [
+    {
+      "id": "d840edad-3076-4e5c-8077-288b4031cdef",
+      "name": "Solar Panel Installation",
+      "category": "Technical",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602224"
+    },
+    {
+      "id": "5756713b-4300-4ce8-8bef-2be517074e2f",
+      "name": "Electrical Wiring",
+      "category": "Technical",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602558"
+    },
+    {
+      "id": "77f7bb8d-b46e-4e44-8804-cc0481360ce8",
+      "name": "Racking System Installation",
+      "category": "Technical",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602573"
+    },
+    {
+      "id": "c060127c-357f-41d4-9549-ca512fb80df9",
+      "name": "Tool and Equipment Operation",
+      "category": "Technical",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602582"
+    },
+    {
+      "id": "8c1d2285-84cb-4040-9a90-6a8f40bf9ece",
+      "name": "Quality Control",
+      "category": "Compliance",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602595"
+    },
+    {
+      "id": "4f9ae9e0-ca3a-4585-8405-1e92c9e7905f",
+      "name": "Safety Compliance",
+      "category": "Compliance",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602607"
+    },
+    {
+      "id": "7ba9a9a1-8507-400d-a531-d8e079c3cba3",
+      "name": "Documentation",
+      "category": "Administrative",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602616"
+    },
+    {
+      "id": "570ff85e-7c1c-4304-9b79-79d7514ea2b6",
+      "name": "Team Collaboration",
+      "category": "Soft Skills",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602624"
+    },
+    {
+      "id": "240ed45f-446c-4ec5-a07c-05a7acb11741",
+      "name": "Mechanical Aptitude",
+      "category": "Technical",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602632"
+    },
+    {
+      "id": "ed84a530-95a6-4ea0-9e1a-7e016a7177e8",
+      "name": "Attention to Detail",
+      "category": "Soft Skills",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602641"
+    },
+    {
+      "id": "8033211a-73c2-4371-9a6d-5a96a6f16a8b",
+      "name": "Basic Understanding of Electrical Systems and Principles",
+      "category": "Knowledge",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602649"
+    },
+    {
+      "id": "c42c8e07-a110-4a55-a43b-811079fb9afc",
+      "name": "OSHA Certification",
+      "category": "Compliance",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-08-03T12:25:23.602658"
+    }
+  ],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "ef6558c4-688b-4b4c-ba9b-b3206b3637ac",
+      "text": "Generated 1 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:29:06.832302"
+    },
+    {
+      "id": "dc647a49-add1-42a2-9af4-dde07883f073",
+      "text": "Generated 1 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:28:53.142239"
+    },
+    {
+      "id": "c745f560-2e10-46fe-8722-16fb877d7852",
+      "text": "Generated 1 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:28:28.130843"
+    },
+    {
+      "id": "7823e735-c776-46c1-8a7f-427a92ff3e5f",
+      "text": "Generated 1 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:28:05.428065"
+    },
+    {
+      "id": "1d86021c-c2e8-4fa6-9b5b-1ee9d99b5ece",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:27:49.100356"
+    },
+    {
+      "id": "88b66119-eef4-4993-b4b0-f5653b9340e9",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:27:21.595153"
+    },
+    {
+      "id": "ea13924d-35f6-470f-8fc9-ba12d53fe74a",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:27:21.461457"
+    },
+    {
+      "id": "29a835ad-e1dc-40e0-906b-1c12ec8149a7",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:27:21.326664"
+    },
+    {
+      "id": "e179ae21-e3e3-44a1-994e-4e38e280ca9f",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:27:21.194117"
+    },
+    {
+      "id": "a39fdc5e-d9b1-4b2c-939d-a974b4c38956",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:27:21.063978"
+    },
+    {
+      "id": "f7a22268-a37c-4329-82eb-e96d8049b8b3",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:27:20.929041"
+    },
+    {
+      "id": "988cd110-54e2-4699-a3b9-c0225a8c17c7",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:27:20.802561"
+    },
+    {
+      "id": "de90ceea-ac4b-4df6-af47-554114acde2f",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:27:20.643441"
+    },
+    {
+      "id": "3fde0960-655c-4fbe-8a4c-d50fa2771705",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:27:20.080301"
+    },
+    {
+      "id": "5e709b9a-d1b2-4ae7-8412-f52ea6224146",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:27:19.137813"
+    },
+    {
+      "id": "b74d5403-4330-4a43-8d12-0e15cf5dc0b3",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:26:56.851843"
+    },
+    {
+      "id": "837bf1f4-082f-4317-91db-7c35f104fed8",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:26:49.899260"
+    },
+    {
+      "id": "0bb230ab-33cd-42c0-8fa4-d466ae9cc77b",
+      "text": "Extracted 12 skill(s) from an upload",
+      "type": "skill",
+      "ts": "2026-08-03T12:25:23.604431"
+    },
+    {
+      "id": "e29f1be5-3075-4071-b76f-478903ddb0c1",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:24:15.634169"
+    },
+    {
+      "id": "7f86b84a-dc99-4e64-b84d-5bf607dbb600",
+      "text": "Generated 0 proposed matches for Solar Installation Technician Level 1",
+      "type": "matching",
+      "ts": "2026-08-03T12:24:07.147517"
+    },
+    {
+      "id": "da97d024-4b4c-4886-9292-ab955b3570ee",
+      "text": "Parsed new role: Solar Installation Technician Level 1",
+      "type": "role_created",
+      "ts": "2026-08-03T12:21:53.295908"
+    },
+    {
+      "id": "a45032cb-ff4f-47f5-8dae-958457307d10",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T12:20:39.203306"
+    },
+    {
+      "id": "5af63a40-8711-4e84-bd6b-b369ac7a43b9",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T12:20:09.369966"
+    }
+  ]
+}

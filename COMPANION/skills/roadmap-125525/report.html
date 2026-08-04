@@ -1,0 +1,58 @@
+
+    <html>
+    <head>
+        <style>
+            body { font-family: 'Inter', sans-serif; padding: 40px; color: #1e293b; background: #fff; line-height: 1.7; }
+            h1 { color: #091747; font-size: 24px; margin-bottom: 25px; }
+            .day-card { 
+                background: #f8fafc; border: 1px solid #e2e8f0; padding: 25px; 
+                border-radius: 20px; margin-bottom: 20px; list-style: none;
+                transition: transform 0.2s;
+            }
+            .day-card:hover { transform: translateY(-3px); border-color: #091747; }
+            .tag { 
+                font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 6px; 
+                text-transform: uppercase; margin-right: 10px; display: inline-block;
+                margin-bottom: 10px;
+            }
+            .tag-learn { background: #dbeafe; color: #1e40af; }
+            .tag-read { background: #fef3c7; color: #92400e; }
+            .tag-apply { background: #dcfce7; color: #166534; }
+        </style>
+    </head>
+    <body>
+        <h1>🚀 Career Accelerator: Create A 5-Day</h1>
+        <div id="roadmap-container"><p>In this response, I will provide a 5-day volunteering plan for someone who wants to gain skills in creating events or planning. This plan is designed with London as the location and utilizes resources found on GOV.UK, European Youth Portal, Opportunities Circle, and AIESEC.</p>
+<p>Day 1: Event Planning Basics
+- LEARN: Study event planning fundamentals such as budgeting, logistics, and risk management from online resources like Coursera's "Event Management" course (https://www.coursera.org/courses/eventmanagement)
+- READ: Stay updated on event industry news by reading articles published in The Event Magazine (http://theeventmagazine.com/)
+- APPLY: Volunteer at a small local charity or community event to gain hands-on experience with basic event planning tasks such as vendor coordination, registration, and setup. You can find such opportunities on the London Volunteer Centre's website (https://www.lcvs.org.uk/)</p>
+<p>Day 2: Venue Management
+- LEARN: Familiarize yourself with venue selection and management by reading articles and watching videos available on the Venues Now website (http://venuesnow.com/)
+- READ: Explore event spaces offered in London by visiting websites of popular venues such as The Old Truman Brewery (https://oldtrumanbrewery.com/) or ExCeL London (https://www.excel.london/)
+- APPLY: Offer your assistance to a local event organizer to help with venue selection, negotiation, and management for an upcoming event. You can find such opportunities on AIESEC's Global Volunteer platform (https://aiesec.org/global-volunteer)</p>
+<p>Day 3: Marketing and Promotion
+- LEARN: Study event marketing strategies by completing the "Event Marketing" course available through Alison (https://alison.com/diploma/event-marketing)
+- READ: Read articles about successful event marketing campaigns on websites such as Eventbrite's Blog (https://www.eventbrite.co.uk/blog/) or BizBash (http://www.bizbash.com/)
+- APPLY: Assist an organization with promoting their upcoming event through social media, email marketing, and outreach to local media. You can find such opportunities on websites like Do-it (https://do-it.org/) or London Youth Volunteering (http://www.londonyouthvolunteering.org.uk/)</p>
+<p>Day 4: Budgeting and Finances
+- LEARN: Study event budgeting and financial management by completing the "Event Finance Management" course on Udemy (https://www.udemy.com/course/event-finance-management/)
+- READ: Stay informed about financial aspects of events by reading articles from Event Manager Blog (http://eventmanagerblog.com/) or Cvent's blog (https://www.cvent.co.uk/resources/events/blog)
+- APPLY: Offer your skills to help an organization manage their event budget, track expenses, and analyze financial reports during the planning process and after the event. You can find such opportunities on Charity Job (https://www.charityjob.co.uk/) or Reach Volunteering (https://reachvolunteering.org/)</p>
+<p>Day 5: Evaluation and Analysis
+- LEARN: Learn how to evaluate the success of events and analyze data through courses like "Event Research Methods" on Coursera (https://www.coursera.org/specializations/event-research)
+- READ: Keep up with industry trends and best practices in event evaluation by reading articles from Event Research Exchange (http://eventresearchexchange.com/) or EventMarketing Magazine (http://eventmarketingmagazine.co.uk/)
+- APPLY: Help an organization evaluate their past events, analyze data, and make recommendations for future improvements. You can find such opportunities through event industry associations like the International Live Events Association (https://www.ilea.com/london) or the Event Industry Council (https://www.eventindustrycouncil.org/)</p></div>
+        <script>
+            document.querySelectorAll('li').forEach(item => {
+                item.classList.add('day-card');
+                let content = item.innerHTML;
+                if(content.includes('LEARN')) content = '<span class="tag tag-learn">Course</span>' + content;
+                if(content.includes('READ')) content = '<span class="tag tag-read">Insight</span>' + content;
+                if(content.includes('APPLY')) content = '<span class="tag tag-apply">Action</span>' + content;
+                item.innerHTML = content;
+            });
+        </script>
+    </body>
+    </html>
+    

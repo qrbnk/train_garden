@@ -1,0 +1,972 @@
+{
+  "user_id": "9aeff2f41885fb6b3c82354a3f709c62",
+  "email": "admin95@test.com",
+  "name": "admin95",
+  "first_seen": "2026-07-27T16:25:49.453931",
+  "last_seen": "2026-07-30T09:24:30.397574",
+  "sector": "sustainability",
+  "experience_years": "decade (no exact number mentioned)",
+  "target_role": "solar panel installer",
+  "goals": [
+    "transition into a career in sustainability",
+    "transition to a target role in sustainability",
+    "Transition from sustainability to solar panel installation",
+    "transition to solar panel installation",
+    "transition from sustainability into solar panel installation"
+  ],
+  "skills": [
+    "Project delivery",
+    "Regulatory literacy",
+    "Stakeholder management (specifically working with clients, installers, or other stakeholders in the solar industry)",
+    "sustainability",
+    "solar energy"
+  ],
+  "skill_sources": {
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Decade of experience in installation, maintenance, and optimization of photovoltaic systems — Experience with large-scale system installation and maintenance demonstrates the ability to manage complex projects from start to finish.",
+        "ts": "2026-07-27T16:29:09.644418"
+      }
+    ],
+    "Regulatory literacy": [
+      {
+        "type": "inferred",
+        "detail": "Adept at enhancing energy production through optimization techniques — Understanding of technical nuances in energy production and optimization suggests familiarity with relevant regulations and standards in the industry.",
+        "ts": "2026-07-27T16:29:09.644459"
+      }
+    ],
+    "Stakeholder management (specifically working with clients, installers, or other stakeholders in the solar industry)": [
+      {
+        "type": "inferred",
+        "detail": "Decade of experience in a specialized field (solar energy) — Experience communicating technical information to diverse groups and managing their expectations is valuable for stakeholder engagement in sustainability roles.",
+        "ts": "2026-07-27T16:29:09.644467"
+      }
+    ]
+  },
+  "cv_summary": "\n\n\n\nETHANMARTINEZ\nSolar Technician\nsupport@qwikresume.com\n(123) 456 7899\nLos Angeles\nwww.qwikresume.com\nPROFESSIONAL SUMMARY\nSolar Technician with a decade of comprehensive experience in the \ninstallation, maintenance, and optimization of photovoltaic systems. \nAdept at enhancing energy producti",
+  "messages": [
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "user",
+      "content": "I want to do a full career assessment. Let us map my journey from where I am now to my target role in sustainability. Please ask me everything you need to know.",
+      "ts": "2026-07-27T16:31:00.862030"
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "assistant",
+      "content": "Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. What kind of role are you looking for? Any specific job titles, sectors, or type of work on your radar — and what's the \"why\" behind the search?",
+      "ts": "2026-07-27T16:31:10.265775",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not sure yet — help me explore",
+        "Renewable energy / EV roles",
+        "Sustainability / ESG roles"
+      ]
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "user",
+      "content": "solar panel installer",
+      "ts": "2026-07-27T16:32:47.388328"
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "assistant",
+      "content": "What's your ideal salary range? Knowing your floor and target helps me filter out roles that aren't the right fit.",
+      "ts": "2026-07-27T16:32:51.949117",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Under £30k",
+        "£30k–£50k",
+        "£50k–£70k",
+        "£70k+"
+      ]
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "user",
+      "content": "£30k–£50k",
+      "ts": "2026-07-27T16:33:05.785939"
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "assistant",
+      "content": "Do you need this to be remote, hybrid, or onsite?",
+      "ts": "2026-07-27T16:33:08.813715",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Remote",
+        "Hybrid",
+        "Onsite"
+      ]
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "user",
+      "content": "Onsite",
+      "ts": "2026-07-27T16:33:10.917883"
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-07-27T16:33:10.920061",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "assistant",
+      "content": "Before we dive into your transition journey, I want to make sure I understand one crucial aspect of your life. **Can you tell me a bit about your current schedule?** Are there any regular hours or commitments that might impact the kind of opportunities you can take on in the coming months?",
+      "ts": "2026-07-27T16:34:05.796891",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm open to learning new skills",
+        "Maybe energy efficiency roles too",
+        "Can I see job descriptions"
+      ]
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "user",
+      "content": "i'm flexible",
+      "ts": "2026-07-27T16:34:28.480079"
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "assistant",
+      "content": "I've noted that you mentioned you're flexible with your schedule, and I appreciate your honesty about it. That helps me a lot in understanding what kind of opportunities might be suitable for you right now. **Can you tell me a bit more about your current caring responsibilities?** Are there any family members or dependents that require attention from you, which could impact the type of role or schedule you can commit to?",
+      "ts": "2026-07-27T16:34:53.402822",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'd love some job search tips",
+        "Show me installer training programs",
+        "How do I get started"
+      ]
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "user",
+      "content": "no",
+      "ts": "2026-07-27T16:35:10.265603"
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "assistant",
+      "content": "I've noted that you mentioned no caring responsibilities, and I appreciate your transparency about it. That helps me better understand what kind of opportunities might be suitable for you right now. **What's your current living situation like in Edinburgh? Are you looking to stay in the city or explore other parts of Scotland?**",
+      "ts": "2026-07-27T16:35:35.122396",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not interested in that job",
+        "Can I explore other options?",
+        "Is this the only lead?"
+      ]
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "assistant",
+      "content": "Now that I know you're flexible with your schedule and have no caring responsibilities, let's focus on opportunities in solar panel installation. Given your decade of experience in solar energy and your current location in Edinburgh, here are some tailored resources for you:\n\n**Courses**\n\n* The Edinburgh | Solar PV Installation Course is a great way to refresh your skills and knowledge in the field. This course will equip you with the latest techniques and technologies used in solar panel installation.\n* I'd also recommend checking out the Solar Panel Installation Training at GTEC, which allows qualified electricians and electrical operatives to add solar panel installation skills to their repertoire.\n\n**Online Courses**\n\n* If you prefer online learning, Coursera offers a course on **Solar Energy Basics**, which gives an introduction to the fundamentals of solar power as it applies to solar panels.\n* You can also explore the Best Renewable Energy Courses & Certificates [2026] on Coursera, which covers various topics in renewable energy, including solar panel installation.\n\n**Blog Posts**\n\n* LTS Blog has a helpful article on **Solar Panel Installation Course UK: How to Get Qualified in 2026**, which discusses the current requirements for certification and training in solar panel installation.\n\nThese resources should give you a good starting point. What do you think about taking the Edinburgh | Solar PV Installation Course, or perhaps exploring some online courses on Coursera?",
+      "ts": "2026-07-27T16:36:59.505872",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "541ca3ee-4e51-4184-bd26-1110b8ed40c2",
+          "title": "Edinburgh | Solar PV Installation Course",
+          "url": "https://www.skillstg.co.uk/courses/solar-pv-installation-course/edinburgh/",
+          "body": "February 21, 2026 - Our Solar PV Course in Edinburgh will equips you with the skills and knowledge to install, commission, fault find and maintain photovoltaic systems.",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "a688ad70-a7b6-46bd-bde9-4c7d7fa05005",
+          "title": "Solar Panel Installation Training | GTEC",
+          "url": "https://gtec.co.uk/courses/renewable-energy-training/solar-pv-training",
+          "body": "Our solar panel installation training allows qualified electricians and electrical operatives to add the installation of solar panels to the services they offer.",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "1badbdf7-582b-4f0c-9fce-630334416111",
+          "title": "Solar Energy Basics | Coursera",
+          "url": "https://www.coursera.org/learn/solar-energy-basics",
+          "body": "This course gives you an introduction to the fundamentals of solar power as it applies to solar panel system installations. You will learn to compare solar energy to other energy resources and explain",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "f58e856f-eedc-4b2c-ae93-140fe9e9c653",
+          "title": "Solar Panel Installation Course UK: How to Get Qualified in 2026 | LTS Blog",
+          "url": "https://www.learntradeskills.co.uk/blog/solar-panel-installation-course-uk-2026",
+          "body": "March 31, 2026 - Current 18th Edition certificate (BS 7671, including Amendment 4 from October 2026)",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "701158e6-6664-4c3c-b09d-7f1a73324e69",
+          "title": "Best Renewable Energy Courses & Certificates [2026] | Coursera",
+          "url": "https://www.coursera.org/courses?query=renewable+energy",
+          "body": "Renewable energy courses can help you learn solar panel installation, wind turbine maintenance, energy efficiency strategies, and grid integration techniques. Compare course options to find what fits ",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "f95bc867-e10c-4dd7-80d3-e3634985466b",
+          "title": "Solar Photovoltaic (PV) CPD course",
+          "url": "https://www.totalskills.co.uk/solar-pv-cpd-course",
+          "body": "Practical Solar Panel installation practical training course for roofers and everyone.",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "e7bdf657-07dc-484d-8e30-d9263460457a",
+          "title": "Search Google for: volunteering solar panel installer Edinburgh",
+          "url": "https://www.google.com/search?q=volunteering+solar+panel+installer+Edinburgh",
+          "body": "We couldn't confirm a specific live resource for this yet — here's a search to help you find current options yourself.",
+          "type": "volunteering",
+          "type_label": "Volunteering"
+        },
+        {
+          "id": "e6df148a-5744-4542-b6b9-a2cb3823aa7b",
+          "title": "'I work for Octopus Energy and I have zero regrets since having solar...",
+          "url": "https://www.express.co.uk/news/science/1735454/octopus-energy-solar-panel-installation-service-advice",
+          "body": "Octopus Energy outlines process for having solar panels installed. A “guinea pig” for Octopus Energy’s new solar panel installation service says the additions to her home have come with “absolutely no",
+          "type": "jobs",
+          "type_label": "Resource"
+        },
+        {
+          "id": "773d444c-3338-4bec-9dcc-dc0ff44cbe1b",
+          "title": "Anmak Solar’s Commitment To Sustainability Through Affordable...",
+          "url": "https://boringmagazine.com/anmak-solars-commitment-to-sustainability-through-affordable-solar-panel/",
+          "body": "Anmak Solar understands that installing solar panels can seem overwhelming. However, they guide customers through every step, making the process simple and clear. They also provide proper maintenance ",
+          "type": "jobs",
+          "type_label": "Resource"
+        },
+        {
+          "id": "237f1bdf-8288-4dc8-aa3d-8b5edbbfcb4e",
+          "title": "Solar Panels Dundee | PV Installers Dundee",
+          "url": "https://home-renewables-scotland.co.uk/solar-panel-installers-dundee/",
+          "body": "solar-panel-installers-edinburgh-scotland. Solar PV systems offer several benefits for homeowners.Solar PV, short for solar photovoltaic, refers to the conversion of light into electricity.",
+          "type": "jobs",
+          "type_label": "Resource"
+        }
+      ],
+      "suggestions": [
+        "Find me jobs in this area",
+        "Build me a roadmap",
+        "What other resources exist?"
+      ]
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "user",
+      "content": "Find me jobs",
+      "ts": "2026-07-27T16:38:19.518213"
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "assistant",
+      "content": "As we discussed earlier, you're looking to transition from a background in sustainability into a role as a solar panel installer. This is an exciting move that will leverage your existing knowledge of the industry while introducing new skills and challenges.\n\nLet's focus on a few roles that align with your strengths and interests. Given your project delivery experience, I think the **Solar Panel Installer Jobs** [TikTok](https://www.tiktok.com/discover/solar-panel-installer-jobs) listings could be a great starting point. These jobs typically require strong organizational skills to manage multiple projects simultaneously, which is an area where you can apply your existing expertise. Additionally, some of the job postings mention regulatory knowledge as essential, and while it's not directly mentioned that you have this skill, your experience in sustainability has likely given you a solid foundation in understanding regulatory frameworks.\n\nAnother role worth considering is working on **solar panel installation jobs in Edinburgh** [Indeed](https://uk.indeed.com/q-solar-panel-installation-l-edinburgh-jobs.html). As someone with stakeholder management skills, I think you'll excel at communicating with clients and ensuring that projects are completed efficiently. This role will also give you the opportunity to work with various stakeholders in the solar industry, from installers to homeowners. With regards to regulatory knowledge, while it's not explicitly mentioned as a requirement, your experience in sustainability has likely given you a solid understanding of relevant regulations.\n\nKeep in mind that some of these roles may require additional training or certifications specific to the solar panel installation industry. I'd be happy to discuss how we can tailor your existing skills and experience to fit these new opportunities.",
+      "ts": "2026-07-27T16:39:16.683776",
+      "job_cards": [
+        {
+          "type": "job_card",
+          "title": "Generate Electricity",
+          "company": "How Solar Panels Work! - YouTube",
+          "url": "https://www.youtube.com/watch?v=Yxt72aDjFgY",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three bullet points:",
+            "Design and install solar panel systems to meet customer needs.",
+            "Troubleshoot and repair solar panel issues to ensure optimal performance."
+          ],
+          "snippet": "How do Solar Panels work? Solar design software https://pvcase.com/engineeringmindset PVcase is a next-generation AutoCAD-based PV software focused on a...",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "Solar Panel Installer Costs in Edinburgh 2026",
+          "company": "TradeMatch UK",
+          "url": "https://www.tradematch.uk/cost-guides/solar-panel/edinburgh",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three bullet points:",
+            "Assemble and install solar panel systems on residential and commercial properties.",
+            "Inspect and troubleshoot electrical connections to ensure system efficiency and safety."
+          ],
+          "snippet": "Solar Panel Installer Prices in Edinburgh. Job Description.Tips for the Best Solar Panel Installer Price in Edinburgh. Compare multiple quotes — Post your job on TradeMatch and compare up to 5 quotes from vetted local professionals.",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "Solar Panel Installer Jobs",
+          "company": "TikTok",
+          "url": "https://www.tiktok.com/discover/solar-panel-installer-jobs",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three bullet points:",
+            "Design solar panel systems for residential and commercial clients.",
+            "Install and maintain solar panel equipment with precision and care."
+          ],
+          "snippet": "Discover entry-level solar panel installer jobs and learn how you can join the growing renewable energy workforce today!",
+          "match_pct": 68,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "2,000+ Solar Installer jobs in United Kingdom (160 new)",
+          "company": "",
+          "url": "https://uk.linkedin.com/jobs/solar-installer-jobs",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three short bullet points:",
+            "Utilize expertise in solar panel installation and maintenance",
+            "Develop new skills in electrical systems and technology integration"
+          ],
+          "snippet": "Today’s top 2,000+ Solar Installer jobs in United Kingdom. Leverage your professional network, and get hired. New Solar Installer jobs added daily.",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "solar panel installation jobs in Edinburgh",
+          "company": "Indeed",
+          "url": "https://uk.indeed.com/q-solar-panel-installation-l-edinburgh-jobs.html",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three short bullet points:",
+            "Install solar panels efficiently to maximize energy output and efficiency",
+            "Assess rooftop layouts to optimize solar panel placement and design"
+          ],
+          "snippet": "Apply to Solar Panel Installation jobs now hiring in Edinburgh on Indeed.com, the worlds largest job site.",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        }
+      ],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me tailor my CV for one of these",
+        "What skills do I need for these roles?",
+        "Generate a 30-day plan to get there",
+        "Prep me for an interview for one of these"
+      ]
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "user",
+      "content": "Find me more resources for my career goal near my location",
+      "ts": "2026-07-27T16:42:21.154158"
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "user",
+      "content": "Find me jobs matching my profile and goals",
+      "ts": "2026-07-29T09:49:38.926845"
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "assistant",
+      "content": "As we continue to explore career opportunities for you, I want to acknowledge the unique transition journey you're embarking on from a background in sustainability into solar panel installation. This move will undoubtedly bring new challenges and exciting experiences, leveraging your existing knowledge of the industry while introducing fresh skills.\n\nGiven your experience in project delivery, regulatory literacy, and stakeholder management, I recommend considering the following roles: **Solar Installers In Edinburgh** [1](https://www.bing.com/aclick?ld=e8ZWcNvpxDlLCaGzVaOtuDyjVUCUxacRWvkaluqg2YNAm0IC58IhqAsQWKi1Rh-3hhDBX8mHhF_no9N_Ax8keWyhXJra97qLPL5hFL2irWMxlQQ2gsu7j7FgnMO-s8f0fmyvPzT-lyYEBAOd1eLrSMnv1TQo-0tfDi7ywkLyRDA6NPPlT9qkA2ZjOYM-fEhGw97GDEWg&u=aHR0cHUlM2ElMmYlMmZnby5pbmZpbml0eS1yZW5ld2FibGVzLmNvbSUyZmZyZWUtcXVvdGUlMmYlM2Zsb2NhdGlvbiUzZDY5MjA5JTI2bXNjbGtpZCUzZGJkNDRhZjRhMjFmZTE0NTQyZmZlYzUyMzlmNGI4NmYxJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkR1YlMjUyMCUyNTdDJTI1MjBCaW5nJTI1MjAlMjU3QyUyNTIwU2VhcmNoJTI1MjAlMjU3QyUyNTIwU29sYXIlMjUyMFBhbmVscyUyNnV0bV90ZXJtJTNkc29sYXIlMjZ1dG1fY29udGVudCUzZFNvbGFyJTI1MjBQYW5lbHM&rlid=bd44af4a21fe14542ffec5239f4b86f1), **Solar Installer job** [2](https://www.bing.com/aclick?ld=e8qfIInqxaWPI5DAtoHoBr0TVUCUyn-q00tFaMc91l0fQjn_iUHDS91h_928As2BmnhSITuNWCKO6vMvf9W7UyOEYgB4SwQ5j0Pevouv8jXjerTUMePNcV_Rm5R8heWeKcrYSTk2oTD3cVWCd0El1oQDwjKq7fQ2NtzErz-anXBJ1p9TNcvL0INUkLxLlnk7_1PCF3gw&u=aHR0cHMlM2ElMmYlMmZ1ay5ldXNwZXJ0LmNvbSUyZmpvYi1vZmZlcnMlMmZyZCUzZnNlYXJjaCUzZHNvbGFyJTJiaW5zdGFsbGVyJTI2bG9jYXRpb24lM2QlMjZfYyUzZDElMjZhcGklM2R0JTI2bXNjbGtpZCUzZGI0NGZmNjdhZTY1NzEzMjIwOTQ3OWMxMzU4ZTJmOGY5&rlid=b44ff67ae657132209479c1358e2f8f9), and **Solar installer job - Urgently Hiring Now** [3](https://www.bing.com/aclick?ld=e8kGAOmBYdonzt07Pp1pHTkzVUCUyjBQeIIGUQKV8v8lk_5pKJU9b67pEZvQXJHlPKFVTRXlBl-QQM8n18kcrqIUL4vcoRP",
+      "ts": "2026-07-29T09:52:29.835878",
+      "job_cards": [
+        {
+          "type": "job_card",
+          "title": "Solar Installers In Edinburgh",
+          "company": "Free Quotes For Your Postcode",
+          "url": "https://www.bing.com/aclick?ld=e8ZWcNvpxDlLCaGzVaOtuDyjVUCUxacRWvkaluqg2YNAm0IC58IhqAsQWKi1Rh-3hhDBX8mHhF_no9N_Ax8keWyhXJra97qLPL5hFL2irWMxlQQ2gsu7j7FgnMO-s8f0fmyvPzT-lyYEBAOd1eLrSMnv1TQo-0tfDi7ywkLyRDA6NPPlT9qkA2ZjOYM-fEhGw97GDEWg&u=aHR0cHMlM2ElMmYlMmZnby5pbmZpbml0eS1yZW5ld2FibGVzLmNvbSUyZmZyZWUtcXVvdGUlMmYlM2Zsb2NhdGlvbiUzZDY5MjA5JTI2bXNjbGtpZCUzZGJkNDRhZjRhMjFmZTE0NTQyZmZlYzUyMzlmNGI4NmYxJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkR1YlMjUyMCUyNTdDJTI1MjBCaW5nJTI1MjAlMjU3QyUyNTIwU2VhcmNoJTI1MjAlMjU3QyUyNTIwU29sYXIlMjUyMFBhbmVscyUyNnV0bV90ZXJtJTNkc29sYXIlMjZ1dG1fY29udGVudCUzZFNvbGFyJTI1MjBQYW5lbHM&rlid=bd44af4a21fe14542ffec5239f4b86f1",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three short bullet points:",
+            "* Install high-performance solar panel systems with precision and accuracy.",
+            "* Troubleshoot complex solar system issues efficiently and effectively."
+          ],
+          "snippet": "4.5 (1294 reviews) Get solar panel quotes that include no hidden extras, and a free, no obligation survey. Our in-house team of solar experts will find the right system & capacity for your home. Guaranteed Performance · MCS Certified · Compare Prices · Local, In-House Team",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "solar panel edinburgh",
+          "company": "Solar Installers",
+          "url": "https://www.bing.com/aclick?ld=e8kGAOmBYdonzt07Pp1pHTkzVUCUyjBQeIIGUQKV8v8lk_5pKJU9b67pEZvQXJHlPKFVTRXlBl-QQM8n18kcrqIUL4vcoRPwiNDlzjIxnJK3dkZN7kx2jj2JC-LAzbm9tlk9cZ_6_A9Kaku91GHN7cBgesmgonY1nXxTWaV_vS9V7xNqk43vo5oX_qve37rYwRlwe8iQ&u=aHR0cHMlM2ElMmYlMmZ3d3cuYmFyay5jb20lMmZlbiUyZmdiJTJmaW4lMmZzb2xhci1wYW5lbC1pbnN0YWxsYXRpb24lMmYlM2ZjYW1wYWlnbiUzZGJpbmctMzc2NTkzNzI5LTEyNzMyMzYxNDE5NDc1MDAtc29sYXItcGFuZWwtZGtpLWMlMjZwb3B1cCUzZHRydWUlMjZ0cmtfYWRfaWQlM2Q3OTU3NzM2NjcxNTA4MiUyNnRya19rd19pZCUzZGt3ZC03OTU3Nzc3MjcyMzU5MCUzYWxvYy0xODglMjZ0cmtfbXNsb2NfcGhzJTNkNjkyMDklMjZ0cmtfbXNsb2NfaW50JTNkNDE5NDQlMjZ0cmtfc3JjJTNkYiUyNnRya19tc2NsaWQlM2RmZDRiYjRlMzRjOTkxMDlmN2JkMGRlOGFmMjJjMDg2ZCUyNm1zY2xraWQlM2RmZDRiYjRlMzRjOTkxMDlmN2JkMGRlOGFmMjJjMDg2ZCUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZENvbnN0cnVjdGlvbiUyNTIwJTI1MjYlMjUyMFRyYWRlcyUyNTIwJTI1N0MlMjUyMFNvbGFyJTI1MjBQYW5lbCUyNTIwSW5zdGFsbGF0aW9uJTI1MjAoMTExOSklMjUyMCUyNTdDJTI1MjBDTEIlMjZ1dG1fdGVybSUzZFNvbGFyJTI1MjBQYW5lbCUyNTIwRWRpbmJ1cmdoJTI2dXRtX2NvbnRlbnQlM2Rzb2xhci1wYW5lbC1ka2k&rlid=fd4bb4e34c99109f7bd0de8af22c086d",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three short bullet points:",
+            "Installed and maintained solar panels for residential clients efficiently.",
+            "Conducted thorough site assessments to optimize solar panel performance."
+          ],
+          "snippet": "4.0 (108613 reviews) bark.com has been visited by 100K+ users in the past month Bark Can Help Match You With Professionals When You Need Them Most. Place A Bark Today! Bark Will Save You Time By Finding The Right Edinburgh Solar Panel Installers For You. Find any type of service professional locally",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "Solar installer job",
+          "company": "Urgently Hiring Now - Job Opportunities",
+          "url": "https://www.bing.com/aclick?ld=e8qfIInqxaWPI5DAtoHoBr0TVUCUyn-q00tFaMc91l0fQjn_iUHDS91h_928As2BmnhSITuNWCKO6vMvf9W7UyOEYgB4SwQ5j0Pevouv8jXjerTUMePNcV_Rm5R8heWeKcrYSTk2oTD3cVWCd0El1oQDwjKq7fQ2NtzErz-anXBJ1p9TNcvL0INUkLxLlnk7_1PCF3gw&u=aHR0cHMlM2ElMmYlMmZ1ay5ldXNwZXJ0LmNvbSUyZmpvYi1vZmZlcnMlMmZyZCUzZnNlYXJjaCUzZHNvbGFyJTJiaW5zdGFsbGVyJTI2bG9jYXRpb24lM2QlMjZfYyUzZDElMjZhcGklM2R0JTI2bXNjbGtpZCUzZGI0NGZmNjdhZTY1NzEzMjIwOTQ3OWMxMzU4ZTJmOGY5&rlid=b44ff67ae657132209479c1358e2f8f9",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Utilize expertise in solar panel installation and maintenance.",
+            "Analyze site conditions to ensure efficient system placement.",
+            "Troubleshoot electrical issues with solar systems on site."
+          ],
+          "snippet": "uk.euspert.com has been visited by 100K+ users in the past month Solar installer job Job: View all our Urgent Vacancies Now. Find your Dream Job. View all our Urgent Vacancies now in the USA Access Real-Time Updates · Browse All Categories · Apply Easily Online",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "2,000+ Solar Installer jobs in United Kingdom (160 new)",
+          "company": "",
+          "url": "https://uk.linkedin.com/jobs/solar-installer-jobs",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three short bullet points:",
+            "Assess complex solar systems for efficient installation and repair.",
+            "Design and implement safe and effective solar panel layouts."
+          ],
+          "snippet": "Today’s top 2,000+ Solar Installer jobs in United Kingdom. Leverage your professional network, and get hired. New Solar Installer jobs added daily.",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "Average Solar Installer Salary in United Kingdom",
+          "company": "Reed.co.uk",
+          "url": "https://www.reed.co.uk/average-salary/average-solar-installer-salary-in-united-kingdom",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three short bullet points:",
+            "Installs and maintains solar panel systems for residential clients",
+            "Troubleshoots electrical issues and repairs solar array components efficiently"
+          ],
+          "snippet": "Discover the average solar installer salary in United Kingdom through https://www.reed.co.uk. Explore data on the average salaries of Solar Installer professionals across the UK.",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        }
+      ],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me tailor my CV for one of these",
+        "What skills do I need for these roles?",
+        "Generate a 30-day plan to get there",
+        "Prep me for an interview for one of these"
+      ]
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "user",
+      "content": "Find me jobs matching my profile and goals",
+      "ts": "2026-07-29T09:53:50.757233"
+    },
+    {
+      "uid": "9aeff2f41885fb6b3c82354a3f709c62",
+      "role": "assistant",
+      "content": "As we continue to explore career opportunities for you, I want to acknowledge the unique transition journey you're embarking on from a background in sustainability into solar panel installation. This move will undoubtedly bring new challenges and exciting experiences.\n\nBased on your skills in project delivery, regulatory literacy, and stakeholder management, particularly working with clients, installers, or other stakeholders in the solar industry, I've identified some relevant roles that may be a good fit for you. Firstly, **Solar Panel Installation** [Solar Panel Installation](https://www.greenjobs.co.uk/browse-jobs/solar-panel-installation/) could be an excellent opportunity for you to leverage your project delivery skills and apply them to a new context. As a solar panel installer, you'll work with clients to design and implement solar panel systems, ensuring they meet regulatory requirements and exceed client expectations.\n\nAnother role that aligns well with your skillset is **Solar Installer Jobs** [Solar Installer Jobs](https://www.reed.co.uk/jobs/solar-installer-jobs). In this position, you'll work closely with stakeholders to deliver high-quality solar installations, managing relationships with clients, installers, and regulatory bodies. Your experience in stakeholder management will serve you well in this role, where effective communication is crucial.\n\nLastly, **Solar Panel Grants** [Solar Panel Grants](https://www.bing.com/aclick?ld=e8AMf8CRM1w1sqJlE5AcLt_zVU... ) may be a good fit for you, as it involves working with clients to identify and secure government funding for solar panel installations. Your understanding of regulatory literacy will be valuable in this role, where you'll need to navigate complex grant programs and ensure compliance.\n\nIn terms of skill gaps, I note that some experience working directly with solar panels or electrical systems may be beneficial for these roles. However, your strong background in sustainability and project delivery skills will provide a solid foundation for learning and growth.",
+      "ts": "2026-07-29T09:55:42.499867",
+      "job_cards": [
+        {
+          "type": "job_card",
+          "title": "July Deals On Solar",
+          "company": "Under 3 Week Lead Time",
+          "url": "https://www.bing.com/aclick?ld=e8dGtXkyHB48864eJtHGargTVUCUyY3g2K8--7VrLqxfv0226EsyagNojhgtU0oOZ2RyFKA3otknQXX_3coX_-gwmyLVkyvEm45PLsY_1xmITp7dK7j1kIkb1nVDkuHLddyb6cUqER6zD68U3GXde93mZsUXyQ-VfdO6zQLaKR8Q-atn_hpJoKL8GyMQHShL2qg75J3Q&u=aHR0cHMlM2ElMmYlMmZnby5pbmZpbml0eS1yZW5ld2FibGVzLmNvbSUyZmZyZWUtcXVvdGUlMmYlM2Zsb2NhdGlvbiUzZDY5MjA5JTI2bXNjbGtpZCUzZGUxMjg3YTI5ZGVhYTE0OWQ3NDNmMTA0MDYxMGQxMDUzJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkR1YlMjUyMCUyNTdDJTI1MjBCaW5nJTI1MjAlMjU3QyUyNTIwU2VhcmNoJTI1MjAlMjU3QyUyNTIwU29sYXIlMjUyMFBhbmVscyUyNnV0bV90ZXJtJTNkc29sYXIlMjUyMHBhbmVsJTI2dXRtX2NvbnRlbnQlM2RTb2xhciUyNTIwUGFuZWxz&rlid=e1287a29deaa149d743f1040610d1053",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three short bullet points:",
+            "Designing solar systems to meet individual client needs.",
+            "Installing and maintaining solar panels for optimal performance."
+          ],
+          "snippet": "Our in-house team of solar experts will find the right system & capacity for your home. 12,000+ happy customers & 10+ years experience. Surveyed, installed & saving in 10 days. Compare Prices · 25 Year Guarantee · Guaranteed Performance · MCS Certified Types: Solar Panels, Battery Storage, Battery M",
+          "match_pct": 68,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "Solar Panel Grants",
+          "company": "Make Use Of Government Funding",
+          "url": "https://www.bing.com/aclick?ld=e8AMf8CRM1w1sqJlE5AcLt_zVUCUxHyUznZtqFcspVhT-d83aP-zRhJ08DUXM_-n41ZIS_iPsJj9JDCimJck8yNREnLjq6pZ0BE53IqgWA-FQpiG8lynyZek7XDvdcK2oFWlWFO8RQHycM4s-8-1XZ6gh__DPMAni6_WMV0LlqmQpeBBCWQagFIFyEcM5OIFKGlzZWMQ&u=aHR0cHMlM2ElMmYlMmZ3d3cudGhlZWNvZXhwZXJ0cy5jby51ayUyZnNvbGFyLXBhbmVscyUyZmNvc3QlM2ZjaWQlM2Q1Mzc2MjI2NWI0NTA0JTI2Y3Ffc3JjJTNkYmluZ19hZHMlMjZjcV9jbXAlM2Q1Mzc2MjI2NWI0NTA0JTI1MjAtJTI1MjBTRVIlMjUyMC0lMjUyMEVDTyUyNTIwLSUyNTIwU29sYXIlMjUyMFBhbmVscyUyNTIwLSUyNTIwVUslMjUyMC0lMjUyMEVOJTI1MjAtJTI1MjBTb2xhciUyNTIwUGFuZWxzJTI1MjAtJTI1MjBCUiUyNTIwLSUyNTIwQnJhbmRzJTI1MjBQYWdlJTI1MjAtJTI1MjBOZXclMjZjcV9jb24lM2RTb2xhciUyNTIwUGFuZWxzJTI1MjAtJTI1MjAtJTI1MjBCUiUyNmNxX3Rlcm0lM2RTb2xhciUyNTIwUGFuZWwlMjZjcV9tZWQlM2QlMjZjcV9uZXQlM2RvJTI2Y3FfcGx0JTNkYnAlMjZjYW1wYWlnbiUzZDYxNDE4NjUxNyUyNmFkZ3JvdXAlM2QxMTU2Njg4MTk5OTA1OTg2JTI2dGFyZ2V0aWQlM2Rrd2QtNzIyOTM4MDU3MDQ4NTklM2Fsb2MtNDA3NiUyNmtleXdvcmQlM2RTb2xhciUyNTIwUGFuZWwlMjZtYXRjaHR5cGUlM2RwJTI2YWQlM2QlMjZuZXR3b3JrJTNkbyUyNmRldmljZSUzZGMlMjZkZXZpY2Vtb2RlbCUzZCUyNnRhcmdldCUzZCUyNnBsYWNlbWVudCUzZCUyNnBvc2l0aW9uJTNkJTI2YWNlaWQlM2QlN2JhY2VpZCU3ZCUyNmlzbW9iaWxlJTNkMCUyNmlzc2VhcmNoJTNkMSUyNmdlbyUzZDY5MjA5JTI2Z2VvaW50ZXJlc3QlM2QxNjI1NzAlMjZmZWVkaXRlbSUzZCUyNmNxX3NyYyUzZGdvb2dsZV9hZHMlMjZjcV9jbXAlM2Q2MTQxODY1MTclMjZjcV9jb24lM2QxMTU2Njg4MTk5OTA1OTg2JTI2Y3FfdGVybSUzZFNvbGFyJTI1MjBQYW5lbCUyNmNxX21lZCUzZCUyNmNxX3BsYWMlM2QlMjZjcV9uZXQlM2RvJTI2Y3FfcGx0JTNkZ3AlMjZtc2Nsa2lkJTNkNzU4N2QwZmFjNDc4MWRlZmQxOTliYTkzN2JkZmZlMDMlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2Q1Mzc2MjI2NWI0NTA0JTI1MjAtJTI1MjBTRVIlMjUyMC0lMjUyMEVDTyUyNTIwLSUyNTIwU29sYXIlMjUyMFBhbmVscyUyNTIwLSUyNTIwVUslMjUyMC0lMjUyMEVOJTI1MjAtJTI1MjBTb2xhciUyNTIwUGFuZWxzJTI1MjAtJTI1MjBCUiUyNTIwLSUyNTIwQnJhbmRzJTI1MjBQYWdlJTI1MjAtJTI1MjBOZXclMjZ1dG1fdGVybSUzZFNvbGFyJTI1MjBQYW5lbCUyNnV0bV9jb250ZW50JTNkU29sYXIlMjUyMFBhbmVscyUyNTIwLSUyNTIwLSUyNTIwQlI&rlid=7587d0fac4781defd199ba937bdffe03",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three bullet points:",
+            "Install efficient solar panel systems for residential and commercial clients.",
+            "Design and implement energy-efficient solutions to reduce energy consumption."
+          ],
+          "snippet": "Solar Panels Can Save The Average Homeowner 52% On Their Energy Bills Throughout The Year! Power your home with energy from the sun, and get paid for the energy you don't use. Join Thousands Of Brits · Start Saving Today. · Revolutionary Solar · Plan For The Future.",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "Solar Panel Installation",
+          "company": "solar panel contractors",
+          "url": "https://www.bing.com/aclick?ld=e8ZaHeSUETBESUK2Z48Ce0kzVUCUyi89WPRz1WonPQCuYk9JtfYrxRALE20o044jUb5vUaFvfvj_B5JcJgtTE5GSiet25Jb5_cZPwza514GIN-wpvXR25iVT04FPBKngBH4EfnUz31eSPJHykHIewvg5ta5LfFSGw7YRsJxEeFVgVptHrdypTGXzMhQAWLjD-qcdC1wQ&u=aHR0cHMlM2ElMmYlMmZ3d3cuYmFyay5jb20lMmZlbiUyZmdiJTJmaW4lMmZzb2xhci1wYW5lbC1pbnN0YWxsYXRpb24lMmYlM2ZjYW1wYWlnbiUzZGJpbmctMzc2NTkzNzI5LTEyNzMyMzYxNDE5NDc1MDAtc29sYXItcGFuZWwtZGtpLWMlMjZwb3B1cCUzZHRydWUlMjZ0cmtfYWRfaWQlM2Q3OTU3NzM2NjcxNTA4MyUyNnRya19rd19pZCUzZGt3ZC03OTU3Nzc3NDAxNDA4MCUzYWxvYy0xODglMjZ0cmtfbXNsb2NfcGhzJTNkNjkyMDklMjZ0cmtfbXNsb2NfaW50JTNkMTYyNTcwJTI2dHJrX3NyYyUzZGIlMjZ0cmtfbXNjbGlkJTNkNDdjMTkwOTlhNGMwMTljMGQxNTdmYWYwMWI2NzE5MTMlMjZtc2Nsa2lkJTNkNDdjMTkwOTlhNGMwMTljMGQxNTdmYWYwMWI2NzE5MTMlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RDb25zdHJ1Y3Rpb24lMjUyMCUyNTI2JTI1MjBUcmFkZXMlMjUyMCUyNTdDJTI1MjBTb2xhciUyNTIwUGFuZWwlMjUyMEluc3RhbGxhdGlvbiUyNTIwKDExMTkpJTI1MjAlMjU3QyUyNTIwQ0xCJTI2dXRtX3Rlcm0lM2Rzb2xhciUyNTIwcGFuZWwlMjUyMGNvbnRyYWN0b3JzJTI2dXRtX2NvbnRlbnQlM2Rzb2xhci1wYW5lbC1ka2k&rlid=47c19099a4c019c0d157faf01b671913",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three short bullet points:",
+            "Install high-quality solar panels with precision and care.",
+            "Ensure safe work environments for technicians and customers alike."
+          ],
+          "snippet": "Bark Will Save You Time By Finding The Right Local Solar Panel Installers For You. Fast Free Solar Panel Installation Quotes from the Best Solar Experts Near You",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "Average Solar Installer Salary in United Kingdom",
+          "company": "Reed.co.uk",
+          "url": "https://www.reed.co.uk/average-salary/average-solar-installer-salary-in-united-kingdom",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three bullet points:",
+            "Install and maintain complex solar panel systems",
+            "Troubleshoot and diagnose electrical issues in solar arrays"
+          ],
+          "snippet": "Discover the average solar installer salary in United Kingdom through https://www.reed.co.uk. Explore data on the average salaries of Solar Installer professionals across the UK.",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "Solar Installer Jobs",
+          "company": "Reed.co.uk",
+          "url": "https://www.reed.co.uk/jobs/solar-installer-jobs",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three short bullet points:",
+            "Install complex solar panel systems to meet client needs",
+            "Conduct thorough site assessments for optimal solar panel placement"
+          ],
+          "snippet": "Find Solar Installer jobs with Reed.co.uk. Discover Solar Installer vacancies on offer, across the UK, helping you ❤ Mondays.",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        }
+      ],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me tailor my CV for one of these",
+        "What skills do I need for these roles?",
+        "Generate a 30-day plan to get there",
+        "Prep me for an interview for one of these"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "bf8aa4f6-99e2-43dc-acd9-bb79d7aca2d8",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785166149/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-27 16:29",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "bcfb5c4c-37fe-4e43-bd30-e0ac0f44aa85",
+      "name": "Search Google for: volunteering solar panel installer Edinburgh",
+      "type": "completed_resource",
+      "timestamp": "2026-07-27 16:41"
+    },
+    {
+      "id": "7129ab5d-1964-4554-9ce3-2c258ad3e863",
+      "name": "solar-technician-1591336684.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-27 16:28"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JJ",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "solar panel installer",
+  "values": [],
+  "culture_preference": "i'm flexible",
+  "salary_range": "£30k–£50k",
+  "work_type": "Onsite",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [
+    {
+      "id": "9c0ebe68-6e72-45b5-9387-2f813a34aaab",
+      "url": "https://www.erm.com/",
+      "title": "ERM | Sustainability Consulting & Advisory Services",
+      "body": "Sustainability Report 2026. We believe there can only be one future, a sustainable one.This article outlines practical actions leaders are taking to turn the targets from aspirational statements into ",
+      "type": "community",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503728"
+    },
+    {
+      "id": "e76949fe-e9d6-4b78-a1f2-9b85c3c66b39",
+      "url": "https://anitasafn562308.vidublog.com/",
+      "title": "Solar Panel Companies: Queries to Ask Ahead of Hiring Solar...",
+      "body": "Solar Panel Technicians Is DefinitionSolar Panel Installers perform solar panel installation and Provide clean energy solutions. Solar Panel Installers obtain licenses and follow manufacturer warranti",
+      "type": "webinars",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503704"
+    },
+    {
+      "id": "3cdb429b-89ef-42c2-9277-9659ee9b7808",
+      "url": "https://solarpanelinstallation00998.blogdeazar.com/",
+      "title": "5 Simple Statements About Solar Panel Installation Explained...",
+      "body": "Register. Report page.Examine with the solar firm for updates on the applying position and approval. There are plenty of trustworthy solar installers on the market. How can you distinguish the most ef",
+      "type": "webinars",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503692"
+    },
+    {
+      "id": "00055fa2-8c4f-478b-9af8-716e8e435df8",
+      "url": "https://flynnebrc752133.ssnblog.com/",
+      "title": "Solar Solutions: What to Expect from Professional Solar Panel...",
+      "body": "Solar Panel Installers Is DefinitionSolar Panel Installers Supply solar panel installation and Provide clean energy solutions. Solar Panel Installers in Pennsylvania Oversee contracts and Seek incenti",
+      "type": "webinars",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503679"
+    },
+    {
+      "id": "f363e8a3-25ed-40bf-8f2d-09a50a32da36",
+      "url": "https://green-pact.eu/scf/",
+      "title": "Sustainability Career & Leadership Forum 2026 - Greenpact",
+      "body": "Join the Sustainability Career & Leadership Forum 2026 to explore green leadership & career paths supporting Europe’s transition to nature-positive economies.",
+      "type": "events",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503663"
+    },
+    {
+      "id": "68169c77-5dc8-41b2-ab48-96a9813d9adc",
+      "url": "https://www.energy.cam.ac.uk/events/green-careers-festival-2026",
+      "title": "The Green Careers Festival 2026 - energy.cam.ac.uk",
+      "body": "Feb 9, 2026 · The transition to net zero requires action across all parts of society, and it is vital that graduates of all degree subjects can find a sustainable career. The panel will discuss how yo",
+      "type": "events",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503651"
+    },
+    {
+      "id": "10ac2cc6-86b7-4d8c-bbfa-6a9f5cc5f81d",
+      "url": "https://www.eventbrite.co.uk/e/solar-panel-installer-taster-tickets-1358245562039",
+      "title": "Solar Panel Installer Taster Tickets, Thursday, Sep 25... | Eventbrite",
+      "body": "Explore a career in the Solar Industry and hear about the knowledge and skills required to enter the sector.",
+      "type": "events",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503640"
+    },
+    {
+      "id": "4130d080-ae7c-4d32-a3e1-f1189b6d648d",
+      "url": "https://www.eventbrite.co.uk/e/solar-panel-installer-taster-tickets-1980378891575",
+      "title": "Solar Panel Installer Taster Tickets, Monday, Mar 16, 2026 from 9 am...",
+      "body": "Solar Panel Installer Taster. ByTruro & Penwith College.Please note - no electrical work involved! Why join this course? Hands-on Experience: Gain practical exposure to solar panel installation before",
+      "type": "events",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503628"
+    },
+    {
+      "id": "1d69de8d-890c-4a9c-8400-0cf8508cba94",
+      "url": "https://enable.green/news/sustainability-jobs-2026/",
+      "title": "Sustainability Jobs 2026: Global ESG & Climate Hiring Trends",
+      "body": "Jun 26, 2026 · You will learn how sustainability jobs are evolving across the UK, US, France, wider Europe and the Middle East, which roles are most in demand, and what organisations — and candidates ",
+      "type": "events",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503617"
+    },
+    {
+      "id": "45d7dd60-0bc8-44c8-9058-c837827cd0ef",
+      "url": "https://socious.io/blog/impact-careers-2026/",
+      "title": "Impact Careers in 2026: The Fastest-Growing Sustainability ...",
+      "body": "Mar 30, 2026 · A comprehensive guide to the fastest-growing sustainability and impact careers in 2026, including salary ranges, required skills, career transition advice, and where to find opportuniti",
+      "type": "events",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503604"
+    },
+    {
+      "id": "7b14f8be-0af8-4815-a76b-9cfd4f6b8adc",
+      "url": "https://home-renewables-scotland.co.uk/solar-panel-installers-dundee/",
+      "title": "Solar Panels Dundee | PV Installers Dundee",
+      "body": "solar-panel-installers-edinburgh-scotland. Solar PV systems offer several benefits for homeowners.Solar PV, short for solar photovoltaic, refers to the conversion of light into electricity.",
+      "type": "jobs",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503593"
+    },
+    {
+      "id": "c225d9df-76e0-41a5-990b-143c986eb220",
+      "url": "https://boringmagazine.com/anmak-solars-commitment-to-sustainability-through-affordable-solar-panel/",
+      "title": "Anmak Solar’s Commitment To Sustainability Through Affordable...",
+      "body": "Anmak Solar understands that installing solar panels can seem overwhelming. However, they guide customers through every step, making the process simple and clear. They also provide proper maintenance ",
+      "type": "jobs",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503582"
+    },
+    {
+      "id": "0f185ec0-3c6e-47ee-8695-1d4b474e1f06",
+      "url": "https://www.express.co.uk/news/science/1735454/octopus-energy-solar-panel-installation-service-advice",
+      "title": "'I work for Octopus Energy and I have zero regrets since having solar...",
+      "body": "Octopus Energy outlines process for having solar panels installed. A “guinea pig” for Octopus Energy’s new solar panel installation service says the additions to her home have come with “absolutely no",
+      "type": "jobs",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503569"
+    },
+    {
+      "id": "2a5d0b39-dea6-41da-8de6-ef4a298dbf70",
+      "url": "https://www.google.com/search?q=volunteering+solar+panel+installer+Edinburgh",
+      "title": "Search Google for: volunteering solar panel installer Edinburgh",
+      "body": "We couldn't confirm a specific live resource for this yet — here's a search to help you find current options yourself.",
+      "type": "volunteering",
+      "location": "Edinburgh",
+      "status": "completed",
+      "saved_at": "2026-07-27T16:36:59.503545",
+      "completed_at": "2026-07-27T16:41:40.500314"
+    },
+    {
+      "id": "ce481581-c81c-46d9-a39c-1b87246cf1f0",
+      "url": "https://www.totalskills.co.uk/solar-pv-cpd-course",
+      "title": "Solar Photovoltaic (PV) CPD course",
+      "body": "Practical Solar Panel installation practical training course for roofers and everyone.",
+      "type": "courses",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503534"
+    },
+    {
+      "id": "008c877c-0393-4b8f-b4b5-e36c340e695c",
+      "url": "https://www.coursera.org/courses?query=renewable+energy",
+      "title": "Best Renewable Energy Courses & Certificates [2026] | Coursera",
+      "body": "Renewable energy courses can help you learn solar panel installation, wind turbine maintenance, energy efficiency strategies, and grid integration techniques. Compare course options to find what fits ",
+      "type": "courses",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503523"
+    },
+    {
+      "id": "04f0b525-b22a-4c6b-a257-2f3793231b88",
+      "url": "https://www.learntradeskills.co.uk/blog/solar-panel-installation-course-uk-2026",
+      "title": "Solar Panel Installation Course UK: How to Get Qualified in 2026 | LTS Blog",
+      "body": "March 31, 2026 - Current 18th Edition certificate (BS 7671, including Amendment 4 from October 2026)",
+      "type": "courses",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503511"
+    },
+    {
+      "id": "7dc09494-e2db-4ea5-b1ce-acd62010b89d",
+      "url": "https://www.coursera.org/learn/solar-energy-basics",
+      "title": "Solar Energy Basics | Coursera",
+      "body": "This course gives you an introduction to the fundamentals of solar power as it applies to solar panel system installations. You will learn to compare solar energy to other energy resources and explain",
+      "type": "courses",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503500"
+    },
+    {
+      "id": "916b072d-9801-40c1-b933-547a1d8017ec",
+      "url": "https://gtec.co.uk/courses/renewable-energy-training/solar-pv-training",
+      "title": "Solar Panel Installation Training | GTEC",
+      "body": "Our solar panel installation training allows qualified electricians and electrical operatives to add the installation of solar panels to the services they offer.",
+      "type": "courses",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503482"
+    },
+    {
+      "id": "4c88adf4-d606-4f2c-9e57-c2656c987aef",
+      "url": "https://www.skillstg.co.uk/courses/solar-pv-installation-course/edinburgh/",
+      "title": "Edinburgh | Solar PV Installation Course",
+      "body": "February 21, 2026 - Our Solar PV Course in Edinburgh will equips you with the skills and knowledge to install, commission, fault find and maintain photovoltaic systems.",
+      "type": "courses",
+      "location": "Edinburgh",
+      "status": "not_started",
+      "saved_at": "2026-07-27T16:36:59.503442"
+    }
+  ],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": true,
+  "onboarding_done": true,
+  "headline": "Transitioning into Sustainability Specialist",
+  "experience": [
+    {
+      "id": "26f2c549",
+      "title": "Solar Energy Background",
+      "company": "",
+      "start_date": "",
+      "end_date": "",
+      "description": "",
+      "source": "chat"
+    },
+    {
+      "id": "8210240f",
+      "title": "",
+      "company": "solar energy industry (no specific company mentioned)",
+      "start_date": "",
+      "end_date": "",
+      "description": "",
+      "source": "chat"
+    },
+    {
+      "id": "117dc0b5",
+      "title": "Unknown role (implied by conversation, but not explicitly stated)",
+      "company": "Stealth startup / Unknown employer",
+      "start_date": "",
+      "end_date": "",
+      "description": "",
+      "source": "chat"
+    }
+  ],
+  "how_heard": "Podcast",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": true,
+  "visible_to_companies_at": "2026-07-29T09:54:05.527756",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Decade of experience in installation, maintenance, and optimization of photovoltaic systems",
+      "skill": "Project delivery",
+      "relevance": "Experience with large-scale system installation and maintenance demonstrates the ability to manage complex projects from start to finish."
+    },
+    {
+      "source": "Adept at enhancing energy production through optimization techniques",
+      "skill": "Regulatory literacy",
+      "relevance": "Understanding of technical nuances in energy production and optimization suggests familiarity with relevant regulations and standards in the industry."
+    },
+    {
+      "source": "Decade of experience in a specialized field (solar energy)",
+      "skill": "Stakeholder management (specifically working with clients, installers, or other stakeholders in the solar industry)",
+      "relevance": "Experience communicating technical information to diverse groups and managing their expectations is valuable for stakeholder engagement in sustainability roles."
+    }
+  ],
+  "journey": {
+    "xp": 115,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [
+      {
+        "id": "82fa2f6a-0fc7-4627-b8a9-e02d35e0dbe8",
+        "title": "Completed: Search Google for: volunteering solar panel installer Edinburgh",
+        "type": "achievement",
+        "icon": "🏅",
+        "xp": 75,
+        "earned_at": "2026-07-27T16:41:40.502389",
+        "verification_status": "auto",
+        "verified": true,
+        "evidence": ""
+      }
+    ],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-27",
+    "last_checkin_date": ""
+  },
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "neutral",
+        "ts": "2026-07-27T16:34:14.902121"
+      },
+      {
+        "emotion": "neutral",
+        "ts": "2026-07-27T16:35:02.585294"
+      }
+    ],
+    "blockers": [],
+    "preferred_tone": "direct",
+    "response_depth": "balanced",
+    "milestones_mentioned": [],
+    "total_exchanges": 2,
+    "encouragement_count": 0,
+    "key_insights": [
+      "The user has no strong preference for their transition journey, and is willing to consider opportunities based on their current schedule.",
+      "The user is flexible and willing to consider new opportunities, but there are no clear blockers or achievements mentioned yet."
+    ],
+    "current_emotion": "neutral"
+  }
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Train Garden | Career Accelerator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .nav-link.active { color: #091747; border-bottom: 2px solid #091747; }
+        .hide { display: none !important; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+    </style>
+</head>
+<body class="overflow-hidden bg-[#f8f9ff]">
+
+    <nav class="h-16 bg-white border-b border-slate-100 px-8 flex items-center justify-between z-50 relative">
+        <div class="flex items-center gap-8">
+            <div class="font-black text-[#091747] text-xl tracking-tighter">TRAIN GARDEN</div>
+            <div class="flex gap-6 h-16">
+                <button onclick="switchTab('home')" class="nav-link active text-sm font-bold text-slate-400 hover:text-[#091747] transition-all px-2 flex items-center">Home</button>
+                <button onclick="switchTab('resources')" class="nav-link text-sm font-bold text-slate-400 hover:text-[#091747] transition-all px-2 flex items-center">Resources</button>
+                <button onclick="switchTab('profile')" class="nav-link text-sm font-bold text-slate-400 hover:text-[#091747] transition-all px-2 flex items-center">Profile</button>
+            </div>
+        </div>
+        <div id="user-status" class="text-[10px] font-black uppercase tracking-widest text-emerald-500 bg-emerald-50 px-3 py-1 rounded-full">System Live</div>
+    </nav>
+
+    <div id="auth-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center">
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl max-w-md w-full mx-4">
+            <h2 class="text-2xl font-black text-[#091747] mb-2">Welcome Back</h2>
+            <p class="text-slate-500 text-sm mb-8">Enter your email to access your garden.</p>
+            
+            <div id="auth-email-step">
+                <input type="email" id="reg-email" placeholder="email@example.com" class="w-full p-4 rounded-2xl border border-slate-200 mb-4 outline-none focus:ring-2 focus:ring-[#091747]">
+                <button onclick="sendMagicLink()" class="w-full bg-[#091747] text-white py-4 rounded-2xl font-bold hover:opacity-90 transition-all">Request Magic Link</button>
+            </div>
+
+            <div id="auth-token-step" class="hide">
+                <div class="flex items-center gap-2 text-emerald-600 mb-4 bg-emerald-50 p-3 rounded-xl">
+                    <span class="material-symbols-outlined text-sm">check_circle</span>
+                    <span class="text-xs font-bold">Code sent to your inbox</span>
+                </div>
+                <input type="text" id="auth-token" placeholder="0000" class="w-full p-4 rounded-2xl border border-slate-200 mb-4 text-center text-2xl font-black tracking-[0.5em] outline-none focus:ring-2 focus:ring-emerald-500">
+                <button onclick="verifyToken()" class="w-full bg-emerald-600 text-white py-4 rounded-2xl font-bold hover:opacity-90 transition-all">Verify & Enter</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="h-[calc(100vh-64px)] overflow-y-auto p-8 custom-scrollbar">
+        
+        <div id="tab-home" class="tab-content active max-w-6xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                
+                <div class="col-span-8 space-y-8">
+                    <section>
+                        <h3 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4">Active Roadmaps</h3>
+                        <div id="roadmap-grid" class="grid grid-cols-1 gap-4">
+                            </div>
+                    </section>
+
+                    <section class="bg-[#091747] rounded-[2rem] p-8 shadow-xl text-white">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-emerald-400">psychology</span>
+                            <h3 class="font-bold text-lg">AI Career Companion</h3>
+                        </div>
+                        <div id="chat-window" class="h-64 overflow-y-auto mb-6 space-y-4 pr-4 custom-scrollbar"></div>
+                        <div class="relative">
+                            <input id="omni-input" type="text" placeholder="Ask about your progress or next steps..." 
+                                   class="w-full bg-white/10 border-none rounded-2xl p-5 text-white placeholder-white/40 focus:ring-2 focus:ring-emerald-500 outline-none">
+                            <button onclick="handleManualInput()" class="absolute right-4 top-4 text-emerald-400 material-symbols-outlined">send</button>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-span-4">
+                    <div class="bg-white rounded-[2rem] border border-slate-200 p-8 sticky top-0">
+                        <h3 class="font-bold text-[#091747] mb-6 flex items-center justify-between">
+                            Current Progress
+                            <span class="material-symbols-outlined text-slate-300">analytics</span>
+                        </h3>
+                        <div id="progress-list" class="space-y-8">
+                            <div class="text-center py-10 opacity-40">
+                                <span class="material-symbols-outlined text-4xl mb-2">donut_large</span>
+                                <p class="text-xs font-bold uppercase tracking-widest">No active growth data</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-resources" class="tab-content max-w-6xl mx-auto">
+            <header class="mb-10">
+                <h2 class="text-3xl font-black text-[#091747]">Skill Resources</h2>
+                <p class="text-slate-500">Curated materials and opportunities for your roadmaps.</p>
+            </header>
+            <div id="resource-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+        </div>
+
+        <div id="tab-profile" class="tab-content max-w-2xl mx-auto">
+            <div class="bg-white rounded-[2.5rem] border border-slate-200 p-10">
+                <div class="flex items-center gap-6 mb-10 pb-10 border-b border-slate-50">
+                    <div class="w-20 h-20 bg-gradient-to-tr from-[#091747] to-slate-700 rounded-3xl flex items-center justify-center text-white text-2xl font-black">U</div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-[#091747]">User Profile</h2>
+                        <p id="profile-email-display" class="text-slate-400">Loading profile...</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <label class="text-[10px] font-black uppercase text-slate-400 tracking-widest block mb-2">Background & Goals</label>
+                        <textarea id="profile-bio" rows="4" class="w-full bg-slate-50 border-none rounded-2xl p-4 text-sm focus:ring-2 focus:ring-[#091747]" placeholder="e.g. 5 years in marketing, looking to pivot to Data Science..."></textarea>
+                    </div>
+                    <button onclick="saveProfile()" class="w-full bg-[#091747] text-white py-4 rounded-2xl font-bold hover:shadow-lg transition-all">Save Background</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // TAB LOGIC
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // AUTH LOGIC
+        let pendingUserId = null;
+        async function sendMagicLink() {
+            const email = document.getElementById('reg-email').value;
+            if(!email) return alert("Email required");
+            const res = await fetch('/api/auth/request', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ email })
+            });
+            const data = await res.json();
+            if(data.success) {
+                pendingUserId = data.user_id;
+                document.getElementById('auth-email-step').classList.add('hide');
+                document.getElementById('auth-token-step').classList.remove('hide');
+            }
+        }
+
+        async function verifyToken() {
+            const token = document.getElementById('auth-token').value;
+            const res = await fetch('/api/auth/verify', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ user_id: pendingUserId, token: token })
+            });
+            const data = await res.json();
+            if(data.success) {
+                sessionStorage.setItem('user_id', pendingUserId);
+                document.getElementById('auth-overlay').classList.add('hide');
+                loadDashboard();
+            }
+        }
+
+        // DASHBOARD CONTENT LOGIC
+        async function loadDashboard() {
+            const userId = sessionStorage.getItem('user_id');
+            if(!userId) return;
+
+            const res = await fetch(`/api/get-history?user_id=${userId}`);
+            const data = await res.json();
+            
+            // Populate Home Roadmaps
+            const roadmapGrid = document.getElementById('roadmap-grid');
+            const progressList = document.getElementById('progress-list');
+            const resourceGrid = document.getElementById('resource-grid');
+            
+            roadmapGrid.innerHTML = '';
+            progressList.innerHTML = '';
+            resourceGrid.innerHTML = '';
+
+            data.history.forEach(item => {
+                const cleanName = item.name.replace('Roadmap:', '').trim();
+                const progress = item.progress || 0;
+
+                // 1A) Roadmap Card
+                roadmapGrid.innerHTML += `
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 flex items-center justify-between shadow-sm hover:border-emerald-200 transition-all cursor-pointer" onclick="window.open('${item.path}')">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center">
+                                <span class="material-symbols-outlined">map</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#091747]">${cleanName}</h4>
+                                <p class="text-xs text-slate-400">Created ${new Date(item.timestamp).toLocaleDateString()}</p>
+                            </div>
+                        </div>
+                        <span class="material-symbols-outlined text-slate-300">chevron_right</span>
+                    </div>`;
+
+                // 1B) Progress Bar
+                progressList.innerHTML += `
+                    <div>
+                        <div class="flex justify-between items-end mb-2">
+                            <span class="text-sm font-bold text-[#091747]">${cleanName}</span>
+                            <span class="text-xs font-black text-emerald-600">${progress}%</span>
+                        </div>
+                        <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-emerald-500 transition-all duration-1000" style="width: ${progress}%"></div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-2 italic">${item.status || 'Just started'}</p>
+                    </div>`;
+
+                // 2) Resource Cards
+                resourceGrid.innerHTML += `
+                    <div class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm flex flex-col h-full">
+                        <div class="flex-1">
+                            <div class="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-2">Roadmap Resource</div>
+                            <h4 class="font-bold text-[#091747] mb-4">${cleanName} Learning Kit</h4>
+                            <div class="bg-slate-50 p-4 rounded-xl mb-4 text-xs text-slate-600 italic">
+                                Current Status: ${item.status || 'Not Started'}
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="updateProgress('${item.path}', 'Started')" class="flex-1 bg-[#091747] text-white py-3 rounded-xl text-xs font-bold hover:opacity-90">START</button>
+                            <button onclick="updateProgress('${item.path}', 'In Review')" class="flex-1 border border-slate-200 text-[#091747] py-3 rounded-xl text-xs font-bold hover:bg-slate-50">EDIT</button>
+                        </div>
+                    </div>`;
+            });
+        }
+
+        // CHAT LOGIC
+        function handleManualInput() {
+            const input = document.getElementById('omni-input');
+            const text = input.value.trim();
+            if(!text) return;
+
+            // Add user bubble
+            const win = document.getElementById('chat-window');
+            win.innerHTML += `
+                <div class="ml-auto bg-emerald-500 text-white p-4 rounded-2xl rounded-tr-none text-sm max-w-[80%] font-medium">
+                    ${text}
+                </div>`;
+            
+            // Simplified fetch - backend remains the same as provided in previous prompt
+            const userId = sessionStorage.getItem('user_id');
+            fetch('/api/chat', { 
+                method: 'POST', 
+                headers: {'Content-Type':'application/json'}, 
+                body: JSON.stringify({ text, user_id: userId }) 
+            }).then(res => res.json()).then(data => {
+                win.innerHTML += `
+                    <div class="mr-auto bg-white/10 text-white p-4 rounded-2xl rounded-tl-none text-sm max-w-[80%] border border-white/10">
+                        Agent: I've updated your workspace and memory with that information.
+                    </div>`;
+                win.scrollTop = win.scrollHeight;
+                loadDashboard();
+            });
+
+            input.value = "";
+        }
+
+        window.onload = () => {
+            if(sessionStorage.getItem('user_id')) {
+                document.getElementById('auth-overlay').classList.add('hide');
+                loadDashboard();
+            }
+        };
+    </script>
+</body>
+</html>

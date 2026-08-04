@@ -1,0 +1,170 @@
+{
+  "user_id": "05ed0f2059bdeaf22f90c34b929e8ad9",
+  "email": "gr.com",
+  "name": "gr",
+  "first_seen": "2026-07-27T11:55:29.253321",
+  "last_seen": "2026-07-27T12:00:00.355555",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Project Delivery",
+    "Regulatory Literacy",
+    "Communication/Community Organising",
+    "Physical labor management and coordination",
+    "Attention to detail and quality control",
+    "Project delivery and stakeholder management",
+    "Regulatory knowledge (e.g., permits, compliance)",
+    "Community engagement and outreach (e.g., working with park visitors)"
+  ],
+  "skill_sources": {
+    "Project Delivery": [
+      {
+        "type": "inferred",
+        "detail": "Worked as a Grounds Maintenance Worker/Consultant — As a grounds maintenance worker, Robert has likely managed and delivered projects such as park renovations or maintenance schedules, which can translate to project management skills in sus",
+        "ts": "2026-07-27T11:56:57.945976"
+      }
+    ],
+    "Regulatory Literacy": [
+      {
+        "type": "inferred",
+        "detail": "Worked with DNR Mistletoe State Park — As a grounds maintenance worker for a state park, Robert has likely worked within regulatory frameworks and guidelines, which can translate to understanding regulatory requirements in sustainability ro",
+        "ts": "2026-07-27T11:56:57.946025"
+      }
+    ],
+    "Communication/Community Organising": [
+      {
+        "type": "inferred",
+        "detail": "Worked as a Grounds Maintenance Worker/Consultant — As a grounds maintenance worker, Robert has likely interacted with park visitors, stakeholders, and community members, which can translate to communication and community engagement skills ",
+        "ts": "2026-07-27T11:56:57.946042"
+      }
+    ],
+    "Physical labor management and coordination": [
+      {
+        "type": "inferred",
+        "detail": "Grounds Maintenance Worker/Consultant at DNR Mistletoe State Park — In a sustainability role, physical labor management and coordination are crucial for implementing green infrastructure projects or managing park maintenance teams.",
+        "ts": "2026-07-27T11:59:34.444375"
+      }
+    ],
+    "Attention to detail and quality control": [
+      {
+        "type": "inferred",
+        "detail": "Working in the janitorial field since years old — These skills are essential in a sustainability role, where attention to detail is critical for monitoring environmental metrics, tracking energy consumption, or ensuring accurate reporting o",
+        "ts": "2026-07-27T11:59:34.444420"
+      }
+    ],
+    "Project delivery and stakeholder management": [
+      {
+        "type": "inferred",
+        "detail": "Working as a consultant at DNR Mistletoe State Park — In this role, Robert likely interacted with park staff, visitors, and stakeholders, developing project delivery and stakeholder management skills that can be applied to collaborating wit",
+        "ts": "2026-07-27T11:59:34.444432"
+      }
+    ],
+    "Regulatory knowledge (e.g., permits, compliance)": [
+      {
+        "type": "inferred",
+        "detail": "Working in the grounds maintenance field — As a grounds maintenance worker, Robert likely worked within regulatory frameworks and obtained necessary permits to carry out his work. This experience can translate to understanding and navigatin",
+        "ts": "2026-07-27T11:59:34.444442"
+      }
+    ],
+    "Community engagement and outreach (e.g., working with park visitors)": [
+      {
+        "type": "inferred",
+        "detail": "Physical labor management and coordination — Robert's interactions with park visitors demonstrate the ability to engage with diverse audiences, communicate effectively, and build relationships - essential skills for community outreach and e",
+        "ts": "2026-07-27T11:59:34.444452"
+      }
+    ]
+  },
+  "cv_summary": "Robert Smith \nGrounds Maintenance Worker/Consultant\nPERSONAL STATEMENT\nHard working, dedicated, and very discipline individual. Working in the \njanitorial and carpentry field since years old. \nWORK EXPERIENCE\nGrounds Maintenance Worker/Consultant\nDNR Mistletoe State Park -   May 2015 – 2019 \nRespons",
+  "messages": [],
+  "reports": [
+    {
+      "id": "0c1c2de6-1b2e-432b-b6f8-e8ed741b33a5",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785149974/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-27 11:59",
+      "pinned": false
+    },
+    {
+      "id": "e6773ba1-617f-42df-aae9-60cc243be69d",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785149817/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-27 11:56",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "4946eb56-3ee3-46aa-abe9-148bd3f19c87",
+      "name": "grounds-maintenance-worker-1575621411 (1).pdf",
+      "type": "cv",
+      "timestamp": "2026-07-27 11:59"
+    },
+    {
+      "id": "f6decc56-c20e-4e9f-b4b2-fe858a0597ec",
+      "name": "grounds-maintenance-worker-1575621411 (1).pdf",
+      "type": "cv",
+      "timestamp": "2026-07-27 11:56"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "hackney",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "",
+  "experience": [],
+  "how_heard": "Other",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": true,
+  "visible_to_companies_at": "2026-07-27T12:00:00.355547",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Grounds Maintenance Worker/Consultant at DNR Mistletoe State Park",
+      "skill": "Physical labor management and coordination",
+      "relevance": "In a sustainability role, physical labor management and coordination are crucial for implementing green infrastructure projects or managing park maintenance teams."
+    },
+    {
+      "source": "Working in the janitorial field since years old",
+      "skill": "Attention to detail and quality control",
+      "relevance": "These skills are essential in a sustainability role, where attention to detail is critical for monitoring environmental metrics, tracking energy consumption, or ensuring accurate reporting of greenhouse gas emissions."
+    },
+    {
+      "source": "Working as a consultant at DNR Mistletoe State Park",
+      "skill": "Project delivery and stakeholder management",
+      "relevance": "In this role, Robert likely interacted with park staff, visitors, and stakeholders, developing project delivery and stakeholder management skills that can be applied to collaborating with community groups, governments, or private sector partners in a sustainability context."
+    },
+    {
+      "source": "Working in the grounds maintenance field",
+      "skill": "Regulatory knowledge (e.g., permits, compliance)",
+      "relevance": "As a grounds maintenance worker, Robert likely worked within regulatory frameworks and obtained necessary permits to carry out his work. This experience can translate to understanding and navigating environmental regulations in a sustainability role."
+    },
+    {
+      "source": "Physical labor management and coordination",
+      "skill": "Community engagement and outreach (e.g., working with park visitors)",
+      "relevance": "Robert's interactions with park visitors demonstrate the ability to engage with diverse audiences, communicate effectively, and build relationships - essential skills for community outreach and education in a sustainability role."
+    }
+  ]
+}

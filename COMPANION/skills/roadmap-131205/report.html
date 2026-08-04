@@ -1,0 +1,66 @@
+
+    <html>
+    <head>
+        <style>
+            body { font-family: 'Inter', sans-serif; padding: 40px; color: #1e293b; background: #fff; line-height: 1.7; }
+            h1 { color: #091747; font-size: 24px; margin-bottom: 25px; }
+            .day-card { 
+                background: #f8fafc; border: 1px solid #e2e8f0; padding: 25px; 
+                border-radius: 20px; margin-bottom: 20px; list-style: none;
+                transition: transform 0.2s;
+            }
+            .day-card:hover { transform: translateY(-3px); border-color: #091747; }
+            .tag { 
+                font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 6px; 
+                text-transform: uppercase; margin-right: 10px; display: inline-block;
+                margin-bottom: 10px;
+            }
+            .tag-learn { background: #dbeafe; color: #1e40af; }
+            .tag-read { background: #fef3c7; color: #92400e; }
+            .tag-apply { background: #dcfce7; color: #166534; }
+        </style>
+    </head>
+    <body>
+        <h1>🚀 Career Accelerator: Learning</h1>
+        <div id="roadmap-container"><p>In light of your interest in volunteering to gain skills in the area of Learning, here's a 7-day plan for you in London:</p>
+<p><strong>Day 1:</strong>
+- LEARN: Study environmental conservation and restoration techniques, focusing on urban green spaces. Utilize resources from TCV in London (<a href="https://www.tcv.org.uk/london/">https://www.tcv.org.uk/london/</a>).
+- READ: Keep up with environmental news in London by visiting Environment Job (<a href="https://www.environmentjob.co.uk/">https://www.environmentjob.co.uk/</a>).
+- APPLY: Volunteer for TCV in London to contribute to their projects aimed at connecting people and green spaces.</p>
+<p><strong>Day 2:</strong>
+- LEARN: Brush up on the basics of horticulture, including plant identification, pruning, and propagation. Check out resources from London Environmental Network (<a href="https://www.londonenvironment.net/">https://www.londonenvironment.net/</a>).
+- READ: Follow news and updates from Parks for London (<a href="https://parksforlondon.org.uk/">https://parksforlondon.org.uk/</a>) to stay informed about the city's parks and green spaces.
+- APPLY: Offer your time as a volunteer gardener at one of Parks for London's many beautiful parks throughout the city.</p>
+<p><strong>Day 3:</strong>
+- LEARN: Study various aspects of conservation, including wildlife, habitats, and biodiversity. Utilize resources from environmental volunteering opportunities (<a href="https://www.environmentjob.co.uk/volunteering">https://www.environmentjob.co.uk/volunteering</a>).
+- READ: Read through the latest City of London news regarding conservation efforts and initiatives by visiting their website (<a href="https://www.cityoflondon.gov.uk/">https://www.cityoflondon.gov.uk/</a>).
+- APPLY: Offer your help as a conservation volunteer with the City of London Corporation, focusing on wildlife conservation within the city's many green spaces.</p>
+<p><strong>Day 4:</strong>
+- LEARN: Learn about environmental education and outreach strategies to engage community members in conservation efforts. Visit resources from Parks for London (<a href="https://parksforlondon.org.uk/">https://parksforlondon.org.uk/</a>).
+- READ: Read through articles and updates about current environmental challenges facing London, such as air pollution or climate change.
+- APPLY: Offer your skills at an environmental education event organized by Parks for London to help inform and engage local residents in conservation efforts.</p>
+<p><strong>Day 5:</strong>
+- LEARN: Study sustainable urban planning practices that promote green spaces and biodiversity within cities. Utilize resources from TCV in London (<a href="https://www.tcv.org.uk/london/">https://www.tcv.org.uk/london/</a>).
+- READ: Keep up with the latest news about environmental policies and initiatives in London by following City of London's updates (<a href="https://www.cityoflondon.gov.uk/">https://www.cityoflondon.gov.uk/</a>).
+- APPLY: Offer your help as a volunteer at a community event that promotes sustainable urban planning practices, such as green infrastructure projects or urban gardening initiatives.</p>
+<p><strong>Day 6:</strong>
+- LEARN: Study the importance of habitat restoration and creation in urban environments. Utilize resources from environmental volunteering opportunities (<a href="https://www.environmentjob.co.uk/volunteering">https://www.environmentjob.co.uk/volunteering</a>).
+- READ: Read through articles about successful habitat restoration projects within London's green spaces, such as the regeneration of Hackney Marshes or Wormwood Scrubs.
+- APPLY: Offer your help in a habitat restoration project at one of London's many green spaces, such as a park or nature reserve.</p>
+<p><strong>Day 7:</strong>
+- LEARN: Study sustainable transportation solutions for cities and their impact on reducing pollution levels and promoting active travel. Utilize resources from Parks for London (<a href="https://parksforlondon.org.uk/">https://parksforlondon.org.uk/</a>).
+- READ: Read through articles about the benefits of promoting active travel in cities, such as walking, cycling, or public transportation.
+- APPLY: Offer your help at an event that promotes sustainable transportation solutions within London's green spaces, such as organizing a bike ride or leading a walk for charity.</p></div>
+        <script>
+            document.querySelectorAll('li').forEach(item => {
+                item.classList.add('day-card');
+                let content = item.innerHTML;
+                if(content.includes('LEARN')) content = '<span class="tag tag-learn">Course</span>' + content;
+                if(content.includes('READ')) content = '<span class="tag tag-read">Insight</span>' + content;
+                if(content.includes('APPLY')) content = '<span class="tag tag-apply">Action</span>' + content;
+                item.innerHTML = content;
+            });
+        </script>
+    </body>
+    </html>
+    

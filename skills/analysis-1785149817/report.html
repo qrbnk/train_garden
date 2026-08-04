@@ -1,0 +1,58 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Summary</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>SUMMARY</strong></p>
+<p>Based on the provided CV, Robert Smith's background is NOT already in sustainability. His work history suggests experience in janitorial and carpentry roles, primarily focused on physical labor, maintenance, and groundskeeping.</p>
+<p><strong>TRANSFERABLE/MATCHED SKILLS</strong></p>
+<ol>
+<li>Physical labor and manual handling of equipment (e.g., using tractors, rakes, and forks)</li>
+<li>Maintenance and repair of outdoor spaces, including fixing leaks and replacing equipment</li>
+<li>Attention to detail and ability to maintain cleanliness standards</li>
+<li>Ability to work independently with minimal supervision</li>
+<li>Basic mechanical skills (e.g., changing oil in park vehicles)</li>
+</ol>
+<p>These transferable skills could be relevant to sustainability roles that involve physical maintenance or groundskeeping.</p>
+<p><strong>SKILL GAPS</strong></p>
+<ol>
+<li>Sustainability-specific knowledge and qualifications: Robert Smith lacks direct experience working on sustainability-related projects, understanding environmental impact assessments, or managing sustainable practices.</li>
+<li>Data analysis and interpretation: There is no indication of statistical or data-driven decision-making skills in his current or past roles.</li>
+<li>Stakeholder engagement and communication: His work history suggests minimal interaction with external stakeholders or clients.</li>
+</ol>
+<p><strong>TOP 3 NEXT STEPS</strong></p>
+<ol>
+<li><strong>Develop sustainability-specific knowledge</strong>: Robert Smith should explore online courses, certifications, or workshops to gain foundational understanding of sustainability principles, practices, and tools.</li>
+<li><strong>Highlight transferable skills</strong>: Emphasize his relevant manual labor, maintenance, and physical skills on his CV, highlighting how these can be applied to sustainability roles.</li>
+<li><strong>Network with professionals in the field</strong>: Attend industry events, join professional organizations, or connect with colleagues working in sustainability to build relationships and gain insights into the sector.</li>
+</ol>
+<p><strong>SKILLS_JSON</strong></p>
+<p><code>{
+  "matched": ["Physical labor", "Maintenance", "Attention to detail"],
+  "gaps": ["Sustainability-specific knowledge", "Data analysis", "Stakeholder engagement"],
+  "summary": "",
+  "name": "Robert Smith",
+  "sector": "Janitorial/Carpentry",
+  "experience_years": "6-10 years",
+  "suggested_target_role": "Sustainability Coordinator or Green Infrastructure Specialist",
+  "location": "Alabama",
+  "goals": ["Seeking a role in sustainability"],
+  "hobbies": ["Climbing", "Snowboarding", "Cooking", "Reading"],
+  "headline": "Grounds Maintenance Worker/Consultant",
+  "experience": [
+    {"title": "Grounds Maintenance Worker/Consultant", "company": "DNR Mistletoe State Park", "start_date": "May 2015", "end_date": "2019"},
+    {"title": "Grounds Maintenance Worker", "company": "Irons Oaks Environmental Learning Center", "start_date": "2011", "end_date": "2015"}
+  ]
+}</code></p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

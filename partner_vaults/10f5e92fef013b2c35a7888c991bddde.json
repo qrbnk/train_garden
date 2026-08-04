@@ -1,0 +1,62 @@
+{
+  "partner_id": "10f5e92fef013b2c35a7888c991bddde",
+  "email": "partner@test.com",
+  "account_type": "partner",
+  "first_seen": "2026-07-28T09:08:25.835514",
+  "last_seen": "2026-07-31T11:44:51.886904",
+  "profile": {
+    "org_name": "partner",
+    "org_type": "non_profit",
+    "cause_areas": [
+      "youth"
+    ],
+    "website": ".com",
+    "hq_location": "london",
+    "description": "causes, volunteering",
+    "onboarding_done": true
+  },
+  "team_members": [],
+  "documents": [],
+  "resources": [
+    {
+      "id": "2616edd7-bffb-44f3-ba40-c9c7a53a00f3",
+      "title": "volunteering climate",
+      "resource_type": "volunteering",
+      "description": "helping collecting rubbish on the beach",
+      "skills": [
+        "environment",
+        "team work",
+        "climate",
+        "organisation"
+      ],
+      "location": "brighton",
+      "remote_policy": "in-person",
+      "duration": "",
+      "capacity": "2",
+      "status": "active",
+      "created_at": "2026-07-28T09:10:09.448306"
+    }
+  ],
+  "connections": [],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "6c2a5f0d-fa7f-4f03-b524-0d8e395d1939",
+      "text": "Generated 2 proposed matches for volunteering climate",
+      "type": "matching",
+      "ts": "2026-07-29T09:57:14.216512"
+    },
+    {
+      "id": "3321eb20-004a-4013-a577-282863b9a933",
+      "text": "Added resource: volunteering climate",
+      "type": "resource",
+      "ts": "2026-07-28T09:10:09.448999"
+    },
+    {
+      "id": "353403b4-0a55-4472-8a7f-11fa64dfb9db",
+      "text": "Updated organisation profile",
+      "type": "onboarding",
+      "ts": "2026-07-28T09:08:53.806660"
+    }
+  ]
+}

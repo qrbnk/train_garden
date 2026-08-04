@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roadmaps — Train Garden</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Chivo:wght@700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      "on-primary": "#ffffff", background: "#f9f9ff", "surface-container": "#ededf3",
+      "surface-container-low": "#f3f3f9", "surface-container-lowest": "#ffffff",
+      "surface-container-high": "#e7e8ee", "surface-container-highest": "#e2e2e8",
+      "on-background": "#191c20", "on-surface": "#191c20", "on-surface-variant": "#3e4943",
+      outline: "#6e7a73", "outline-variant": "#bdc9c1", "secondary-container": "#b8c4fd",
+      "border-muted": "#E5E5E5", primary: "#005d42", error: "#ba1a1a"
+    },
+    fontFamily: { display: ["Chivo"], body: ["Inter"] },
+    spacing: { "stack-sm": "8px", "stack-md": "24px", "stack-lg": "48px", gutter: "24px",
+      "margin-desktop": "40px", "margin-mobile": "16px" }
+  }}
+};
+</script>
+<style>
+  * { border-radius: 0 !important; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0; }
+  body { overflow: hidden; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #f9f9ff; border-left: 1px solid #bdc9c1; }
+  ::-webkit-scrollbar-thumb { background: #005d42; }
+
+  /* Grid background */
+  .grid-bg {
+    background-size: 32px 32px;
+    background-image: linear-gradient(to right, rgba(0,93,66,0.04) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0,93,66,0.04) 1px, transparent 1px);
+  }
+
+  /* Roadmap card enter */
+  @keyframes cardIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .card-in { animation: cardIn 0.4s ease-out forwards; }
+  .card-delay-1 { animation-delay: 0.1s; opacity: 0; }
+  .card-delay-2 { animation-delay: 0.2s; opacity: 0; }
+  .card-delay-3 { animation-delay: 0.3s; opacity: 0; }
+</style>
+</head>
+<body class="bg-background text-on-background font-body flex h-screen overflow-hidden">
+
+<!-- ══════════════════════════════════════════
+     SIDEBAR
+════════════════════════════════════════════ -->
+<nav class="hidden md:flex flex-col h-screen w-60 fixed left-0 top-0 bg-surface-container-low border-r border-outline-variant py-stack-md px-stack-sm z-50 flex-shrink-0">
+  <div class="mb-stack-lg px-2">
+    <a href="/dashboard" class="font-display font-black text-lg text-primary tracking-tighter block">TRAIN GARDEN</a>
+    <p class="text-[9px] text-on-surface-variant uppercase tracking-widest mt-1">Roadmap Library</p>
+  </div>
+
+  <div class="flex items-center gap-2 mb-stack-md px-2 border border-outline-variant p-3 bg-surface-container-highest">
+    <div id="user-avatar" class="w-8 h-8 bg-primary flex items-center justify-center text-on-primary font-bold text-sm flex-shrink-0">?</div>
+    <p id="user-email-display" class="text-[10px] text-primary truncate uppercase font-bold">Loading…</p>
+  </div>
+
+  <!-- New roadmap CTA -->
+  <a href="/chat" class="w-full bg-primary text-on-primary text-[11px] font-bold uppercase tracking-widest py-3 border-2 border-primary hover:bg-background hover:text-primary transition-colors mb-stack-md flex items-center justify-center gap-2">
+    <span class="material-symbols-outlined text-[16px]">add</span> New Roadmap
+  </a>
+
+  <ul class="flex-1 space-y-1">
+    <li><a href="/dashboard" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest"><span class="material-symbols-outlined text-[17px]">dashboard</span> Dashboard</a></li>
+    <li><a href="/chat" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest"><span class="material-symbols-outlined text-[17px]">psychology</span> Garden AI</a></li>
+    <li><a href="/strategist" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest"><span class="material-symbols-outlined text-[17px]">chat</span> Strategist</a></li>
+    <li><a href="/roadmap" class="flex items-center gap-3 px-4 py-2.5 bg-primary text-on-primary text-[11px] uppercase tracking-widest"><span class="material-symbols-outlined text-[17px]" style="font-variation-settings:'FILL' 1;">alt_route</span> Roadmaps</a></li>
+    <li><a href="/chat" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest"><span class="material-symbols-outlined text-[17px]">description</span> CV Analysis</a></li>
+  </ul>
+
+  <div class="border-t border-outline-variant pt-stack-sm">
+    <button onclick="logout()" class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest w-full">
+      <span class="material-symbols-outlined text-[17px]">logout</span> Sign Out
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile bottom nav -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-highest border-t-2 border-primary z-50 flex justify-around items-center py-3">
+  <a href="/dashboard" class="flex flex-col items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="text-[10px]">Dashboard</span></a>
+  <a href="/chat" class="flex flex-col items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">psychology</span><span class="text-[10px]">AI</span></a>
+  <a href="/roadmap" class="flex flex-col items-center gap-1 text-primary"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings:'FILL' 1;">alt_route</span><span class="text-[10px] font-bold">Roadmaps</span></a>
+  <a href="/strategist" class="flex flex-col items-center gap-1 text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">chat</span><span class="text-[10px]">Strategist</span></a>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     MAIN — Split: Roadmap List | Viewer
+════════════════════════════════════════════ -->
+<main class="flex-1 ml-0 md:ml-60 flex h-full overflow-hidden">
+
+  <!-- LEFT: Roadmap list -->
+  <div class="w-80 flex-shrink-0 border-r border-outline-variant flex flex-col h-full bg-surface-container-low">
+
+    <!-- Header -->
+    <div class="p-5 border-b border-outline-variant">
+      <p class="text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Active Trajectories</p>
+      <h1 class="font-display font-black text-2xl text-primary tracking-tighter uppercase">Roadmaps</h1>
+    </div>
+
+    <!-- Generate new -->
+    <div class="p-4 border-b border-outline-variant bg-surface-container-lowest">
+      <div class="flex gap-2">
+        <input id="roadmap-topic" type="text" placeholder="e.g. ESG reporting…"
+          class="flex-1 bg-transparent border-b border-primary focus:outline-none text-[13px] text-primary pb-1 placeholder:text-on-surface-variant"/>
+        <button onclick="generateRoadmap()" id="generate-btn"
+          class="flex-shrink-0 px-3 py-1 bg-primary text-on-primary text-[11px] uppercase tracking-widest border border-primary hover:bg-background hover:text-primary transition-colors">
+          Generate
+        </button>
+      </div>
+      <p id="generate-status" class="text-[10px] text-on-surface-variant mt-2 uppercase tracking-widest hidden"></p>
+    </div>
+
+    <!-- List -->
+    <div id="roadmap-list" class="flex-1 overflow-y-auto">
+      <div id="list-loading" class="p-4 text-[12px] text-on-surface-variant uppercase tracking-widest animate-pulse">
+        Loading roadmaps…
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Viewer / iframe -->
+  <div class="flex-1 flex flex-col h-full grid-bg">
+
+    <!-- Toolbar -->
+    <div id="viewer-toolbar" class="hidden flex-shrink-0 border-b border-primary bg-background px-6 py-3 flex justify-between items-center">
+      <div>
+        <p class="text-[10px] text-on-surface-variant uppercase tracking-widest mb-0.5">Viewing</p>
+        <h2 id="viewer-title" class="font-display font-bold text-lg text-primary uppercase tracking-tighter">—</h2>
+      </div>
+      <div class="flex gap-2">
+        <button onclick="exportPDF()" class="flex items-center gap-1.5 px-4 py-2 bg-primary text-on-primary text-[11px] uppercase tracking-widest border border-primary hover:bg-background hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[14px]">download</span> Export PDF
+        </button>
+        <button onclick="openFull()" class="flex items-center gap-1.5 px-4 py-2 border border-outline text-on-surface-variant text-[11px] uppercase tracking-widest hover:border-primary hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[14px]">open_in_new</span> Open
+        </button>
+        <button onclick="pinReport()" id="pin-btn" class="flex items-center gap-1.5 px-4 py-2 border border-outline text-on-surface-variant text-[11px] uppercase tracking-widest hover:border-primary hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[14px]">push_pin</span> Pin
+        </button>
+      </div>
+    </div>
+
+    <!-- Iframe viewer -->
+    <div class="flex-1 relative min-h-0">
+      <iframe id="roadmap-frame" src="about:blank" class="w-full h-full border-none"></iframe>
+
+      <!-- Placeholder -->
+      <div id="viewer-placeholder" class="absolute inset-0 flex flex-col items-center justify-center text-center p-16 bg-background">
+        <span class="material-symbols-outlined text-[64px] text-outline-variant mb-6">alt_route</span>
+        <h3 class="font-display font-black text-2xl text-primary uppercase tracking-tighter mb-3">Select a Roadmap</h3>
+        <p class="text-[13px] text-on-surface-variant uppercase tracking-widest max-w-xs mb-6">
+          Choose from your saved roadmaps on the left, or generate a new one.
+        </p>
+        <a href="/chat" class="bg-primary text-on-primary text-[11px] uppercase tracking-widest px-6 py-3 border-2 border-primary hover:bg-background hover:text-primary transition-colors">
+          → Generate in Garden AI
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+// ── Auth guard ────────────────────────────────
+const userId = sessionStorage.getItem('user_id');
+if (!userId) { window.location.href = '/'; }
+
+// ── Hydrate UI ────────────────────────────────
+const userEmail = sessionStorage.getItem('user_email') || '';
+document.getElementById('user-avatar').textContent = userEmail ? userEmail[0].toUpperCase() : 'U';
+document.getElementById('user-email-display').textContent = userEmail || userId.substring(0, 12) + '…';
+
+// ── State ─────────────────────────────────────
+let currentPath = '';
+let currentTitle = '';
+let allHistory = [];
+
+// ── Init ──────────────────────────────────────
+window.addEventListener('DOMContentLoaded', loadRoadmaps);
+
+async function loadRoadmaps() {
+  try {
+    const res = await fetch(`/api/get-history?user_id=${userId}`);
+    const data = await res.json();
+    allHistory = data.history || [];
+
+    const roadmaps = allHistory.filter(h =>
+      h.path && (h.name?.toLowerCase().includes('roadmap') || h.path?.includes('view-skill'))
+    );
+
+    renderList(roadmaps);
+  } catch (e) {
+    document.getElementById('roadmap-list').innerHTML =
+      '<div class="p-4 text-[12px] text-error uppercase tracking-widest">Error loading. Is backend running?</div>';
+  }
+}
+
+function renderList(items) {
+  const list = document.getElementById('roadmap-list');
+  document.getElementById('list-loading').remove();
+
+  if (items.length === 0) {
+    list.innerHTML = `
+      <div class="p-6 text-center">
+        <p class="text-[12px] text-on-surface-variant uppercase tracking-widest mb-4">No roadmaps yet.</p>
+        <a href="/chat" class="text-[11px] text-primary uppercase tracking-widest underline">Generate your first →</a>
+      </div>`;
+    return;
+  }
+
+  list.innerHTML = items.map((item, i) => `
+    <button onclick="loadRoadmap('${item.path}', '${item.name?.replace(/'/g, "\\'")}', ${i})"
+      id="list-item-${i}"
+      class="roadmap-list-item w-full text-left p-4 border-b border-outline-variant hover:bg-secondary-container hover:border-l-4 hover:border-l-primary transition-all group">
+      <div class="flex justify-between items-start mb-1">
+        <span class="text-[10px] text-on-surface-variant uppercase tracking-widest">${item.timestamp || ''}</span>
+        ${item.pinned ? '<span class="text-[10px] text-primary">📌</span>' : ''}
+      </div>
+      <p class="text-[13px] font-bold text-primary leading-snug">${item.name || 'Untitled'}</p>
+      <p class="text-[11px] text-on-surface-variant uppercase mt-1 tracking-wide">→ View roadmap</p>
+    </button>
+  `).join('');
+}
+
+function loadRoadmap(path, name, idx) {
+  currentPath = path;
+  currentTitle = name;
+
+  // Update viewer
+  document.getElementById('roadmap-frame').src = path;
+  document.getElementById('viewer-placeholder').classList.add('hidden');
+  document.getElementById('viewer-toolbar').classList.remove('hidden');
+  document.getElementById('viewer-title').textContent = name;
+
+  // Highlight active item
+  document.querySelectorAll('.roadmap-list-item').forEach(el => {
+    el.classList.remove('bg-secondary-container', 'border-l-4', 'border-l-primary');
+  });
+  const active = document.getElementById(`list-item-${idx}`);
+  if (active) active.classList.add('bg-secondary-container', 'border-l-4', 'border-l-primary');
+}
+
+// ── Generate new roadmap ──────────────────────
+async function generateRoadmap() {
+  const topic = document.getElementById('roadmap-topic').value.trim();
+  if (!topic) {
+    document.getElementById('roadmap-topic').focus();
+    return;
+  }
+
+  const btn = document.getElementById('generate-btn');
+  const status = document.getElementById('generate-status');
+  btn.textContent = '…';
+  btn.disabled = true;
+  status.textContent = 'Researching and generating roadmap…';
+  status.classList.remove('hidden');
+
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: `Generate a 30-day career roadmap for ${topic}`, user_id: userId })
+    });
+    const data = await res.json();
+
+    if (data.path) {
+      status.textContent = '✓ Roadmap ready';
+      document.getElementById('roadmap-topic').value = '';
+      await loadRoadmaps(); // Refresh list
+      loadRoadmap(data.path, `Roadmap: ${topic}`, 0);
+    } else {
+      status.textContent = data.response ? '✓ Response received (no file generated)' : '✗ Generation failed';
+    }
+  } catch (e) {
+    status.textContent = '✗ Error: ' + e.message;
+  } finally {
+    btn.textContent = 'Generate';
+    btn.disabled = false;
+  }
+}
+
+// Enter key on input
+document.getElementById('roadmap-topic').addEventListener('keydown', e => {
+  if (e.key === 'Enter') generateRoadmap();
+});
+
+// ── Actions ───────────────────────────────────
+async function exportPDF() {
+  if (!currentPath) return;
+  try {
+    const res = await fetch('/api/export-pdf', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title: currentTitle, content: 'Report: ' + currentPath })
+    });
+    if (res.ok) {
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = currentTitle.replace(/[^a-z0-9]/gi, '-') + '.pdf';
+      a.click();
+    }
+  } catch (e) {
+    alert('PDF export failed: ' + e.message);
+  }
+}
+
+function openFull() {
+  if (currentPath) window.open(currentPath, '_blank');
+}
+
+async function pinReport() {
+  if (!currentPath) return;
+  try {
+    await fetch('/api/manage-history', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: userId, action: 'pin', path: currentPath })
+    });
+    await loadRoadmaps();
+    const btn = document.getElementById('pin-btn');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[14px]" style="font-variation-settings:\'FILL\' 1;">push_pin</span> Pinned';
+    btn.classList.add('border-primary', 'text-primary');
+  } catch (e) {
+    alert('Pin failed: ' + e.message);
+  }
+}
+
+function logout() {
+  sessionStorage.clear();
+  window.location.href = '/';
+}
+</script>
+</body>
+</html>

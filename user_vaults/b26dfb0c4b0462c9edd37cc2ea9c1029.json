@@ -1,0 +1,93 @@
+{
+  "user_id": "b26dfb0c4b0462c9edd37cc2ea9c1029",
+  "email": "brandon_1@test.com",
+  "name": "Brandon",
+  "first_seen": "2026-07-31T12:27:07.366703",
+  "last_seen": "2026-07-31T12:31:26.691297",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Project delivery",
+    "Regulatory literacy"
+  ],
+  "skill_sources": {
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Installation and maintenance of photovoltaic systems — The experience in installing and maintaining complex systems can be applied to delivering projects related to sustainability, such as renewable energy infrastructure development or gree",
+        "ts": "2026-07-31T12:28:38.494768"
+      }
+    ],
+    "Regulatory literacy": [
+      {
+        "type": "inferred",
+        "detail": "Optimization of photovoltaic systems — Understanding the technical aspects of solar panel optimization demonstrates an ability to interpret and apply regulations related to sustainability, such as net metering policies or renewable energy p",
+        "ts": "2026-07-31T12:28:38.494880"
+      }
+    ]
+  },
+  "cv_summary": "\n\n\n\nETHANMARTINEZ\nSolar Technician\nsupport@qwikresume.com\n(123) 456 7899\nLos Angeles\nwww.qwikresume.com\nPROFESSIONAL SUMMARY\nSolar Technician with a decade of comprehensive experience in the \ninstallation, maintenance, and optimization of photovoltaic systems. \nAdept at enhancing energy producti",
+  "messages": [],
+  "reports": [
+    {
+      "id": "f71164c3-e345-4ffe-b0d3-49d2583b8d30",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785497318/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-31 12:28",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "1cbe88e7-97b6-4fe2-b9e7-92f5cbc9500c",
+      "name": "solar-technician-1591336684.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-31 12:28"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "hackney",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "",
+  "experience": [],
+  "how_heard": "X / Twitter",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Installation and maintenance of photovoltaic systems",
+      "skill": "Project delivery",
+      "relevance": "The experience in installing and maintaining complex systems can be applied to delivering projects related to sustainability, such as renewable energy infrastructure development or green building initiatives."
+    },
+    {
+      "source": "Optimization of photovoltaic systems",
+      "skill": "Regulatory literacy",
+      "relevance": "Understanding the technical aspects of solar panel optimization demonstrates an ability to interpret and apply regulations related to sustainability, such as net metering policies or renewable energy portfolio standards."
+    }
+  ]
+}

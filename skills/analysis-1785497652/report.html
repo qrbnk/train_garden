@@ -1,0 +1,86 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Summary</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>SUMMARY</strong></p>
+<p>Ethan Martinez's background is NOT already in sustainability; he has a decade of experience as a Solar Technician, primarily installing and maintaining photovoltaic systems.</p>
+<p><strong>TRANSFERABLE/MATCHED SKILLS</strong></p>
+<ul>
+<li>Troubleshooting Techniques</li>
+<li>Photovoltaic System Troubleshooting</li>
+<li>Electrical Codes Knowledge</li>
+<li>System Optimization</li>
+<li>Teamwork</li>
+<li>Tenacity</li>
+</ul>
+<p>These skills are transferable because they demonstrate the ability to:</p>
+<ul>
+<li>Analyze complex systems and identify issues (Troubleshooting)</li>
+<li>Implement safety protocols and adhere to regulations (Electrical Codes Knowledge, Safety protocols)</li>
+<li>Optimize system performance (System Optimization)</li>
+</ul>
+<p><strong>SKILL GAPS</strong></p>
+<ul>
+<li>Sustainability principles and practices</li>
+<li>Climate change mitigation and adaptation strategies</li>
+<li>Energy policy and regulation</li>
+<li>Stakeholder engagement and community outreach</li>
+<li>Life cycle assessment and environmental impact analysis</li>
+</ul>
+<p>These gaps are significant because they represent a lack of knowledge and experience in core sustainability areas.</p>
+<p><strong>ALL SKILLS</strong></p>
+<ul>
+<li>Troubleshooting Techniques</li>
+<li>Photovoltaic System Troubleshooting</li>
+<li>Solar Energy Principles</li>
+<li>Electrical Codes Knowledge</li>
+<li>System Optimization</li>
+<li>Teamwork</li>
+<li>Tenacity</li>
+<li>Swahili</li>
+<li>French</li>
+<li>English</li>
+<li>Power tools and equipment (e.g. solar panel assembly, inspection)</li>
+<li>Inventory management and logistics</li>
+<li>Project management (leading cross-functional teams to complete projects efficiently)</li>
+<li>Training and support (educating clients on solar technology benefits)</li>
+</ul>
+<p><strong>TOP 3 NEXT STEPS</strong></p>
+<ol>
+<li>Take courses or obtain certifications in sustainability principles and practices.</li>
+<li>Gain experience working with stakeholders and community groups on sustainability initiatives.</li>
+<li>Develop skills in life cycle assessment and environmental impact analysis.</li>
+</ol>
+<p>Here is the SKILLS_JSON object:</p>
+<p><code>json
+"SKILLS_JSON": {
+    "matched": ["Troubleshooting Techniques", "Photovoltaic System Troubleshooting", "Electrical Codes Knowledge", "System Optimization", "Teamwork", "Tenacity"],
+    "all_skills": ["Troubleshooting Techniques", "Photovoltaic System Troubleshooting", "Solar Energy Principles", "Electrical Codes Knowledge", "System Optimization", "Teamwork", "Tenacity", "Swahili", "French", "English", "Power tools and equipment", "Inventory management and logistics", "Project management", "Training and support"],
+    "gaps": ["Sustainability principles and practices", "Climate change mitigation and adaptation strategies", "Energy policy and regulation", "Stakeholder engagement and community outreach", "Life cycle assessment and environmental impact analysis"],
+    "summary": "",
+    "name": "Ethan Martinez",
+    "sector": "Solar Energy Installation",
+    "experience_years": 10,
+    "suggested_target_role": "Sustainability Specialist",
+    "location": "Los Angeles",
+    "goals": [],
+    "hobbies": ["Scuba Diving", "E-sports", "Reading Fiction", "Puzzle Solving"],
+    "headline": "Lead Solar Technician",
+    "experience": [
+        {"title": "Lead Solar Technician", "company": "Maple Leaf Consulting", "start_date": "Jan / 2018", "end_date": "Present"},
+        {"title": "Solar Technician", "company": "Cactus Creek Solutions", "start_date": "Jan / 2015", "end_date": "Jan / 2018"}
+    ]
+}</code></p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

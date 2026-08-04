@@ -1,0 +1,57 @@
+
+    <html>
+    <head>
+        <style>
+            body { font-family: 'Inter', sans-serif; padding: 40px; color: #1e293b; background: #fff; line-height: 1.7; }
+            h1 { color: #091747; font-size: 24px; margin-bottom: 25px; }
+            .day-card { 
+                background: #f8fafc; border: 1px solid #e2e8f0; padding: 25px; 
+                border-radius: 20px; margin-bottom: 20px; list-style: none;
+                transition: transform 0.2s;
+            }
+            .day-card:hover { transform: translateY(-3px); border-color: #091747; }
+            .tag { 
+                font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 6px; 
+                text-transform: uppercase; margin-right: 10px; display: inline-block;
+                margin-bottom: 10px;
+            }
+            .tag-learn { background: #dbeafe; color: #1e40af; }
+            .tag-read { background: #fef3c7; color: #92400e; }
+            .tag-apply { background: #dcfce7; color: #166534; }
+        </style>
+    </head>
+    <body>
+        <h1>🚀 Career Accelerator: Create A 5-Day</h1>
+        <div id="roadmap-container"><p><strong>Day 1:</strong>
+- LEARN: Study the basics of environmental conservation, focusing on urban ecosystems and biodiversity in London. You can use resources from ZSL (Zoological Society of London) to gain a comprehensive understanding. <a href="https://www.zsl.org/learn">ZSL Resources</a>
+- READ: Follow the City of London Corporation's Volunteering Opportunities page to stay updated on current environmental projects in the city. <a href="https://www.cityoflondon.gov.uk/things-to-do/explore-volunteering-at-the-city-of-london-corporation/volunteering-opportunities">City of London Volunteer Opportunities</a>
+- APPLY: Register as a volunteer for ZSL's Rivers of London project, where you can contribute to the clean-up and maintenance of the city's waterways. <a href="https://www.zsl.org/what-we-do/projects/volunteer-londons-rivers">Volunteer for London's Rivers | ZSL</a></p>
+<p><strong>Day 2:</strong>
+- LEARN: Learn about sustainable urban planning and design to understand how cities can be made more eco-friendly. You can use resources from UCL (University College London) for this purpose. <a href="https://www.ucl.ac.uk/sustainable-cities/">UCL Sustainable Cities</a>
+- READ: Follow the Students' Union UCL Volunteering directory to discover various sustainability volunteering opportunities in London. <a href="https://studentsunionucl.org/volunteering/directory/category/sustainability">Sustainability volunteering - London</a>
+- APPLY: Volunteer for Parks for London, helping maintain and improve the city's green spaces to promote biodiversity and encourage a greener lifestyle. <a href="https://parksforlondon.org.uk/opportunities/volunteering/">Volunteering - Parks for London</a></p>
+<p><strong>Day 3:</strong>
+- LEARN: Study climate change mitigation strategies specific to urban environments, including policies and practices. You can use resources from the Environment Job website for in-depth learning. <a href="https://environmentjob.co.uk/volunteering">Environmental Volunteering</a>
+- READ: Read news articles about current environmental initiatives and challenges facing London. A good starting point would be The Guardian's environment section. <a href="https://www.theguardian.com/environment">The Guardian Environment</a>
+- APPLY: Volunteer with TCV (The Conservation Volunteers) in London, working on various green spaces improvement projects across the city. <a href="https://www.tcv.org.uk/london/">TCV in London | Connecting People and Green Spaces</a></p>
+<p><strong>Day 4:</strong>
+- LEARN: Study sustainable transport options for urban environments, including cycling, public transportation, and electric vehicles. You can use resources from Transport for London (TfL) to gain a comprehensive understanding. <a href="https://tfl.gov.uk/modes/sustainable-travel">TfL Sustainable Travel</a>
+- READ: Follow TfL's news page to stay updated on current sustainable transport initiatives and policies in London. <a href="https://tfl.gov.uk/corporate/media/news/">TfL News</a>
+- APPLY: Volunteer for a local bike-sharing or cycling advocacy group, helping promote sustainable transportation within the city.</p>
+<p><strong>Day 5:</strong>
+- LEARN: Study waste management and recycling in urban environments, including best practices and innovative solutions. You can use resources from Waste Resources Action Programme (WRAP) for this purpose. <a href="https://www.wrap.org.uk/learning">WRAP Learning</a>
+- READ: Follow the London Waste &amp; Recycling Board's news page to stay updated on current waste management and recycling initiatives in London. <a href="https://londonwaste.gov.uk/news/">London Waste &amp; Recycling News</a>
+- APPLY: Volunteer for a local community clean-up initiative, helping to reduce litter and promote recycling within the city. You can find such opportunities through various volunteering platforms or community groups.</p></div>
+        <script>
+            document.querySelectorAll('li').forEach(item => {
+                item.classList.add('day-card');
+                let content = item.innerHTML;
+                if(content.includes('LEARN')) content = '<span class="tag tag-learn">Course</span>' + content;
+                if(content.includes('READ')) content = '<span class="tag tag-read">Insight</span>' + content;
+                if(content.includes('APPLY')) content = '<span class="tag tag-apply">Action</span>' + content;
+                item.innerHTML = content;
+            });
+        </script>
+    </body>
+    </html>
+    

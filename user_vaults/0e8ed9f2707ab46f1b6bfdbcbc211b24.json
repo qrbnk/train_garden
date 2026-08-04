@@ -1,0 +1,94 @@
+{
+  "user_id": "0e8ed9f2707ab46f1b6bfdbcbc211b24",
+  "email": "admin100@test.com",
+  "name": "Lindsay",
+  "first_seen": "2026-07-31T11:35:26.937425",
+  "last_seen": "2026-07-31T11:37:57.694484",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Project delivery",
+    "Data analysis/interpretation"
+  ],
+  "skill_sources": {
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Decade of experience in installation, maintenance, and optimization of photovoltaic systems — The ability to manage complex projects with a focus on efficiency and effectiveness can be applied to implementing sustainability initiatives with",
+        "ts": "2026-07-31T11:37:40.873088"
+      }
+    ],
+    "Data analysis/interpretation": [
+      {
+        "type": "inferred",
+        "detail": "Adept at enhancing energy productivity — The skill of analyzing data to optimize energy production can be leveraged in roles such as energy auditing, resource management, or policy analysis in sustainability.",
+        "ts": "2026-07-31T11:37:40.873184"
+      }
+    ]
+  },
+  "cv_summary": "\n\n\n\nETHANMARTINEZ\nSolar Technician\nsupport@qwikresume.com\n(123) 456 7899\nLos Angeles\nwww.qwikresume.com\nPROFESSIONAL SUMMARY\nSolar Technician with a decade of comprehensive experience in the \ninstallation, maintenance, and optimization of photovoltaic systems. \nAdept at enhancing energy producti",
+  "messages": [],
+  "reports": [
+    {
+      "id": "a134af94-387e-4afe-bf0a-80228589ff54",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785494260/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-31 11:37",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "3a5224e8-ddf7-4aac-8e95-579c77c86ce0",
+      "name": "solar-technician-1591336684.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-31 11:37"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "hackney",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "",
+  "experience": [],
+  "how_heard": "Event",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Decade of experience in installation, maintenance, and optimization of photovoltaic systems",
+      "skill": "Project delivery",
+      "relevance": "The ability to manage complex projects with a focus on efficiency and effectiveness can be applied to implementing sustainability initiatives within organizations."
+    },
+    {
+      "source": "Adept at enhancing energy productivity",
+      "skill": "Data analysis/interpretation",
+      "relevance": "The skill of analyzing data to optimize energy production can be leveraged in roles such as energy auditing, resource management, or policy analysis in sustainability."
+    }
+  ],
+  "location_radius_miles": 9.0
+}

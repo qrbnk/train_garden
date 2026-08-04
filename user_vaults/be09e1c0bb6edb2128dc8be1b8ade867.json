@@ -1,0 +1,106 @@
+{
+  "user_id": "be09e1c0bb6edb2128dc8be1b8ade867",
+  "email": "crack.com",
+  "name": "crack",
+  "first_seen": "2026-07-27T10:59:28.831465",
+  "last_seen": "2026-07-27T11:02:26.039140",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Project delivery",
+    "Attention to detail",
+    "Regulatory literacy"
+  ],
+  "skill_sources": {
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Grounds Maintenance Worker/Consultant — As a grounds maintenance worker, Robert has managed multiple tasks and projects simultaneously, ensuring timely completion and efficient resource allocation, skills that can be applied to delivering s",
+        "ts": "2026-07-27T11:02:07.149071"
+      }
+    ],
+    "Attention to detail": [
+      {
+        "type": "inferred",
+        "detail": "Working in the janitorial field since years old. — Robert's experience in maintaining clean and organized spaces requires attention to detail, a skill essential for monitoring and evaluating environmental performance metrics in a sustainabi",
+        "ts": "2026-07-27T11:02:07.149170"
+      }
+    ],
+    "Regulatory literacy": [
+      {
+        "type": "inferred",
+        "detail": "Grounds Maintenance Worker/Consultant at DNR Mistletoe State Park — Robert has likely worked under regulations and guidelines specific to park maintenance, demonstrating an understanding of regulatory frameworks that can be applied to navig",
+        "ts": "2026-07-27T11:02:07.149180"
+      }
+    ]
+  },
+  "cv_summary": "Robert Smith \nGrounds Maintenance Worker/Consultant\nPERSONAL STATEMENT\nHard working, dedicated, and very discipline individual. Working in the \njanitorial and carpentry field since years old. \nWORK EXPERIENCE\nGrounds Maintenance Worker/Consultant\nDNR Mistletoe State Park -   May 2015 – 2019 \nRespons",
+  "messages": [],
+  "reports": [
+    {
+      "id": "33ba6580-d93e-4dbe-a976-800689f9c47b",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785146527/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-27 11:02",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "cfabf48d-e58e-4ca8-a47c-d6bc2a27079c",
+      "name": "grounds-maintenance-worker-1575621411.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-27 11:01"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JJ",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "",
+  "experience": [],
+  "how_heard": "Friend or colleague",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Grounds Maintenance Worker/Consultant",
+      "skill": "Project delivery",
+      "relevance": "As a grounds maintenance worker, Robert has managed multiple tasks and projects simultaneously, ensuring timely completion and efficient resource allocation, skills that can be applied to delivering sustainability projects."
+    },
+    {
+      "source": "Working in the janitorial field since years old.",
+      "skill": "Attention to detail",
+      "relevance": "Robert's experience in maintaining clean and organized spaces requires attention to detail, a skill essential for monitoring and evaluating environmental performance metrics in a sustainability role."
+    },
+    {
+      "source": "Grounds Maintenance Worker/Consultant at DNR Mistletoe State Park",
+      "skill": "Regulatory literacy",
+      "relevance": "Robert has likely worked under regulations and guidelines specific to park maintenance, demonstrating an understanding of regulatory frameworks that can be applied to navigating sustainability laws and policies."
+    }
+  ]
+}

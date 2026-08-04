@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Train Garden — AI coaching for your green-economy career</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
+<style>
+:root{--g:#0A0A0A;--gm:#2D4233;--gd:#000000;--wh:#F9F9F8;--sf:#F9F9F8;--sl:#f3f3f3;--sc:#eeeeee;--sh:#e8e8e8;--os:#1a1c1c;--ov:#44474d;--bd:#E0E0DB;--bm:#74777e;--sb:#e6ebe7;--sf2:#2D4233;--wb:#fef3c7;--wf:#d97706;--ib:#ECE7FF;--if2:#5e39e0;--eb:#ffdad6;--ef:#93000a;--serif:"Source Serif 4",serif;--mono:"JetBrains Mono",monospace;}
+*{font-family:"Hanken Grotesk",sans-serif;box-sizing:border-box;}
+h1,h2,h3,.headline,.title{font-family:var(--serif);letter-spacing:-0.01em;}
+.label-mono{font-family:var(--mono);letter-spacing:0.03em;}
+body{background:var(--sf);color:var(--os);}
+.i{font-family:"Material Symbols Outlined";font-style:normal;font-size:18px;font-variation-settings:"FILL" 0,"wght" 300;user-select:none;line-height:1;display:inline-block;}
+.if{font-variation-settings:"FILL" 1,"wght" 400;}
+.fi{width:100%;border:none;border-bottom:1px solid var(--bd);background:transparent;font-size:13px;color:var(--os);padding:5px 0;outline:none;transition:border-color .15s;}
+.fi:focus{border-bottom-color:var(--g);}
+.ch{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:2px;font-size:12px;font-weight:600;font-family:var(--mono);white-space:nowrap;}
+.hidden{display:none!important;}
+.btn-dark{background:var(--g);color:#fff;padding:13px 26px;font-size:14px;font-weight:600;transition:opacity .15s;}
+.btn-dark:hover{opacity:.85;}
+.btn-ghost{border:1px solid var(--bd);padding:12px 25px;font-size:14px;font-weight:600;color:var(--os);transition:all .15s;}
+.btn-ghost:hover{border-color:var(--g);}
+.feat{border:1px solid var(--bd);padding:22px;background:#fff;}
+.ring{width:34px;height:34px;border:1px solid var(--bd);flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--g);color:white;padding:10px 18px;font-size:13px;z-index:200;}
+@keyframes cyc{0%,18%{opacity:1;transform:translateY(0)}22%,100%{opacity:0;transform:translateY(-6px)}}
+.cyc-item{animation:cyc 7.5s infinite;position:absolute;inset:0;display:flex;align-items:center;opacity:0;}
+.cyc-item:nth-child(1){animation-delay:0s}
+.cyc-item:nth-child(2){animation-delay:1.5s}
+.cyc-item:nth-child(3){animation-delay:3s}
+.cyc-item:nth-child(4){animation-delay:4.5s}
+.cyc-item:nth-child(5){animation-delay:6s}
+@media (prefers-reduced-motion: reduce){.cyc-item{animation:none;position:static;opacity:1;display:none;}.cyc-item:first-child{display:flex;}}
+</style>
+</head>
+<body class="text-sm">
+
+<!-- ============================= NAV ============================= -->
+<header class="flex items-center justify-between px-6 md:px-10 py-5 border-b" style="border-color:var(--bd)">
+  <div class="flex items-center gap-2.5">
+    <img src="/static/traingarden_logo.png" alt="Train Garden" class="h-7 w-auto"/>
+  </div>
+  <div class="flex items-center gap-2.5 md:gap-3">
+    <button onclick="openLogin()" class="btn-ghost">For Candidates</button>
+    <a href="/company" class="btn-ghost">For Companies</a>
+    <a href="/partner" class="btn-ghost">For Partners</a>
+  </div>
+</header>
+
+<!-- ============================= HERO ============================= -->
+<main class="px-6 md:px-10">
+  <section class="max-w-3xl mx-auto text-center pt-16 pb-14 md:pt-24 md:pb-20">
+    <p class="label-mono text-xs mb-4" style="color:var(--sf2)">AI CAREER COACHING · LONDON'S GREEN ECONOMY</p>
+    <h1 class="title text-4xl md:text-6xl mb-6" style="color:var(--g);line-height:1.08">A coach that knows the way into a sustainability career.</h1>
+    <p class="text-base md:text-lg mb-9 max-w-xl mx-auto" style="color:var(--ov)">Train Garden maps your background onto real openings in solar, ESG, renewables and climate work across London — then coaches you there, one session at a time.</p>
+    <div class="flex items-center justify-center gap-3 flex-wrap">
+      <button onclick="openLogin()" class="btn-dark">Start free</button>
+      <a href="#how" class="btn-ghost">See how it works</a>
+    </div>
+  </section>
+
+  <!-- Signature element: live-ish strip of the actual job categories the coach matches against -->
+  <section class="max-w-3xl mx-auto mb-16 md:mb-20">
+    <div class="border" style="border-color:var(--bd);background:#fff">
+      <div class="flex items-center justify-between px-5 py-3 border-b" style="border-color:var(--bd)">
+        <span class="label-mono text-xs" style="color:var(--bm)">TODAY'S INBOX</span>
+        <span class="label-mono text-xs" style="color:var(--bm)">MATCHED TO YOU</span>
+      </div>
+      <div class="relative px-5" style="height:60px">
+        <div class="cyc-item"><span class="ch" style="background:#dcfce7;color:#166534">⚡ Electric Vehicles</span><span class="ml-3 text-sm" style="color:var(--os)">Fleet Transition Analyst — 3 new roles this week</span></div>
+        <div class="cyc-item"><span class="ch" style="background:#fef3c7;color:#92400e">☀ Solar</span><span class="ml-3 text-sm" style="color:var(--os)">Solar Project Coordinator — 78% skills match</span></div>
+        <div class="cyc-item"><span class="ch" style="background:#d1fae5;color:#065f46">🌲 Sustainability</span><span class="ml-3 text-sm" style="color:var(--os)">Sustainability Reporting Analyst — CV ready</span></div>
+        <div class="cyc-item"><span class="ch" style="background:#dbeafe;color:#1e40af">♻ Renewables</span><span class="ml-3 text-sm" style="color:var(--os)">Offshore Wind Ops Graduate — mock interview booked</span></div>
+        <div class="cyc-item"><span class="ch" style="background:#ede9fe;color:#5b21b6">📊 ESG</span><span class="ml-3 text-sm" style="color:var(--os)">ESG Data Associate — 1 skill gap left to close</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="how" class="max-w-5xl mx-auto grid md:grid-cols-3 gap-4 mb-20 md:mb-28">
+    <div class="feat">
+      <div class="ring mb-4"><span class="i" style="color:var(--sf2)">forum</span></div>
+      <h3 class="title text-base mb-2" style="color:var(--g)">Coaching that adapts to you</h3>
+      <p class="text-sm" style="color:var(--ov)">Sessions start from where you actually are — whether you're mid-career, still job hunting, or just testing the idea of a move.</p>
+    </div>
+    <div class="feat">
+      <div class="ring mb-4"><span class="i" style="color:var(--sf2)">work</span></div>
+      <h3 class="title text-base mb-2" style="color:var(--g)">Real roles, not a generic feed</h3>
+      <p class="text-sm" style="color:var(--ov)">Live openings from London's green-economy employers, ranked against your background and flagged for the gaps worth closing first.</p>
+    </div>
+    <div class="feat">
+      <div class="ring mb-4"><span class="i" style="color:var(--sf2)">monitoring</span></div>
+      <h3 class="title text-base mb-2" style="color:var(--g)">A visible route, not just advice</h3>
+      <p class="text-sm" style="color:var(--ov)">Track skills, milestones and applications in one place, so you can see the distance between here and the role you want.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="text-center pb-10 px-6">
+  <p class="text-xs" style="color:var(--bm)">Train Garden · London · <a href="/company" class="hover:underline" style="color:var(--sf2)">For companies</a> · <a href="/partner" class="hover:underline" style="color:var(--sf2)">For partners</a></p>
+</footer>
+
+<!-- ============================= LOGIN (candidate) ============================= -->
+<div id="login-screen" class="hidden fixed inset-0 z-50 flex items-center justify-center" style="background:var(--sf)">
+  <button onclick="closeLogin()" class="absolute top-6 right-6" style="color:var(--ov)"><span class="i">close</span></button>
+  <div class="w-full max-w-sm px-6">
+    <img src="/static/traingarden_logo.png" alt="Train Garden" class="h-9 w-auto mx-auto mb-5"/>
+    <p class="text-center text-xs mb-6" style="color:var(--ov)">Get your personalised coaching and job matches.</p>
+
+    <div id="login-step-email">
+      <label class="text-xs font-medium block mb-1" style="color:var(--ov)">Email</label>
+      <input id="login-email" type="email" class="fi mb-4" placeholder="you@example.com" onkeydown="if(event.key==='Enter')requestCode();"/>
+      <button onclick="requestCode()" class="w-full py-3 text-sm font-semibold text-white" style="background:var(--g)">Send access code</button>
+    </div>
+    <div id="login-step-code" class="hidden">
+      <label class="text-xs font-medium block mb-1" style="color:var(--ov)">4-digit code</label>
+      <input id="login-code" maxlength="4" class="fi mb-4 text-center text-lg tracking-widest" placeholder="••••" onkeydown="if(event.key==='Enter')verifyCode();"/>
+      <button onclick="verifyCode()" class="w-full py-3 text-sm font-semibold text-white mb-2" style="background:var(--g)">Continue</button>
+      <button onclick="document.getElementById('login-step-code').classList.add('hidden');document.getElementById('login-step-email').classList.remove('hidden');" class="w-full py-2 text-xs" style="color:var(--ov)">Use a different email</button>
+    </div>
+    <p id="login-err" class="text-xs mt-3 text-center hidden" style="color:var(--ef)"></p>
+  </div>
+</div>
+
+<div id="toast" class="hidden"></div>
+
+<script>
+function openLogin(){document.getElementById('login-screen').classList.remove('hidden');document.getElementById('login-email').focus();}
+if(new URLSearchParams(window.location.search).get('expired')==='1'){
+  window.addEventListener('DOMContentLoaded',()=>{openLogin();toast('Your session timed out — sign in again to continue.');});
+}
+function closeLogin(){document.getElementById('login-screen').classList.add('hidden');document.getElementById('login-err').classList.add('hidden');}
+function showLoginErr(msg){const e=document.getElementById('login-err');e.textContent=msg;e.classList.remove('hidden');}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.remove('hidden');setTimeout(()=>t.classList.add('hidden'),2500);}
+
+async function requestCode(){
+  const email=document.getElementById('login-email').value.trim();
+  if(!email){showLoginErr('Enter your email first.');return;}
+  try{
+    const r=await fetch('/api/auth/request',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});
+    const d=await r.json();
+    if(!d.success){showLoginErr(d.message||'Could not send code — try again.');return;}
+    sessionStorage.setItem('pending_email',email);
+    document.getElementById('login-step-email').classList.add('hidden');
+    document.getElementById('login-step-code').classList.remove('hidden');
+    document.getElementById('login-code').focus();
+  }catch(e){showLoginErr('Network error — try again.');}
+}
+
+async function verifyCode(){
+  const email=sessionStorage.getItem('pending_email')||'';
+  const code=document.getElementById('login-code').value.trim();
+  if(!code){showLoginErr('Enter the 4-digit code.');return;}
+  try{
+    const r=await fetch('/api/auth/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,code})});
+    const d=await r.json();
+    if(!d.success){showLoginErr(d.message||'Invalid code');return;}
+    sessionStorage.setItem('user_id',d.user_id);
+    sessionStorage.setItem('user_email',d.email);
+    sessionStorage.setItem('session_token',d.session_token||'');
+    sessionStorage.removeItem('pending_email');
+    // No interstitial: verified users go straight to onboarding (new) or their dashboard (existing).
+    if(d.is_new_user || !d.onboarding_done){
+      toast('Verified — let\'s get you set up');
+      window.location.href='/dashboard?onboarding=1';
+    }else{
+      toast('Welcome back');
+      window.location.href='/dashboard';
+    }
+  }catch(e){showLoginErr('Network error — try again.');}
+}
+</script>
+</body>
+</html>

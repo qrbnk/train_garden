@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Assistant — Train Garden</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
+<style>
+:root{--g:#0A0A0A;--gm:#2D4233;--gd:#000000;--wh:#F9F9F8;--sf:#F9F9F8;--sl:#f3f3f3;--sc:#eeeeee;--sh:#e8e8e8;--os:#1a1c1c;--ov:#44474d;--bd:#E0E0DB;--bm:#74777e;--sb:#e6ebe7;--sf2:#2D4233;--wb:#fef3c7;--wf:#d97706;--ib:#ECE7FF;--if2:#5e39e0;--eb:#ffdad6;--ef:#93000a;--serif:"Source Serif 4",serif;--mono:"JetBrains Mono",monospace;}
+*{font-family:"Hanken Grotesk",sans-serif;box-sizing:border-box;}
+h1,h2,h3,.headline,.title{font-family:var(--serif);letter-spacing:-0.01em;}
+.label-mono,.st,.sn strong{font-family:var(--mono);letter-spacing:0.03em;}
+body{background:var(--sf);height:100vh;overflow:hidden;}
+.i{font-family:"Material Symbols Outlined";font-style:normal;font-size:18px;font-variation-settings:"FILL" 0,"wght" 300;user-select:none;line-height:1;display:inline-block;}
+.if{font-variation-settings:"FILL" 1,"wght" 400;}
+.sc{overflow-y:auto;}.sc::-webkit-scrollbar{width:4px;}.sc::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:2px;}
+.sh{overflow:hidden;}.sh::-webkit-scrollbar{display:none;}
+/* Nav */
+.nl{display:flex;align-items:center;gap:10px;padding:7px 11px;color:var(--ov);border-radius:0;cursor:pointer;font-size:13px;font-weight:500;transition:all .15s;width:100%;text-align:left;background:none;border:none;text-decoration:none;}
+.nl:hover{background:var(--sl);color:var(--g);}.nl.on{background:var(--sl);color:var(--g);font-weight:600;}
+/* Tabs */
+.tb{padding:9px 13px;font-size:12px;font-weight:500;color:var(--ov);border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;background:none;border-left:none;border-right:none;border-top:none;transition:all .15s;}
+.tb.on{color:var(--g);font-weight:600;border-bottom-color:var(--g);}
+.st{padding:5px 10px;font-size:11px;font-weight:500;border-radius:2px;color:var(--ov);cursor:pointer;white-space:nowrap;background:none;border:1px solid transparent;display:flex;align-items:center;gap:3px;transition:all .15s;}
+.st:hover{background:var(--sl);color:var(--g);}.st.on{background:var(--g);color:white;}
+/* Chat bubbles */
+.bu{background:var(--g);color:white;border-radius:0;padding:11px 15px;font-size:14px;line-height:1.65;max-width:78%;}
+.bb{background:white;color:var(--os);border-radius:0;border:1px solid var(--bd);padding:13px 15px;font-size:14px;line-height:1.7;max-width:88%;}
+.bb a{color:var(--g);text-decoration:underline;}.bb strong{font-weight:600;}
+.bb ul{list-style:disc;padding-left:15px;margin:4px 0;}.bb ol{list-style:decimal;padding-left:15px;margin:4px 0;}
+.bb li{margin-bottom:3px;}.bb h2,.bb h3{font-weight:600;margin:9px 0 3px;}
+.bb p{margin-bottom:6px;}.bb p:last-child{margin-bottom:0;}
+.ad{width:29px;height:29px;border-radius:50%;background:var(--gm);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+/* Msg hover actions */
+.mw{position:relative;}.mw:hover .ma{opacity:1;}
+.ma{opacity:0;transition:opacity .15s;position:absolute;top:-13px;right:0;display:flex;gap:3px;z-index:10;}
+.ab{width:25px;height:25px;background:white;border:1px solid var(--bd);border-radius:2px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s;color:var(--ov);}
+.ab:hover{border-color:var(--g);color:var(--g);}
+/* Typing */
+.dt{width:5px;height:5px;background:#9ca3af;border-radius:50%;animation:bn 1.2s infinite;display:inline-block;}
+.dt:nth-child(2){animation-delay:.2s;}.dt:nth-child(3){animation-delay:.4s;}
+@keyframes bn{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+/* Pills */
+.pl{padding:6px 13px;border-radius:2px;border:1px solid var(--bd);background:white;font-size:12px;font-weight:500;color:var(--ov);cursor:pointer;white-space:nowrap;transition:all .15s;}
+.pl:hover{border-color:var(--g);color:var(--g);background:var(--sl);}
+/* Status */
+.sd2{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:ps 2s infinite;display:inline-block;}
+@keyframes ps{0%,100%{opacity:1}50%{opacity:.3}}
+/* Progress */
+.pb{height:4px;background:var(--sc);border-radius:2px;overflow:hidden;}
+.pf{height:100%;background:var(--gm);border-radius:2px;transition:width .6s ease;}
+/* Field */
+.fi{width:100%;border:none;border-bottom:1px solid var(--bd);background:transparent;font-size:13px;color:var(--os);padding:5px 0;outline:none;transition:border-color .15s;}
+.fi:focus{border-bottom-color:var(--g);}
+.fb{width:100%;border:1px solid var(--bd);border-radius:0;padding:8px 11px;font-size:13px;color:var(--os);outline:none;background:white;transition:border-color .15s;}
+.fb:focus{border-color:var(--g);}
+/* Resize */
+.rh{width:4px;cursor:col-resize;background:transparent;flex-shrink:0;z-index:10;transition:background .15s;}
+.rh:hover,.rh.dg{background:var(--bd);}
+/* Chip */
+.ch{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;background:var(--sc);color:var(--ov);border-radius:2px;font-size:12px;font-weight:500;}
+/* Sticky note */
+.sn{background:#fef3c7;border:1px solid #d97706;border-top:3px solid #d97706;border-radius:0;padding:11px;}
+.sn textarea{background:transparent;border:none;outline:none;width:100%;resize:none;font-size:12px;line-height:1.5;color:var(--os);min-height:55px;}
+/* Cards */
+.rc{background:white;border:1px solid var(--bd);border-radius:0;padding:12px;transition:all .15s;position:relative;}
+.rc:hover{border-color:var(--bm);background:var(--sl);}
+.jc{background:white;border:1px solid var(--bd);border-radius:0;padding:15px;transition:all .15s;}
+.jc:hover{border-color:var(--bm);}
+/* Doc row */
+.dr{display:flex;align-items:center;gap:10px;padding:10px 15px;border-bottom:1px solid #f3f4f6;transition:background .15s;cursor:pointer;}
+.dr:hover{background:#f9fafb;}
+/* Post / community */
+.post{background:white;border:1px solid var(--bd);border-radius:0;padding:0;overflow:hidden;transition:all .15s;}
+.post:hover{border-color:var(--bm);}
+.post-body{padding:14px 16px;}
+.post-actions{border-top:1px solid var(--bd);padding:8px 16px;display:flex;gap:0;background:#fafafa;}
+.post-action{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:7px;font-size:12px;font-weight:500;color:var(--ov);cursor:pointer;border-radius:0;transition:all .15s;border:none;background:none;}
+.post-action:hover{background:var(--sl);color:var(--g);}
+.post-action.liked{color:#dc2626;}
+/* Skill validation */
+.sv-v{background:var(--sb);color:var(--sf2);border-radius:0;padding:2px 7px;font-size:11px;font-weight:600;}
+.sv-p{background:var(--wb);color:var(--wf);border-radius:0;padding:2px 7px;font-size:11px;font-weight:600;}
+.sv-n{background:var(--eb);color:var(--ef);border-radius:0;padding:2px 7px;font-size:11px;font-weight:600;}
+/* Export menu */
+.em{position:absolute;right:0;top:100%;z-index:50;background:white;border:1px solid var(--os);border-radius:0;padding:5px;min-width:145px;}
+.ei{display:flex;align-items:center;gap:7px;padding:7px 9px;border-radius:0;cursor:pointer;font-size:13px;color:var(--ov);transition:all .15s;}
+.ei:hover{background:var(--sl);color:var(--g);}
+/* Edit mode */
+.edit-ta{background:var(--sl);border:1px solid var(--g);border-radius:0;padding:8px;font-size:14px;line-height:1.6;color:var(--os);width:100%;outline:none;resize:none;}
+/* Journey progress ring */
+.ring-t{fill:none;stroke:var(--bd);stroke-width:6;}
+.ring-f{fill:none;stroke:var(--gm);stroke-width:6;stroke-linecap:round;transform:rotate(-90deg);transform-origin:50% 50%;transition:stroke-dashoffset 1s ease;}
+/* Skill level dots */
+.ldot{width:9px;height:9px;border-radius:50%;border:2px solid var(--bd);background:white;transition:all .3s;display:inline-block;}
+.ldot.filled{background:var(--gm);border-color:var(--gm);}
+.ldot.gap{background:var(--wb);border-color:var(--wf);}
+/* Badge */
+.bt{background:white;border:2px solid var(--bd);border-radius:0;padding:13px;text-align:center;transition:all .3s;}
+.bt.on{border-color:var(--g);}
+.bt.off{opacity:.4;filter:grayscale(.9);}
+/* Hover reveal */
+.hg .hv{opacity:0;transition:opacity .15s;}.hg:hover .hv{opacity:1;}
+/* Session sidebar item */
+.sess{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:0;cursor:pointer;font-size:12px;transition:all .15s;color:var(--ov);}
+.sess:hover{background:var(--sl);color:var(--g);}
+.sess.on{background:var(--sl);color:var(--g);font-weight:600;}
+@keyframes su{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.su{animation:su .2s ease-out;}
+#toast{z-index:9999;transition:opacity .3s;}
+</style>
+</head>
+<body class="flex h-screen overflow-hidden">
+
+<!-- ONBOARDING OVERLAY (pre-chat intro) -->
+<div id="onboard-overlay" class="hidden fixed inset-0 z-50 flex items-center justify-center" style="background:var(--sf)">
+  <div style="width:420px;max-width:92vw">
+
+    <!-- Step 1: name -->
+    <div id="ob-step-1" class="ob-step">
+      <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center" style="background:var(--sb);border:1px solid var(--bd)"><span class="i" style="font-size:30px;color:var(--sf2)">person</span></div>
+      <div class="bg-white border border-gray-100 p-5 mb-4 text-sm text-gray-700 leading-relaxed" style="border-radius:0">Hey! I'm your Train Garden assistant — here to help you find and land a sustainability job you'll love. First, what should I call you?</div>
+      <input id="ob-name" class="fi mb-4" placeholder="Your name" onkeydown="if(event.key==='Enter')obNameNext();"/>
+      <button onclick="obNameNext()" class="w-full py-3 text-sm font-semibold text-white" style="background:var(--g);border-radius:0">Continue</button>
+    </div>
+
+    <!-- Step 2: how did you hear about us -->
+    <div id="ob-step-2" class="ob-step hidden">
+      <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center" style="background:var(--sb);border:1px solid var(--bd)"><span class="i" style="font-size:30px;color:var(--sf2)">campaign</span></div>
+      <div class="bg-white border border-gray-100 p-5 mb-4 text-sm text-gray-700" style="border-radius:0">How did you hear about us?</div>
+      <div class="grid grid-cols-3 gap-2 mb-4">
+        <div class="ob-heard-tile" onclick="obPickHeard('Google search',this)"><span class="i" style="font-size:18px">search</span><span>Google search</span></div>
+        <div class="ob-heard-tile" onclick="obPickHeard('X / Twitter',this)"><span class="i" style="font-size:18px">tag</span><span>X / Twitter</span></div>
+        <div class="ob-heard-tile" onclick="obPickHeard('Friend or colleague',this)"><span class="i" style="font-size:18px">group</span><span>Friend or colleague</span></div>
+        <div class="ob-heard-tile" onclick="obPickHeard('Podcast',this)"><span class="i" style="font-size:18px">podcasts</span><span>Podcast</span></div>
+        <div class="ob-heard-tile" onclick="obPickHeard('Event',this)"><span class="i" style="font-size:18px">event</span><span>Event</span></div>
+        <div class="ob-heard-tile" onclick="obPickHeard('Instagram or Facebook',this)"><span class="i" style="font-size:18px">photo_camera</span><span>Instagram / Facebook</span></div>
+        <div class="ob-heard-tile" onclick="obPickHeard('TikTok',this)"><span class="i" style="font-size:18px">music_note</span><span>TikTok</span></div>
+        <div class="ob-heard-tile" onclick="obPickHeard('Other',this)"><span class="i" style="font-size:18px">help</span><span>Other</span></div>
+      </div>
+      <button onclick="showOnboardStep(3)" class="w-full py-3 text-sm font-semibold text-white" style="background:var(--g);border-radius:0">Next</button>
+    </div>
+
+    <!-- Step 3: CV upload (optional) -->
+    <div id="ob-step-3" class="ob-step hidden">
+      <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center" style="background:var(--sb);border:1px solid var(--bd)"><span class="i" style="font-size:30px;color:var(--sf2)">description</span></div>
+      <div class="bg-white border border-gray-100 p-5 mb-4 text-sm text-gray-700" style="border-radius:0">Got a CV to hand?</div>
+      <p class="text-xs text-gray-400 mb-4 leading-relaxed">This step is optional, you can always upload one later. So that you know, your CV helps me match you with better opportunities.</p>
+      <div class="border border-dashed border-gray-300 py-8 mb-4 text-center cursor-pointer" style="border-radius:0" onclick="document.getElementById('ob-cv-file').click()">
+        <span class="i block mb-1" style="font-size:26px;color:#9ca3af">upload</span>
+        <span id="ob-cv-name" class="text-xs text-gray-500">Choose or drag PDF / DOCX file</span>
+      </div>
+      <input id="ob-cv-file" type="file" accept=".pdf,.docx" class="hidden" onchange="obCVChosen(this)"/>
+      <button id="ob-cv-upload-btn" onclick="obFinish(false)" disabled class="w-full py-3 mb-2 text-sm font-semibold" style="background:var(--sl);color:#9ca3af;border-radius:0">Upload CV</button>
+      <button onclick="obFinish(true)" class="w-full py-3 text-sm font-semibold text-gray-500 bg-white border border-gray-200" style="border-radius:0">Skip for now</button>
+    </div>
+
+  </div>
+</div>
+<style>
+.ob-heard-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:12px 6px;font-size:11px;text-align:center;color:var(--ov);background:white;border:1px solid var(--bd);cursor:pointer;transition:all .15s;}
+.ob-heard-tile:hover{border-color:var(--g);}
+.ob-heard-tile.ob-sel{border-color:var(--g);background:var(--sb);color:var(--g);font-weight:600;}
+</style>
+
+<!-- LEFT SIDEBAR -->
+<nav id="lp" style="width:256px;min-width:180px;max-width:320px" class="bg-white border-r border-gray-200 flex flex-col h-full flex-shrink-0">
+  <!-- Brand -->
+  <div class="px-5 py-4 border-b border-gray-100 flex items-center gap-2.5">
+    <button onclick="openTab('journey')" title="Home" class="hover:opacity-75"><img src="/static/traingarden_logo.png" alt="Train Garden — Home" class="h-7 w-auto object-contain" onerror="this.style.display='none'"/></button>
+    <button onclick="toggleLeft()" class="ml-auto text-gray-400 hover:text-gray-600"><span class="i">menu</span></button>
+  </div>
+  <!-- New chat -->
+  <div class="px-4 py-3 flex gap-2">
+    <button onclick="newChat()" class="flex-1 py-2 px-3 rounded-lg text-sm font-semibold text-white flex items-center gap-2 justify-center" style="background:var(--g)">
+      <span class="i" style="font-size:15px">add</span> New Chat
+    </button>
+  </div>
+  <!-- Chat sessions -->
+  <div class="px-3 pb-2">
+    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-2 mb-1.5">Chats</p>
+    <div id="sess-list" class="space-y-0.5 max-h-40 sc"></div>
+  </div>
+  <!-- Nav -->
+  <div class="flex-1 px-3 sc sh space-y-0.5 border-t border-gray-100 pt-2">
+    <button onclick="setNav('chat')"      id="lnav-chat"      class="nl on w-full"><span class="i if">psychology</span> Assistant</button>
+    <button onclick="openTab('journey')"  id="lnav-journey"   class="nl w-full"><span class="i">forest</span> My Path</button>
+    <button onclick="openTab('jobs')"     id="lnav-jobs"      class="nl w-full"><span class="i">work</span> Jobs</button>
+    <button onclick="openTab('vault')"    id="lnav-vault"     class="nl w-full"><span class="i">inventory_2</span> Vault</button>
+    <button onclick="toggleSticky()"                          class="nl w-full" style="color:var(--wf)"><span class="i" style="color:var(--wf)">sticky_note_2</span> Notes</button>
+    <div class="pt-2 pb-1">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-2 mb-1">Tracked Jobs</p>
+      <div id="rj" class="space-y-0.5"><p class="text-xs text-gray-400 px-2 py-1 italic">None yet</p></div>
+    </div>
+  </div>
+  <!-- User -->
+  <div class="border-t border-gray-100">
+    <div class="px-4 py-3 flex items-center gap-2.5">
+      <div id="ua" class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0" style="background:var(--g)">?</div>
+      <div class="flex-1 min-w-0"><p id="un" class="text-sm font-medium text-gray-900 truncate">Loading</p><p id="ue" class="text-xs text-gray-400 truncate"></p></div>
+      <div class="w-2 h-2 rounded-full bg-green-400 flex-shrink-0"></div>
+    </div>
+    <div class="px-3 pb-3 space-y-0.5">
+      <button onclick="openTab('profile')" class="nl w-full"><span class="i" style="font-size:15px">manage_accounts</span> Profile</button>
+      <button onclick="logout()" class="nl w-full text-gray-400"><span class="i" style="font-size:15px">logout</span> Sign out</button>
+      <button onclick="deleteAccount()" class="nl w-full text-red-400 hover:text-red-500"><span class="i" style="font-size:15px">delete_forever</span> Delete account</button>
+    </div>
+  </div>
+</nav>
+
+<div class="rh" id="rh-l" onmousedown="startResize('l',event)"></div>
+
+<!-- CENTRE CHAT -->
+<main class="flex-1 flex flex-col h-full min-w-0 overflow-hidden" id="cp">
+  <header class="h-12 bg-white border-b border-gray-100 flex items-center justify-between px-5 flex-shrink-0">
+    <div class="flex items-center gap-3">
+      <h2 class="font-semibold text-sm" style="color:var(--g)" id="ct">Assistant</h2>
+      <span class="flex items-center gap-1.5 text-xs font-medium px-2 py-0.5 rounded-full" style="background:var(--sb);color:var(--sf2)">
+        <span class="sd2" id="sd"></span><span id="st">Ready</span>
+      </span>
+    </div>
+    <div class="flex items-center gap-2">
+      <button id="stb" onclick="stopResp()" class="hidden flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs border border-gray-200 text-gray-500 hover:border-red-400 hover:text-red-500"><span class="i" style="font-size:13px">stop_circle</span> Stop</button>
+      <button onclick="triggerCV()" class="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold text-white" style="background:var(--g)"><span class="i" style="font-size:13px">upload_file</span> Scan CV</button>
+      <div class="relative">
+        <button onclick="togEx('notif-dd')" class="ab relative"><span class="i" style="font-size:14px">notifications</span><span id="notif-badge" class="hidden" style="position:absolute;top:-2px;right:-2px;background:#dc2626;color:#fff;font-size:9px;line-height:1;border-radius:9999px;padding:2px 4px;min-width:14px;text-align:center;"></span></button>
+        <div id="notif-dd" class="em hidden" style="width:300px;max-height:340px;overflow-y:auto;">
+          <div id="notif-list" class="p-1"><div class="text-xs text-gray-400 px-3 py-2">No notifications yet</div></div>
+        </div>
+      </div>
+      <div class="relative"><button onclick="togEx('ex-top')" class="ab"><span class="i" style="font-size:14px">download</span></button>
+        <div id="ex-top" class="em hidden">
+          <div class="ei" onclick="expChat('pdf')"><span class="i" style="font-size:14px">picture_as_pdf</span> PDF</div>
+          <div class="ei" onclick="expChat('md')"><span class="i" style="font-size:14px">description</span> Markdown</div>
+          <div class="ei" onclick="expChat('txt')"><span class="i" style="font-size:14px">text_snippet</span> Text</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Location bar -->
+  <div id="loc-bar" class="hidden flex-shrink-0 px-5 py-1.5 flex items-center justify-between text-xs" style="background:#f0fdf4;border-bottom:1px solid #bbf7d0;">
+    <span class="flex items-center gap-1 font-medium" style="color:var(--g)"><span class="i" style="font-size:14px">location_on</span><span id="ld">UK</span></span>
+    <button onclick="showLocModal()" class="text-gray-500 hover:text-gray-700 underline">Change</button>
+  </div>
+  <!-- Messages -->
+  <div id="msgs" class="flex-1 sc px-5 py-5 space-y-5 flex flex-col"></div>
+  <!-- Map panel -->
+  <div id="map-panel" class="hidden flex-shrink-0 mx-5 mb-2">
+    <div class="flex justify-between items-center mb-1.5"><p class="text-xs font-semibold text-gray-600 flex items-center gap-1"><span class="i" style="font-size:14px">map</span> Nearby Resources</p><button onclick="document.getElementById('map-panel').classList.add('hidden')" class="text-xs text-gray-400 hover:text-gray-600">Close</button></div>
+    <div id="mc" style="background:var(--sc);border:1px solid var(--bd);border-radius:0;min-height:140px;overflow:hidden;"><div class="flex flex-col items-center justify-center h-36"><span class="i" style="font-size:28px;color:#9ca3af">map</span><p class="text-xs text-gray-400 mt-1">Appears after a local search</p></div></div>
+  </div>
+  <!-- Pills -->
+  <div id="pills" class="flex-shrink-0 px-5 pb-2 flex gap-2 sh overflow-x-auto"></div>
+  <!-- Input -->
+  <div class="flex-shrink-0 px-5 pb-4 pt-2 bg-white border-t border-gray-100">
+    <div class="flex items-end gap-2 border border-gray-200 rounded-xl px-3 py-2 bg-gray-50 focus-within:border-green-700 transition-colors">
+      <button onclick="triggerCV()" class="text-gray-400 hover:text-gray-600 flex-shrink-0 mb-0.5" title="Attach"><span class="i">attach_file</span></button>
+      <button onclick="showLocModal()" class="text-gray-400 hover:text-gray-600 flex-shrink-0 mb-0.5" title="Set location"><span class="i">location_on</span></button>
+      <textarea id="ci" rows="1" placeholder="Ask anything, share how you're feeling, or paste a job description..."
+        class="flex-1 bg-transparent border-none outline-none resize-none text-sm text-gray-800 placeholder-gray-400 max-h-28 sc py-0.5"></textarea>
+      <button onclick="handleSend()" class="flex-shrink-0 mb-0.5" style="color:var(--g)"><span class="i if">send</span></button>
+    </div>
+    <p class="text-xs text-gray-400 text-center mt-1.5">Enter to send · Shift+Enter for new line · Drag PDF to upload · Ctrl+K to focus</p>
+  </div>
+</main>
+
+<div class="rh" id="rh-r" onmousedown="startResize('r',event)"></div>
+
+<!-- RIGHT PANEL -->
+<aside id="rp" style="width:420px;min-width:300px;max-width:580px" class="bg-white border-l border-gray-200 flex flex-col h-full flex-shrink-0">
+  <div class="flex border-b border-gray-200 sh overflow-x-auto flex-shrink-0 bg-gray-50/60">
+    <button onclick="openTab('journey')"   id="rt-journey"   class="tb on">My Path</button>
+    <button onclick="openTab('inbox')"     id="rt-inbox"     class="tb">Inbox</button>
+    <button onclick="openTab('profile')"   id="rt-profile"   class="tb">Profile</button>
+    <button onclick="openTab('skills')"    id="rt-skills"    class="tb">Skills</button>
+    <button onclick="openTab('resources')" id="rt-resources" class="tb">Resources</button>
+    <button onclick="openTab('jobs')"      id="rt-jobs"      class="tb">Jobs</button>
+    <button onclick="openTab('vault')"     id="rt-vault"     class="tb">Vault</button>
+    <button onclick="openTab('coaching')"  id="rt-coaching"  class="tb">Coaching</button>
+    <button onclick="openTab('saved')"     id="rt-saved"     class="tb">Saved</button>
+    <button onclick="openTab('badges')"    id="rt-badges"    class="tb">Badges</button>
+  </div>
+  <div class="flex-1 sc min-h-0">
+
+  <!-- MY PATH (Journey — merged from journey.html) -->
+  <div id="p-journey" class="hidden h-full flex flex-col">
+    <div class="px-5 py-3 border-b border-gray-100 flex items-center justify-between flex-shrink-0">
+      <h3 class="text-sm font-semibold text-gray-900">My Path</h3>
+      <div class="flex gap-2">
+        <button onclick="sendMsg('Run a skills gap assessment for my transition to my target role')" class="text-xs border border-gray-200 px-2.5 py-1.5 rounded-lg text-gray-500 hover:bg-gray-50 flex items-center gap-1"><span class="i" style="font-size:13px">refresh</span> Re-assess</button>
+        <div class="relative"><button onclick="togEx('ex-journey')" class="ab"><span class="i" style="font-size:13px">download</span></button>
+          <div id="ex-journey" class="em hidden"><div class="ei" onclick="expSec('journey','pdf')"><span class="i" style="font-size:13px">picture_as_pdf</span> PDF</div></div>
+        </div>
+      </div>
+    </div>
+    <!-- XP + Level -->
+    <div class="px-5 py-3 border-b border-gray-100 flex items-center gap-4 flex-shrink-0">
+      <div class="flex-shrink-0"><svg width="64" height="64" viewBox="0 0 64 64"><circle class="ring-t" cx="32" cy="32" r="26"/><circle id="xp-ring" class="ring-f" cx="32" cy="32" r="26" stroke-dasharray="163.4" stroke-dashoffset="163.4"/></svg></div>
+      <div class="flex-1">
+        <div class="flex justify-between items-center mb-1"><span class="text-xs font-semibold text-gray-700 flex items-center gap-1"><span class="i" style="font-size:14px;color:var(--g)">bolt</span> Level <span id="j-level">1</span></span><span id="j-xp" class="text-sm font-bold" style="color:var(--g)">0 XP</span></div>
+        <div class="pb mb-1"><div id="j-xpf" class="pf" style="width:0%"></div></div>
+        <p id="j-next" class="text-xs text-gray-400">200 XP to level 2</p>
+        <div class="flex items-center gap-1.5 mt-1"><span class="i" style="font-size:14px;color:var(--wf)">local_fire_department</span><span id="j-streak" class="text-xs font-semibold text-gray-600">0-day streak</span></div>
+      </div>
+    </div>
+    <!-- Journey content scrollable -->
+    <div class="flex-1 sc px-5 py-4 space-y-5">
+      <!-- Progress ring + summary -->
+      <div id="journey-not-assessed" class="bg-green-50 border border-green-100 rounded-xl p-4">
+        <div class="flex items-start gap-3"><span class="i" style="font-size:24px;color:var(--g)">route</span><div><h4 class="text-sm font-semibold text-gray-900 mb-1">Map your career journey</h4><p class="text-xs text-gray-600 leading-relaxed mb-3">Tell the assistant your background and target role. It will build your personalised skills gap map and step-by-step path.</p><button onclick="sendMsg('I want to do a full career assessment. Let us map my journey from where I am now to my target role in sustainability. Please ask me everything you need to know.')" class="px-4 py-2 rounded-lg text-sm font-semibold text-white" style="background:var(--g)">Start my assessment</button></div></div>
+      </div>
+      <!-- Journey summary (populated from API) -->
+      <div id="journey-summary" class="hidden bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
+        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Your Transition Story</h4>
+        <p id="journey-summary-text" class="text-sm text-gray-700 leading-relaxed"></p>
+        <div class="flex items-center gap-4 mt-3">
+          <div><p id="journey-pct" class="text-xl font-bold" style="color:var(--g)">0%</p><p class="text-xs text-gray-400">to target role</p></div>
+          <div><p id="journey-months" class="text-xl font-bold text-gray-800">—</p><p class="text-xs text-gray-400">est. months</p></div>
+          <div><p id="journey-skills-done" class="text-xl font-bold text-gray-800">0</p><p class="text-xs text-gray-400">skills mastered</p></div>
+        </div>
+      </div>
+      <!-- Skills gap cards -->
+      <div id="skills-gap-list" class="space-y-3"></div>
+      <!-- Evidence input -->
+      <div id="evidence-box" class="hidden bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
+        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Report Progress</h4>
+        <p class="text-xs text-gray-400 mb-2">Tell me what you have done and I will update your skills map.</p>
+        <div class="flex gap-2"><input id="ev-input" class="fb flex-1 text-xs" placeholder="e.g. I finished the free EV Fundamentals course on Coursera"/><button onclick="submitEvidence()" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-white flex-shrink-0" style="background:var(--g)">Update</button></div>
+        <p id="ev-feedback" class="text-xs mt-1 hidden" style="color:var(--g)"></p>
+      </div>
+      <!-- Milestones -->
+      <div>
+        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Recent Milestones</h4>
+        <div id="journey-milestones" class="space-y-2"><p class="text-xs text-gray-400 italic">Complete tasks to earn milestones.</p></div>
+      </div>
+      <!-- Mood check-in -->
+      <div class="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
+        <div id="checkin-due-banner" class="hidden mb-3 text-xs font-semibold px-2.5 py-2 rounded-lg flex items-center gap-1.5" style="background:var(--wb);color:var(--wf)"><span class="i" style="font-size:14px">notifications_active</span> It's been about a week — time for your check-in.</div>
+        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">How are you feeling?</h4>
+        <div class="flex gap-2">
+          <button onclick="quickMood('great')"   class="flex-1 py-2 rounded-lg border border-gray-200 text-sm hover:border-green-600 transition-colors text-center" title="Great">Great</button>
+          <button onclick="quickMood('good')"    class="flex-1 py-2 rounded-lg border border-gray-200 text-sm hover:border-green-600 transition-colors text-center" title="Good">Good</button>
+          <button onclick="quickMood('okay')"    class="flex-1 py-2 rounded-lg border border-gray-200 text-sm hover:border-green-600 transition-colors text-center" title="Okay">Okay</button>
+          <button onclick="quickMood('hard')"    class="flex-1 py-2 rounded-lg border border-gray-200 text-sm hover:border-green-600 transition-colors text-center" title="Hard">Hard</button>
+          <button onclick="quickMood('stuck')"   class="flex-1 py-2 rounded-lg border border-gray-200 text-sm hover:border-green-600 transition-colors text-center" title="Stuck">Stuck</button>
+        </div>
+        <p id="mood-resp" class="text-xs text-gray-500 mt-2 hidden leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- INBOX -->
+  <div id="p-inbox" class="hidden h-full flex flex-col">
+    <div class="px-5 py-3 border-b border-gray-100 flex items-center justify-between flex-shrink-0">
+      <h3 class="text-sm font-semibold text-gray-900">Inbox</h3>
+      <button onclick="sendMsg('Find me the latest jobs matching my exact profile and target role')" class="text-xs font-medium hover:underline" style="color:var(--g)">Refresh</button>
+    </div>
+    <div id="inbox" class="flex-1 sc px-5 py-3"><div class="py-10 text-center"><span class="i text-5xl text-gray-200 block mb-2">inbox</span><p class="text-sm text-gray-400">Ask me to find roles and they will appear here.</p><button onclick="sendMsg('Find me jobs matching my profile and goals')" class="mt-3 text-sm font-medium hover:underline" style="color:var(--g)">Search now</button></div></div>
+  </div>
+
+  <!-- PROFILE -->
+  <div id="p-profile" class="hidden px-5 py-5">
+    <div class="flex items-center justify-between mb-4"><h3 class="text-sm font-semibold text-gray-900">Your Profile</h3><button onclick="saveProfile()" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-white" style="background:var(--g)">Save</button></div>
+    <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100"><div id="pav" class="w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold text-white flex-shrink-0" style="background:var(--g)">?</div><div class="flex-1 min-w-0"><input id="pn" class="fi text-sm font-semibold" placeholder="Your name"/><p id="pe" class="text-xs text-gray-400 mt-0.5"></p></div></div>
+    <div class="space-y-4">
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1">Headline</label><input id="ph2" class="fi" placeholder="e.g. Generalist / AI Transformation Specialist"/></div>
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1">Current Background</label><input id="pc2" class="fi" placeholder="e.g. Software Engineer, 5 years in tech"/></div>
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1">Target Role</label><input id="pt2" class="fi" placeholder="e.g. EV Programme Manager"/></div>
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1">Sector Focus</label><input id="ps2" class="fi" placeholder="e.g. Electric Vehicles, Solar, Net Zero"/></div>
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1">Years Experience</label><input id="py2" class="fi" placeholder="e.g. 5 years"/></div>
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1">Location</label><div class="flex gap-2"><input id="pl2" class="fi flex-1" placeholder="e.g. London NW2"/><button onclick="detectLoc()" class="text-xs px-2 py-1 border border-gray-200 rounded-lg text-gray-500 hover:border-green-700 flex-shrink-0">Detect</button></div></div>
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1">Career Goals</label><div id="gc" class="flex flex-wrap gap-1.5 mb-1.5"></div><input id="gi" class="fi" placeholder="Add a goal, press Enter"/></div>
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1">Skills</label><div id="sc3" class="flex flex-wrap gap-1.5 mb-1.5"></div><input id="ski" class="fi" placeholder="Add a skill, press Enter"/></div>
+      <div class="pt-3 border-t border-gray-100">
+        <div class="flex items-center justify-between mb-1.5"><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Experience</label><button onclick="addExpRow()" class="text-xs font-medium hover:underline" style="color:var(--g)">+ Add</button></div>
+        <p id="exp-empty" class="text-xs text-gray-400 italic">Mention past roles or companies in chat, or upload a CV, and they'll show up here.</p>
+        <div id="expc" class="space-y-2"></div>
+      </div>
+      <div class="pt-3 border-t border-gray-100"><div class="flex justify-between mb-1"><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Completeness</label><span id="pp2" class="text-xs font-bold" style="color:var(--g)">0%</span></div><div class="pb"><div id="ppf" class="pf" style="width:0%"></div></div></div>
+      <div class="pt-3 border-t border-gray-100">
+        <div class="flex items-center justify-between mb-1.5">
+          <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Visible to Companies</label>
+          <button id="visToggle" onclick="toggleVisibility()" class="relative inline-flex h-5 w-9 items-center rounded-full transition-colors flex-shrink-0" style="background:#d1d5db"><span id="visKnob" class="inline-block h-3.5 w-3.5 transform rounded-full bg-white transition-transform translate-x-1"></span></button>
+        </div>
+        <p id="visStatusText" class="text-xs text-gray-400 leading-relaxed">Off — companies can't see your profile. Turn this on to be considered for real matches.</p>
+        <p id="visNotice" class="hidden text-xs text-gray-400 leading-relaxed mt-1.5 pt-1.5 border-t border-gray-50"></p>
+      </div>
+      <div id="cvb" class="hidden pt-3 border-t border-gray-100"><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1">CV Summary</label><p id="cvt" class="text-xs text-gray-600 leading-relaxed"></p><button onclick="triggerCV()" class="mt-1 text-xs font-medium hover:underline" style="color:var(--g)">Upload new CV</button></div>
+    </div>
+  </div>
+
+  <!-- SKILLS & ASPIRATIONS -->
+  <div id="p-skills" class="hidden px-5 py-5">
+    <div class="flex items-center justify-between mb-3"><h3 class="text-sm font-semibold text-gray-900">Skills, Hobbies &amp; Aspirations</h3><button onclick="saveAsp()" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-white" style="background:var(--g)">Save</button></div>
+    <p class="text-xs text-gray-500 mb-4 leading-relaxed">Your hobbies contain hidden career skills. Save everything — the assistant maps it automatically.</p>
+    <div class="space-y-5">
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1.5">Dream Job</label><textarea id="dj" rows="2" class="fb resize-none w-full" placeholder="Describe your ideal role in any detail..."></textarea></div>
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1.5">Aspirations</label><div id="ac" class="flex flex-wrap gap-1.5 mb-1.5"></div><input id="ai2" class="fi" placeholder="Add an aspiration, press Enter"/></div>
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1.5">Hobbies &amp; Interests</label><div id="hc" class="flex flex-wrap gap-1.5 mb-1.5"></div><input id="hi2" class="fi" placeholder="Add a hobby, press Enter"/></div>
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1.5">Work Values</label><div id="vc" class="flex flex-wrap gap-1.5 mb-1.5"></div><input id="vi2" class="fi" placeholder="e.g. Impact, Flexibility — press Enter"/></div>
+      <div class="grid grid-cols-2 gap-3">
+        <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1">Salary Range</label><input id="sal" class="fi" placeholder="e.g. 40k-55k"/></div>
+        <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1">Work Type</label><select id="wt" class="fi"><option value="">Select...</option><option>Remote</option><option>Hybrid</option><option>On-site</option><option>Flexible</option></select></div>
+      </div>
+      <div><label class="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-1.5">Constraints</label><div id="lc" class="flex flex-wrap gap-1.5 mb-1.5"></div><input id="li3" class="fi" placeholder="e.g. Cannot relocate — press Enter"/></div>
+      <div id="hsm" class="hidden pt-3 border-t border-gray-100">
+        <div class="flex items-center gap-1.5 mb-3"><span class="i if" style="font-size:16px;color:var(--g)">auto_awesome</span><h4 class="text-xs font-semibold text-gray-700">Skills Hidden in Your Hobbies</h4></div>
+        <div id="hsl" class="space-y-2"></div>
+        <button onclick="sendMsg('Tell me how the skills from my hobbies can help me transition into a green career')" class="mt-3 text-xs font-medium hover:underline" style="color:var(--g)">Explore with assistant</button>
+      </div>
+      <div class="pt-3 border-t border-gray-100">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-1.5"><span class="i if" style="font-size:16px;color:var(--g)">sync_alt</span><h4 class="text-xs font-semibold text-gray-700">Transferable Skills From Your Background</h4></div>
+          <button onclick="mapTransferableSkills()" class="text-xs font-medium hover:underline" style="color:var(--g)">Re-map</button>
+        </div>
+        <p class="text-xs text-gray-400 mb-3">Genuine skills from your CV/background — not just hobbies — mapped onto what your target role actually needs.</p>
+        <div id="tfsl" class="space-y-2"></div>
+      </div>
+      <div id="skv" class="hidden pt-3 border-t border-gray-100">
+        <h4 class="text-xs font-semibold text-gray-700 mb-2 flex items-center gap-1"><span class="i" style="font-size:14px;color:var(--g)">verified</span> Skill Validation</h4>
+        <p class="text-xs text-gray-400 mb-3">Upload certifications or mark skills as in-progress.</p>
+        <div id="svl" class="space-y-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESOURCES -->
+  <div id="p-resources" class="hidden h-full flex flex-col">
+    <div class="px-5 py-3 border-b border-gray-100 flex items-center justify-between flex-shrink-0"><h3 class="text-sm font-semibold text-gray-900">Saved Resources</h3><button onclick="sendMsg('Find me more resources for my career goal near my location')" class="text-xs font-medium hover:underline" style="color:var(--g)">Find more</button></div>
+    <div class="px-4 py-2 flex gap-1.5 border-b border-gray-100 sh overflow-x-auto flex-shrink-0">
+      <button onclick="filterRes('all')"          id="rf-all"          class="st on">All</button>
+      <button onclick="filterRes('volunteering')" id="rf-volunteering" class="st">Volunteering</button>
+      <button onclick="filterRes('jobs')"         id="rf-jobs"         class="st">Jobs</button>
+      <button onclick="filterRes('courses')"      id="rf-courses"      class="st">Courses</button>
+      <button onclick="filterRes('events')"       id="rf-events"       class="st">Events</button>
+      <button onclick="filterRes('webinars')"     id="rf-webinars"     class="st">Webinars</button>
+      <button onclick="filterRes('community')"    id="rf-community"    class="st">Community</button>
+    </div>
+    <div id="rl" class="flex-1 sc px-5 py-3 space-y-3"><div class="py-10 text-center"><span class="i text-4xl text-gray-200 block mb-2">link</span><p class="text-sm text-gray-400">Resources from conversations are saved here.</p><button onclick="sendMsg('Find volunteering opportunities near me in sustainability')" class="mt-3 text-xs font-medium hover:underline" style="color:var(--g)">Find resources</button></div></div>
+  </div>
+
+  <!-- JOBS -->
+  <div id="p-jobs" class="hidden h-full flex flex-col">
+    <div class="px-5 py-3 border-b border-gray-100 flex items-center justify-between flex-shrink-0"><h3 class="text-sm font-semibold text-gray-900">Tracked Jobs</h3><button onclick="sendMsg('Find new jobs matching my exact profile and target role')" class="text-xs font-medium hover:underline" style="color:var(--g)">Find more</button></div>
+    <div class="px-4 py-2 flex gap-1.5 border-b border-gray-100 sh overflow-x-auto flex-shrink-0">
+      <button onclick="filtJ('all')"        id="jf-all"        class="st on">All</button>
+      <button onclick="filtJ('interested')" id="jf-interested" class="st">Interested</button>
+      <button onclick="filtJ('applied')"    id="jf-applied"    class="st">Applied</button>
+      <button onclick="filtJ('interview')"  id="jf-interview"  class="st">Interview</button>
+      <button onclick="filtJ('rejected')"   id="jf-rejected"   class="st">Rejected</button>
+    </div>
+    <div id="jl" class="flex-1 sc px-5 py-3"></div>
+  </div>
+
+  <!-- VAULT -->
+  <div id="p-vault" class="hidden h-full flex flex-col">
+    <div class="px-5 py-3 border-b border-gray-100 flex items-center justify-between flex-shrink-0"><h3 class="text-sm font-semibold text-gray-900">Your Vault</h3><div class="flex gap-2"><button onclick="showFolderModal()" class="text-xs border border-gray-200 px-2.5 py-1.5 rounded-lg text-gray-500 hover:bg-gray-50 flex items-center gap-1"><span class="i" style="font-size:13px">create_new_folder</span> Folder</button><button onclick="triggerCV()" class="text-xs px-2.5 py-1.5 rounded-lg text-white font-semibold flex items-center gap-1" style="background:var(--g)"><span class="i" style="font-size:13px">upload_file</span> Upload</button></div></div>
+    <div class="px-4 py-2 flex gap-1.5 sh overflow-x-auto flex-shrink-0 border-b border-gray-100">
+      <button onclick="filtD('all')"     id="df-all"     class="st on">All</button>
+      <button onclick="filtD('cv')"      id="df-cv"      class="st">CVs</button>
+      <button onclick="filtD('report')"  id="df-report"  class="st">Reports</button>
+    </div>
+    <div class="flex-1 sc"><div id="dl" class="divide-y divide-gray-50"></div></div>
+  </div>
+
+  <!-- COACHING -->
+  <div id="p-coaching" class="hidden h-full flex flex-col">
+    <div class="px-5 py-3 border-b border-gray-100 flex-shrink-0"><h3 class="text-sm font-semibold text-gray-900">Coaching</h3><p class="text-xs text-gray-400 mt-0.5">Tailored to your journey and goals</p></div>
+    <div class="mx-5 mt-3 mb-2 flex-shrink-0" style="background:var(--wb);border-top:3px solid var(--wf);border-radius:0;padding:11px 13px">
+      <p class="text-xs font-semibold text-gray-700 mb-1">Your Progress</p>
+      <div class="pb mb-1.5"><div id="cpf" class="pf" style="width:0%"></div></div>
+      <p id="cpt" class="text-xs text-gray-600">Complete your profile to track progress.</p>
+    </div>
+    <div class="px-4 py-2 flex gap-1.5 border-b border-gray-100 sh overflow-x-auto flex-shrink-0">
+      <button onclick="setCoach('General')"   id="ct-General"   class="st on">General</button>
+      <button onclick="setCoach('CV')"        id="ct-CV"        class="st">CV</button>
+      <button onclick="setCoach('Interview')" id="ct-Interview" class="st">Interview</button>
+      <button onclick="setCoach('Salary')"    id="ct-Salary"    class="st">Salary</button>
+    </div>
+    <div id="interview-practice" class="hidden px-5 pt-4 flex-shrink-0">
+      <div class="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
+        <h4 class="text-xs font-semibold text-gray-700 mb-1 flex items-center gap-1"><span class="i" style="font-size:14px;color:var(--g)">record_voice_over</span> Mock Interview Practice</h4>
+        <p class="text-xs text-gray-400 mb-3">Practice with questions grounded in a real tracked posting, or a general set for your target role.</p>
+        <div class="flex gap-2">
+          <select id="mi-job" class="fi flex-1"><option value="">General practice (no specific posting)</option></select>
+          <button onclick="startMockInterview()" class="text-xs px-3 py-2 rounded-lg font-semibold text-white flex-shrink-0" style="background:var(--g)">Start</button>
+        </div>
+      </div>
+      <div id="interview-session" class="hidden mt-3 space-y-3"></div>
+    </div>
+    <div id="cc" class="flex-1 sc px-5 py-4 space-y-3"></div>
+  </div>
+
+  <!-- SAVED -->
+  <div id="p-saved" class="hidden h-full flex flex-col">
+    <div class="px-5 py-3 border-b border-gray-100 flex items-center justify-between flex-shrink-0"><h3 class="text-sm font-semibold text-gray-900">Saved</h3><div class="flex gap-2 items-center"><div class="relative"><button onclick="togEx('ex-sv')" class="ab"><span class="i" style="font-size:13px">download</span></button><div id="ex-sv" class="em hidden"><div class="ei" onclick="expSec('saved','pdf')"><span class="i" style="font-size:13px">picture_as_pdf</span> PDF</div></div></div><button onclick="showFolderModal()" class="text-xs font-medium hover:underline" style="color:var(--g)">+ Folder</button></div></div>
+    <div class="px-4 py-2 flex gap-1.5 border-b border-gray-100 sh overflow-x-auto flex-shrink-0"><button onclick="filtS('all')" id="sf-all" class="st on">All</button><button onclick="filtS('messages')" id="sf-messages" class="st">Messages</button><button onclick="filtS('resources')" id="sf-resources" class="st">Resources</button><button onclick="filtS('notes')" id="sf-notes" class="st">Notes</button><div id="ftabs" class="flex gap-1.5"></div></div>
+    <div id="svd" class="flex-1 sc px-5 py-3 space-y-2"></div>
+  </div>
+
+  <!-- BADGES -->
+  <div id="p-badges" class="hidden h-full flex flex-col">
+    <div class="px-5 py-3 border-b border-gray-100 flex-shrink-0"><h3 class="text-sm font-semibold text-gray-900">Badges &amp; Achievements</h3><p class="text-xs text-gray-400 mt-0.5">Every step matters</p></div>
+    <div class="px-5 py-3 border-b border-gray-100 flex-shrink-0"><div class="flex justify-between items-center mb-1.5"><span class="text-xs font-semibold text-gray-700 flex items-center gap-1"><span class="i" style="font-size:14px;color:var(--g)">bolt</span> Level <span id="blv">1</span></span><span id="bxp" class="text-sm font-bold" style="color:var(--g)">0 XP</span></div><div class="pb mb-1"><div id="bxf" class="pf" style="width:0%"></div></div><p id="bnxt" class="text-xs text-gray-400">200 XP to level 2</p></div>
+    <div id="bg" class="flex-1 sc p-5 grid grid-cols-2 gap-3 content-start"></div>
+  </div>
+
+  </div><!-- end panels -->
+</aside>
+
+<!-- INPUTS + OVERLAYS -->
+<input type="file" id="cvf" class="hidden" accept=".pdf" onchange="handleCV(this)"/>
+<input type="file" id="certf" class="hidden" accept=".pdf,.jpg,.jpeg,.png" onchange="handleCert(this)"/>
+<input type="file" id="mevf" class="hidden" accept=".pdf,.jpg,.jpeg,.png" onchange="handleMilestoneEvidence(this)"/>
+
+<!-- Sticky notes overlay -->
+<div id="stp" class="hidden fixed z-50 sc" style="bottom:85px;left:265px;width:265px;max-height:72vh;overflow-y:auto">
+  <div class="flex items-center justify-between mb-2 px-1"><span class="text-xs font-semibold text-gray-700 uppercase tracking-wider">Notes</span><button onclick="addNote()" class="text-xs px-3 py-1 rounded-lg font-semibold text-white" style="background:var(--wf)">+ New</button></div>
+  <div id="nl2" class="space-y-3"></div>
+</div>
+
+<!-- Location modal -->
+<div id="locm" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+  <div class="absolute inset-0 bg-black/40" onclick="closeLoc()"></div>
+  <div class="relative bg-white rounded-2xl p-5 w-80 shadow-2xl z-10">
+    <h3 class="font-semibold text-gray-900 mb-2">Set your location</h3>
+    <p class="text-xs text-gray-500 mb-3">Used for local job and resource searches. We default to the UK.</p>
+    <input id="loci" class="fb w-full mb-3" placeholder="e.g. NW2 5AB or Hackney, London"/>
+    <button onclick="saveLocManual()" class="w-full py-2.5 rounded-xl text-sm font-semibold text-white mb-2" style="background:var(--g)">Save location</button>
+    <button onclick="detectLoc()" class="w-full py-2 rounded-xl text-sm font-medium border border-gray-200 text-gray-600 hover:bg-gray-50">Use my current location</button>
+  </div>
+</div>
+
+<!-- Folder modal -->
+<div id="fm" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+  <div class="absolute inset-0 bg-black/40" onclick="document.getElementById('fm').classList.add('hidden')"></div>
+  <div class="relative bg-white rounded-2xl p-5 w-72 shadow-2xl z-10">
+    <h3 class="font-semibold text-gray-900 mb-3">Create folder</h3>
+    <input id="fni" class="fb w-full mb-3" placeholder="Folder name"/>
+    <div class="flex gap-2 mb-4 items-center"><span class="text-xs text-gray-500">Colour:</span><div class="flex gap-2"><button onclick="fc='#005d42'" class="w-5 h-5 rounded-full" style="background:#005d42"></button><button onclick="fc='#3b82f6'" class="w-5 h-5 rounded-full" style="background:#3b82f6"></button><button onclick="fc='#d97706'" class="w-5 h-5 rounded-full" style="background:#d97706"></button><button onclick="fc='#ec4899'" class="w-5 h-5 rounded-full" style="background:#ec4899"></button></div></div>
+    <button onclick="createFolder()" class="w-full py-2.5 rounded-xl text-sm font-semibold text-white" style="background:var(--g)">Create</button>
+  </div>
+</div>
+
+
+<!-- Toast -->
+<div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 text-white text-xs px-4 py-2 rounded-full shadow-lg" style="background:var(--os)"></div>
+<script>
+/* ─── STATE ──────────────────────────────────────────────────────────────── */
+const uid=sessionStorage.getItem('user_id'),ue=sessionStorage.getItem('user_email')||'';
+if(!uid){window.location.href='/';}
+
+/* ─── SESSION TIMEOUT ────────────────────────────────────────────────────────
+   Every fetch() call in this file goes through this wrapper so the session
+   token rides along automatically and an expired session bounces the user
+   back to re-verify, instead of failing silently or acting on stale auth. */
+const _origFetch = window.fetch.bind(window);
+window.fetch = async function(url, opts={}){
+  opts.headers = Object.assign({}, opts.headers||{}, {'X-Session-Token': sessionStorage.getItem('session_token')||''});
+  const res = await _origFetch(url, opts);
+  if(res.status === 401){
+    try{
+      const clone = res.clone();
+      const d = await clone.json();
+      if(d && d.session_expired){
+        sessionStorage.removeItem('user_id');
+        sessionStorage.removeItem('session_token');
+        window.location.href='/?expired=1';
+      }
+    }catch(e){/* not a session-expiry 401, let caller handle it */}
+  }
+  return res;
+};
+
+let busy=false,stop=false,reader=null,fc='#005d42';
+let allJ=[],allD=[],allR=[],allRes=[],saved=[],folders=[],notes=[],coachD={},validations={},sessions=[],curSess='default',curGaps=[];
+const _msgText={}; // mid -> raw message text, so buttons never need to inline it into HTML attributes
+
+/* ─── INIT ───────────────────────────────────────────────────────────────── */
+window.addEventListener('DOMContentLoaded',async()=>{
+  boot();setupTA();setupDrag();setupAllChips();setupResize();
+  try{
+    const p=await(await fetch(`/api/get-profile?user_id=${uid}`)).json();
+    if(!p.onboarding_seen){
+      if(p.name)document.getElementById('ob-name').value=p.name;
+      document.getElementById('onboard-overlay').classList.remove('hidden');
+      showOnboardStep(1);
+      return; // startApp() runs once onboarding finishes (see obFinish)
+    }
+  }catch(e){}
+  startApp();
+});
+async function startApp(){
+  await Promise.all([loadHistory(),loadProf(),loadJ(),loadD(),loadRes(),loadSaved(),loadNotes(),loadBadges(),loadSnap(),loadAsp(),loadValidations(),loadSessions(),loadJourney(),loadCoach(),loadCheckinStatus(),loadTransferableSkills(),loadVisibility(),loadNotif()]);
+  sendInit();
+  // Ask for location if not set
+  const vault_loc=document.getElementById('ld').textContent;
+  if(!vault_loc||vault_loc==='UK'){setTimeout(()=>{if(!sessionStorage.getItem('loc_asked')){sessionStorage.setItem('loc_asked','1');showLocModal();}},3000);}
+}
+
+/* ─── ONBOARDING (pre-chat) ──────────────────────────────────────────────── */
+let onboardName='',onboardHowHeard='',onboardCVFile=null;
+function showOnboardStep(n){document.querySelectorAll('.ob-step').forEach(s=>s.classList.add('hidden'));document.getElementById('ob-step-'+n).classList.remove('hidden');}
+function obNameNext(){const n=document.getElementById('ob-name').value.trim();if(!n){toast('Please enter your name');return;}onboardName=n;showOnboardStep(2);}
+function obPickHeard(v,el){onboardHowHeard=v;document.querySelectorAll('.ob-heard-tile').forEach(t=>t.classList.remove('ob-sel'));el.classList.add('ob-sel');}
+function obCVChosen(inp){onboardCVFile=inp.files[0]||null;document.getElementById('ob-cv-name').textContent=onboardCVFile?onboardCVFile.name:'Choose or drag PDF / DOCX file';const btn=document.getElementById('ob-cv-upload-btn');btn.disabled=!onboardCVFile;btn.style.background=onboardCVFile?'var(--g)':'var(--sl)';btn.style.color=onboardCVFile?'#fff':'#9ca3af';}
+async function obFinish(skipCV){
+  const btns=document.querySelectorAll('#ob-step-3 button');
+  btns.forEach(b=>b.disabled=true);
+  const uploadBtn=document.getElementById('ob-cv-upload-btn');
+  const origLabel=uploadBtn.textContent;
+  if(!skipCV&&onboardCVFile)uploadBtn.textContent='Uploading…';
+  try{
+    await fetch('/api/onboarding',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,name:onboardName,how_heard:onboardHowHeard})});
+  }catch(e){}
+  if(!skipCV&&onboardCVFile){
+    const fd=new FormData();fd.append('file',onboardCVFile);fd.append('user_id',uid);
+    try{await fetch('/api/upload-cv',{method:'POST',body:fd});}catch(e){}
+  }
+  uploadBtn.textContent=origLabel;
+  btns.forEach(b=>b.disabled=false);
+  uploadBtn.disabled=!onboardCVFile;
+  uploadBtn.style.background=onboardCVFile?'var(--g)':'var(--sl)';
+  uploadBtn.style.color=onboardCVFile?'#fff':'#9ca3af';
+  document.getElementById('onboard-overlay').classList.add('hidden');
+  startApp();
+}
+function boot(){const i=ue?ue[0].toUpperCase():'U';['ua','pav','comm-ua'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=i;});document.getElementById('un').textContent=ue.split('@')[0]||'User';document.getElementById('ue').textContent=ue;}
+
+/* ─── RESIZE ─────────────────────────────────────────────────────────────── */
+let _rs=null;function setupResize(){}
+function startResize(s,e){_rs={s,x:e.clientX,w:s==='l'?document.getElementById('lp').offsetWidth:document.getElementById('rp').offsetWidth};document.getElementById('rh-'+s).classList.add('dg');document.addEventListener('mousemove',_rm);document.addEventListener('mouseup',_ru);e.preventDefault();}
+function _rm(e){if(!_rs)return;const d=e.clientX-_rs.x;if(_rs.s==='l')document.getElementById('lp').style.width=Math.max(180,Math.min(320,_rs.w+d))+'px';else document.getElementById('rp').style.width=Math.max(300,Math.min(580,_rs.w-d))+'px';}
+function _ru(){if(_rs){document.getElementById('rh-'+_rs.s).classList.remove('dg');_rs=null;}document.removeEventListener('mousemove',_rm);document.removeEventListener('mouseup',_ru);}
+function toggleLeft(){const p=document.getElementById('lp');p.style.width=p.offsetWidth>60?'0':'256px';}
+
+/* ─── SESSIONS (multiple chats) ──────────────────────────────────────────── */
+async function loadSessions(){
+  try{const d=await(await fetch(`/api/list-sessions?user_id=${uid}`)).json();sessions=d.sessions||[];renderSessions();}catch(e){}
+}
+function renderSessions(){
+  const c=document.getElementById('sess-list');
+  if(!sessions.length){c.innerHTML='<p class="text-xs text-gray-400 px-2 py-1 italic">No saved chats</p>';return;}
+  c.innerHTML=sessions.map(s=>`<div class="sess ${s.id===curSess?'on':''}" onclick="switchSession('${s.id}')">
+    <span class="i" style="font-size:14px">chat</span>
+    <span class="flex-1 truncate">${esc(s.title||'Chat')}</span>
+    <button onclick="event.stopPropagation();deleteSession('${s.id}')" class="text-gray-300 hover:text-red-400 flex-shrink-0"><span class="i" style="font-size:13px">close</span></button>
+  </div>`).join('');
+}
+async function newChat(){
+  const title='Chat '+new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short'});
+  const d=await(await fetch('/api/create-session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,title})})).json();
+  if(d.success){curSess=d.session_id;document.getElementById('msgs').innerHTML='';document.getElementById('ct').textContent=title;clearPills();await loadSessions();
+  renderPills(['Tell me about my background','I want to explore green careers','Help me find jobs near me','I am feeling unsure where to start']);}
+}
+async function switchSession(sid){
+  curSess=sid;const sess=sessions.find(s=>s.id===sid);document.getElementById('ct').textContent=sess?.title||'Chat';
+  document.getElementById('msgs').innerHTML='';clearPills();
+  // Load this session's messages
+  const d=await(await fetch(`/api/get-messages?user_id=${uid}&session_id=${sid}`)).json();
+  const c=document.getElementById('msgs');c.innerHTML='';
+  const msgs=d.messages||[];
+  for(const m of msgs){if(m.role==='user')addB(m.content,'u',false);else if(m.role==='assistant')addB(m.content,'b',false,m.job_cards||[],m.report_path||null,m.resource_cards||[]);}
+  c.scrollTop=c.scrollHeight;renderSessions();
+  const lastAssistant=[...msgs].reverse().find(m=>m.role==='assistant');
+  if(lastAssistant?.suggestions?.length) renderPills(lastAssistant.suggestions);
+}
+async function deleteSession(sid){await fetch('/api/delete-session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,session_id:sid})});if(curSess===sid){curSess='default';document.getElementById('msgs').innerHTML='';sendInit();}await loadSessions();}
+
+/* ─── HISTORY ────────────────────────────────────────────────────────────── */
+async function loadHistory(){
+  try{const d=await(await fetch(`/api/get-messages?user_id=${uid}&session_id=${curSess}`)).json();
+  const c=document.getElementById('msgs');c.innerHTML='';
+  const msgs=d.messages||[];
+  for(const m of msgs){if(m.role==='user')addB(m.content,'u',false);else if(m.role==='assistant')addB(m.content,'b',false,m.job_cards||[],m.report_path||null,m.resource_cards||[]);}
+  c.scrollTop=c.scrollHeight;
+  const lastAssistant=[...msgs].reverse().find(m=>m.role==='assistant');
+  if(lastAssistant?.suggestions?.length) renderPills(lastAssistant.suggestions);
+  }catch(e){}
+}
+
+/* ─── SEND / STREAM ──────────────────────────────────────────────────────── */
+async function sendInit(){
+  try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:'INITIALIZE_GARDEN_SESSION',user_id:uid,session_id:curSess})});
+  const ct=r.headers.get('content-type')||'';
+  if(ct.includes('application/json')){const d=await r.json();if(!document.getElementById('msgs').children.length&&d.response)addB(d.response,'b');if(d.profile)fillProf(d.profile);
+  // Use the suggestions the backend actually generated for this greeting,
+  // so the pills always match the question just asked instead of a generic list.
+  if(d.suggestions?.length){setTimeout(()=>renderPills(d.suggestions),500);}}}catch(e){}
+}
+function sendMsg(t){if(busy){toast('Still responding — one moment');return;}document.getElementById('ci').value=t;handleSend();}
+function handleSend(){const ta=document.getElementById('ci');const t=ta.value.trim();if(!t)return;if(busy){toast('Still responding — one moment');return;}ta.value='';rTA(ta);clearPills();addB(t,'u');streamChat(t);}
+
+async function streamChat(text){
+  busy=true;stop=false;setStatus('Thinking...',true);document.getElementById('stb').classList.remove('hidden');const tid=showTyping();
+  const watchdog=setTimeout(()=>{if(busy){busy=false;setStatus('Ready',false);removeTyping(tid);}},60000);
+  try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text,user_id:uid,session_id:curSess})});
+  if(!r.ok)throw new Error('HTTP '+r.status);
+  const ct=r.headers.get('content-type')||'';
+  if(ct.includes('application/json')){const d=await r.json();removeTyping(tid);if(d.response)addB(d.response,'b');if(d.suggestions?.length)renderPills(d.suggestions);setStatus('Ready',false);return;}
+  reader=r.body.getReader();const dec=new TextDecoder();let buf='';
+  while(true){if(stop){reader.cancel();break;}const{done,value}=await reader.read();if(done)break;
+  buf+=dec.decode(value,{stream:true});const lines=buf.split('\n');buf=lines.pop();
+  for(const line of lines){const t2=line.trim();if(!t2.startsWith('data:'))continue;
+  let p;try{p=JSON.parse(t2.slice(5).trim());}catch{continue;}
+  if(p.status){setStatus(p.status,true);updTypLbl(tid,p.status);}
+  if(p.profile_patch){fillProf(p.profile_patch);}
+  if(p.response!==undefined){removeTyping(tid);addB(p.response,'b',true,p.job_cards||[],p.path||null,p.resource_cards||[]);
+  if(p.job_cards?.length)fillInbox(p.job_cards,p.salary_insight);
+  if(p.suggestions?.length)renderPills(p.suggestions);
+  if(p.map_location&&p.map_results?.length)showMap(p.map_location,p.map_results);
+  setStatus('Ready',false);await Promise.all([loadSnap(),loadRes(),loadJourney(),loadCheckinStatus()]);
+  fetch('/api/extract-profile-from-chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid})}).then(()=>loadProf()).catch(()=>{});}}}
+  }catch(e){removeTyping(tid);if(!stop)addB('Connection error: '+e.message+'. Is Flask running on port 5000?','b');setStatus('Error',false);}
+  finally{clearTimeout(watchdog);busy=false;stop=false;reader=null;document.getElementById('stb').classList.add('hidden');}
+}
+function stopResp(){stop=true;if(reader)try{reader.cancel();}catch(e){}}
+
+/* ─── MAP ────────────────────────────────────────────────────────────────── */
+function showMap(loc,results){document.getElementById('map-panel').classList.remove('hidden');const c=document.getElementById('mc');let h=`<div class="p-4 w-full"><div class="flex items-center gap-2 mb-3"><span class="i" style="font-size:18px;color:var(--g)">location_on</span><span class="text-sm font-semibold text-gray-800">Near ${esc(loc)}</span></div><div class="space-y-2">`;results.forEach((r,i)=>{h+=`<a href="${esc(r.url)}" target="_blank" class="flex items-start gap-2 p-2 bg-white rounded-lg border border-gray-100 hover:border-green-300 block"><span class="w-6 h-6 rounded-full text-white text-xs flex items-center justify-center flex-shrink-0 font-bold mt-0.5" style="background:var(--g)">${i+1}</span><div><p class="text-xs font-semibold text-gray-900">${esc(r.title)}</p><p class="text-xs text-gray-500 mt-0.5">${esc((r.body||'').substring(0,70))}</p></div></a>`;});h+='</div></div>';c.innerHTML=h;}
+
+/* ─── BUBBLES ────────────────────────────────────────────────────────────── */
+function addB(text,sender,animate=true,cards=[],rpt=null,resCards=[]){
+  const c=document.getElementById('msgs'),mid='m'+Date.now()+Math.random().toString(36).slice(2);
+  _msgText[mid]=text; // FIX: keep raw text out of inline HTML attributes entirely —
+  // embedding it via JSON.stringify()/esc() inside onclick="..." breaks as soon as the
+  // message contains a quote or apostrophe (e.g. "I'm", "don't"), corrupting the
+  // attribute and dumping the rest of the button markup as visible text in the bubble.
+  const w=document.createElement('div');w.className='flex '+(sender==='u'?'justify-end':'justify-start gap-3');if(animate)w.classList.add('su');
+  if(sender==='u'){
+    // FIX #1: user bubble has edit button
+    w.innerHTML=`<div class="flex flex-col items-end gap-1 max-w-[78%]"><div class="bu" id="${mid}">${esc(text)}</div><div class="flex gap-1.5"><button onclick="editMsg('${mid}')" class="text-xs text-gray-400 hover:text-gray-600 flex items-center gap-0.5"><span class="i" style="font-size:12px">edit</span> Edit</button><button onclick="copyMsgText('${mid}')" class="text-xs text-gray-400 hover:text-gray-600"><span class="i" style="font-size:12px">content_copy</span></button></div></div>`;
+  }else{
+    const html=rmd(text);let ex='';
+    if(cards.length)ex+=`<div class="mt-4 space-y-4">${cards.map(j=>buildCard(j)).join('')}</div>`;
+    // Real, verified resource links always render as clickable/saveable cards
+    // here — never left as plain copy-paste text in the reply.
+    if(resCards.length)ex+=`<div class="mt-4 space-y-2">${resCards.map(r=>buildResourceCard(r)).join('')}</div>`;
+    if(rpt)ex+=`<div class="mt-3 flex gap-2"><a href="${rpt}" target="_blank" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold text-white" style="background:var(--g)"><span class="i if" style="font-size:12px">description</span> View Report</a><button onclick="saveItem({type:'resource',title:'Report',url:'${rpt}',folder_id:'resources'})" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs border border-gray-200 text-gray-600 hover:bg-gray-50"><span class="i" style="font-size:12px">bookmark</span> Save</button></div>`;
+    // FIX #1: per-message actions — copy FULL, share FULL, edit, export, restart
+    const acts=`<div class="ma">
+      <button onclick="copyFull('${mid}')" title="Copy all" class="ab"><span class="i" style="font-size:12px">content_copy</span></button>
+      <button onclick="shareFull('${mid}')" title="Share" class="ab"><span class="i" style="font-size:12px">share</span></button>
+      <button onclick="editMsg('${mid}',null)" title="Edit response" class="ab"><span class="i" style="font-size:12px">edit</span></button>
+      <button onclick="restartMsg('${mid}')" title="Regenerate" class="ab"><span class="i" style="font-size:12px">refresh</span></button>
+      <button onclick="saveMsgItem('${mid}')" title="Save" class="ab"><span class="i" style="font-size:12px">bookmark</span></button>
+      <div class="relative">
+        <button onclick="togEx('ex-${mid}')" title="Export" class="ab"><span class="i" style="font-size:12px">download</span></button>
+        <div id="ex-${mid}" class="em hidden">
+          <div class="ei" onclick="expMsg('${mid}','pdf')"><span class="i" style="font-size:13px">picture_as_pdf</span> PDF</div>
+          <div class="ei" onclick="expMsg('${mid}','md')"><span class="i" style="font-size:13px">description</span> Markdown</div>
+          <div class="ei" onclick="expMsg('${mid}','txt')"><span class="i" style="font-size:13px">text_snippet</span> Text</div>
+        </div>
+      </div>
+    </div>`;
+    w.innerHTML=`<div class="ad mt-1 flex-shrink-0"><span class="i if text-white" style="font-size:15px">psychology</span></div><div class="mw flex-1" style="max-width:88%">${acts}<div id="${mid}" class="bb">${html}${ex}</div></div>`;
+  }
+  c.appendChild(w);c.scrollTop=99999;
+}
+
+/* ─── FIX #1: Edit, Copy Full, Share Full, Regenerate ────────────────────── */
+function copyFull(mid){const el=document.getElementById(mid);if(!el)return;navigator.clipboard.writeText(el.innerText).then(()=>toast('Copied'));}
+function shareFull(mid){const el=document.getElementById(mid);if(!el)return;const t=el.innerText;if(navigator.share){navigator.share({text:t,title:'Train Garden'}).catch(()=>navigator.clipboard.writeText(t).then(()=>toast('Copied')));}else navigator.clipboard.writeText(t).then(()=>toast('Copied'));}
+function copyMsgText(mid){navigator.clipboard.writeText(_msgText[mid]||'').then(()=>toast('Copied'));}
+function saveMsgItem(mid){saveItem({type:'message',title:(_msgText[mid]||'').substring(0,80),url:'',folder_id:'messages'});}
+function editMsg(mid,originalText){
+  const el=document.getElementById(mid);if(!el)return;
+  const current=originalText||_msgText[mid]||el.innerText;
+  const isUser=el.classList.contains('bu');
+  if(isUser){
+    // Replace user bubble with editable textarea
+    const parent=el.parentElement;
+    el.style.display='none';
+    const ta=document.createElement('textarea');ta.className='edit-ta w-full';ta.value=current;ta.rows=3;
+    const btnRow=document.createElement('div');btnRow.className='flex gap-2 mt-2 justify-end';
+    const saveBtn=document.createElement('button');saveBtn.className='px-3 py-1.5 rounded-lg text-xs font-semibold text-white';saveBtn.style.background='var(--g)';saveBtn.textContent='Resend';
+    const cancelBtn=document.createElement('button');cancelBtn.className='px-3 py-1.5 rounded-lg text-xs border border-gray-200 text-gray-600';cancelBtn.textContent='Cancel';
+    saveBtn.onclick=()=>{const newText=ta.value.trim();if(!newText)return;ta.remove();btnRow.remove();el.style.display='';document.getElementById('ci').value=newText;handleSend();};
+    cancelBtn.onclick=()=>{ta.remove();btnRow.remove();el.style.display='';};
+    btnRow.appendChild(cancelBtn);btnRow.appendChild(saveBtn);parent.appendChild(ta);parent.appendChild(btnRow);ta.focus();
+  }else{
+    // Bot message — show editable overlay
+    const orig=el.innerHTML;
+    const ta=document.createElement('textarea');ta.className='edit-ta w-full';ta.value=el.innerText;ta.rows=6;
+    el.innerHTML='';el.appendChild(ta);
+    const btnRow=document.createElement('div');btnRow.className='flex gap-2 mt-2';
+    const saveBtn=document.createElement('button');saveBtn.className='px-3 py-1.5 rounded-lg text-xs font-semibold text-white';saveBtn.style.background='var(--g)';saveBtn.textContent='Save';
+    const cancelBtn=document.createElement('button');cancelBtn.className='px-3 py-1.5 rounded-lg text-xs border border-gray-200 text-gray-600';cancelBtn.textContent='Cancel';
+    saveBtn.onclick=()=>{el.innerHTML=rmd(ta.value);};
+    cancelBtn.onclick=()=>{el.innerHTML=orig;};
+    btnRow.appendChild(cancelBtn);btnRow.appendChild(saveBtn);el.appendChild(btnRow);ta.focus();
+  }
+}
+function restartMsg(mid){
+  // Find the user message before this bot message and resend it
+  const msgs=document.getElementById('msgs');const children=[...msgs.children];
+  const botWrap=[...msgs.querySelectorAll('.bb')].find(el=>el.id===mid)?.closest('.flex');
+  if(!botWrap)return;
+  const idx=children.indexOf(botWrap);
+  // Find previous user bubble
+  for(let i=idx-1;i>=0;i--){const userBub=children[i].querySelector('.bu');if(userBub){const t=userBub.innerText;sendMsg(t);return;}}
+  toast('Could not find original message to regenerate');
+}
+
+/* ─── PILLS — FIX #2: actually call sendMsg ─────────────────────────────── */
+function renderPills(sgs){document.getElementById('pills').innerHTML=sgs.filter(Boolean).map(s=>`<button class="pl" data-sugg="${esc(String(s))}">${esc(String(s))}</button>`).join('');}
+document.getElementById('pills').addEventListener('click',e=>{const b=e.target.closest('button.pl');if(!b||!b.dataset.sugg)return;if(b.dataset.sugg==='Upload my CV'){document.getElementById('cvf').click();return;}sendMsg(b.dataset.sugg);});
+function clearPills(){document.getElementById('pills').innerHTML='';}
+
+/* ─── JOB CARDS ─────────────────────────────────────────────────────────── */
+const _resCardStore={}; // rid -> resource object, so Save never inlines raw text into an attribute
+function saveResourceCard(rid){const r=_resCardStore[rid];if(!r)return;saveItem({type:'resource',title:r.title,url:r.url,folder_id:'resources'});}
+const _RES_TYPE_ICON={course:'school',volunteering:'volunteer_activism',event:'event',webinar:'videocam',community:'groups',job:'work',search_fallback:'search',resource:'link'};
+function buildResourceCard(r){
+  const rid='r'+Math.random().toString(36).slice(2);_resCardStore[rid]=r;
+  const icon=_RES_TYPE_ICON[r.type]||'link';
+  return `<div class="jc" id="${rid}"><div class="flex items-start gap-3"><div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background:#f3f4f6"><span class="i if" style="font-size:17px;color:var(--g)">${icon}</span></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 flex-wrap"><a href="${esc(r.url)}" target="_blank" rel="noopener" class="font-semibold text-sm hover:underline" style="color:var(--os)">${esc(r.title)}</a>${r.type_label?`<span class="text-xs px-1.5 py-0.5 rounded bg-gray-100 text-gray-500">${esc(r.type_label)}</span>`:''}</div>${r.body?`<p class="text-xs text-gray-500 mt-1 leading-relaxed">${esc(r.body)}</p>`:''}<div class="flex items-center gap-3 mt-2"><a href="${esc(r.url)}" target="_blank" rel="noopener" class="text-xs font-medium flex items-center gap-1 hover:underline" style="color:var(--g)"><span class="i" style="font-size:13px">open_in_new</span> Open</a><button onclick="saveResourceCard('${rid}')" class="text-xs font-medium flex items-center gap-1 text-gray-500 hover:text-gray-700"><span class="i" style="font-size:13px">bookmark_border</span> Save</button></div></div></div></div>`;
+}
+function buildCard(job){const cid='j'+Math.random().toString(36).slice(2);const tr=allJ.some(j=>j.url===job.url);const cols={'electric':['#dcfce7','#166534'],'solar':['#fef3c7','#92400e'],'sustainab':['#d1fae5','#065f46'],'renewab':['#dbeafe','#1e40af'],'esg':['#ede9fe','#5b21b6']};const key=Object.keys(cols).find(k=>(job.title+job.company).toLowerCase().includes(k));const[bg,fg]=key?cols[key]:['#f3f4f6','#374151'];const icons={'electric':'electric_car','solar':'solar_power','sustainab':'forest','renewab':'eco','esg':'monitoring'};const icon=key?icons[key]:'work';const buls=(job.bullets||[]).slice(0,3).map(b=>`<li class="flex gap-1.5 text-xs text-gray-600"><span style="min-width:5px;height:5px;width:5px;background:var(--g);border-radius:50%;display:inline-block;margin-top:5px;flex-shrink:0"></span><span>${esc(b)}</span></li>`).join('');return `<div class="jc" id="${cid}"><div class="flex items-start gap-3 mb-3"><div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background:${bg}"><span class="i if" style="font-size:20px;color:${fg}">${icon}</span></div><div class="flex-1 min-w-0"><a href="${job.url}" target="_blank" rel="noopener" class="font-semibold text-sm block hover:underline" style="color:var(--os)">${esc(job.title)}</a><p class="text-xs text-gray-500 mt-0.5">${esc(job.company||'')}${job.company&&job.location?' · ':''}${esc(job.location||'UK')}</p></div><div class="flex gap-1 flex-shrink-0"><button onclick="saveItem({type:'job',title:'${esc(job.title)}',url:'${job.url}',folder_id:'jobs'})" class="ab" title="Save"><span class="i" style="font-size:13px">bookmark_border</span></button><button onclick="reportLink('${job.url}')" class="ab" title="Report"><span class="i" style="font-size:13px">flag</span></button></div></div>${job.match_pct!=null?`<div class="mb-2 flex items-center gap-1.5 flex-wrap"><span class="text-xs px-2 py-0.5 rounded-full font-bold" style="background:${job.match_pct>=75?'#dcfce7':job.match_pct>=50?'#fef3c7':'#fee2e2'};color:${job.match_pct>=75?'#166534':job.match_pct>=50?'#92400e':'#991b1b'}">${job.match_pct}% match</span><span class="text-xs text-gray-400">${esc(job.match_label||'')}</span></div>${(job.missing_skills&&job.missing_skills.length)?`<div class="mb-2 flex flex-wrap gap-1 items-center"><span class="text-xs text-gray-400">Gaps:</span>${job.missing_skills.map(s=>`<span class="text-xs px-1.5 py-0.5 rounded bg-gray-100 text-gray-600">${esc(s)}</span>`).join('')}</div>`:''}`:''}${job.salary?`<div class="mb-2"><span class="text-xs px-2 py-0.5 rounded font-medium" style="background:#f3f4f6">${esc(job.salary)}</span></div>`:''}${buls?`<ul class="space-y-1 mb-3">${buls}</ul>`:''}<details class="mb-3"><summary class="text-xs text-gray-400 cursor-pointer hover:text-gray-600 select-none">Details</summary><p class="text-xs text-gray-500 mt-2 leading-relaxed">${esc(job.snippet||'')}</p></details><div class="flex items-center justify-between pt-3 border-t border-gray-100"><a href="${job.url}" target="_blank" rel="noopener" class="text-xs font-medium flex items-center gap-1 hover:underline" style="color:var(--g)"><span class="i" style="font-size:13px">open_in_new</span> View position</a><div class="flex gap-2"><button onclick="notForMe('${cid}')" class="text-xs border border-gray-200 px-3 py-1.5 rounded-lg text-gray-500 hover:bg-gray-50">Not for me</button><button onclick='trackJ(${JSON.stringify(job).replace(/'/g,"&#39;")}, "${cid}")' id="tj-${cid}" class="text-xs px-3 py-1.5 rounded-lg font-semibold border transition-colors ${tr?'text-green-700 border-green-300':'text-gray-700 border-gray-200 hover:border-green-700'}">${tr?'Tracking':'Track'}</button></div></div></div>`;}
+function notForMe(id){document.getElementById(id)?.remove();}
+async function trackJ(job,cid){const d=await(await fetch('/api/track-job',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,job})})).json();const btn=document.getElementById('tj-'+cid);if(d.tracked){allJ.push(job);if(btn){btn.textContent='Tracking';btn.className=btn.className.replace('text-gray-700 border-gray-200 hover:border-green-700','text-green-700 border-green-300');}}else{allJ=allJ.filter(j=>j.url!==job.url);if(btn)btn.textContent='Track';}await Promise.all([loadJ(),loadSnap()]);}
+async function reportLink(url){if(!confirm('Report this link as broken?'))return;await fetch('/api/report-link',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,url,reason:'user_reported'})});toast('Reported — thank you');}
+
+/* ─── INBOX ──────────────────────────────────────────────────────────────── */
+function fillInbox(jobs,salaryInfo){const c=document.getElementById('inbox');if(!jobs.length)return;let h=`<div class="mb-2 flex justify-center"><span class="text-xs px-3 py-1 rounded-full" style="background:var(--sc);color:var(--ov)">Today — ${jobs.length} roles</span></div>`;if(salaryInfo?.summary)h+=`<div class="mb-3 p-3 rounded-lg flex items-start gap-2" style="background:var(--wb);border:1px solid var(--wf)"><span class="i" style="font-size:16px;color:var(--wf)">payments</span><p class="text-xs text-gray-700 leading-relaxed">${esc(salaryInfo.summary)}</p></div>`;h+=jobs.map(j=>`<div class="ir" onclick="window.open('${j.url}','_blank')"><div class="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold text-white flex-shrink-0" style="background:var(--g)">${(j.company||j.title||'?')[0].toUpperCase()}</div><div class="flex-1 min-w-0"><p class="it text-sm font-medium text-gray-900 truncate">${esc(j.title)}</p><p class="text-xs text-gray-400">${esc(j.company||'')}${j.company?' · ':''}${esc(j.location||'UK')}</p></div><a href="${j.url}" target="_blank" onclick="event.stopPropagation()" class="text-xs border border-gray-200 px-2.5 py-1 rounded-lg text-gray-600 hover:border-green-700 hover:text-green-700 flex items-center gap-0.5 flex-shrink-0">View <span class="i" style="font-size:11px">arrow_forward</span></a></div>`).join('');c.innerHTML=h;}
+
+/* ─── SNAPSHOT ───────────────────────────────────────────────────────────── */
+async function loadSnap(){try{const journey=await(await fetch(`/api/get-journey?user_id=${uid}`)).json();const pct=journey.journey?.progress_pct||0;document.getElementById('cpf').style.width=pct+'%';document.getElementById('cpt').textContent=pct===0?'Start your assessment to track progress.':pct+'% toward '+(journey.profile?.target_role||'your goal');}catch(e){}}
+
+/* ─── MY PATH / JOURNEY ──────────────────────────────────────────────────── */
+async function loadJourney(){
+  try{const d=await(await fetch(`/api/get-journey?user_id=${uid}`)).json();
+  const j=d.journey||{};const xp=d.xp||0;const level=d.level||1;
+  // XP ring
+  const xi=xp%200;const pct=Math.min(xi/200,1);const circ=163.4;
+  document.getElementById('xp-ring').style.strokeDashoffset=circ-(circ*pct);
+  document.getElementById('j-level').textContent=level;document.getElementById('j-xp').textContent=xp+' XP';
+  document.getElementById('j-xpf').style.width=Math.min(xi/2,100)+'%';
+  document.getElementById('j-next').textContent=(200-xi)+' XP to level '+(level+1);
+  document.getElementById('j-streak').textContent=(j.streak_days||0)+'-day streak';
+  // Summary
+  if(j.summary){document.getElementById('journey-not-assessed').classList.add('hidden');document.getElementById('journey-summary').classList.remove('hidden');document.getElementById('journey-summary-text').textContent=j.summary;document.getElementById('journey-pct').textContent=(j.progress_pct||0)+'%';document.getElementById('journey-months').textContent=j.estimated_months||'—';document.getElementById('journey-skills-done').textContent=(j.skills_gaps||[]).filter(g=>g.status==='closed'||g.status==='complete').length;document.getElementById('evidence-box').classList.remove('hidden');}
+  // Skills gaps
+  curGaps=j.skills_gaps||[];
+  renderSkillsGap(curGaps);
+  // In-progress resources — pulled separately
+  try{const rd=await(await fetch(`/api/get-saved-resources?user_id=${uid}`)).json();
+  const inProg=(rd.resources||[]).filter(r=>r.status==='in_progress');
+  renderInProgress(inProg);}catch(e){}
+  // Milestones
+  const ms=j.milestones||[];const mlEl=document.getElementById('journey-milestones');
+  if(ms.length)mlEl.innerHTML=ms.slice(0,5).map(m=>renderMilestone(m)).join('');
+  }catch(e){}
+}
+async function loadNotif(){
+  try{
+    const d=await(await fetch(`/api/get-notifications?user_id=${uid}`)).json();
+    const notifs=d.notifications||[];
+    const badge=document.getElementById('notif-badge');
+    if(d.unread_count>0){badge.textContent=d.unread_count>9?'9+':d.unread_count;badge.classList.remove('hidden');}
+    else badge.classList.add('hidden');
+    const list=document.getElementById('notif-list');
+    if(!notifs.length){list.innerHTML='<div class="text-xs text-gray-400 px-3 py-2">No notifications yet</div>';return;}
+    list.innerHTML=notifs.map(n=>{
+      const when=new Date(n.ts).toLocaleDateString(undefined,{month:'short',day:'numeric'});
+      return `<div class="ei" style="align-items:flex-start;white-space:normal;${n.read?'':'background:#f0fdf4'}" onclick="markNotifRead('${n.id}')">
+        <span class="i" style="font-size:14px;margin-top:1px">${n.type==='company_interest'?'business_center':n.type==='partner_interest'?'handshake':'notifications'}</span>
+        <div><p class="text-xs text-gray-700 leading-snug">${esc(n.text)}</p><p class="text-xs text-gray-400 mt-0.5">${when}</p></div>
+      </div>`;
+    }).join('');
+  }catch(e){}
+}
+async function markNotifRead(nid){
+  await fetch('/api/mark-notification-read',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,notification_id:nid})});
+  await loadNotif();
+}
+
+  const vstat=m.verification_status||(m.verified?'auto':'pending');
+  const chip={auto:'',verified:'<span class="sv-v ml-2">verified</span>',pending:'<span class="sv-n ml-2">unverified</span>',rejected:'<span class="sv-n ml-2">rejected</span>'}[vstat]||'';
+  const needsAction = vstat==='pending';
+  const evidenceLink = m.evidence?`<a href="/static/milestone-evidence/${uid}/${encodeURIComponent(m.evidence)}" target="_blank" class="text-xs underline ml-2" style="color:var(--g)">View evidence</a>`:'';
+  const body = needsAction
+    ? `<div class="mt-2 pt-2 border-t border-gray-100"><p class="text-xs text-gray-500 mb-2">This milestone hasn't been verified yet. Confirm it, or upload evidence (certificate, screenshot, etc.).</p>
+       <div class="flex gap-1.5 flex-wrap"><button onclick="verifyMilestone('${m.id}','verified')" class="text-xs px-2.5 py-1 rounded-lg font-semibold text-white" style="background:var(--g)">Confirm it happened</button>
+       <button onclick="document.getElementById('mevf').dataset.mid='${m.id}';document.getElementById('mevf').click()" class="text-xs px-2.5 py-1 rounded-lg border border-gray-200 text-gray-600 hover:border-blue-500">Upload evidence</button></div></div>`
+    : `<div class="mt-2 pt-2 border-t border-gray-100 text-xs text-gray-400">${vstat==='verified'?'Verified':'Auto-confirmed by the system'}${evidenceLink}</div>`;
+  return `<details class="border border-gray-100 rounded-lg group"><summary class="flex items-center gap-2.5 p-2.5 cursor-pointer select-none list-none"><div class="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style="background:var(--sb)"><span class="i if" style="font-size:14px;color:var(--sf2)">workspace_premium</span></div><div class="flex-1 min-w-0"><p class="text-xs font-semibold text-gray-900">${esc(m.title)}${chip}</p><p class="text-xs text-gray-400">${new Date(m.earned_at||Date.now()).toLocaleDateString('en-GB')}</p></div>${m.xp?`<span class="text-xs font-bold" style="color:var(--g)">+${m.xp}XP</span>`:''}</summary><div class="px-2.5 pb-2.5">${body}</div></details>`;
+}
+async function verifyMilestone(mid,status){const fd=new FormData();fd.append('user_id',uid);fd.append('milestone_id',mid);fd.append('status',status);const d=await(await fetch('/api/verify-milestone',{method:'POST',body:fd})).json();if(d.success){toast('Milestone '+status);await loadJourney();}else toast(d.message||'Could not update milestone');}
+async function handleMilestoneEvidence(inp){const f=inp.files[0];if(!f)return;const mid=inp.dataset.mid||'';const fd=new FormData();fd.append('user_id',uid);fd.append('milestone_id',mid);fd.append('status','verified');fd.append('evidence',f);const d=await(await fetch('/api/verify-milestone',{method:'POST',body:fd})).json();if(d.success){toast('Evidence uploaded — milestone verified');await loadJourney();}inp.value='';}
+function renderInProgress(items){
+  let el=document.getElementById('in-progress-list');
+  if(!el){
+    const anchor=document.getElementById('skills-gap-list');
+    el=document.createElement('div');el.id='in-progress-list';el.className='space-y-2';
+    anchor?.parentElement?.insertBefore(el, anchor);
+    const hdr=document.createElement('h4');hdr.className='text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2';hdr.textContent='Currently Doing';hdr.id='in-progress-hdr';
+    el.parentElement?.insertBefore(hdr, el);
+  }
+  const hdr=document.getElementById('in-progress-hdr');
+  if(!items.length){el.innerHTML='';if(hdr)hdr.classList.add('hidden');return;}
+  if(hdr)hdr.classList.remove('hidden');
+  el.innerHTML=items.map(r=>`<div class="rc"><div class="flex items-start justify-between mb-1"><p class="text-sm font-semibold text-gray-900">${esc(r.title)}</p><span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background:var(--wb);color:var(--wf)">In progress</span></div><p class="text-xs text-gray-400 mb-2">${esc(r.type||'resource')}${r.location?' · '+esc(r.location):''}</p><div class="flex gap-2"><button onclick="setResStatus('${r.id}','completed')" class="text-xs px-2.5 py-1 rounded-lg font-semibold text-white" style="background:var(--g)">Mark complete</button><a href="${esc(r.url)}" target="_blank" class="text-xs px-2.5 py-1 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50">Open</a><button onclick="sendMsg('I am working on ${esc(r.title).replace(/'/g,"")} and could use some help / advice on next steps')" class="text-xs px-2.5 py-1 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50">Get help</button></div></div>`).join('');
+}
+function _gapStatusNorm(s){ // map legacy statuses to the open/pending/in_progress/closed vocabulary
+  return {not_started:'open', complete:'closed'}[s] || s || 'open';
+}
+function renderSkillsGap(gaps){
+  const c=document.getElementById('skills-gap-list');if(!gaps.length){c.innerHTML='';return;}
+  const sc2={open:'sv-n',pending:'sv-p',in_progress:'sv-p',closed:'sv-v'};
+  const STAGES=['open','pending','in_progress','closed'];
+  c.innerHTML=gaps.map(g=>{
+    const status=_gapStatusNorm(g.status);
+    const pct=g.target_level>0?Math.round((g.current_level/g.target_level)*100):0;
+    const dots=Array.from({length:5},(_,i)=>`<span class="ldot${i<g.current_level?' filled':i<g.target_level?' gap':''}"></span>`).join('');
+    const skillAttr=esc(g.skill).replace(/'/g,"&#39;");
+    const stageBtns=STAGES.map(st=>`<button data-skill="${skillAttr}" data-status="${st}" class="gap-status-btn text-xs px-2 py-0.5 rounded-full border transition-colors ${status===st?(sc2[st]||'')+' border-transparent':'text-gray-400 border-gray-200 hover:border-green-700'}">${st.replace('_',' ')}</button>`).join('');
+    return`<div class="rc"><div class="flex items-start justify-between mb-2"><div class="flex-1"><h4 class="text-sm font-semibold text-gray-900">${esc(g.skill)}</h4><p class="text-xs text-gray-400 mt-0.5">${esc(g.why_matters||'')}</p></div><span class="${sc2[status]||'sv-n'} ml-2">${status.replace('_',' ')}</span></div><div class="flex items-center gap-2 mb-2"><div class="flex gap-1">${dots}</div><span class="text-xs text-gray-400">${g.current_level}/${g.target_level}</span><div class="flex-1 mx-2" style="height:3px;background:var(--sc);border-radius:2px"><div style="width:${pct}%;height:100%;background:var(--gm);border-radius:2px;transition:width .5s"></div></div><span class="text-xs font-bold" style="color:var(--g)">${pct}%</span></div><div class="flex gap-1.5 flex-wrap mb-2">${stageBtns}</div>${(g.resources||[]).length?`<div class="flex flex-wrap gap-1.5 mb-2">${(g.resources||[]).slice(0,2).map(r=>`<a href="${esc(r.url)}" target="_blank" class="text-xs px-2 py-0.5 rounded-full border font-medium hover:border-green-600 transition-colors" style="border-color:var(--bd);color:var(--g)">${esc(r.title.substring(0,30))}</a>`).join('')}</div>`:''}<button onclick="sendMsg('Help me close my ${skillAttr} skill gap. I am at level ${g.current_level} out of ${g.target_level} and my status is ${status}. Suggest concrete next-step resources.')" class="text-xs font-medium hover:underline flex items-center gap-0.5" style="color:var(--g)"><span class="i" style="font-size:12px">arrow_forward</span> Get guidance</button></div>`;
+  }).join('');
+}
+document.getElementById('skills-gap-list')?.addEventListener('click', async e=>{
+  const b=e.target.closest('button.gap-status-btn'); if(!b) return;
+  const skill=b.dataset.skill, status=b.dataset.status;
+  try{
+    const r=await fetch('/api/set-gap-status',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,skill,status})});
+    const d=await r.json();
+    if(d.success){toast(`${skill}: marked ${status.replace('_',' ')}`);await loadJourney();await loadSnap();}
+    else toast(d.message||'Could not update gap status');
+  }catch(e){toast('Network error updating gap status');}
+});
+async function submitEvidence(){const inp=document.getElementById('ev-input');if(!inp?.value.trim())return;const fb=document.getElementById('ev-feedback');fb.classList.remove('hidden');fb.textContent='Analysing...';try{const d=await(await fetch('/api/add-evidence',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,message:inp.value.trim()})})).json();if(d.success){fb.textContent='Skill updated: '+d.detected_skill+' to level '+d.new_level;inp.value='';await loadJourney();}else fb.textContent='Could not detect which skill — be more specific.';}catch(e){fb.textContent='Error: '+e.message;}}
+async function quickMood(mood){const labels={great:'That is wonderful! What has been going well?',good:'Good to hear. What are you working on today?',okay:'Okay is okay. What would make today a little better?',hard:'I hear you — hard days are part of the journey. What is making it difficult?',stuck:'Feeling stuck is really common in career transitions. Tell me more about it.'};const el=document.getElementById('mood-resp');el.textContent=labels[mood]||'';el.classList.remove('hidden');document.getElementById('checkin-due-banner')?.classList.add('hidden');try{const d=await(await fetch('/api/checkin',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,mood,note:''})})).json();if(d.response)sendMsg(labels[mood]||'I am feeling '+mood+' today');}catch(e){}}
+async function loadCheckinStatus(){try{const d=await(await fetch(`/api/get-checkins?user_id=${uid}`)).json();document.getElementById('checkin-due-banner')?.classList.toggle('hidden',!d.due);}catch(e){}}
+
+/* ─── PROFILE ────────────────────────────────────────────────────────────── */
+async function loadProf(){try{const p=await(await fetch(`/api/get-profile?user_id=${uid}`)).json();fillProf(p);}catch(e){}}
+let visOn=false;
+function renderVisToggle(){const btn=document.getElementById('visToggle'),knob=document.getElementById('visKnob'),txt=document.getElementById('visStatusText');if(!btn)return;btn.style.background=visOn?'var(--g)':'#d1d5db';knob.style.transform=visOn?'translateX(18px)':'translateX(4px)';txt.textContent=visOn?"On — participating companies can see a profile summary and match score for you.":"Off — companies can't see your profile. Turn this on to be considered for real matches.";}
+async function loadVisibility(){try{const d=await(await fetch(`/api/consent/visibility?user_id=${uid}`)).json();visOn=!!d.visible_to_companies;renderVisToggle();}catch(e){}}
+async function toggleVisibility(){const turningOn=!visOn;try{if(turningOn){const n=await(await fetch('/api/consent/visibility-notice')).json();const el=document.getElementById('visNotice');if(el&&n.notice){el.textContent=n.notice;el.classList.remove('hidden');}}const d=await(await fetch('/api/consent/visibility',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,visible:turningOn})})).json();if(d.success){visOn=d.visible_to_companies;renderVisToggle();toast(visOn?'Visible to companies':'Hidden from companies');if(!visOn)document.getElementById('visNotice')?.classList.add('hidden');}}catch(e){toast('Could not update — try again');}}
+function fillProf(p){if(!p)return;const map={pn:'name',pc2:'sector',pt2:'target_role',py2:'experience_years',pl2:'location',ph2:'headline'};Object.entries(map).forEach(([id,k])=>{const e=document.getElementById(id);if(e&&p[k])e.value=p[k];});const nm=p.name||(ue.split('@')[0]||'User');document.getElementById('un').textContent=nm;['ua','pav','comm-ua'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=nm[0].toUpperCase();});document.getElementById('pe').textContent=p.email||ue;if(p.goals?.length)renderChips(p.goals,'gc');if(p.skills?.length)renderSkillChips(p.skills,p.skill_sources,'sc3');if(p.cv_summary){document.getElementById('cvb').classList.remove('hidden');document.getElementById('cvt').textContent=p.cv_summary;}if(p.location){document.getElementById('loc-bar').classList.remove('hidden');document.getElementById('ld').textContent=p.location;}if(p.experience)renderExperience(p.experience);const flds=[p.name,p.target_role,p.sector,p.experience_years,p.cv_summary,p.location,p.goals?.length,p.skills?.length,p.experience?.length];const pct=Math.round(flds.filter(Boolean).length/flds.length*100);['ppf','snap-prog'].forEach(id=>document.getElementById(id).style.width=pct+'%');['pp2','snap-pct'].forEach(id=>document.getElementById(id).textContent=pct+'%');}
+
+/* ─── EXPERIENCE TIMELINE ────────────────────────────────────────────────── */
+function renderExperience(list){
+  const c=document.getElementById('expc');if(!c)return;
+  list=list||[];
+  document.getElementById('exp-empty').classList.toggle('hidden',list.length>0);
+  c.innerHTML=list.map(e=>expRowHtml(e)).join('');
+}
+function expRowHtml(e){
+  e=e||{};const id=e.id||('new'+Math.random().toString(36).slice(2,8));
+  return `<div class="exp-row bg-white border border-gray-100 p-3" data-id="${esc(id)}" style="border-radius:0">
+    <div class="flex gap-1.5 mb-1.5">
+      <input class="fi exp-title" placeholder="Title" value="${esc(e.title||'')}"/>
+      <button onclick="this.closest('.exp-row').remove();document.getElementById('exp-empty').classList.toggle('hidden',document.getElementById('expc').children.length>0);" class="text-gray-300 hover:text-red-400 flex-shrink-0 px-1"><span class="i" style="font-size:16px">close</span></button>
+    </div>
+    <input class="fi exp-company mb-1.5" placeholder="Company (leave blank if not named)" value="${esc(e.company||'')}"/>
+    <div class="flex gap-1.5 mb-1.5">
+      <input class="fi exp-start" placeholder="Start (e.g. Jan 2020)" value="${esc(e.start_date||'')}"/>
+      <input class="fi exp-end" placeholder="End (or 'Present')" value="${esc(e.end_date||'')}"/>
+    </div>
+    <textarea class="fi exp-desc" rows="2" placeholder="What did the role involve?">${esc(e.description||'')}</textarea>
+  </div>`;
+}
+function addExpRow(){
+  const c=document.getElementById('expc');
+  c.insertAdjacentHTML('beforeend',expRowHtml({}));
+  document.getElementById('exp-empty').classList.add('hidden');
+}
+function getExpData(){
+  return[...document.querySelectorAll('#expc .exp-row')].map(r=>({
+    id:r.dataset.id,
+    title:r.querySelector('.exp-title').value.trim(),
+    company:r.querySelector('.exp-company').value.trim(),
+    start_date:r.querySelector('.exp-start').value.trim(),
+    end_date:r.querySelector('.exp-end').value.trim(),
+    description:r.querySelector('.exp-desc').value.trim(),
+  })).filter(e=>e.title||e.company);
+}
+function renderChips(items,cid){const c=document.getElementById(cid);if(!c)return;c.innerHTML=items.map(v=>`<span class="ch">${esc(v)}<span onclick="removeChip('${cid}','${esc(v)}')" class="ml-1 cursor-pointer text-gray-400 hover:text-gray-700">x</span></span>`).join('');}
+function skillSourceLabel(entries){if(!entries||!entries.length)return'';const names={cv:'CV',chat:'Mentioned in chat',inferred:'Inferred from your background/hobbies'};return[...new Set(entries.map(e=>names[e.type]||e.type))].join(', ');}
+function renderSkillChips(items,sources,cid){const c=document.getElementById(cid);if(!c)return;c.innerHTML=items.map(v=>{const label=skillSourceLabel((sources||{})[v]);const title=label?` title="Source: ${esc(label)}"`:'';return `<span class="ch"${title}>${esc(v)}<span onclick="removeChip('${cid}','${esc(v)}')" class="ml-1 cursor-pointer text-gray-400 hover:text-gray-700">x</span></span>`;}).join('');}
+function removeChip(cid,val){renderChips(getChips(cid).filter(v=>v!==val),cid);}
+function getChips(cid){return[...document.getElementById(cid)?.querySelectorAll('.ch')||[]].map(s=>s.textContent.trim().slice(0,-1).trim()).filter(Boolean);}
+function setupAllChips(){[['gi','gc'],['ski','sc3'],['ai2','ac'],['hi2','hc'],['vi2','vc'],['li3','lc']].forEach(([inp,cid])=>{document.getElementById(inp)?.addEventListener('keydown',e=>{if(e.key==='Enter'){const v=e.target.value.trim();if(!v)return;const a=getChips(cid);if(!a.includes(v))a.push(v);renderChips(a,cid);e.target.value='';}});});}
+async function saveProfile(){const loc=document.getElementById('pl2')?.value.trim();if(loc){await fetch('/api/save-location',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,location:loc})});document.getElementById('loc-bar').classList.remove('hidden');document.getElementById('ld').textContent=loc;}const p={user_id:uid,name:document.getElementById('pn')?.value.trim(),sector:document.getElementById('pc2')?.value.trim(),target_role:document.getElementById('pt2')?.value.trim(),experience_years:document.getElementById('py2')?.value.trim(),headline:document.getElementById('ph2')?.value.trim(),goals:getChips('gc'),skills:getChips('sc3'),experience:getExpData()};await fetch('/api/save-profile',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)});fillProf(p);toast('Profile saved');}
+
+/* ─── ASPIRATIONS ────────────────────────────────────────────────────────── */
+async function loadAsp(){try{const d=await(await fetch(`/api/get-aspirations?user_id=${uid}`)).json();if(d.dream_job)document.getElementById('dj').value=d.dream_job;if(d.aspirations?.length)renderChips(d.aspirations,'ac');if(d.hobbies?.length)renderChips(d.hobbies,'hc');if(d.values?.length)renderChips(d.values,'vc');if(d.limitations?.length)renderChips(d.limitations,'lc');if(d.salary_range)document.getElementById('sal').value=d.salary_range;if(d.work_type)document.getElementById('wt').value=d.work_type;if(d.hobby_skill_map?.length)showHobbySkills(d.hobby_skill_map);}catch(e){}}
+async function saveAsp(){const p={user_id:uid,dream_job:document.getElementById('dj').value.trim(),aspirations:getChips('ac'),hobbies:getChips('hc'),values:getChips('vc'),limitations:getChips('lc'),salary_range:document.getElementById('sal').value.trim(),work_type:document.getElementById('wt').value};const d=await(await fetch('/api/save-aspirations',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)})).json();if(d.hobby_skills?.length)showHobbySkills(d.hobby_skills);const s=getChips('sc3');if(s.length){document.getElementById('skv').classList.remove('hidden');renderSkillValidation(s);}toast('Saved — the assistant will use this in every conversation');}
+async function loadTransferableSkills(){try{const d=await(await fetch(`/api/get-transferable-skills?user_id=${uid}`)).json();renderTransferableSkills(d.mappings||[]);}catch(e){}}
+function renderTransferableSkills(mappings){const c=document.getElementById('tfsl');if(!c)return;if(!mappings.length){c.innerHTML='<p class="text-xs text-gray-400 mb-2">Add your CV or background and a target role, then map the skills that genuinely transfer.</p><button onclick="mapTransferableSkills()" class="text-xs font-medium hover:underline" style="color:var(--g)">Map my transferable skills</button>';return;}c.innerHTML=mappings.map(m=>`<div style="background:var(--sl);border:1px solid var(--bd);border-radius:0;padding:10px;"><p class="text-xs font-semibold text-gray-700 mb-1">${esc(m.skill||'')}</p><p class="text-xs text-gray-500 mb-1">From: ${esc(m.source||'')}</p><p class="text-xs text-gray-400 leading-relaxed">${esc(m.relevance||'')}</p></div>`).join('');}
+async function mapTransferableSkills(){toast('Mapping your transferable skills…');try{const d=await(await fetch('/api/map-transferable-skills',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid})})).json();if(d.success)renderTransferableSkills(d.mappings||[]);else toast('Could not map skills — add your CV or background first');}catch(e){toast('Network error mapping skills');}}
+function showHobbySkills(map){const s=document.getElementById('hsm'),l=document.getElementById('hsl');if(!map?.length||!s||!l)return;s.classList.remove('hidden');l.innerHTML=map.map(h=>`<div style="background:var(--sl);border:1px solid var(--bd);border-radius:0;padding:10px;"><p class="text-xs font-semibold text-gray-700 mb-1.5">${esc(h.hobby)}</p><div class="flex flex-wrap gap-1.5">${(h.skills||[]).map(sk=>`<span class="text-xs px-2 py-0.5 rounded-full font-medium text-white" style="background:var(--g)">${esc(sk)}</span>`).join('')}</div></div>`).join('');}
+async function loadValidations(){try{const d=await(await fetch(`/api/get-skill-validations?user_id=${uid}`)).json();validations=d.validations||{};}catch(e){}}
+function renderSkillValidation(skills){const sec=document.getElementById('skv'),list=document.getElementById('svl');if(!sec||!list||!skills.length)return;sec.classList.remove('hidden');list.innerHTML=skills.map(sk=>{const v=validations[sk];const status=v?.status||'needed';const cls={'validated':'sv-v','in_progress':'sv-p','needed':'sv-n'}[status]||'sv-n';const evidenceLink=v?.cert_path?`<a href="/static/certs/${uid}/${encodeURIComponent(v.cert_path)}" target="_blank" class="text-xs underline ml-2" style="color:var(--g)">View evidence</a>`:'';return`<div class="flex items-center justify-between p-2.5 border border-gray-100 rounded-lg"><div><p class="text-xs font-semibold text-gray-900">${esc(sk)}</p><span class="${cls}">${status.replace('_',' ')}</span>${evidenceLink}</div><div class="flex gap-1.5"><button onclick="vSkill('${esc(sk)}','validated')" class="text-xs px-2 py-1 rounded border border-gray-200 hover:border-green-700 text-gray-500">Validate</button><button onclick="document.getElementById('certf').dataset.skill='${esc(sk)}';document.getElementById('certf').click()" class="text-xs px-2 py-1 rounded border border-gray-200 hover:border-blue-500 text-gray-500">Upload cert</button><button onclick="vSkill('${esc(sk)}','in_progress')" class="text-xs px-2 py-1 rounded border border-gray-200 hover:border-yellow-500 text-gray-500">In progress</button></div></div>`;}).join('');}
+async function vSkill(skill,status){const fd=new FormData();fd.append('user_id',uid);fd.append('skill',skill);fd.append('status',status);const d=await(await fetch('/api/validate-skill',{method:'POST',body:fd})).json();if(d.success){validations=d.validations;toast(skill+' marked as '+status);}await loadAsp();}
+async function handleCert(inp){const f=inp.files[0];if(!f)return;const skill=inp.dataset.skill||'';const fd=new FormData();fd.append('user_id',uid);fd.append('skill',skill);fd.append('status','validated');fd.append('cert',f);const d=await(await fetch('/api/validate-skill',{method:'POST',body:fd})).json();if(d.success){validations=d.validations;toast('Certificate uploaded for '+skill);}inp.value='';await loadAsp();}
+
+/* ─── RESOURCES ──────────────────────────────────────────────────────────── */
+async function loadRes(){try{const d=await(await fetch(`/api/get-saved-resources?user_id=${uid}`)).json();allRes=d.resources||[];renderRes(allRes);}catch(e){}}
+function _resPromptFor(t){
+  const openGap=(curGaps||[]).find(g=>g.status==='open');
+  const gapPart=openGap?` that would help close my "${openGap.skill}" skill gap`:'';
+  const labels={volunteering:'volunteering opportunities',jobs:'jobs',courses:'free courses',events:'events',webinars:'webinars',community:'community groups'};
+  const label=labels[t]||'resources';
+  return `Find ${label} near me for my target role${gapPart}`;
+}
+function filterRes(t){document.querySelectorAll('[id^="rf-"]').forEach(b=>b.classList.remove('on'));document.getElementById('rf-'+t)?.classList.add('on');renderRes(t==='all'?allRes:allRes.filter(r=>r.type===t),t);}
+function renderRes(items,type){const c=document.getElementById('rl');if(!items.length){const t=type&&type!=='all'?type:'volunteering';const label=({volunteering:'volunteering',jobs:'job',courses:'course',events:'event',webinars:'webinar',community:'community'})[t]||'volunteering';c.innerHTML=`<div class="py-10 text-center"><span class="i text-4xl text-gray-200 block mb-2">link</span><p class="text-sm text-gray-400">No ${esc(label)} resources saved yet.</p><button onclick="sendMsg('${_resPromptFor(t).replace(/'/g,"\\'")}')" class="mt-3 text-xs font-medium hover:underline" style="color:var(--g)">Find ${esc(label)} resources</button></div>`;return;}
+c.innerHTML=items.map(r=>{
+  const status=r.status||'not_started';
+  const statusChip={'not_started':'','in_progress':'<span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background:var(--wb);color:var(--wf)">In progress</span>','completed':'<span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background:var(--sb);color:var(--sf2)">Completed</span>'}[status]||'';
+  return `<div class="rc hg mb-2 group"><button onclick="delRes('${r.id}')" class="hv absolute top-2 right-2 ab text-gray-300 hover:text-red-500"><span class="i" style="font-size:12px">close</span></button><a href="${esc(r.url)}" target="_blank" class="block pr-6"><p class="text-sm font-semibold text-gray-900 hover:underline" style="color:var(--os)">${esc(r.title)}</p><p class="text-xs text-gray-500 mt-1 leading-relaxed">${esc((r.body||'').substring(0,120))}</p><div class="flex items-center gap-2 mt-2 flex-wrap"><span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background:var(--sl);color:var(--g)">${esc(r.type||'resource')}</span>${r.location?`<span class="text-xs text-gray-400 flex items-center gap-0.5"><span class="i" style="font-size:12px">location_on</span>${esc(r.location)}</span>`:''}${statusChip}</div></a><div class="flex gap-1.5 mt-2">
+  <button onclick="setResStatus('${r.id}','not_started')" class="text-xs px-2 py-1 rounded border ${status==='not_started'?'border-gray-400 text-gray-700':'border-gray-200 text-gray-400'} hover:border-gray-500">Not started</button>
+  <button onclick="setResStatus('${r.id}','in_progress')" class="text-xs px-2 py-1 rounded border ${status==='in_progress'?'border-yellow-500 text-yellow-700':'border-gray-200 text-gray-400'} hover:border-yellow-500">In progress</button>
+  <button onclick="setResStatus('${r.id}','completed')" class="text-xs px-2 py-1 rounded border ${status==='completed'?'border-green-600 text-green-700':'border-gray-200 text-gray-400'} hover:border-green-600">Completed</button>
+  </div></div>`;
+}).join('');}
+async function setResStatus(rid,status){await fetch('/api/update-resource-status',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,resource_id:rid,status})});await Promise.all([loadRes(),loadJourney(),loadD(),loadSnap()]);toast('Status updated: '+status.replace('_',' '));}
+async function delRes(id){await fetch('/api/delete-saved-resource',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,resource_id:id})});await loadRes();}
+
+/* ─── JOBS ───────────────────────────────────────────────────────────────── */
+async function loadJ(){try{const d=await(await fetch(`/api/get-jobs?user_id=${uid}`)).json();allJ=d.jobs||[];renderJ(allJ);renderRJ(allJ);}catch(e){}}
+function filtJ(s){document.querySelectorAll('[id^="jf-"]').forEach(b=>b.classList.remove('on'));document.getElementById('jf-'+s)?.classList.add('on');renderJ(s==='all'?allJ:allJ.filter(j=>j.status===s));}
+function renderJ(jobs){const c=document.getElementById('jl');if(!jobs.length){c.innerHTML='<div class="py-10 text-center"><span class="i text-5xl text-gray-200 block mb-2">work</span><p class="text-sm text-gray-400">No tracked jobs.</p></div>';return;}const sc={'interested':'text-blue-700 bg-blue-50','applied':'text-green-700 bg-green-50','interview':'text-yellow-700 bg-yellow-50','rejected':'text-red-700 bg-red-50'};c.innerHTML=jobs.map(j=>`<div class="py-3 border-b border-gray-100 last:border-0"><div class="flex items-start gap-2.5"><div class="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold text-white flex-shrink-0" style="background:var(--g)">${(j.company||j.title||'?')[0].toUpperCase()}</div><div class="flex-1 min-w-0"><a href="${j.url}" target="_blank" class="text-sm font-semibold text-gray-900 hover:underline block truncate">${esc(j.title)}</a><p class="text-xs text-gray-400">${esc(j.company||'')}${j.company?' · ':''}${esc(j.location||'')}</p><span class="text-xs px-2 py-0.5 rounded-full font-medium mt-1 inline-block ${sc[j.status]||sc.interested}">${j.status||'interested'}</span></div><button onclick="delJob('${j.url}')" class="text-gray-300 hover:text-red-500 flex-shrink-0"><span class="i" style="font-size:15px">delete</span></button></div><div class="flex gap-1.5 mt-2 flex-wrap pl-10">${['interested','applied','interview','rejected'].map(st=>`<button onclick="setJS('${j.url}','${st}')" class="text-xs px-2 py-0.5 rounded-full border transition-colors ${j.status===st?(sc[st]||'')+' border-transparent':'text-gray-400 border-gray-200 hover:border-green-700'}">${st}</button>`).join('')}</div></div>`).join('');}
+function renderRJ(jobs){const c=document.getElementById('rj');if(!jobs.length){c.innerHTML='<p class="text-xs text-gray-400 px-2 py-1 italic">None yet</p>';return;}c.innerHTML=jobs.slice(0,5).map(j=>`<button onclick="openTab('jobs')" class="nl w-full text-xs"><span style="color:var(--wf)">&#9733;</span><span class="truncate">${esc(j.company||'')} · ${esc((j.title||'').substring(0,16))}...</span></button>`).join('');}
+async function delJob(url){await fetch('/api/track-job',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,job:{url}})});await loadJ();toast('Removed');}
+async function setJS(url,status){await fetch('/api/update-job-status',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,url,status})});await loadJ();}
+
+/* ─── VAULT ──────────────────────────────────────────────────────────────── */
+async function loadD(){try{const d=await(await fetch(`/api/get-documents?user_id=${uid}`)).json();allD=d.documents||[];allR=d.reports||[];renderD([...allD,...allR]);}catch(e){}}
+function filtD(t){document.querySelectorAll('[id^="df-"]').forEach(b=>b.classList.remove('on'));document.getElementById('df-'+t)?.classList.add('on');const l=t==='all'?[...allD,...allR]:t==='cv'?allD.filter(d=>d.type==='cv'):allR;renderD(l);}
+function renderD(items){const c=document.getElementById('dl');if(!items.length){c.innerHTML='<div class="py-8 text-center px-5"><p class="text-sm text-gray-400">No documents yet.</p></div>';return;}c.innerHTML=items.map(d=>{const id=d.id||d.path||'';return`<div class="dr hg group"><span class="i" style="font-size:20px;color:${d.type==='cv'?'#991b1b':'#166534'}">${d.type==='cv'?'picture_as_pdf':'monitoring'}</span><div class="flex-1 min-w-0"><p class="text-sm font-semibold text-gray-900 truncate">${esc(d.name||'Document')}</p><p class="text-xs text-gray-400">${esc(d.timestamp||'')}</p></div><div class="flex gap-1 hv">${d.path?`<a href="${d.path}" target="_blank" class="ab" title="View"><span class="i" style="font-size:13px">open_in_new</span></a>`:''}<button onclick="delDoc('${esc(id)}','${d.type||'report'}')" class="ab hover:text-red-500" title="Delete"><span class="i" style="font-size:13px">delete</span></button></div></div>`;}).join('');}
+async function delDoc(id,type){if(!confirm('Delete?'))return;const ep=type==='cv'?'/api/delete-document':'/api/delete-report';const k=type==='cv'?'doc_id':'report_id';await fetch(ep,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,[k]:id})});await loadD();toast('Deleted');}
+
+/* ─── COACHING ───────────────────────────────────────────────────────────── */
+async function loadCoach(){try{coachD=await(await fetch(`/api/coaching-prompts?user_id=${uid}`)).json();renderCoach('General');}catch(e){}}
+function setCoach(tab){document.querySelectorAll('[id^="ct-"]').forEach(b=>b.classList.remove('on'));document.getElementById('ct-'+tab)?.classList.add('on');renderCoach(tab);const ip=document.getElementById('interview-practice');if(ip){ip.classList.toggle('hidden',tab!=='Interview');if(tab==='Interview')fillMiJobSelect();}}
+function fillMiJobSelect(){const sel=document.getElementById('mi-job');if(!sel)return;const cur=sel.value;sel.innerHTML='<option value="">General practice (no specific posting)</option>'+allJ.map(j=>`<option value="${esc(j.url)}">${esc(j.title)}${j.company?' — '+esc(j.company):''}</option>`).join('');sel.value=cur||'';}
+async function startMockInterview(){const jobUrl=document.getElementById('mi-job')?.value||'';toast('Preparing your mock interview…');try{const d=await(await fetch('/api/mock-interview',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,job_url:jobUrl})})).json();if(d.success&&d.session)renderInterviewSession(d.session);else toast('Could not generate interview questions');}catch(e){toast('Network error starting interview');}}
+function renderInterviewSession(s){const c=document.getElementById('interview-session');if(!c)return;c.classList.remove('hidden');const head=`<p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Practicing for: ${esc(s.job_title||'')}</p>`;const qs=(s.questions||[]).map((q,i)=>`<div class="bg-white border border-gray-100 rounded-xl p-4 shadow-sm" data-q="${esc(q.question||'')}"><p class="text-sm font-semibold text-gray-900 mb-1">${i+1}. ${esc(q.question||'')}</p>${q.what_good_looks_like?`<p class="text-xs text-gray-400 mb-2">💡 ${esc(q.what_good_looks_like)}</p>`:''}<textarea class="fb w-full text-xs mi-answer" rows="3" placeholder="Type your practice answer..."></textarea><div class="flex justify-end mt-2"><button onclick="getInterviewFeedback('${s.id}',this)" class="text-xs px-3 py-1.5 rounded-lg font-semibold text-white" style="background:var(--g)">Get feedback</button></div><div class="mi-feedback text-xs text-gray-600 mt-2 leading-relaxed hidden"></div></div>`).join('');c.innerHTML=head+'<div class="space-y-3 mt-2">'+qs+'</div>';}
+async function getInterviewFeedback(sessionId,btn){const card=btn.closest('[data-q]');const question=card.dataset.q;const answer=card.querySelector('.mi-answer').value.trim();if(!answer){toast('Write an answer first');return;}const orig=btn.textContent;btn.disabled=true;btn.textContent='Thinking...';try{const d=await(await fetch('/api/interview-feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,session_id:sessionId,question,answer})})).json();const fb=card.querySelector('.mi-feedback');if(d.success){fb.textContent=d.feedback;fb.classList.remove('hidden');}else toast('Could not get feedback');}catch(e){toast('Network error getting feedback');}btn.disabled=false;btn.textContent=orig;}
+function renderCoach(tab){const cards=coachD[tab]||[];const c=document.getElementById('cc');if(!cards.length){c.innerHTML='<p class="text-sm text-gray-400 text-center py-8">Loading coaching options...</p>';return;}c.innerHTML=cards.map(card=>`<div onclick="beginCoach(${JSON.stringify(card).replace(/"/g,'&quot;')})" class="bg-white border border-gray-100 rounded-xl p-4 hover:shadow-sm cursor-pointer hg group transition-all"><div class="flex items-start gap-3"><div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:var(--sc)"><span class="i if" style="font-size:20px;color:var(--g)">${card.icon||'psychology'}</span></div><div class="flex-1"><h4 class="text-sm font-semibold text-gray-900 mb-0.5">${esc(card.title)}</h4><p class="text-xs text-gray-500 leading-relaxed">${esc(card.desc)}</p></div></div><div class="flex justify-end mt-2"><span class="text-xs font-semibold flex items-center gap-1" style="color:var(--g)">Begin <span class="i" style="font-size:12px">arrow_forward</span></span></div></div>`).join('');}
+function beginCoach(card){if(card.action==='upload_cv'){triggerCV();return;}openTab('snap');sendMsg(card.prompt);}
+
+/* ─── SAVED ──────────────────────────────────────────────────────────────── */
+async function loadSaved(){try{const d=await(await fetch(`/api/get-saved?user_id=${uid}`)).json();saved=d.items||[];folders=d.folders||[];renderSaved(saved);renderFolderTabs();}catch(e){}}
+function filtS(fid){document.querySelectorAll('[id^="sf-"]').forEach(b=>b.classList.remove('on'));document.getElementById('sf-'+fid)?.classList.add('on');renderSaved(fid==='all'?saved:saved.filter(i=>i.folder_id===fid||i.type===fid));}
+function renderFolderTabs(){document.getElementById('ftabs').innerHTML=folders.map(f=>`<button onclick="filtS('${f.id}')" id="sf-${f.id}" class="st" style="color:${f.colour}"><span style="width:6px;height:6px;border-radius:50%;background:${f.colour};display:inline-block"></span>${esc(f.name)}<span onclick="event.stopPropagation();delFolder('${f.id}')" class="ml-1 text-gray-400 hover:text-red-400 cursor-pointer">x</span></button>`).join('');}
+function renderSaved(items){const c=document.getElementById('svd');if(!items.length){c.innerHTML='<div class="py-10 text-center"><span class="i text-4xl text-gray-200 block mb-2">bookmark</span><p class="text-sm text-gray-400">Nothing saved yet.</p></div>';return;}c.innerHTML=items.map(item=>`<div class="rc hg mb-2 group"><button onclick="delSaved('${item.id}')" class="hv absolute top-2 right-2 ab text-gray-300 hover:text-red-500"><span class="i" style="font-size:12px">close</span></button><div class="flex items-start gap-2 pr-6"><span class="i" style="font-size:16px;color:var(--g)">${item.type==='resource'?'link':item.type==='job'?'work':item.type==='note'?'note':'chat'}</span><div class="flex-1 min-w-0"><p class="text-sm font-medium text-gray-900 truncate">${esc(item.title||'Saved item')}</p>${item.url?`<a href="${esc(item.url)}" target="_blank" class="text-xs hover:underline truncate block" style="color:var(--g)">${esc(item.url.substring(0,50))}</a>`:''}<p class="text-xs text-gray-400 mt-0.5">${new Date(item.saved_at||Date.now()).toLocaleDateString('en-GB')}</p></div></div>${folders.length?`<div class="flex gap-1.5 mt-2 flex-wrap">${folders.map(f=>`<button onclick="moveSaved('${item.id}','${f.id}')" class="text-xs px-2 py-0.5 rounded-full border" style="border-color:${f.colour}20;color:${f.colour}">F ${esc(f.name)}</button>`).join('')}</div>`:''}</div>`).join('');}
+async function saveItem(item){item.user_id=uid;item.saved_at=new Date().toISOString();const fid=folders.length?await pickFld():item.folder_id||'default';item.folder_id=fid;await fetch('/api/save-item',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,item})});await loadSaved();toast('Saved');}
+async function delSaved(id){await fetch('/api/delete-saved',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,item_id:id})});await loadSaved();}
+async function moveSaved(id,fid){const i=saved.find(x=>x.id===id);if(!i)return;i.folder_id=fid;await fetch('/api/save-item',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,item:i})});await loadSaved();}
+function pickFld(){return new Promise(res=>{if(!folders.length){res('default');return;}const m=document.createElement('div');m.className='fixed inset-0 z-50 flex items-center justify-center';m.innerHTML='<div class="absolute inset-0 bg-black/30" onclick="this.parentElement.remove()"></div><div class="relative bg-white rounded-xl shadow-2xl p-4 w-52 z-10"><p class="text-xs font-semibold text-gray-500 uppercase mb-3">Save to</p><button data-fid="default" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-50 rounded-lg mb-1">Default</button>'+folders.map(f=>`<button data-fid="${f.id}" class="w-full text-left px-3 py-2 text-sm hover:bg-gray-50 rounded-lg mb-1" style="color:${f.colour}">${esc(f.name)}</button>`).join('')+'</div>';m.querySelectorAll('[data-fid]').forEach(b=>b.addEventListener('click',()=>{res(b.dataset.fid);m.remove();}));document.body.appendChild(m);});}
+function showFolderModal(){document.getElementById('fm').classList.remove('hidden');}
+async function createFolder(){const n=document.getElementById('fni').value.trim();if(!n)return;await fetch('/api/create-folder',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,name:n,colour:fc})});document.getElementById('fm').classList.add('hidden');document.getElementById('fni').value='';await loadSaved();toast('Folder created');}
+async function delFolder(id){await fetch('/api/delete-folder',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,folder_id:id})});await loadSaved();}
+
+/* ─── BADGES ─────────────────────────────────────────────────────────────── */
+const BD=[{k:'first_step',t:'First Step',d:'Started your journey',ic:'forest',x:50},{k:'cv_hero',t:'CV Hero',d:'Uploaded your CV',ic:'description',x:50},{k:'skill_spark',t:'Skill Spark',d:'Completed first skill',ic:'bolt',x:100},{k:'road_builder',t:'Road Builder',d:'Generated a roadmap',ic:'route',x:60},{k:'job_hunter',t:'Job Hunter',d:'Tracked 5+ roles',ic:'work',x:75},{k:'week_warrior',t:'Week Warrior',d:'7-day streak',ic:'local_fire_department',x:150},{k:'deep_thinker',t:'Deep Thinker',d:'Coaching session done',ic:'psychology',x:25},{k:'triple_threat',t:'Triple Act',d:'3 courses completed',ic:'school',x:75},{k:'trailblazer',t:'Trailblazer',d:'Reached 500 XP',ic:'emoji_events',x:0},{k:'applicant',t:'Applicant',d:'Applied to 5 roles',ic:'send',x:50},{k:'resourceful',t:'Resourceful',d:'Saved 10+ resources',ic:'inventory_2',x:30}];
+async function loadBadges(){try{const d=await(await fetch(`/api/get-journey?user_id=${uid}`)).json();renderBadges(d.journey?.milestones||[],d.xp||0,d.level||1);}catch(e){}}
+function renderBadges(ms,xp,level){const earned=ms.map(m=>m.badge_key).filter(Boolean);const xi=xp%200;document.getElementById('blv').textContent=level;document.getElementById('bxp').textContent=xp+' XP';document.getElementById('bxf').style.width=Math.min(xi/2,100)+'%';document.getElementById('bnxt').textContent=(200-xi)+' XP to level '+(level+1);document.getElementById('bg').innerHTML=BD.map(b=>{const e=earned.includes(b.k);return`<div class="bt ${e?'on':'off'}"><div class="w-12 h-12 rounded-xl mx-auto flex items-center justify-center mb-2" style="background:${e?'var(--g)':'#f3f4f6'}"><span class="i if" style="font-size:22px;color:${e?'white':'#9ca3af'}">${b.ic}</span></div><p class="text-xs font-bold mb-0.5" style="color:${e?'var(--g)':'#9ca3af'}">${b.t}</p><p class="text-xs text-gray-400 leading-snug">${b.d}</p>${e?`<span class="mt-1.5 inline-block text-xs font-bold px-2 py-0.5 rounded-full text-white" style="background:var(--g)">+${b.x}XP</span>`:`<span class="mt-1.5 inline-block text-xs text-gray-400">${b.x?b.x+' XP needed':'Complete task'}</span>`}</div>`;}).join('');}
+
+/* ─── STICKY NOTES ───────────────────────────────────────────────────────── */
+const NC=['#fef3c7','#dcfce7','#dbeafe','#fce7f3','#ede9fe'];
+function toggleSticky(){const p=document.getElementById('stp');p.classList.toggle('hidden');if(!p.classList.contains('hidden'))loadNotes();}
+async function loadNotes(){try{notes=(await(await fetch(`/api/get-notes?user_id=${uid}`)).json()).notes||[];renderNotes();}catch(e){}}
+function renderNotes(){const c=document.getElementById('nl2');if(!notes.length){c.innerHTML='<p class="text-xs text-gray-400 text-center">No notes yet.</p>';return;}c.innerHTML=notes.map(n=>`<div class="sn" style="background:${n.colour||'#fef3c7'}"><div class="flex justify-between items-center mb-1.5"><span class="text-xs text-gray-500">${new Date(n.updated_at||n.created_at||Date.now()).toLocaleDateString('en-GB')}</span><div class="flex gap-1"><button onclick="saveItem({type:'note',title:this.closest('.sn').querySelector('textarea').value.substring(0,60)||'Note',url:'',folder_id:'notes'})" class="text-gray-400 hover:text-green-700" title="Save"><span class="i" style="font-size:12px">bookmark</span></button><button onclick="deleteNote('${n.id}')" class="text-gray-400 hover:text-red-500 text-xs">x</button></div></div><textarea onblur="saveNote('${n.id}',this.value,'${n.colour||'#fef3c7'}')" style="background:${n.colour||'#fef3c7'}" class="sn textarea w-full">${esc(n.content)}</textarea><div class="flex gap-1.5 mt-2">${NC.map(col=>`<button onclick="saveNote('${n.id}',this.closest('.sn').querySelector('textarea').value,'${col}');this.closest('.sn').style.background='${col}';this.closest('.sn').querySelector('textarea').style.background='${col}'" class="w-3.5 h-3.5 rounded-full border border-white/40" style="background:${col}"></button>`).join('')}</div></div>`).join('');}
+async function addNote(){const col=NC[Math.floor(Math.random()*NC.length)];await fetch('/api/save-note',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,content:'',colour:col})});await loadNotes();}
+async function saveNote(id,content,colour){await fetch('/api/save-note',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,id,content,colour})});}
+async function deleteNote(id){await fetch('/api/delete-note',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,id})});await loadNotes();}
+
+/* ─── CV ─────────────────────────────────────────────────────────────────── */
+function triggerCV(){document.getElementById('cvf').click();}
+async function handleCV(inp){const f=inp.files[0];if(!f)return;addB('Uploading "'+f.name+'"...','u');setStatus('Reading CV...',true);const tid=showTyping();busy=true;const fd=new FormData();fd.append('file',f);fd.append('user_id',uid);try{const d=await(await fetch('/api/upload-cv',{method:'POST',body:fd})).json();removeTyping(tid);if(d.success){addB(d.message||'CV analysed.','b',true,[],d.path);await Promise.all([loadProf(),loadAsp(),loadD(),loadSnap(),loadJourney()]);if(d.suggestions?.length)renderPills(d.suggestions);const n=(d.gaps||[]).length;if(n){toast(`CV saved — ${n} skill gaps added to My Path`);}else{toast('CV saved');}}else addB('Upload failed: '+(d.message||'Unknown error'),'b');}catch(e){removeTyping(tid);addB('Upload error: '+e.message,'b');}finally{busy=false;setStatus('Ready',false);inp.value='';}}
+
+/* ─── LOCATION ───────────────────────────────────────────────────────────── */
+function showLocModal(){document.getElementById('locm').classList.remove('hidden');}
+function closeLoc(){document.getElementById('locm').classList.add('hidden');}
+async function persistLocation(loc){
+  document.getElementById('loc-bar').classList.remove('hidden');
+  document.getElementById('ld').textContent=loc;
+  if(document.getElementById('pl2'))document.getElementById('pl2').value=loc;
+  if(document.getElementById('loci'))document.getElementById('loci').value=loc;
+  try{
+    const r=await fetch('/api/save-location',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,location:loc})});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    return true;
+  }catch(e){toast('Saved locally — will retry syncing location');return false;}
+}
+async function saveLocManual(){
+  const loc=document.getElementById('loci').value.trim();
+  if(!loc){toast('Please enter a location');return;}
+  closeLoc(); // close immediately so the UI never gets stuck waiting on the network
+  const ok=await persistLocation(loc);
+  if(ok)toast('Location saved: '+loc);
+}
+function detectLoc(){
+  if(!navigator.geolocation){showLocModal();toast('Location detection not supported — enter manually');return;}
+  navigator.geolocation.getCurrentPosition(async pos=>{
+    closeLoc(); // close as soon as we have a position; geocoding happens in the background
+    try{
+      const r=await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&format=json`);
+      const data=await r.json();
+      const loc=data.address?.postcode||data.address?.suburb||data.address?.city_district||data.address?.city||'London, UK';
+      const ok=await persistLocation(loc);
+      if(ok)toast('Location: '+loc);
+    }catch{toast('Could not detect location automatically — please enter it manually');showLocModal();}
+  },()=>{toast('Location permission denied — enter manually');showLocModal();});
+}
+
+/* ─── EXPORT ─────────────────────────────────────────────────────────────── */
+async function expMsg(mid,fmt){const el=document.getElementById(mid);if(!el)return;await doExport(el.innerText,'Message',fmt);}
+async function expChat(fmt){const els=[...document.getElementById('msgs').querySelectorAll('.bu,.bb')];const text=els.map(e=>e.classList.contains('bu')?'You: '+e.innerText:'Assistant: '+e.innerText).join('\n\n');await doExport(text,'Chat Export',fmt);}
+async function expSec(tab,fmt){const el=document.getElementById('p-'+tab);await doExport(el?el.innerText:'','Export',fmt);}
+async function doExport(content,title,fmt){try{const r=await fetch('/api/export-content',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid,content,title,format:fmt})});if(r.ok){const blob=await r.blob();const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=title.replace(/[^a-z0-9]/gi,'-')+'.'+fmt;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);toast('Downloaded as .'+fmt);}else toast('Export failed');}catch(e){toast('Export error: '+e.message);}}
+
+/* ─── NAVIGATION ─────────────────────────────────────────────────────────── */
+function setNav(id){document.querySelectorAll('[id^="lnav-"]').forEach(b=>b.classList.remove('on'));document.getElementById('lnav-'+id)?.classList.add('on');const m={chat:'journey',jobs:'jobs',vault:'vault'};openTab(m[id]||'journey');}
+function openTab(tab){const all=['journey','inbox','profile','skills','resources','jobs','vault','coaching','saved','badges'];all.forEach(t=>{document.getElementById('p-'+t)?.classList.add('hidden');document.getElementById('rt-'+t)?.classList.remove('on');});document.getElementById('p-'+tab)?.classList.remove('hidden');document.getElementById('rt-'+tab)?.classList.add('on');if(tab==='jobs')loadJ();if(tab==='vault')loadD();if(tab==='saved')loadSaved();if(tab==='badges')loadBadges();if(tab==='skills'){loadAsp();loadValidations();const s=getChips('sc3');if(s.length)renderSkillValidation(s);}if(tab==='resources')loadRes();if(tab==='journey')loadJourney();if(tab==='coaching')loadCoach();}
+function clearChat(){document.getElementById('msgs').innerHTML='';document.getElementById('ct').textContent='Assistant';clearPills();sendInit();}
+
+/* ─── UI HELPERS ─────────────────────────────────────────────────────────── */
+function showTyping(){const id='t'+Date.now();const c=document.getElementById('msgs');const el=document.createElement('div');el.id=id;el.className='flex justify-start gap-3 su';el.innerHTML=`<div class="ad mt-1 flex-shrink-0"><span class="i if text-white" style="font-size:15px">psychology</span></div><div class="bb flex items-center gap-1.5 py-3"><span class="dt"></span><span class="dt"></span><span class="dt"></span><span id="tl-${id}" class="text-xs text-gray-400 ml-1">Thinking...</span></div>`;c.appendChild(el);c.scrollTop=99999;return id;}
+function updTypLbl(id,t){const l=document.getElementById('tl-'+id);if(l)l.textContent=t;}
+function removeTyping(id){document.getElementById(id)?.remove();}
+function setStatus(t,active){document.getElementById('st').textContent=t;const d=document.getElementById('sd');if(d)d.style.background=active?'#f59e0b':'#22c55e';}
+function togEx(id){const el=document.getElementById(id);if(!el)return;el.classList.toggle('hidden');setTimeout(()=>{document.addEventListener('click',function h(e){if(!el.contains(e.target)){el.classList.add('hidden');}document.removeEventListener('click',h);},{once:true});},10);}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.remove('hidden');setTimeout(()=>t.classList.add('hidden'),2500);}
+function rmd(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\*(.*?)\*/g,'<em>$1</em>').replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>').replace(/^### (.+)$/gm,'<h3>$1</h3>').replace(/^## (.+)$/gm,'<h2>$1</h2>').replace(/^- (.+)$/gm,'<li>$1</li>').replace(/(<li>.*?<\/li>(\n|$))+/gs,m=>`<ul>${m}</ul>`).replace(/\n\n/g,'</p><p>').replace(/\n/g,'<br>');}
+function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/`/g,'&#96;');}
+function logout(){
+  const t=sessionStorage.getItem('session_token');
+  if(t){_origFetch('/api/auth/logout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session_token:t})}).catch(()=>{});}
+  sessionStorage.clear();window.location.href='/';
+}
+async function deleteAccount(){
+  if(!confirm('Delete your Train Garden account? This permanently removes your profile, CV, chat history, saved resources and job tracking. This cannot be undone.'))return;
+  if(!confirm('Are you absolutely sure? Type OK to permanently delete your account.'))return;
+  try{
+    const d=await(await fetch('/api/delete-account',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_id:uid})})).json();
+    if(d.success){sessionStorage.clear();window.location.href='/';}
+    else toast(d.message||'Could not delete account');
+  }catch(e){toast('Network error — try again.');}
+}
+function setupTA(){const ta=document.getElementById('ci');ta.addEventListener('input',()=>rTA(ta));ta.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();handleSend();}});document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();ta.focus();}});}
+function rTA(ta){ta.style.height='0';ta.style.height=Math.min(ta.scrollHeight,112)+'px';}
+function setupDrag(){document.body.addEventListener('dragover',e=>e.preventDefault());document.body.addEventListener('drop',e=>{e.preventDefault();const f=e.dataTransfer.files[0];if(f?.type==='application/pdf'){const i=document.getElementById('cvf');const dt=new DataTransfer();dt.items.add(f);i.files=dt.files;handleCV(i);}});}
+</script>
+</body>
+</html>

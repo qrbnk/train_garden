@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Train Garden — Partner Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
+<style>
+:root{--g:#0A0A0A;--gm:#2D4233;--gd:#000000;--wh:#F9F9F8;--sf:#F9F9F8;--sl:#f3f3f3;--sc:#eeeeee;--sh:#e8e8e8;--os:#1a1c1c;--ov:#44474d;--bd:#E0E0DB;--bm:#74777e;--sb:#e6ebe7;--sf2:#2D4233;--wb:#fef3c7;--wf:#d97706;--ib:#ECE7FF;--if2:#5e39e0;--eb:#ffdad6;--ef:#93000a;--serif:"Source Serif 4",serif;--mono:"JetBrains Mono",monospace;}
+*{font-family:"Hanken Grotesk",sans-serif;box-sizing:border-box;}
+h1,h2,h3,.headline,.title{font-family:var(--serif);letter-spacing:-0.01em;}
+.label-mono{font-family:var(--mono);letter-spacing:0.03em;}
+body{background:var(--sf);color:var(--os);}
+.i{font-family:"Material Symbols Outlined";font-style:normal;font-size:18px;font-variation-settings:"FILL" 0,"wght" 300;user-select:none;line-height:1;display:inline-block;}
+.if{font-variation-settings:"FILL" 1,"wght" 400;}
+.fi{width:100%;border:1px solid var(--bd);background:#fff;font-size:13px;color:var(--os);padding:9px 11px;outline:none;transition:border-color .15s;border-radius:6px;}
+.fi:focus{border-color:var(--g);}
+.hidden{display:none!important;}
+.btn-dark{background:var(--g);color:#fff;padding:11px 22px;font-size:13px;font-weight:600;transition:opacity .15s;border-radius:6px;}
+.btn-dark:hover{opacity:.85;}
+.btn-ghost{border:1px solid var(--bd);padding:10px 20px;font-size:13px;font-weight:600;color:var(--os);transition:all .15s;border-radius:6px;}
+.btn-ghost:hover{border-color:var(--g);}
+.nl{display:flex;align-items:center;gap:8px;padding:9px 12px;font-size:13px;font-weight:500;color:var(--ov);border-radius:8px;transition:all .12s;}
+.nl:hover{background:var(--sl);}
+.nl.on{background:var(--sb);color:var(--sf2);font-weight:600;}
+.card{border:1px solid var(--bd);background:#fff;border-radius:10px;}
+.tag{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:600;background:var(--sb);color:var(--sf2);}
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--g);color:white;padding:10px 18px;font-size:13px;z-index:200;border-radius:8px;}
+.st-badge{padding:2px 8px;border-radius:999px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;}
+.st-draft{background:var(--sc);color:var(--bm)}
+.st-active{background:#dcfce7;color:#166534}
+.st-closed{background:var(--eb);color:var(--ef)}
+.stat{background:#fff;border:1px solid var(--bd);padding:16px;border-radius:8px;}
+.dz{border:1.5px dashed var(--bd);border-radius:8px;padding:28px;text-align:center;cursor:pointer;transition:all .15s;}
+.dz:hover{border-color:var(--g);}
+.fb{width:100%;border:1px solid var(--bd);border-radius:6px;padding:8px 11px;font-size:13px;color:var(--os);outline:none;background:#fff;transition:border-color .15s;}
+.fb:focus{border-color:var(--g);}
+.pl{padding:6px 13px;border-radius:6px;border:1px solid var(--bd);background:#fff;font-size:12px;font-weight:500;color:var(--ov);cursor:pointer;white-space:nowrap;transition:all .15s;}
+.pl:hover{border-color:var(--g);}
+.iconbtn{width:28px;height:28px;background:#fff;border:1px solid var(--bd);border-radius:6px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s;color:var(--ov);}
+.iconbtn.danger:hover{border-color:var(--ef);color:var(--ef);}
+</style>
+</head>
+<body class="text-sm">
+
+<!-- ============================= LOGIN ============================= -->
+<div id="login-screen" class="fixed inset-0 z-50 flex items-center justify-center" style="background:var(--sf)">
+  <div class="w-full max-w-sm px-6">
+    <img src="/static/traingarden_logo.png" alt="Train Garden" class="h-9 w-auto mx-auto mb-5"/>
+    <p class="text-center text-xs font-semibold label-mono mb-1" style="color:var(--ov)">PARTNERS</p>
+    <p class="text-center text-xs mb-6" style="color:var(--ov)">For non-profits, community organisations, government programmes, providers and mentors supporting candidates.</p>
+
+    <div id="login-step-email">
+      <label class="text-xs font-medium block mb-1" style="color:var(--ov)">Work email</label>
+      <input id="login-email" type="email" class="fi mb-4" placeholder="you@organisation.org" onkeydown="if(event.key==='Enter')requestCode();"/>
+      <button onclick="requestCode()" class="w-full py-3 text-sm font-semibold text-white btn-dark">Send access code</button>
+    </div>
+    <div id="login-step-code" class="hidden">
+      <label class="text-xs font-medium block mb-1" style="color:var(--ov)">4-digit code</label>
+      <input id="login-code" maxlength="4" class="fi mb-4 text-center text-lg tracking-widest" placeholder="••••" onkeydown="if(event.key==='Enter')verifyCode();"/>
+      <button onclick="verifyCode()" class="w-full py-3 text-sm font-semibold text-white mb-2 btn-dark">Continue</button>
+      <button onclick="document.getElementById('login-step-code').classList.add('hidden');document.getElementById('login-step-email').classList.remove('hidden');" class="w-full py-2 text-xs" style="color:var(--ov)">Use a different email</button>
+    </div>
+    <p id="login-err" class="text-xs mt-3 text-center hidden" style="color:var(--ef)"></p>
+  </div>
+</div>
+
+<!-- ============================= ONBOARDING ============================= -->
+<div id="onboarding-screen" class="hidden fixed inset-0 z-40 flex items-center justify-center overflow-y-auto py-10" style="background:var(--sf)">
+  <div class="w-full max-w-lg px-6">
+    <p class="label-mono text-xs mb-2" style="color:var(--sf2)">PARTNER ONBOARDING</p>
+    <h1 class="title text-2xl mb-1" style="color:var(--g)">Tell us about your organisation</h1>
+    <p class="text-xs mb-6" style="color:var(--ov)">This helps us connect the right candidates to what you offer.</p>
+
+    <div class="space-y-4">
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Organisation name</label><input id="ob-name" class="fi"/></div>
+      <div>
+        <label class="text-xs font-medium block mb-1" style="color:var(--ov)">Organisation type</label>
+        <select id="ob-type" class="fi">
+          <option value="">Select one...</option>
+          <option value="non_profit">Non-profit / charity</option>
+          <option value="community_org">Community organisation</option>
+          <option value="government_program">Government programme</option>
+          <option value="independent_provider">Independent provider</option>
+          <option value="mentor">Individual mentor</option>
+        </select>
+      </div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Cause areas / focus (comma separated)</label><input id="ob-causes" class="fi" placeholder="e.g. Renewable energy, Youth employment, Net Zero skills"/></div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Website</label><input id="ob-website" class="fi" placeholder="https://"/></div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">HQ location</label><input id="ob-loc" class="fi" placeholder="e.g. London, UK"/></div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">What do you offer candidates?</label><textarea id="ob-desc" rows="3" class="fi resize-none" placeholder="A few words — courses, volunteering, work experience, mentoring, causes to get involved in..."></textarea></div>
+      <button onclick="submitOnboarding()" class="w-full py-3 text-sm font-semibold text-white btn-dark">Continue to dashboard</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= DASHBOARD ============================= -->
+<div id="app" class="hidden flex h-screen w-screen overflow-hidden">
+  <nav class="w-56 flex-shrink-0 bg-white border-r flex flex-col h-full" style="border-color:var(--bd)">
+    <div class="flex items-center gap-2 px-4 py-4 border-b" style="border-color:var(--bd)">
+      <button onclick="openTab('resources')" title="Home"><img src="/static/traingarden_logo.png" alt="Train Garden — Home" class="h-6 w-auto"/></button>
+    </div>
+    <div class="flex-1 px-3 py-3 space-y-0.5">
+      <button onclick="openTab('profile')" id="nav-profile" class="nl w-full"><span class="i" style="font-size:16px">business</span> Profile</button>
+      <button onclick="openTab('resources')" id="nav-resources" class="nl w-full on"><span class="i" style="font-size:16px">inventory_2</span> Resources</button>
+      <button onclick="openTab('skills')" id="nav-skills" class="nl w-full"><span class="i" style="font-size:16px">psychology</span> Skills</button>
+      <button onclick="openTab('connections')" id="nav-connections" class="nl w-full"><span class="i" style="font-size:16px">diversity_3</span> Connections</button>
+    </div>
+    <div class="px-3 pb-3">
+      <button onclick="logout()" class="nl w-full text-gray-400"><span class="i" style="font-size:16px">logout</span> Sign out</button>
+      <button onclick="deleteAccount()" class="nl w-full text-red-400 hover:text-red-500"><span class="i" style="font-size:16px">delete_forever</span> Delete account</button>
+    </div>
+  </nav>
+
+  <main class="flex-1 h-full overflow-y-auto">
+    <!-- PROFILE -->
+    <div id="p-profile" class="hidden p-8 max-w-2xl">
+      <h2 class="title text-xl mb-4" style="color:var(--g)">Organisation profile</h2>
+      <div class="card p-5 space-y-3">
+        <div class="grid grid-cols-2 gap-3">
+          <div><label class="text-xs text-gray-400 mb-1 block">Name</label><input id="pf-name" class="fi"/></div>
+          <div>
+            <label class="text-xs text-gray-400 mb-1 block">Type</label>
+            <select id="pf-type" class="fi">
+              <option value="">Select one...</option>
+              <option value="non_profit">Non-profit / charity</option>
+              <option value="community_org">Community organisation</option>
+              <option value="government_program">Government programme</option>
+              <option value="independent_provider">Independent provider</option>
+              <option value="mentor">Individual mentor</option>
+            </select>
+          </div>
+          <div><label class="text-xs text-gray-400 mb-1 block">HQ location</label><input id="pf-loc" class="fi"/></div>
+          <div><label class="text-xs text-gray-400 mb-1 block">Website</label><input id="pf-web" class="fi" placeholder="https://"/></div>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">Cause areas</label>
+          <div id="pf-causes" class="flex flex-wrap gap-1.5 mb-2"></div>
+          <div class="flex gap-2">
+            <input id="pf-cause-input" class="fi" placeholder="Add a cause area and press Enter" onkeydown="if(event.key==='Enter'){event.preventDefault();addPfCause();}"/>
+            <button onclick="addPfCause()" class="btn-ghost flex-shrink-0">Add</button>
+          </div>
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 mb-1 block">What you offer</label>
+          <textarea id="pf-desc" rows="3" class="fi resize-none"></textarea>
+          <div class="flex items-center gap-2 mt-2">
+            <input id="pf-desc-hint" class="fi" placeholder="Optional: a few words for AI to expand into a sentence"/>
+            <button onclick="aiGeneratePfDesc()" class="btn-ghost flex-shrink-0 flex items-center gap-1"><span class="i" style="font-size:14px">auto_awesome</span>AI generate</button>
+          </div>
+        </div>
+        <button onclick="saveOrgProfile()" class="btn-dark mt-2">Save changes</button>
+      </div>
+
+      <h2 class="title text-xl mb-3 mt-8" style="color:var(--g)">Documents</h2>
+      <div class="card p-5">
+        <div id="cp-dz" class="dz mb-3" onclick="document.getElementById('cp-doc-file').click()">
+          <span class="i block mb-1" style="font-size:22px;color:#9ca3af">upload_file</span>
+          <span class="text-xs" style="color:var(--ov)">Choose or drop a file</span>
+        </div>
+        <input id="cp-doc-file" type="file" class="hidden" onchange="onProfileDocChosen(this)"/>
+        <div id="cp-documents-list" class="space-y-2"></div>
+      </div>
+    </div>
+
+    <!-- RESOURCES -->
+    <div id="p-resources" class="p-8">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="title text-xl" style="color:var(--g)">Resources</h2>
+        <button onclick="showResourceForm()" class="btn-dark">+ New resource</button>
+      </div>
+      <p class="text-xs mb-4" style="color:var(--ov)">Courses, volunteering slots, work-experience placements, events, or causes candidates can be connected to.</p>
+      <div id="resource-list" class="grid grid-cols-2 gap-4"></div>
+    </div>
+
+    <!-- SKILLS (org-wide, independent of any single resource) -->
+    <div id="p-skills" class="hidden p-8">
+      <h2 class="title text-xl mb-1" style="color:var(--g)">Skills</h2>
+      <p class="text-xs mb-6" style="color:var(--ov)">Skills your resources help candidates build, independent of any single resource.</p>
+      <div class="stat mb-5">
+        <p class="font-semibold text-xs mb-2" style="color:var(--ov)">Add a skill</p>
+        <div class="flex gap-2 mb-3">
+          <input id="skill-name-input" class="fi" placeholder="e.g. Carbon accounting" onkeydown="if(event.key==='Enter')addPartnerSkill();"/>
+          <button onclick="addPartnerSkill()" class="pl flex-shrink-0">Add</button>
+        </div>
+        <p class="text-xs mb-2" style="color:var(--bm)">— or upload/paste a document and let AI extract skills —</p>
+        <div id="skills-dz" class="dz mb-2" onclick="document.getElementById('skills-file').click()">
+          <span class="i block mb-1" style="font-size:22px;color:#9ca3af">upload_file</span>
+          <span id="skills-file-name" class="text-xs" style="color:var(--ov)">Choose or drop a PDF</span>
+        </div>
+        <input id="skills-file" type="file" accept=".pdf" class="hidden" onchange="onSkillsFileChosen(this)"/>
+        <textarea id="skills-text" class="fb mb-2" rows="3" placeholder="…or paste text here"></textarea>
+        <div class="flex items-center gap-2 mb-2">
+          <button id="skills-rec-btn" onclick="toggleSkillsRecording()" class="btn-ghost text-xs flex items-center gap-1"><span class="i" style="font-size:15px">mic</span><span id="skills-rec-label">Record instead</span></button>
+          <span id="skills-rec-status" class="text-xs" style="color:var(--bm)"></span>
+        </div>
+        <button id="skills-upload-btn" onclick="submitSkillsUpload()" class="pl">Extract skills</button>
+        <div id="skills-upload-loading" class="hidden text-xs mt-2" style="color:var(--ov)">Extracting skills…</div>
+      </div>
+      <div id="skills-list" class="space-y-2"></div>
+    </div>
+
+    <!-- CONNECTIONS -->
+    <div id="p-connections" class="hidden p-8">
+      <h2 class="title text-xl mb-1" style="color:var(--g)">Connections</h2>
+      <p class="text-xs mb-4" style="color:var(--ov)">Find candidates for a resource, then accept the ones worth connecting with.</p>
+      <div class="stat mb-5">
+        <p class="font-semibold text-xs mb-2" style="color:var(--ov)">Find candidates for a resource</p>
+        <div class="flex gap-2">
+          <select id="conn-resource-select" class="fi"></select>
+          <button onclick="runResourceMatching()" class="pl flex-shrink-0">Find matches</button>
+        </div>
+      </div>
+      <div id="proposed-matches-list" class="space-y-3 mb-6"></div>
+      <h3 class="font-semibold text-sm mb-2" style="color:var(--g)">Existing connections</h3>
+      <div id="connections-list" class="space-y-2"></div>
+    </div>
+  </main>
+</div>
+
+<!-- Resource form modal -->
+<div id="res-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+  <div class="absolute inset-0 bg-black/40" onclick="closeResourceForm()"></div>
+  <div class="relative bg-white rounded-2xl p-6 w-full max-w-md shadow-2xl z-10 max-h-[85vh] overflow-y-auto">
+    <h3 class="font-semibold text-gray-900 mb-3" id="res-modal-title">New resource</h3>
+    <input type="hidden" id="res-id"/>
+    <div class="space-y-3">
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Title</label><input id="res-title" class="fi"/></div>
+      <div>
+        <label class="text-xs font-medium block mb-1" style="color:var(--ov)">Type</label>
+        <select id="res-type" class="fi">
+          <option value="course">Course</option>
+          <option value="volunteering">Volunteering</option>
+          <option value="work_experience">Work experience</option>
+          <option value="event">Event</option>
+          <option value="cause">Cause</option>
+        </select>
+      </div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Description</label><textarea id="res-desc" rows="3" class="fi resize-none"></textarea>
+        <button type="button" onclick="aiAssist('res-desc','resource_description',()=>({title:document.getElementById('res-title')?.value.trim()}))" class="text-xs mt-1.5 flex items-center gap-1" style="color:var(--sf2)"><span class="i" style="font-size:14px">auto_awesome</span>Help me write this</button>
+      </div>
+      <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Skills covered (comma separated)</label><input id="res-skills" class="fi"/></div>
+      <div class="grid grid-cols-2 gap-3">
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Location</label><input id="res-loc" class="fi"/></div>
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Remote policy</label><input id="res-remote" class="fi" placeholder="Remote / Hybrid / In-person"/></div>
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Duration</label><input id="res-duration" class="fi" placeholder="e.g. 6 weeks"/></div>
+        <div><label class="text-xs font-medium block mb-1" style="color:var(--ov)">Capacity</label><input id="res-capacity" class="fi" placeholder="e.g. 15 spots"/></div>
+      </div>
+      <div>
+        <label class="text-xs font-medium block mb-1" style="color:var(--ov)">Status</label>
+        <select id="res-status" class="fi">
+          <option value="draft">Draft</option>
+          <option value="active">Active</option>
+          <option value="closed">Closed</option>
+        </select>
+      </div>
+      <button onclick="saveResource()" class="w-full py-2.5 text-sm font-semibold text-white btn-dark">Save resource</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="hidden"></div>
+
+<script>
+/* ─── STATE ──────────────────────────────────────────────────────────────── */
+let pid = sessionStorage.getItem('partner_id') || '';
+let resources = [];
+
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.remove('hidden');setTimeout(()=>t.classList.add('hidden'),2500);}
+function showLoginErr(msg){const e=document.getElementById('login-err');e.textContent=msg;e.classList.remove('hidden');}
+
+/* ─── AUTH ───────────────────────────────────────────────────────────────── */
+async function requestCode(){
+  const email=document.getElementById('login-email').value.trim();
+  if(!email){showLoginErr('Enter your work email first.');return;}
+  try{
+    const r=await fetch('/api/partner/auth/request',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});
+    const d=await r.json();
+    if(!d.success){showLoginErr(d.message||'Could not send code — try again.');return;}
+    sessionStorage.setItem('pending_email',email);
+    document.getElementById('login-step-email').classList.add('hidden');
+    document.getElementById('login-step-code').classList.remove('hidden');
+    document.getElementById('login-code').focus();
+  }catch(e){showLoginErr('Network error — try again.');}
+}
+
+async function verifyCode(){
+  const email=sessionStorage.getItem('pending_email')||'';
+  const code=document.getElementById('login-code').value.trim();
+  if(!code){showLoginErr('Enter the 4-digit code.');return;}
+  try{
+    const r=await fetch('/api/partner/auth/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,code})});
+    const d=await r.json();
+    if(!d.success){showLoginErr(d.message||'Invalid code');return;}
+    pid=d.partner_id;
+    sessionStorage.setItem('partner_id',pid);
+    sessionStorage.setItem('partner_email',d.email);
+    sessionStorage.removeItem('pending_email');
+    document.getElementById('login-screen').classList.add('hidden');
+    if(!d.onboarding_done){
+      document.getElementById('onboarding-screen').classList.remove('hidden');
+    }else{
+      enterDashboard();
+    }
+  }catch(e){showLoginErr('Network error — try again.');}
+}
+
+function logout(){sessionStorage.clear();window.location.href='/';}
+async function deleteAccount(){
+  if(!confirm('Delete this partner account? This permanently removes your organisation profile, resources and candidate connections. This cannot be undone.'))return;
+  if(!confirm('Are you absolutely sure? This cannot be undone.'))return;
+  try{
+    const d=await(await fetch('/api/partner/delete-account',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({partner_id:pid})})).json();
+    if(d.success){sessionStorage.clear();window.location.href='/';}
+    else alert(d.message||'Could not delete account');
+  }catch(e){alert('Network error — try again.');}
+}
+
+/* ─── DOCUMENTS ──────────────────────────────────────────────────────────── */
+let partnerDocuments = [];
+function renderPartnerDocumentsList(){
+  const el = document.getElementById('cp-documents-list');
+  if(!el) return;
+  if(!partnerDocuments.length){
+    el.innerHTML = '<p class="text-xs italic" style="color:var(--bm)">No documents yet.</p>';
+    return;
+  }
+  el.innerHTML = partnerDocuments.map(doc=>`
+    <div class="flex items-center justify-between px-3 py-2" style="border:1px solid var(--bd);border-radius:6px">
+      <a href="/api/partner/document/${pid}/${doc.id}" target="_blank" rel="noopener" class="flex items-center gap-2 min-w-0 hover:underline" style="color:var(--os)"><span class="i" style="font-size:16px;color:var(--bm)">description</span><span class="text-xs truncate">${esc(doc.name)}</span></a>
+      <button class="iconbtn danger" title="Remove" onclick="removePartnerDoc('${doc.id}')"><span class="i" style="font-size:14px">close</span></button>
+    </div>`).join('');
+}
+async function onProfileDocChosen(input){
+  const file = input.files[0]; if(!file) return;
+  const fd = new FormData(); fd.append('partner_id', pid); fd.append('file', file);
+  try{
+    const d = await (await fetch('/api/partner/upload-document',{method:'POST',body:fd})).json();
+    if(d.success){ partnerDocuments.unshift(d.document); renderPartnerDocumentsList(); toast('Document uploaded'); }
+    else toast(d.message||'Could not upload document');
+  }catch(e){ toast('Network error — try again'); }
+  input.value = '';
+}
+async function removePartnerDoc(id){
+  const d = await (await fetch('/api/partner/remove-document',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({partner_id:pid, document_id:id})})).json();
+  if(d.success){ partnerDocuments = d.documents; renderPartnerDocumentsList(); }
+}
+
+/* ─── SKILLS (org-wide) ──────────────────────────────────────────────────── */
+let partnerSkills = [];
+async function loadPartnerSkills(){
+  try{
+    const d = await (await fetch(`/api/partner/get-skills?partner_id=${pid}`)).json();
+    partnerSkills = d.skills||[];
+  }catch(e){ partnerSkills = []; }
+  renderPartnerSkillsList();
+}
+function renderPartnerSkillsList(){
+  const el = document.getElementById('skills-list');
+  if(!partnerSkills.length){
+    el.innerHTML = '<div class="stat text-center py-10"><span class="i block mb-2" style="font-size:26px;color:var(--bm)">psychology</span><p class="text-xs" style="color:var(--ov)">No skills recorded yet.</p></div>';
+    return;
+  }
+  el.innerHTML = partnerSkills.map(s=>`
+    <div class="stat flex items-center justify-between">
+      <div><p class="text-sm font-semibold">${esc(s.name)}</p><p class="text-xs" style="color:var(--bm)">${esc(s.category||'Uncategorised')} · ${s.source==='upload'?'From upload':'Manually added'}</p></div>
+      <button class="iconbtn danger" title="Remove" onclick="removePartnerSkill('${s.id}')"><span class="i" style="font-size:15px">close</span></button>
+    </div>`).join('');
+}
+async function addPartnerSkill(){
+  const input = document.getElementById('skill-name-input');
+  const name = input.value.trim();
+  if(!name){ toast('Type a skill name first'); return; }
+  const d = await (await fetch('/api/partner/add-skill',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({partner_id:pid, name})})).json();
+  if(d.success){ partnerSkills = d.skills; input.value=''; renderPartnerSkillsList(); toast('Skill added'); }
+  else toast(d.message||'Could not add skill');
+}
+async function removePartnerSkill(id){
+  const d = await (await fetch('/api/partner/remove-skill',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({partner_id:pid, skill_id:id})})).json();
+  if(d.success){ partnerSkills = d.skills; renderPartnerSkillsList(); }
+}
+let skillsFile = null;
+function onSkillsFileChosen(input){
+  skillsFile = input.files[0];
+  document.getElementById('skills-file-name').textContent = skillsFile ? skillsFile.name : 'Choose or drop a PDF';
+}
+let _skillsRecorder=null, _skillsChunks=[], _skillsStream=null;
+async function toggleSkillsRecording(){
+  const label=document.getElementById('skills-rec-label'), status=document.getElementById('skills-rec-status');
+  if(_skillsRecorder && _skillsRecorder.state==='recording'){ _skillsRecorder.stop(); return; }
+  if(!navigator.mediaDevices?.getUserMedia){ toast('Microphone access is not supported in this browser'); return; }
+  try{
+    _skillsStream = await navigator.mediaDevices.getUserMedia({audio:true});
+    _skillsChunks = [];
+    _skillsRecorder = new MediaRecorder(_skillsStream);
+    _skillsRecorder.ondataavailable = e=>{ if(e.data.size>0) _skillsChunks.push(e.data); };
+    _skillsRecorder.onstop = async ()=>{
+      _skillsStream.getTracks().forEach(t=>t.stop());
+      label.textContent='Record instead'; status.textContent='Transcribing…';
+      const blob = new Blob(_skillsChunks, {type:'audio/webm'});
+      const fd = new FormData(); fd.append('audio', blob, 'recording.webm'); fd.append('owner_id', pid);
+      try{
+        const d = await (await fetch('/api/transcribe-audio',{method:'POST',body:fd})).json();
+        if(d.success && d.text){
+          const ta=document.getElementById('skills-text'); ta.value = ta.value ? ta.value+'\n'+d.text : d.text;
+          status.textContent='Transcribed — review below, then Extract skills';
+        } else { status.textContent = d.message || 'Could not transcribe — try again or type it'; }
+      }catch(e){ status.textContent='Network error transcribing — try again'; }
+    };
+    _skillsRecorder.start();
+    label.textContent='Stop recording'; status.textContent='Recording…';
+  }catch(e){ toast('Could not access microphone'); }
+}
+async function submitSkillsUpload(){
+  const text = document.getElementById('skills-text').value.trim();
+  if(!skillsFile && !text){ toast('Add a file or paste some text first'); return; }
+  const btn = document.getElementById('skills-upload-btn'); btn.disabled = true;
+  document.getElementById('skills-upload-loading').classList.remove('hidden');
+  const fd = new FormData();
+  fd.append('partner_id', pid);
+  if(skillsFile) fd.append('file', skillsFile);
+  if(text) fd.append('text', text);
+  try{
+    const d = await (await fetch('/api/partner/upload-skills',{method:'POST',body:fd})).json();
+    document.getElementById('skills-upload-loading').classList.add('hidden');
+    btn.disabled = false;
+    if(d.success){
+      partnerSkills = d.skills;
+      skillsFile = null; document.getElementById('skills-file-name').textContent='Choose or drop a PDF';
+      document.getElementById('skills-text').value='';
+      renderPartnerSkillsList();
+      toast(`Extracted ${d.added.length} skill(s)`);
+    } else toast(d.message||'Could not extract skills');
+  }catch(e){
+    document.getElementById('skills-upload-loading').classList.add('hidden');
+    btn.disabled = false;
+    toast('Network error — try again');
+  }
+}
+
+/* ─── CONNECTIONS / MATCHING ─────────────────────────────────────────────── */
+window._resourceProposed = [];
+function populateConnResourceSelect(){
+  const sel = document.getElementById('conn-resource-select');
+  if(!sel) return;
+  sel.innerHTML = resources.map(r=>`<option value="${r.id}">${esc(r.title||r.resource_type)}</option>`).join('') || '<option value="">No resources yet</option>';
+}
+async function runResourceMatching(){
+  const rid = document.getElementById('conn-resource-select').value;
+  if(!rid){ toast('Add a resource first'); return; }
+  try{
+    const r = await fetch('/api/partner/generate-matches', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({partner_id: pid, resource_id: rid})});
+    const d = await r.json();
+    if(!d.success){ toast(d.message||'Could not run matching'); return; }
+    window._resourceProposed = (d.proposed_candidates||[]).map(c=>({...c, _resourceId: rid}));
+    toast(window._resourceProposed.length ? `Found ${window._resourceProposed.length} candidate(s)` : (d.diagnosis||'No matches found'));
+    renderProposedMatches();
+  }catch(e){ toast('Network error running matching'); }
+}
+function renderProposedMatches(){
+  const el = document.getElementById('proposed-matches-list');
+  const list = window._resourceProposed||[];
+  if(!list.length){ el.innerHTML=''; return; }
+  el.innerHTML = list.map(c=>{
+    const cand = c.candidate||{};
+    const reasons = (c.match_reasons||[]).join(' ');
+    return `<div class="card p-4 flex items-start justify-between gap-3">
+      <div class="min-w-0">
+        <div class="flex items-center gap-2"><p class="text-sm font-semibold truncate">${esc(cand.name||'Candidate')}</p><span class="tag">${c.match_pct}%</span></div>
+        <p class="text-xs truncate" style="color:var(--bm)">${esc(cand.headline||cand.target_role||cand.sector||'')}</p>
+        <p class="text-xs mt-1" style="color:var(--ov)">${esc(reasons).slice(0,160)}</p>
+      </div>
+      <button class="btn-ghost flex-shrink-0" onclick="acceptConnection('${cand.user_id}','${c._resourceId}',${c.match_pct},${JSON.stringify(c.match_reasons||[]).replace(/"/g,'&quot;')})">Connect</button>
+    </div>`;
+  }).join('');
+}
+async function acceptConnection(uid, rid, matchPct, matchReasons){
+  try{
+    const r = await fetch('/api/partner/add-connection',{method:'POST',headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({partner_id: pid, resource_id: rid, candidate_user_id: uid, match_pct: matchPct, match_reasons: matchReasons})});
+    const d = await r.json();
+    if(!d.success){ toast(d.message||'Could not connect'); return; }
+    window._resourceProposed = (window._resourceProposed||[]).filter(c=>c.candidate?.user_id!==uid);
+    renderProposedMatches();
+    loadConnections();
+    toast('Connected');
+  }catch(e){ toast('Network error — try again'); }
+}
+async function loadConnections(){
+  populateConnResourceSelect();
+  try{
+    const d = await (await fetch(`/api/partner/get-connections?partner_id=${pid}`)).json();
+    renderConnectionsList(d.connections||[]);
+  }catch(e){ renderConnectionsList([]); }
+}
+function renderConnectionsList(conns){
+  const el = document.getElementById('connections-list');
+  if(!conns.length){ el.innerHTML = '<p class="text-xs italic text-gray-400">No connections yet.</p>'; return; }
+  el.innerHTML = conns.map(c=>`
+    <div class="stat flex items-center justify-between">
+      <div><p class="text-sm font-semibold">${esc(c.candidate_name||'Candidate')}</p><p class="text-xs" style="color:var(--bm)">${esc(c.resource_title||'')} · ${c.match_pct||0}% · ${esc(c.status||'')}</p></div>
+    </div>`).join('');
+}
+
+/* ─── ONBOARDING ─────────────────────────────────────────────────────────── */
+async function submitOnboarding(){
+  const body={
+    partner_id: pid,
+    org_name: document.getElementById('ob-name').value.trim(),
+    org_type: document.getElementById('ob-type').value,
+    cause_areas: document.getElementById('ob-causes').value.split(',').map(s=>s.trim()).filter(Boolean),
+    website: document.getElementById('ob-website').value.trim(),
+    hq_location: document.getElementById('ob-loc').value.trim(),
+    description: document.getElementById('ob-desc').value.trim()
+  };
+  if(!body.org_name || !body.org_type || !body.hq_location){toast('Name, type and location are required');return;}
+  try{
+    const d=await(await fetch('/api/partner/onboarding',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})).json();
+    if(d.success){document.getElementById('onboarding-screen').classList.add('hidden');enterDashboard();}
+  }catch(e){toast('Network error — try again.');}
+}
+
+/* ─── DASHBOARD ──────────────────────────────────────────────────────────── */
+async function enterDashboard(){
+  document.getElementById('app').classList.remove('hidden');
+  await Promise.all([loadProfile(), loadResources()]);
+  openTab('resources');
+}
+
+function openTab(tab){
+  ['profile','resources','skills','connections'].forEach(t=>{
+    document.getElementById('p-'+t)?.classList.add('hidden');
+    document.getElementById('nav-'+t)?.classList.remove('on');
+  });
+  document.getElementById('p-'+tab)?.classList.remove('hidden');
+  document.getElementById('nav-'+tab)?.classList.add('on');
+  if(tab==='skills') loadPartnerSkills();
+  if(tab==='connections') loadConnections();
+}
+
+async function loadProfile(){
+  try{
+    const d=await(await fetch(`/api/partner/get-profile?partner_id=${pid}`)).json();
+    const p=d.profile||{};
+    document.getElementById('pf-name').value=p.org_name||'';
+    document.getElementById('pf-type').value=p.org_type||'';
+    document.getElementById('pf-loc').value=p.hq_location||'';
+    document.getElementById('pf-web').value=p.website||'';
+    document.getElementById('pf-desc').value=p.description||'';
+    window._pfCauses = (p.cause_areas||[]).slice();
+    renderPfCauses();
+    partnerDocuments = d.documents||[];
+    renderPartnerDocumentsList();
+  }catch(e){}
+}
+
+function renderPfCauses(){
+  const el = document.getElementById('pf-causes');
+  el.innerHTML = (window._pfCauses||[]).map((c,i)=>`<span class="tag">${esc(c)}<span class="rm" style="cursor:pointer;margin-left:4px" onclick="removePfCause(${i})">✕</span></span>`).join('') || '<span class="text-xs text-gray-400">None added yet.</span>';
+}
+function addPfCause(){
+  const inp = document.getElementById('pf-cause-input');
+  const val = inp.value.trim();
+  if(!val) return;
+  window._pfCauses = window._pfCauses||[];
+  if(!window._pfCauses.includes(val)) window._pfCauses.push(val);
+  inp.value = '';
+  renderPfCauses();
+}
+function removePfCause(i){
+  window._pfCauses.splice(i,1);
+  renderPfCauses();
+}
+async function aiGeneratePfDesc(){
+  const hint = document.getElementById('pf-desc-hint').value.trim();
+  const name = document.getElementById('pf-name').value.trim();
+  const org_type = document.getElementById('pf-type').value;
+  if(!hint && !name && !org_type){ toast('Add an org name or a few words first'); return; }
+  try{
+    const d = await (await fetch('/api/partner/ai-generate-description',{method:'POST',headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({hint, name, org_type})})).json();
+    if(d.success){ document.getElementById('pf-desc').value = d.description; }
+    else toast(d.message||'Could not generate that');
+  }catch(e){ toast('Network error — try again'); }
+}
+
+/* ─── GENERIC "AI HELP ME WRITE THIS" ────────────────────────────────────────
+   Reusable for any free-text field: pass the field id, a `kind` matching a
+   prompt on the backend, and a small context object of nearby fields so the
+   generation is grounded in what's already been entered. */
+async function aiAssist(fieldId, kind, contextFn){
+  const btn = event.target.closest('button');
+  const field = document.getElementById(fieldId);
+  if(!field) return;
+  if(btn) btn.disabled = true;
+  const orig = btn ? btn.innerHTML : '';
+  if(btn) btn.innerHTML = '<span class="i" style="font-size:14px">hourglass_empty</span>Writing…';
+  try{
+    const context = contextFn ? contextFn() : {};
+    const d = await (await fetch('/api/ai-assist',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({kind, hint: field.value.trim(), context})})).json();
+    if(d.success) field.value = d.text;
+    else toast(d.message||'Could not generate that');
+  }catch(e){ toast('Network error — try again'); }
+  if(btn){ btn.disabled = false; btn.innerHTML = orig; }
+}
+async function saveOrgProfile(){
+  const body = {
+    partner_id: pid,
+    org_name: document.getElementById('pf-name').value.trim(),
+    org_type: document.getElementById('pf-type').value,
+    hq_location: document.getElementById('pf-loc').value.trim(),
+    website: document.getElementById('pf-web').value.trim(),
+    description: document.getElementById('pf-desc').value.trim(),
+    cause_areas: window._pfCauses||[]
+  };
+  try{
+    const d = await (await fetch('/api/partner/onboarding',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})).json();
+    if(d.success) toast('Profile updated');
+    else toast('Could not save changes');
+  }catch(e){ toast('Network error — try again'); }
+}
+
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+async function loadResources(){
+  try{
+    const d=await(await fetch(`/api/partner/get-resources?partner_id=${pid}`)).json();
+    resources=d.resources||[];
+    renderResources();
+  }catch(e){}
+}
+
+function renderResources(){
+  const c=document.getElementById('resource-list');
+  if(!resources.length){c.innerHTML='<div class="col-span-2 py-10 text-center card"><span class="i text-4xl block mb-2" style="color:var(--bd)">inventory_2</span><p class="text-sm text-gray-400">No resources yet — add your first one.</p></div>';return;}
+  c.innerHTML=resources.map(r=>`
+    <div class="card p-4">
+      <div class="flex items-start justify-between mb-1.5">
+        <h4 class="text-sm font-semibold text-gray-900">${esc(r.title||'Untitled')}</h4>
+        <span class="st-badge st-${esc(r.status||'draft')}">${esc(r.status||'draft')}</span>
+      </div>
+      <p class="text-xs text-gray-400 mb-2">${esc((r.resource_type||'').replace('_',' '))}${r.location?' · '+esc(r.location):''}</p>
+      <p class="text-xs text-gray-600 leading-relaxed mb-3">${esc(r.description||'')}</p>
+      <div class="flex flex-wrap gap-1 mb-3">${(r.skills||[]).map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
+      <button onclick="editResource('${r.id}')" class="text-xs font-medium hover:underline" style="color:var(--g)">Edit</button>
+    </div>
+  `).join('');
+}
+
+function showResourceForm(){
+  document.getElementById('res-modal-title').textContent='New resource';
+  document.getElementById('res-id').value='';
+  ['res-title','res-desc','res-skills','res-loc','res-remote','res-duration','res-capacity'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('res-type').value='course';
+  document.getElementById('res-status').value='draft';
+  document.getElementById('res-modal').classList.remove('hidden');
+}
+function closeResourceForm(){document.getElementById('res-modal').classList.add('hidden');}
+
+function editResource(rid){
+  const r=resources.find(x=>x.id===rid);
+  if(!r)return;
+  document.getElementById('res-modal-title').textContent='Edit resource';
+  document.getElementById('res-id').value=r.id;
+  document.getElementById('res-title').value=r.title||'';
+  document.getElementById('res-type').value=r.resource_type||'course';
+  document.getElementById('res-desc').value=r.description||'';
+  document.getElementById('res-skills').value=(r.skills||[]).join(', ');
+  document.getElementById('res-loc').value=r.location||'';
+  document.getElementById('res-remote').value=r.remote_policy||'';
+  document.getElementById('res-duration').value=r.duration||'';
+  document.getElementById('res-capacity').value=r.capacity||'';
+  document.getElementById('res-status').value=r.status||'draft';
+  document.getElementById('res-modal').classList.remove('hidden');
+}
+
+async function saveResource(){
+  const rid=document.getElementById('res-id').value;
+  const body={
+    partner_id: pid,
+    title: document.getElementById('res-title').value.trim(),
+    resource_type: document.getElementById('res-type').value,
+    description: document.getElementById('res-desc').value.trim(),
+    skills: document.getElementById('res-skills').value.split(',').map(s=>s.trim()).filter(Boolean),
+    location: document.getElementById('res-loc').value.trim(),
+    remote_policy: document.getElementById('res-remote').value.trim(),
+    duration: document.getElementById('res-duration').value.trim(),
+    capacity: document.getElementById('res-capacity').value.trim(),
+    status: document.getElementById('res-status').value
+  };
+  if(!body.title){toast('Give the resource a title');return;}
+  try{
+    const url = rid ? '/api/partner/update-resource' : '/api/partner/add-resource';
+    if(rid) body.resource_id = rid;
+    const d=await(await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})).json();
+    if(d.success){closeResourceForm();toast(rid?'Resource updated':'Resource added');await loadResources();}
+  }catch(e){toast('Network error — try again.');}
+}
+
+/* ─── INIT ───────────────────────────────────────────────────────────────── */
+window.addEventListener('DOMContentLoaded',()=>{
+  if(pid){
+    document.getElementById('login-screen').classList.add('hidden');
+    enterDashboard();
+  }
+});
+</script>
+</body>
+</html>

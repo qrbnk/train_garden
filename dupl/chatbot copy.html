@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/><title>Train Garden | AI Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .hide { display: none !important; }
+        .sidebar-item:hover { background: white; border-color: #e2e8f0; }
+        /* Custom scrollbar for suggestions */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .sidebar-item { position: relative; group; }
+.item-actions { 
+    display: none; 
+    position: absolute; right: 8px; top: 50%; 
+    transform: translateY(-50%); gap: 4px;
+}
+.sidebar-item:hover .item-actions { display: flex; }
+.pin-active { color: #f59e0b !important; font-variation-settings: 'FILL' 1; }
+.delete-btn:hover { color: #ef4444; }
+    </style>
+</head>
+<body class="overflow-hidden">
+
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-gray-100 px-8 h-16 flex items-center justify-between">
+    <div class="font-extrabold text-[#091747] text-xl">TRAIN GARDEN</div>
+    <div id="user-display" class="text-sm text-slate-400 italic">No Active Session</div>
+</nav>
+
+<main class="pt-16 h-screen flex">
+    <section class="w-64 bg-slate-50 border-r border-slate-200 flex flex-col p-4">
+        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Memory Vault</div>
+        <div id="history-list" class="flex-1 overflow-y-auto space-y-1"></div>
+    </section>
+
+    <section class="w-[420px] border-r border-slate-200 bg-white flex flex-col">
+        <div id="chat-window" class="flex-1 p-6 overflow-y-auto space-y-4"></div>
+        
+        <div class="p-4 bg-slate-50 border-t">
+            <div id="suggestions-bar" class="hide flex gap-2 overflow-x-auto no-scrollbar mb-3">
+                <button onclick="triggerCVUpload()" class="whitespace-nowrap px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-[11px] font-bold border border-blue-100 hover:bg-blue-100 transition-all">
+                    📁 Scan CV for Gaps
+                </button>
+                <button onclick="handleSuggestion('Create a 5-day roadmap ')" class="whitespace-nowrap px-3 py-1.5 bg-white text-slate-600 rounded-full text-[11px] font-semibold border border-slate-200 hover:bg-slate-100">
+                    🗺️ Learning Roadmap
+                </button>
+                <button onclick="handleSuggestion('What are typical interview questions for this?')" class="whitespace-nowrap px-3 py-1.5 bg-white text-slate-600 rounded-full text-[11px] font-semibold border border-slate-200 hover:bg-slate-100">
+                    ❓ Interview Prep
+                </button>
+            </div>
+
+<div id="panel-auth" class="space-y-4 p-4 bg-white rounded-2xl border border-slate-100">
+    <div id="auth-email-step">
+        <p class="text-xs text-slate-500 mb-3">Enter your email to receive a secure magic code.</p>
+        <input type="email" id="reg-email" placeholder="dashalolvakulenko@gmail.com" class="w-full p-3 rounded-xl border text-sm mb-3">
+        <button onclick="sendMagicLink()" class="w-full bg-[#091747] text-white py-3 rounded-xl font-bold hover:bg-slate-800 transition-all">
+            Send Magic Link
+        </button>
+    </div>
+    
+    <div id="auth-token-step" class="hide" style="display: none;">
+        <p class="text-xs font-semibold text-emerald-600 mb-3">✅ Code sent! Check your inbox.</p>
+        <input type="text" id="auth-token" placeholder="Enter 4-digit code" class="w-full p-3 rounded-xl border text-sm mb-3 tracking-[1em] text-center font-bold">
+        <button onclick="verifyToken()" class="w-full bg-emerald-600 text-white py-3 rounded-xl font-bold hover:bg-emerald-700 transition-all">
+            Verify & Enter Garden
+        </button>
+    </div>
+</div>
+
+            <div id="panel-chat" class="hide relative">
+                <input type="text" id="omni-input" placeholder="Enter prompt..." class="w-full p-4 pr-12 rounded-2xl border text-sm focus:ring-2 focus:ring-[#091747] outline-none">
+                <button onclick="handleManualInput()" class="absolute right-3 top-3 text-[#091747] material-symbols-outlined">send</button>
+            </div>
+
+            <input type="file" id="cv-file" class="hide" accept=".pdf" onchange="processCV()">
+        </div>
+    </section>
+
+    <section class="flex-1 p-8 bg-[#fcfcfc] overflow-y-auto">
+        <div id="active-dash" class="hide max-w-4xl mx-auto">
+            <div class="bg-white p-6 rounded-3xl border mb-6 flex justify-between items-center shadow-sm">
+                <h2 class="font-bold text-[#091747] text-lg" id="report-title">Active Workspace</h2>
+                <button onclick="exportToPDF()" class="text-xs font-bold border px-4 py-2 rounded-xl hover:bg-slate-50 transition-all">Export PDF</button>
+            </div>
+            <div id="skill-content" class="bg-white rounded-3xl border shadow-sm min-h-[700px] overflow-hidden"></div>
+        </div>
+    </section>
+</main>
+<script>
+window.onload = () => {
+    const savedId = sessionStorage.getItem('user_id');
+    if (savedId) { showAuthenticatedUI(); loadHistory(); }
+};
+
+let pendingUserId = null;
+
+async function sendMagicLink() {
+    const email = document.getElementById('reg-email').value;
+    const emailBtn = document.querySelector('#auth-email-step button');
+    
+    if(!email) return alert("Email required");
+
+    // Show "Sending" state
+    emailBtn.innerText = "Sending...";
+    emailBtn.disabled = true;
+
+    try {
+        const res = await fetch('/api/auth/request', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ email })
+        });
+        const data = await res.json();
+        
+        if(data.success) {
+            pendingUserId = data.user_id;
+            
+            // FORCE THE UI SWITCH
+            // Hide the email container
+            document.getElementById('auth-email-step').style.display = 'none';
+            
+            // Show the token container and remove any "hide" classes
+            const tokenStep = document.getElementById('auth-token-step');
+            tokenStep.style.display = 'block'; 
+            tokenStep.classList.remove('hide');
+            
+            console.log("UI Switched: Please enter code from email.");
+        } else {
+            alert("Error sending email. Check server console.");
+            emailBtn.innerText = "Send Magic Link";
+            emailBtn.disabled = false;
+        }
+    } catch (err) {
+        console.error("Fetch error:", err);
+        emailBtn.innerText = "Send Magic Link";
+        emailBtn.disabled = false;
+    }
+}
+
+function showAuthenticatedUI() {
+    document.getElementById('panel-auth').classList.add('hide');
+    document.getElementById('panel-chat').classList.remove('hide');
+    document.getElementById('active-dash').classList.remove('hide');
+    document.getElementById('suggestions-bar').classList.remove('hide');
+    document.getElementById('user-display').innerText = "Session Active";
+}
+
+async function loadHistory() {
+    const userId = sessionStorage.getItem('user_id');
+    if (!userId) return;
+
+    try {
+        const res = await fetch(`/api/get-history?user_id=${userId}`);
+        const data = await res.json();
+        const list = document.getElementById('history-list');
+        
+        list.innerHTML = data.history.map(item => {
+            const isPinned = item.pinned || false;
+            const displayName = (item.name || "Untitled").replace(/-/g, ' ');
+            
+            return `
+                <div class="sidebar-item p-3 mb-1 border border-transparent rounded-xl text-sm text-slate-600 cursor-pointer transition-all hover:bg-white hover:border-slate-200">
+                    <div onclick="loadReport('${item.path}', '${item.name}')" class="truncate pr-12">
+                        ${isPinned ? '📌 ' : ''}${displayName}
+                    </div>
+                    <div class="item-actions">
+                        <span onclick="togglePin('${item.path}')" class="material-symbols-outlined text-[16px] ${isPinned ? 'pin-active' : 'text-slate-300'}">push_pin</span>
+                        <span onclick="deleteHistory('${item.path}')" class="material-symbols-outlined text-[16px] text-slate-300 delete-btn">delete</span>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    } catch (e) { console.error("History fail:", e); }
+}
+
+async function verifyToken() {
+    const tokenInput = document.getElementById('auth-token');
+    const token = tokenInput.value.trim();
+    
+    if(!token) return alert("Please enter the code from your email.");
+
+    console.log("Verifying token:", token, "for User:", pendingUserId);
+
+    try {
+        const res = await fetch('/api/auth/verify', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ 
+                user_id: pendingUserId, 
+                token: token 
+            })
+        });
+
+        const data = await res.json();
+
+        if(data.success) {
+            console.log("Token valid! Logging in...");
+            
+            // 1. Save the session
+            sessionStorage.setItem('user_id', pendingUserId);
+            
+            // 2. Clear the token input
+            tokenInput.value = "";
+            
+            // 3. Update the UI
+            showAuthenticatedUI();
+            
+            // 4. Load the vault
+            loadHistory();
+        } else {
+            alert("Invalid Magic Code. Please check your email and try again.");
+        }
+    } catch (err) {
+        console.error("Verification error:", err);
+        alert("Server connection failed. Check if your Flask app is still running.");
+    }
+}
+
+async function togglePin(path) {
+    const userId = sessionStorage.getItem('user_id');
+    await fetch('/api/manage-history', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ user_id: userId, action: 'pin', path: path })
+    });
+    loadHistory();
+}
+
+async function deleteHistory(path) {
+    if(!confirm("Delete permanently?")) return;
+    const userId = sessionStorage.getItem('user_id');
+    await fetch('/api/manage-history', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ user_id: userId, action: 'delete', path: path })
+    });
+    loadHistory();
+}
+
+function loadReport(path, name) {
+    document.getElementById('report-title').innerText = name.toUpperCase().replace(/-/g, ' ');
+    const container = document.getElementById('skill-content');
+    container.innerHTML = `<iframe id="report-frame" src="${path}" class="w-full h-[750px] border-none"></iframe>`;
+    
+    const iframe = document.getElementById('report-frame');
+    iframe.onload = function() {
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
+        doc.querySelectorAll('a').forEach(link => {
+            link.setAttribute('target', '_blank');
+        });
+    };
+}
+
+// This bridges the UI buttons to the chat logic
+function handleSuggestion(text) {
+    console.log("Suggestion clicked:", text);
+    executeAction(text);
+}
+
+// This handles the user pressing 'Enter' in the input box
+document.getElementById('omni-input').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        handleManualInput();
+    }
+});
+
+// This handles the manual send button
+function handleManualInput() {
+    const input = document.getElementById('omni-input');
+    const text = input.value.trim();
+    if(!text) return;
+    executeAction(text);
+    input.value = "";
+}
+
+function executeAction(text) {
+    const userId = sessionStorage.getItem('user_id');
+    if (!userId) return alert("Please login with your magic link first.");
+
+    addUserMsg(text);
+    
+    fetch('/api/chat', { 
+        method: 'POST', 
+        headers: {'Content-Type':'application/json'}, 
+        body: JSON.stringify({
+            text: text, 
+            user_id: userId 
+        }) 
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.path) {
+            loadReport(data.path, text);
+            setTimeout(loadHistory, 1000);
+        }
+    })
+    .catch(err => console.error("Chat Error:", err));
+}
+
+function addUserMsg(t) {
+    const win = document.getElementById('chat-window');
+    const d = document.createElement('div');
+    d.className = "bg-[#091747] text-white p-4 rounded-2xl rounded-tr-none text-sm ml-auto max-w-[80%] mb-4 shadow-md";
+    d.innerHTML = `<strong>You:</strong><br>${t}`;
+    win.appendChild(d);
+    win.scrollTop = win.scrollHeight;
+}
+
+function triggerCVUpload() {
+    document.getElementById('cv-file').click();
+}
+
+async function processCV() {
+    const fileInput = document.getElementById('cv-file');
+    const userId = sessionStorage.getItem('user_id');
+    if (!fileInput.files[0]) return;
+
+    const jobDesc = prompt("Paste the Job Description:");
+    
+    const formData = new FormData();
+    formData.append('file', fileInput.files[0]);
+    formData.append('user_id', userId);
+    formData.append('job_description', jobDesc || "General Skill Analysis");
+
+    addUserMsg("📤 Uploading CV for Gap Analysis...");
+
+    try {
+        const res = await fetch('/api/upload-cv', { method: 'POST', body: formData });
+        const data = await res.json();
+        if(data.path) {
+            loadReport(data.path, "CV Gap Analysis");
+            loadHistory();
+        }
+    } catch (err) {
+        alert("CV Upload Failed.");
+    }
+}
+
+function addUserMsg(t) {
+    const win = document.getElementById('chat-window');
+    const d = document.createElement('div');
+    d.className = "bg-[#091747] text-white p-4 rounded-2xl rounded-tr-none text-sm ml-auto max-w-[80%] mb-4 shadow-md";
+    d.innerHTML = `<strong>You:</strong><br>${t}`;
+    win.appendChild(d);
+    win.scrollTop = win.scrollHeight;
+}
+</script>
+</body>
+</html>

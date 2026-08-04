@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Strategist — Train Garden</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Chivo:wght@700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      "on-primary": "#ffffff", background: "#f9f9ff", "surface-container": "#ededf3",
+      "surface-container-low": "#f3f3f9", "surface-container-lowest": "#ffffff",
+      "surface-container-high": "#e7e8ee", "surface-container-highest": "#e2e2e8",
+      "on-background": "#191c20", "on-surface": "#191c20", "on-surface-variant": "#3e4943",
+      outline: "#6e7a73", "outline-variant": "#bdc9c1", "secondary-container": "#b8c4fd",
+      "border-muted": "#E5E5E5", primary: "#005d42", "surface-alt": "#F8F8F8", error: "#ba1a1a"
+    },
+    fontFamily: { display: ["Chivo"], body: ["Inter"] },
+    spacing: { "stack-sm": "8px", "stack-md": "24px", "stack-lg": "48px", gutter: "24px",
+      "margin-desktop": "40px", "margin-mobile": "16px" }
+  }}
+};
+</script>
+<style>
+  * { border-radius: 0 !important; }
+  body { overflow: hidden; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-thumb { background: #bdc9c1; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { animation: fadeUp 0.5s ease-out forwards; }
+  .delay-1 { animation-delay: 0.1s; opacity: 0; }
+  .delay-2 { animation-delay: 0.3s; opacity: 0; }
+  .delay-3 { animation-delay: 0.5s; opacity: 0; }
+
+  /* Thinking state */
+  .thinking-dot { width: 5px; height: 5px; background: #005d42; display: inline-block; animation: bounce 1.2s infinite; }
+  .thinking-dot:nth-child(2) { animation-delay: 0.2s; }
+  .thinking-dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+
+  /* Chat messages */
+  #chat-canvas::-webkit-scrollbar-thumb { background: #005d42; }
+  @keyframes slideIn { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
+  .msg-in { animation: slideIn 0.2s ease-out forwards; }
+
+  /* Textarea */
+  #strategy-input { field-sizing: content; min-height: 40px; max-height: 120px; overflow-y: auto; }
+</style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex overflow-hidden font-body">
+
+<!-- ══════════════════════════════════════════
+     SIDEBAR
+════════════════════════════════════════════ -->
+<nav class="hidden md:flex flex-col h-screen w-60 fixed left-0 top-0 bg-surface-container-low border-r border-outline-variant py-stack-md px-stack-sm z-50 flex-shrink-0">
+  <div class="mb-stack-lg px-2">
+    <a href="/dashboard" class="font-display font-black text-lg text-primary tracking-tighter block">TRAIN GARDEN</a>
+    <p class="text-[9px] text-on-surface-variant uppercase tracking-widest mt-1">Strategist Mode</p>
+  </div>
+
+  <!-- User avatar -->
+  <div class="flex items-center gap-3 mb-stack-md px-2 border border-outline-variant p-3 bg-surface-container-highest">
+    <div id="user-avatar" class="w-9 h-9 bg-primary flex items-center justify-center text-on-primary font-display font-bold text-sm flex-shrink-0">?</div>
+    <div class="min-w-0">
+      <p id="user-email-display" class="text-[10px] font-bold text-primary truncate uppercase">Loading…</p>
+      <p class="text-[9px] text-on-surface-variant uppercase">Senior Strategist</p>
+    </div>
+  </div>
+
+  <!-- CV Upload CTA -->
+  <button onclick="triggerCV()" class="w-full bg-primary text-on-primary text-[11px] font-bold uppercase tracking-widest py-3 border-2 border-primary hover:bg-background hover:text-primary transition-colors mb-stack-md flex items-center justify-center gap-2">
+    <span class="material-symbols-outlined text-[16px]">upload_file</span> Upload CV
+  </button>
+
+  <ul class="flex-1 space-y-1">
+    <li><a href="/dashboard" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest"><span class="material-symbols-outlined text-[17px]">dashboard</span> Dashboard</a></li>
+    <li><a href="/chat" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest"><span class="material-symbols-outlined text-[17px]">psychology</span> Garden AI</a></li>
+    <li><a href="/strategist" class="flex items-center gap-3 px-4 py-2.5 bg-primary text-on-primary text-[11px] uppercase tracking-widest"><span class="material-symbols-outlined text-[17px]" style="font-variation-settings:'FILL' 1;">chat</span> Strategist</a></li>
+    <li><a href="/roadmap" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest"><span class="material-symbols-outlined text-[17px]">alt_route</span> Roadmaps</a></li>
+    <li><a href="/chat" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest"><span class="material-symbols-outlined text-[17px]">history</span> History</a></li>
+  </ul>
+
+  <div class="border-t border-outline-variant pt-stack-sm">
+    <button onclick="logout()" class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest w-full">
+      <span class="material-symbols-outlined text-[17px]">logout</span> Sign Out
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     MAIN
+════════════════════════════════════════════ -->
+<main class="ml-0 md:ml-60 flex-1 flex flex-col md:flex-row h-screen relative">
+
+  <!-- CHAT SECTION -->
+  <section class="flex-1 flex flex-col h-full bg-surface-container-lowest overflow-hidden">
+
+    <!-- Chat canvas -->
+    <div id="chat-canvas" class="flex-1 overflow-y-auto px-6 md:px-10 py-stack-lg">
+      <div id="chat-content" class="max-w-3xl mx-auto w-full">
+
+        <!-- Welcome state (hidden once chat starts) -->
+        <div id="welcome-state">
+          <p class="fade-up delay-1 text-[11px] uppercase tracking-[0.2em] text-on-surface-variant mb-4 flex items-center gap-2">
+            <span class="w-2 h-2 bg-primary inline-block"></span> GARDEN AI — STRATEGIST
+          </p>
+          <h1 class="fade-up delay-2 font-display font-black text-primary leading-[0.9] tracking-tighter uppercase mb-stack-lg" style="font-size: clamp(32px, 5vw, 56px);">
+            I'm your sustainability<br/>
+            <span class="text-on-surface-variant">career strategist.</span><br/>
+            How can I help today?
+          </h1>
+
+          <!-- Action prompts -->
+          <div class="fade-up delay-3 grid grid-cols-1 md:grid-cols-3 gap-4 mb-stack-lg">
+            <button onclick="startPrompt('Analyse my CV against sustainability roles in London')" class="bg-surface-container text-left p-6 hover:bg-primary hover:text-on-primary transition-colors group border border-outline-variant hover:border-primary">
+              <p class="text-[10px] uppercase tracking-[0.15em] mb-3 text-on-surface-variant group-hover:text-on-primary transition-colors">01 // Analyse</p>
+              <p class="text-[15px] font-medium leading-snug">Upload CV for Gap Analysis</p>
+            </button>
+            <button onclick="startPrompt('What are the fastest-growing sustainability career paths in London in 2026?')" class="bg-surface-container text-left p-6 hover:bg-primary hover:text-on-primary transition-colors group border border-outline-variant hover:border-primary">
+              <p class="text-[10px] uppercase tracking-[0.15em] mb-3 text-on-surface-variant group-hover:text-on-primary transition-colors">02 // Discover</p>
+              <p class="text-[15px] font-medium leading-snug">Explore Green Career Paths</p>
+            </button>
+            <button onclick="startPrompt('Find me active sustainability roles in London right now')" class="bg-surface-container text-left p-6 hover:bg-primary hover:text-on-primary transition-colors group border border-outline-variant hover:border-primary">
+              <p class="text-[10px] uppercase tracking-[0.15em] mb-3 text-on-surface-variant group-hover:text-on-primary transition-colors">03 // Act</p>
+              <p class="text-[15px] font-medium leading-snug">Search Active Roles</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Messages injected here -->
+        <div id="messages-container" class="space-y-5"></div>
+      </div>
+    </div>
+
+    <!-- Input area -->
+    <div class="flex-shrink-0 w-full px-6 md:px-10 py-stack-md bg-surface-container-lowest border-t border-outline-variant">
+      <div class="max-w-3xl mx-auto w-full">
+        <div class="flex items-end gap-3">
+          <div class="flex-1 border-b-2 border-primary">
+            <textarea id="strategy-input" placeholder="Describe your goal, ask a question, or request a roadmap…"
+              class="w-full bg-transparent border-0 focus:ring-0 text-[15px] text-primary pb-3 resize-none placeholder:text-on-surface-variant overflow-hidden"></textarea>
+          </div>
+          <button onclick="handleStrategistSend()" id="send-btn" class="p-3 bg-primary text-on-primary border-2 border-primary hover:bg-background hover:text-primary transition-colors flex-shrink-0">
+            <span class="material-symbols-outlined text-[18px]">send</span>
+          </button>
+        </div>
+        <div class="flex justify-between items-center mt-2">
+          <p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Enter to send · Shift+Enter for new line</p>
+          <div id="thinking-indicator" class="hidden items-center gap-1.5 text-[11px] text-on-surface-variant uppercase tracking-widest">
+            <span class="thinking-dot"></span>
+            <span class="thinking-dot"></span>
+            <span class="thinking-dot"></span>
+            <span class="ml-1">Thinking…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEXT RECALL PANEL -->
+  <aside class="hidden xl:flex w-80 bg-surface-alt border-l border-outline-variant flex-col h-full overflow-hidden flex-shrink-0">
+    <div class="p-4 border-b border-border-muted flex justify-between items-center bg-surface-container-low flex-shrink-0">
+      <h3 class="text-[11px] uppercase tracking-widest font-bold text-primary">Context Recall</h3>
+      <span class="material-symbols-outlined text-[16px] text-on-surface-variant">database</span>
+    </div>
+
+    <div class="flex-1 overflow-y-auto p-4 space-y-6">
+
+      <!-- Vault recent items -->
+      <div>
+        <h4 class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-3 flex items-center gap-2">
+          <span class="w-1 h-1 bg-primary inline-block"></span> The Vault
+        </h4>
+        <div id="context-vault" class="space-y-3">
+          <div class="text-[12px] text-on-surface-variant italic">Loading vault…</div>
+        </div>
+      </div>
+
+      <!-- Alignment score -->
+      <div>
+        <h4 class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-3 flex items-center gap-2">
+          <span class="w-1 h-1 bg-primary inline-block"></span> Session Metrics
+        </h4>
+        <div class="border-2 border-primary p-4 bg-primary relative overflow-hidden">
+          <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <defs><pattern id="g" patternUnits="userSpaceOnUse" width="16" height="16">
+                <path d="M 16 0 L 0 0 0 16" fill="none" stroke="white" stroke-width="0.5"/>
+              </pattern></defs>
+              <rect fill="url(#g)" width="100%" height="100%"/>
+            </svg>
+          </div>
+          <div class="relative text-center">
+            <p id="session-score" class="font-display font-black text-[56px] text-on-primary leading-none tracking-tighter">—</p>
+            <p class="text-[11px] text-on-primary opacity-80 uppercase tracking-widest mt-1">Messages This Session</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick actions -->
+      <div>
+        <h4 class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-3 flex items-center gap-2">
+          <span class="w-1 h-1 bg-primary inline-block"></span> Quick Actions
+        </h4>
+        <div class="space-y-2">
+          <button onclick="startPrompt('Generate a 30-day roadmap for ESG reporting analyst')" class="w-full text-left text-[12px] p-3 border border-outline-variant hover:border-primary hover:text-primary transition-colors text-on-surface-variant uppercase tracking-wide">
+            → ESG Analyst Roadmap
+          </button>
+          <button onclick="startPrompt('What skills do I need for a sustainability director role in 2026?')" class="w-full text-left text-[12px] p-3 border border-outline-variant hover:border-primary hover:text-primary transition-colors text-on-surface-variant uppercase tracking-wide">
+            → Director Skills Gap
+          </button>
+          <button onclick="startPrompt('Find volunteering opportunities in London sustainability sector')" class="w-full text-left text-[12px] p-3 border border-outline-variant hover:border-primary hover:text-primary transition-colors text-on-surface-variant uppercase tracking-wide">
+            → London Volunteering
+          </button>
+          <a href="/roadmap" class="w-full text-left text-[12px] p-3 border border-outline-variant hover:border-primary hover:text-primary transition-colors text-on-surface-variant uppercase tracking-wide block">
+            → View All Roadmaps
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<!-- Hidden CV upload -->
+<input type="file" id="cv-upload" class="hidden" accept=".pdf" onchange="handleCVUpload(this)">
+
+<script>
+// ── Auth guard ────────────────────────────────
+const userId = sessionStorage.getItem('user_id');
+if (!userId) { window.location.href = '/'; }
+
+// ── Hydrate UI ────────────────────────────────
+const userEmail = sessionStorage.getItem('user_email') || '';
+const initials = userEmail ? userEmail[0].toUpperCase() : 'U';
+document.getElementById('user-avatar').textContent = initials;
+document.getElementById('user-email-display').textContent = userEmail || userId.substring(0, 12) + '…';
+
+// ── State ─────────────────────────────────────
+let messageCount = 0;
+let isThinking = false;
+let welcomeHidden = false;
+
+// ── Init ──────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  setupTextarea();
+  setupKeyboard();
+  loadVaultContext();
+});
+
+async function loadVaultContext() {
+  try {
+    const res = await fetch(`/api/get-history?user_id=${userId}`);
+    const data = await res.json();
+    const history = (data.history || []).slice(0, 4);
+    const vault = document.getElementById('context-vault');
+    if (history.length === 0) {
+      vault.innerHTML = '<div class="text-[12px] text-on-surface-variant italic">No reports in vault yet.</div>';
+      return;
+    }
+    vault.innerHTML = history.map(item => `
+      <div class="border border-outline-variant p-3 bg-surface-container-lowest hover:border-primary transition-colors cursor-default">
+        <div class="flex justify-between items-start mb-1">
+          <span class="text-[10px] text-on-surface-variant uppercase">Report</span>
+          <span class="text-[10px] text-on-surface-variant">${(item.timestamp || '').substring(0, 10)}</span>
+        </div>
+        <p class="text-[13px] text-primary font-bold leading-snug">${item.name || 'Untitled'}</p>
+        ${item.path ? `<a href="${item.path}" class="text-[10px] text-on-surface-variant hover:text-primary uppercase tracking-widest mt-1 inline-block">View →</a>` : ''}
+      </div>
+    `).join('');
+  } catch (e) { /* silent */ }
+}
+
+// ── Message handling ──────────────────────────
+function startPrompt(text) {
+  document.getElementById('strategy-input').value = text;
+  handleStrategistSend();
+}
+
+function handleStrategistSend() {
+  const input = document.getElementById('strategy-input');
+  const text = input.value.trim();
+  if (!text || isThinking) return;
+  input.value = '';
+  resizeTextarea(input);
+  sendStrategistMessage(text);
+}
+
+async function sendStrategistMessage(text) {
+  // Hide welcome on first real message
+  if (!welcomeHidden) {
+    document.getElementById('welcome-state').classList.add('hidden');
+    welcomeHidden = true;
+  }
+
+  isThinking = true;
+  messageCount++;
+  document.getElementById('session-score').textContent = messageCount;
+
+  appendMessage(text, 'user');
+  showThinking(true);
+
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, user_id: userId })
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    const contentType = res.headers.get('content-type') || '';
+    if (contentType.includes('application/json')) {
+      const data = await res.json();
+      showThinking(false);
+      if (data.response) appendMessage(data.response, 'bot');
+      if (data.path) appendMessage('Report ready: ' + data.path, 'system');
+      return;
+    }
+
+    // SSE stream reader
+    const reader  = res.body.getReader();
+    const decoder = new TextDecoder();
+    let   buffer  = '';
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed.startsWith('data:')) continue;
+        let parsed;
+        try { parsed = JSON.parse(trimmed.slice(5).trim()); } catch { continue; }
+        if (parsed.status) {
+          const ind = document.getElementById('thinking-indicator');
+          if (ind) {
+            let lbl = ind.querySelector('.status-lbl');
+            if (!lbl) {
+              lbl = document.createElement('span');
+              lbl.className = 'status-lbl ml-2 text-[11px] text-on-surface-variant uppercase tracking-widest';
+              ind.appendChild(lbl);
+            }
+            lbl.textContent = parsed.status;
+          }
+        }
+        if (parsed.response !== undefined) {
+          showThinking(false);
+          appendMessage(parsed.response, 'bot');
+          if (parsed.path) appendMessage('Report ready. View it at: ' + parsed.path, 'system');
+        }
+      }
+    }
+  } catch (e) {
+    showThinking(false);
+    appendMessage('Error: ' + e.message + '. Is the backend running on port 5000?', 'error');
+  } finally {
+    isThinking = false;
+  }
+}
+
+function appendMessage(text, sender) {
+  const container = document.getElementById('messages-container');
+  const el = document.createElement('div');
+  el.className = `flex msg-in ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+
+  let bubbleClass, content;
+
+  if (sender === 'user') {
+    bubbleClass = 'max-w-[75%] px-5 py-3 bg-primary text-on-primary text-[14px] leading-relaxed';
+    content = escapeHTML(text);
+  } else if (sender === 'system') {
+    bubbleClass = 'max-w-[90%] px-4 py-2 bg-surface-container border border-outline-variant text-[12px] text-on-surface-variant uppercase tracking-widest';
+    content = escapeHTML(text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary underline">$1</a>'));
+  } else if (sender === 'error') {
+    bubbleClass = 'max-w-[85%] px-4 py-3 border border-red-300 text-error text-[13px]';
+    content = escapeHTML(text);
+  } else {
+    bubbleClass = 'max-w-[85%] px-5 py-4 bg-surface-container-lowest border border-outline-variant text-[14px] leading-relaxed text-on-surface';
+    content = renderMarkdown(text);
+  }
+
+  el.innerHTML = `<div class="${bubbleClass}">${content}</div>`;
+  container.appendChild(el);
+
+  const canvas = document.getElementById('chat-canvas');
+  canvas.scrollTop = canvas.scrollHeight;
+}
+
+function renderMarkdown(text) {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/^#{1,3} (.+)$/gm, '<p class="font-bold text-primary uppercase text-[12px] tracking-widest mt-4 mb-2">$1</p>')
+    .replace(/^- (.+)$/gm, '<li class="flex items-start gap-2 mb-1"><span class="w-1 h-1 bg-primary inline-block mt-2 flex-shrink-0"></span><span>$1</span></li>')
+    .replace(/\n\n/g, '</p><p class="mb-3">')
+    .replace(/\n/g, '<br>');
+}
+
+function escapeHTML(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function showThinking(show) {
+  const el = document.getElementById('thinking-indicator');
+  el.classList.toggle('hidden', !show);
+  el.classList.toggle('flex', show);
+}
+
+// ── CV Upload ─────────────────────────────────
+function triggerCV() { document.getElementById('cv-upload').click(); }
+
+async function handleCVUpload(input) {
+  const file = input.files[0];
+  if (!file) return;
+
+  appendMessage(`Uploading "${file.name}" for analysis…`, 'user');
+  if (!welcomeHidden) {
+    document.getElementById('welcome-state').classList.add('hidden');
+    welcomeHidden = true;
+  }
+  showThinking(true);
+  isThinking = true;
+
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('user_id', userId);
+
+  try {
+    const res = await fetch('/api/upload-cv', { method: 'POST', body: formData });
+    const data = await res.json();
+    showThinking(false);
+
+    if (data.success) {
+      appendMessage(data.message || 'CV analysis complete.', 'bot');
+      if (data.path) appendMessage(`✓ Full report ready — [View Analysis](${data.path})`, 'system');
+    } else {
+      appendMessage('CV processing failed: ' + (data.message || 'Unknown error'), 'error');
+    }
+  } catch (e) {
+    showThinking(false);
+    appendMessage('Upload error: ' + e.message, 'error');
+  } finally {
+    isThinking = false;
+    input.value = '';
+  }
+}
+
+// ── Textarea ──────────────────────────────────
+function setupTextarea() {
+  const ta = document.getElementById('strategy-input');
+  ta.addEventListener('input', () => resizeTextarea(ta));
+  ta.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleStrategistSend();
+    }
+  });
+}
+
+function resizeTextarea(ta) {
+  ta.style.height = '0';
+  ta.style.height = Math.min(ta.scrollHeight, 120) + 'px';
+}
+
+function setupKeyboard() {
+  document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      document.getElementById('strategy-input').focus();
+    }
+  });
+}
+
+function logout() {
+  sessionStorage.clear();
+  window.location.href = '/';
+}
+</script>
+</body>
+</html>

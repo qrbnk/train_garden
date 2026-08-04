@@ -1,0 +1,234 @@
+{
+  "user_id": "88c38fa4dd2e035ed05ac1d37792d2e3",
+  "email": "jdbfksjbfejskdtest.com",
+  "name": "hgj",
+  "first_seen": "2026-07-25T18:06:55.620122",
+  "last_seen": "2026-07-25T18:11:38.105554",
+  "sector": "",
+  "experience_years": "8",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Project delivery",
+    "Stakeholder management",
+    "Data analysis/interpretation"
+  ],
+  "skill_sources": {
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Delivering AI-driven solutions across complex industries — This experience demonstrates her ability to plan, execute, and deliver projects that meet business objectives, which is essential for managing sustainability initiatives with specif",
+        "ts": "2026-07-25T18:08:23.566313"
+      }
+    ],
+    "Stakeholder management": [
+      {
+        "type": "inferred",
+        "detail": "Strategic leader — As a strategic leader, she has likely managed cross-functional teams and stakeholders to drive results, which is crucial for building and maintaining partnerships in the sustainability sector.",
+        "ts": "2026-07-25T18:08:23.566361"
+      }
+    ],
+    "Data analysis/interpretation": [
+      {
+        "type": "inferred",
+        "detail": "Digital Strategy Consultant — Her experience as a digital strategy consultant implies that she has worked with data to inform business decisions, a skill that can be applied to analyzing and interpreting data related to sustainability metri",
+        "ts": "2026-07-25T18:08:23.566378"
+      }
+    ]
+  },
+  "cv_summary": "            Daryna Vakulenko      M: +447442476374, Email: dashalolvakulenko@gmail.com, London         Professional Profile       AI Transformation Lead & Digital Strategy Consultant with 8 years of experience delivering AI-driven solutions across complex industries. Strategic leader and MD (Physici",
+  "messages": [
+    {
+      "uid": "88c38fa4dd2e035ed05ac1d37792d2e3",
+      "role": "user",
+      "content": "I'm completely new to sustainability",
+      "ts": "2026-07-25T18:09:05.217957"
+    },
+    {
+      "uid": "88c38fa4dd2e035ed05ac1d37792d2e3",
+      "role": "assistant",
+      "content": "Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. What kind of role are you looking for? Any specific job titles, sectors, or type of work on your radar — and what's the \"why\" behind the search?",
+      "ts": "2026-07-25T18:09:09.259982",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not sure yet — help me explore",
+        "Renewable energy / EV roles",
+        "Sustainability / ESG roles"
+      ]
+    },
+    {
+      "uid": "88c38fa4dd2e035ed05ac1d37792d2e3",
+      "role": "user",
+      "content": "I'm not sure yet — help me explore",
+      "ts": "2026-07-25T18:09:27.850249"
+    },
+    {
+      "uid": "88c38fa4dd2e035ed05ac1d37792d2e3",
+      "role": "assistant",
+      "content": "What's your ideal salary range? Knowing your floor and target helps me filter out roles that aren't the right fit.",
+      "ts": "2026-07-25T18:09:35.796930",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Under £30k",
+        "£30k–£50k",
+        "£50k–£70k",
+        "£70k+"
+      ]
+    },
+    {
+      "uid": "88c38fa4dd2e035ed05ac1d37792d2e3",
+      "role": "user",
+      "content": "£30k–£50k",
+      "ts": "2026-07-25T18:10:12.888914"
+    },
+    {
+      "uid": "88c38fa4dd2e035ed05ac1d37792d2e3",
+      "role": "assistant",
+      "content": "Do you need this to be remote, hybrid, or onsite?",
+      "ts": "2026-07-25T18:10:16.138860",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Remote",
+        "Hybrid",
+        "Onsite"
+      ]
+    },
+    {
+      "uid": "88c38fa4dd2e035ed05ac1d37792d2e3",
+      "role": "user",
+      "content": "Onsite",
+      "ts": "2026-07-25T18:10:42.838609"
+    },
+    {
+      "uid": "88c38fa4dd2e035ed05ac1d37792d2e3",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-07-25T18:10:42.842956",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "88c38fa4dd2e035ed05ac1d37792d2e3",
+      "role": "user",
+      "content": "Established company",
+      "ts": "2026-07-25T18:10:46.714637"
+    },
+    {
+      "uid": "88c38fa4dd2e035ed05ac1d37792d2e3",
+      "role": "assistant",
+      "content": "I'm so glad we're starting this sustainability journey together, hgj! Before I can help you explore roles and find the right fit, I want to make sure I understand your professional background. What kind of experience do you have in your 8 years as an AI Transformation Lead & Digital Strategy Consultant?",
+      "ts": "2026-07-25T18:11:13.657624",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Show me job descriptions online",
+        "List established company openings nearby",
+        "Can I search by department"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "f75fe438-7436-4b0f-9acd-b4630569f04f",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1784999303/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-25 18:08",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "4491864d-d1d1-4f57-91c2-51305b319699",
+      "name": "null_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-25 18:08"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JJ",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "Established company",
+  "salary_range": "£30k–£50k",
+  "work_type": "Onsite",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": true,
+  "headline": "New to Sustainability",
+  "experience": [
+    {
+      "id": "c77426d7",
+      "title": "AI Transformation Lead & Digital Strategy Consultant",
+      "company": "Unknown (assuming current employer)",
+      "start_date": "Present",
+      "end_date": "Present",
+      "description": "",
+      "source": "chat"
+    }
+  ],
+  "how_heard": "Podcast",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [
+    "target_role"
+  ],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Delivering AI-driven solutions across complex industries",
+      "skill": "Project delivery",
+      "relevance": "This experience demonstrates her ability to plan, execute, and deliver projects that meet business objectives, which is essential for managing sustainability initiatives with specific goals and timelines."
+    },
+    {
+      "source": "Strategic leader",
+      "skill": "Stakeholder management",
+      "relevance": "As a strategic leader, she has likely managed cross-functional teams and stakeholders to drive results, which is crucial for building and maintaining partnerships in the sustainability sector."
+    },
+    {
+      "source": "Digital Strategy Consultant",
+      "skill": "Data analysis/interpretation",
+      "relevance": "Her experience as a digital strategy consultant implies that she has worked with data to inform business decisions, a skill that can be applied to analyzing and interpreting data related to sustainability metrics."
+    }
+  ],
+  "journey": {
+    "xp": 0,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-25",
+    "last_checkin_date": ""
+  }
+}

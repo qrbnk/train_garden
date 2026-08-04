@@ -1,0 +1,79 @@
+
+    <html>
+    <head>
+        <style>
+            body { font-family: 'Inter', sans-serif; padding: 40px; color: #1e293b; background: #fff; line-height: 1.7; }
+            h1 { color: #091747; font-size: 24px; margin-bottom: 25px; }
+            .day-card { 
+                background: #f8fafc; border: 1px solid #e2e8f0; padding: 25px; 
+                border-radius: 20px; margin-bottom: 20px; list-style: none;
+                transition: transform 0.2s;
+            }
+            .day-card:hover { transform: translateY(-3px); border-color: #091747; }
+            .tag { 
+                font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 6px; 
+                text-transform: uppercase; margin-right: 10px; display: inline-block;
+                margin-bottom: 10px;
+            }
+            .tag-learn { background: #dbeafe; color: #1e40af; }
+            .tag-read { background: #fef3c7; color: #92400e; }
+            .tag-apply { background: #dcfce7; color: #166534; }
+        </style>
+    </head>
+    <body>
+        <h1>🚀 Career Accelerator: 🗺️ View Roadmap</h1>
+        <div id="roadmap-container"><p>To help you gain skills in map viewing, here's a daily roadmap for three weeks:</p>
+<p><strong>Week 1:</strong></p>
+<ul>
+<li>
+<p>LEARN: Start with online courses on GIS (Geographic Information System) and Cartography. Websites like Coursera, Udemy, or Khan Academy offer free and paid courses.</p>
+</li>
+<li>
+<p>READ: Keep up with the latest news in Geospatial Technology by following industry websites such as Geoawesomeness (https://geoawesomeness.com/) and GIS Lounge (https://gislounge.com/).</p>
+</li>
+<li>
+<p>APPLY: Volunteer for projects through OpenStreetMap (https://www.openstreetmap.org/), a collaborative project to create a free editable map of the world. They often have tasks related to map editing and data collection in London.</p>
+</li>
+</ul>
+<p><strong>Week 2:</strong></p>
+<ul>
+<li>
+<p>LEARN: Study advanced GIS techniques like spatial analysis, remote sensing, and spatial databases. Websites like ArcGIS (https://www.esri.com/arcgis-blog/) provide free tutorials and resources.</p>
+</li>
+<li>
+<p>READ: Read local news articles related to urban planning and development in London. Websites like The Guardian (https://www.theguardian.com/uk) and even London-specific blogs can provide insights into the city's ongoing projects.</p>
+</li>
+<li>
+<p>APPLY: Join a local community group or charity focusing on urban planning or environmental conservation. Websites like CPRE London (https://www.cprelondon.org.uk/) often have volunteering opportunities related to map creation, data analysis, and project management.</p>
+</li>
+</ul>
+<p><strong>Week 3:</strong></p>
+<ul>
+<li>
+<p>LEARN: Dive into specialty areas like transportation mapping, spatial epidemiology, or environmental impact assessments. Websites like Mapbox (https://docs.mapbox.com/) offer advanced tutorials on these topics.</p>
+</li>
+<li>
+<p>READ: Follow research publications and reports related to London's urban development and sustainability. Websites like London Plus (https://londonplus.org/) publish data and research on volunteering, funding, and community development in the city.</p>
+</li>
+<li>
+<p>APPLY: Apply for volunteer opportunities with organizations working on urban planning or sustainability projects in London. Reach Volunteering (https://reachvolunteering.org.uk/) is a great resource to find such opportunities.</p>
+</li>
+</ul>
+<p>Remember, it's essential to stay motivated and consistent in learning and applying your new skills. Good luck on your journey!</p>
+<p>If you have any general questions, here are three resources that might help:
+1. London Volunteer Centre - https://londonvolunteercentre.org/
+2. CharityJob - Job board for the charity sector in London - https://www.charityjob.co.uk/
+3. London City Hall - Get involved in policy-making and decision-making processes in London - https://www.london.gov.uk/get-involved</p></div>
+        <script>
+            document.querySelectorAll('li').forEach(item => {
+                item.classList.add('day-card');
+                let content = item.innerHTML;
+                if(content.includes('LEARN')) content = '<span class="tag tag-learn">Course</span>' + content;
+                if(content.includes('READ')) content = '<span class="tag tag-read">Insight</span>' + content;
+                if(content.includes('APPLY')) content = '<span class="tag tag-apply">Action</span>' + content;
+                item.innerHTML = content;
+            });
+        </script>
+    </body>
+    </html>
+    

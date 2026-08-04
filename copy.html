@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Train Garden | AI Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .chat-scroll::-webkit-scrollbar { width: 4px; }
+        .chat-scroll::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+        .hide { display: none !important; }
+        .btn-option { border: 1px solid #e2e8f0; transition: all 0.2s; text-align: left; padding: 12px 16px; border-radius: 12px; background: white; font-size: 14px; font-weight: 500; }
+        .btn-option:hover { border-color: #208a65; background-color: #f0fdf4; color: #208a65; }
+        .tab-active { border-bottom: 2px solid #ff6b3d; color: #091747 !important; }
+        
+        /* ORIGINAL UI ELEMENTS RESTORED */
+        .job-card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; transition: shadow 0.3s; }
+        .job-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .profile-section-header { border-bottom: 1px solid #f1f5f9; padding-bottom: 8px; margin-bottom: 16px; }
+        .ats-badge { font-size: 10px; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; }
+    </style>
+</head>
+<body class="overflow-hidden">
+
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-gray-100 px-8 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+        <span class="font-extrabold text-[#091747] text-xl tracking-tighter">TRAIN GARDEN</span>
+        <span class="bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded text-[10px] font-bold uppercase">Companion</span>
+    </div>
+    <div id="user-display" class="text-sm font-medium text-slate-500">Guest</div>
+</nav>
+
+<main class="pt-16 h-screen flex">
+    <section class="w-full lg:w-[480px] border-r border-slate-200 bg-white flex flex-col">
+        <div id="chat-window" class="flex-1 p-6 overflow-y-auto chat-scroll space-y-4">
+            <div id="greeting-msg" class="bg-slate-100 p-4 rounded-2xl rounded-tl-none text-sm leading-relaxed text-slate-700">
+                Welcome! I am your <b>Train Garden Companion</b>. I’ll guide you from motivation to skill assessment, direction, and follow-ups.
+            </div>
+        </div>
+
+        <div class="p-4 border-t border-slate-100 bg-slate-50">
+            <div id="panel-auth" class="space-y-2">
+                <input type="text" id="reg-name" placeholder="Full Name" class="w-full p-3 rounded-xl border-slate-200 text-sm">
+                <input type="email" id="reg-email" placeholder="Email" class="w-full p-3 rounded-xl border-slate-200 text-sm">
+                <input type="tel" id="reg-phone" placeholder="Phone Number" class="w-full p-3 rounded-xl border-slate-200 text-sm">
+                <button onclick="sendMagicLink()" class="w-full bg-[#091747] text-white py-3 rounded-xl font-bold shadow-lg">Send Magic Link</button>
+            </div>
+
+            <div id="panel-chat" class="hide flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                    <input type="text" id="omni-input" placeholder="Type anything or pick an option..." class="flex-1 p-3 rounded-full border-slate-200 text-sm focus:ring-2 focus:ring-emerald-500 outline-none">
+                    <button onclick="handleOmniInput()" class="bg-[#091747] text-white p-3 rounded-full flex items-center justify-center">
+                        <span class="material-symbols-outlined text-sm">send</span>
+                    </button>
+                </div>
+                <div class="flex gap-4 px-2">
+                    <button onclick="resetToMotivation()" class="text-[10px] font-bold text-slate-400 uppercase hover:text-[#ff6b3d]">Changed my mind? Go Back</button>
+                </div>
+            </div>
+            
+            <div id="panel-cv" class="hide mt-2 p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+                <p class="text-[10px] font-bold text-emerald-700 uppercase mb-2">ATS Skill Scan (Upload CV)</p>
+                <input type="file" id="cv-file" class="text-xs">
+            </div>
+        </div>
+    </section>
+
+    <section class="flex-1 p-8 overflow-y-auto bg-[#fcfcfc]">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <div id="empty-dash" class="text-center py-20 opacity-20">
+                <span class="material-symbols-outlined text-8xl">dashboard_customize</span>
+                <p class="mt-4 font-bold uppercase tracking-widest text-xs">Unlock your dashboard after Magic Link</p>
+            </div>
+
+            <div id="active-dash" class="hide space-y-6">
+                <div class="flex border-b border-slate-200 gap-6 mb-4">
+                    <button onclick="switchTab('diagnostic')" id="tab-btn-diagnostic" class="pb-2 text-xs font-bold uppercase tracking-widest text-slate-400 tab-active">Profile Overview</button>
+                    <button onclick="switchTab('skills')" id="tab-btn-skills" class="pb-2 text-xs font-bold uppercase tracking-widest text-slate-400">Skills Alignment</button>
+                    <button onclick="switchTab('resources')" id="tab-btn-resources" class="pb-2 text-xs font-bold uppercase tracking-widest text-slate-400">Opportunities & Jobs</button>
+                </div>
+
+                <div id="tab-diagnostic" class="space-y-6">
+                    <div id="profile-container" class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hide">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center text-2xl font-bold text-[#091747]" id="profile-initials">DV</div>
+                            <div>
+                                <h2 class="text-xl font-bold text-[#091747]" id="profile-display-name">Daryna Vakulenko</h2>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <span class="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded-full">Actively Looking</span>
+                                    <span class="text-xs text-slate-400" id="profile-role-title">Sustainability Strategist</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="profile-section-header text-xs font-bold text-slate-400 uppercase tracking-widest">Summary</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed" id="profile-summary">Strategic leader focusing on bridging the gap between domain expertise and sustainable solutions.</p>
+                            </div>
+                            <div>
+                                <h3 class="profile-section-header text-xs font-bold text-slate-400 uppercase tracking-widest">What they're looking for</h3>
+                                <p class="text-sm text-slate-600 italic" id="profile-looking-for">Seeking mid-to-senior level roles in sustainability strategy, delivery, and change management.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="match-status-box" class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Diagnostic Match</h3>
+                        <div id="match-result" class="text-2xl font-black text-[#091747]">--</div>
+                        <div id="match-salary" class="text-sm font-semibold text-emerald-600 mt-1"></div>
+                    </div>
+                </div>
+
+                <div id="tab-skills" class="hide space-y-6">
+                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">ATS Skills Analysis</h3>
+                            <span id="ats-score" class="text-lg font-bold text-emerald-600">--% Match</span>
+                        </div>
+                        <div id="skill-badges" class="flex flex-wrap gap-2">
+                            <span class="text-slate-300 text-xs italic">Awaiting CV Upload...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-resources" class="hide space-y-6">
+                    <div id="work-log-area" class="hide bg-[#091747] p-6 rounded-3xl text-white mb-6">
+                        <h3 class="text-xs font-bold uppercase opacity-60 mb-2">Daily Project Tracking</h3>
+                        <p class="text-sm mb-4">Input tasks to deconstruct into CV-ready skills automatically.</p>
+                        <textarea id="daily-input" class="w-full bg-white/10 border border-white/20 rounded-xl p-3 text-sm text-white placeholder:text-white/30" placeholder="e.g. Conducted site survey for solar installation..."></textarea>
+                        <button onclick="saveWorkLog()" class="mt-2 bg-emerald-500 text-white px-4 py-2 rounded-lg text-xs font-bold">Save Project Log</button>
+                    </div>
+                    
+                    <div id="resource-container" class="space-y-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+// --- REAL-WORLD DATA & CORRECTED LINKS ---
+const ROLE_DB = {
+    "strategy": { 
+        name: "Sustainability Consultant", 
+        skills: ["ESG Reporting (GRI/SASB)", "Carbon Accounting", "ISO 14001", "Strategic Planning"], 
+        salary: "£45k - £65k",
+        summary: "Lead sustainability delivery for corporate transformations, focusing on ESG compliance and strategic roadmapping."
+    },
+    "technical": { 
+        name: "Solar Operations Engineer", 
+        skills: ["Field Maintenance", "Electrical Safety (HV/LV)", "PVsyst Analysis", "AutoCAD"], 
+        salary: "£38k - £55k",
+        summary: "Specialist in renewable energy infrastructure maintenance and technical performance optimization."
+    },
+    "people": { 
+        name: "Sustainability Lead", 
+        skills: ["Change Management", "GRI Stakeholder Engagement", "Public Speaking", "ISO 14001"], 
+        salary: "£50k - £75k",
+        summary: "Driving organizational culture shifts and community engagement to reach Net Zero milestones."
+    },
+    "craft": { 
+        name: "Retrofit Technician", 
+        skills: ["Building Science (PAS 2035)", "Thermal Imaging", "Renewable Installation", "Energy Auditing"], 
+        salary: "£28k - £40k",
+        summary: "Hands-on implementation of energy efficiency measures in residential and commercial properties."
+    }
+};
+
+const VOLUNTEER_DB = [
+    { role: "Retrofit Assistant", skills: "Building Science, Thermal Imaging", company: "Retrofit Academy", link: "https://www.retrofitacademy.org/jobs-board/" },
+    { role: "Community Solar Lead", skills: "Stakeholder Engagement, PV Analysis", company: "Community Energy England", link: "https://communityenergyengland.org/jobs" },
+    { role: "Sustainability Support", skills: "ESG Reporting, Data Integrity", company: "EnvironmentJob", link: "https://www.environmentjob.co.uk/jobs" }
+];
+
+let state = {
+    user: null,
+    step: 'auth',
+    diagnostic: {},
+    matchedRole: null,
+    cvAnalyzed: false,
+    subscription: null,
+    projects: []
+};
+
+// --- CORE UI ---
+function switchTab(tabName) {
+    ['diagnostic', 'skills', 'resources'].forEach(t => {
+        document.getElementById(`tab-${t}`).classList.add('hide');
+        document.getElementById(`tab-btn-${t}`).classList.remove('tab-active');
+    });
+    document.getElementById(`tab-${tabName}`).classList.remove('hide');
+    document.getElementById(`tab-btn-${tabName}`).classList.add('tab-active');
+}
+
+function addBotMsg(text) {
+    const win = document.getElementById('chat-window');
+    const div = document.createElement('div');
+    div.className = "bg-slate-100 p-4 rounded-2xl rounded-tl-none text-sm shadow-sm max-w-[90%]";
+    div.innerHTML = text;
+    win.appendChild(div);
+    win.scrollTop = win.scrollHeight;
+}
+
+function addUserMsg(text) {
+    const win = document.getElementById('chat-window');
+    const div = document.createElement('div');
+    div.className = "flex justify-end";
+    div.innerHTML = `<div class="bg-[#091747] text-white p-4 rounded-2xl rounded-tl-none text-sm shadow-sm max-w-[90%]">${text}</div>`;
+    win.appendChild(div);
+    win.scrollTop = win.scrollHeight;
+}
+
+function renderOptions(options, callback) {
+    const win = document.getElementById('chat-window');
+    const container = document.createElement('div');
+    container.className = "grid grid-cols-1 gap-2 mt-2";
+    
+    // Add "Not Sure" to every prompt for better UX
+    const finalOptions = [...options, "Not Sure"];
+    
+    finalOptions.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = "btn-option";
+        btn.innerText = opt;
+        btn.onclick = () => {
+            container.remove();
+            addUserMsg(opt);
+            callback(opt);
+        };
+        container.appendChild(btn);
+    });
+    win.appendChild(container);
+    win.scrollTop = win.scrollHeight;
+}
+
+// --- LOGIC FLOWS ---
+function sendMagicLink() {
+    const name = document.getElementById('reg-name').value;
+    const email = document.getElementById('reg-email').value;
+    const phone = document.getElementById('reg-phone').value;
+    if(!name || !email || !phone) return alert("Please fill all details.");
+
+    state.user = { name, email, phone };
+    document.getElementById('panel-auth').classList.add('hide');
+    document.getElementById('panel-chat').classList.remove('hide');
+    document.getElementById('empty-dash').classList.add('hide');
+    document.getElementById('active-dash').classList.remove('hide');
+    document.getElementById('user-display').innerText = name;
+    
+    document.getElementById('profile-initials').innerText = name.split(' ').map(n => n[0]).join('').toUpperCase();
+    document.getElementById('profile-display-name').innerText = name;
+
+    addBotMsg(`Welcome ${name}! I am your companion. What is your primary motivation today?`);
+    renderOptions([
+        "Career Change", 
+        "Work in sustainability", 
+        "Volunteer", 
+        "Coaching session"
+    ], handleMotivation);
+}
+
+function handleMotivation(choice) {
+    if(choice === "Career Change" || choice === "Not Sure") startDiagnostic();
+    else if (choice.includes("Work")) startCVFlow();
+    else if (choice.includes("Volunteer")) showVolunteeringPage();
+    else if (choice.includes("Coaching")) requestCoaching();
+    else startDiagnostic();
+}
+
+function startDiagnostic() {
+    switchTab('diagnostic');
+    addBotMsg("1. What is your core professional strength?");
+    renderOptions(["Strategy & Planning", "Technical Troubleshooting", "People & Communication", "Physical Craft"], (val) => {
+        state.diagnostic.strength = val;
+        addBotMsg("2. What is your ideal environment?");
+        renderOptions(["Office", "Field", "Hybrid"], (val) => {
+            state.diagnostic.env = val;
+            finalizeDiagnostic();
+        });
+    });
+}
+
+function finalizeDiagnostic() {
+    let roleKey = "strategy";
+    if(state.diagnostic.strength.includes("Technical")) roleKey = "technical";
+    if(state.diagnostic.strength.includes("People")) roleKey = "people";
+    if(state.diagnostic.strength.includes("Physical")) roleKey = "craft";
+
+    state.matchedRole = ROLE_DB[roleKey];
+    document.getElementById('match-result').innerText = state.matchedRole.name;
+    document.getElementById('match-salary').innerText = `Est: ${state.matchedRole.salary}`;
+    
+    document.getElementById('profile-container').classList.remove('hide');
+    document.getElementById('profile-role-title').innerText = state.matchedRole.name;
+    document.getElementById('profile-summary').innerText = state.matchedRole.summary;
+
+    addBotMsg(`Matched Role: **${state.matchedRole.name}**. Shall we analyze your CV using the ATS method?`);
+    renderOptions(["Yes, Analyze CV", "Restart Diagnostic"], (val) => {
+        if(val.includes("Yes")) startCVFlow();
+        else startDiagnostic();
+    });
+}
+
+function startCVFlow() {
+    switchTab('skills');
+    document.getElementById('panel-cv').classList.remove('hide');
+    addBotMsg("Upload your CV. I will deconstruct your projects into skills and match them against market requirements.");
+    document.getElementById('cv-file').onchange = (e) => {
+        analyzeCV(e.target.files[0].name);
+    };
+}
+
+// --- ATS SKILLS ANALYSIS ALGORITHM ---
+function analyzeCV(fileName) {
+    addBotMsg(`ATS Scanning **${fileName}**...`);
+    setTimeout(() => {
+        const skills = state.matchedRole.skills;
+        const score = Math.floor(Math.random() * 20) + 60; // Simulated ATS Score
+        document.getElementById('ats-score').innerText = `${score}% Match`;
+        
+        const badges = document.getElementById('skill-badges');
+        badges.innerHTML = "";
+        
+        skills.forEach((s, i) => {
+            const isMatch = i % 2 === 0; // Simulated ATS detection
+            badges.innerHTML += `<span class="ats-badge ${isMatch ? 'bg-emerald-100 text-emerald-700' : 'bg-red-50 text-red-600'}">
+                ${isMatch ? '✓' : '!'} ${s}</span>`;
+        });
+
+        addBotMsg("Deconstruction complete. Bridge missing skills through volunteering or courses?");
+        renderOptions(["Show Volunteering", "Show Job Resources", "Re-upload CV"], (val) => {
+            if(val.includes("Volunteering")) showVolunteeringPage();
+            else if(val.includes("Resources")) showResources();
+            else startCVFlow();
+        });
+    }, 2000);
+}
+
+function showVolunteeringPage() {
+    switchTab('resources');
+    const container = document.getElementById('resource-container');
+    container.innerHTML = `<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Live Opportunities</h3>`;
+    
+    VOLUNTEER_DB.forEach(v => {
+        container.innerHTML += `
+            <div class="job-card p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h4 class="text-lg font-bold text-[#091747]">${v.role}</h4>
+                        <p class="text-sm text-slate-500">${v.company}</p>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-600 mb-6 italic">Validates Skills: ${v.skills}</p>
+                <div class="flex justify-between items-center border-t pt-4">
+                    <span class="text-[9px] font-bold text-emerald-600 uppercase">Skill Gap Match</span>
+                    <a href="${v.link}" target="_blank" class="bg-[#091747] text-white px-4 py-2 rounded-xl text-xs font-bold">Apply Now</a>
+                </div>
+            </div>
+        `;
+    });
+}
+
+function showResources() {
+    switchTab('resources');
+    const container = document.getElementById('resource-container');
+    container.innerHTML = `<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Market Resources</h3>`;
+    const links = [
+        { name: "EnvironmentJob UK", url: "https://www.environmentjob.co.uk" },
+        { name: "LinkedIn Sustainability", url: "https://www.linkedin.com/jobs/sustainability-jobs" }
+    ];
+    links.forEach(l => {
+        container.innerHTML += `
+            <div class="job-card p-4 flex justify-between items-center">
+                <span class="text-xs font-bold text-[#091747]">${l.name}</span>
+                <a href="${l.url}" target="_blank" class="text-[#ff6b3d] text-[10px] font-bold border border-[#ff6b3d] px-3 py-1 rounded-lg">VISIT</a>
+            </div>
+        `;
+    });
+}
+
+function saveWorkLog() {
+    const text = document.getElementById('daily-input').value;
+    if(text) {
+        state.projects.push(text);
+        alert("Project deconstructed. ATS alignment refreshed.");
+        document.getElementById('daily-input').value = "";
+        analyzeCV("Internal Log"); 
+    }
+}
+
+function requestCoaching() { window.open(`mailto:info@traingarden.co.uk?subject=Coaching Request`); }
+function resetToMotivation() { addBotMsg("Resetting..."); handleMotivation("Not Sure"); }
+
+function handleOmniInput(override = null) {
+    const val = override || document.getElementById('omni-input').value;
+    if(!val) return;
+    if(!override) addUserMsg(val);
+    document.getElementById('omni-input').value = "";
+    handleMotivation(val);
+}
+</script>
+</body>
+</html>

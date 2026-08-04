@@ -1,0 +1,272 @@
+{
+  "user_id": "0c8acb166a5ed612efa24d637d1f5b2e",
+  "email": "290admin@test.com",
+  "name": "",
+  "first_seen": "2026-07-20T12:17:33.478091",
+  "last_seen": "2026-07-20T13:16:18.532189",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [
+    "help the environment"
+  ],
+  "skills": [],
+  "cv_summary": "",
+  "messages": [
+    {
+      "uid": "0c8acb166a5ed612efa24d637d1f5b2e",
+      "role": "user",
+      "content": "I'm completely new to sustainability",
+      "ts": "2026-07-20T12:18:00.063148"
+    },
+    {
+      "uid": "0c8acb166a5ed612efa24d637d1f5b2e",
+      "role": "assistant",
+      "content": "I'm so glad you mentioned being new to sustainability! That's totally okay - it's an exciting field with lots of opportunities to learn and grow. Can you tell me a bit about what brought you to this conversation today? What sparked your interest in sustainability, and are there any specific areas or sectors within the industry that you're currently exploring?",
+      "ts": "2026-07-20T12:18:28.175936",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "What do you want to learn?",
+        "How can I help?",
+        "Start with simple changes?"
+      ]
+    },
+    {
+      "uid": "0c8acb166a5ed612efa24d637d1f5b2e",
+      "role": "user",
+      "content": "i just want to help the environment",
+      "ts": "2026-07-20T12:18:56.714387"
+    },
+    {
+      "uid": "0c8acb166a5ed612efa24d637d1f5b2e",
+      "role": "user",
+      "content": "i just want to help the environment",
+      "ts": "2026-07-20T12:19:36.808197"
+    },
+    {
+      "uid": "0c8acb166a5ed612efa24d637d1f5b2e",
+      "role": "user",
+      "content": "I am feeling anxious and uncertain about my career change into sustainability. Can we talk?",
+      "ts": "2026-07-20T13:15:56.160278"
+    }
+  ],
+  "reports": [
+    {
+      "id": "fff518fa-55b2-4926-ade4-030b55c63109",
+      "name": "CV Gap Analysis",
+      "path": "/view-skill/analysis-1784546537/report",
+      "type": "cv_analysis",
+      "timestamp": "2026-07-20 12:22",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "e586bf47-b69b-4aee-a0fd-0d028fa5c89c",
+      "name": "Daryna Vakulenko - CV -  copy.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-20 12:20"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "mk168jj",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [
+    {
+      "goal": "help the environment"
+    }
+  ],
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": true,
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "excited",
+        "ts": "2026-07-20T12:18:40.991365"
+      }
+    ],
+    "blockers": [],
+    "preferred_tone": "warm",
+    "response_depth": "balanced",
+    "milestones_mentioned": [],
+    "total_exchanges": 1,
+    "encouragement_count": 1,
+    "key_insights": [
+      "The user is new to sustainability and interested in learning more, but hasn't mentioned any specific goals or blockers yet."
+    ],
+    "current_emotion": "excited"
+  },
+  "journey": {
+    "xp": 10,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": true,
+    "progress_pct": 15,
+    "skills_gaps": [
+      {
+        "skill": "Sustainability Frameworks (e.g. ISO 26000, GRI)",
+        "current_level": 0,
+        "target_level": 4,
+        "gap": 4,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Understanding industry-recognized sustainability frameworks is essential for developing and implementing effective sustainability strategies.",
+        "resources": [
+          {
+            "title": "ISO 26000 - Social Responsibility | Free Online Course | AlisonGRI - Welcome to the GRI Academy - Global Reporting InitiativeGRI - Courses - Global Reporting InitiativeSDG Academy - Free Education for Sustainable Development200+ Social Responsibility Online Courses for 2026 | Explore ...Free ISO courses - page.bsigroup.com",
+            "url": "https://alison.com/course/iso-26000-business-practices-for-corporate-social-responsibility",
+            "type": "courses"
+          },
+          {
+            "title": "GRI - Welcome to the GRI Academy - Global Reporting Initiative",
+            "url": "https://www.globalreporting.org/academy/home",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Environmental Impact Assessment (EIA)",
+        "current_level": 2,
+        "target_level": 5,
+        "gap": 3,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "The ability to conduct and interpret EIA is critical for identifying potential environmental risks and opportunities.",
+        "resources": [
+          {
+            "title": "Wangari Maathai Institute for Peace and Environmental Studies",
+            "url": "https://wmi.uonbi.ac.ke/index.php?q=img_assist/load/textarea&textarea=txt_message",
+            "type": "courses"
+          },
+          {
+            "title": "What Is an Environmental Consultant? Roles, Responsibilities, Skills...",
+            "url": "https://atticsintl.com/blog/what-is-an-environmental-consultant-roles-responsibilities-skills-and-how-to-become-one-2026/",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Stakeholder Engagement (e.g. stakeholder analysis, engagement strategies)",
+        "current_level": 1,
+        "target_level": 4,
+        "gap": 3,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Effective stakeholder engagement is vital for building trust and support for sustainability initiatives.",
+        "resources": [
+          {
+            "title": "Stakeholder Management and Communications Course | IPM",
+            "url": "https://instituteprojectmanagement.com/courses/stakeholder-management-and-communications/",
+            "type": "courses"
+          },
+          {
+            "title": "Stakeholder and Public Engagement",
+            "url": "https://www.ciht.org.uk/ciht-learn-1/stakeholder-and-public-engagement/",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Life Cycle Assessment (LCA)",
+        "current_level": 0,
+        "target_level": 4,
+        "gap": 4,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Understanding LCA is essential for evaluating the environmental impacts of products and services.",
+        "resources": [
+          {
+            "title": "Life Cycle Assessment | Coursera",
+            "url": "https://www.coursera.org/learn/life-cycle-assessment",
+            "type": "courses"
+          },
+          {
+            "title": "Free Course: LCA for Sustainable Engineering... | Class Central",
+            "url": "https://www.classcentral.com/course/polimi-lca-for-sustainable-engineering-architecture-and-design-537538",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Data Analysis (e.g. statistical analysis, data visualization)",
+        "current_level": 3,
+        "target_level": 5,
+        "gap": 2,
+        "priority": "medium",
+        "status": "open",
+        "why_matters": "The ability to analyze and interpret complex data is necessary for informed decision-making in sustainability roles.",
+        "resources": [
+          {
+            "title": "Best Free Data Analytics Courses Online With Certificates (2026)",
+            "url": "https://www.mygreatlearning.com/data-analytics/free-courses",
+            "type": "courses"
+          },
+          {
+            "title": "Free Data Analysis Courses & Certificates [2026] | Coursera",
+            "url": "https://www.coursera.org/courses?query=free&skills=Data+Analysis",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Policy and Regulatory Frameworks (e.g. climate change policies, sustainable development goals)",
+        "current_level": 0,
+        "target_level": 4,
+        "gap": 4,
+        "priority": "medium",
+        "status": "open",
+        "why_matters": "Understanding policy and regulatory frameworks is crucial for developing effective sustainability strategies that align with industry standards.",
+        "resources": [
+          {
+            "title": "MSc Global Development (Environment and Climate Change) - course details (2026 entry) | The University of Manchester",
+            "url": "https://www.manchester.ac.uk/study/masters/courses/list/20488/msc-global-development-environment-and-climate-change/course-details/",
+            "type": "courses"
+          },
+          {
+            "title": "LSE | Politics and Policy of Climate Change and Sustainability | Online Certificate Course | LSE Executive Education",
+            "url": "https://www.lse.ac.uk/study-at-lse/executive-education/programmes/politics-and-policy-of-climate-change-and-sustainability",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Communication (e.g. reporting, storytelling)",
+        "current_level": 2,
+        "target_level": 5,
+        "gap": 3,
+        "priority": "low",
+        "status": "open",
+        "why_matters": "Effective communication of sustainability initiatives and results is essential for building stakeholder trust and support.",
+        "resources": [
+          {
+            "title": "Search Google for: courses Communication (e.g. reporting, storytelling) mk168jj",
+            "url": "https://www.google.com/search?q=courses+Communication+%28e.g.+reporting%2C+storytelling%29+mk168jj",
+            "type": "search_fallback"
+          }
+        ]
+      }
+    ],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-20",
+    "last_checkin_date": "",
+    "summary": "Transitioning from a [current role] to a sustainability role requires acquiring skills in industry-recognized sustainability frameworks, environmental impact assessment, stakeholder engagement, life cycle assessment, data analysis, policy and regulatory frameworks, and communication. This transition is estimated to take approximately 6 months.",
+    "estimated_months": 6
+  }
+}

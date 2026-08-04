@@ -1,0 +1,64 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Gap Analysis</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>SUMMARY</strong>
+Robert Smith's background is NOT already in sustainability; his work history shows experience in grounds maintenance and janitorial roles.</p>
+<p><strong>TRANSFERABLE/MATCHED SKILLS</strong></p>
+<ul>
+<li>Physical labor, manual skills (e.g., using gardening tools, operating equipment like tractors)</li>
+<li>Maintenance and repair of physical structures (e.g., fixing water faucets, rebuilding ramps)</li>
+<li>Project management and problem-solving (e.g., building boardwalks, removing fallen trees)</li>
+<li>Attention to detail and cleanliness (e.g., keeping grounds looking nice, cleaning cabins)</li>
+</ul>
+<p><strong>SKILL GAPS</strong></p>
+<ul>
+<li>Sustainability-specific knowledge: e.g., understanding of climate change, sustainable practices, environmental policy</li>
+<li>Familiarity with sustainability frameworks and tools (e.g., Life Cycle Assessment, carbon footprinting)</li>
+<li>Experience working with data on energy efficiency or emissions</li>
+</ul>
+<p><strong>TOP 3 NEXT STEPS</strong></p>
+<ol>
+<li>Take courses in sustainability principles and practices to fill knowledge gaps.</li>
+<li>Seek out volunteer or internship opportunities in sustainability roles to gain hands-on experience.</li>
+<li>Develop skills in data analysis and interpretation related to sustainability metrics.</li>
+</ol>
+<p><strong>SKILLS_JSON</strong>
+<code>json
+{
+  "matched": [
+    {"name": "Physical labor", "description": "Manual skills, using gardening tools"},
+    {"name": "Maintenance", "description": "Repair of physical structures, equipment maintenance"},
+    {"name": "Project management", "description": "Problem-solving, building boardwalks"}
+  ],
+  "gaps": [
+    {"name": "Sustainability principles", "description": "Climate change understanding, sustainable practices"},
+    {"name": "Data analysis", "description": "Energy efficiency, emissions metrics"}
+  ],
+  "summary": "",
+  "name": "Robert Smith",
+  "sector": "Grounds Maintenance and Janitorial",
+  "experience_years": "8-10 years",
+  "suggested_target_role": "Sustainability Coordinator or Specialist",
+  "location": "Alabama",
+  "goals": [],
+  "hobbies": ["Climbing", "Snowboarding", "Cooking", "Reading"],
+  "headline": "Grounds Maintenance Worker/Consultant",
+  "experience": [
+    {"title": "Grounds Maintenance Worker/Consultant", "company": "DNR Mistletoe State Park", "start_date": "May 2015", "end_date": "2019"},
+    {"title": "Grounds Maintenance Worker", "company": "Irons Oaks Environmental Learning Center", "start_date": "2011", "end_date": "2015"}
+  ]
+}</code></p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

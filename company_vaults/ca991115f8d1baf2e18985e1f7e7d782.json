@@ -1,0 +1,73 @@
+{
+  "company_id": "ca991115f8d1baf2e18985e1f7e7d782",
+  "email": "craig@test.com",
+  "account_type": "company",
+  "first_seen": "2026-07-25T18:52:47.734699",
+  "last_seen": "2026-07-25T18:54:38.793722",
+  "profile": {
+    "name": "green energy1",
+    "website": ".com",
+    "sector": "ev",
+    "sub_sectors": [],
+    "company_size": "51-200",
+    "stage": "Growth",
+    "hq_location": "Luton",
+    "remote_policy": "Hybrid",
+    "description": "",
+    "culture_tags": [],
+    "onboarding_done": true
+  },
+  "team_members": [],
+  "documents": [
+    {
+      "id": "81f3a883-a540-4a53-8d8c-b078bc0cc1c2",
+      "name": "Pasted JD",
+      "type": "jd",
+      "role_id": "537c7b72-eb87-48cd-ae9f-43f30a516509",
+      "timestamp": "2026-07-25 18:53"
+    }
+  ],
+  "roles": [
+    {
+      "id": "537c7b72-eb87-48cd-ae9f-43f30a516509",
+      "title": "ev//solar installer",
+      "department": "pm",
+      "seniority": "junior",
+      "employment_type": "full-time",
+      "location": "luton",
+      "remote_policy": "",
+      "salary_range": "33k",
+      "sector_tags": [],
+      "required_skills": [],
+      "nice_to_have_skills": [],
+      "responsibilities": [],
+      "summary": "",
+      "raw_jd_text": "ev/solar installation worker",
+      "status": "open",
+      "created_at": "2026-07-25T18:53:58.192908",
+      "updated_at": "2026-07-25T18:54:38.793692",
+      "brief": {
+        "must_haves": [],
+        "nice_to_haves": [],
+        "deal_breakers": [],
+        "notes": ""
+      },
+      "pipeline": []
+    }
+  ],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "748fa796-2c10-4aaa-9014-394110f91005",
+      "text": "Parsed new role: New role",
+      "type": "role_created",
+      "ts": "2026-07-25T18:53:58.193606"
+    },
+    {
+      "id": "1763346e-569c-4fdf-b88f-05e0aa505b1b",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-07-25T18:53:13.358570"
+    }
+  ]
+}

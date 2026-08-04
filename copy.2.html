@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Train Garden | AI Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#091747",
+                        "tertiary": "#208a65",
+                        "surface": "#f8fafc",
+                        "card": "#ffffff"
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .chat-container::-webkit-scrollbar { width: 4px; }
+        .chat-container::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+        .grid-item { transition: all 0.2s ease; border: 1px solid #f1f5f9; }
+        .grid-item:hover { border-color: #208a65; background-color: #f0fdf4; cursor: pointer; }
+    </style>
+</head>
+<body class="bg-surface font-sans text-slate-900 overflow-hidden">
+
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-gray-100 px-8 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+        <span class="font-extrabold text-primary text-xl tracking-tighter">Train Garden</span>
+        <div class="h-4 w-[1px] bg-slate-200"></div>
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">AI Companion</span>
+    </div>
+    <div class="flex items-center gap-6">
+        <a href="index.html" class="text-sm font-semibold text-slate-600">Home</a>
+        <button onclick="resetSession()" class="text-xs bg-slate-100 px-3 py-1 rounded text-slate-500 hover:bg-red-50 hover:text-red-600 transition-all">Reset Session</button>
+    </div>
+</nav>
+
+<main class="pt-16 h-screen flex">
+    
+    <section class="w-full lg:w-[450px] border-r border-slate-200 bg-white flex flex-col">
+        <div id="chat-stream" class="chat-container flex-1 p-6 overflow-y-auto space-y-4">
+            <div class="flex flex-col gap-1">
+                <span class="text-[10px] font-bold text-slate-400 uppercase ml-2">Companion</span>
+                <div class="bg-slate-100 p-4 rounded-2xl rounded-tl-none text-sm leading-relaxed">
+                    Welcome back! I'm your green career companion. Before we begin, let's get you registered.
+                </div>
+            </div>
+        </div>
+
+        <div id="input-panel" class="p-6 border-t border-slate-100 bg-slate-50/50">
+            <div id="view-reg" class="space-y-3">
+                <input type="text" id="reg-name" placeholder="Full Name" class="w-full p-3 rounded-xl border-slate-200 text-sm focus:ring-tertiary">
+                <input type="email" id="reg-email" placeholder="Email" class="w-full p-3 rounded-xl border-slate-200 text-sm focus:ring-tertiary">
+                <input type="tel" id="reg-phone" placeholder="Phone Number" class="w-full p-3 rounded-xl border-slate-200 text-sm focus:ring-tertiary">
+                <button onclick="register()" class="w-full bg-primary text-white py-3 rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">Get Started</button>
+            </div>
+
+            <div id="view-chat" class="hide flex items-center gap-2">
+                <input type="text" id="user-input" placeholder="Ask me anything..." class="flex-1 p-3 bg-white rounded-full border-slate-200 text-sm">
+                <button class="bg-primary text-white p-3 rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-sm">send</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex-1 p-8 overflow-y-auto bg-surface">
+        <div class="max-w-4xl mx-auto">
+            <h2 id="dash-greeting" class="text-3xl font-bold text-primary mb-1">Welcome</h2>
+            <p class="text-slate-500 mb-8">Nurturing your professional excellence in the green economy.</p>
+
+            <div id="main-menu-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                </div>
+
+            <div id="status-card" class="hide bg-white rounded-3xl p-8 border border-slate-200 shadow-sm mb-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="font-bold text-xl text-primary">Diagnostic Result</h3>
+                        <p id="matched-role-name" class="text-tertiary font-semibold uppercase text-xs tracking-widest mt-1">Pending Analysis</p>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-300 text-4xl">analytics</span>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase">Skill Alignment</span>
+                        <div class="h-2 w-full bg-slate-100 rounded-full mt-2 overflow-hidden">
+                            <div id="alignment-bar" class="h-full bg-tertiary transition-all duration-1000" style="width: 0%"></div>
+                        </div>
+                        <p id="alignment-text" class="text-2xl font-black text-primary mt-2">0%</p>
+                    </div>
+                    <div id="skill-tags" class="flex flex-wrap gap-2">
+                        </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-primary mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-tertiary">library_books</span> Recommended Resources
+                </h3>
+                <div id="resource-list" class="space-y-3">
+                    </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+// --- INTERNAL DATABASE ---
+const TG_DATA = {
+    roles: {
+        "strategy": { name: "Sustainability Consultant", skills: ["Carbon Accounting", "ESG Reporting", "Project Management"], salary: "£45k - £65k" },
+        "technical": { name: "Solar PV Engineer", skills: ["Electrical Engineering", "Field Ops", "Technical Repair"], salary: "£38k - £52k" },
+        "people": { name: "Community Engagement Officer", skills: ["Communication", "Outreach", "Education"], salary: "£30k - £42k" },
+        "craft": { name: "Retrofit Specialist", skills: ["Insulation", "Thermal Imaging", "Carpentry"], salary: "£32k - £45k" }
+    },
+    resources: [
+        { title: "Intro to Circular Economy", type: "Article", link: "#" },
+        { title: "Carbon Footprint Workshop", type: "Webinar", link: "#" },
+        { title: "Green Skills 2026 Report", type: "PDF", link: "#" }
+    ],
+    volunteering: [
+        { title: "Retrofit Apprentice Assistant", skills: ["Insulation", "Technical Repair"], email: "apply@retrofituk.org" },
+        { title: "Community Garden Lead", skills: ["Outreach", "Project Management"], email: "volunteers@urbangarden.org" }
+    ]
+};
+
+let user = JSON.parse(localStorage.getItem('tg_companion_user')) || null;
+let currentStep = 'start';
+
+// --- UI HANDLERS ---
+function addChat(text, isUser = false) {
+    const stream = document.getElementById('chat-stream');
+    const div = document.createElement('div');
+    div.className = "flex flex-col gap-1 " + (isUser ? "items-end" : "items-start");
+    div.innerHTML = `
+        <span class="text-[10px] font-bold text-slate-400 uppercase px-2">${isUser ? 'You' : 'Companion'}</span>
+        <div class="${isUser ? 'bg-primary text-white rounded-tr-none' : 'bg-slate-100 text-slate-800 rounded-tl-none'} p-4 rounded-2xl text-sm leading-relaxed max-w-[90%] shadow-sm">
+            ${text}
+        </div>
+    `;
+    stream.appendChild(div);
+    stream.scrollTop = stream.scrollHeight;
+}
+
+function register() {
+    const name = document.getElementById('reg-name').value;
+    const email = document.getElementById('reg-email').value;
+    const phone = document.getElementById('reg-phone').value;
+    if(!name || !email) return alert("Please complete registration.");
+
+    user = { name, email, phone };
+    localStorage.setItem('tg_companion_user', JSON.stringify(user));
+    
+    document.getElementById('view-reg').classList.add('hide');
+    document.getElementById('view-chat').classList.remove('hide');
+    
+    document.getElementById('dash-greeting').innerText = `Welcome back, ${name.split(' ')[0]}`;
+    addChat(`Perfect! I've recorded your details. Tell me, what is your focus today?`);
+    showMainMenu();
+}
+
+function showMainMenu() {
+    const menuData = [
+        { label: "Career Change", icon: "swap_horiz", fn: "startDiagnostic()" },
+        { label: "Work in Sustainability", icon: "eco", fn: "startCVAnalysis()" },
+        { label: "Want to Volunteer", icon: "volunteer_activism", fn: "showVolunteering()" },
+        { label: "Coaching Session", icon: "groups", fn: "triggerCoaching()" },
+        { label: "Check Salaries", icon: "payments", fn: "showSalaries()" },
+        { label: "Just Catching Up", icon: "chat", fn: "addChat('No problem! I am here if you need help transitioning.')" }
+    ];
+
+    const grid = document.getElementById('main-menu-grid');
+    grid.innerHTML = '';
+    menuData.forEach(item => {
+        grid.innerHTML += `
+            <div onclick="${item.fn}" class="grid-item bg-white p-6 rounded-2xl shadow-sm flex flex-col items-center text-center">
+                <span class="material-symbols-outlined text-tertiary mb-3 text-3xl">${item.icon}</span>
+                <span class="text-sm font-bold text-primary">${item.label}</span>
+            </div>
+        `;
+    });
+
+    // Populate Resources
+    const resList = document.getElementById('resource-list');
+    resList.innerHTML = '';
+    TG_DATA.resources.forEach(res => {
+        resList.innerHTML += `
+            <div class="flex justify-between items-center p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors cursor-pointer">
+                <span class="text-sm font-medium text-slate-700">${res.title}</span>
+                <span class="text-[10px] font-bold bg-white px-2 py-1 rounded-md text-slate-400 uppercase">${res.type}</span>
+            </div>
+        `;
+    });
+}
+
+// --- LOGIC: CAREER DIAGNOSTIC ---
+function startDiagnostic() {
+    addChat("Great choice. Let's find your path. What is your core professional strength?");
+    const options = ["Strategy & Planning", "Technical Troubleshooting", "People & Communication", "Physical / Craftsmanship"];
+    // Simplified logic: user clicks an option in chat (simulated here for brevity)
+    renderChatButtons(options, (choice) => diagStep2(choice));
+}
+
+function renderChatButtons(opts, callback) {
+    const stream = document.getElementById('chat-stream');
+    const div = document.createElement('div');
+    div.className = "flex flex-wrap gap-2 mt-2";
+    opts.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = "px-4 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-tertiary transition-all";
+        btn.innerText = opt;
+        btn.onclick = () => { div.remove(); addChat(opt, true); callback(opt); };
+        div.appendChild(btn);
+    });
+    stream.appendChild(div);
+}
+
+function diagStep2(strength) {
+    user.strength = strength;
+    addChat("How do you prefer to spend your workday?");
+    renderChatButtons(["Solo Focus", "Active Collaboration", "Managing Projects", "On-site Operations"], (choice) => diagStep3(choice));
+}
+
+function diagStep3(style) {
+    addChat("Calculating your sustainability match...");
+    setTimeout(() => {
+        const key = user.strength.toLowerCase().split(' ')[0];
+        const match = TG_DATA.roles[key] || TG_DATA.roles["strategy"];
+        
+        // Update Dashboard Widget
+        document.getElementById('status-card').classList.remove('hide');
+        document.getElementById('matched-role-name').innerText = match.name;
+        
+        addChat(`YOUR DIAGNOSTIC MATCH: ${match.name}. Are you happy with this?`);
+        renderChatButtons(["Yes, start CV Analysis", "No, Restart"], (choice) => {
+            if(choice.includes("Yes")) startCVAnalysis();
+            else startDiagnostic();
+        });
+    }, 1500);
+}
+
+// --- LOGIC: CV ANALYSIS ---
+function startCVAnalysis() {
+    addChat("Please upload your CV (or paste experiences) for analysis.");
+    // For this build, we simulate the skill extraction
+    setTimeout(() => {
+        const match = TG_DATA.roles["strategy"]; // Default
+        const skillsFound = ["Project Management"];
+        const missing = match.skills.filter(s => !skillsFound.includes(s));
+        
+        updateDashSkills(skillsFound, missing);
+        addChat(`Analysis Complete. You have 'Project Management' from your CV, but you lack '${missing[0]}'. I suggest volunteering to bridge this gap.`);
+        
+        renderChatButtons(["Find Volunteering", "Talk to Coach"], (choice) => {
+            if(choice.includes("Volunteering")) showVolunteering(missing);
+            else triggerCoaching();
+        });
+    }, 2000);
+}
+
+function updateDashSkills(found, missing) {
+    const bar = document.getElementById('alignment-bar');
+    const text = document.getElementById('alignment-text');
+    const container = document.getElementById('skill-tags');
+    
+    const percent = Math.round((found.length / (found.length + missing.length)) * 100);
+    bar.style.width = percent + "%";
+    text.innerText = percent + "%";
+    
+    container.innerHTML = '';
+    found.forEach(s => container.innerHTML += `<span class="px-2 py-1 bg-emerald-100 text-emerald-700 text-[10px] font-bold rounded uppercase">✓ ${s}</span>`);
+    missing.forEach(s => container.innerHTML += `<span class="px-2 py-1 bg-red-50 text-red-600 text-[10px] font-bold rounded uppercase">Gap: ${s}</span>`);
+}
+
+// --- LOGIC: VOLUNTEERING & EMAILS ---
+function showVolunteering(gaps = []) {
+    addChat("Here are volunteering roles matching your skill gaps:");
+    TG_DATA.volunteering.forEach(v => {
+        addChat(`${v.title} - Skills gained: ${v.skills.join(', ')}`);
+    });
+    renderChatButtons(["Apply for Retrofit Apprentice", "Apply for Garden Lead"], (role) => {
+        const email = "apply@retrofituk.org"; // Dynamic lookup
+        
+        // TRIGGER EMAIL LOGIC
+        const body = `Name: ${user.name}%0D%0AMotivation: Gain skills in ${gaps.join(', ')}.%0D%0AContact: ${user.phone}`;
+        window.open(`mailto:info@traingarden.co.uk?subject=Volunteer Interest&body=${body}`);
+        window.open(`mailto:${email}?subject=Volunteer Application&body=${body}`);
+
+        addMsgToChat("Application sent! Would you like me to follow up in 48 hours?");
+        renderChatButtons(["Yes, Daily", "Yes, Weekly", "No"], (freq) => setupFollowUp(freq));
+    });
+}
+
+function setupFollowUp(freq) {
+    addChat(`Subscription active! I will ping you ${freq} until we hear back. If they don't respond in 48 hours, I'll help you call them.`);
+    // Store in localStorage for persistence
+}
+
+function triggerCoaching() {
+    const body = `User ${user.name} requested a coaching session. Focus: CV & Job Search.`;
+    window.open(`mailto:info@traingarden.co.uk?subject=Coaching Request&body=${body}`);
+    addChat("I've notified the team. A career coach will reach out via email shortly.");
+}
+
+function resetSession() {
+    localStorage.clear();
+    location.reload();
+}
+
+// Check for existing user
+if(user) {
+    document.getElementById('view-reg').classList.add('hide');
+    document.getElementById('view-chat').classList.remove('hide');
+    document.getElementById('dash-greeting').innerText = `Welcome back, ${user.name.split(' ')[0]}`;
+    showMainMenu();
+}
+</script>
+</body>
+</html>

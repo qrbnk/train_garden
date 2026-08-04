@@ -1,0 +1,34 @@
+{
+    "email": "dashalolvakulenko@gmail.com",
+    "history": [
+        {
+            "name": "Career Gap Analysis",
+            "timestamp": "2026-04-28T11:03:09.593209",
+            "path": "/view-skill/gap-analysis-1103/report"
+        },
+        {
+            "name": "I Want To Learn About Sustainability",
+            "timestamp": "2026-04-23T17:33:48.581013",
+            "path": "/view-skill/i-want-to-learn-about-sustaina-1733/report"
+        },
+        {
+            "name": "Search For Waste Management Roles In London With Salaries",
+            "timestamp": "2026-04-23T13:22:36.135680",
+            "path": "/view-skill/search-for-waste-management-ro-1322/report"
+        },
+        {
+            "name": "What Is Waste Management",
+            "timestamp": "2026-04-23T13:08:03.760689",
+            "path": "/view-skill/what-is-waste-management-1308/report"
+        }
+    ],
+    "token": null,
+    "gaps": [
+        {
+            "skill": "Analysis Complete",
+            "description": "I'll compare the two CVs, but I need to clarify that there is no \"Job\" provided for me to compare ag..."
+        }
+    ],
+    "roadmap": [],
+    "last_updated": "2026-04-23 12:57:37"
+}

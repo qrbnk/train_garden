@@ -1,0 +1,68 @@
+
+<html>
+<head>
+    <style>
+        body { font-family: 'Inter', sans-serif; padding: 40px; color: #1e293b; background: #fff; line-height: 1.7; }
+        h1 { color: #091747; font-size: 24px; margin-bottom: 25px; }
+        .day-card {
+            background: #f8fafc; border: 1px solid #e2e8f0; padding: 25px;
+            border-radius: 20px; margin-bottom: 20px; list-style: none;
+            transition: transform 0.2s;
+        }
+        .day-card:hover { transform: translateY(-3px); border-color: #091747; }
+        .tag {
+            font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 6px;
+            text-transform: uppercase; margin-right: 10px; display: inline-block;
+            margin-bottom: 10px;
+        }
+        .tag-learn { background: #dbeafe; color: #1e40af; }
+        .tag-read  { background: #fef3c7; color: #92400e; }
+        .tag-apply { background: #dcfce7; color: #166534; }
+        .header-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 30px; border-bottom: 2px solid #f1f5f9; padding-bottom: 15px;
+        }
+        .btn-export {
+            background: #091747; color: white; border: none; padding: 10px 20px;
+            border-radius: 8px; font-weight: 700; font-size: 12px; cursor: pointer;
+        }
+        @media print { .no-print { display: none !important; } body { padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="header-bar no-print">
+        <h1>🚀 Career Accelerator: I Want To Gain Climate Skills</h1>
+        <button class="btn-export" onclick="window.print()">Export PDF</button>
+    </div>
+    <div id="roadmap-container"><p>Welcome to our career placement office! We're excited to help you develop skills in climate action. Here are your daily tasks:</p>
+<p><strong>Day 1</strong></p>
+<ul>
+<li>LEARN: Familiarize yourself with the key concepts of climate change, such as greenhouse gases, carbon footprint, and renewable energy sources.</li>
+<li>READ: Check out the website of the UK's leading climate charity, Friends of the Earth (friendsoftheearth.uk), to stay updated on the latest news and campaigns in London.</li>
+<li>APPLY: Sign up for a tree-planting event with the Woodland Trust (woodlandtrust.org.uk) at Hampstead Heath in North London.</li>
+</ul>
+<p><strong>Day 2</strong></p>
+<ul>
+<li>LEARN: Study the basics of sustainable development, including the UN's Sustainable Development Goals (SDGs), and how they relate to climate action.</li>
+<li>READ: Read about the work of the London-based organization, Climate Action Tracker (climateactiontracker.org), which monitors government climate policies and actions.</li>
+<li>APPLY: Volunteer with the Thames River Trust (thamesrivertrust.org) for a clean-up event along the River Thames in central London.</li>
+</ul>
+<p><strong>Day 3</strong></p>
+<ul>
+<li>LEARN: Explore the field of climate policy and governance, including international agreements like the Paris Agreement.</li>
+<li>READ: Follow the blog of the Centre for Climate Change Economics and Policy (granthamclimatechange.infra.manchester.ac.uk) at the University of Manchester.</li>
+<li>APPLY: Join a sustainability-focused group, such as the Transition Town movement, in your local London area to participate in community-led climate initiatives.</li>
+</ul>
+<p>What would you like to focus on next?</p></div>
+    <script>
+        document.querySelectorAll('li').forEach(item => {
+            item.classList.add('day-card');
+            let content = item.innerHTML;
+            if (content.includes('LEARN')) content = '<span class="tag tag-learn">Course</span>' + content;
+            if (content.includes('READ'))  content = '<span class="tag tag-read">Insight</span>' + content;
+            if (content.includes('APPLY')) content = '<span class="tag tag-apply">Action</span>' + content;
+            item.innerHTML = content;
+        });
+    </script>
+</body>
+</html>

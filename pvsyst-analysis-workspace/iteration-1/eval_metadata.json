@@ -1,0 +1,1 @@
+{"eval_id": 1, "eval_name": "pvsyst-analysis-mastery-check", "prompt": "User 1 is drafting a policy for pvsyst-analysis.", "assertions": [{"text": "Includes quantitative targets", "passed": false}, {"text": "References GRI standards", "passed": false}]}

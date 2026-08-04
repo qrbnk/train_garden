@@ -1,0 +1,67 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Summary</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>Summary</strong>
+Based on the provided CV, Robert Smith's background is NOT already in sustainability/green-economy roles. His work experience is primarily in grounds maintenance and janitorial services, with some carpentry and equipment maintenance responsibilities.</p>
+<p><strong>Transferable/Matched Skills</strong></p>
+<ul>
+<li>Physical labor and outdoor work: This skill could be applied to roles involving environmental restoration, conservation, or land management.</li>
+<li>Maintenance and repair of equipment: This skill could be applied to roles involving machinery maintenance for sustainable infrastructure projects or renewable energy systems.</li>
+<li>Attention to detail and organization: This skill is transferable across various industries and could be valuable in sustainability roles requiring data collection, record-keeping, or project management.</li>
+</ul>
+<p><strong>Skill Gaps</strong></p>
+<ul>
+<li>Sustainability-specific knowledge:<ul>
+<li>Understanding of climate change, environmental policy, and sustainable development principles</li>
+<li>Familiarity with green economy concepts, such as circular economy, renewable energy, and resource efficiency</li>
+<li>Knowledge of relevant regulations, certifications (e.g., LEED), and industry standards (e.g., ISO 14001)</li>
+</ul>
+</li>
+<li>Technical skills:<ul>
+<li>Proficiency in software related to sustainability, such as ArcGIS, GIS mapping tools, or energy management systems</li>
+<li>Familiarity with environmental impact assessment methodologies and tools</li>
+</ul>
+</li>
+</ul>
+<p><strong>Top 3 Next Steps</strong></p>
+<ol>
+<li><strong>Take online courses or certifications</strong>: Robert could start by developing a foundational understanding of sustainability concepts, principles, and practices through online courses or certification programs (e.g., Certified Sustainability Practitioner (CSP) or LEED AP).</li>
+<li><strong>Network with professionals in the field</strong>: Robert should reach out to professionals working in sustainability roles within his desired industry (e.g., parks and recreation, environmental consulting, or renewable energy). This would help him gain insights into day-to-day responsibilities, required skills, and potential entry points.</li>
+<li><strong>Highlight transferable skills on his resume and online profiles</strong>: Robert should emphasize the transferable skills mentioned earlier and tailor his resume to highlight relevant experience, such as maintenance and repair of equipment or attention to detail.</li>
+</ol>
+<p><strong>SKILLS_JSON</strong>
+<code>json
+{
+  "matched": ["Physical labor and outdoor work", "Maintenance and repair of equipment", "Attention to detail and organization"],
+  "gaps": [
+    {"category": "Sustainability-specific knowledge"},
+    {"category": "Technical skills"}
+  ],
+  "summary": "",
+  "name": "Robert Smith",
+  "sector": "Grounds maintenance/janitorial services",
+  "experience_years": "8+ years",
+  "suggested_target_role": "Environmental Conservationist, Sustainability Coordinator, or Renewable Energy Technician",
+  "location": "Alabama",
+  "goals": ["To transition into a career in sustainability and contribute to environmental conservation"],
+  "hobbies": ["Climbing", "Snowboarding", "Cooking", "Reading"],
+  "headline": "Grounds Maintenance Worker/Consultant",
+  "experience": [
+    {"title": "Grounds Maintenance Worker/Consultant", "company": "DNR Mistletoe State Park", "start_date": "May 2015", "end_date": "Present"},
+    {"title": "Grounds Maintenance Worker", "company": "Irons Oaks Environmental Learning Center", "start_date": "2011", "end_date": "2015"}
+  ]
+}</code></p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

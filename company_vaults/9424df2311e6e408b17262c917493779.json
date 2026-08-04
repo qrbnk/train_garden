@@ -1,0 +1,59 @@
+{
+  "company_id": "9424df2311e6e408b17262c917493779",
+  "email": "03company.com",
+  "account_type": "company",
+  "first_seen": "2026-08-03T10:51:48.518684",
+  "last_seen": "2026-08-03T10:52:43.493850",
+  "profile": {
+    "name": "03 company",
+    "company_number": "123",
+    "registered_address": "",
+    "website": "",
+    "sector": "ev solar",
+    "sub_sectors": [],
+    "company_size": "",
+    "stage": "",
+    "hq_location": "",
+    "work_types": [
+      "Full-time",
+      "Part-time",
+      "Contract"
+    ],
+    "remote_policy": "",
+    "description": "As a leading provider of solar solutions, we specialize in designing and installing high-performance solar installations for residential and commercial clients nationwide.",
+    "culture_tags": [],
+    "account_manager": {
+      "name": "craig",
+      "position": "ceo",
+      "email": "ceo@test.com"
+    },
+    "onboarding_done": false
+  },
+  "team_members": [
+    {
+      "id": "0844e0ec-9ea2-4048-a5c2-835282bb6f81",
+      "name": "craig",
+      "email": "ceo@test.com",
+      "access_level": "owner",
+      "added_at": "2026-08-03T10:52:28.123648"
+    }
+  ],
+  "documents": [],
+  "roles": [],
+  "skills": [],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "81443365-d554-4e6d-84c5-9682c93e1142",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:52:43.493842"
+    },
+    {
+      "id": "209d4914-8f4c-4dbd-9fb0-14453623c699",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:52:28.126314"
+    }
+  ]
+}

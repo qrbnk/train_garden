@@ -1,0 +1,132 @@
+{
+  "user_id": "77c1dc7f5a03feca89011ba4528d527a",
+  "email": "testing1980@test.com",
+  "name": "testing",
+  "first_seen": "2026-07-31T21:50:49.076283",
+  "last_seen": "2026-07-31T21:53:12.874519",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Project delivery and compliance expertise",
+    "Risk management and safety protocol development",
+    "Hands-on problem-solving and technical expertise",
+    "Data analysis and interpretation for performance optimization",
+    "Stakeholder management and conflict resolution"
+  ],
+  "skill_sources": {
+    "Project delivery and compliance expertise": [
+      {
+        "type": "inferred",
+        "detail": "NABCEP PVIP Certified — This certification demonstrates Alexander's ability to manage complex projects and ensure adherence to regulatory standards, essential skills for sustainability roles that involve large-scale initiatives or policy im",
+        "ts": "2026-07-31T21:53:12.774073"
+      }
+    ],
+    "Risk management and safety protocol development": [
+      {
+        "type": "inferred",
+        "detail": "OSHA 30 Safety — As a licensed electrician with OSHA 30 certification, Alexander has experience identifying potential hazards and implementing measures to prevent accidents, a critical skill for sustainability professionals who often work i",
+        "ts": "2026-07-31T21:53:12.774177"
+      }
+    ],
+    "Hands-on problem-solving and technical expertise": [
+      {
+        "type": "inferred",
+        "detail": "Licensed Electrician — Alexander's electrical background demonstrates his ability to troubleshoot complex issues and apply technical knowledge, skills that can be applied to sustainability challenges such as infrastructure development or te",
+        "ts": "2026-07-31T21:53:12.774187"
+      }
+    ],
+    "Data analysis and interpretation for performance optimization": [
+      {
+        "type": "inferred",
+        "detail": "NABCEP CERTIFIED LEAD SOLAR TECHNICIAN — As a lead solar technician with NABCEP certification, Alexander likely has experience collecting and analyzing data to optimize system performance, a skill that can be applied to sustainability roles",
+        "ts": "2026-07-31T21:53:12.774193"
+      }
+    ],
+    "Stakeholder management and conflict resolution": [
+      {
+        "type": "inferred",
+        "detail": "Professional Profile: Resourceful and safety-focused — Alexander's self-description highlights his resourcefulness and safety focus, suggesting that he can effectively manage stakeholders and navigate conflicts, essential skills for sustain",
+        "ts": "2026-07-31T21:53:12.774198"
+      }
+    ]
+  },
+  "cv_summary": "ALEXANDER R. RIVERA\nNABCEP CERTIFIED LEAD SOLAR TECHNICIAN\n📍 Austin, TX 78745\n📱 (512) 555-0194\n✉️ a.rivera.solar@example.com\n🔗 linkedin.com/in/alex-rivera-pv\nNABCEP PVIP Certified\nOSHA 30 Safety\nLicensed Electrician\nProfessional Profile: Resourceful and safety-focused Lead Solar Installation Technic",
+  "messages": [],
+  "reports": [
+    {
+      "id": "41515650-18d3-4f9e-8315-d4e9bdb0409e",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785531192/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-31 21:53",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "b0fd6bfc-ef2b-461e-b921-51cb54706b47",
+      "name": "solar_installation_technician_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-31 21:52"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "",
+  "experience": [],
+  "how_heard": "X / Twitter",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "NABCEP PVIP Certified",
+      "skill": "Project delivery and compliance expertise",
+      "relevance": "This certification demonstrates Alexander's ability to manage complex projects and ensure adherence to regulatory standards, essential skills for sustainability roles that involve large-scale initiatives or policy implementation."
+    },
+    {
+      "source": "OSHA 30 Safety",
+      "skill": "Risk management and safety protocol development",
+      "relevance": "As a licensed electrician with OSHA 30 certification, Alexander has experience identifying potential hazards and implementing measures to prevent accidents, a critical skill for sustainability professionals who often work in high-risk environments or develop safety protocols."
+    },
+    {
+      "source": "Licensed Electrician",
+      "skill": "Hands-on problem-solving and technical expertise",
+      "relevance": "Alexander's electrical background demonstrates his ability to troubleshoot complex issues and apply technical knowledge, skills that can be applied to sustainability challenges such as infrastructure development or technology implementation."
+    },
+    {
+      "source": "NABCEP CERTIFIED LEAD SOLAR TECHNICIAN",
+      "skill": "Data analysis and interpretation for performance optimization",
+      "relevance": "As a lead solar technician with NABCEP certification, Alexander likely has experience collecting and analyzing data to optimize system performance, a skill that can be applied to sustainability roles such as evaluating the efficacy of renewable energy projects or developing efficiency metrics."
+    },
+    {
+      "source": "Professional Profile: Resourceful and safety-focused",
+      "skill": "Stakeholder management and conflict resolution",
+      "relevance": "Alexander's self-description highlights his resourcefulness and safety focus, suggesting that he can effectively manage stakeholders and navigate conflicts, essential skills for sustainability professionals who often work with diverse teams or communities."
+    }
+  ]
+}

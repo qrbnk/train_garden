@@ -1,0 +1,271 @@
+{
+  "user_id": "7d806835d8d39dab28d0b7d1fdd2dc57",
+  "email": "testin2396@test.com",
+  "name": "jason",
+  "first_seen": "2026-07-31T22:04:24.883126",
+  "last_seen": "2026-07-31T22:06:25.164679",
+  "sector": "Solar Energy Installation",
+  "experience_years": "7+ years",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "project management",
+    "electrical work",
+    "safety protocols",
+    "technical problem-solving",
+    "NABCEP PV Installation Professional (PVIP)",
+    "OSHA 30-Hour Construction Safety",
+    "Licensed Journeyman Electrician",
+    "Tesla Powerwall Certified Installer",
+    "Enphase Certified Field Specialist",
+    "CPR / First Aid / AED Certified",
+    "Fluke 1587 FC Insulation Tester",
+    "FLIR Thermal Camera & Analysis",
+    "Seaward Solar Utility Tester",
+    "Torque Wrench & Calibrated Tools",
+    "Aerial Lifts & Scaffold Safety",
+    "Regulatory Literacy",
+    "Health & Safety Management",
+    "Project Delivery",
+    "Data Management",
+    "Project Management & Coordination"
+  ],
+  "skill_sources": {
+    "project management": [
+      {
+        "type": "cv",
+        "detail": "Matched from CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.637486"
+      }
+    ],
+    "electrical work": [
+      {
+        "type": "cv",
+        "detail": "Matched from CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638002"
+      }
+    ],
+    "safety protocols": [
+      {
+        "type": "cv",
+        "detail": "Matched from CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638016"
+      }
+    ],
+    "technical problem-solving": [
+      {
+        "type": "cv",
+        "detail": "Matched from CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638020"
+      }
+    ],
+    "NABCEP PV Installation Professional (PVIP)": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638028"
+      }
+    ],
+    "OSHA 30-Hour Construction Safety": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638031"
+      }
+    ],
+    "Licensed Journeyman Electrician": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638034"
+      }
+    ],
+    "Tesla Powerwall Certified Installer": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638036"
+      }
+    ],
+    "Enphase Certified Field Specialist": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638038"
+      }
+    ],
+    "CPR / First Aid / AED Certified": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638041"
+      }
+    ],
+    "Fluke 1587 FC Insulation Tester": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638043"
+      }
+    ],
+    "FLIR Thermal Camera & Analysis": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638046"
+      }
+    ],
+    "Seaward Solar Utility Tester": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638048"
+      }
+    ],
+    "Torque Wrench & Calibrated Tools": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638050"
+      }
+    ],
+    "Aerial Lifts & Scaffold Safety": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (solar_installation_technician_cv.pdf)",
+        "ts": "2026-07-31T22:05:51.638052"
+      }
+    ],
+    "Regulatory Literacy": [
+      {
+        "type": "inferred",
+        "detail": "NABCEP Certified Lead Solar Technician — This certification demonstrates a deep understanding of solar energy regulations and industry standards, which is essential for navigating complex sustainability frameworks and regulatory requirement",
+        "ts": "2026-07-31T22:06:24.953237"
+      }
+    ],
+    "Health & Safety Management": [
+      {
+        "type": "inferred",
+        "detail": "OSHA 30 Safety Certification — This safety training equips Alexander with the ability to assess and mitigate risks in a variety of environmental contexts, making him well-suited for sustainability roles that involve ensuring the health and ",
+        "ts": "2026-07-31T22:06:24.953387"
+      }
+    ],
+    "Project Delivery": [
+      {
+        "type": "inferred",
+        "detail": "Licensed Electrician — As a licensed electrician, Alexander has experience managing electrical installations from start to finish, which translates to project delivery skills in sustainability contexts, such as leading renewable energy proj",
+        "ts": "2026-07-31T22:06:24.953395"
+      }
+    ],
+    "Data Management": [
+      {
+        "type": "inferred",
+        "detail": "NABCEP PVIP Certified — This certification requires Alexander to demonstrate knowledge of solar energy system performance and data analysis, which is a valuable skill in sustainability roles that involve tracking environmental metrics or op",
+        "ts": "2026-07-31T22:06:24.953399"
+      }
+    ],
+    "Project Management & Coordination": [
+      {
+        "type": "inferred",
+        "detail": "Lead Solar Field Technician experience at Apex Clean Energy Solutions — As a lead solar field technician, Alexander has likely managed teams and coordinated logistics for large-scale solar installations, which are skills highly transferable",
+        "ts": "2026-07-31T22:06:24.953402"
+      }
+    ]
+  },
+  "cv_summary": "ALEXANDER R. RIVERA\nNABCEP CERTIFIED LEAD SOLAR TECHNICIAN\n📍 Austin, TX 78745\n📱 (512) 555-0194\n✉️ a.rivera.solar@example.com\n🔗 linkedin.com/in/alex-rivera-pv\nNABCEP PVIP Certified\nOSHA 30 Safety\nLicensed Electrician\nProfessional Profile: Resourceful and safety-focused Lead Solar Installation Technic",
+  "messages": [],
+  "reports": [
+    {
+      "id": "65555bad-5a2e-470e-9bf8-e940fe29224c",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785531985/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-31 22:06",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "b3f7ddb7-9a56-4413-854a-01d95bce693b",
+      "name": "solar_installation_technician_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-31 22:05"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "Austin, TX",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "Lead Solar Field Technician",
+  "experience": [
+    {
+      "id": "ff61665e",
+      "title": "Lead Solar Field Technician",
+      "company": "Apex Clean Energy Solutions",
+      "start_date": "2022 - Present",
+      "end_date": "Present",
+      "description": "",
+      "source": "chat"
+    },
+    {
+      "id": "ed363c8d",
+      "title": "Solar PV Installer & Maintenance Tech",
+      "company": "SunRay Electric & Renewables",
+      "start_date": "2019 - 2022",
+      "end_date": "Present",
+      "description": "",
+      "source": "chat"
+    }
+  ],
+  "how_heard": "Event",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "NABCEP Certified Lead Solar Technician",
+      "skill": "Regulatory Literacy",
+      "relevance": "This certification demonstrates a deep understanding of solar energy regulations and industry standards, which is essential for navigating complex sustainability frameworks and regulatory requirements."
+    },
+    {
+      "source": "OSHA 30 Safety Certification",
+      "skill": "Health & Safety Management",
+      "relevance": "This safety training equips Alexander with the ability to assess and mitigate risks in a variety of environmental contexts, making him well-suited for sustainability roles that involve ensuring the health and safety of workers or communities."
+    },
+    {
+      "source": "Licensed Electrician",
+      "skill": "Project Delivery",
+      "relevance": "As a licensed electrician, Alexander has experience managing electrical installations from start to finish, which translates to project delivery skills in sustainability contexts, such as leading renewable energy projects or managing construction teams."
+    },
+    {
+      "source": "NABCEP PVIP Certified",
+      "skill": "Data Management",
+      "relevance": "This certification requires Alexander to demonstrate knowledge of solar energy system performance and data analysis, which is a valuable skill in sustainability roles that involve tracking environmental metrics or optimizing energy systems."
+    },
+    {
+      "source": "Lead Solar Field Technician experience at Apex Clean Energy Solutions",
+      "skill": "Project Management & Coordination",
+      "relevance": "As a lead solar field technician, Alexander has likely managed teams and coordinated logistics for large-scale solar installations, which are skills highly transferable to sustainability roles that involve project planning and execution."
+    }
+  ]
+}

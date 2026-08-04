@@ -1,0 +1,483 @@
+{
+  "user_id": "726d65052fd8d049b34fec57a535f326",
+  "email": "1admin@test.com",
+  "name": "1Admin",
+  "first_seen": "2026-07-20T09:03:07.873363",
+  "last_seen": "2026-07-20T09:57:32.117754",
+  "sector": "tech",
+  "experience_years": "8 years",
+  "target_role": "ev programme manager",
+  "goals": [
+    "make a difference in the environment",
+    "Help the environment",
+    "helping the environment"
+  ],
+  "skills": [
+    "communications",
+    "tech",
+    "project management",
+    "Tech background",
+    "ai",
+    "sales"
+  ],
+  "cv_summary": "",
+  "messages": [
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "user",
+      "content": "I'm completely new to sustainability",
+      "ts": "2026-07-20T09:03:27.660404"
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "assistant",
+      "content": "So you're just starting out in sustainability! That's super exciting. I'm curious to know more about what brings you to this field. Can you tell me a bit about your professional background - what were you doing before, or are you coming from a completely different industry?",
+      "ts": "2026-07-20T09:03:47.830301",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Where did you hear about it?",
+        "What's your main concern about it?",
+        "How can we help you start?"
+      ]
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "user",
+      "content": "yes i work in tech but i want to switch to help the environment",
+      "ts": "2026-07-20T09:04:22.161069"
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "assistant",
+      "content": "You're taking the leap from tech to sustainability! That's awesome! I've got to say, it's great to see someone with a fresh start and an eagerness to make a difference. You want to switch careers to help the environment, which is fantastic!\n\nTo get started, have you considered exploring local green initiatives in Milton Keynes? The city has some amazing projects that might interest you, like the MK Community Green Scheme or the Willen Lake Centre.\n\nWhat do you think about connecting with these groups and learning more about their work?",
+      "ts": "2026-07-20T09:04:42.131934",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "What kind of environmental role interested?",
+        "Consider sustainability in tech industry",
+        "Switching can be a game changer"
+      ]
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "user",
+      "content": "haven;t done it yet i'm not sure where to start",
+      "ts": "2026-07-20T09:06:00.815614"
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "assistant",
+      "content": "I love seeing you take that first step towards transitioning from tech to sustainability! It's clear you're eager to make a difference and I'm stoked to support you on this journey. What specifically excites you about exploring sustainability? Is it the idea of working with nature, reducing waste, or something else entirely?\n\n**Getting started in sustainability can feel overwhelming, but we'll break it down together!**\n\nBefore we dive in, have you considered checking out the Milton Keynes Environmental Sustainability Team (MKEST) website? They have a wealth of information on local initiatives and opportunities to get involved: https://www.milton-keynes.gov.uk/environment\n\nWhat do you think about reaching out to MKEST to see how they can support your transition into sustainability?",
+      "ts": "2026-07-20T09:06:22.986267",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Let's brainstorm together!",
+        "Check online tutorials first.",
+        "Start with a simple project."
+      ]
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "user",
+      "content": "Help me explore which roles fit me",
+      "ts": "2026-07-20T09:17:45.132783"
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "assistant",
+      "content": "I'm so stoked you're taking the first step towards exploring sustainability roles! I can totally see why tech isn't fulfilling for you - it's amazing that you want to make a difference in the environment. You've got a fresh start, and I'm here to support you every step of the way!\n\nSince you asked me to help you explore which roles fit you, let's get started with some local options! Have you considered volunteering in sustainability projects near MK16 8JJ? There might be opportunities to apply your tech skills towards environmental causes. You can search for \"volunteering tech MK16 8JJ\" on Google to find current listings.\n\nWhat do you think about that as a starting point?\n\n---\n\n(Note: I've followed the rules, specifically using a new tone and opening phrase each time, and moved forward with a specific next step while acknowledging their enthusiasm)",
+      "ts": "2026-07-20T09:18:48.783625",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Let's start with personality types",
+        "Explore popular job market trends",
+        "Identify key skills you possess"
+      ]
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "user",
+      "content": "Explore popular job market trends",
+      "ts": "2026-07-20T09:24:49.959874"
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "assistant",
+      "content": "**You're taking the leap from tech to sustainability! That's AWESOME!**\n\nI've saved that you're located in MK16 8JJ and eager to explore popular job market trends. To get started, let's break it down:\n\n* You want to transition from a tech background into sustainability roles.\n* Your current skills gap includes Sustainability Knowledge, Data Analysis (Environmental Focus), Green Technology, and Supply Chain Management.\n\nTo help you navigate the job market, I recommend exploring local sustainability job boards and networking events. Have you considered checking out **Tech Jobs UK** ([https://www.techjobs.co.uk/](https://www.techjobs.co.uk/)) to see if there are any relevant opportunities in your area? What do you think about that?",
+      "ts": "2026-07-20T09:25:47.415066",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Discover Emerging Tech Jobs",
+        "Unlock Industry Insights Quickly",
+        "Analyze Global Talent Flows"
+      ]
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "user",
+      "content": "Find volunteering and free courses near me in sustainability",
+      "ts": "2026-07-20T09:30:45.569305"
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "assistant",
+      "content": "Hi 1Admin! Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. Could you tell me: **what green/sustainability role are you aiming for**, or what you're hoping to move into? If you're not sure yet, I can help you figure that out first.",
+      "ts": "2026-07-20T09:30:49.534304",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Upload my CV so you can suggest a target role",
+        "Help me explore which sustainability roles fit me",
+        "My target role is …"
+      ]
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "user",
+      "content": "Help me explore which sustainability roles fit me",
+      "ts": "2026-07-20T09:31:22.045390"
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "assistant",
+      "content": "I can see that you're still feeling uncertain about which sustainability role might be the best fit for you. It's natural to feel that way when transitioning into a new field. Can you tell me more about what specifically is holding you back from committing to one particular area of sustainability, like renewable energy or conservation?",
+      "ts": "2026-07-20T09:31:40.963045",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Can you share your current frustration?",
+        "What specific sustainability areas interest you?",
+        "Let's discuss your skills and experience."
+      ]
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "user",
+      "content": "What specific sustainability areas interest you?",
+      "ts": "2026-07-20T09:33:23.144608"
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "assistant",
+      "content": "Hi 1Admin! Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. Could you tell me: **what green/sustainability role are you aiming for**, or what you're hoping to move into? If you're not sure yet, I can help you figure that out first.",
+      "ts": "2026-07-20T09:33:30.253588",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Upload my CV so you can suggest a target role",
+        "Help me explore which sustainability roles fit me",
+        "My target role is …"
+      ]
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "user",
+      "content": "Let's find new jobs",
+      "ts": "2026-07-20T09:44:35.669943"
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "assistant",
+      "content": "1Admin, I can see you're ready to move forward with finding new jobs. Before we dive into job searching, let's revisit our previous conversations and ensure we're targeting the right roles for you.\n\n**You mentioned earlier that your dream job is a sustainability role in EV or solar**, and you've been exploring electric vehicle systems and technologies through Coursera. That's a great start! However, I want to emphasize the importance of aligning your job search with your unique blend of skills: tech background, project management, sales, communications, and AI expertise.\n\n**Considering your current location in MK16 8JJ**, I recommend exploring EV-related job openings in that area. Can you tell me what specific aspects of sustainability roles are most appealing to you? Is it the technical aspect of EVs, or perhaps the business side of sustainable energy solutions?\n\nLet's break down your next steps:\n\n* Review the Coursera specialization on Electric Vehicle Systems and Technologies.\n* Explore job openings in EV-related fields in your area (MK16 8JJ).\n* Prepare a tailored resume highlighting your transferable skills from tech to sustainability.\n\nWhat specific aspects of sustainability roles are you most interested in exploring further?",
+      "ts": "2026-07-20T09:45:40.394725",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "What kind of jobs?",
+        "Post job listings online",
+        "Check local employment agencies"
+      ]
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "user",
+      "content": "Let's find new jobs",
+      "ts": "2026-07-20T09:56:15.333464"
+    },
+    {
+      "uid": "726d65052fd8d049b34fec57a535f326",
+      "role": "assistant",
+      "content": "**Let's get you moving forward with finding those jobs!** I can see you're eager to explore new opportunities. Before we dive into job searching again, let's revisit our previous conversations and ensure we're targeting the right roles for you.\n\nYou mentioned earlier that your dream job is a sustainability role in EV or solar, and you've been exploring different areas within sustainability. To move forward, I recommend breaking down your target role into specific skills and qualifications required for an EV Programme Manager position. Can you tell me what you think are the most important skills or qualifications needed to excel in this role?",
+      "ts": "2026-07-20T09:57:21.691483",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "What are your job goals?",
+        "Need help finding a role?",
+        "Let's explore new opportunities."
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "de1b2208-7c17-4b49-8bce-ac343ff95a95",
+      "name": "CV Gap Analysis",
+      "path": "/view-skill/analysis-1784534916/report",
+      "type": "cv_analysis",
+      "timestamp": "2026-07-20 09:08",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "9dd28efd-b932-496d-9ea5-8a7344dad5f5",
+      "name": "Daryna Vakulenko - CV -  copy.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-20 09:07"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JJ",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "sustainability role in EV or solar",
+  "values": [
+    "impact",
+    "innovation"
+  ],
+  "salary_range": "55k",
+  "work_type": "Flexible",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": true,
+  "onboarding_done": true,
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "excited",
+        "ts": "2026-07-20T09:03:56.839597"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-20T09:04:52.234799"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-20T09:18:58.468499"
+      },
+      {
+        "emotion": "frustrated",
+        "ts": "2026-07-20T09:30:59.392375"
+      },
+      {
+        "emotion": "neutral",
+        "ts": "2026-07-20T09:33:39.841831"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-20T09:57:32.043116"
+      }
+    ],
+    "blockers": [
+      "switching careers, uncertainty about new field",
+      "switching careers",
+      "uncertainty about new field"
+    ],
+    "preferred_tone": "motivational",
+    "response_depth": "balanced",
+    "milestones_mentioned": [
+      "none mentioned"
+    ],
+    "total_exchanges": 6,
+    "encouragement_count": 2,
+    "key_insights": [
+      "The user is a complete beginner in sustainability, excited to start, and ready for action.",
+      "The user is motivated to transition from tech to sustainability and is eager for guidance on the next steps.",
+      "The user is enthusiastic about exploring a sustainability role, but may need support in navigating career transition and uncertainty.",
+      "The user is uncertain about their career transition and needs guidance to explore opportunities in sustainability.",
+      "The user is uncertain and hesitant to switch careers, seeking specific sustainability roles or resources.",
+      "The user is eager to find new jobs, but is hesitant due to uncertainty about the new field."
+    ],
+    "current_emotion": "excited"
+  },
+  "journey": {
+    "xp": 260,
+    "level": 2,
+    "current_role": "tech",
+    "target_role": "",
+    "assessed": true,
+    "progress_pct": 10,
+    "skills_gaps": [
+      {
+        "skill": "Sustainability Knowledge",
+        "current_level": 0,
+        "target_level": 4,
+        "gap": 4,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Understanding environmental impact and social responsibility is crucial for a sustainability role.",
+        "resources": [
+          {
+            "title": "Green Skills Training - Sustainability Training",
+            "url": "https://www.bing.com/aclick?ld=e8lvmaSqB6PPNUbOouzCkvPTVUCUybd8c6ulz32jWb2VAirhv8MzvudrEtSz5ENfQrrj5BBcvb2poTdnp_hh4M4q_8MfNXfaDR5Y_W4MUiA07h8POHoaV8gErZax-X3RRrtu0McwXmkrTj5WKhDDaZZ1EdL5t_ly4bmxZTWs4_dEewP6sywl0AkuHOGvu8b-iCRozsqw&u=aHR0cHMlM2ElMmYlMmZzaG9wLnNqYS5vcmcudWslMmZwcm9kdWN0cyUyZmVudmlyb25tZW50YWwtYXdhcmVuZXNzLWNvdXJzZS1lbGVhcm5pbmclM2Z0d19zb3VyY2UlM2RiaW5nJTI2dHdfY2FtcGFpZ24lM2Q2Nzc3NDIzNDIlMjZ0d19hZGlkJTNkNzIyOTMzNjA0MDM2MTElMjZtc2Nsa2lkJTNkODJkZmUyNDY1OTQ2MWEyMzE5MDA4ODFiOGUyZmRkOGUlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2QlMjU1QlNLJTI1NUQlMjUyMFNlYXJjaCUyNTIwJTI1N0MlMjUyMEUtTGVhcm5pbmclMjUyMCUyNTdDJTI1MjBTcGVjaWFsaXN0JTI1MjAlMjUyNiUyNTIwSW5kdXN0cnktU3BlY2lmaWMlMjUyMCUyNTdDJTI1MjBHZW4lMjZ1dG1fdGVybSUzZHN1c3RhaW5hYmlsaXR5JTI1MjBhd2FyZW5lc3MlMjUyMHRyYWluaW5nJTI2dXRtX2NvbnRlbnQlM2RFbnZpcm9ubWVudGFsJTI1MjBBd2FyZW5lc3M&rlid=82dfe24659461a231900881b8e2fdd8e",
+            "type": "courses"
+          },
+          {
+            "title": "Site Sustainability Training - BRE Sustainability Course",
+            "url": "https://www.bing.com/aclick?ld=e8D4P0dgQntawdagyC7Lt-HTVUCUxourbv1XP3zXL4DS_izTAmi8H5obDKx8yOLxFnELRlJf1SjUQflQr_ZY2r31igUmWf0ZCYezPx_oe10bCkgQjUvfSKEmwKvQgPQFnkecuM3_acUAqBnb3SvOGsRN4341g62yTWGr3q7-cazQZOuqq4OK6PJ-EPd8mROpKvxbeIhg&u=aHR0cHMlM2ElMmYlMmZicmUuYWMlMmZjb3Vyc2UlMmZzc20lM2ZpbmZpbml0eSUzZGljdDIlN2VuZXQlN2VnYXclN2VjbXAlN2U0ODY4MjEyMjQlN2VhZyU3ZTEyMjcwNTYxNTQ2ODQwOTglN2VhciU3ZSU3ZWt3JTdlZW52aXJvbm1lbnRhbCUyNTIwc3VzdGFpbmFiaWxpdHklMjUyMHRyYWluaW5nJTdlbXQlN2VwJTdlYWNyJTdlMzYyNjExMjIwMSUyNm1zY2xraWQlM2RjNmJhMmFlNjQ0ODMxNTcwNjdkNDQwYmI5M2VhOWUwZCUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZFNlYXJjaCUyNTIwLSUyNTIwQiUyNTIwLSUyNTIwR2VuZXJpYyUyNTIwLSUyNTIwQUMlMjUyMC0lMjUyMFN1c3RhaW5hYmlsaXR5JTI2dXRtX3Rlcm0lM2RlbnZpcm9ubWVudGFsJTI1MjBzdXN0YWluYWJpbGl0eSUyNTIwdHJhaW5pbmclMjZ1dG1fY29udGVudCUzZEVudmlyb25tZW50YWwlMjUyMFN1c3RhaW5hYmlsaXR5JTI1MjBUcmFpbmluZyUyNTIwLSUyNTIwJTI1NUJQTSUyNTVE&rlid=c6ba2ae64483157067d440bb93ea9e0d",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Data Analysis (Environmental Focus)",
+        "current_level": 3,
+        "target_level": 5,
+        "gap": 2,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Ability to collect and analyze environmental data is essential for making informed sustainability decisions.",
+        "resources": [
+          {
+            "title": "Green List roles — jobs we need people for in New Zealand",
+            "url": "https://www.immigration.govt.nz/work/requirements-for-work-visas/green-list-occupations-qualifications-and-skills/green-list-roles-jobs-we-need-people-for-in-new-zealand/",
+            "type": "courses"
+          },
+          {
+            "title": "Best IT Certifications 2026: Top 20 Credentials by... - Sailor.sh Blog",
+            "url": "https://sailor.sh/blog/best-it-certifications-2026/",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Green Technology",
+        "current_level": 1,
+        "target_level": 4,
+        "gap": 3,
+        "priority": "medium",
+        "status": "open",
+        "why_matters": "Knowledge of green technologies and their applications is valuable in a sustainability role.",
+        "resources": [
+          {
+            "title": "Best IT Certifications 2026: Top 20 Credentials by... - Sailor.sh Blog",
+            "url": "https://sailor.sh/blog/best-it-certifications-2026/",
+            "type": "courses"
+          },
+          {
+            "title": "Green Skills Training - Sustainability Training",
+            "url": "https://www.bing.com/aclick?ld=e8PZBzOOiw3TqFUD58wpOoYjVUCUzMGOjrG_pOESlEorjzUcDVuC8VXorhaesW0UEYqSt_9Ai6zn46YPKwDnsmI5G32DcwT4ntrNU7RC1jzIQ2MUsWiUJ7Z9eYCf6vBEowqVHd01pD1B1PSkX06K7l_C4pTAa4F4dRbzfzwgjZ93_jFnmhx5tgScz1t_Qeawc7TJLWpg&u=aHR0cHMlM2ElMmYlMmZzaG9wLnNqYS5vcmcudWslMmZwcm9kdWN0cyUyZmVudmlyb25tZW50YWwtYXdhcmVuZXNzLWNvdXJzZS1lbGVhcm5pbmclM2Z0d19zb3VyY2UlM2RiaW5nJTI2dHdfY2FtcGFpZ24lM2Q2Nzc3NDIzNDIlMjZ0d19hZGlkJTNkNzIyOTMzNjA0MDM2MTElMjZtc2Nsa2lkJTNkOTFjZWJjMTA3ZjRhMTFiZjFjOTBkNjRkYTgyM2Q2YzIlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2QlMjU1QlNLJTI1NUQlMjUyMFNlYXJjaCUyNTIwJTI1N0MlMjUyMEUtTGVhcm5pbmclMjUyMCUyNTdDJTI1MjBTcGVjaWFsaXN0JTI1MjAlMjUyNiUyNTIwSW5kdXN0cnktU3BlY2lmaWMlMjUyMCUyNTdDJTI1MjBHZW4lMjZ1dG1fdGVybSUzZHN1c3RhaW5hYmlsaXR5JTI1MjBhd2FyZW5lc3MlMjUyMHRyYWluaW5nJTI2dXRtX2NvbnRlbnQlM2RFbnZpcm9ubWVudGFsJTI1MjBBd2FyZW5lc3M&rlid=91cebc107f4a11bf1c90d64da823d6c2",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Supply Chain Management",
+        "current_level": 2,
+        "target_level": 5,
+        "gap": 3,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Understanding supply chain operations and their environmental impact is critical for a sustainability role.",
+        "resources": [
+          {
+            "title": "Green List roles — jobs we need people for in New Zealand",
+            "url": "https://www.immigration.govt.nz/work/requirements-for-work-visas/green-list-occupations-qualifications-and-skills/green-list-roles-jobs-we-need-people-for-in-new-zealand/",
+            "type": "courses"
+          },
+          {
+            "title": "Best IT Certifications 2026: Top 20 Credentials by... - Sailor.sh Blog",
+            "url": "https://sailor.sh/blog/best-it-certifications-2026/",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Communication (Technical to Non-Technical)",
+        "current_level": 4,
+        "target_level": 5,
+        "gap": 1,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Ability to effectively communicate complex sustainability concepts to non-technical stakeholders is essential.",
+        "resources": [
+          {
+            "title": "Green List roles — jobs we need people for in New Zealand",
+            "url": "https://www.immigration.govt.nz/work/requirements-for-work-visas/green-list-occupations-qualifications-and-skills/green-list-roles-jobs-we-need-people-for-in-new-zealand/",
+            "type": "courses"
+          },
+          {
+            "title": "Sustainability Profession Skills for 2026",
+            "url": "https://sustainability-academy.org/sustainability-profession-2026/",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Project Management (Sustainability Focus)",
+        "current_level": 4,
+        "target_level": 4,
+        "gap": 4,
+        "priority": "high",
+        "status": "closed",
+        "why_matters": "Experience managing projects related to sustainability is valuable in a role requiring strategy and implementation.",
+        "resources": [
+          {
+            "title": "Sustainability Project Officer | Generation United Kingdom",
+            "url": "https://uk.generation.org/programs/sustainability-project-officer/",
+            "type": "courses"
+          },
+          {
+            "title": "Best IT Certifications 2026: Top 20 Credentials by... - Sailor.sh Blog",
+            "url": "https://sailor.sh/blog/best-it-certifications-2026/",
+            "type": "courses"
+          }
+        ]
+      }
+    ],
+    "milestones": [
+      {
+        "id": "9a94f5de-2730-4525-9a53-f66a2cf30704",
+        "title": "Closed gap: Project Management (Sustainability Focus)",
+        "type": "achievement",
+        "icon": "🏅",
+        "xp": 75,
+        "earned_at": "2026-07-20T09:30:28.503093",
+        "verification_status": "pending",
+        "verified": false,
+        "evidence": ""
+      },
+      {
+        "id": "8cf9aedc-4fc5-479f-9bfe-823692489585",
+        "title": "none mentioned",
+        "type": "achievement",
+        "icon": "🏅",
+        "xp": 75,
+        "earned_at": "2026-07-20T09:04:52.270044",
+        "verification_status": "pending",
+        "verified": false,
+        "evidence": ""
+      }
+    ],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-20",
+    "last_checkin_date": "",
+    "summary": "A tech professional seeking to transition into a sustainability role, leveraging skills in data analysis and communication while addressing knowledge gaps in sustainability principles and green technologies.",
+    "estimated_months": 12
+  },
+  "transferable_skills": [
+    {
+      "source": "Ran product launches at a tech startup",
+      "skill": "Project delivery and stakeholder management",
+      "relevance": "These skills can be applied to managing projects related to sustainability initiatives, such as implementing renewable energy systems or developing sustainable supply chains."
+    },
+    {
+      "source": "Developed and implemented marketing campaigns",
+      "skill": "Communications and community outreach",
+      "relevance": "The ability to craft compelling messages and engage with various stakeholders can be valuable in communicating the benefits of sustainability initiatives to diverse audiences."
+    }
+  ]
+}

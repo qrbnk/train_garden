@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Train Garden | Map Your Next Professional Peak</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#f9f9ff",
+              "secondary-container": "#a3f877",
+              "primary-container": "#157a42",
+              "surface": "#f9f9ff",
+              "inverse-on-surface": "#ecf0ff",
+              "surface-container-highest": "#dae2f9",
+              "on-primary-container": "#a8ffbd",
+              "error-container": "#ffdad6",
+              "on-surface": "#131c2c",
+              "on-error": "#ffffff",
+              "background": "#f9f9ff",
+              "on-secondary-fixed-variant": "#1d5200",
+              "secondary-fixed": "#a3f877",
+              "on-tertiary": "#ffffff",
+              "primary-fixed": "#99f7b2",
+              "surface-dim": "#d1daf0",
+              "on-surface-variant": "#3f4940",
+              "surface-container-low": "#f0f3ff",
+              "on-tertiary-container": "#e8ebff",
+              "on-tertiary-fixed": "#0c193e",
+              "primary-fixed-dim": "#7dda97",
+              "surface-container-high": "#dfe8ff",
+              "tertiary": "#455178",
+              "on-secondary": "#ffffff",
+              "secondary": "#296c00",
+              "on-tertiary-fixed-variant": "#3a456c",
+              "outline-variant": "#becabd",
+              "outline": "#6f7a6f",
+              "tertiary-fixed": "#dbe1ff",
+              "on-secondary-container": "#2c7300",
+              "tertiary-fixed-dim": "#b9c5f3",
+              "on-error-container": "#93000a",
+              "inverse-surface": "#283142",
+              "surface-tint": "#006d38",
+              "primary": "#005f30",
+              "surface-variant": "#dae2f9",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#5d6992",
+              "on-primary-fixed": "#00210d",
+              "secondary-fixed-dim": "#88db5e",
+              "on-secondary-fixed": "#072100",
+              "inverse-primary": "#7dda97",
+              "surface-container": "#e8eeff",
+              "on-background": "#131c2c",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#005229",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .organic-gradient {
+            background: linear-gradient(135deg, #005f30 0%, #157a42 100%);
+        }
+        .soft-shadow {
+            box-shadow: 0px 20px 40px rgba(19, 28, 44, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+
+<header class="fixed top-0 w-full z-50 glass-header bg-white/80 dark:bg-slate-900/80 border-b border-emerald-100/20">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+        <div class="flex items-center gap-3">
+            <img alt="Train Garden Logo" class="h-6 md:h-7 w-auto" src="logo.png"/>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-medium tracking-tight text-sm" href="index.html" >Home</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-medium tracking-tight text-sm" href="jobseekers_page.html" >Jobseekers</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-medium tracking-tight text-sm" href="partners_page.html" >Partners</a>
+            <a class="text-white bg-primary px-4 py-2 rounded-lg hover:bg-primary-container transition-all font-headline font-medium tracking-tight text-sm" href="mailto:thomas@traingarden.co.uk" >Contact Us</a>
+        </nav>
+
+        <button id="menu-toggle" class="md:hidden p-2 text-primary focus:outline-none">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-emerald-100/20 px-6 py-6 space-y-4 shadow-xl">
+        <a class="block text-slate-600 dark:text-slate-400 font-headline font-semibold text-lg" href="index.html" >Home</a>
+        <a class="block text-slate-600 dark:text-slate-400 font-headline font-semibold text-lg" href="jobseekers_page.html" >Jobseekers</a>
+        <a class="block text-slate-600 dark:text-slate-400 font-headline font-semibold text-lg" href="partners_page.html" >Partners</a>
+        <a class="block text-primary dark:text-emerald-400 font-headline font-bold text-lg" href="mailto:thomas@traingarden.co.uk" >Contact Us</a>
+    </div>
+</header>
+
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto min-h-screen">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container/30 text-secondary font-label font-bold text-xs tracking-widest uppercase">
+                <span class="material-symbols-outlined text-sm">filter_vintage</span>
+                Career Cultivation
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-headline font-extrabold text-on-surface leading-[1.1] tracking-tighter">
+                Map Your Next <span class="text-primary italic font-serif">Professional</span> Peak
+            </h1>
+            <p class="text-base md:text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                Tell us where you want to go. We'll cultivate the exact skills and connections required to get you there. Securing your ideal role begins with a single intentional choice.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                <div class="p-6 rounded-xl bg-surface-container-low border-none space-y-3 transition-all hover:translate-y-[-4px]">
+                    <span class="material-symbols-outlined text-primary text-3xl">route</span>
+                    <h3 class="font-headline font-bold text-lg">Clear routes</h3>
+                    <p class="text-sm text-on-surface-variant">Structured mapping into meaningful careers within the green economy.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-surface-container-low border-none space-y-3 transition-all hover:translate-y-[-4px]">
+                    <span class="material-symbols-outlined text-primary text-3xl">target</span>
+                    <h3 class="font-headline font-bold text-lg">Securing ideal roles</h3>
+                    <p class="text-sm text-on-surface-variant">We bridge the gap between your current expertise and dream company needs.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative">
+            <div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-primary-container/10 rounded-full blur-2xl -z-10"></div>
+            <div class="bg-surface-container-lowest p-8 md:p-12 rounded-[2rem] soft-shadow relative overflow-hidden">
+                <div class="mb-10">
+                    <h2 class="text-2xl font-headline font-bold mb-2">Define your destination</h2>
+                    <p class="text-on-surface-variant text-sm">Provide your target role to generate a personalized growth roadmap.</p>
+                </div>
+                <form class="space-y-8">
+                    <div class="space-y-2">
+                        <label class="block text-xs font-label font-bold tracking-widest text-on-surface-variant uppercase ml-1">Desired Position</label>
+                        <div class="relative group">
+                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">work</span>
+                            <input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all text-on-surface placeholder:text-outline" placeholder="e.g. Lead Sustainability Architect" type="text"/>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-xs font-label font-bold tracking-widest text-on-surface-variant uppercase ml-1">Target Sector (e.g. solar, HR, construction)</label>
+                        <div class="relative group">
+                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">business</span>
+                            <input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all text-on-surface placeholder:text-outline" placeholder="e.g. Terra Nova Solutions" type="text"/>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <a class="w-full organic-gradient text-on-primary py-5 px-8 rounded-xl font-headline font-bold text-lg flex items-center justify-center gap-3 transition-all hover:scale-[1.02] active:scale-[0.98] soft-shadow" href="https://forms.gle/xFzbfpep67gRgYe36" >
+                            Start Mapping My Pathway
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </form>
+                <div class="mt-10 pt-10 border-t border-surface-container-high">
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-3">
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+                                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdsTdws3bgsX6i5cIwsB52kbXgCJpNeTehdS5xPtNHDmF6ZTONJXtWgOMjWkfPjT7tceWkNX4-JxKJLdTk_kVU9TXiEs2NICRzpm6z9jqRiNwelPm6tL7oGc-528BMt1JMGXgFthrgTQcucJZxpf4Nx2iEPBf4VmLy2mma1B8tX04L-wKYkURHhiU-4pG6xv7rtzCoU0cN5LpjT7pRcTO3mTxMW0Gm0ertIjz4vJcXVYc5YVSQIs-vuunOraiUPE_NobR24IFplrlW" alt="Professional portrait"/>
+                            </div>
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+                                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyL16N4YkbHMzQakTwsMalhvx46vDDFzBXzVR-26FQWK9AtEUHPumiZJd3VLcULNsFpOxGnuJuXllwGqrObrKZiQKHptFuIYL8Gm0hOgS77QinSuWAF9fl6IUDc1LVtnFsjI0v-E94ykkCkevCgVBERPzNykb5U-_FpgGtJGSq3FUphnppjdDmKvfgj83nkt0MTke5I6GskasISGR1VQ_Now8I5bsEuUKpCMJbe_gNld17ejz5v9la4eiu6cmfMcpYvnJAq1QZ6Pf9" alt="Professional portrait"/>
+                            </div>
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-primary-container flex items-center justify-center text-on-primary text-xs font-bold">+1k</div>
+                        </div>
+                        <p class="text-sm text-on-surface-variant italic">Join 1,200+ professionals currently navigating their peak.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="mt-32">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="text-3xl font-headline font-bold text-on-surface">Trending Roles</h2>
+                <p class="text-on-surface-variant">High-demand positions currently being cultivated.</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group bg-surface-container-low rounded-2xl overflow-hidden transition-all hover:bg-surface-container-high cursor-pointer">
+                <div class="h-48 relative">
+                    <img class="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7L6bXKKzXeoPyusIhXZIirYV5we97UVApN83A5aUQbRtGgtMGmGzCRt8WyxvxtovPOav-UGcIk_6byag40q_m_941DHaYLSsZKaDp1kqbQrA1dn_eM5WuVtu3Ri5-1mQUWTnPi3D0vpCGN701n1nBtMoHHQVC0vn3Bnaay0DaH34aJAWpwNrpK0c_AtcTv04HtRAAI6YCqXxftv2n4t-HebxceyThAeA90bnUuOvilaIl_KfgY4mJ6UGoB6oSFRuGE9Epv84ep5pG" alt="Nature landscaping"/>
+                    <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-label font-bold uppercase tracking-wider">High Demand</span>
+                        <span class="material-symbols-outlined text-primary">eco</span>
+                    </div>
+                    <h4 class="text-xl font-headline font-bold mb-2">Grounds Maintenance Operative</h4>
+                    <p class="text-sm text-on-surface-variant mb-6">Grounds workers and maintenance staff keep parks, public gardens and landscapes healthy and attractive.</p>
+                </div>
+            </div>
+            <div class="group bg-surface-container-low rounded-2xl overflow-hidden transition-all hover:bg-surface-container-high cursor-pointer">
+                <div class="h-48 relative">
+                    <img class="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSC7v7YC3_Bvb3Vr6y0tUas1yP-2HjpoNDiL23gtEjEzqwBK3RT5JLlAmuBrgS5TH30o87-oJPL4UC9Q4I7HMNamXbYh7hYvAyO3wRW1RAdfgiJ61AG61fZGFG9SbtFen76wUBvD9g-umg_NkT_N7ugrNOx3qnmCMY68AMh1AH8MlPyl2Ay7k5nnuRhnN1BzrYt1BuwMKg7swwWuUsssGyttkUnpK-Mb1azePt5Ys36BzK0Qf6tWzaDlLjOC6fg8AARyFy46zYbexk" alt="Lush forest"/>
+                    <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 bg-surface-container-highest text-primary rounded-full text-[10px] font-label font-bold uppercase tracking-wider">Impact role</span>
+                        <span class="material-symbols-outlined text-primary">forest</span>
+                    </div>
+                    <h4 class="text-xl font-headline font-bold mb-2">Waste Management</h4>
+                    <p class="text-sm text-on-surface-variant mb-6">Overseeing the collection, disposal, recycling, and treatment of waste, focusing on sustainability.</p>
+                </div>
+            </div>
+            <div class="group bg-surface-container-low rounded-2xl overflow-hidden transition-all hover:bg-surface-container-high cursor-pointer">
+                <div class="h-48 relative">
+                    <img class="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbwCln8TCf-XWygvtiH1fBQWd6NUw54WSORkDoB8D1R5WmT90Nq8V-ejuzaI6NRgiODWt-3rkbMcJq66RqBkB4x0BBQE8JHKkLwvmzPLwvoE5yd7ZBXoSdNtUq6S7M6m60dENsUS98M8yQ4KFYqc-6yGGCZNKA8xnd1w61NJDIwVQV20X0h8sOMlqcx1Sz6aeCgAEX2dG3iDhwkj0ZGr3nrITJiB8ST3SJB725qrsx72I5-32xUOnidxmLFTwsf1xoF6DfmGEH8Ge8" alt="Modern construction"/>
+                    <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 bg-surface-container-highest text-primary rounded-full text-[10px] font-label font-bold uppercase tracking-wider">Emerging Role</span>
+                        <span class="material-symbols-outlined text-primary">psychology</span>
+                    </div>
+                    <h4 class="text-xl font-headline font-bold mb-2">Construction</h4>
+                    <p class="text-sm text-on-surface-variant mb-6">High demand for over 251,500 extra workers by 2028 in housing and retrofitting projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-32">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl font-headline font-bold text-on-surface">Career Support Services</h2>
+        <p class="text-on-surface-variant">Expert tools to refine your professional presence.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-surface-container-lowest p-8 rounded-[2rem] soft-shadow border border-surface-container-high flex flex-col items-center text-center group transition-all hover:translate-y-[-4px]">
+    <div class="w-20 h-20 rounded-full bg-secondary-container/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-primary text-4xl">description</span>
+    </div>
+    <h3 class="text-xl font-headline font-bold text-on-surface mb-3">Help with my CV</h3>
+    <p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+        Get expert feedback on your resume. Click below to email your CV directly to Thomas for a review.
+    </p>
+    
+    <a href="mailto:thomas@traingarden.co.uk?subject=I%20need%20help%20with%20cv%20for%20roles&body=Hi%20Thomas%2C%0A%0AI%20would%20like%20some%20feedback%20on%20my%20CV.%20I%20have%20attached%20it%20to%20this%20email.%0A%0AThank%20you!" 
+       class="mt-auto text-primary font-label font-bold text-xs tracking-widest uppercase flex items-center gap-2 hover:gap-3 transition-all">
+        Email My CV <span class="material-symbols-outlined text-sm">mail</span>
+    </a>
+</div>
+
+        <div class="bg-surface-container-lowest p-8 rounded-[2rem] soft-shadow border border-surface-container-high flex flex-col items-center text-center group transition-all hover:translate-y-[-4px]">
+            <div class="w-20 h-20 rounded-full bg-secondary-container/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-primary text-4xl">call</span>
+            </div>
+            <h3 class="text-xl font-headline font-bold text-on-surface mb-3">Book a call</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6"> Unsure how to transition into a career? Book a call with our experts.</p>
+            <button onclick="openQuizModal()" class="mt-auto text-primary font-label font-bold text-xs tracking-widest uppercase flex items-center gap-2 hover:gap-3 transition-all">
+                Start Quiz <span class="material-symbols-outlined text-sm">quiz</span>
+            </button>
+        </div>
+
+        <div class="bg-surface-container-lowest p-8 rounded-[2rem] soft-shadow border border-surface-container-high flex flex-col items-center text-center group transition-all hover:translate-y-[-4px]">
+            <div class="w-20 h-20 rounded-full bg-secondary-container/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-primary text-4xl">trending_up</span>
+            </div>
+            <h3 class="text-xl font-headline font-bold text-on-surface mb-3">Know what I could earn</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Understand your market value and salary expectations for green roles.</p>
+            <a href="tool.html" class="mt-auto text-primary font-label font-bold text-xs tracking-widest uppercase flex items-center gap-2 hover:gap-3 transition-all">
+                Go to Tool <span class="material-symbols-outlined text-sm">payments</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div id="quiz-modal" class="fixed inset-0 z-[100] hidden bg-brand-navy/40 backdrop-blur-sm flex items-center justify-center p-6">
+    <div class="bg-white w-full max-w-lg rounded-[2rem] overflow-hidden shadow-2xl relative">
+        <button onclick="closeQuizModal()" class="absolute top-6 right-6 text-slate-400 hover:text-primary">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="p-8">
+            <div id="modal-bot-container">
+                <p id="modal-bot-question" class="text-xl font-headline font-bold text-on-surface mb-6"></p>
+                <div id="modal-bot-options" class="flex flex-col gap-3"></div>
+                
+                <div id="modal-email-capture" class="hidden space-y-3">
+                    <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-100 mb-4">
+                        <p class="text-[10px] font-black text-emerald-800 uppercase tracking-widest mb-1">Recommended Path:</p>
+                        <p id="modal-match-display" class="font-bold text-primary"></p>
+                    </div>
+                    <input type="text" id="bot-user-name" placeholder="Your Name" class="w-full p-4 bg-surface-container-low border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 outline-none">
+                    <input type="email" id="bot-user-email" placeholder="Your Email Address" class="w-full p-4 bg-surface-container-low border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 outline-none">
+                    <input type="tel" id="bot-user-phone" placeholder="Your Phone Number" class="w-full p-4 bg-surface-container-low border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 outline-none">
+                    
+                    <button id="booking-submit-btn" onclick="submitQuizToFormspree()" class="w-full py-4 bg-primary text-white font-bold rounded-xl hover:bg-emerald-800 transition-all mt-4">
+                        Confirm Booking
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 1) CV Upload Logic
+    function submitCVForm() {
+        const form = document.getElementById('cv-upload-form');
+        const btn = form.querySelector('button');
+        const originalText = btn.innerHTML;
+        btn.innerText = "Uploading...";
+        
+        const formData = new FormData(form);
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if (response.ok) {
+                alert('CV Sent to Thomas successfully!');
+                btn.innerHTML = originalText;
+            }
+        });
+    }
+
+    // 2) Quiz Modal Logic (Using endpoint: mzdkaede)
+    let modalQuizState = { strength: "", env: "", role: "Personal Career Roadmap Call" };
+    
+   const modalSteps = {
+        "start": {
+            q: "What is your core professional strength?",
+            opt: [
+                { t: "Strategy & Planning", n: "q2", f: "strength" },
+                { t: "Technical Operations", n: "q2", f: "strength" },
+                { t: "Communication", n: "q2", f: "strength" },
+                { t: "Unsure / Still Exploring", n: "q2", f: "strength" } // Added Unsure
+            ]
+        },
+        "q2": {
+            q: "Preferred work environment?",
+            opt: [
+                { t: "Corporate / Office", n: "final", f: "env" },
+                { t: "Outdoor / Field", n: "final", f: "env" },
+                { t: "Hybrid", n: "final", f: "env" },
+                { t: "Unsure / Flexible", n: "final", f: "env" } // Added Unsure
+            ]
+        },
+        "final": {
+            q: "Booking Details",
+            opt: [] 
+        }
+    };
+
+    function openQuizModal() {
+        document.getElementById('quiz-modal').classList.remove('hidden');
+        renderModalQuiz('start');
+    }
+
+    function closeQuizModal() {
+        document.getElementById('quiz-modal').classList.add('hidden');
+    }
+
+  function renderModalQuiz(id) {
+        const step = modalSteps[id];
+        const qEl = document.getElementById('modal-bot-question');
+        const oEl = document.getElementById('modal-bot-options');
+        const eEl = document.getElementById('modal-email-capture');
+
+        oEl.innerHTML = "";
+        eEl.classList.add('hidden');
+        qEl.innerText = step.q;
+        
+        if (id === "final") {
+            document.getElementById('modal-match-display').innerText = modalQuizState.role;
+            eEl.classList.remove('hidden');
+        } else {
+            step.opt.forEach(o => {
+                const b = document.createElement('button');
+                b.innerText = o.t;
+                
+                // UX Styling: Give "Unsure" options a slightly different look
+                const isUnsure = o.t.includes("Unsure");
+                const baseClasses = "w-full text-left p-4 rounded-xl font-bold transition-all border ";
+                const colorClasses = isUnsure 
+                    ? "bg-slate-50 text-slate-500 border-slate-200 hover:bg-slate-100" 
+                    : "bg-surface-container-low text-on-surface border-transparent hover:bg-emerald-50 hover:border-primary/20";
+                
+                b.className = baseClasses + colorClasses;
+                
+                b.onclick = () => {
+                    modalQuizState[o.f] = o.t;
+                    renderModalQuiz(o.n);
+                };
+                oEl.appendChild(b);
+            });
+        }
+    }
+
+    function submitQuizToFormspree() {
+        const name = document.getElementById('bot-user-name').value;
+        const email = document.getElementById('bot-user-email').value;
+        const phone = document.getElementById('bot-user-phone').value;
+        const btn = document.getElementById('booking-submit-btn');
+
+        if (!name || !email) return alert("Please fill in your name and email.");
+        btn.innerText = "Sending...";
+
+        const payload = {
+            Name: name,
+            Email: email,
+            Phone: phone,
+            Core_Strength: modalQuizState.strength,
+            Work_Environment: modalQuizState.env,
+            Request_Type: "Coaching Session Booking"
+        };
+
+        fetch("https://formspree.io/f/mzdkaede", {
+            method: 'POST',
+            body: JSON.stringify(payload),
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+        }).then(response => {
+            if(response.ok) {
+                document.getElementById('modal-bot-container').innerHTML = `
+                    <div class="text-center py-10">
+                        <span class="material-symbols-outlined text-primary text-6xl mb-4">check_circle</span>
+                        <h3 class="text-2xl font-headline font-bold">Booking Sent!</h3>
+                        <p class="text-on-surface-variant mt-2 px-4">Thomas will review your details and reach out shortly to schedule your call.</p>
+                        <button onclick="closeQuizModal()" class="mt-8 px-8 py-3 bg-primary text-white rounded-xl font-bold">Return to Career Map</button>
+                    </div>
+                `;
+            } else {
+                alert("Something went wrong. Please try again.");
+                btn.innerText = "Confirm Booking";
+            }
+        });
+    }
+</script>
+</main>
+
+<footer class="w-full py-12 border-t border-emerald-100 dark:border-emerald-900/30 bg-slate-50 dark:bg-slate-950">
+    <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6">
+        <div class="flex items-center gap-2">
+            <img alt="Train Garden Logo" class="h-8 w-auto object-contain" src="logo.png"/>
+        </div>
+        <p class="text-slate-500 dark:text-slate-400 font-body text-sm leading-relaxed text-center">© 2026 Train Garden. Nurturing Professional Excellence.</p>
+        <nav class="flex gap-6">
+            <a aria-label="Facebook" class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="#" >
+                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"></path></svg>
+            </a>
+            <a aria-label="Substack" class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="#" >
+                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.078v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.078V0z"></path></svg>
+            </a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>AI Career Explorer | Train Garden</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style>
+        .step-gradient { background: radial-gradient(circle at top right, #a3f87715, #f9f9ff); }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(0, 95, 48, 0.1); }
+        .skill-pill { transition: all 0.2s; cursor: pointer; border: 1px solid #e2e8f0; display: inline-block; }
+        .skill-pill.active { background-color: #a3f877 !important; border-color: #005f30 !important; color: #005f30 !important; font-weight: 700; }
+        .tab-btn { transition: all 0.3s; border-bottom: 3px solid transparent; }
+        .tab-btn.active { border-bottom-color: #005f30 !important; color: #005f30 !important; font-weight: 800 !important; }
+        .fade-in { animation: fadeIn 0.4s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .map-dot { animation: pulse-soft 3s infinite; }
+        @keyframes pulse-soft { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.1); opacity: 1; } }
+        
+        .btn-primary-visible { background-color: #005f30 !important; color: white !important; font-weight: 700 !important; }
+        .btn-primary-visible:hover { background-color: #004d26 !important; box-shadow: 0 10px 15px -3px rgba(0, 95, 48, 0.4) !important; }
+
+        /* Modal Styles for the Form */
+        #form-modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); align-items: center; justify-content: center; padding: 1rem; }
+        .form-input { width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #e2e8f0; border-radius: 1rem; outline: none; transition: border-color 0.2s; }
+        .form-input:focus { border-color: #005f30; }
+        .btn-submit-form { background-color: #3d7a5d !important; width: 100%; color: white; font-weight: 700; padding: 1rem; border-radius: 1rem; }
+
+        /* Custom Mobile Adjustments */
+        @media (max-width: 640px) {
+            .map-dot { padding: 0.5rem !important; font-size: 0.65rem !important; max-width: 100px; text-align: center; }
+            .central-hub { width: 8rem !important; height: 8rem !important; padding: 1rem !important; }
+            .step-1-title { font-size: 1.75rem !important; line-height: 2.25rem !important; }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased step-gradient min-h-screen">
+
+<div id="form-modal">
+    <div class="glass-card bg-white p-6 md:p-8 rounded-[2rem] max-w-md w-full shadow-2xl fade-in">
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="font-headline font-extrabold text-xl">Finalize Your Report</h3>
+            <button onclick="closeModal()" class="material-symbols-outlined text-slate-400">close</button>
+        </div>
+        <input type="email" id="user-email" placeholder="Your Email Address" class="form-input">
+        <input type="tel" id="user-phone" placeholder="Your Phone Number" class="form-input">
+        <input type="text" id="user-name" placeholder="Your Name" class="form-input">
+        <button onclick="submitFinalData()" class="btn-submit-form hover:brightness-110 transition-all">
+            Send My Full Report
+        </button>
+    </div>
+</div>
+
+<header class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-md border-b border-primary/5">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-2 cursor-pointer" onclick="goHome()">
+            <span class="material-symbols-outlined text-primary">auto_awesome</span>
+            <span class="text-[10px] md:text-xs font-black uppercase tracking-tighter text-primary">AI Career Explorer</span>
+        </div>
+        
+        <div id="header-tabs" class="hidden md:flex gap-8">
+            <button onclick="switchTab('identity')" id="tab-identity" class="tab-btn active px-1 py-4 text-xs uppercase tracking-widest font-bold text-slate-400">Identity</button>
+            <button onclick="switchTab('paths')" id="tab-paths" class="tab-btn px-1 py-4 text-xs uppercase tracking-widest font-bold text-slate-400">Paths</button>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button onclick="goHome()" class="text-xs font-bold text-slate-600 hover:text-primary flex items-center gap-1">
+                <span class="material-symbols-outlined text-lg">home</span>
+                <span class="hidden sm:inline">Home</span>
+            </button>
+            <button onclick="location.reload()" class="text-xs font-bold text-on-surface-variant hover:text-primary flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm">restart_alt</span>
+                <span class="hidden sm:inline">Reset</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main class="pt-20 md:pt-24 pb-24 px-4 md:px-6 max-w-6xl mx-auto">
+    <section id="step-1" class="fade-in max-w-2xl mx-auto space-y-8">
+        <div class="text-center space-y-4">
+            <h1 class="step-1-title text-3xl md:text-4xl font-headline font-extrabold tracking-tight">👋 To start, share a current or previous role:</h1>
+        </div>
+        <div class="glass-card p-6 md:p-8 rounded-[2.5rem] shadow-xl space-y-6">
+            <input type="text" id="role-input" placeholder="e.g. Grounds Maintenance" 
+                   class="w-full p-4 md:p-6 text-xl md:text-2xl font-headline font-bold rounded-2xl border-2 border-primary/5 bg-slate-50 focus:border-primary/20 outline-none text-center">
+            <button onclick="goToStep(2)" class="w-full py-4 md:py-5 btn-primary-visible rounded-2xl text-lg transition-all flex items-center justify-center gap-2">
+                Next <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="step-2" class="hidden fade-in space-y-8">
+        <div class="flex flex-col md:flex-row gap-6 md:gap-8">
+            <div class="w-full md:w-1/3 space-y-4">
+                <div class="glass-card p-6 rounded-3xl">
+                    <h3 class="font-headline font-bold text-primary mb-4">Experiences</h3>
+                    <div id="side-role-pill" class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full"></div>
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <label class="block text-[10px] font-bold uppercase text-slate-400 mb-2">Education (Optional)</label>
+                        <input type="text" id="edu-input" placeholder="Degree/Cert" class="w-full p-3 bg-slate-50 border-none rounded-xl text-xs mb-4">
+                        <label class="block text-[10px] font-bold uppercase text-slate-400 mb-2">Interests (Optional)</label>
+                        <input type="text" id="int-input" placeholder="e.g. Rewilding, Solar" class="w-full p-3 bg-slate-50 border-none rounded-xl text-xs">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-2/3 space-y-6">
+                <h2 class="text-2xl md:text-3xl font-headline font-extrabold">Select at least 3 skills.</h2>
+                <div class="relative">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                    <input type="text" id="skill-search" onkeyup="filterSkills()" placeholder="Search skills..." class="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-primary/20">
+                </div>
+                <div id="skills-grid" class="flex flex-wrap gap-2"></div>
+                <div class="flex gap-4 pt-6">
+                    <button onclick="goToStep(1)" class="w-1/3 py-4 border border-slate-200 rounded-2xl font-bold text-slate-500 hover:bg-white">Back</button>
+                    <button onclick="goToStep(3)" class="flex-1 py-4 btn-primary-visible rounded-2xl transition-all flex items-center justify-center gap-2">
+                        Next <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="step-3" class="hidden fade-in space-y-8">
+        <div id="content-identity" class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+            <div class="space-y-6">
+                <div class="flex items-center gap-2 text-primary">
+                    <span class="material-symbols-outlined">auto_awesome</span>
+                    <span class="text-xs font-bold uppercase">Career Identity Statement</span>
+                </div>
+                <div class="p-6 md:p-10 bg-white rounded-[2rem] md:rounded-[3rem] border border-primary/5 shadow-xl italic text-on-surface-variant leading-relaxed text-lg md:text-xl" id="identity-statement"></div>
+                <button onclick="goToStep(2)" class="px-6 py-3 bg-slate-100 rounded-xl font-bold text-sm flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">edit</span> Edit Experience
+                </button>
+            </div>
+            
+            <div class="glass-card p-6 md:p-8 rounded-[2rem] md:rounded-[3rem] space-y-6">
+                <h3 class="font-headline font-bold">Your Snapshot</h3>
+                <div id="final-summary-list" class="space-y-4"></div>
+                <button onclick="switchTab('paths')" class="w-full py-4 btn-primary-visible rounded-2xl shadow-lg flex items-center justify-center gap-2">
+                    Explore Paths <span class="material-symbols-outlined">explore</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="content-paths" class="hidden fade-in space-y-8">
+            <div class="relative h-[450px] md:h-[500px] bg-slate-900 rounded-[2rem] md:rounded-[3rem] overflow-hidden">
+                <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#a3f877 0.5px, transparent 0); background-size: 30px 30px;"></div>
+                <div class="absolute inset-0 flex items-center justify-center" id="map-container"></div>
+            </div>
+        </div>
+
+        <div class="glass-card p-8 md:p-12 rounded-[2.5rem] md:rounded-[4rem] text-center space-y-6 border-2 border-primary/10">
+            <h2 class="text-2xl md:text-3xl font-headline font-extrabold">Ready to discuss these results?</h2>
+            <p class="text-on-surface-variant max-w-lg mx-auto text-sm md:text-base">Thomas will review your specific skills and experience to bridge the gap to your next green role.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <button id="final-submit-btn" onclick="openModal()" class="w-full md:w-auto px-6 md:px-10 py-4 md:py-5 btn-primary-visible rounded-2xl text-md md:text-lg hover:scale-105 shadow-2xl flex items-center justify-center gap-3">
+                    Book Call
+                    <span class="material-symbols-outlined">calendar_today</span>
+                </button>
+                <button onclick="goHome()" class="w-full md:w-auto px-6 md:px-10 py-4 md:py-5 bg-white border border-slate-200 text-slate-500 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-slate-50 transition-all">
+                    <span class="material-symbols-outlined">home</span> Back to Home
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    let careerData = { role: "", edu: "", interests: "", skills: [] };
+
+    const skillBank = [
+        "Solar PV Installation", "Sustainability Auditing", "Carbon Footprint Tracking", "Renewable Energy Policy",
+        "Landscape Design", "Irrigation Management", "Horticultural Expertise", "Soil Health Science",
+        "Project Management", "Stakeholder Liaison", "Budget Oversight", "Contract Administration",
+        "Strategic Planning", "Data Analysis", "Logistics Management", "Team Leadership",
+        "Health & Safety Compliance", "Equipment Maintenance", "Resource Allocation", "Technical Reporting"
+    ];
+
+    function goToStep(n) {
+        document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+        document.getElementById(`step-${n}`).classList.remove('hidden');
+        document.getElementById('header-tabs').classList.toggle('hidden', n !== 3);
+        window.scrollTo(0,0);
+
+        if(n === 2) {
+            careerData.role = document.getElementById('role-input').value;
+            document.getElementById('side-role-pill').innerText = careerData.role || "Professional";
+            renderSkills();
+        }
+        if(n === 3) {
+            careerData.edu = document.getElementById('edu-input').value;
+            careerData.interests = document.getElementById('int-input').value;
+            generateIdentity();
+            renderFinalSummary();
+            generatePaths();
+        }
+    }
+
+    function goHome() {
+        window.location.href = 'index.html';
+    }
+
+    function switchTab(tab) {
+        document.getElementById('content-identity').classList.toggle('hidden', tab !== 'identity');
+        document.getElementById('content-paths').classList.toggle('hidden', tab !== 'paths');
+        document.getElementById('tab-identity').classList.toggle('active', tab === 'identity');
+        document.getElementById('tab-paths').classList.toggle('active', tab === 'paths');
+    }
+
+    function renderSkills() {
+        const grid = document.getElementById('skills-grid');
+        grid.innerHTML = '';
+        skillBank.sort().forEach(s => {
+            const btn = document.createElement('button');
+            btn.className = `skill-pill px-4 py-2 rounded-full text-xs font-medium ${careerData.skills.includes(s) ? 'active' : 'bg-white'}`;
+            btn.innerText = s;
+            btn.onclick = () => {
+                btn.classList.toggle('active');
+                if(btn.classList.contains('active')) careerData.skills.push(s);
+                else careerData.skills = careerData.skills.filter(i => i !== s);
+            };
+            grid.appendChild(btn);
+        });
+    }
+
+    function filterSkills() {
+        const val = document.getElementById('skill-search').value.toLowerCase();
+        document.querySelectorAll('.skill-pill').forEach(p => {
+            p.style.display = p.innerText.toLowerCase().includes(val) ? 'inline-block' : 'none';
+        });
+    }
+
+    function generateIdentity() {
+        const skills = careerData.skills.length ? careerData.skills.slice(0,3).join(", ") : "specialized expertise";
+        document.getElementById('identity-statement').innerText = `"Leveraging a background as a ${careerData.role || 'Professional'}, I combine high-level proficiency in ${skills} to drive impact in the green economy. My focus is on integrating technical operational excellence with sustainable growth."`;
+    }
+
+    function renderFinalSummary() {
+        const list = document.getElementById('final-summary-list');
+        list.innerHTML = `
+            <div class="flex justify-between text-sm border-b border-slate-50 pb-2"><strong>Experience:</strong> <span class="text-primary font-bold">${careerData.role || 'N/A'}</span></div>
+            <div class="flex justify-between text-sm border-b border-slate-50 pb-2"><strong>Education:</strong> <span>${careerData.edu || 'N/A'}</span></div>
+            <div class="flex justify-between text-sm border-b border-slate-50 pb-2"><strong>Skills:</strong> <span>${careerData.skills.length} Selected</span></div>
+            <div class="flex justify-between text-sm"><strong>Interests:</strong> <span>${careerData.interests || 'N/A'}</span></div>
+        `;
+    }
+
+function generatePaths() {
+    const map = document.getElementById('map-container');
+    map.innerHTML = '';
+    
+    let paths = ["Sustainability Lead", "Green Ops Manager", "Eco-Project Director"];
+    const skills = (careerData.skills || []).join(" ").toLowerCase();
+
+    if (skills.includes("solar") || skills.includes("energy")) {
+        paths.push("Renewable Systems Specialist", "Solar PV Consultant");
+    }
+    if (skills.includes("landscape") || skills.includes("horti") || skills.includes("soil")) {
+        paths.push("Bio-Diversity Manager", "Regenerative Land Lead");
+    }
+    if (skills.includes("policy") || skills.includes("auditing") || skills.includes("compliance")) {
+        paths.push("ESG Compliance Officer", "Environmental Auditor");
+    }
+
+    paths = [...new Set(paths)].slice(0, 8);
+    const isMobile = window.innerWidth < 640;
+
+    // Adjust container height for mobile to fit the vertical list
+    const container = document.querySelector('#content-paths > div');
+    if (isMobile) {
+        container.style.height = "600px"; 
+    } else {
+        container.style.height = "500px";
+    }
+
+    const hub = document.createElement('div');
+    hub.className = "central-hub absolute w-32 h-32 md:w-44 md:h-44 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/20 flex flex-col items-center justify-center text-center p-4 z-10 shadow-2xl";
+    hub.style.left = "50%";
+    hub.style.top = isMobile ? "100px" : "50%"; 
+    hub.style.transform = "translate(-50%, -50%)";
+    hub.innerHTML = `
+        <span class="text-[8px] md:text-[10px] text-white font-black uppercase tracking-widest mb-1">Trending Roles</span>
+        <span class="text-[8px] md:text-[10px] text-white font-black uppercase tracking-widest mb-3">For You</span>
+        <div class="flex gap-2 text-lg">🛠️ 🌿 ♻️</div>
+    `;
+    map.appendChild(hub);
+
+    paths.forEach((p, i) => {
+        const node = document.createElement('div');
+        // whitespace-nowrap and z-20 prevent overlap and wrapping
+        node.className = "absolute map-dot bg-white/10 backdrop-blur-lg px-3 py-2 rounded-xl border border-white/20 text-[10px] md:text-xs text-white shadow-xl text-center transition-all duration-500 whitespace-nowrap z-20";
+        
+        if (isMobile) {
+            // MOBILE: Narrower zig-zag (30%/70%) keeps boxes inside the screen edges
+            // Starting at 190px (below hub) with 48px vertical steps
+            node.style.left = i % 2 === 0 ? "30%" : "70%"; 
+            node.style.top = `${190 + (i * 48)}px`; 
+        } else {
+            // DESKTOP: Wide elliptical orbit (280px horizontal / 180px vertical)
+            const angle = (i / paths.length) * 2 * Math.PI - Math.PI / 2;
+            const radiusX = 280; 
+            const radiusY = 180; 
+            const x = Math.cos(angle) * radiusX;
+            const y = Math.sin(angle) * radiusY;
+            node.style.left = `calc(50% + ${x}px)`;
+            node.style.top = `calc(50% + ${y}px)`;
+        }
+
+        node.style.transform = "translate(-50%, -50%)";
+        node.innerText = p;
+        map.appendChild(node);
+    });
+}
+
+    function openModal() { document.getElementById('form-modal').style.display = 'flex'; }
+    function closeModal() { document.getElementById('form-modal').style.display = 'none'; }
+
+    function submitFinalData() {
+        const email = document.getElementById('user-email').value;
+        const phone = document.getElementById('user-phone').value;
+        const name = document.getElementById('user-name').value;
+
+        if(!email || !name) {
+            alert("Please provide your name and email.");
+            return;
+        }
+
+        const btn = document.querySelector('.btn-submit-form');
+        btn.innerText = "Sending...";
+        
+        const payload = {
+            Name: name,
+            Email: email,
+            Phone: phone,
+            Role: careerData.role,
+            Education: careerData.edu,
+            Interests: careerData.interests,
+            Skills: careerData.skills.join(", "),
+            Identity: document.getElementById('identity-statement').innerText
+        };
+
+        fetch("https://formspree.io/f/mnjobdnb", {
+            method: "POST",
+            body: JSON.stringify(payload),
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+        }).then(res => {
+            if(res.ok) {
+                btn.innerHTML = "Report Sent ✅";
+                setTimeout(() => {
+                    alert("Snapshot sent to Thomas! He will be in touch to discuss your green path.");
+                    closeModal();
+                }, 1000);
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

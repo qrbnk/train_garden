@@ -1,0 +1,62 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Gap Analysis</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>Summary</strong>
+Daryna Vakulenko is a digital transformation strategist with a strong background in health tech and sustainability. She has experience in AI strategy, rapid prototyping, cross-functional leadership, and commercial growth, making her a suitable candidate for sustainability/green economy roles.</p>
+<p><strong>Matched Skills</strong></p>
+<ul>
+<li>Sustainability: indirect match through experience in health tech and environmental impact assessments</li>
+<li>Green Economy: indirect match through experience in sustainable transformation and innovation</li>
+<li>Digital Transformation: direct match with experience in AI strategy, rapid prototyping, and commercial growth</li>
+<li>Cross-Functional Leadership: direct match with experience in managing high-value portfolios and cross-functional teams</li>
+</ul>
+<p><strong>Skill Gaps</strong></p>
+<ul>
+<li>Direct experience in sustainability or green economy roles is limited</li>
+<li>While there is some indirect relevance, the candidate's background is mostly in health tech and education</li>
+<li>Lack of explicit mention of skills such as environmental impact assessment, climate change mitigation, or sustainable development</li>
+</ul>
+<p><strong>Top 3 Next Steps</strong></p>
+<ol>
+<li><strong>Emphasize transferable skills</strong>: Highlight the candidate's experience with AI strategy, rapid prototyping, and commercial growth, and explain how these skills can be applied to sustainability/green economy roles.</li>
+<li><strong>Gain direct experience</strong>: Consider adding roles or projects that directly involve sustainability or green economy, such as environmental impact assessments, climate change mitigation strategies, or sustainable development initiatives.</li>
+<li><strong>Develop specific skills</strong>: Identify key skills required for sustainability/green economy roles and develop the candidate's expertise in areas such as renewable energy, circular economy, or sustainable finance.</li>
+</ol>
+<p><strong>SKILLS_JSON</strong>
+<code>{
+  "matched": [
+    {
+      "skill": "Digital Transformation",
+      "level": "high"
+    },
+    {
+      "skill": "Cross-Functional Leadership",
+      "level": "medium"
+    }
+  ],
+  "gaps": [
+    {
+      "skill": "Sustainability",
+      "reason": "indirect match, limited experience"
+    },
+    {
+      "skill": "Green Economy",
+      "reason": "indirect match, limited experience"
+    }
+  ],
+  "summary": "Daryna Vakulenko is a digital transformation strategist with a strong background in health tech and sustainability. She has experience in AI strategy, rapid prototyping, cross-functional leadership, and commercial growth, making her a suitable candidate for sustainability/green economy roles."
+}</code></p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

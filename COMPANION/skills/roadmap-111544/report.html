@@ -1,0 +1,94 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+        <style>
+            body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; }
+            .report-card { background: white; border-radius: 1.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); padding: 2.5rem; }
+            table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin: 1.5rem 0; }
+            th { background: #f8fafc; padding: 12px; text-align: left; font-size: 11px; text-transform: uppercase; color: #64748b; letter-spacing: 0.05em; }
+            td { padding: 12px; border-top: 1px solid #e2e8f0; font-size: 14px; color: #1e293b; }
+            .day-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 20px; border-radius: 1rem; margin-bottom: 12px; list-style: none; transition: all 0.2s; }
+            .tag { font-size: 10px; font-weight: 800; padding: 4px 8px; border-radius: 6px; text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+            @media print { .no-print { display: none !important; } body { background: white; padding: 0; } .report-card { border: none; box-shadow: none; } }
+        </style>
+    </head>
+    <body class="p-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-between items-start mb-6 no-print">
+                <div>
+                    <h1 class="text-3xl font-black text-[#091747] tracking-tight">Learning Roadmap</h1>
+                    <p class="text-slate-400 text-sm font-bold uppercase tracking-widest mt-1">Skill: Create A 5-Day</p>
+                </div>
+                <button onclick="window.print()" class="flex items-center gap-2 bg-[#091747] text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 transition-all">
+                    <span class="material-symbols-outlined text-sm">download</span> Export PDF
+                </button>
+            </div>
+
+            <div class="report-card">
+                <div class="prose prose-slate max-w-none prose-headings:text-[#091747]">
+                    <p>I apologize for the confusion in my previous response. Here's a corrected 7-day learning roadmap for creating a chatbot:</p>
+<p>Day 1: Introduction to Chatbots
+- LEARN: Understand the basics of chatbots, their types, and applications.
+- READ: "What is a Chatbot?" article by HubSpot (<a href="https://blog.hubspot.com/marketing/what-is-a-chatbot">https://blog.hubspot.com/marketing/what-is-a-chatbot</a>)
+- APPLY: Brainstorm potential use cases for a chatbot in different industries.</p>
+<p>Day 2: Choosing the Right Platform and Tools
+- LEARN: Familiarize yourself with various chatbot development platforms (e.g., Dialogflow, Microsoft Bot Framework, Wit.ai) and their features.
+- READ: Comparison articles for chatbot platforms like this one by Chatbots Magazine (<a href="https://chatbotsmagazine.xyz/best-chatbot-platforms/">https://chatbotsmagazine.xyz/best-chatbot-platforms/</a>)
+- APPLY: Research and choose a suitable platform for your chatbot project.</p>
+<p>Day 3: Designing the Conversational Flow
+- LEARN: Learn about designing effective conversational flows for a chatbot, including user intent identification, response templates, and fallback mechanisms.
+- READ: "Designing Effective Conversational Flows" by BotStar (<a href="https://www.botstar.ai/blog/designing-effective-conversational-flows/">https://www.botstar.ai/blog/designing-effective-conversational-flows/</a>)
+- APPLY: Create a simple conversational flow for your chatbot using the chosen platform's user interface.</p>
+<p>Day 4: Building and Integrating Your Chatbot
+- LEARN: Learn how to build and train your chatbot using the selected platform, including natural language understanding, intents, and entities.
+- READ: Tutorials on building a chatbot with your chosen platform (e.g., Dialogflow's Quickstart Guide)
+- APPLY: Build a basic version of your chatbot following the tutorial and make necessary adjustments to fit your conversational flow.</p>
+<p>Day 5: Testing and Optimizing Your Chatbot
+- LEARN: Learn how to test and optimize your chatbot, including methods for testing user satisfaction, identifying pain points, and making improvements.
+- READ: "How to Effectively Test Your Chatbot" by Drift (<a href="https://www.drift.com/resources/chatbot-testing/">https://www.drift.com/resources/chatbot-testing/</a>)
+- APPLY: Test your chatbot with users or through simulated conversations, gather feedback, and make necessary adjustments.</p>
+<p>Day 6: Deploying and Scaling Your Chatbot
+- LEARN: Learn about deploying your chatbot on different channels (e.g., websites, messaging apps, voice assistants) and scaling your bot to handle more users.
+- READ: "How to Deploy a Chatbot" by MobileMonkey (<a href="https://mobilemonkey.com/how-to-deploy-a-chatbot/">https://mobilemonkey.com/how-to-deploy-a-chatbot/</a>)
+- APPLY: Deploy your chatbot on the desired channels and monitor its performance.</p>
+<p>Day 7: Maintaining and Improving Your Chatbot
+- LEARN: Learn about maintaining your chatbot, including monitoring performance metrics, adding new features, and keeping up with industry trends.
+- READ: "How to Maintain a Chatbot" by ManyChat (<a href="https://manychat.com/blog/maintain-a-chatbot/">https://manychat.com/blog/maintain-a-chatbot/</a>)
+- APPLY: Continuously monitor your chatbot's performance and make improvements based on user feedback and analytics data.</p>
+                </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-emerald-50 border border-emerald-100 rounded-2xl flex items-center justify-between no-print">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined">explore</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-[#00714d]">Interactive Resources</h4>
+                        <p class="text-emerald-700 text-sm opacity-80">We found relevant volunteering and projects near you.</p>
+                    </div>
+                </div>
+                <a href="https://www.google.com/search?q=volunteering+london+career" target="_blank" class="bg-[#10b981] text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider">View Resources</a>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('li').forEach(li => {
+                let text = li.innerText.toUpperCase();
+                if(text.includes('LEARN') || text.includes('READ') || text.includes('APPLY')) {
+                    li.classList.add('day-card');
+                    let html = li.innerHTML;
+                    html = html.replace(/LEARN:/gi, '<span class="tag bg-blue-100 text-blue-700">Course</span><br>');
+                    html = html.replace(/READ:/gi, '<span class="tag bg-amber-100 text-amber-700">Reading</span><br>');
+                    html = html.replace(/APPLY:/gi, '<span class="tag bg-emerald-100 text-emerald-700">Action</span><br>');
+                    li.innerHTML = html;
+                }
+            });
+        </script>
+    </body>
+    </html>
+    

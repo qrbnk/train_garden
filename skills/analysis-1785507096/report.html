@@ -1,0 +1,110 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Summary</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>SUMMARY</strong>
+Alexander R. Rivera's background is NOT already in sustainability, as his career history consists of solar installation and electrical work.</p>
+<p><strong>TRANSFERABLE/MATCHED SKILLS</strong></p>
+<ol>
+<li>Project management: demonstrated through leading crews and completing projects on time.</li>
+<li>Safety focus: enforced OSHA fall protection standards and site safety protocols, achieving a 100% incident-free record.</li>
+<li>Communication skills: coordinated with local inspectors, utility reps, and municipal authorities to secure Permission to Operate (PTO).</li>
+<li>Troubleshooting: performed corrective maintenance, rapid shutdown troubleshooting, microinverter swaps, and communications gateway provisioning.</li>
+<li>Technical expertise: demonstrated through installation of complex string and microinverter wiring, system commissioning, and adherence to NEC Article 690 codes.</li>
+</ol>
+<p><strong>SKILL GAPS</strong></p>
+<ol>
+<li>Sustainability-specific knowledge: lack of experience in sustainability-focused roles or projects.</li>
+<li>Climate change policy understanding: no evidence of knowledge or experience with climate change policies or regulations.</li>
+<li>ESG analysis and reporting: no indication of experience with environmental, social, and governance (ESG) analysis or reporting.</li>
+</ol>
+<p><strong>TOP 3 NEXT STEPS</strong></p>
+<ol>
+<li>Take courses in sustainability, renewable energy, and climate change to fill skill gaps.</li>
+<li>Gain experience in sustainability-focused roles or projects, such as internships or volunteer work.</li>
+<li>Network with professionals in the sustainability field to build connections and gain insights into industry best practices.</li>
+</ol>
+<p><strong>SKILLS_JSON</strong>
+<code>json
+{
+  "matched": [
+    {
+      "skill": "Project management",
+      "description": "Leading crews and completing projects on time"
+    },
+    {
+      "skill": "Safety focus",
+      "description": "Enforcing OSHA fall protection standards and site safety protocols"
+    },
+    {
+      "skill": "Communication skills",
+      "description": "Coordinating with local inspectors, utility reps, and municipal authorities"
+    }
+  ],
+  "all_skills": [
+    "PV System Design",
+    "AC/DC Wiring",
+    "NEC Code (Art. 690)",
+    "Conduit Bending",
+    "Roof Mount Racking",
+    "Battery Storage (ESS)",
+    "SolarEdge &amp; Enphase",
+    "Thermal Imaging",
+    "IV Curve Tracing",
+    "Panel Upgrades (MPU)",
+    "Grid Interconnection",
+    "Fall Protection",
+    "Crew Leadership",
+    "Fluke 1587 FC Insulation Tester",
+    "FLIR Thermal Camera &amp; Analysis",
+    "Seaward Solar Utility Tester",
+    "Torque Wrench &amp; Calibrated Tools",
+    "Aerial Lifts &amp; Scaffold Safety"
+  ],
+  "gaps": [
+    {
+      "gap": "Sustainability-specific knowledge",
+      "description": "Lack of experience in sustainability-focused roles or projects"
+    },
+    {
+      "gap": "Climate change policy understanding",
+      "description": "No evidence of knowledge or experience with climate change policies or regulations"
+    }
+  ],
+  "summary": "Not already in sustainability, electrical work background",
+  "name": "Alexander R. Rivera",
+  "sector": "Solar Installation and Electrical Work",
+  "experience_years": "6+ years",
+  "suggested_target_role": "Sustainability Role in Solar Industry",
+  "location": "Austin, TX",
+  "goals": ["To apply skills to sustainability-focused roles"],
+  "hobbies": [],
+  "headline": "Lead Solar Field Technician",
+  "experience": [
+    {
+      "title": "Lead Solar Field Technician",
+      "company": "Apex Clean Energy Solutions",
+      "start_date": "2022",
+      "end_date": "Present"
+    },
+    {
+      "title": "Solar PV Installer &amp; Maintenance Tech",
+      "company": "SunRay Electric &amp; Renewables",
+      "start_date": "2019",
+      "end_date": "2022"
+    }
+  ]
+}</code></p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

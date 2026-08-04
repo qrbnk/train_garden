@@ -1,0 +1,616 @@
+{
+  "user_id": "c8e432c726385ac502658681d7192e42",
+  "email": "john_snow31@gmail.com",
+  "name": "John Snow 31",
+  "first_seen": "2026-08-03T12:47:29.912754",
+  "last_seen": "2026-08-03T12:57:47.727637",
+  "sector": "AI transformation consulting, health tech, education",
+  "experience_years": "8 years",
+  "target_role": "Explore industries related to my skills",
+  "goals": [
+    "explore which roles fit me",
+    "tackling environmental challenges excites me",
+    "Explore industries related to my skills"
+  ],
+  "skills": [
+    "Full-Cycle B2B Sales",
+    "Account Management",
+    "AI Strategy & Rapid Prototyping (NLP/LLMs)",
+    "Cross-Functional Leadership",
+    "CRM Management (Salesforce)",
+    "Market Intelligence",
+    "Consultative Selling",
+    "Agile/PRINCE2 Delivery",
+    "Python",
+    "JavaScript",
+    "Salesforce",
+    "Tegus by AlphaSense",
+    "Outlier– AI Training expert",
+    "Sirkka Health – Digital Health Transformation Lead",
+    "Genwell Medical – Account Executive",
+    "Code Black Academy – Head of Communications",
+    "Brent Council – Community Health Champion",
+    "Malaika Foundation – Lecturer (AI)",
+    "The Open University - Contributor to Ukrainian language and culture initiatives",
+    "PRINCE2 Practitioner Certification",
+    "TERN Startup Graduate",
+    "Innovation & Enterprise Explore program – UCL",
+    "The Alan Turing Institute – AI Summer School",
+    "Access Module – People, Work & Society – The Open University",
+    "Doctor of Medicine (MD)",
+    "Project delivery",
+    "Stakeholder management and communications",
+    "Regulatory literacy",
+    "Stakeholder management (cross-functional)",
+    "Other skills not mentioned...",
+    "Systems thinking",
+    "Change management",
+    "AI transformation consulting",
+    "health tech",
+    "education",
+    "Health tech",
+    "Education"
+  ],
+  "skill_sources": {
+    "Full-Cycle B2B Sales": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928606"
+      }
+    ],
+    "Account Management": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928703"
+      }
+    ],
+    "AI Strategy & Rapid Prototyping (NLP/LLMs)": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928709"
+      }
+    ],
+    "Cross-Functional Leadership": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928713"
+      }
+    ],
+    "CRM Management (Salesforce)": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928718"
+      }
+    ],
+    "Market Intelligence": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928721"
+      }
+    ],
+    "Consultative Selling": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928725"
+      }
+    ],
+    "Agile/PRINCE2 Delivery": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928728"
+      }
+    ],
+    "Python": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928732"
+      }
+    ],
+    "JavaScript": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928736"
+      }
+    ],
+    "Salesforce": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928739"
+      }
+    ],
+    "Tegus by AlphaSense": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928743"
+      }
+    ],
+    "Outlier– AI Training expert": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928747"
+      }
+    ],
+    "Sirkka Health – Digital Health Transformation Lead": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928751"
+      }
+    ],
+    "Genwell Medical – Account Executive": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928755"
+      }
+    ],
+    "Code Black Academy – Head of Communications": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928759"
+      }
+    ],
+    "Brent Council – Community Health Champion": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928763"
+      }
+    ],
+    "Malaika Foundation – Lecturer (AI)": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928767"
+      }
+    ],
+    "The Open University - Contributor to Ukrainian language and culture initiatives": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928771"
+      }
+    ],
+    "PRINCE2 Practitioner Certification": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928775"
+      }
+    ],
+    "TERN Startup Graduate": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928779"
+      }
+    ],
+    "Innovation & Enterprise Explore program – UCL": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928782"
+      }
+    ],
+    "The Alan Turing Institute – AI Summer School": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928786"
+      }
+    ],
+    "Access Module – People, Work & Society – The Open University": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928790"
+      }
+    ],
+    "Doctor of Medicine (MD)": [
+      {
+        "type": "cv",
+        "detail": "Found on CV (Daryna Vakulenko - CV -  copy.pdf)",
+        "ts": "2026-08-03T12:49:32.928794"
+      }
+    ],
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Ran product launches at a tech startup — This experience will be useful in managing and delivering sustainable projects, such as implementing renewable energy systems or launching eco-friendly products.",
+        "ts": "2026-08-03T12:49:56.814105"
+      },
+      {
+        "type": "inferred",
+        "detail": "Ran product launches at a tech startup (implied from background) — Launching products requires coordinating multiple stakeholders, timelines, and resources – skills that are valuable in delivering sustainability projects, such as green infr",
+        "ts": "2026-08-03T12:52:35.794725"
+      }
+    ],
+    "Stakeholder management and communications": [
+      {
+        "type": "inferred",
+        "detail": "Bridges technical execution, commercial growth, and human-centric innovation — As a digital transformation strategist, you have experience in navigating the intersection of business goals and stakeholder needs, which is also crucial in sust",
+        "ts": "2026-08-03T12:49:56.814203"
+      }
+    ],
+    "Regulatory literacy": [
+      {
+        "type": "inferred",
+        "detail": "Digital Health Transformation Lead at Sirkka Health — Working in health tech requires understanding regulatory frameworks and compliance, a skill that can be applied to navigating environmental regulations and policies in sustainability rol",
+        "ts": "2026-08-03T12:49:56.814212"
+      },
+      {
+        "type": "inferred",
+        "detail": "Experience in health tech and education — Understanding of regulatory frameworks in healthcare and education can be applied to navigating sustainability regulations, such as those related to waste management, water usage, or carbon emission",
+        "ts": "2026-08-03T12:52:35.794733"
+      }
+    ],
+    "Systems thinking": [
+      {
+        "type": "inferred",
+        "detail": "Bridges technical execution, commercial growth, and human-centric innovation — This ability to integrate multiple aspects of an organization can be applied to understanding the complex interactions between environmental, social, and economi",
+        "ts": "2026-08-03T12:52:35.794697"
+      }
+    ],
+    "Change management": [
+      {
+        "type": "inferred",
+        "detail": "Digital transformation strategist — Experience driving digital transformations can translate to helping organizations adapt to new sustainability practices or technologies, minimizing disruption and optimizing impact.",
+        "ts": "2026-08-03T12:52:35.794720"
+      }
+    ],
+    "AI transformation consulting": [
+      {
+        "type": "chat",
+        "detail": "Explore industries related to my skills",
+        "ts": "2026-08-03T12:54:29.938634"
+      }
+    ],
+    "health tech": [
+      {
+        "type": "chat",
+        "detail": "Explore industries related to my skills",
+        "ts": "2026-08-03T12:54:29.938660"
+      }
+    ],
+    "education": [
+      {
+        "type": "chat",
+        "detail": "Explore industries related to my skills",
+        "ts": "2026-08-03T12:54:29.938664"
+      }
+    ]
+  },
+  "cv_summary": "                 Daryna Vakulenko           London, UK, Phone number: +447442476374, Email: info@darynavakulenko.com          Professional Profile           Digital transformation strategist who bridges technical execution, commercial growth, and humancentric innovation. With a foundational backgrou",
+  "messages": [
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "user",
+      "content": "[Uploaded CV: Daryna Vakulenko - CV -  copy.pdf]",
+      "ts": "2026-08-03T12:49:56.998994"
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "assistant",
+      "content": "**SUMMARY**\n\nDaryna's background is NOT already in sustainability, as her most recent roles have been in AI transformation consulting, health tech, and education, with no direct experience in sustainability or green economy.\n\n**TRANSFERABLE/MATCHED SKILLS**\n\n* Stakeholder management (cross-functional leadership)\n* Data-driven decision making (market intelligence, CRM management)\n* Leading cross-functional change (digital transformation lead)\n* Solution delivery (health tech, AI solutions)\n* Business development (B2B sales pipelines)\n* Communication and content creation (digital marketing strategies, high-level medical content)\n\n**SKILL GAPS**\n\n* Sustainability-specific knowledge and qualifications\n* Experience with environmental or social impact analysis\n* Understanding of sustainability frameworks and reporting standards\n* Familiarity with green economy policy and regulatory landscape\n\n**ALL SKILLS (JSON)**\n\nYour CV shows me where you've been — I'd still love to know **where you want to go**. What's the role or direction you're aiming for?\n\nOne more thing — your CV also points toward goals like **Delivering strategic advisory and market intelligence to institutional investors and corporate entities**. Want me to save those as your career goals, or would you put it differently?",
+      "ts": "2026-08-03T12:49:56.999617",
+      "job_cards": [],
+      "report_path": "/view-skill/analysis-1785757796/report",
+      "resource_cards": [],
+      "suggestions": [
+        "Help me explore which roles fit me",
+        "My target role is …",
+        "I'm not sure yet"
+      ]
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "user",
+      "content": "Help me explore which roles fit me",
+      "ts": "2026-08-03T12:51:10.914013"
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "assistant",
+      "content": "What's your ideal salary range? Knowing your floor and target helps me filter out roles that aren't the right fit.",
+      "ts": "2026-08-03T12:51:18.480154",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Under £30k",
+        "£30k–£50k",
+        "£50k–£70k",
+        "£70k+"
+      ]
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "user",
+      "content": "£50k–£70k",
+      "ts": "2026-08-03T12:51:28.559359"
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "assistant",
+      "content": "Do you need this to be remote, hybrid, or onsite?",
+      "ts": "2026-08-03T12:51:32.639094",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Remote",
+        "Hybrid",
+        "Onsite"
+      ]
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "user",
+      "content": "Hybrid",
+      "ts": "2026-08-03T12:51:36.753732"
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-08-03T12:51:36.758472",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "user",
+      "content": "No strong preference",
+      "ts": "2026-08-03T12:51:39.119454"
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "assistant",
+      "content": "So, you mentioned earlier that your current background is in AI transformation consulting, health tech, and education. I've taken note of that - £50k-£70k salary range, hybrid work preference, and no strong preference for company culture.\n\nHere's what I'd like to know now: What do you envision as a fulfilling role where you can utilize your skills in bridges technical execution, commercial growth, and human-centric innovation?",
+      "ts": "2026-08-03T12:53:19.267764",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Show me roles with flexible hours",
+        "Explore industries related to my skills",
+        "Give me an example of a typical workday"
+      ]
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "user",
+      "content": "Explore industries related to my skills",
+      "ts": "2026-08-03T12:53:55.538007"
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "assistant",
+      "content": "You mentioned you'd like to explore industries related to your skills, and I'm excited to help you discover those connections. What specific aspects of your background in AI transformation consulting, health tech, and education do you think could be applied to new fields?",
+      "ts": "2026-08-03T12:54:19.294406",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Explore industries using my coding skills",
+        "Show me related job titles",
+        "Identify career paths for writers"
+      ]
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "user",
+      "content": "Explore industries related to my skills",
+      "ts": "2026-08-03T12:54:37.522555"
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "user",
+      "content": "Explore industries related to my skills",
+      "ts": "2026-08-03T12:55:03.865226"
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "assistant",
+      "content": "I see you're keen on exploring industries related to your skills, and I'm excited to help you make those connections. What specific aspects of your background in AI transformation consulting, health tech, and education do you think could be applied to new fields?",
+      "ts": "2026-08-03T12:55:19.997676",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Show me roles in tech",
+        "Explore industries with data science",
+        "Find companies using my skills"
+      ]
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "user",
+      "content": "help me",
+      "ts": "2026-08-03T12:56:18.145008"
+    },
+    {
+      "uid": "c8e432c726385ac502658681d7192e42",
+      "role": "assistant",
+      "content": "I can tell you're feeling a bit stuck and unsure about where to go next! Don't worry, I'm here to help! You've got a broad range of skills in AI, health tech, and education, which is amazing! Let's break it down: we know you want to explore new industries related to your skills, and tackling environmental challenges excites you. That's a great starting point!\n\nWhat specific aspects of your background do you think could be applied to these new fields? For example, did you work with AI transformation in health tech, or was it more about education projects?",
+      "ts": "2026-08-03T12:57:18.840562",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "338030ca-0162-4db5-9947-7f614425d003",
+          "title": "Best Online Courses & Certificates [2026] | Coursera",
+          "url": "https://www.coursera.org/courses",
+          "body": "Find online courses and certificates in hundreds of subjects, from AI and data to business, design, and health. Explore topics and choose what you want to learn next. Enroll for free.",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "2f418e32-947a-43a6-98df-6422381b730c",
+          "title": "Search Google for: volunteering Explore industries related to my skills mk168jj",
+          "url": "https://www.google.com/search?q=volunteering+Explore+industries+related+to+my+skills+mk168jj",
+          "body": "We couldn't confirm a specific live resource for this yet — here's a search to help you find current options yourself.",
+          "type": "volunteering",
+          "type_label": "Volunteering"
+        },
+        {
+          "id": "63fe8578-2335-4129-ab07-7b9db7bdf15b",
+          "title": "2026 AI Skills Gap: Top Industries Hiring & Master's Paths ...",
+          "url": "https://www.bu.edu/online/2026/06/27/ai_skills_gap_2026/",
+          "body": "Jun 27, 2026 · The AI skills gap is widening. See which industries are hiring AI talent in 2026, what they pay, and how to choose the right AI master's for your field.",
+          "type": "jobs",
+          "type_label": "Resource"
+        }
+      ],
+      "suggestions": [
+        "Show me roles in AI",
+        "Explore data science careers",
+        "Find tech jobs near me"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "7a485a15-a6da-4f4d-b9ce-67de073b78af",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785757796/report",
+      "type": "cv_summary",
+      "timestamp": "2026-08-03 12:49",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "e48f75be-234c-43fc-966e-e451785350a3",
+      "name": "Daryna Vakulenko - CV -  copy.pdf",
+      "type": "cv",
+      "timestamp": "2026-08-03 12:49"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "mk168jj",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "No strong preference",
+  "salary_range": "£50k–£70k",
+  "work_type": "Hybrid",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": true,
+  "onboarding_done": true,
+  "headline": "AI Transformation Specialist",
+  "experience": [
+    {
+      "id": "5ad62a25",
+      "title": "Sirkka Health – Digital Health Transformation Lead",
+      "company": "",
+      "start_date": "July 2024",
+      "end_date": "August 2024",
+      "description": "",
+      "source": "manual"
+    }
+  ],
+  "how_heard": "Friend or colleague",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [
+    "target_role"
+  ],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Bridges technical execution, commercial growth, and human-centric innovation",
+      "skill": "Systems thinking",
+      "relevance": "This ability to integrate multiple aspects of an organization can be applied to understanding the complex interactions between environmental, social, and economic factors in sustainability."
+    },
+    {
+      "source": "Digital transformation strategist",
+      "skill": "Change management",
+      "relevance": "Experience driving digital transformations can translate to helping organizations adapt to new sustainability practices or technologies, minimizing disruption and optimizing impact."
+    },
+    {
+      "source": "Ran product launches at a tech startup (implied from background)",
+      "skill": "Project delivery",
+      "relevance": "Launching products requires coordinating multiple stakeholders, timelines, and resources – skills that are valuable in delivering sustainability projects, such as green infrastructure development or renewable energy installations."
+    },
+    {
+      "source": "Experience in health tech and education",
+      "skill": "Regulatory literacy",
+      "relevance": "Understanding of regulatory frameworks in healthcare and education can be applied to navigating sustainability regulations, such as those related to waste management, water usage, or carbon emissions."
+    }
+  ],
+  "journey": {
+    "xp": 0,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-08-03",
+    "last_checkin_date": ""
+  },
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "neutral",
+        "ts": "2026-08-03T12:53:28.868272"
+      },
+      {
+        "emotion": "neutral",
+        "ts": "2026-08-03T12:54:29.900206"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-08-03T12:55:30.367428"
+      }
+    ],
+    "blockers": [],
+    "preferred_tone": "analytical",
+    "response_depth": "balanced",
+    "milestones_mentioned": [],
+    "total_exchanges": 3,
+    "encouragement_count": 0,
+    "key_insights": [
+      "User has a clear idea of their background and salary range, but is unsure about target role and company culture.",
+      "The user has a broad range of skills in AI, health tech, and education, but is seeking new industries to apply these skills.",
+      "The user is enthusiastic about exploring new industries related to their skills, but lacks a clear direction on where to start."
+    ],
+    "current_emotion": "excited"
+  }
+}

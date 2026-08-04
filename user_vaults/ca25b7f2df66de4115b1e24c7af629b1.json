@@ -1,0 +1,93 @@
+{
+  "user_id": "ca25b7f2df66de4115b1e24c7af629b1",
+  "email": "brandon_2@test.com",
+  "name": "Brandon",
+  "first_seen": "2026-07-31T12:32:35.879186",
+  "last_seen": "2026-07-31T12:34:21.413885",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Project delivery",
+    "Data analysis"
+  ],
+  "skill_sources": {
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Decade of comprehensive experience in installation, maintenance, and optimization of photovoltaic systems — Experience with large-scale system installations demonstrates ability to manage complex projects from start to finish.",
+        "ts": "2026-07-31T12:34:12.543845"
+      }
+    ],
+    "Data analysis": [
+      {
+        "type": "inferred",
+        "detail": "Adept at enhancing energy production — Understanding of data-driven approaches to optimize energy production suggests familiarity with analyzing and interpreting data to inform decision-making.",
+        "ts": "2026-07-31T12:34:12.543949"
+      }
+    ]
+  },
+  "cv_summary": "\n\n\n\nETHANMARTINEZ\nSolar Technician\nsupport@qwikresume.com\n(123) 456 7899\nLos Angeles\nwww.qwikresume.com\nPROFESSIONAL SUMMARY\nSolar Technician with a decade of comprehensive experience in the \ninstallation, maintenance, and optimization of photovoltaic systems. \nAdept at enhancing energy producti",
+  "messages": [],
+  "reports": [
+    {
+      "id": "e0fe286a-2d1e-453a-8a84-4e333aa7348a",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785497652/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-31 12:34",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "1008f3f0-f2db-4f33-bf47-c0a0e6603728",
+      "name": "solar-technician-1591336684.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-31 12:33"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "nw25ab",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "",
+  "experience": [],
+  "how_heard": "Event",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Decade of comprehensive experience in installation, maintenance, and optimization of photovoltaic systems",
+      "skill": "Project delivery",
+      "relevance": "Experience with large-scale system installations demonstrates ability to manage complex projects from start to finish."
+    },
+    {
+      "source": "Adept at enhancing energy production",
+      "skill": "Data analysis",
+      "relevance": "Understanding of data-driven approaches to optimize energy production suggests familiarity with analyzing and interpreting data to inform decision-making."
+    }
+  ]
+}

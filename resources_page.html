@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skills Hubs Around You | Train Garden</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Public+Sans:wght@300;400;600;700;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .collapsible-content.expanded {
+            max-height: 500px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb68c",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#bd5700",
+                        "on-surface": "#181c22",
+                        "surface-container-low": "#f2f3fd",
+                        "secondary-fixed": "#d6e3ff",
+                        "tertiary": "#208a65",
+                        "surface-dim": "#d8dae3",
+                        "secondary-container": "#b7cfff",
+                        "on-tertiary-fixed-variant": "#763400",
+                        "surface-tint": "#005db8",
+                        "on-surface-variant": "#414753",
+                        "primary": "#091747",
+                        "on-primary-container": "#fefcff",
+                        "tertiary-fixed": "#ffdbc9",
+                        "surface-bright": "#f9f9ff",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#afc7f7",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#181c22",
+                        "inverse-primary": "#aac7ff",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e0e2ec",
+                        "on-tertiary-fixed": "#321200",
+                        "on-primary-fixed-variant": "#00458d",
+                        "inverse-surface": "#2d3038",
+                        "on-secondary-fixed": "#001b3e",
+                        "primary-fixed-dim": "#aac7ff",
+                        "surface": "#f9f9ff",
+                        "background": "#f9f9ff",
+                        "on-secondary-container": "#405882",
+                        "surface-variant": "#e0e2ec",
+                        "surface-container-high": "#e6e8f1",
+                        "outline-variant": "#c1c6d5",
+                        "primary-fixed": "#d6e3ff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eff0fa",
+                        "on-primary-fixed": "#001b3e",
+                        "on-secondary-fixed-variant": "#2e4770",
+                        "on-tertiary-container": "#fffbff",
+                        "secondary": "#465f89",
+                        "outline": "#717785",
+                        "primary-container": "#0873df",
+                        "surface-container": "#ecedf7",
+                        "error": "#ba1a1a"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<header class="flex justify-between items-center px-8 py-4 w-full sticky top-0 z-50 bg-white border-b border-slate-200">
+<div class="flex items-center">
+            <img alt="Train Garden Logo" class="h-6 md:h-7 w-auto" src="logo.png"/>
+</div>
+ <nav class="hidden md:flex items-center gap-8">
+            <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-medium tracking-tight text-sm" href="index.html">Home</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-medium tracking-tight text-sm" href="jobseekers_page.html">Jobseekers</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-medium tracking-tight text-sm" href="partners_page.html" >Partners</a>
+            <a class="text-white bg-primary px-4 py-2 rounded-lg hover:bg-primary-container transition-all font-headline font-medium tracking-tight text-sm" href="mailto:thomas@traingarden.co.uk" >Contact Us</a>
+        </nav>
+
+        <button id="menu-toggle" class="md:hidden p-2 text-primary focus:outline-none">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-emerald-100/20 px-6 py-6 space-y-4 shadow-xl">
+        <a class="block text-slate-600 dark:text-slate-400 font-headline font-semibold text-lg" href="index.html" >Home</a>
+        <a class="block text-slate-600 dark:text-slate-400 font-headline font-semibold text-lg" href="jobseekers_page.html" >Jobseekers</a>
+        <a class="block text-slate-600 dark:text-slate-400 font-headline font-semibold text-lg" href="partners_page.html" >Partners</a>
+        <a class="block text-slate-600 dark:text-slate-400 font-headline font-semibold text-lg" href="resources_page.html" >Resources</a>
+        <a class="block text-primary dark:text-emerald-400 font-headline font-bold text-lg" href="mailto:thomas@traingarden.co.uk" >Contact Us</a>
+    </div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-primary py-20 px-8 overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-tertiary via-transparent to-transparent"></div>
+</div>
+<div class="max-w-6xl mx-auto relative z-10">
+<h1 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">Skills Hubs Around You</h1>
+<p class="text-xl text-blue-100 max-w-2xl font-light leading-relaxed">
+                    Discover local organizations, training providers, and charities helping you bridge the gap to your next green career.
+                </p>
+</div>
+</section>
+<!-- Search and Filters Section (Collapsible) -->
+<section class="bg-surface-container-low border-b border-outline-variant">
+<div class="max-w-6xl mx-auto px-8">
+<button class="w-full py-4 flex items-center justify-between text-primary font-bold focus:outline-none" id="filter-toggle">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined">filter_list</span>
+                        Search &amp; Filters
+                    </span>
+<span class="material-symbols-outlined transition-transform duration-300" id="filter-icon">expand_more</span>
+</button>
+<div class="collapsible-content" id="filter-content">
+<div class="pb-8 space-y-6">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-sm" id="hub-search" placeholder="Search by name, location, or skill..." type="text"/>
+</div>
+<div>
+<p class="text-xs font-bold text-outline uppercase tracking-wider mb-3">Filter by Category</p>
+<div class="flex flex-wrap gap-2">
+<button class="filter-btn bg-white border border-outline-variant px-4 py-1.5 rounded-full text-sm font-medium text-on-surface hover:border-primary transition-colors active" data-type="all">All</button>
+<button class="filter-btn bg-white border border-outline-variant px-4 py-1.5 rounded-full text-sm font-medium text-on-surface hover:border-primary transition-colors" data-type="Volunteering">Volunteer Projects</button>
+<button class="filter-btn bg-white border border-outline-variant px-4 py-1.5 rounded-full text-sm font-medium text-on-surface hover:border-primary transition-colors" data-type="Training / Bootcamp">Training</button>
+<button class="filter-btn bg-white border border-outline-variant px-4 py-1.5 rounded-full text-sm font-medium text-on-surface hover:border-primary transition-colors" data-type="Industry Event">Industry Events</button>
+<button class="filter-btn bg-white border border-outline-variant px-4 py-1.5 rounded-full text-sm font-medium text-on-surface hover:border-primary transition-colors" data-type="Community Energy">Community Energy</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Directory Listing -->
+<section class="py-16 px-8 bg-surface">
+<div class="max-w-6xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="hub-grid">
+<!-- Cards will be injected here via script -->
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-16 flex justify-center" id="load-more-container">
+<button class="flex items-center gap-2 border-2 border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-all" id="load-more-btn">
+                        Load More Hubs
+                        <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<div class="hidden text-center py-20" id="no-results">
+<p class="text-xl text-on-surface-variant">No opportunities match your search criteria.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container py-16 px-8">
+<div class="max-w-4xl mx-auto text-center bg-white p-12 rounded-2xl shadow-sm border border-outline-variant">
+<h2 class="text-3xl font-black text-primary mb-4">Don't see your organization?</h2>
+<p class="text-on-surface-variant mb-8 text-lg">Help us grow the network. If you offer green skills training or volunteering, join the Train Garden directory today.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:scale-105 transition-transform" href="mailto:thomas@traingarden.co.uk" target="_blank">List your organization</a>
+<a class="text-primary border-2 border-primary px-8 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-all" href="partners_page.html" target="_blank">Partner with us</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full gap-8 bg-white border-t border-slate-200">
+<div class="flex flex-col items-center md:items-start gap-4">
+            <img alt="Train Garden Logo" class="h-6 md:h-7 w-auto" src="logo.png"/>
+    <p class="text-xs text-slate-500 font-medium">© 2024 Train Garden. All rights reserved.</p>
+</div>
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2 text-slate-500 hover:text-[#091747] transition-colors group" href="https://substack.com" >
+<svg class="w-5 h-5 fill-current text-[#ff6719]" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.078v2.836zM1.46 10.812V24L12 18.11L22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.078V0z"></path></svg>
+<span class="font-publicSans text-sm font-medium">Substack</span>
+</a>
+<a class="flex items-center gap-2 text-slate-500 hover:text-[#091747] transition-colors group" href="https://facebook.com" >
+<svg class="w-5 h-5 fill-current text-[#1877F2]" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+<span class="font-publicSans text-sm font-medium">Facebook</span>
+</a>
+</div>
+<div class="flex gap-6">
+<a class="text-xs font-semibold text-slate-500 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs font-semibold text-slate-500 hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</footer>
+<script>
+        const hubs = [
+            { name: "BrightenUp London (HandsOn London)", url: "https://www.handsonlondon.org.uk/brightenup-london?utm_source=chatgpt.com", type: "Volunteering", loc: "London", dates: "Ongoing", soft: "Teamwork, Communication", hard: "Environmental Care" },
+            { name: "HandsOn London – Community Volunteering", url: "https://www.handsonlondon.org.uk/community-volunteering?utm_source=chatgpt.com", type: "Volunteering", loc: "London", dates: "Flexible", soft: "Community Engagement", hard: "Project Support" },
+            { name: "The Conservation Volunteers – Saturday Conservation", url: "https://www.tcv.org.uk/london/?utm_source=chatgpt.com", type: "Volunteering", loc: "Various London Parks", dates: "Saturdays", soft: "Outdoor Work", hard: "Habitat Management" },
+            { name: "Epping Forest – Volunteer Roles", url: "https://efht.org.uk/volunteer-epping-forest/", type: "Volunteering", loc: "Epping Forest", dates: "Weekly", soft: "Commitment", hard: "Conservation Skills" },
+            { name: "Capel Manor College Green Skills Bootcamps", url: "https://www.capel.ac.uk/news/londons-environmental-college-launches-free-training-programmes-to-grow-the-citys-green-workforce/", type: "Training / Bootcamp", loc: "Multiple Campuses", dates: "Enrolling Now", soft: "Career Planning", hard: "Horticulture, Arboriculture" },
+            { name: "Westminster Adult Education – Green Skills", url: "https://www.waes.ac.uk/courses/cat/gsk/", type: "Professional Training", loc: "Westminster", dates: "Termly", soft: "Analytical Skills", hard: "Sustainable Practices" },
+            { name: "Green Skills Training London (DMR)", url: "https://dmr-training.co.uk/green-skills-training-london/", type: "Professional Training", loc: "London", dates: "Contact for Dates", soft: "Professionalism", hard: "Energy Efficiency" },
+            { name: "ecoACTIVE Sustainability Workshops", url: "https://www.ecoactive.org.uk/courses", type: "Workshops", loc: "Hackney / Online", dates: "Various", soft: "Creativity", hard: "Waste Management" },
+            { name: "Grow London Local – Green Skills Info", url: "https://www.growlondonlocal.london/find-something/green-skills/", type: "Information Hub", loc: "Greater London", dates: "24/7 Access", soft: "Research", hard: "Market Knowledge" },
+            { name: "UK Construction Week 2026", url: "https://www.westlondongreenskills.co.uk/events/", type: "Industry Event", loc: "London ExCeL", dates: "May 2026", soft: "Networking", hard: "Industry Trends" },
+            { name: "Sustainable Energy 24 (SE24)", url: "https://se24.co.uk/volunteers/", type: "Community Energy", loc: "South London", dates: "Flexible", soft: "Local Engagement", hard: "Solar Project Support" },
+            { name: "Repowering London – Volunteer Programme", url: "https://www.repowering.org.uk/volunteer/", type: "Community Energy", loc: "Brixton / London", dates: "Ongoing", soft: "Leadership", hard: "Renewable Energy Advocacy" },
+            { name: "South East London Community Energy (SELCE)", url: "https://getvolunteering.co.uk/organisations/south-east-london-community-energy-selce/8588", type: "Volunteering", loc: "SE London", dates: "Monthly", soft: "Empathy", hard: "Energy Advice" },
+            { name: "Community Energy London – Member Network", url: "https://www.communityenergy.london/membership/", type: "Networking", loc: "London-wide", dates: "Annual", soft: "Collaboration", hard: "Policy Awareness" },
+            { name: "Community Energy People (CEP) Project", url: "https://communityenergypathways.org.uk/projects-overview/community-energy-people/", type: "Project Hub", loc: "Remote/London", dates: "Project Based", soft: "Strategic Thinking", hard: "Pathway Development" },
+            { name: "Renewable & Clean Energy – London TFE", url: "https://www.londontfe.com/course/energy-and-sustainability/renewable-and-clean-energy", type: "Professional Course", loc: "Central London", dates: "Scheduled", soft: "Decision Making", hard: "Technical Energy Systems" },
+            { name: "Green Skills C.I.C – London Office", url: "https://greenskillscic.co.uk/", type: "Social Enterprise", loc: "London", dates: "Rolling", soft: "Resilience", hard: "Sustainability Training" },
+            { name: "Community Energy GO", url: "https://communityenergygo.org.uk/", type: "Resource Hub", loc: "Online/London", dates: "Ongoing", soft: "Problem Solving", hard: "Energy Transition Tools" },
+            { name: "ALPHA BSE – Renewable Energy Courses", url: "https://www.alphabse.co.uk/renewable-energy-courses/", type: "Technical Training", loc: "East London", dates: "Monthly", soft: "Attention to Detail", hard: "Solar PV, EV Charging" },
+            { name: "Capel Manor College – Renewable training", url: "https://www.capel.ac.uk/news/londons-environmental-college-launches-free-training-programmes-to-grow-the-citys-green-workforce/", type: "Training", loc: "Regents Park / Enfield", dates: "Continuous", soft: "Practical Focus", hard: "Green Space Management" },
+            { name: "Groundwork London", url: "https://www.groundwork.org.uk/london/", type: "Community Charity", loc: "London-wide", dates: "Various", soft: "Social Action", hard: "Landscape Architecture" },
+            { name: "London Wildlife Trust", url: "https://www.wildlondon.org.uk/volunteer", type: "Volunteering", loc: "Nature Reserves", dates: "Seasonal", soft: "Reliability", hard: "Biological Recording" },
+            { name: "Energy Garden", url: "https://www.energygarden.org.uk/workshops-activities", type: "Volunteering/Workshops", loc: "Overground Stations", dates: "Weekly", soft: "Community Building", hard: "Urban Farming" },
+            { name: "Repowering London", url: "https://www.repowering.org.uk/volunteer/", type: "Volunteering", loc: "Community Sites", dates: "Regular", soft: "Advocacy", hard: "Solar Panel Ops" },
+            { name: "South East London Community Energy", url: "https://www.selce.org.uk", type: "Community Energy", loc: "Greenwich/Lewisham", dates: "Contact for Info", soft: "Client Service", hard: "Fuel Poverty Alleviation" },
+            { name: "Westminster Adult Education Service", url: "https://www.waes.ac.uk/courses/cat/gsk/", type: "Adult Education", loc: "Westminster", dates: "Sept/Jan Starts", soft: "Learning mindset", hard: "Green Economy Basics" },
+            { name: "Capel Manor College", url: "https://www.capel.ac.uk", type: "College", loc: "Greater London", dates: "Academic Year", soft: "Discipline", hard: "Land-based studies" },
+            { name: "GoodGym", url: "https://www.goodgym.org", type: "Volunteering", loc: "Every Borough", dates: "Daily", soft: "Physical Fitness", hard: "Task completion" },
+            { name: "Friends of the Earth", url: "https://friendsoftheearth.uk", type: "Campaigning", loc: "Local Groups", dates: "Ongoing", soft: "Communication", hard: "Policy Research" },
+            { name: "Community Energy London", url: "https://www.communityenergy.london", type: "Network", loc: "City Hall / Online", dates: "Meetings", soft: "Strategic Insight", hard: "Energy Finance" },
+            { name: "The Restart Project", url: "https://therestartproject.org", type: "Circular Economy", loc: "Restart Parties", dates: "Check Calendar", soft: "Patience", hard: "Electronics Repair" },
+            { name: "LSBU Green Skills Hub", url: "https://www.lsbugreenskills.com/", type: "Skills Hub", loc: "South Bank", dates: "Enrolling", soft: "Critical Thinking", hard: "Retrofitting Skills" },
+            { name: "Green Skills C.I.C", url: "https://www.greenskillscic.co.uk/", type: "Education", loc: "Stratford", dates: "Rolling", soft: "Team Lead", hard: "Environment Management" },
+            { name: "The Garden Classroom", url: "http://www.thegardenclassroom.org.uk/", type: "Nature Education", loc: "Islington", dates: "Term-time", soft: "Instruction", hard: "Environmental Education" },
+            { name: "Sustainable Makers of London", url: "http://sustainablemakersoflondon.co.uk/", type: "Maker Space", loc: "London", dates: "Open Access", soft: "Craftsmanship", hard: "Circular Design" },
+            { name: "The Green Shed N10", url: "https://thegreenshedn10.com/", type: "Community Hub", loc: "Muswell Hill", dates: "Weekly", soft: "Neighbourhood Bonding", hard: "Sustainability Action" },
+            { name: "The Create Place", url: "https://www.stmargaretshouse.org.uk/the-create-place", type: "Workshops", loc: "Bethnal Green", dates: "Various", soft: "Creative Arts", hard: "Eco-crafts" },
+            { name: "Guildhall", url: "https://events.climateaction.org/climate-innovation-forum/", type: "Industry Event", loc: "Guildhall, London", dates: "June 2026", soft: "Diplomacy", hard: "Climate Innovation" },
+            { name: "Etc Venues Fenchurch Street", url: "https://www.garp.org/event/2026-climate-nature-symposium", type: "Symposium", loc: "Fenchurch Street", dates: "Oct 2026", soft: "Analytical Review", hard: "Risk Management" },
+            { name: "CodeNode", url: "https://sustainabilitymag.com/events/sustainability-live-london-summit-2026", type: "Summit", loc: "Moorgate", dates: "March 2026", soft: "Executive Presence", hard: "Sustainability Tech" },
+            { name: "London Climate Action Week", url: "https://www.londonclimateactionweek.org", type: "City Event", loc: "London-wide", dates: "Summer 2026", soft: "Organizing", hard: "Event Management" },
+            { name: "University conference venues", url: "https://environmentalhealth.conferenceseries.com", type: "Conference", loc: "Central London", dates: "TBC", soft: "Academic Writing", hard: "Environmental Health" },
+            { name: "Greenwich Peninsula Ecology Park", url: "https://www.tcv.org.uk/london/urbanecology/volunteering-urban-ecology/", type: "Volunteering", loc: "Greenwich", dates: "Wed - Sun", soft: "Adaptability", hard: "Wetland Ecology" },
+            { name: "Woodberry Wetlands", url: "https://www.wildlondon.org.uk/events", type: "Nature Events", loc: "Stoke Newington", dates: "Seasonal", soft: "Public Speaking", hard: "Ornithology" },
+            { name: "Story Garden", url: "https://www.globalgeneration.org.uk", type: "Community Garden", loc: "King's Cross", dates: "Tue - Fri", soft: "Inclusivity", hard: "Organic Gardening" },
+            { name: "Old Ford Road Hub (Thames21)", url: "https://www.thames21.org.uk", type: "River Restoration", loc: "Bow / Canal side", dates: "River Days", soft: "Stewardship", hard: "Water Quality Testing" }
+        ];
+
+        let visibleCount = 9;
+        let currentFilter = 'all';
+        let searchQuery = '';
+
+        function renderHubs() {
+            const grid = document.getElementById('hub-grid');
+            const noResults = document.getElementById('no-results');
+            const loadMoreBtn = document.getElementById('load-more-container');
+            
+            const filteredHubs = hubs.filter(hub => {
+                const matchesFilter = currentFilter === 'all' || hub.type.includes(currentFilter);
+                const matchesSearch = hub.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                     hub.loc.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                     hub.hard.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesFilter && matchesSearch;
+            });
+
+            grid.innerHTML = '';
+            const itemsToShow = filteredHubs.slice(0, visibleCount);
+
+            if (itemsToShow.length === 0) {
+                noResults.classList.remove('hidden');
+                loadMoreBtn.classList.add('hidden');
+            } else {
+                noResults.classList.add('hidden');
+                itemsToShow.forEach(hub => {
+                    const card = `
+                        <div class="group bg-white rounded-xl border border-outline-variant hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col h-full">
+                            <div class="p-6 flex-grow">
+                                <div class="flex items-center gap-2 text-primary mb-2">
+                                    <span class="material-symbols-outlined text-sm">location_on</span>
+                                    <span class="text-xs font-semibold uppercase tracking-wide">${hub.loc}</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-primary mb-3 leading-tight">${hub.name}</h3>
+                                <div class="space-y-4 mb-6">
+                                    <div class="flex flex-col">
+                                        <span class="text-[10px] font-bold text-outline uppercase tracking-wider">Opportunity Type</span>
+                                        <span class="text-sm font-medium text-tertiary">${hub.type}</span>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-[10px] font-bold text-outline uppercase tracking-wider">Dates / Times</span>
+                                        <span class="text-sm text-on-surface-variant">${hub.dates}</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <span class="text-[10px] font-bold text-outline uppercase tracking-wider">Soft Skills</span>
+                                            <p class="text-xs text-on-surface-variant leading-tight">${hub.soft}</p>
+                                        </div>
+                                        <div>
+                                            <span class="text-[10px] font-bold text-outline uppercase tracking-wider">Hard Skills</span>
+                                            <p class="text-xs text-on-surface-variant leading-tight">${hub.hard}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-6 pb-6 mt-auto flex flex-col gap-3">
+                                <a class="flex items-center justify-between w-full bg-tertiary text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-all text-center" href="volunteer_application.html?opportunity=${encodeURIComponent(hub.name)}" target="_blank">
+                                    <span>Apply to Volunteer</span>
+                                    <span class="material-symbols-outlined">edit_note</span>
+                                </a>
+                                <a class="flex items-center justify-between w-full bg-surface-container-low text-primary font-bold py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" href="${hub.url}" target="_blank">
+                                    <span>View Opportunity</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    grid.innerHTML += card;
+                });
+
+                if (visibleCount >= filteredHubs.length) {
+                    loadMoreBtn.classList.add('hidden');
+                } else {
+                    loadMoreBtn.classList.remove('hidden');
+                }
+            }
+        }
+
+        // Event Listeners
+        document.getElementById('load-more-btn').addEventListener('click', () => {
+            visibleCount += 9;
+            renderHubs();
+        });
+
+        document.getElementById('hub-search').addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            visibleCount = 9;
+            renderHubs();
+        });
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-primary', 'text-white');
+                    b.classList.add('bg-white', 'text-on-surface');
+                });
+                e.target.classList.remove('bg-white', 'text-on-surface');
+                e.target.classList.add('bg-primary', 'text-white');
+                
+                currentFilter = e.target.dataset.type;
+                visibleCount = 9;
+                renderHubs();
+            });
+        });
+
+        // Collapsible logic
+        const filterToggle = document.getElementById('filter-toggle');
+        const filterContent = document.getElementById('filter-content');
+        const filterIcon = document.getElementById('filter-icon');
+
+        filterToggle.addEventListener('click', () => {
+            const isExpanded = filterContent.classList.toggle('expanded');
+            filterIcon.style.transform = isExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+
+        // Initial render
+        renderHubs();
+    </script>
+    
+ <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+</body></html>

@@ -1,0 +1,179 @@
+{
+  "user_id": "53cc97075eab20d8b9c2441e5cf12150",
+  "email": "41admin@test.com",
+  "name": "steven",
+  "first_seen": "2026-07-22T12:53:33.345969",
+  "last_seen": "2026-07-22T13:03:49.382383",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [],
+  "cv_summary": "            Daryna Vakulenko      M: +447442476374, Email: dashalolvakulenko@gmail.com, London         Professional Profile       AI Transformation Lead & Digital Strategy Consultant with 8 years of experience delivering AI-driven solutions across complex industries. Strategic leader and MD (Physici",
+  "messages": [
+    {
+      "uid": "53cc97075eab20d8b9c2441e5cf12150",
+      "role": "user",
+      "content": "I'm completely new to sustainability",
+      "ts": "2026-07-22T13:01:45.527357"
+    },
+    {
+      "uid": "53cc97075eab20d8b9c2441e5cf12150",
+      "role": "assistant",
+      "content": "Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. What kind of role are you looking for? Any specific job titles, sectors, or type of work on your radar — and what's the \"why\" behind the search?",
+      "ts": "2026-07-22T13:01:55.851598",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not sure yet — help me explore",
+        "Renewable energy / EV roles",
+        "Sustainability / ESG roles"
+      ]
+    },
+    {
+      "uid": "53cc97075eab20d8b9c2441e5cf12150",
+      "role": "user",
+      "content": "I'm not sure yet — help me explore",
+      "ts": "2026-07-22T13:02:06.883686"
+    },
+    {
+      "uid": "53cc97075eab20d8b9c2441e5cf12150",
+      "role": "assistant",
+      "content": "What's your ideal salary range? Knowing your floor and target helps me filter out roles that aren't the right fit.",
+      "ts": "2026-07-22T13:02:27.711005",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Under £30k",
+        "£30k–£50k",
+        "£50k–£70k",
+        "£70k+"
+      ]
+    },
+    {
+      "uid": "53cc97075eab20d8b9c2441e5cf12150",
+      "role": "user",
+      "content": "£30k–£50k",
+      "ts": "2026-07-22T13:03:18.778333"
+    },
+    {
+      "uid": "53cc97075eab20d8b9c2441e5cf12150",
+      "role": "assistant",
+      "content": "I can sense your uncertainty and lack of direction in this new field, Steven. It's completely normal to feel overwhelmed when starting from scratch. I want you to know that I'm here to support you, not just with job suggestions or resources, but also with understanding what's going on beneath the surface.\n\nCan you tell me more about what specifically is causing your unease? Is it the sheer amount of information out there, or perhaps feeling like you're not sure where to even begin exploring roles in sustainability?",
+      "ts": "2026-07-22T13:03:39.502285",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Can we stretch the budget?",
+        "What's causing the financial blockage?",
+        "Any idea of desired outcome?"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "3e0e177a-7fc5-4b99-a2a0-9ecb73469f31",
+      "name": "CV Gap Analysis",
+      "path": "/view-skill/analysis-1784721304/report",
+      "type": "cv_analysis",
+      "timestamp": "2026-07-22 12:55",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "4243fb88-2df9-4908-887d-13a6a69b280b",
+      "name": "null_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-22 12:54"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JJ",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "salary_range": "£30k–£50k",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": true,
+  "headline": "",
+  "experience": [],
+  "how_heard": "Other",
+  "onboarding_seen": true,
+  "intake_asked": [
+    "target_role",
+    "salary_range"
+  ],
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Delivering AI-driven solutions across complex industries",
+      "skill": "Project delivery and management",
+      "relevance": "In a sustainability role, you'll need to coordinate with teams to develop and implement projects that balance social, environmental, and economic objectives."
+    },
+    {
+      "source": "Strategic leader and MD at a tech startup",
+      "skill": "Stakeholder management and leadership",
+      "relevance": "You'll need to work with diverse stakeholders, including community groups, government agencies, and business partners, to drive sustainability initiatives forward."
+    }
+  ],
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "neutral",
+        "ts": "2026-07-22T13:02:05.844915"
+      },
+      {
+        "emotion": "stuck",
+        "ts": "2026-07-22T13:02:37.113028"
+      },
+      {
+        "emotion": "anxious",
+        "ts": "2026-07-22T13:03:49.348654"
+      }
+    ],
+    "blockers": [
+      "Lack of knowledge about sustainability",
+      "lack of knowledge about sustainability"
+    ],
+    "preferred_tone": "warm",
+    "response_depth": "balanced",
+    "milestones_mentioned": [],
+    "total_exchanges": 3,
+    "encouragement_count": 2,
+    "key_insights": [
+      "The user is starting from a blank slate and needs tailored resources for their sustainability career aspirations.",
+      "The user is unsure about their next career step and has a blocker related to sustainability.",
+      "The user is uncertain and lacks direction in a new field, with sustainability as a known blocker."
+    ],
+    "current_emotion": "anxious"
+  },
+  "journey": {
+    "xp": 0,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-22",
+    "last_checkin_date": ""
+  }
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Train Garden - Community</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#6f7973",
+                        "primary": "#00432f",
+                        "on-surface-variant": "#3f4943",
+                        "on-tertiary-container": "#4bdca0",
+                        "inverse-on-surface": "#ebf1ff",
+                        "surface-container-low": "#f0f3ff",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#8ad6b3",
+                        "border-subtle": "#e5e7eb",
+                        "secondary-container": "#d9dff5",
+                        "surface-gray": "#f9fafb",
+                        "success-dark": "#166534",
+                        "on-tertiary": "#ffffff",
+                        "warning-light": "#fef3c7",
+                        "inverse-surface": "#2a313d",
+                        "primary-container": "#005d42",
+                        "surface-tint": "#1a6b4f",
+                        "on-surface": "#151c27",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#dce2f3",
+                        "on-secondary-container": "#5c6274",
+                        "surface-container-high": "#e2e8f8",
+                        "background": "#f9f9ff",
+                        "secondary-fixed": "#dce2f7",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-container-highest": "#dce2f3",
+                        "surface-container": "#e7eefe",
+                        "surface-bright": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "success-light": "#dcfce7",
+                        "on-background": "#151c27",
+                        "warning-amber": "#d97706",
+                        "info-light": "#dbeafe",
+                        "on-tertiary-fixed": "#002113",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-primary-fixed": "#002115",
+                        "inverse-primary": "#8ad6b3",
+                        "secondary": "#575e70",
+                        "tertiary-container": "#005d3f",
+                        "surface-container-lowest": "#ffffff",
+                        "info-blue": "#3b82f6",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#141b2b",
+                        "on-primary-fixed-variant": "#005139",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "tertiary": "#00432c",
+                        "on-primary-container": "#88d3b1",
+                        "surface": "#f9f9ff",
+                        "primary-fixed": "#a6f2cf",
+                        "surface-dim": "#d3daea",
+                        "on-secondary-fixed-variant": "#404758",
+                        "secondary-fixed-dim": "#c0c6db",
+                        "outline-variant": "#bec9c1",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gap-lg": "16px",
+                        "sidebar-default": "256px",
+                        "padding-card": "16px",
+                        "gap-xs": "8px",
+                        "vault-panel-default": "420px",
+                        "padding-chat-h": "24px",
+                        "base": "4px",
+                        "gap-md": "12px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "section-header": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "chat-bubble": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "section-header": ["14px", { "lineHeight": "20px", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "chat-bubble": ["14px", { "lineHeight": "1.625", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #f9fafb; }
+        .ambient-shadow { box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+        .sticky-note-shadow { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<nav class="bg-surface-container-lowest flex flex-col h-screen fixed left-0 top-0 py-6 w-sidebar-default border-r border-border-subtle z-20 hidden md:flex">
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<div>
+<h1 class="text-headline-md font-headline-md font-bold text-primary">Train Garden</h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Career Growth</p>
+</div>
+</div>
+<div class="px-4 mb-6">
+<button class="w-full bg-gray-900 text-white rounded-lg py-2.5 px-4 text-label-md font-label-md flex justify-center items-center gap-2 hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+                Analyze CV
+            </button>
+</div>
+<div class="flex-1 overflow-y-auto px-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">psychology</span>
+<span class="text-label-md font-label-md">Garden AI</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">work</span>
+<span class="text-label-md font-label-md">Job Board</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">moving</span>
+<span class="text-label-md font-label-md">My Path</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">inventory_2</span>
+<span class="text-label-md font-label-md">Vault</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-primary font-bold border-r-4 border-primary bg-surface-container-low transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-primary">groups</span>
+<span class="text-label-md font-label-md">Community</span>
+</a>
+</div>
+<div class="px-4 mt-auto space-y-1 border-t border-border-subtle pt-4">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">settings</span>
+<span class="text-label-md font-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">help</span>
+<span class="text-label-md font-label-md">Support</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col md:ml-sidebar-default h-full w-full">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest flex justify-between items-center w-full px-padding-chat-h h-16 border-b border-border-subtle sticky top-0 z-10">
+<div class="flex items-center gap-4">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="pl-10 pr-4 py-1.5 rounded-lg border border-border-subtle bg-surface-gray focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-body-sm font-body-sm w-64" placeholder="Search community..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6 hidden md:flex">
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Mentors</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary font-label-md text-label-md hover:underline hidden sm:block">Upgrade</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="w-8 h-8 rounded-full overflow-hidden border border-border-subtle">
+<img alt="Sustainability Professional Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlM7WOCkiOYz7PFNovd-YVj8KsMhGLHsswP8McEyivU75O05AfXGc70DW5N2tGOXOe6Q2x7hO_IytPnWaEg0pBrXjdJwrIcSDkY-xppiWmsuJ-sFuJFz_OVtaaazDjGcLLIPYWGegx1Kwuj4-xVTz8zCeOby2jS3iQhwGK8f6pnXxpeG4mhgsUdLs7OS8QovBh8TOxU3AlbMGFMM2VEh7ULIJvISLbo1YmeWFH8noriheVn0Wv9UXXne1OVuCMkGf-WuUlU3CjuyZp"/>
+</button>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 overflow-y-auto p-4 md:p-8 bg-surface-gray">
+<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Main Feed (Center) -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Create Post Box -->
+<div class="bg-white rounded-lg border border-border-subtle p-4">
+<div class="flex items-start gap-4">
+<img alt="User Profile" class="w-10 h-10 rounded-full border border-border-subtle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnQeH85Ys8xDLWyD4Y-FS356EqdjAD8uwuaGkzRT5S-QfJKXFzaV2YDYQ9VcSXm_XRKG5qsvFtTgUcveODQcijSaKWKHoW5Dj17YnHAy7Dbc1M2EtT6GIXFTSDqajkb3RN6JQLw_bAItgBRPd-73-JppoYfoerwi30DJC1sVFASSX-2gBt0DBRmZQ8DcexUBSbPFBi-4L1tDQ1H_tD3ZPvxzC5wVNYwbkAD7krymTgwuQWDdaYUFfsdcsOJAlk156o_STt8YxCS8tz"/>
+<div class="flex-1">
+<button class="w-full text-left text-on-surface-variant text-body-md bg-surface-gray border border-border-subtle rounded-full px-4 py-2 hover:bg-surface-container-low transition-colors">
+                                    Start a post about sustainability...
+                                </button>
+<div class="flex items-center justify-between mt-3 px-2">
+<div class="flex gap-4">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px] text-info-blue">image</span>
+<span class="text-label-sm font-label-sm font-medium">Photo</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px] text-success-dark">article</span>
+<span class="text-label-sm font-label-sm font-medium">Article</span>
+</button>
+</div>
+<button class="bg-gray-900 text-white rounded-lg px-4 py-1.5 text-label-sm font-label-sm hover:bg-gray-800 transition-colors">Post</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Feed Items -->
+<!-- Post 1 -->
+<div class="bg-white rounded-lg border border-border-subtle hover:ambient-shadow transition-shadow duration-200">
+<div class="p-4 border-b border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Elena R." class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdddnbw4fvJO-Jpe141ejt-mzIFUjo62dpGH1Ega0r_F5GLSs3O94WrUDcIb7XbwabI6PWvWrpuqBGYnjyDYpq2eDULjGXjUaewzGbsKr_rW-HBeIAdADqMP9RRFNz1ONDj0ij81Ur_vMYqieVo2g1c0weOtbufUWE193sGHu6weaZw70bqUf3lngtRr3gRu8q5Dz2335srZNY84sP7lEejgQ20IfwqqY5uo2tPhu6tvyeG7ZcAvzYxBsnDyyw_XAz2q77VtsMBTq4"/>
+<div>
+<h3 class="text-label-md font-label-md font-semibold text-on-surface">Elena Rodriguez</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Senior Circular Economy Analyst • 2h</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<div class="p-4">
+<p class="text-body-md font-body-md text-on-surface mb-3">Just published my latest thoughts on implementing circular supply chains in mid-sized manufacturing. The key takeaway? Start with reverse logistics for high-value components. Excited to hear what the community thinks!</p>
+<div class="bg-surface-gray border border-border-subtle rounded-lg p-3 flex items-start gap-4">
+<div class="w-16 h-16 bg-surface-container-low rounded flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-[32px]">description</span>
+</div>
+<div>
+<h4 class="text-label-md font-label-md font-semibold text-primary">A Practical Guide to Reverse Logistics</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Read my latest article on Medium...</p>
+</div>
+</div>
+</div>
+<div class="px-4 py-3 border-t border-border-subtle flex items-center gap-6">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+<span class="text-label-sm font-label-sm">24</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span>
+<span class="text-label-sm font-label-sm">5 Comments</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors ml-auto">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<!-- Post 2 -->
+<div class="bg-white rounded-lg border border-border-subtle hover:ambient-shadow transition-shadow duration-200">
+<div class="p-4 border-b border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="David K." class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdsnOzsO29tzK5fVX0aDrIefQRenB7BYg1V7yWlNGHurh61TM1K4dO9oC59oP_dXMbfcKYjqUeGZi30lj_4mLvoWwVILg9BSwYwObHE4LN73iwRPKasrJcR2OHEmNQD7X13WIddS_ulg9Y_Sq1ozrI-JS-0CFR1sPs4cYkiQviH16x6D7CjqoMomPPyn1tFnTDaz_w70chziPBeeOF8PoY-D_AZvQlmfVrK06inAnPjDly_cbzEKuiISzzVYqJJtZctXjT4HT7bsf7"/>
+<div>
+<h3 class="text-label-md font-label-md font-semibold text-on-surface">David Kim</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Renewable Energy Consultant • 5h</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<div class="p-4">
+<p class="text-body-md font-body-md text-on-surface mb-3">Has anyone here successfully transitioned from Oil & Gas to Renewables without taking a massive pay cut? Looking for strategies on translating my project management experience.</p>
+<div class="inline-flex items-center gap-2 bg-info-light text-info-blue px-2.5 py-1 rounded-full text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">sell</span>
+                                Career Transition
+                            </div>
+</div>
+<div class="px-4 py-3 border-t border-border-subtle flex items-center gap-6">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+<span class="text-label-sm font-label-sm">12</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span>
+<span class="text-label-sm font-label-sm">18 Comments</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Sidebar (Vault/Info) -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Trending Groups -->
+<div class="bg-white rounded-lg border border-border-subtle p-5">
+<h2 class="text-section-header font-section-header text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+                            Trending Groups
+                        </h2>
+<div class="space-y-4">
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-success-light text-success-dark flex items-center justify-center">
+<span class="material-symbols-outlined">recycling</span>
+</div>
+<div>
+<h3 class="text-label-md font-label-md text-on-surface group-hover:text-primary transition-colors cursor-pointer">Circular Economy</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">1,240 members</p>
+</div>
+</div>
+<button class="text-primary text-label-sm font-label-sm font-semibold border border-primary rounded px-3 py-1 hover:bg-surface-container-low transition-colors">Join</button>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-warning-light text-warning-amber flex items-center justify-center">
+<span class="material-symbols-outlined">solar_power</span>
+</div>
+<div>
+<h3 class="text-label-md font-label-md text-on-surface group-hover:text-primary transition-colors cursor-pointer">Renewable Tech</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">892 members</p>
+</div>
+</div>
+<button class="text-primary text-label-sm font-label-sm font-semibold border border-primary rounded px-3 py-1 hover:bg-surface-container-low transition-colors">Join</button>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-info-light text-info-blue flex items-center justify-center">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<h3 class="text-label-md font-label-md text-on-surface group-hover:text-primary transition-colors cursor-pointer">Water Conservation</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">543 members</p>
+</div>
+</div>
+<button class="text-primary text-label-sm font-label-sm font-semibold border border-primary rounded px-3 py-1 hover:bg-surface-container-low transition-colors">Join</button>
+</div>
+</div>
+<button class="w-full mt-4 text-center text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors">View all groups</button>
+</div>
+<!-- Member Directory Snapshot -->
+<div class="bg-white rounded-lg border border-border-subtle p-5">
+<h2 class="text-section-header font-section-header text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">contacts</span>
+                            New Members
+                        </h2>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<img alt="Sarah J." class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUb26EG7j1FPQyHhBAUkV1liH5JUer2nTsZYGVHP2TfsVkHccx2AILmanZemg-ArfE9ASHumFQSIl-rchmMZ8fw0ijgzLv4Ri5ieMcZw3mMns994YsGsr3hH9kBXxm7Q0yXKyJwKWnVOs9zrp2Ks4_G3IAUwRQEzki5_O8oCmSNPviUs5f03t8h-tFWLMJ7NN9VYsQo8DSbIXpouJ0fpomYAD3b_QUFdmMmIc21rpl25og3YkAgrdrjFXphTk0cR3l9JPkH6gT50ru"/>
+<div class="flex-1">
+<h3 class="text-label-md font-label-md text-on-surface">Sarah Jenkins</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">ESG Analyst at GreenCorp</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[20px]">person_add</span></button>
+</div>
+<div class="flex items-center gap-3">
+<img alt="Tom H." class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkh5KnWBJwoh7sAjqh8OW9CWs3ZjZIkfIymXOUXjUza_CWtFqYat8IcGDwYmZo5sBtTB3ghlrheURc7p_ddMRC3oB7NJPWHkKotnwFFJ7zjzeeCvJYTJYSvaZ62e3uBfpbdICPvZoWkKa7iD8VLy7A4Mwd_52lIxmHPrYB8ILTdBXB8L845KlvUhBLs8kkrtNpZW08KnLPOIupVEFZh0MQVVT5N_ez-NcXPL14Zc6DfmDJbdl95RcT5-x9KFTZAUAOQnWTwXHkox9x"/>
+<div class="flex-1">
+<h3 class="text-label-md font-label-md text-on-surface">Tom Higgins</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Sustainability Student</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[20px]">person_add</span></button>
+</div>
+</div>
+</div>
+<!-- Coaching Tip Sticky -->
+<div class="bg-warning-light rounded-lg border-t-4 border-warning-amber p-4 sticky-note-shadow rotate-1">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-warning-amber">lightbulb</span>
+<div>
+<h4 class="text-label-md font-label-md font-bold text-on-surface mb-1">Community Tip</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Engaging in specific groups is the best way to network. Try answering a question in the Renewable Tech group today!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

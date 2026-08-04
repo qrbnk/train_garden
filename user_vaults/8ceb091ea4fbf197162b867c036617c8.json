@@ -1,0 +1,561 @@
+{
+  "user_id": "8ceb091ea4fbf197162b867c036617c8",
+  "email": "12345@test.com",
+  "name": "name",
+  "first_seen": "2026-07-25T19:00:55.591269",
+  "last_seen": "2026-07-25T19:13:54.778012",
+  "sector": "Established company",
+  "experience_years": "",
+  "target_role": "Sustainable technology development",
+  "goals": [
+    "helping the world",
+    "Helping the world",
+    "Making a positive impact on climate change"
+  ],
+  "skills": [
+    "Project delivery and stakeholder management",
+    "Data analysis and interpretation",
+    "Business case development and pitch creation",
+    "Project delivery and management",
+    "Stakeholder management and engagement",
+    "Regulatory literacy and compliance",
+    "sustainable technology development",
+    "Health tech",
+    "Digital transformation strategy",
+    "Human-centric innovation",
+    "Project delivery",
+    "Attention to detail",
+    "Problem-solving"
+  ],
+  "skill_sources": {
+    "Project delivery and stakeholder management": [
+      {
+        "type": "inferred",
+        "detail": "Digital transformation strategist — Sustainability initiatives often require coordinating with multiple stakeholders, including community groups, government agencies, and internal teams, making project delivery and stakeholder management es",
+        "ts": "2026-07-25T19:02:31.347066"
+      }
+    ],
+    "Data analysis and interpretation": [
+      {
+        "type": "inferred",
+        "detail": "Health tech background — Understanding data trends and patterns is crucial in sustainability to measure the effectiveness of initiatives and make informed decisions about resource allocation.",
+        "ts": "2026-07-25T19:02:31.347167"
+      },
+      {
+        "type": "inferred",
+        "detail": "Health tech experience — In sustainability roles, data is often used to measure and track progress towards environmental goals, making data analysis and interpretation essential skills.",
+        "ts": "2026-07-25T19:07:02.353647"
+      },
+      {
+        "type": "inferred",
+        "detail": "Digital Transformation Strategist at a previous sector (not sustainability-related) — In sustainable technology development, data analysis is crucial for informing decision-making on resource allocation, efficiency, and impact. Robert's exp",
+        "ts": "2026-07-25T19:13:54.734514"
+      }
+    ],
+    "Business case development and pitch creation": [
+      {
+        "type": "inferred",
+        "detail": "Commercial growth experience in B2B sales — Developing a compelling business case for sustainability initiatives can help secure funding and support from stakeholders, making commercial acumen essential in this field.",
+        "ts": "2026-07-25T19:02:31.347185"
+      }
+    ],
+    "Project delivery and management": [
+      {
+        "type": "inferred",
+        "detail": "Digital transformation strategy background — Sustainability projects often require effective project planning and execution, including managing stakeholder expectations and timelines, which are key aspects of digital transformation strategy",
+        "ts": "2026-07-25T19:07:02.353685"
+      }
+    ],
+    "Stakeholder management and engagement": [
+      {
+        "type": "inferred",
+        "detail": "Commercial growth experience in B2B sales — In sustainability roles, building relationships with stakeholders such as clients, partners, or community groups is crucial for success, and this experience can be applied to build strong relation",
+        "ts": "2026-07-25T19:07:02.353690"
+      }
+    ],
+    "Regulatory literacy and compliance": [
+      {
+        "type": "inferred",
+        "detail": "Human-centric innovation background — Sustainability roles often require understanding of regulatory frameworks and ensuring compliance, which is a key aspect of human-centric innovation where understanding user needs and regulatory require",
+        "ts": "2026-07-25T19:07:02.353694"
+      }
+    ],
+    "sustainable technology development": [
+      {
+        "type": "chat",
+        "detail": "climate change and new technologies",
+        "ts": "2026-07-25T19:07:38.680852"
+      }
+    ],
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Grounds Maintenance Worker/Consultant at DNR Mistletoe State Park — In sustainable technology development, projects often involve collaboration with multiple stakeholders to achieve environmental goals, and Robert's experience in managing g",
+        "ts": "2026-07-25T19:13:54.734450"
+      }
+    ],
+    "Attention to detail": [
+      {
+        "type": "inferred",
+        "detail": "Janitorial field since years old — In sustainable technology development, attention to detail is crucial for ensuring the successful implementation of sustainable technologies and minimizing environmental impact, a skill Robert has demonstr",
+        "ts": "2026-07-25T19:13:54.734492"
+      }
+    ],
+    "Problem-solving": [
+      {
+        "type": "inferred",
+        "detail": "Carpentry field since years old — In sustainable technology development, problem-solving is essential for addressing complex technical issues related to sustainable technologies, and Robert's experience in carpentry has likely honed his abi",
+        "ts": "2026-07-25T19:13:54.734504"
+      }
+    ]
+  },
+  "cv_summary": "Robert Smith \nGrounds Maintenance Worker/Consultant\nPERSONAL STATEMENT\nHard working, dedicated, and very discipline individual. Working in the \njanitorial and carpentry field since years old. \nWORK EXPERIENCE\nGrounds Maintenance Worker/Consultant\nDNR Mistletoe State Park -   May 2015 – 2019 \nRespons",
+  "messages": [
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "user",
+      "content": "I'm completely new to sustainability",
+      "ts": "2026-07-25T19:03:43.516085"
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "assistant",
+      "content": "Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. What kind of role are you looking for? Any specific job titles, sectors, or type of work on your radar — and what's the \"why\" behind the search?",
+      "ts": "2026-07-25T19:03:48.475755",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not sure yet — help me explore",
+        "Renewable energy / EV roles",
+        "Sustainability / ESG roles"
+      ]
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "user",
+      "content": "I'm not sure yet — help me explore",
+      "ts": "2026-07-25T19:03:55.140802"
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "assistant",
+      "content": "What's your ideal salary range? Knowing your floor and target helps me filter out roles that aren't the right fit.",
+      "ts": "2026-07-25T19:04:06.175159",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Under £30k",
+        "£30k–£50k",
+        "£50k–£70k",
+        "£70k+"
+      ]
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "user",
+      "content": "£30k–£50k",
+      "ts": "2026-07-25T19:04:10.302367"
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "assistant",
+      "content": "Do you need this to be remote, hybrid, or onsite?",
+      "ts": "2026-07-25T19:04:27.169203",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Remote",
+        "Hybrid",
+        "Onsite"
+      ]
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "user",
+      "content": "Onsite",
+      "ts": "2026-07-25T19:04:39.602293"
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-07-25T19:04:39.606998",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "user",
+      "content": "Established company",
+      "ts": "2026-07-25T19:04:41.385462"
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "assistant",
+      "content": "You're still exploring what kind of role in sustainability might be the best fit for you, and that's completely okay! I want to help you find a role that aligns with your skills and interests.\n\nLet's talk about what drew you to sustainability in the first place. Was it something specific about the field that resonated with you, or did you discover your interest through a particular experience or conversation?",
+      "ts": "2026-07-25T19:05:16.977158",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Explore job openings in my area",
+        "List established companies by industry",
+        "Provide average salary ranges for"
+      ]
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "user",
+      "content": "yes i want to help the world",
+      "ts": "2026-07-25T19:05:33.684666"
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "assistant",
+      "content": "I love your enthusiasm to make a positive impact on the world! It's so inspiring to see someone with your skills and background wanting to shift towards sustainability. I've taken note of your ideal salary range, company culture preference, and onsite work requirement.\n\nAs you explore roles in sustainability, I'm curious - what specifically drew you to this field? Was it a particular issue or challenge that you're passionate about addressing, like climate change, sustainable energy, or environmental conservation?\n\n**Please tell me more about what resonates with you in the sustainability space!**",
+      "ts": "2026-07-25T19:06:06.175579",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Show me roles that involve helping",
+        "How do I get started?",
+        "What causes need volunteers locally"
+      ]
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "user",
+      "content": "climate change and new technologies",
+      "ts": "2026-07-25T19:06:32.907261"
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "assistant",
+      "content": "You're drawn to sustainability because of climate change and new technologies - that's a powerful combination! I can see how your background in health tech, digital transformation strategy, and human-centric innovation could be applied to roles like sustainable technology development or environmental policy. \n\nHere are some local organizations near MK16 8JH that might align with your interests:\n\n* The Environmental Association (EA) is a charity based in Milton Keynes that focuses on environmental conservation and sustainability initiatives [www.ea.org.uk](http://www.ea.org.uk).\n* Milton Keynes Council's Sustainability Team works to reduce carbon emissions and improve the city's green spaces, you can find more information about their work and job opportunities on their website [www.milton-keynes.gov.uk/sustainability](http://www.milton-keynes.gov.uk/sustainability).\n\nWhat specific aspects of new technologies interest you in relation to sustainability?",
+      "ts": "2026-07-25T19:07:29.197981",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "What jobs use these skills together?",
+        "Show me relevant job openings",
+        "Research climate jobs in my area"
+      ]
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "user",
+      "content": "ev and solar",
+      "ts": "2026-07-25T19:08:14.709888"
+    },
+    {
+      "uid": "8ceb091ea4fbf197162b867c036617c8",
+      "role": "assistant",
+      "content": "**You're a rockstar for being drawn to EV and solar!** I've taken note that you're interested in making an impact through sustainable technologies. Given your background in health tech, digital transformation strategy, and human-centric innovation, you'd be an amazing asset to companies working on renewable energy solutions.\n\nLet's break down the types of roles that could be a great fit for you:\n\n* Sustainability Consultant: Your expertise in data analysis and interpretation would be valuable in assessing the environmental impact of EVs and solar panels.\n* Project Manager (Sustainable Energy): Your experience with project delivery and stakeholder management would serve you well in leading teams working on large-scale sustainable energy projects.\n\nTo get started, I recommend searching for job openings at established companies near MK16 8JH. You can use the **Search Google for: jobs Established company MK16 8JH** resource to find current listings.",
+      "ts": "2026-07-25T19:09:20.315234",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "2e79bd84-2e0c-4e4d-9048-66d60b46e3a6",
+          "title": "Search Google for: courses Established company MK16 8JH",
+          "url": "https://www.google.com/search?q=courses+Established+company+MK16+8JH",
+          "body": "We couldn't confirm a specific live resource for this yet — here's a search to help you find current options yourself.",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "35dfea72-a7ae-4fad-8669-27b1a0ef68fb",
+          "title": "Search Google for: volunteering Established company MK16 8JH",
+          "url": "https://www.google.com/search?q=volunteering+Established+company+MK16+8JH",
+          "body": "We couldn't confirm a specific live resource for this yet — here's a search to help you find current options yourself.",
+          "type": "volunteering",
+          "type_label": "Volunteering"
+        },
+        {
+          "id": "8b49ae4c-82c8-432d-bed7-5fe565a7be19",
+          "title": "Search Google for: jobs Established company MK16 8JH",
+          "url": "https://www.google.com/search?q=jobs+Established+company+MK16+8JH",
+          "body": "We couldn't confirm a specific live resource for this yet — here's a search to help you find current options yourself.",
+          "type": "jobs",
+          "type_label": "Resource"
+        }
+      ],
+      "suggestions": [
+        "Tell me more",
+        "Help me plan next steps",
+        "Find me relevant jobs"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "eb32c55e-cd13-4e5c-b2bc-d03b737c75b1",
+      "name": "CV Gap Analysis",
+      "path": "/view-skill/analysis-1785003234/report",
+      "type": "cv_analysis",
+      "timestamp": "2026-07-25 19:13",
+      "pinned": false
+    },
+    {
+      "id": "cb7c107b-7023-4a58-86d6-ef1564e3be85",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785002551/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-25 19:02",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "7a47c0bc-e167-493b-8705-2622d1dd79e4",
+      "name": "grounds-maintenance-worker-1575621411 (1).pdf",
+      "type": "cv",
+      "timestamp": "2026-07-25 19:12"
+    },
+    {
+      "id": "de49dca4-4bf9-4f40-b8ff-5f77fbb5ab78",
+      "name": "cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-25 19:02"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JH",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "Sustainable technology development",
+  "values": [],
+  "culture_preference": "Established company",
+  "salary_range": "£30k–£50k",
+  "work_type": "Onsite",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {
+    "Project delivery and stakeholder management": {
+      "status": "in_progress",
+      "updated_at": "2026-07-25T19:04:31.677467",
+      "history": [
+        {
+          "status": "in_progress",
+          "evidence_note": "",
+          "cert_file": "",
+          "at": "2026-07-25T19:04:31.677482"
+        }
+      ]
+    }
+  },
+  "profile_complete": true,
+  "onboarding_done": true,
+  "headline": "Established company",
+  "experience": [
+    {
+      "id": "582be582",
+      "title": "Digital Transformation Strategist",
+      "company": "",
+      "start_date": "",
+      "end_date": "",
+      "description": "",
+      "source": "chat"
+    }
+  ],
+  "how_heard": "Podcast",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [
+    "target_role"
+  ],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Grounds Maintenance Worker/Consultant at DNR Mistletoe State Park",
+      "skill": "Project delivery",
+      "relevance": "In sustainable technology development, projects often involve collaboration with multiple stakeholders to achieve environmental goals, and Robert's experience in managing grounds maintenance teams can be applied to coordinating cross-functional teams on project delivery."
+    },
+    {
+      "source": "Janitorial field since years old",
+      "skill": "Attention to detail",
+      "relevance": "In sustainable technology development, attention to detail is crucial for ensuring the successful implementation of sustainable technologies and minimizing environmental impact, a skill Robert has demonstrated in his janitorial work."
+    },
+    {
+      "source": "Carpentry field since years old",
+      "skill": "Problem-solving",
+      "relevance": "In sustainable technology development, problem-solving is essential for addressing complex technical issues related to sustainable technologies, and Robert's experience in carpentry has likely honed his ability to troubleshoot and solve problems."
+    },
+    {
+      "source": "Digital Transformation Strategist at a previous sector (not sustainability-related)",
+      "skill": "Data analysis and interpretation",
+      "relevance": "In sustainable technology development, data analysis is crucial for informing decision-making on resource allocation, efficiency, and impact. Robert's experience as a Digital Transformation Strategist has likely given him exposure to data-driven decision-making."
+    }
+  ],
+  "journey": {
+    "xp": 10,
+    "level": 1,
+    "current_role": "Established company",
+    "target_role": "Sustainable technology development",
+    "assessed": true,
+    "progress_pct": 10,
+    "skills_gaps": [
+      {
+        "skill": "Data analysis and interpretation",
+        "current_level": 3,
+        "target_level": 5,
+        "gap": 2,
+        "priority": "medium",
+        "status": "open",
+        "why_matters": "Ability to analyze data is crucial for developing effective sustainable technology solutions.",
+        "resources": [
+          {
+            "title": "Data Analysis and Interpretation Course",
+            "url": "https://www.pinterest.com/ideas/data-analysis-and-interpretation-course/960413905875/",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Business case development and pitch creation",
+        "current_level": 0,
+        "target_level": 5,
+        "gap": 5,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Robust business cases are essential for securing investment in sustainable technologies.",
+        "resources": [
+          {
+            "title": "Access to training and accreditation in best practice ...",
+            "url": "https://www.gov.uk/government/publications/the-green-book-training/access-to-training-and-accreditation-in-best-practice-business-cases--2",
+            "type": "courses"
+          },
+          {
+            "title": "iED CPD Online: Business Case development including Green Book",
+            "url": "https://ied.co.uk/events/ied-cpd-online-business-case-development-including-green-book-3/",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Regulatory literacy and compliance",
+        "current_level": 0,
+        "target_level": 5,
+        "gap": 5,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Understanding regulatory requirements is vital for developing sustainable technologies that meet market needs.",
+        "resources": [
+          {
+            "title": "Search Google for: courses Regulatory literacy and compliance MK16 8JH",
+            "url": "https://www.google.com/search?q=courses+Regulatory+literacy+and+compliance+MK16+8JH",
+            "type": "search_fallback"
+          }
+        ]
+      },
+      {
+        "skill": "Project delivery and management",
+        "current_level": 4,
+        "target_level": 5,
+        "gap": 1,
+        "priority": "medium",
+        "status": "open",
+        "why_matters": "Effective project delivery and management are critical for successful sustainable technology development.",
+        "resources": [
+          {
+            "title": "Applied Sustainability Engineering - CourseraSustainable Digital Innovation - CourseraFoundations of Sustainability and ESG - CourseraGreening the Economy: Sustainable Cities - Coursera",
+            "url": "https://www.coursera.org/learn/applied-sustainability-engineering",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Sustainable technology development",
+        "current_level": 0,
+        "target_level": 5,
+        "gap": 5,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Developing sustainable technologies requires a deep understanding of environmental and social impact.",
+        "resources": [
+          {
+            "title": "Applied Sustainability Engineering - CourseraSustainable Digital Innovation - CourseraFoundations of Sustainability and ESG - CourseraGreening the Economy: Sustainable Cities - Coursera",
+            "url": "https://www.coursera.org/learn/applied-sustainability-engineering",
+            "type": "courses"
+          },
+          {
+            "title": "Best Sustainable Development Courses & Certificates [2026 ...",
+            "url": "https://www.coursera.org/courses?query=sustainable+development",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Digital transformation strategy",
+        "current_level": 0,
+        "target_level": 5,
+        "gap": 5,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Developing digital transformation strategies is crucial for integrating sustainable technologies into existing business models.",
+        "resources": [
+          {
+            "title": "Digital Transformation Strategy Training Course by... - Issuu",
+            "url": "https://issuu.com/lpctraininguk/docs/digital_transformation_strategy",
+            "type": "courses"
+          },
+          {
+            "title": "Applied Sustainability Engineering - CourseraSustainable Digital Innovation - CourseraFoundations of Sustainability and ESG - CourseraGreening the Economy: Sustainable Cities - Coursera",
+            "url": "https://www.coursera.org/learn/applied-sustainability-engineering",
+            "type": "courses"
+          }
+        ]
+      }
+    ],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-25",
+    "last_checkin_date": "",
+    "summary": "Robert Smith, a dedicated and hardworking individual with experience in grounds maintenance and consulting, seeks to transition into a role focused on developing sustainable technology solutions. To achieve this goal, he needs to develop skills in data analysis, business case development, regulatory literacy, project delivery, and digital transformation strategy.",
+    "estimated_months": 12
+  },
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "neutral",
+        "ts": "2026-07-25T19:05:26.149033"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-25T19:07:38.638916"
+      }
+    ],
+    "blockers": [],
+    "preferred_tone": "motivational",
+    "response_depth": "balanced",
+    "milestones_mentioned": [],
+    "total_exchanges": 2,
+    "encouragement_count": 1,
+    "key_insights": [
+      "The user is still exploring roles in sustainability and needs help finding a role that aligns with their skills and interests.",
+      "The user is drawn to sustainability and new technologies, suggesting a desire for impactful career change."
+    ],
+    "current_emotion": "excited"
+  }
+}

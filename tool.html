@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Train Garden | Skills Analysis (Demo)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.21/mammoth.browser.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { "primary": "#091747", "emerald-700": "#047857" } } } }
+    </script>
+    <style>
+        .evidence-highlight { background-color: #dcfce7; font-weight: 700; padding: 0 2px; border-radius: 2px; }
+        .demo-badge { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .7; } }
+        .chat-fade { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-[#f8fafc] font-['Inter'] text-slate-900 pt-20">
+    
+    <nav class="fixed top-0 w-full bg-white border-b border-slate-200 z-[60]">
+        <div class="flex justify-between items-center px-6 h-16 max-w-[1600px] mx-auto">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="flex items-center">
+                    <img alt="Train Garden Logo" class="h-6 md:h-7 w-auto" src="logo.png"/>
+                </a>
+                <div class="hidden sm:flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
+                    <span class="w-2 h-2 bg-amber-500 rounded-full demo-badge"></span>
+                    <span class="text-[10px] font-black text-amber-700 uppercase tracking-tight">Technical Demo v1.2</span>
+                </div>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-bold items-center pt-1">
+                <a href="index.html" class="text-emerald-700 border-b-2 border-emerald-700 pb-1.5">Engine</a>
+                <a href="resources_page.html" class="text-slate-500 hover:text-primary transition-colors pb-1.5">Resources Hub</a>
+                <button onclick="showDemoInfo()" class="bg-slate-100 text-slate-500 hover:bg-primary hover:text-white p-2 rounded-lg transition-all">
+                    <span class="material-symbols-outlined text-sm">info</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10 pb-20">
+        <div class="lg:col-span-2 space-y-8">
+            <header>
+                <h1 class="text-4xl font-black text-primary tracking-tight">Skills <span class="text-emerald-700">Analysis</span></h1>
+                <p class="text-slate-500 mt-2">Identify the most profitable green career transition based on your specific experience.</p>
+            </header>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-2">
+                    <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Role Comparison A</label>
+                    <select id="role-select-1" class="w-full p-4 rounded-xl border-slate-200 bg-white shadow-sm text-sm font-semibold outline-none focus:ring-2 focus:ring-emerald-500">
+                        <option value="energy-adviser">Trainee Energy Adviser (Entry)</option>
+                        <option value="env-tech">Environmental Technician (Entry)</option>
+                        <option value="sustainability-manager">Sustainability Manager</option>
+                        <option value="retrofit-coord">Retrofit Coordinator</option>
+                        <option value="landscaping" selected>Sustainable Landscaping</option>
+                        <option value="circular-economy">Circular Economy Strategist</option>
+                    </select>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Role Comparison B</label>
+                    <select id="role-select-2" class="w-full p-4 rounded-xl border-slate-200 bg-white shadow-sm text-sm font-semibold outline-none focus:ring-2 focus:ring-emerald-500">
+                        <option value="energy-adviser" selected>Trainee Energy Adviser (Entry)</option>
+                        <option value="env-tech">Environmental Technician (Entry)</option>
+                        <option value="sustainability-manager">Sustainability Manager</option>
+                        <option value="retrofit-coord">Retrofit Coordinator</option>
+                        <option value="landscaping">Sustainable Landscaping</option>
+                        <option value="circular-economy">Circular Economy Strategist</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="drop-zone" class="bg-white rounded-2xl p-10 border-2 border-dashed border-slate-200 text-center cursor-pointer hover:border-emerald-500 hover:bg-emerald-50/30 transition-all group">
+                <input type="file" id="file-input" class="hidden" accept=".pdf,.docx"/>
+                <div id="upload-idle">
+                    <span class="material-symbols-outlined text-slate-300 text-5xl mb-2">upload_file</span>
+                    <h3 class="text-lg font-bold text-slate-700">Upload CV</h3>
+                    <p class="text-xs text-slate-400">PDF or Word</p>
+                </div>
+                <div id="upload-success" class="hidden text-emerald-700 font-bold">
+                    <span class="material-symbols-outlined text-4xl mb-2">verified</span>
+                    <p id="file-name" class="text-md"></p>
+                </div>
+            </div>
+
+            <button id="analyze-btn" class="w-full bg-primary text-white py-5 rounded-2xl font-black text-lg hover:bg-emerald-800 shadow-xl transition-all">
+                Run Skills Analysis
+            </button>
+        </div>
+
+        <aside class="space-y-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="bg-emerald-700 p-4 text-white">
+                    <h3 class="font-bold text-sm flex items-center gap-2 uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-lg">psychology</span>
+                        Career Diagnostic
+                    </h3>
+                </div>
+                <div id="bot-container" class="p-5 min-h-[300px] flex flex-col chat-fade">
+                    <p id="bot-question" class="text-sm font-bold text-slate-700 mb-4 leading-tight">Loading Diagnostic...</p>
+                    <div id="bot-options" class="flex flex-col gap-2"></div>
+                    
+                    <div id="bot-email-capture" class="hidden mt-2">
+                        <div class="bg-slate-50 p-4 rounded-xl mb-4 border border-slate-100">
+                            <p class="text-[10px] uppercase font-black text-slate-400 mb-1">Your Diagnostic Match:</p>
+                            <p id="match-display" class="text-sm font-bold text-emerald-700 uppercase"></p>
+                        </div>
+                        <input type="email" id="bot-user-email" placeholder="Your Email Address" class="w-full p-3 border border-slate-200 rounded-xl text-sm mb-2 outline-none focus:ring-2 focus:ring-emerald-500">
+                        <input type="phone_number" id="bot-user-phone" placeholder="Your Phone Number" class="w-full p-3 border border-slate-200 rounded-xl text-sm mb-2 outline-none focus:ring-2 focus:ring-emerald-500">
+                        <input type="name" id="bot-user-name" placeholder="Your Name" class="w-full p-3 border border-slate-200 rounded-xl text-sm mb-2 outline-none focus:ring-2 focus:ring-emerald-500">
+
+
+                        <button onclick="submitBotToFormspree()" class="w-full py-3 bg-emerald-700 text-white font-bold rounded-xl text-sm hover:bg-emerald-800">Send My Full Report</button>
+                    </div>
+                </div>
+                <div class="p-3 bg-slate-50 border-t border-slate-100 text-center">
+                    <button onclick="initBot()" class="text-[10px] font-bold text-slate-400 hover:text-emerald-600 uppercase tracking-widest">Restart Analysis</button>
+                </div>
+            </div>
+
+            <form id="hidden-bot-form" action="https://formspree.io/f/xdaplang" method="POST" class="hidden">
+                <input type="hidden" name="Strength" id="h-strength">
+                <input type="hidden" name="Environment" id="h-env">
+                <input type="hidden" name="Work_Style" id="h-style">
+                <input type="hidden" name="Background" id="h-back">
+                <input type="hidden" name="Final_Match" id="h-role">
+                <input type="hidden" name="email" id="h-email">
+            </form>
+            <h2 class="font-black text-slate-400 uppercase text-[10px] tracking-[0.2em]">Live Comparisons</h2>
+            <div id="results-area" class="space-y-4">
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 text-center opacity-50">
+                    <p class="text-slate-400 text-sm">Comparison results will appear here after analysis.</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script>
+        // COMPREHENSIVE DIAGNOSTIC LOGIC
+        let quizState = { strength: "", env: "", style: "", back: "", role: "" };
+        
+        const quizSteps = {
+            "start": {
+                q: "1. What is your core professional strength?",
+                opt: [
+                    { t: "Strategy & Planning", n: "q2", f: "strength" },
+                    { t: "Technical Troubleshooting", n: "q2", f: "strength" },
+                    { t: "People & Communication", n: "q2", f: "strength" },
+                    { t: "Physical / Craftsmanship", n: "q2", f: "strength" },
+                    { t: "Not Sure", n: "q2", f: "strength" }
+                ]
+            },
+            "q2": {
+                q: "2. How do you prefer to spend your workday?",
+                opt: [
+                    { t: "Solo Focus / Research", n: "q3", f: "style" },
+                    { t: "Active Collaboration", n: "q3", f: "style" },
+                    { t: "Managing Projects", n: "q3", f: "style" },
+                    { t: "On-site Operations", n: "q3", f: "style" }
+                ]
+            },
+            "q3": {
+                q: "3. What is your ideal work environment?",
+                opt: [
+                    { t: "Corporate / Office", n: "q4", f: "env" },
+                    { t: "Outdoor / Field", n: "q4", f: "env" },
+                    { t: "Hybrid / Flexible", n: "q4", f: "env" },
+                    { t: "Not Sure", n: "q4", f: "env" }
+                ]
+            },
+            "q4": {
+                q: "4. What is your current career background?",
+                opt: [
+                    { t: "Entry Level / Junior", n: "final", f: "back" },
+                    { t: "Experienced Professional", n: "final", f: "back" },
+                    { t: "Career Changer", n: "final", f: "back" },
+                    { t: "Student", n: "final", f: "back" }
+                ]
+            },
+            "final": {
+                q: "Diagnostic Complete! We've identified your ideal green pathway.",
+                opt: []
+            }
+        };
+
+        function calculateRole() {
+            const s = quizState.strength;
+            const e = quizState.env;
+            const st = quizState.style;
+
+            // Simple scoring logic
+            if (s === "Physical / Craftsmanship" || e === "Outdoor / Field") return "Retrofit & Renewables Installer";
+            if (s === "Strategy & Planning" && st === "Managing Projects") return "Sustainability Project Manager";
+            if (s === "Technical Troubleshooting" && e.includes("Office")) return "Energy Systems Analyst";
+            if (s === "People & Communication") return "Green Community Liaison";
+            if (s === "Strategy & Planning" && e.includes("Office")) return "Circular Economy Strategist";
+            
+            return "Green Career Specialist";
+        }
+
+        function renderQuiz(id) {
+            const step = quizSteps[id];
+            const qEl = document.getElementById('bot-question');
+            const oEl = document.getElementById('bot-options');
+            const eEl = document.getElementById('bot-email-capture');
+
+            oEl.innerHTML = "";
+            eEl.classList.add('hidden');
+            qEl.innerText = step.q;
+
+            if (id === 'final') {
+                quizState.role = calculateRole();
+                document.getElementById('match-display').innerText = quizState.role;
+                eEl.classList.remove('hidden');
+            } else {
+                step.opt.forEach(o => {
+                    const b = document.createElement('button');
+                    b.innerText = o.t;
+                    b.className = "w-full text-left p-3 border border-slate-100 rounded-xl text-xs font-bold hover:bg-emerald-50 hover:border-emerald-500 transition-all text-slate-600";
+                    b.onclick = () => {
+                        if(o.f) quizState[o.f] = o.t;
+                        renderQuiz(o.n);
+                    };
+                    oEl.appendChild(b);
+                });
+            }
+        }
+
+        function submitBotToFormspree() {
+            const email = document.getElementById('bot-user-email').value;
+            if(!email || !email.includes('@')) return alert("Enter a valid email.");
+            
+            document.getElementById('h-strength').value = quizState.strength;
+            document.getElementById('h-env').value = quizState.env;
+            document.getElementById('h-style').value = quizState.style;
+            document.getElementById('h-back').value = quizState.back;
+            document.getElementById('h-role').value = quizState.role;
+            document.getElementById('h-email').value = email;
+            
+            fetch(document.getElementById('hidden-bot-form').action, {
+                method: 'POST',
+                body: new FormData(document.getElementById('hidden-bot-form')),
+                headers: { 'Accept': 'application/json' }
+            }).then(() => {
+                document.getElementById('bot-container').innerHTML = `
+                    <div class="text-center py-10 chat-fade">
+                        <span class="material-symbols-outlined text-emerald-500 text-5xl">task_alt</span>
+                        <p class="font-bold text-slate-800 mt-2 uppercase tracking-widest text-xs">Diagnostic Sent</p>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Check your email. Thomas will send your custom transition roadmap shortly.</p>
+                    </div>
+                `;
+            });
+        }
+
+        function initBot() {
+            quizState = { strength: "", env: "", style: "", back: "", role: "" };
+            renderQuiz('start');
+        }
+
+        // --- ENGINE SCRIPTS RETAINED ---
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+        let extractedText = "";
+        const demoData = {
+            "energy-adviser": { role: "Trainee Energy Adviser", salary: "£24k-30k", skills: ["customer service", "energy bills", "communication"] },
+            "env-tech": { role: "Environmental Technician", salary: "£26k-34k", skills: ["fieldwork", "data collection", "safety"] },
+            "sustainability-manager": { role: "Sustainability Manager", salary: "£45k-65k", skills: ["esg", "strategy", "stakeholder"] },
+            "retrofit-coord": { role: "Retrofit Coordinator", salary: "£42k-58k", skills: ["pas 2035", "project management"] },
+            "landscaping": { role: "Sustainable Landscaping", salary: "£28k-38k", skills: ["planting", "soil", "irrigation"] },
+            "circular-economy": { role: "Circular Economy Strategist", salary: "£50k-80k", skills: ["lifecycle", "supply chain"] }
+        };
+        document.getElementById('drop-zone').onclick = () => document.getElementById('file-input').click();
+        document.getElementById('file-input').onchange = async (e) => {
+            const file = e.target.files[0]; if (!file) return;
+            document.getElementById('file-name').innerText = file.name;
+            document.getElementById('upload-idle').classList.add('hidden');
+            document.getElementById('upload-success').classList.remove('hidden');
+            extractedText = file.type === "application/pdf" ? await (async (f) => {
+                const pdf = await pdfjsLib.getDocument(await f.arrayBuffer()).promise;
+                let t = ""; for(let i=1; i<=pdf.numPages; i++) { t += (await (await pdf.getPage(i)).getTextContent()).items.map(s=>s.str).join(" "); }
+                return t.toLowerCase();
+            })(file) : (await mammoth.extractRawText({arrayBuffer: await file.arrayBuffer()})).value.toLowerCase();
+        };
+        document.getElementById('analyze-btn').onclick = () => {
+            if(!extractedText) return alert("Upload CV first.");
+            const r1 = document.getElementById('role-select-1').value;
+            const r2 = document.getElementById('role-select-2').value;
+            document.getElementById('results-area').innerHTML = "";
+            [r1, r2].forEach(rk => {
+                const d = demoData[rk];
+                const gaps = d.skills.filter(s => !extractedText.includes(s));
+                const score = Math.round(((d.skills.length - gaps.length) / d.skills.length) * 100);
+                document.getElementById('results-area').innerHTML += `<div class="bg-white p-4 rounded-xl border-l-4 ${score > 50 ? 'border-l-emerald-500' : 'border-l-rose-400'} shadow-sm mb-4"><div class="flex justify-between font-bold text-xs"><span>${d.role}</span><span>${score}%</span></div></div>`;
+            });
+        };
+        document.addEventListener('DOMContentLoaded', initBot);
+    </script>
+</body>
+</html>

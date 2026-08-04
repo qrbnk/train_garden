@@ -1,0 +1,133 @@
+{
+  "user_id": "065db17e7d2ca11ceb25812dcee6e3ed",
+  "email": "39admin@test.com",
+  "name": "steven",
+  "first_seen": "2026-07-22T12:39:26.533222",
+  "last_seen": "2026-07-22T12:53:09.248533",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [],
+  "cv_summary": "",
+  "messages": [
+    {
+      "uid": "065db17e7d2ca11ceb25812dcee6e3ed",
+      "role": "user",
+      "content": "I'm completely new to sustainability",
+      "ts": "2026-07-22T12:43:25.082804"
+    },
+    {
+      "uid": "065db17e7d2ca11ceb25812dcee6e3ed",
+      "role": "assistant",
+      "content": "Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. What kind of role are you looking for? Any specific job titles, sectors, or type of work on your radar — and what's the \"why\" behind the search?",
+      "ts": "2026-07-22T12:43:29.101500",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not sure yet — help me explore",
+        "Renewable energy / EV roles",
+        "Sustainability / ESG roles"
+      ]
+    },
+    {
+      "uid": "065db17e7d2ca11ceb25812dcee6e3ed",
+      "role": "user",
+      "content": "I'm not sure yet — help me explore",
+      "ts": "2026-07-22T12:43:42.963520"
+    },
+    {
+      "uid": "065db17e7d2ca11ceb25812dcee6e3ed",
+      "role": "assistant",
+      "content": "No problem — often the best way to figure out the \"what\" is to look at the \"where from\". Do you have a CV you can drop in (using the '+' button), or would you rather just tell me what you've been doing for the last few years?",
+      "ts": "2026-07-22T12:43:54.542664",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Upload my CV",
+        "I'll describe it instead"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "a4fec69c-c767-4502-a2a4-02f6a2d5fce7",
+      "name": "CV Gap Analysis",
+      "path": "/view-skill/analysis-1784720451/report",
+      "type": "cv_analysis",
+      "timestamp": "2026-07-22 12:40",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "15ce2c85-81c4-4ee3-88ad-11f983260771",
+      "name": "null_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-22 12:40"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JJ",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": true,
+  "headline": "New to Sustainability",
+  "experience": [],
+  "how_heard": "Other",
+  "onboarding_seen": true,
+  "intake_asked": [
+    "target_role",
+    "background"
+  ],
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "neutral",
+        "ts": "2026-07-22T12:43:39.227250"
+      }
+    ],
+    "blockers": [
+      "completely new to sustainability, possibly uncertain about what they're looking for"
+    ],
+    "preferred_tone": "warm",
+    "response_depth": "balanced",
+    "milestones_mentioned": [],
+    "total_exchanges": 1,
+    "encouragement_count": 0,
+    "key_insights": [
+      "User is inexperienced in sustainability and wants specific job-related resources but hasn't identified a target role yet."
+    ],
+    "current_emotion": "neutral"
+  },
+  "journey": {
+    "xp": 0,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-22",
+    "last_checkin_date": ""
+  }
+}

@@ -1,0 +1,57 @@
+
+    <html>
+    <head>
+        <style>
+            body { font-family: 'Inter', sans-serif; padding: 40px; color: #1e293b; background: #fff; line-height: 1.7; }
+            h1 { color: #091747; font-size: 24px; margin-bottom: 25px; }
+            .day-card { 
+                background: #f8fafc; border: 1px solid #e2e8f0; padding: 25px; 
+                border-radius: 20px; margin-bottom: 20px; list-style: none;
+                transition: transform 0.2s;
+            }
+            .day-card:hover { transform: translateY(-3px); border-color: #091747; }
+            .tag { 
+                font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 6px; 
+                text-transform: uppercase; margin-right: 10px; display: inline-block;
+                margin-bottom: 10px;
+            }
+            .tag-learn { background: #dbeafe; color: #1e40af; }
+            .tag-read { background: #fef3c7; color: #92400e; }
+            .tag-apply { background: #dcfce7; color: #166534; }
+        </style>
+    </head>
+    <body>
+        <h1>🚀 Career Accelerator: Create A 5-Day</h1>
+        <div id="roadmap-container"><p><strong>Day 1:</strong>
+- LEARN: Research about the importance of environmental conservation in urban areas, focusing on London. Refer to resources like ZSL's London Wildlife Trust (https://www.wildlondon.org.uk/) or Thames21 (https://thames21.org.uk/).
+- READ: Read the latest news and updates from City of London Corporation's Volunteering Opportunities (https://www.cityoflondon.gov.uk/things-to-do/explore-volunteering-at-the-city-of-london-corporation/volunteering-opportunities).
+- APPLY: Sign up for a river clean-up event with ZSL's London Rivers Volunteer Programme (https://www.zsl.org/what-we-do/projects/volunteer-londons-rivers).</p>
+<p><strong>Day 2:</strong>
+- LEARN: Study about sustainable practices in urban environments, focusing on London's initiatives and strategies. Refer to resources like UCL Students' Union Sustainability Volunteering (https://studentsunionucl.org/volunteering/directory/category/sustainability).
+- READ: Read articles from Environmental Volunteering (https://environmentjob.co.uk/volunteering) to stay updated on environmental issues in London and potential volunteering opportunities.
+- APPLY: Join the TCV in London's project focused on connecting people with green spaces. Register through their website (https://www.tcv.org.uk/london/).</p>
+<p><strong>Day 3:</strong>
+- LEARN: Learn about the role of parks and green spaces in urban health and wellbeing, focusing on Parks for London initiatives. Refer to resources like Parks for London Volunteering (https://parksforlondon.org.uk/opportunities/volunteering/).
+- READ: Read about Parks for London's latest projects and news to stay informed about their work in the city.
+- APPLY: Sign up for a volunteering event within one of London's parks through Parks for London's volunteering opportunities.</p>
+<p><strong>Day 4:</strong>
+- LEARN: Study about wildlife conservation efforts in urban environments, focusing on London's unique species and habitats. Refer to resources like the City of London's Wildlife Conservation (https://www.cityoflondon.gov.uk/things-to-do/explore-the-city/wildlife).
+- READ: Read news articles and reports from organizations like the Royal Society for the Protection of Birds (RSPB) or London Wildlife Trust to stay updated on conservation efforts in London.
+- APPLY: Volunteer for a wildlife survey event with one of these organizations to contribute to their data collection efforts.</p>
+<p><strong>Day 5:</strong>
+- LEARN: Study about recycling and waste management practices in London, focusing on community initiatives and best practices. Refer to resources like the London Waste and Recycling Board (https://www.londonwaste.gov.uk/).
+- READ: Read news articles and reports from organizations focused on waste management in London to stay updated on best practices and potential volunteering opportunities.
+- APPLY: Sign up for a recycling event or a community clean-up focusing on waste management with an organization like Clean Up London (https://www.cleanuplondon.org/).</p></div>
+        <script>
+            document.querySelectorAll('li').forEach(item => {
+                item.classList.add('day-card');
+                let content = item.innerHTML;
+                if(content.includes('LEARN')) content = '<span class="tag tag-learn">Course</span>' + content;
+                if(content.includes('READ')) content = '<span class="tag tag-read">Insight</span>' + content;
+                if(content.includes('APPLY')) content = '<span class="tag tag-apply">Action</span>' + content;
+                item.innerHTML = content;
+            });
+        </script>
+    </body>
+    </html>
+    

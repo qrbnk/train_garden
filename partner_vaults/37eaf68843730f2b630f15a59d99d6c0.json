@@ -1,0 +1,99 @@
+{
+  "partner_id": "37eaf68843730f2b630f15a59d99d6c0",
+  "email": "partner@gmail.com",
+  "account_type": "partner",
+  "first_seen": "2026-07-28T14:27:55.541217",
+  "last_seen": "2026-07-28T14:39:34.935802",
+  "profile": {
+    "org_name": "partner1",
+    "org_type": "community_org",
+    "cause_areas": [
+      "net zero"
+    ],
+    "website": "",
+    "hq_location": "Milton Keynes",
+    "description": "Partner1 offers immersive learning experiences through hands-on volunteering and project-based training, connecting candidates with like-minded individuals and real-world social impact initiatives.",
+    "onboarding_done": true
+  },
+  "team_members": [],
+  "documents": [],
+  "resources": [
+    {
+      "id": "419a44a3-09fa-4799-a478-2cc2ccdd204a",
+      "title": "community event",
+      "resource_type": "event",
+      "description": "net zero",
+      "skills": [
+        "net zero",
+        "sustainability"
+      ],
+      "location": "milton keynes",
+      "remote_policy": "in-person",
+      "duration": "1 day",
+      "capacity": "20 spots",
+      "status": "active",
+      "created_at": "2026-07-28T14:30:00.802246"
+    }
+  ],
+  "connections": [
+    {
+      "candidate_id": "9aeff2f41885fb6b3c82354a3f709c62",
+      "resource_id": "419a44a3-09fa-4799-a478-2cc2ccdd204a",
+      "match_pct": 19,
+      "match_reasons": [
+        "General profile similarity — no specific skill matched yet"
+      ],
+      "status": "reviewed",
+      "connected_at": "2026-07-28T14:39:34.934893"
+    }
+  ],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "464f2ce5-3af6-4e3e-815b-e2e39a4156d9",
+      "text": "Connected a candidate to community event",
+      "type": "connection",
+      "ts": "2026-07-28T14:39:34.935795"
+    },
+    {
+      "id": "6f327f73-c1c3-4753-8afb-e4c82ade5651",
+      "text": "Added skill: net zero",
+      "type": "skill",
+      "ts": "2026-07-28T14:30:28.365943"
+    },
+    {
+      "id": "708b4382-f80a-43aa-99aa-964f2cffc572",
+      "text": "Generated 2 proposed matches for community event",
+      "type": "matching",
+      "ts": "2026-07-28T14:30:12.778203"
+    },
+    {
+      "id": "20d7fa71-f773-4e01-9a5c-9bde901c7265",
+      "text": "Added resource: community event",
+      "type": "resource",
+      "ts": "2026-07-28T14:30:00.803029"
+    },
+    {
+      "id": "66d46472-c8a4-4545-9609-835590c699fe",
+      "text": "Updated organisation profile",
+      "type": "onboarding",
+      "ts": "2026-07-28T14:29:09.361170"
+    },
+    {
+      "id": "c534b9bb-a7c5-46d3-8c98-db63dcbda231",
+      "text": "Updated organisation profile",
+      "type": "onboarding",
+      "ts": "2026-07-28T14:28:31.850862"
+    }
+  ],
+  "skills": [
+    {
+      "id": "432a1e3c-f979-4270-beb6-4173a56daa55",
+      "name": "net zero",
+      "category": "",
+      "notes": "",
+      "source": "manual",
+      "added_at": "2026-07-28T14:30:28.365249"
+    }
+  ]
+}

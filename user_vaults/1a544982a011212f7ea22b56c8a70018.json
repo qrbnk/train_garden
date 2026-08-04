@@ -1,0 +1,119 @@
+{
+  "user_id": "1a544982a011212f7ea22b56c8a70018",
+  "email": "brandon21@test.com",
+  "name": "brandon",
+  "first_seen": "2026-07-31T14:39:51.854392",
+  "last_seen": "2026-07-31T14:58:34.966923",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Project delivery",
+    "Regulatory literacy",
+    "Data analysis and interpretation",
+    "Physical stamina and adaptability"
+  ],
+  "skill_sources": {
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Installation, maintenance, and optimization of complex systems — This experience demonstrates the ability to plan, coordinate, and execute projects from start to finish, a critical skill for delivering sustainability initiatives.",
+        "ts": "2026-07-31T14:58:14.946827"
+      }
+    ],
+    "Regulatory literacy": [
+      {
+        "type": "inferred",
+        "detail": "Working with photovoltaic systems requires technical knowledge of electrical engineering principles — Familiarity with electrical safety codes and regulations can be applied to understanding environmental regulations and laws related to sus",
+        "ts": "2026-07-31T14:58:14.946899"
+      }
+    ],
+    "Data analysis and interpretation": [
+      {
+        "type": "inferred",
+        "detail": "Enhancing energy production through system optimization — This experience requires analyzing data on system performance, identifying areas for improvement, and implementing changes, all of which are essential skills for sustainability roles",
+        "ts": "2026-07-31T14:58:14.946908"
+      }
+    ],
+    "Physical stamina and adaptability": [
+      {
+        "type": "inferred",
+        "detail": "Able to work at heights, in cramped spaces, and with heavy equipment — Sustainability professionals often need to work outdoors or in challenging environments, so having experience working in physically demanding conditions is an asset.",
+        "ts": "2026-07-31T14:58:14.946914"
+      }
+    ]
+  },
+  "cv_summary": "\n\n\n\nETHANMARTINEZ\nSolar Technician\nsupport@qwikresume.com\n(123) 456 7899\nLos Angeles\nwww.qwikresume.com\nPROFESSIONAL SUMMARY\nSolar Technician with a decade of comprehensive experience in the \ninstallation, maintenance, and optimization of photovoltaic systems. \nAdept at enhancing energy producti",
+  "messages": [],
+  "reports": [
+    {
+      "id": "40a920d8-de1e-4e74-a1a8-e47c555a1bcd",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785506295/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-31 14:58",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "e16c4523-c5cb-479e-85d4-5532d1205159",
+      "name": "solar-technician-1591336684.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-31 14:57"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "Hackney",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "",
+  "experience": [],
+  "how_heard": "Event",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Installation, maintenance, and optimization of complex systems",
+      "skill": "Project delivery",
+      "relevance": "This experience demonstrates the ability to plan, coordinate, and execute projects from start to finish, a critical skill for delivering sustainability initiatives."
+    },
+    {
+      "source": "Working with photovoltaic systems requires technical knowledge of electrical engineering principles",
+      "skill": "Regulatory literacy",
+      "relevance": "Familiarity with electrical safety codes and regulations can be applied to understanding environmental regulations and laws related to sustainability projects."
+    },
+    {
+      "source": "Enhancing energy production through system optimization",
+      "skill": "Data analysis and interpretation",
+      "relevance": "This experience requires analyzing data on system performance, identifying areas for improvement, and implementing changes, all of which are essential skills for sustainability roles that involve monitoring and optimizing environmental impact."
+    },
+    {
+      "source": "Able to work at heights, in cramped spaces, and with heavy equipment",
+      "skill": "Physical stamina and adaptability",
+      "relevance": "Sustainability professionals often need to work outdoors or in challenging environments, so having experience working in physically demanding conditions is an asset."
+    }
+  ]
+}

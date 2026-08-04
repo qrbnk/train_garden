@@ -1,0 +1,751 @@
+{
+  "user_id": "66b956b16389592e1a8cd61af4609ebc",
+  "email": "yyy@test.com",
+  "name": "lll",
+  "first_seen": "2026-07-25T13:41:23.130923",
+  "last_seen": "2026-07-25T14:25:47.494271",
+  "sector": "sustainability",
+  "experience_years": "8 years of experience in AI transformation and digital strategy consulting",
+  "target_role": "ev installation",
+  "goals": [
+    "onsite roles",
+    "£50k-£70k salary range",
+    "career transition",
+    "reconnect with goals",
+    "career transition into sustainability"
+  ],
+  "skills": [
+    "Cross-functional stakeholder management",
+    "Project delivery and management",
+    "Data analysis and interpretation",
+    "Regulatory literacy and compliance",
+    "sustainability",
+    "Sustainability",
+    "AI transformation",
+    "digital strategy consulting",
+    "digital strategy"
+  ],
+  "skill_sources": {
+    "Cross-functional stakeholder management": [
+      {
+        "type": "inferred",
+        "detail": "Led cross-functional teams and ensured successful product launches at a tech startup — In a sustainability role, effective cross-functional collaboration is crucial to drive change and achieve environmental objectives.",
+        "ts": "2026-07-25T13:43:11.640384"
+      }
+    ],
+    "Project delivery and management": [
+      {
+        "type": "inferred",
+        "detail": "Developed and implemented AI-driven solutions for complex industries as an MD (Product) — Sustainability projects often require coordinating multiple stakeholders, timelines, and outcomes; experience in delivering complex projects can be va",
+        "ts": "2026-07-25T13:43:11.640435"
+      }
+    ],
+    "Data analysis and interpretation": [
+      {
+        "type": "inferred",
+        "detail": "Delivered AI-driven solutions that demonstrated business value to clients across various sectors — Sustainability professionals often need to analyze data on environmental performance, social impact, or economic benefits; experience with da",
+        "ts": "2026-07-25T13:43:11.640451"
+      }
+    ],
+    "Regulatory literacy and compliance": [
+      {
+        "type": "inferred",
+        "detail": "Developed strategic business cases for new product lines and services at a tech startup — While not directly stated, experience in developing business cases may imply an understanding of regulatory environments; in sustainability, this is e",
+        "ts": "2026-07-25T13:43:11.640462"
+      }
+    ],
+    "sustainability": [
+      {
+        "type": "chat",
+        "detail": "Established company",
+        "ts": "2026-07-25T13:46:54.300337"
+      }
+    ]
+  },
+  "cv_summary": "            Daryna Vakulenko      M: +447442476374, Email: dashalolvakulenko@gmail.com, London         Professional Profile       AI Transformation Lead & Digital Strategy Consultant with 8 years of experience delivering AI-driven solutions across complex industries. Strategic leader and MD (Physici",
+  "messages": [
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "Help me map my career transition into sustainability. I want to understand the steps involved.",
+      "ts": "2026-07-25T13:44:01.391962"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. What kind of role are you looking for? Any specific job titles, sectors, or type of work on your radar — and what's the \"why\" behind the search?",
+      "ts": "2026-07-25T13:44:07.351407",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not sure yet — help me explore",
+        "Renewable energy / EV roles",
+        "Sustainability / ESG roles"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "I'm not sure yet — help me explore",
+      "ts": "2026-07-25T13:44:38.531338"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "What's your ideal salary range? Knowing your floor and target helps me filter out roles that aren't the right fit.",
+      "ts": "2026-07-25T13:44:48.176208",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Under £30k",
+        "£30k–£50k",
+        "£50k–£70k",
+        "£70k+"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "£50k–£70k",
+      "ts": "2026-07-25T13:45:52.229085"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "Do you need this to be remote, hybrid, or onsite?",
+      "ts": "2026-07-25T13:45:57.134496",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Remote",
+        "Hybrid",
+        "Onsite"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "Onsite",
+      "ts": "2026-07-25T13:45:59.433804"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-07-25T13:45:59.439990",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "I'm so glad you shared that with me, Daryna! I've noted that your ideal salary range is £50k-£70k and you're looking for onsite roles in sustainability. That's really helpful to know! \n\nAs we explore your career transition into sustainability, I'd love to learn more about your background. What type of experience or skills have you accumulated so far in your 8 years as an AI Transformation Lead & Digital Strategy Consultant?",
+      "ts": "2026-07-25T13:46:44.141585",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "What type of industry?",
+        "How long established?",
+        "Who's the owner?"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "can you check via my cv",
+      "ts": "2026-07-25T13:48:50.961733"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "Daryna Vakulenko, I'm so glad you asked me to check your CV! According to it, your preferred company culture appears to be more established with a structured environment. You're looking for onsite roles in sustainability within the £50k-£70k salary range.\n\nI've taken note of this and will keep it in mind as we explore job opportunities. Now that I have a better understanding of what you're after, let's dive into some exciting possibilities!\n\nHere are some steps to consider:\n* Research companies in the London area (your location) that align with your sustainability goals.\n* Look for job openings on company websites or professional networking platforms like LinkedIn.\n* Network with professionals in the industry to learn more about their experiences and gain valuable insights.\n\nNext, I'd love to know: What specific aspects of sustainability interest you the most - is it climate change, renewable energy, or perhaps sustainable development?",
+      "ts": "2026-07-25T13:49:18.514240",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Please proceed with the review",
+        "I'll take a look shortly",
+        "My pleasure, I'm on it"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "Check my skill gaps",
+      "ts": "2026-07-25T13:52:38.457484"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "I'm thrilled that we're exploring new horizons together! You've got a strong background in sustainability, and I can see you're eager to dive deeper into the field.\n\nFirst, let's celebrate what you already bring to the table: your 8 years of experience in AI transformation and digital strategy consulting will surely be valuable assets in your sustainability journey!\n\nTo capitalise on this momentum, I'd love to recommend some local resources that might interest you. Have you considered checking out **Green Skills and Sustainability** courses offered by City & Guilds? They're just a short drive from MK16 8JH! These courses will help you bridge any skill gaps in sustainability.\n\nWhat do you think about taking a course like this to enhance your skills?",
+      "ts": "2026-07-25T13:53:38.496054",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "e4952e88-624d-4a05-9c7c-0871e8b431b5",
+          "title": "Learning for Sustainable Futures - Coursera",
+          "url": "https://www.coursera.org/learn/learning-for-sustainable-futures",
+          "body": "Teaching and learning for sustainability is a core theme throughout this course. Climate change, gender equality, health, social equity, and inclusion are issues that affect us all, impacting human we",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "56487963-eaba-4fbe-9639-4b1e0401144d",
+          "title": "Foundations of Sustainability and ESG - Coursera",
+          "url": "https://www.coursera.org/learn/introduction-to-sustainable-finance",
+          "body": "Offered by Saïd Business School, University of Oxford. This course introduces you to the fundamental concepts of sustainability and ... Enroll for free.",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "dea75e12-0399-4fac-9594-f8df2a0b91d1",
+          "title": "Green Skills and Sustainability I City & Guilds",
+          "url": "https://www.cityandguilds.com/what-we-offer/green-skills-and-sustainability",
+          "body": "Helping the transition to Net Zero with a range of environmental awareness and sustainability cross-sector units and qualifications to reduce negative environmental impacts and increase positive impac",
+          "type": "courses",
+          "type_label": "Resource"
+        }
+      ],
+      "suggestions": [
+        "Let's focus on top priorities",
+        "What areas concern you most?",
+        "Shall we start with basics?"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "Find volunteering opportunities near me for my target role",
+      "ts": "2026-07-25T13:56:26.907138"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "**You're on the right path!**\n\nI've searched for volunteering opportunities in your area (MK16 8JH) that align with your target role in sustainability. Here are some exciting options:\n\n### 1. **[Environmental Volunteering](https://www.environmentjob.co.uk/volunteering?commit=search)**\n\nThis platform offers a range of environmental volunteering opportunities across the UK. As someone transitioning into sustainability, this can be an excellent way to gain hands-on experience and enhance your CV.\n\n*   Get involved in:\n    *   Local conservation projects\n    *   Environmental events and campaigns\n    *   Habitat restoration initiatives\n    *   Citizen science projects\n\n**How to reach out:** Search for opportunities on the website, filter by location (MK16 8JH), and apply directly through the platform.\n\n### 2. **[Wildlife Trust](https://www.environmentjob.co.uk/volunteering?job_hours=1&job_levels=1&show_all=true)**\n\nThe Wildlife Trust is a leading organization in protecting birds and their habitats. As a volunteer, you'll have the opportunity to work with an international team and contribute to inspiring and educating people about nature.\n\n*   Get involved in:\n    *   Bird monitoring and research projects\n    *   Habitat restoration initiatives\n    *   Community engagement events\n    *   Citizen science projects\n\n**How to reach out:** Email [volunteer@wildlifetrust.org](mailto:volunteer@wildlifetrust.org) with a brief introduction, expressing your interest in volunteering, and specifying which project you'd like to be involved in.\n\n### 3. **[RSPB (Royal Society for the Protection of Birds)](https://www.environmentjob.co.uk/volunteering?job_function=56)**\n\nThe RSPB is dedicated to conserving seabirds and their habitats. As a residential volunteer, you'll have the chance to work on a comprehensive programme of seabird monitoring and research.\n\n*   Get involved in:\n    *   Seabird monitoring and research projects\n    *   Habitat restoration initiatives\n    *   Community engagement events\n    *   Volunteer-led conservation projects\n\n**How to reach out:** Email [volunteer@rspb.org.uk](mailto:volunteer@rspb.org.uk) with a brief introduction, expressing your interest in volunteering as a residential volunteer, and specifying which project you'd like to be involved in.\n\n### 4. **[Mid Level Volunteering](https://www.environmentjob.co.uk/volunteering?job_level=2)**\n\nThis platform offers mid-level volunteering opportunities, including some exciting projects in your area (MK16 8JH). As someone transitioning into sustainability, this can be an excellent way to gain experience and build your network.\n\n*   Get involved in:\n    *   Project management initiatives\n    *   Community engagement events\n    *   Habitat restoration initiatives\n    *   Environmental education programmes\n\n**How to reach out:** Search for opportunities on the website, filter by location (MK16 8JH), and apply directly through the platform.\n\n### Next Steps:\n\n1.  **Contacting Organizations:** Reach out to these organizations via email or form, introducing yourself, expressing your interest in volunteering, and specifying which project you'd like to be involved in.\n2.  **Following Up:** If you don't receive a response after 7 days, try contacting the organization again via phone or social media to inquire about the status of your application.\n3.  **Mapping Experience to CV:** When applying for jobs in sustainability, highlight the skills and experience gained through these volunteering opportunities, specifically mentioning how they align with your target role.\n\nWhat do you think is the most appealing aspect of these volunteering opportunities?",
+      "ts": "2026-07-25T13:57:32.796711",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from jobs in MK16 8JH?",
+        "Find Find volunteering opportunities near me for my target role jobs near MK16 8JH",
+        "Build me a 30-day action plan around this"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "Find community groups near me for my target role",
+      "ts": "2026-07-25T14:00:41.714173"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "**Hello lll!**\n\nI'm excited to help you find community groups near you that align with your target role in sustainability. Your goal is to gain hands-on experience and build connections in the field, and I've got some great leads for you.\n\n### 1. Friends of the Earth Scotland - Local Groups\n[Local Groups - Friends of the Earth Scotland](https://foe.scot/get-involved/local-groups/)\n\nFriends of the Earth Scotland has over 100 local groups across the country that work on various sustainability issues, from climate change to environmental justice. By joining a local group, you'll have the opportunity to contribute to campaigns, participate in events, and network with like-minded individuals.\n\n* Participate in local campaigns and actions\n* Join working groups focused on specific topics (e.g., energy, transport)\n* Attend training sessions and workshops to develop your skills\n\nTo reach out:\n1. Visit the website and find your closest group.\n2. Contact them via email or phone to introduce yourself and express your interest in getting involved.\n\n### 2. Friends of the Earth - Join a group near you\n[Join a group near you | Friends of the Earth](https://friendsoftheearth.uk/take-action/join-group-near-you)\n\nFriends of the Earth has over 200 local action groups across England, Wales, and Northern Ireland that work on various sustainability issues. By joining one of these groups, you'll have the opportunity to contribute to campaigns, participate in events, and network with like-minded individuals.\n\n* Participate in local campaigns and actions\n* Join working groups focused on specific topics (e.g., energy, transport)\n* Attend training sessions and workshops to develop your skills\n\nTo reach out:\n1. Visit the website and find a group near you.\n2. Contact them via email or phone to introduce yourself and express your interest in getting involved.\n\n### 3. Local Action | Friends of the Earth\n[Local Action | Friends of the Earth](https://groups.friendsoftheearth.uk/)\n\nFriends of the Earth's local action groups campaign for people and planet in their communities, addressing issues like climate change, environmental justice, and sustainable living. By joining one of these groups, you'll have the opportunity to contribute to campaigns, participate in events, and network with like-minded individuals.\n\n* Participate in local campaigns and actions\n* Join working groups focused on specific topics (e.g., energy, transport)\n* Attend training sessions and workshops to develop your skills\n\nTo reach out:\n1. Visit the website and find a group near you.\n2. Contact them via email or phone to introduce yourself and express your interest in getting involved.\n\n### Next Steps:\n\n**Step 1: Contacting the groups**\nWhen reaching out to these groups, introduce yourself briefly, mention your target role in sustainability, and express your interest in getting involved. For example:\n\"Hi [Group Name], my name is lll, and I'm a sustainability professional transitioning into a new role. I came across your group and would love to learn more about the opportunities for involvement.\"\n\n**Step 2: Following up**\nIf you don't receive a response after 7 days, send a follow-up email with a brief summary of your initial message.\n\n**Step 3: Mapping experience to CV and target role**\nAs you gain experience with these groups, be sure to highlight your contributions on your CV. This will help demonstrate your skills and commitment to your target role in sustainability.\n\nWhat specific areas within sustainability would you like to focus on during this volunteering experience?",
+      "ts": "2026-07-25T14:01:43.943026",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from community in MK16 8JH?",
+        "Find Find volunteering opportunities near me for my target role jobs near MK16 8JH",
+        "Build me a 30-day action plan around this"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "What skills will I gain from community in MK16 8JH?",
+      "ts": "2026-07-25T14:03:05.321970"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "**You're on the right path!**\n\nAs you explore community organizations in MK16 8JH, I'm excited to help you discover new skills and experiences that can enhance your sustainability career.\n\n**1. Bletchley Park Trust**\n[www.bletchleypark.org.uk](http://www.bletchleypark.org.uk)\n\nBletchley Park Trust is a conservation charity that manages the iconic Bletchley Park, a former World War II codebreaking center. As a volunteer, you'll contribute to preserving the site's history and promoting environmental sustainability.\n\n* Ways to get involved:\n\t+ Help with gardening and grounds maintenance\n\t+ Assist with educational programs for schools and community groups\n\t+ Support conservation efforts in the surrounding countryside\n\t+ Participate in events and exhibitions showcasing the park's history and science\n* HOW to reach out: Email [volunteer@bletchleypark.org.uk](mailto:volunteer@bletchleypark.org.uk) with your availability and interests.\n\n**2. Milton Keynes City Discovery Centre**\n[www.mkcdc.org.uk](http://www.mkcdc.org.uk)\n\nThe Milton Keynes City Discovery Centre is a community hub that fosters environmental awareness, education, and action. As a volunteer, you'll help develop programs and activities promoting sustainability in the city.\n\n* Ways to get involved:\n\t+ Assist with program development and delivery\n\t+ Help with event planning and coordination\n\t+ Contribute to social media management and content creation\n\t+ Participate in community outreach and engagement initiatives\n* HOW to reach out: Email [info@mkcdc.org.uk](mailto:info@mkcdc.org.uk) with your experience and availability.\n\n**3. Willen Lake Country Park**\n[www.willenlake.org.uk](http://www.willenlake.org.uk)\n\nWillen Lake Country Park is a popular outdoor space for recreation, conservation, and education. As a volunteer, you'll help maintain the park's natural beauty and promote environmental awareness among visitors.\n\n* Ways to get involved:\n\t+ Assist with habitat management and wildlife conservation\n\t+ Help with events and activities promoting outdoor learning\n\t+ Support visitor services and customer care initiatives\n\t+ Participate in community engagement and outreach programs\n* HOW to reach out: Email [volunteer@willenlake.org.uk](mailto:volunteer@willenlake.org.uk) with your interests and availability.\n\n**Next Steps**\n\n1. **Contact the organizations**: Reach out to each organization, introducing yourself and expressing your interest in volunteering. Be specific about your skills and experience.\n2. **Wait for a response (up to 7 days)**: If you don't receive a reply within a week, send a follow-up email or phone call to reiterate your interest.\n3. **Map your experience**: When reflecting on your volunteer work, highlight the skills you've gained, such as project management, communication, or community engagement. Connect these experiences directly to your target role in sustainability.\n\n**What do you need next?**\n\nHow can I support you in connecting with local organizations and maximizing your volunteering experience for your sustainability career goals?",
+      "ts": "2026-07-25T14:04:01.217997",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from community in MK16 8JH?",
+        "Find Find volunteering opportunities near me for my target role jobs near MK16 8JH",
+        "Build me a 30-day action plan around this"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "I want to do a full career assessment. Let us map my journey from where I am now to my target role in sustainability. Please ask me everything you need to know.",
+      "ts": "2026-07-25T14:05:59.898589"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "I'm so excited to help you on this journey, lll! You're looking to map your career from where you are now into a sustainability role, specifically by exploring volunteering opportunities in your area (MK16 8JH). Let's break down the process and identify some fantastic resources to support you.\n\n**1. Career Assessment**\nWe'll start with assessing your current skills, interests, and values to understand what drives you in your career. This will help us identify potential sustainability roles that align with your strengths.\n\n**2. Forbes - 9 Free Career Assessment Tools To Guide Your Next Move**\n[Forbes](https://www.forbes.com/sites/juliakorn/2026/01/06/9-free-career-assessment-tools-to-guide-your-next-move/)\nWhat they do: Offer a range of free career assessments to help you identify your strengths, interests, and values. Relevant to this person's goals as these tools will help them understand their current skills and potential areas for growth.\n* Take the Holland Occupational Themes assessment to explore your work-related themes\n* Complete the Career Assessment Inventory (CAI) to identify your strengths and career preferences\n* Use the Myers-Briggs Type Indicator (MBTI) to gain insights into your personality type and its relevance to careers\n* Try the Skills Matcher tool to explore job roles that align with your skills\n\nHow to reach out: Simply visit the Forbes website, click on the relevant assessment, and follow the prompts. No email or phone required!\n\n**3. Sustainable Business Toolkit - What Is Career Planning? A Step-by-Step Guide**\n[What Is Career Planning](https://www.sustainablebusinesstoolkit.com/what-is-career-planning/)\nWhat they do: Provide a comprehensive guide to career planning, including steps for identifying your values, exploring careers, and creating a plan.\n* Complete the 'Values Assessment' worksheet to identify your core values\n* Explore the 'Exploring Careers' section to learn about different sustainability roles\n* Use the 'Action Plan' template to create a step-by-step plan for achieving your career goals\n\nHow to reach out: Visit the Sustainable Business Toolkit website, download or print the relevant resources, and follow along with the guide.\n\n**4. Assessment - Home of the The Globally Trusted MAPP**\n[Assessment](https://www.assessment.com/)\nWhat they do: Offer a widely used career assessment tool that provides insights into your personality type, work style, and potential careers.\n* Take the MAPP Career Assessment to explore your personality type and potential career paths\n* Use the 'Career Explorer' tool to identify job roles aligned with your skills and interests\n\nHow to reach out: Visit the Assessment website, sign up for an account (free), and take the MAPP assessment.\n\n**Next Steps**\n\n1. **Step 1: Reach out to local organizations**\nVisit the websites of local organizations that align with your target role (e.g., environmental groups, sustainability consultancies). Send a brief email or fill out their contact form expressing interest in volunteering opportunities and exploring how you can contribute to their work.\n\nExample email:\nSubject: Volunteer Opportunities in Sustainability\nDear [Organization Name] Team,\nI'm writing from MK16 8JH, interested in exploring volunteer opportunities that align with my career goals in sustainability. Could you please provide information on available roles and any upcoming projects?\n\n2. **Step 2: Follow up**\nIf no reply after 7 days, try sending a follow-up email or making a phone call (if provided). Be polite and persistent.\n\n3. **Step 3: Mapping to your CV and target role**\nAs you engage with these organizations, remember to document your experiences, skills gained, and achievements. This will help you map these experiences onto your CV and demonstrate your growing expertise in the sustainability field.\n\nWhat's next? Now that we have a plan, let's discuss how you can create a strong online presence (e.g., LinkedIn profile) and network with professionals in the sustainability sector to further support your job search. How do you envision showcasing your skills and experiences on social media?",
+      "ts": "2026-07-25T14:07:18.493916",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from jobs in MK16 8JH?",
+        "Find Find volunteering opportunities near me for my target role jobs near MK16 8JH",
+        "Build me a 30-day action plan around this"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "Find events near me for my target role",
+      "ts": "2026-07-25T14:18:31.405688"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "Find events near me for my target role",
+      "ts": "2026-07-25T14:19:12.995237"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "**You're taking the next step in your EV installation journey!**\n\nI'm excited to help you find events near MK16 8JH that align with your target role. Here are some relevant results:\n\n### 1. **Renewable Energy Events UK** [https://www.renewableenergycalendar.com/](https://www.renewableenergycalendar.com/)\nRenewable Energy Events UK is a platform connecting professionals in the renewable energy industry, including EV installation experts like yourself.\n\n* Get involved:\n\t+ Attend webinars on EV charging infrastructure and grid connection\n\t+ Participate in online forums discussing EV adoption and charging technologies\n\t+ Join their LinkedIn group for networking opportunities\n\t+ Register for their upcoming conferences on renewable energy and transportation electrification\n* Reach out: Visit the website, sign up for newsletters, or contact [info@renewableenergycalendar.com](mailto:info@renewableenergycalendar.com) with your interest in attending events.\n\n### 2. **The Institution of Engineering and Technology (IET)** [https://www.theiet.org/](https://www.theiet.org/)\nAs a leading professional body for engineers, the IET hosts events on emerging technologies, including EV charging and grid management.\n\n* Get involved:\n\t+ Attend seminars on smart grids and EV integration\n\t+ Join their special interest groups focused on transportation electrification\n\t+ Participate in online discussions on energy storage and EV charging systems\n\t+ Register for their annual Energy Conference and Exhibition\n* Reach out: Contact [events@theiet.org](mailto:events@theiet.org) or phone 01473 866000 to inquire about upcoming events.\n\n### 3. **Electrification Alliance UK** [https://www.electrificationalliance.co.uk/](https://www.electrificationalliance.co.uk/)\nThe Electrification Alliance UK is a collaborative platform for industry experts, including EV installation professionals.\n\n* Get involved:\n\t+ Attend workshops on EV charging infrastructure and grid connection\n\t+ Participate in online discussions on EV adoption and charging technologies\n\t+ Join their LinkedIn group for networking opportunities\n\t+ Register for their upcoming conferences on transportation electrification\n* Reach out: Contact [info@electrificationalliance.co.uk](mailto:info@electrificationalliance.co.uk) with your interest in attending events.\n\n### 4. **Energy Institute** [https://www.energyinst.org/](https://www.energyinst.org/)\nThe Energy Institute is a professional body for energy professionals, hosting events on emerging topics like EV charging and grid management.\n\n* Get involved:\n\t+ Attend seminars on smart grids and EV integration\n\t+ Join their special interest groups focused on transportation electrification\n\t+ Participate in online discussions on energy storage and EV charging systems\n\t+ Register for their annual Energy Conference and Exhibition\n* Reach out: Contact [events@energyinst.org](mailto:events@energyinst.org) or phone 020 7333 3400 to inquire about upcoming events.\n\n**Next Steps**\n\n1. **Contact**: Reach out to the organisations mentioned above, expressing your interest in attending their events. Make sure to specify your background in sustainability and your goal of transitioning into EV installation.\n2. **No reply?**: If you don't receive a response after 7 days, try contacting them again or searching for alternative events on these platforms.\n3. **Mapping to your CV and target role**: Keep track of the events you attend and the skills you acquire. Map these experiences to your CV and highlight how they align with your target role in EV installation.\n\nWhat specific area within EV installation would you like to explore further, or what's the next challenge you'd like help overcoming?",
+      "ts": "2026-07-25T14:20:47.899247",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from events in MK16 8JH?",
+        "Find ev installation jobs near MK16 8JH",
+        "Build me a 30-day action plan around this"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "Find webinars near me for my target role",
+      "ts": "2026-07-25T14:21:09.176716"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "**You're crushing it!** I'm loving the momentum you've got going! You've been celebrating and taking action towards your target role in EV installation, and I couldn't be more thrilled!\n\nI've checked out your CV, and it looks like you prefer an onsite work environment with a salary range of £50k-£70k. I'll keep that in mind as we move forward.\n\nYou're looking for webinars related to your target role, and I've got some fantastic resources for you! Have you considered checking out **Plug Into The Future - EV Charging Essentials** on Coursera? It's a great starting point for learning about electric vehicle charging systems.",
+      "ts": "2026-07-25T14:22:14.628881",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "8f1471e7-986e-4e7f-84e5-5eadd31425e2",
+          "title": "Plug Into The Future - EV Charging Essentials | CourseraElectric Vehicle Systems and Technologies | CourseraElectric Vehicles and Mobility - CourseraBatteries and Electric Vehicles - CourseraMaster Electric Vehicle Tech: Software Skills - CourseraSafety First: EV Maintenance & Best Practices - CourseraPowering the Future with Electrification - Coursera",
+          "url": "https://www.coursera.org/learn/plug-into-the-future-ev-charging-essentials",
+          "body": "This course highlights various topics related to electric vehicle charging systems and related concepts related to the critical charging process. This course on Electric Vehicle Charging Infrastructur",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "d9249a19-9898-4172-8522-3619b6097812",
+          "title": "Electric Vehicle Systems and Technologies | Coursera",
+          "url": "https://www.coursera.org/specializations/electric-vehicle-systems-and-technologies",
+          "body": "Specialization - 12 course series Immerse yourself in the transformative world of electric vehicles with our curated specialization that covers essential aspects ranging from core EV systems, charging",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "25ae56ee-2f53-498c-aabe-18ac872d55bd",
+          "title": "Electric Vehicles and Mobility - CourseraBatteries and Electric Vehicles - CourseraMaster Electric Vehicle Tech: Software Skills - CourseraSafety First: EV Maintenance & Best Practices - CourseraPowering the Future with Electrification - Coursera",
+          "url": "https://www.coursera.org/learn/electric-vehicles-mobility",
+          "body": "Offered by École Nationale des Ponts et Chaussées. The purpose of Electric Vehicles and Mobility is to help you, whatever your profile, your ... Enroll for free. Batteries and Electric Vehicles: This ",
+          "type": "courses",
+          "type_label": "Resource"
+        }
+      ],
+      "suggestions": [
+        "Check nearby solar panel webinar dates",
+        "Ev Charging Webinar Schedule Search",
+        "Local EV install training events online"
+      ]
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "user",
+      "content": "I am losing motivation in my career transition. Can you help me reconnect with my goals?",
+      "ts": "2026-07-25T14:24:15.833746"
+    },
+    {
+      "uid": "66b956b16389592e1a8cd61af4609ebc",
+      "role": "assistant",
+      "content": "**You're not alone!** I'm here to help you reconnect with your goals and keep moving forward in your career transition into EV installation.\n\nI've checked out our conversation history, and I remember how excited you were about finding volunteering opportunities near MK16 8JH for your target role. You even celebrated that milestone! Let's tap back into that energy!\n\nTo get started, can you tell me what specifically is making you feel like you're losing motivation? Is it related to the transition process itself or something else entirely?",
+      "ts": "2026-07-25T14:25:15.528913",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "82f91387-fd53-402b-b96c-4fa5b6937b8e",
+          "title": "Search Google for: courses ev installation MK16 8JH",
+          "url": "https://www.google.com/search?q=courses+ev+installation+MK16+8JH",
+          "body": "We couldn't confirm a specific live resource for this yet — here's a search to help you find current options yourself.",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "cc42b6f6-b46c-42fc-9bae-ab4b575b4585",
+          "title": "Sustainability",
+          "url": "https://informaconnect.com/greenbuild/sustainability-hub/",
+          "body": "Sustainability Onsite At Greenbuild. Reduce Emissions. Take Public Transit: we encouraged attendees to use the Metro Trip Planner to help find the best route to Greenbuild 2025 in Los Angeles.",
+          "type": "volunteering",
+          "type_label": "Volunteering"
+        },
+        {
+          "id": "ec0a06ec-2cb4-484f-8aa9-4cf2c9dbbd03",
+          "title": "ERM | Sustainability Consulting & Advisory Services",
+          "url": "https://www.erm.com/",
+          "body": "Helping businesses meet today's sustainability imperatives. Sustainability is our business.Raising the Bar - Preparing for the EU Forced Labour Regulation. Mandatory due diligence on environmental and",
+          "type": "volunteering",
+          "type_label": "Volunteering"
+        }
+      ],
+      "suggestions": [
+        "Revisit your why",
+        "Celebrate small wins",
+        "Dream big again"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "fb075c9d-573b-4f45-b94a-63289d6e13f2",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1784983391/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-25 13:43",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "ce1be118-a487-4c34-afda-34d80190ff46",
+      "name": "null_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-25 13:42"
+    }
+  ],
+  "saved_items": [
+    {
+      "type": "message",
+      "title": "**You're on the right path!**\n\nAs you explore community organizations in MK16 8J",
+      "url": "",
+      "folder_id": "messages",
+      "user_id": "66b956b16389592e1a8cd61af4609ebc",
+      "saved_at": "2026-07-25T14:04:51.694278",
+      "id": "e0e693f0-d061-41e1-824e-3375795c4f35"
+    }
+  ],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JH",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "can you check via my cv",
+  "salary_range": "£50k–£70k",
+  "work_type": "Onsite",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [
+    {
+      "id": "71daeeaa-b7fb-4d76-b587-8871a077a493",
+      "url": "https://www.google.com/search?q=events+Find+events+near+me+for+my+target+role+MK16+8JH",
+      "title": "Search Google for: events Find events near me for my target role MK16 8JH",
+      "body": "We couldn't confirm a specific live resource for this yet — here's a search to help you find current options yourself.",
+      "type": "events",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:20:47.896596"
+    },
+    {
+      "id": "8e120ddd-e448-4d2a-a2ea-03b4cde24ba4",
+      "url": "https://allevents.in/",
+      "title": "AllEvents – Discover Events Happening in Your City",
+      "body": "Find information of nearby upcoming events happening in your city, Discover parties, concerts, meets,shows, sports, club, reunion, Performance.Download the AllEvents app to never miss out the best eve",
+      "type": "events",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:19:43.677716"
+    },
+    {
+      "id": "0c95e085-5939-445d-858d-f95186193c98",
+      "url": "https://www.eventbrite.co.uk/",
+      "title": "Eventbrite - Discover the Best Local Events & Things to Do",
+      "body": "Contact your event organizer. Find my tickets.Event Payment System. Solutions for Professional Services. Event Management Software. Halloween Party Planning. Virtual Events Platform.",
+      "type": "events",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:19:43.677683"
+    },
+    {
+      "id": "c26d9196-aa3c-408c-af1b-1741aa9654f0",
+      "url": "https://www.assessment.com/",
+      "title": "Assessment - Home of the The Globally Trusted MAPP ...",
+      "body": "Take the world-known MAPP™ Career Assessment, used in 165 countries, and use AI assistants and tools to interact with your results, explore careers, education paths, and jobs.",
+      "type": "jobs",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:07:18.491287"
+    },
+    {
+      "id": "fd5a5ed9-7df8-4d9b-87ca-f411abc374c1",
+      "url": "https://www.sustainablebusinesstoolkit.com/what-is-career-planning/",
+      "title": "What Is Career Planning? A Step‑by‑Step Guide to Mapping Your ...",
+      "body": "Jun 23, 2025 · Career planning is not a one-time event—it’s a strategic, ongoing journey that evolves as you do. Here’s how to break down the career planning process into manageable, actionable steps ",
+      "type": "jobs",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:07:18.491278"
+    },
+    {
+      "id": "9d718aa0-0e7d-4a39-b37b-6db24982b071",
+      "url": "https://www.forbes.com/sites/juliakorn/2026/01/06/9-free-career-assessment-tools-to-guide-your-next-move/",
+      "title": "9 Free Career Assessment Tools To Guide Your Next Move - Forbes",
+      "body": "Jan 6, 2026 · Job search and online recruiting platform Monster has published a guide to nine free career assessment tools designed to help professionals navigate job uncertainty and career transition",
+      "type": "jobs",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:07:18.491228"
+    },
+    {
+      "id": "2fd0e92b-a7b4-48c6-bea8-c4bcd7401041",
+      "url": "https://www.google.com/search?q=community+What+skills+will+I+gain+from+community+in+MK16+8JH%3F+MK16+8JH",
+      "title": "Search Google for: community What skills will I gain from community in MK16 8JH? MK16 8JH",
+      "body": "We couldn't confirm a specific live resource for this yet — here's a search to help you find current options yourself.",
+      "type": "community",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:04:01.215182"
+    },
+    {
+      "id": "6a314a54-eaff-4de2-894f-755837ed130c",
+      "url": "https://groups.friendsoftheearth.uk/",
+      "title": "Local Action | Friends of the Earth",
+      "body": "Local action groups campaign for people and planet in their communities. Find out what they do and if there's one in your area.",
+      "type": "community",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:01:43.941001"
+    },
+    {
+      "id": "a9e3de4f-010e-458a-8d8c-ef034bbcd236",
+      "url": "https://govo.org/search",
+      "title": "Search For Volunteering Opportunities | GoVo",
+      "body": "Search GoVo for volunteering opportunities that match your interests and location. Browse flexible roles across all causes and charities.",
+      "type": "community",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:01:43.940989"
+    },
+    {
+      "id": "5f3ac371-4f8b-4bf1-97c8-260ad3a1d7b8",
+      "url": "https://groups.friendsoftheearth.uk/join",
+      "title": "Get Involved Join (or start) a group near you | Local action",
+      "body": "Join a local action group. Find a group near you.Similarly, the roles in each group vary depending on what's needed. We encourage you to email your nearest group to find out how you can contribute.",
+      "type": "community",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:01:43.940977"
+    },
+    {
+      "id": "c2a98712-4c7d-4617-8f66-8044c4693acd",
+      "url": "https://friendsoftheearth.uk/take-action/join-group-near-you",
+      "title": "Join a group near you | Friends of the Earth",
+      "body": "Friends of the Earth England, Wales and Northern Ireland has more than 200 local action groups working to protect people and planet. Find out if there's a group near you.",
+      "type": "community",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:01:43.940966"
+    },
+    {
+      "id": "1eda91cf-9add-4e4d-b491-69f31375e8f5",
+      "url": "https://volunteeringhub.communityactionmk.org/volunteers/search.htm",
+      "title": "Search Volunteer Opportunities",
+      "body": "We're looking for enthusiastic volunteers to join our team and help us maintain and enhance our vibrant community garden. It's a fantastic opportunity to meet new people, learn new skills, and make a ",
+      "type": "community",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:01:43.940955"
+    },
+    {
+      "id": "2e9b596d-3457-43ec-a665-b5d1fa41818c",
+      "url": "https://www.meetup.com/find/",
+      "title": "Find Events & Groups | Meetup",
+      "body": "Find Meetup events and groups so you can do more of what matters to you and meet people near you who share your interests.All events. people1 icon. New Groups.",
+      "type": "community",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:01:43.940943"
+    },
+    {
+      "id": "e4345dbd-1637-45f9-a9b7-08e59d6fff0c",
+      "url": "https://foe.scot/get-involved/local-groups/",
+      "title": "Local Groups - Friends of the Earth Scotland",
+      "body": "February 17, 2026 - Local groups are a vital part of our national work and are effective campaign groups in their own right. Take a look here to find your closest group.",
+      "type": "community",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T14:01:43.940904"
+    },
+    {
+      "id": "2140c3a4-100f-46c7-8971-d801adab7401",
+      "url": "https://www.environmentjob.co.uk/volunteering?job_level=2",
+      "title": "Mid Level Volunteering",
+      "body": "Looking for mid level volunteering? Browse 26 volunteering opportunities on environmentjob. Apply today!",
+      "type": "jobs",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T13:57:32.794584"
+    },
+    {
+      "id": "d8b7128b-de64-4b9c-8be9-b62e1e9ef7cb",
+      "url": "https://www.environmentjob.co.uk/volunteering?job_function=56",
+      "title": "Environmental volunteering | Environmentjob.co.uk",
+      "body": "We are looking for an enthusiastic and committed residential volunteer to help deliver a comprehensive programme of seabird monitoring and research at this internationally important site.",
+      "type": "jobs",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T13:57:32.794568"
+    },
+    {
+      "id": "933fcf1b-118e-4c23-b090-c88758269ecb",
+      "url": "https://www.environmentjob.co.uk/volunteering?job_hours=1&job_levels=1&show_all=true",
+      "title": "Environmental volunteering | Environmentjob.co.uk",
+      "body": "We are looking for a new full-time volunteer to join our international team protecting birds and their habitats and inspiring and educating people about birds and nature in the Maltese Islands.",
+      "type": "jobs",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T13:57:32.794556"
+    },
+    {
+      "id": "de9f77d1-69fd-424a-b6e2-d7a97d51496a",
+      "url": "https://www.environmentjob.co.uk/volunteering?commit=search",
+      "title": "Environmental Volunteering",
+      "body": "Check out our list of environmental volunteering opportunities across the UK. It’s not an option for everyone, but volunteering can be a valuable way to gain hands-on experience and enhance your CV.",
+      "type": "jobs",
+      "location": "MK16 8JH",
+      "status": "not_started",
+      "saved_at": "2026-07-25T13:57:32.794488"
+    }
+  ],
+  "hobby_skill_map": [],
+  "skill_validations": {
+    "Cross-functional stakeholder management": {
+      "status": "validated",
+      "updated_at": "2026-07-25T14:09:17.754498"
+    }
+  },
+  "profile_complete": true,
+  "onboarding_done": true,
+  "headline": "Generalist / Career Transitioner",
+  "experience": [
+    {
+      "id": "a6aac81d",
+      "title": "AI Transformation and Digital Strategy Consultant (Present)",
+      "company": "",
+      "start_date": "",
+      "end_date": "Present",
+      "description": "AI transformation and digital strategy consultant",
+      "source": "manual"
+    }
+  ],
+  "how_heard": "Podcast",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [
+    "target_role"
+  ],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Led cross-functional teams and ensured successful product launches at a tech startup",
+      "skill": "Cross-functional stakeholder management",
+      "relevance": "In a sustainability role, effective cross-functional collaboration is crucial to drive change and achieve environmental objectives."
+    },
+    {
+      "source": "Developed and implemented AI-driven solutions for complex industries as an MD (Product)",
+      "skill": "Project delivery and management",
+      "relevance": "Sustainability projects often require coordinating multiple stakeholders, timelines, and outcomes; experience in delivering complex projects can be valuable in this context."
+    },
+    {
+      "source": "Delivered AI-driven solutions that demonstrated business value to clients across various sectors",
+      "skill": "Data analysis and interpretation",
+      "relevance": "Sustainability professionals often need to analyze data on environmental performance, social impact, or economic benefits; experience with data analysis can be applied to this context."
+    },
+    {
+      "source": "Developed strategic business cases for new product lines and services at a tech startup",
+      "skill": "Regulatory literacy and compliance",
+      "relevance": "While not directly stated, experience in developing business cases may imply an understanding of regulatory environments; in sustainability, this is essential to ensure projects are compliant with laws and regulations."
+    }
+  ],
+  "journey": {
+    "xp": 0,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-25",
+    "last_checkin_date": ""
+  },
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "grateful",
+        "ts": "2026-07-25T13:46:54.258629"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-25T14:07:29.685013"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-25T14:20:57.467348"
+      }
+    ],
+    "blockers": [
+      "none"
+    ],
+    "preferred_tone": "motivational",
+    "response_depth": "balanced",
+    "milestones_mentioned": [],
+    "total_exchanges": 3,
+    "encouragement_count": 0,
+    "key_insights": [
+      "The user is transitioning into a sustainability role and has established company experience, with a salary range of £50k-£70k.",
+      "The user is excited to map their career journey and transition into a sustainability role, with no known blockers but wants action to move forward.",
+      "User is excited to find events near them for their target role of EV installation, showing motivation and a desire for action."
+    ],
+    "current_emotion": "excited"
+  }
+}

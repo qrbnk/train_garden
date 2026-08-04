@@ -1,0 +1,34 @@
+{
+  "partner_id": "b140f7aac426fa0c059d9dc34c2d6255",
+  "email": "lindawendstorm@gmail.com",
+  "account_type": "partner",
+  "first_seen": "2026-08-03T12:34:27.762837",
+  "last_seen": "2026-08-03T12:35:37.965951",
+  "profile": {
+    "org_name": "Solar NGO North London",
+    "org_type": "non_profit",
+    "cause_areas": [
+      "Solar",
+      "Climate",
+      "Renewable energy",
+      "Causes"
+    ],
+    "website": "solar-ngo.com",
+    "hq_location": "London, UK",
+    "description": "volunteering opportunities and causes, community events, advice",
+    "onboarding_done": true
+  },
+  "team_members": [],
+  "documents": [],
+  "resources": [],
+  "connections": [],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "b1e28126-5e36-4d4b-915f-aa8cc30f2306",
+      "text": "Updated organisation profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T12:35:37.965941"
+    }
+  ]
+}

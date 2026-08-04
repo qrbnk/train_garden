@@ -1,0 +1,654 @@
+{
+  "user_id": "5b37040e6200edb3c7f409e994076872",
+  "email": "admin@test.com",
+  "name": "Admin",
+  "first_seen": "2026-07-16T09:44:12.124026",
+  "last_seen": "2026-07-19T10:51:55.816732",
+  "sector": "tech ai transformation",
+  "experience_years": "8",
+  "target_role": "Solar/ EV Industry role (not specified)",
+  "goals": [
+    "Transition from AI digital transformation to Solar/EV industry",
+    "Transition from AI digital transformation to become a solar or EV industry professional",
+    "Career transition from Renewable Energy into the Solar/EV Industry",
+    "Transition into the Solar/EV industry"
+  ],
+  "skills": [
+    "ai",
+    "tech",
+    "medicine",
+    "writinf"
+  ],
+  "cv_summary": "",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I'm transitioning from ai digital transformation to become a solar or ev industry. Can you guide me?",
+      "timestamp": "2026-07-16T09:48:03.657805"
+    },
+    {
+      "role": "assistant",
+      "content": "**Hello Admin!**\n\nI'm so glad you reached out for support on your transition from Renewable Energy into the Solar/EV Industry role. Before we dive in, I'd love to get a better understanding of where you are right now.\n\nCan you tell me more about what you currently do in your role within Renewable Energy? What specific areas or projects have you been working on recently?",
+      "timestamp": "2026-07-16T09:49:44.036199",
+      "job_cards": [],
+      "report_path": null
+    },
+    {
+      "role": "user",
+      "content": "Find me jobs matching my exact profile",
+      "timestamp": "2026-07-16T09:53:39.117362"
+    },
+    {
+      "role": "assistant",
+      "content": "**Welcome to the Solar/EV Industry Transition Journey!**\n\nI'm thrilled to support you in your career transition from Renewable Energy into the exciting world of Solar/EV industry! I understand that this is a new chapter for you, and we'll work together to explore opportunities that align with your skills and passions. I'd love to acknowledge your background in Renewable Energy - it's an excellent foundation for diving into the Solar/EV industry. You have a solid understanding of energy systems, sustainability, and environmental concerns, which will serve as a great starting point.\n\n**Exploring Relevant Roles**\n\nAs we navigate this transition together, let's explore some exciting opportunities that align with your skills and experience. I've curated three relevant roles for you to consider:\n\n* **Solar Energy Solutions Engineer**: As a skilled professional in Renewable Energy, you'll excel in designing, developing, and implementing solar energy systems. This role leverages your technical expertise and passion for sustainability. [**Explore Solar Energy Solutions jobs worldwide**](https://www.linkedin.com/jobs/solar-energy-solutions-jobs-worldwide?f_C=230291)\n* **AI Engineer**: The Solar/EV industry is increasingly adopting AI and machine learning to optimize energy production, consumption, and grid management. Your technical skills will enable you to contribute to cutting-edge projects that integrate AI with renewable energy solutions. [**Check out the AI Engineer role at SLR Consulting in London**](https://uk.linkedin.com/jobs/view/ai-engineer-at-slr-consulting-4436800308)\n* **Solar Electrician**: As a skilled professional transitioning into the Solar/EV industry, you'll be well-suited to work on the installation and maintenance of solar panel systems. This role leverages your technical expertise and attention to detail to ensure efficient energy production. [**View Solar Jobs in London and explore average salaries**](https://www.reed.co.uk/jobs/solar-jobs-in-london) or [**Check out Average Solar Electrician Salary in London**](https://www.reed.co.uk/average-salary/average-solar-electrician-salary-in-london)\n\nLet's work together to explore these opportunities and more, tailored to your skills, interests, and career aspirations!",
+      "timestamp": "2026-07-16T09:54:24.164854",
+      "job_cards": [
+        {
+          "type": "job_card",
+          "title": "Siemens Energy",
+          "company": "Join the team - Jobs Energy",
+          "url": "https://www.bing.com/aclick?ld=e8ieFbBOhvv8eHyOuvU231wjVUCUzioqnvVrsZB7CjvI-xWiUkvbbiaEQF1_bPZ482pn4kr8gvs8c-rtrA6JQjMj5z8R6uu46P-XbPOFpsVlsezYKtR3LRMZBAS9QVQ3myX8OvCI2-Wr5LOQHDqaPSN4_BcBcevCWggxu_wZaUZJWio6Xg7Hx9t6hTHPtBlW9F31DBLw&u=aHR0cHMlM2ElMmYlMmZwaXhlbC5ldmVyZXN0dGVjaC5uZXQlMmYxMTc2MSUyZmNxJTNmZXZfc2lkJTNkMTAlMjZldl9sbiUzZGpvYnMlMjUyMGVuZXJneSUyNmV2X2x0eCUzZCUyNmV2X2x4JTNka3dkLTcyODQzNTI2OTQ0NzQxJTNhbG9jLTE4OCUyNmV2X2NyeCUzZDcyODQzMTE2MTM4ODkwJTI2ZXZfbXQlM2RwJTI2ZXZfZHZjJTNkYyUyNmV2X3BoeSUzZDE2MjU3MCUyNmV2X2xvYyUzZDQxNDcxJTI2ZXZfY3glM2Q0NDY4NjA1NjMlMjZldl9heCUzZDExNjU0ODQyNzMzODY4MjYlMjZldl9leCUzZCUyNmV2X2VmaWQlM2RhM2E4ODlmM2Y3NzExN2RmMDJlMGUzYWI2YjY1ZmFiMiUzYUclM2FzJTI2dXJsJTNkaHR0cHMlMjUzQSUyNTJGJTI1MkZqb2JzLnNpZW1lbnMtZW5lcmd5LmNvbSUyNTJGZW5fVVMlMjUyRmpvYnMlMjUyRkpvYnMlMjUyRiUyNTNGMjk0NTQlMjUzRDk2NDQ5MyUyNTI2Mjk0NTRfZm9ybWF0JTI1M0QxMTM4MSUyNTI2bGlzdEZpbHRlck1vZGUlMjUzRDElMjUyNmZvbGRlclJlY29yZHNQZXJQYWdlJTI1M0QyMCUyNTI2JTI1MjZzdGMlMjUzRHVrc2UxMDAwNjAlMjUyNmVmX2lkJTI1M0RhM2E4ODlmM2Y3NzExN2RmMDJlMGUzYWI2YjY1ZmFiMiUyNTNBRyUyNTNBcyUyNTI2c19rd2NpZCUyNTNEQUwhMTE3NjEhMTAhNzI4NDMxMTYxMzg4OTAhISEhNzI4NDM1MjY5NDQ3NDEhITQ0Njg2MDU2MyExMTY1NDg0MjczMzg2ODI2JTI2bXNjbGtpZCUzZGEzYTg4OWYzZjc3MTE3ZGYwMmUwZTNhYjZiNjVmYWIyJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkVUtfU0UlMjUyMENNX1NpZW1lbnMlMjUyMEVuZXJneV9FTl9CaW5nJTI2dXRtX3Rlcm0lM2Rqb2JzJTI1MjBlbmVyZ3klMjZ1dG1fY29udGVudCUzZEhSX0Jpbmc&rlid=a3a889f3f77117df02e0e3ab6b65fab2",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Get inspired by our diverse and global teams",
+            "Find out where you can make an impact",
+            "Join an inventive and global team at one of the most innovative energy companies"
+          ],
+          "snippet": "Get inspired by our diverse and global teams. Find out where you can make an impact. Join an inventive and global team at one of the most innovative energy companies. Leading energy technology · In more than 90 countries · > €1bn annual R&D inv."
+        },
+        {
+          "type": "job_card",
+          "title": "LinkedIn Job Search: Find US Jobs, Internships, Jobs Near Me",
+          "company": "",
+          "url": "https://www.linkedin.com/jobs",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "64% of job seekers get hired through a referral",
+            "Use LinkedIn Jobs to boost your chances of getting hired through people you know",
+            "Sending messages to people you know is a great way to strengthen relationships as you take the next step in your career"
+          ],
+          "snippet": "64% of job seekers get hired through a referral. Use LinkedIn Jobs to boost your chances of getting hired through people you know.Sending messages to people you know is a great way to strengthen relationships as you take the next step in your career. Stay up to date on your industry."
+        },
+        {
+          "type": "job_card",
+          "title": "20 Solar Energy Solutions jobs in Worldwide",
+          "company": "",
+          "url": "https://www.linkedin.com/jobs/solar-energy-solutions-jobs-worldwide?f_C=230291",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "New Solar Energy Solutions jobs added daily",
+            "We're working to bring back all filters, but in the meantime, you can type them directly into your search to refine your results",
+            "Get notified about new Solar Energy Solutions jobs in Worldwide"
+          ],
+          "snippet": "New Solar Energy Solutions jobs added daily.We're working to bring back all filters, but in the meantime, you can type them directly into your search to refine your results. Learn more. Get notified about new Solar Energy Solutions jobs in Worldwide."
+        },
+        {
+          "type": "job_card",
+          "title": "SLR Consulting hiring AI Engineer in London, England...",
+          "company": "LinkedIn",
+          "url": "https://uk.linkedin.com/jobs/view/ai-engineer-at-slr-consulting-4436800308",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Join to apply for the AI Engineer role at SLR Consulting",
+            "Take ownership from prototype through to production",
+            "Stay curious about emerging AI capabilities"
+          ],
+          "snippet": "Join to apply for the AI Engineer role at SLR Consulting.Take ownership from prototype through to production. Stay curious about emerging AI capabilities. You do not need to know everything—but you should be comfortable learning quickly and shipping continuously."
+        },
+        {
+          "type": "job_card",
+          "title": "Solar Jobs in London",
+          "company": "Solar Vacancies | Reed.co.uk",
+          "url": "https://www.reed.co.uk/jobs/solar-jobs-in-london",
+          "location": "Hybrid",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Job Title: Field Service Engineer - EV, Solar and Battery Location: Greater London Salary: 50,000- 60,000 Work Model: Hybrid (1 Week WFH, 2 Weeks on client sites) Job Overview: We are seeking a skilled and motivated engineer to join the"
+          ],
+          "snippet": "... Job Title: Field Service Engineer - EV, Solar and Battery Location: Greater London Salary: 50,000- 60,000 Work Model: Hybrid (1 Week WFH, 2 Weeks on client sites) Job Overview: We are seeking a skilled and motivated engineer to join the ..."
+        }
+      ],
+      "report_path": null
+    },
+    {
+      "role": "user",
+      "content": "I feel anxious about my career transition",
+      "timestamp": "2026-07-16T09:58:22.679074"
+    },
+    {
+      "role": "user",
+      "content": "I feel anxious about my career transition",
+      "timestamp": "2026-07-16T10:01:57.882304"
+    },
+    {
+      "role": "assistant",
+      "content": "**I'm so glad you shared your feelings, Admin**. It takes a lot of courage to acknowledge anxiety about a career transition. I can sense that you're eager to move into the Solar/EV Industry role, but this uncertainty is weighing on you.\n\nCan you tell me more about what specifically triggers this anxiety for you? Is it the unknown territory of a new industry, concerns about adapting to a new field, or something else entirely?",
+      "timestamp": "2026-07-16T10:02:09.106836",
+      "job_cards": [],
+      "report_path": null
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "user",
+      "content": "I want to do a full career assessment. Let us map my journey from where I am now to my target role in sustainability. Please ask me everything you need to know.",
+      "session_id": "default"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "user",
+      "content": "Find volunteering and free courses near me in sustainability",
+      "session_id": "71f9423d"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "assistant",
+      "content": "### Warm Acknowledgement\n\nYou're taking a great step towards transitioning into the Solar/EV industry by exploring volunteering and free courses in sustainability - I'm excited to help you find opportunities that align with your goals!\n\n### Relevant Results\n\n#### 1. FutureLearn - Free Sustainability and Climate Change Online Courses\n[FutureLearn](https://www.futurelearn.com/courses/collections/reducing-your-environmental-impact)\nFutureLearn offers short online courses on reducing environmental impact, which is highly relevant to the Solar/EV industry where sustainability is a top priority.\n* Explore courses on climate change, sustainable living, and environmental policy\n* Participate in discussions with experts and peers from around the world\n* Earn badges or certificates to demonstrate your knowledge and commitment\n\nHOW to reach out: Visit FutureLearn's website, browse their course collections, and register for free. You can also reach out to them through their [contact form](https://www.futurelearn.com/about/contact) or email [info@futurelearn.com](mailto:info@futurelearn.com).\n\n#### 2. Free Online Environment & Nature Courses - FutureLearn\n[FutureLearn](https://www.futurelearn.com/subjects/nature-and-environment-courses)\nFutureLearn's courses on environmental sustainability and nature are perfect for individuals looking to transition into the Solar/EV industry.\n* Learn about circular economy practices, sustainable design, and climate action\n* Develop crucial communication skills to educate and inspire others\n* Gain a certificate upon completion of a course\n\nHOW to reach out: Visit FutureLearn's website and explore their courses on environmental sustainability. You can also reach out to them through their [contact form](https://www.futurelearn.com/about/contact) or email [info@futurelearn.com](mailto:info@futurelearn.com).\n\n#### 3. Free Online Environmental Sustainability Training Course with Certificate\n[Free Courses in England](https://freecoursesinengland.co.uk/environmental-sustainability-course/)\nThis free online course is funded by the UK government and offers a level 2 qualification and accredited certificate.\n* Learn about environmental sustainability, climate change, and sustainable development\n* Understand how to reduce waste, conserve resources, and promote sustainable practices\n* Earn a certificate upon completion\n\nHOW to reach out: Visit Free Courses in England's website and register for the course. You can also contact them through their [contact form](https://freecoursesinengland.co.uk/contact/) or email [info@freecoursesinengland.co.uk](mailto:info@freecoursesinengland.co.uk).\n\n### Next Steps\n\n1. **Contact the organisations**: Reach out to each organisation and express your interest in their courses or opportunities.\n2. **Wait for a response (7 days)**: If you don't receive a reply within 7 days, follow up with a polite email or phone call.\n3. **Map your experience to your CV and target role**: Highlight the skills and knowledge you gain from these experiences and how they align with your Solar/EV industry goals.\n\n### Final Question\n\nWhat specific skills or areas of focus would you like to explore further in your sustainability journey, Admin?",
+      "extra": {
+        "job_cards": [],
+        "report_path": null
+      },
+      "session_id": "71f9423d"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "user",
+      "content": "Find volunteering and free courses near me in sustainability",
+      "session_id": "default"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "assistant",
+      "content": "**Warm Welcome**\n\nAdmin, I'm excited to help you find volunteering and free courses in sustainability near your location! You're looking to transition into the Solar/EV industry, and we'll explore opportunities that can enhance your skills and knowledge.\n\n### 1. FutureLearn - Reducing Your Environmental Impact\n\n[Free Sustainability and Climate Change Online Courses - FutureLearn](https://www.futurelearn.com/courses/collections/reducing-your-environmental-impact)\n\nFutureLearn offers a range of free online courses on sustainability, which can be relevant to your goal of entering the Solar/EV industry. These courses cover topics like reducing plastic waste, food waste reduction, and climate change mitigation.\n\n*   Explore course collections and find ones that align with your interests\n*   Enroll in a course to learn new skills and knowledge\n*   Share your experiences on social media using \\#FutureLearn and \\#Sustainability\n*   Participate in online discussions and forums\n\nTo get started, simply navigate to the FutureLearn website, browse through their courses, and enroll in one that resonates with you. You can also follow them on social media to stay updated on new course releases.\n\n### 2. Green List - Green List Roles and Seasonal Jobs\n\n[Green List roles — jobs we need people for in New Zealand](https://www.immigration.govt.nz/work/requirements-for-work-visas/green-list-occupations-qualifications-and-skills/green-list-roles-jobs-we-need-people-for-in-new-zealand/)\n\nThe Green List provides information on green list roles and seasonal jobs, which can be relevant to your goal of working in the Solar/EV industry. This resource highlights in-demand occupations, qualifications, and skills.\n\n*   Browse through the list of green list occupations\n*   Research job descriptions and required qualifications\n*   Explore opportunities for seasonal work or internships\n\nTo get involved, visit the Immigration New Zealand website, navigate to the Green List section, and browse through the list of occupations. You can also reach out to their customer service team via email at [info@immigration.govt.nz](mailto:info@immigration.govt.nz) or phone 0800 775 774.\n\n### 3. Coursera - Sustainability Courses and Certificates\n\n[Best Sustainability Courses & Certificates \\[2026\\] | Coursera](https://www.coursera.org/courses?query=sustainability)\n\nCoursera offers a wide range of sustainability courses and certificates, which can be relevant to your goal of entering the Solar/EV industry. These courses cover topics like sustainable development, environmental management, and climate change.\n\n*   Browse through Coursera's course catalog\n*   Explore courses on sustainability and related topics\n*   Enroll in a course or certificate program\n\nTo get started, visit the Coursera website, navigate to their course catalog, and search for sustainability-related courses. You can also reach out to their customer service team via email at [support@coursera.org](mailto:support@coursera.org) or phone 1-888-COURSERA.\n\n### 4. FutureLearn - Online Sustainability Courses\n\n[Online Sustainability Courses - Learn About the Environment - FutureLearn](https://www.futurelearn.com/subjects/nature-and-environment-courses/sustainability)\n\nFutureLearn offers a range of online sustainability courses, which can be relevant to your goal of entering the Solar/EV industry. These courses cover topics like sustainable development, environmental management, and climate change.\n\n*   Browse through FutureLearn's course catalog\n*   Explore courses on sustainability and related topics\n*   Enroll in a course or certificate program\n\nTo get started, visit the FutureLearn website, navigate to their course catalog, and search for sustainability-related courses. You can also reach out to their customer service team via email at [support@futurelearn.com](mailto:support@futurelearn.com) or phone 01223 761521.\n\n**Next Steps**\n\n### Step 1: Contacting Organizations\n\nTo get involved in volunteering opportunities or free courses, please follow these steps:\n\n*   Reach out to the organization's customer service team via email or phone\n*   Introduce yourself and express your interest in their work\n*   Mention your goal of entering the Solar/EV industry and how you believe their organization can support you\n\nExample Email:\n\n\"Dear \\[Customer Service Team\\],\n\nI'm Admin, a recent transitioner looking to enter the Solar/EV industry. I came across your organization's work on \\[related topic\\] and was impressed by your efforts. I'd love to learn more about volunteering opportunities or free courses that can help me enhance my skills and knowledge.\n\nCould you please provide me with information on how to get involved?\n\nBest regards,\nAdmin\"\n\n### Step 2: Following Up\n\nIf you don't receive a response after 7 days, please follow up via email or phone. Be polite and reiterate your interest in their organization's work.\n\nExample Email:\n\n\"Dear \\[Customer Service Team\\],\n\nI hope this email finds you well. I'm following up on my previous email regarding volunteering opportunities or free courses with your organization. I'd love to hear back from you soon.\n\nBest regards,\nAdmin\"\n\n### Step 3: Mapping Experience to CV and Target Role\n\nWhen applying for jobs in the Solar/EV industry, be sure to highlight any relevant skills or knowledge gained through volunteering or free courses. This can include:\n\n*   Mentioning specific course modules or projects\n*   Highlighting soft skills developed through volunteering\n*   Emphasizing how these experiences align with your target role\n\n**What's Next for You?**\n\nAdmin, now that you have a list of relevant organizations and opportunities, what would you like to do next? Are there any specific areas of sustainability or solar/EV topics you'd like to explore further?",
+      "extra": {
+        "job_cards": [],
+        "report_path": null
+      },
+      "session_id": "default"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "user",
+      "content": "Help me map my career transition into sustainability. I want to understand the steps involved.",
+      "session_id": "default"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "assistant",
+      "content": "**Huge Congratulations on Taking the First Step!**\n\nAdmin, I'm beyond thrilled that you're taking a proactive approach to mapping your career transition into sustainability! You've got an exciting target role in mind - the Solar/EV industry - and I'm here to support you every step of the way!\n\nLet's break down the steps involved in transitioning into this new industry. Here's what we can do:\n\n• **Identify Transferable Skills**: We'll start by exploring how your existing skills in Renewable Energy can be applied to the Solar/EV industry.\n• **Gain Relevant Experience**: Next, we'll look for volunteering and free courses that can give you hands-on experience in the Solar/EV sector.\n• **Network with Professionals**: I'll help you connect with professionals already working in the Solar/EV industry near your location.\n\nBefore we dive into the next steps, I want to check in: What specific aspects of transitioning into the Solar/EV industry are you most excited about? Is it the technology, the impact on the environment, or something else entirely?\n\n**What do you say we get started with gaining relevant experience? Shall we explore some volunteering opportunities near MK9 1GD today?",
+      "extra": {
+        "job_cards": [],
+        "report_path": null
+      },
+      "session_id": "default"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "user",
+      "content": "yes",
+      "session_id": "default"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "assistant",
+      "content": "**Woo-hoo! You're a step closer to making your career transition into the Solar/EV industry happen, Admin!**\n\nI've got some exciting news for you - I found a fantastic online platform that offers free courses in sustainability near you. **FutureLearn**, which we discussed earlier, has a course on \"Reducing Your Environmental Impact\" that's just what you need to get started!\n\nTo help you further, I'd love to know: What specific aspects of the Solar/EV industry excite you the most? Is it the innovation, the environmental impact, or something else entirely?\n\nLet's keep the momentum going and identify some local volunteering opportunities that can give you hands-on experience in the field!",
+      "extra": {
+        "job_cards": [],
+        "report_path": null
+      },
+      "session_id": "default"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "user",
+      "content": "Feeling stuck is really common in career transitions. Tell me more about it.",
+      "session_id": "default"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "assistant",
+      "content": "**Warm Acknowledgement**\n\nAdmin, I can sense your frustration about feeling stuck in your career transition. It's completely normal to experience this during a significant change like yours. You've got an exciting target role in mind - the Solar/EV industry - and we'll work together to overcome these obstacles.\n\n**Understanding Career Transition Fears**\n\nLet's break down what might be causing your feelings of being stuck:\n\n*   You're transitioning from one industry (Renewable Energy) to another (Solar/EV), which can be daunting.\n*   Uncertainty about the process and how to get there might also be contributing to these emotions.\n\n**Actionable Steps**\n\nTo move forward, I recommend taking small steps today. Here are a few concrete actions you can take:\n\n1.  Explore job descriptions for Solar/EV industry roles on LinkedIn (specifically in your area). You can check the job listings for [Solar Energy jobs in United Kingdom](https://uk.linkedin.com/jobs/solar-energy-jobs) and [700 Solar jobs in London Area, United Kingdom](https://uk.linkedin.com/jobs/solar-jobs-london).\n2.  Research companies in the Solar/EV industry that align with your values and goals. Look for organizations with a strong commitment to sustainability.\n3.  Reach out to professionals in the field through LinkedIn connections or informational interviews. Ask about their experiences, challenges, and advice.\n\n**Next Step**\n\nFor today's task, I'd like you to explore these job listings and start researching companies that interest you. What specific areas of the Solar/EV industry excite you the most?",
+      "extra": {
+        "job_cards": [],
+        "report_path": null
+      },
+      "session_id": "default"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "user",
+      "content": "I want to do a full career assessment. Let us map my journey from where I am now to my target role in sustainability. Please ask me everything you need to know.",
+      "session_id": "71f9423d"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "assistant",
+      "content": "**Welcome, Admin!**\n\nI'm thrilled to embark on this career assessment journey with you as we map your path from tech AI transformation into a fulfilling role in the solar/EV industry. Let's dive right in!\n\n### Relevant Results:\n\n#### 1. **Jobs in the Sustainability Sector** ([Environment Job](https://environmentjob.co.uk/jobs/50-sustainability))\n\nEnvironment Job is an online platform showcasing various sustainability roles across the UK. As you transition into the solar/EV industry, this resource will help you discover job openings that align with your goals.\n\n• Browse 26 current job listings in the sustainability sector\n• Set up job alerts for specific roles or industries (e.g., solar energy)\n• Reach out to Environment Job via their contact form on their website\n\t+ Mention your goal of transitioning into the solar/EV industry and request information on upcoming job openings\n\n#### 2. **Sustainability Jobs - 100% Verified Job Listings** ([JobLeads](https://www.bing.com/aclick?ld=e8KZjvR6CZp1pvpsYxozyB0DVUCUzABgEsCJS-ljwl0u-mHU20ksYyMb_FOqxiK8NMstkEaPqeosYncJDfBB-zfoYQFG7GiztUUvegfy3zyDIDahBSYd3yBrJ4bF5b-W5WM1v11Zd4mVn_hwv8yXXU8cp_ywYpXXQ-Lwg3ehKxDkpsvBBwwd6-8ehr_p3dTCrm37aF6w))\n\nJobLeads offers a comprehensive job search platform, focusing on verified listings in the sustainability sector. As you explore solar/EV opportunities, this resource will help you find relevant roles.\n\n• Search 100% verified job listings across various industries (including energy and environment)\n• Filter results by location (e.g., Milton Keynes) or specific keywords (e.g., solar energy)\n• Contact JobLeads via their website's contact form\n\t+ Share your career goals and express interest in exploring opportunities in the solar/EV industry\n\n#### 3. **Sustainability Officer Jobs - Management Jobs** ([Jobrapido](https://www.bing.com/aclick?ld=e8M6GPVmv0t7Sf83JGdjlbhjVUCUy5yrTmgjc0XscMRijoPbQ5k_etE1mfU3scBNUSjQRnvNfi1x9xaDjC5fe8YwYfF4lmdnys0L37S1QfUYR16CmV3dj1v0NEwOUmoo4ZncX2-TyzzdmaV2bS1gvwk_2mpcinyf3CoWIZKIoZ2kyPa-22MsIAJmxuTQmF8p3isHSkbw))\n\nJobrapido's platform features a wide range of job listings, including sustainability officer roles. As you seek to transition into the solar/EV industry, this resource will help you explore relevant positions.\n\n• Browse over 800,000 job listings, filtering by keywords (e.g., sustainability, energy)\n• Search for specific roles, such as Sustainability Officer or Environmental Manager\n• Contact Jobrapido via their website's contact form\n\t+ Express interest in exploring opportunities in the solar/EV industry and request information on relevant job openings\n\n### Next Steps:\n\n1. **Contact**:\nReach out to each organization listed above via their contact forms or email addresses (if provided). Be sure to mention your goal of transitioning into the solar/EV industry and express interest in exploring opportunities.\n2. **Follow-up**: If you don't receive a response within 7 days, follow up with a polite email or phone call to inquire about potential job openings.\n3. **CV Mapping**:\nAs you explore these opportunities, remember to map your experiences to your target role. Highlight relevant skills and qualifications that align with the solar/EV industry.\n\n### What's Next?\n\nWhat specific area within the solar/EV industry would you like to explore further? Are there any particular job roles or industries (e.g., manufacturing, installation) you're interested in? Please share your thoughts!",
+      "extra": {
+        "job_cards": [],
+        "report_path": null
+      },
+      "session_id": "71f9423d"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "user",
+      "content": "I want to do a full career assessment. Let us map my journey from where I am now to my target role in sustainability. Please ask me everything you need to know.",
+      "ts": "2026-07-17T11:49:21.606311"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "user",
+      "content": "Run a skills gap assessment for my transition to my target role",
+      "ts": "2026-07-17T11:50:59.971200"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "user",
+      "content": "I want to do a full career assessment. Let us map my journey from where I am now to my target role in sustainability. Please ask me everything you need to know.",
+      "ts": "2026-07-19T10:51:51.329974"
+    },
+    {
+      "uid": "5b37040e6200edb3c7f409e994076872",
+      "role": "assistant",
+      "content": "[AI error: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [Errno 61] Connection refused\"))]",
+      "ts": "2026-07-19T10:51:55.811438",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from jobs in MK16 8JJ?",
+        "Find Solar/ EV Industry role (not specified) jobs near MK16 8JJ",
+        "Build me a 30-day action plan around this"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "20ae38c9-c242-44b3-8ece-c94cc94ef3cf",
+      "name": "CV Gap Analysis",
+      "path": "/view-skill/analysis-1784191552/report",
+      "type": "cv_analysis",
+      "timestamp": "2026-07-16 09:45",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "a7903a82-0cb0-43e0-a066-6c886fe398a4",
+      "name": "Daryna Vakulenko - CV -  copy.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-16 09:45"
+    }
+  ],
+  "saved_items": [
+    {
+      "type": "resource",
+      "title": "Report",
+      "url": "/view-skill/analysis-1784191552/report",
+      "folder_id": "resources",
+      "user_id": "5b37040e6200edb3c7f409e994076872",
+      "saved_at": "2026-07-16T09:46:31.306305",
+      "id": "877e9b2e-fd28-4ff4-8009-efce463b330b"
+    }
+  ],
+  "folders": [
+    {
+      "id": "d80993ca-8fcb-43cb-afe0-35cdf91246d2",
+      "name": "gaps",
+      "created_at": "2026-07-16T09:46:47.353849",
+      "colour": "#d97706"
+    }
+  ],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JJ",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [
+    {
+      "id": "68e68886-1f49-44aa-a405-7f94abdb13e0",
+      "url": "https://cryptojobslist.com/web3",
+      "title": "136+ Web3 Jobs July 2026 | Apply Today",
+      "body": "Web3 jobs are positions working on blockchain, cryptocurrency, and decentralized technology projects.How much do Web3 jobs pay? Web3 jobs typically offer competitive salaries ranging from $80,000 to $",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-19T10:51:55.809536"
+    },
+    {
+      "id": "b00f5728-acf5-4565-9314-9248d373270d",
+      "url": "https://www.environmentjob.co.uk/jobs/106429-junior-consultant",
+      "title": "environmentjob.co.uk/jobs/106429-junior-consultant",
+      "body": "The role will primarily involve supporting project delivery within the...",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-19T10:51:55.809510"
+    },
+    {
+      "id": "1d70f739-36de-4e07-9d44-0c9025f62655",
+      "url": "https://environmentjob.co.uk/",
+      "title": "Environmentjob - The UK's Most Interesting Environmental Jobs",
+      "body": "We have a number of full-time self-employed vacancies for an immediate start in our regional tree health survey teams.",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T11:20:22.667176"
+    },
+    {
+      "id": "f60e9895-2b48-4e04-8966-4cff65377f98",
+      "url": "https://www.bing.com/aclick?ld=e8M6GPVmv0t7Sf83JGdjlbhjVUCUy5yrTmgjc0XscMRijoPbQ5k_etE1mfU3scBNUSjQRnvNfi1x9xaDjC5fe8YwYfF4lmdnys0L37S1QfUYR16CmV3dj1v0NEwOUmoo4ZncX2-TyzzdmaV2bS1gvwk_2mpcinyf3CoWIZKIoZ2kyPa-22MsIAJmxuTQmF8p3isHSkbw&u=aHR0cHMlM2ElMmYlMmZ1ay5qb2JyYXBpZG8uY29tJTJmc3VzdGFpbmFiaWxpdHktb2ZmaWNlci1qb2JzJTNmciUzZGF1dG8lMjZ1dG1fYWdpZCUzZDEzMDk1MTg1MTUyOTU0ODUlMjZ1dG1fa3dpZCUzZGt3ZC04MTg0NDk4Njc0OTI1MSUzYWxvYy00MTM5JTI2ZXh0JTNkJTI2aW50JTNkNjkyMDklMjZwaHklM2Q0MjAzOCUyNm10JTNkcCUyNmRldiUzZGMlMjZuZXR3b3JrJTNkbyUyNm1zY2xraWQlM2RhMzZlMmMzZGFkNmExYTQ3MjkwNTQ2NjdhY2VkNTkzMSUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZFRYX0ExMS1CMV9Ub3AlMjUyMEV4ZWN1dGl2ZXMlMjZ1dG1fdGVybSUzZHN1c3RhaW5hYmlsaXR5JTI1MjBvZmZpY2VyJTI1MjBqb2JzJTI2dXRtX2NvbnRlbnQlM2RBMTEtQjEtQzAxMTAzLUQwMF9DaGllZiUyNTIwU3VzdGFpbmFiaWxpdHklMjUyME9mZmljZXJfSk9CX0JNTQ&rlid=a36e2c3dad6a1a4729054667aced5931",
+      "title": "Sustainability Officer Jobs - Management Jobs",
+      "body": "Scan over 800,000 positions and find your new Job based on your needs. Sustainability Officer Jobs. All latest vacancies listed on Jobrapido. Apply.",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T11:20:22.667164"
+    },
+    {
+      "id": "b858f8f9-1bdb-41e6-bb06-d0ffaaee7f40",
+      "url": "https://www.bing.com/aclick?ld=e8YZ1x0T9qQmCCb4SmiXmiKzVUCUytwe41KLPi_vSvRo3CqOPzVF2_IBjK7kN5Ju7BxHiAjS-rgBr7g9MpdzxINoFCK_zM8PZ7jjVNImpSl2QXsy4SAonK18SbWrH34yNoaf369cDHr-3XmMOqdd-LXVn4hW4Vw7VwhfMaN8GRoFfAqlbq8KfUW-8736_6jlMNcWs8yw&u=aHR0cHMlM2ElMmYlMmZ3d3cuZmluZGV2ZXJ5am9iLmNvLnVrJTJmJTNmYWQlM2RiaW5nJTI2a2V5d29yZHMlM2RzdXN0YWluYWJpbGl0eSUyNTIwam9icyUyNmFkdHlwZSUzZFNlYXJjaCUyNmNyZWF0aXZlJTNkJTI2Z29vZ2xla2V5d29yZHMlM2RzdXN0YWluYWJpbGl0eSUyNmJjYSUzZDY1MDE2MjE1MCUyNmJhZyUzZDEzMjkzMTE4NTkwNjYwOTUlMjZiYWQlM2Q4MzA4MjIyMDc5MDMyNyUyNmxvYyUzZDQyMDM4JTI2Ymt3JTNka3dkLTgzMDgyOTA4MDk0MzY4JTNhbG9jLTE4OCUyNmdlb2ZvcmNlJTNkR0IlMjZsb2NpZCUzZDQyMDM4JTI2cG9zJTNkJTI2Y2lkJTNkNjUwMTYyMTUwJTI2YWlkJTNkMTMyOTMxMTg1OTA2NjA5NSUyNm1zY2xraWQlM2Q5YzJlNDg4YTA5NDcxNDdlMjA0ZDIyZDAwOGMwMTc5MiUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZDEwMCUyNTIwVUslMjUyMGFsbCUyNTIwb3RoZXIlMjUyMHRhZ3MlMjZ1dG1fdGVybSUzZHN1c3RhaW5hYmlsaXR5JTI1MjBqb2JzJTI2dXRtX2NvbnRlbnQlM2RTdXN0YWluYWJpbGl0eQ&rlid=9c2e488a0947147e204d22d008c01792",
+      "title": "Sustainability - Sustainability in Milton Keynes",
+      "body": "Find 1,000s of Sustainability jobs now.",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T11:20:22.667146"
+    },
+    {
+      "id": "f7951fcb-ccc5-43a4-99cf-b2cca8ed6bca",
+      "url": "https://www.bing.com/aclick?ld=e8KZjvR6CZp1pvpsYxozyB0DVUCUzABgEsCJS-ljwl0u-mHU20ksYyMb_FOqxiK8NMstkEaPqeosYncJDfBB-zfoYQFG7GiztUUvegfy3zyDIDahBSYd3yBrJ4bF5b-W5WM1v11Zd4mVn_hwv8yXXU8cp_ywYpXXQ-Lwg3ehKxDkpsvBBwwd6-8ehr_p3dTCrm37aF6w&u=aHR0cHMlM2ElMmYlMmZ3d3cuam9ibGVhZHMuY29tJTJmcmVnaXN0cmF0aW9uJTJmOTklMmZqb2JzJTJmZW4lMmZnbG9iYWwlMmZFeGNsdXNpdmUtU3VzdGFpbmFiaWxpdHktSm9icyUyZmFsbCUyZnN1c3RhaW5hYmlsaXR5JTNmdXRtX3NvdXJjZSUzZG1pY3Jvc29mdC1hZHNfeHgtc2VhcmNoX1hYX18lMjZ1dG1fY29udGVudCUzZEFMTCU3Y0VOJTdjWFglN2NYWF9TdXN0YWluYWJpbGl0eS1Kb2JzX3NlYXJjaC1qb2JzZWFyY2hfOTklMjZ1dG1fbWVkaXVtJTNkc2VhLWFkJTI2dXRtX2NhbXBhaWduJTNkQUxMJTdjRU4lN2NYWCU3Y1hYJTI2bXNjbGtpZCUzZDBlYmRiNmMwODBlZjE4ZGY4OGNmZGM5YTgxNjg0YWUy&rlid=0ebdb6c080ef18df88cfdc9a81684ae2",
+      "title": "Sustainability Jobs - 100% Verified Job Listings",
+      "body": "Skip irrelevant jobs and reach the right ones fast. Spend your time applying, not hunting. 80% of top jobs aren’t on major job sites. Access hidden opportunities with JobLeads! Jobs From 40K Sources ·",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T11:20:22.667126"
+    },
+    {
+      "id": "e03a88e5-37ca-49b8-8f9a-0850d9ccaeb6",
+      "url": "https://www.bing.com/aclick?ld=e8iI_AmfTSt0pAiihA4Ic5JzVUCUyxV6Njmp4tCPAahiBZ-vabGSJfrdgE9DOBskjw-ANi9bPOZa344VvukdTgP35ZGT4IC7aQKOQlEvn_27ZFxQC8QPQq6r_vKlsZG77JeXkO3JAHtoaJOgEfzM8MUpGbvLHBIueDclp4XjwXXxwJYxW8AWhaOSCEVKXS71Lg447JaQ&u=aHR0cHMlM2ElMmYlMmZ3d3cucmVlZC5jby51ayUyZmpvYnMlMmZqb2JzJTNmZ2Nsc3JjJTNkM3AuZHMlMjYlMjZrbF9jYW1wYWlnbiUzZDY1MDE0Nzk3MCUyNm1zY2xraWQlM2RlYjM0OWQxZDgzOTkxOGM1N2YxNmY3NDc4MjFlMjJjYiUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEpTX05CX0FjcV9HRU4tVUtfR0VPX1BTX01pY3Jvc29mdCUyNnV0bV90ZXJtJTNkZmluZCUyNTIwYSUyNTIwam9iJTI2dXRtX2NvbnRlbnQlM2RHZW5lcmljc19VS19Kb2ItVHlwZQ&rlid=eb349d1d839918c57f16f747821e22cb",
+      "title": "Apply Online In Minutes - Easy Apply In A Few Steps",
+      "body": "Looking to get that new job feeling? Search for jobs on Reed.co.uk today. Take your job search to the next level on the UK's #1 job site with expert career advice. CV Tips and Advice · Easy Applicatio",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T11:20:22.667100"
+    },
+    {
+      "id": "07e5bab7-fdcd-4ea7-8ccb-a0441658b6fb",
+      "url": "https://environmentjob.co.uk/jobs/50-sustainability|45",
+      "title": "Jobs in the Sustainability or Food, Farming & Horticulture Sectors",
+      "body": "1 week ago - Looking for jobs in the sustainability or food, farming & horticulture sectors? Browse 41 jobs on environmentjob. Apply today!",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T11:20:22.667079"
+    },
+    {
+      "id": "335ddfad-dc85-4372-b200-d124656ab353",
+      "url": "https://environmentjob.co.uk/jobs/50-sustainability",
+      "title": "Jobs in the Sustainability Sector",
+      "body": "5 days ago - Looking for jobs in the sustainability sector? Browse 26 jobs on environmentjob. Apply today!",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T11:20:22.666753"
+    },
+    {
+      "id": "76ee3d82-753f-4d72-ab94-b57e2cf19847",
+      "url": "https://makerworld.com/en",
+      "title": "MakerWorld: Download Free 3D Models",
+      "body": "Leading 3D printing model community for designers and makers. Download thousands of 3D models and stl models for free, and your No.1 option for multicolor 3D models.",
+      "type": "courses",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:42:41.952154"
+    },
+    {
+      "id": "2234d86e-1c3a-45bd-8a6b-63f9d7c3eab7",
+      "url": "https://www.coursera.org/courses?query=sustainability",
+      "title": "Best Sustainability Courses & Certificates [2026] | Coursera",
+      "body": "Yes. You can start learning sustainability on Coursera for free in two ways:",
+      "type": "courses",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:42:41.952130"
+    },
+    {
+      "id": "cd62b186-d36e-4270-bc6e-e04dd5099d8e",
+      "url": "https://www.cpduk.co.uk/courses/centre-of-sustainability-excellence-certified-sustainability-esg-practitioner-program",
+      "title": "Certified Sustainability (ESG) Practitioner Program. - Courses | The CPD Certification Service",
+      "body": "This challenging three-day digital training offered by CSE aims to give you all the latest practical tools and resources required to implement or upscale corporate sustainability in order to drive you",
+      "type": "courses",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:38:01.406714"
+    },
+    {
+      "id": "f3ecc65e-4afc-4d19-87ff-e814faae49c8",
+      "url": "https://instituteofsustainabilitystudies.com/sustainability-certificate-courses/",
+      "title": "Sustainability Certificate Courses | Certified Online Education | ISS",
+      "body": "April 23, 2026 - This CPD-certified and university credit-rated course covers all key sustainability issues and provides the latest sustainability insights, practical tools, and templates to help you ",
+      "type": "courses",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:38:01.406702"
+    },
+    {
+      "id": "2dd86ebd-bead-43fb-897b-3a37cc416552",
+      "url": "https://freecoursesinengland.co.uk/environmental-sustainability-course/",
+      "title": "Free Online Environmental Sustainability Training Course with Certificate",
+      "body": "The free online environmental sustainability training course with certificate is funded by UK government. Gain a level 2 qualification and accredited certificate.",
+      "type": "courses",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:38:01.406695"
+    },
+    {
+      "id": "3ad786d1-56b5-4203-8126-c96d8f88be53",
+      "url": "https://www.theclick.gg/cookie-run-kingdom-codes-july-2026/",
+      "title": "Cookie Run Kingdom Codes July 2026: 9 Active Codes for Free...",
+      "body": "Details. Last Updated. July 1, 2026. Active Codes. 9. Main Rewards. Crystals, Rainbow Cubes, Cookie Cutters, Choco Chalk.",
+      "type": "courses",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:38:01.406689"
+    },
+    {
+      "id": "c9f8b795-649d-4e33-ae2d-7f03bb525234",
+      "url": "https://www.futurelearn.com/subjects/nature-and-environment-courses",
+      "title": "Free Online Environment & Nature Courses - FutureLearn",
+      "body": "Adopt circular economy practices into your business to help cities thrive through smart design and sustainable strategy. ... Become an advocate for change as you gain the crucial communication skills ",
+      "type": "courses",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:38:01.406681"
+    },
+    {
+      "id": "fcd6655d-a66c-43ee-9918-8dca24d65c14",
+      "url": "https://www.futurelearn.com/subjects/nature-and-environment-courses/sustainability",
+      "title": "Online Sustainability Courses - Learn About the Environment - FutureLearn",
+      "body": "Whether you’re a new learner or someone looking to make your business more sustainable, FutureLearn offers flexible online sustainability courses that allow you to study the subject in your own time.",
+      "type": "courses",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:38:01.406657"
+    },
+    {
+      "id": "ec831cac-e92b-4778-82f5-6fcac746c1ac",
+      "url": "https://www.futurelearn.com/courses/collections/reducing-your-environmental-impact",
+      "title": "Free Sustainability and Climate Change Online Courses - FutureLearn",
+      "body": "Learn new skills, pursue your interests or advance your career with our short online courses. ... Following government incentive, more than 100 UK businesses and organisations have signed a pledge to ",
+      "type": "courses",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:38:01.406559"
+    },
+    {
+      "id": "5b82085d-393f-448c-b677-b96a546a3cb1",
+      "url": "https://www.environmentjob.co.uk/jobs?job_level=1&last_filter=job_level&last_value=1&show_all=true",
+      "title": "Environmental jobs | Environmentjob.co.uk",
+      "body": "The latest UK based environmental jobs - 34 found. Browse great conservation, wildlife, ecology, sustainability and environmental education jobs.The Oxford Real Farming Conference (ORFC) is looking fo",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:36:54.521759"
+    },
+    {
+      "id": "d064de7a-389a-4054-901c-f51191db78cb",
+      "url": "http://www.environmentjob.co.uk/",
+      "title": "environmentjob.co.uk",
+      "body": "Browse great conservation, wildlife, ecology, sustainability and environmental...",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:36:54.521753"
+    },
+    {
+      "id": "c4fef134-6c7a-4098-8b79-929df6bbc260",
+      "url": "https://environmentjob.co.uk/50-sustainability",
+      "title": "Sustainability Jobs, Volunteering, Courses... | Environmentjob.co.uk",
+      "body": "Sustainability. Sustainable Transport.This sector covers sustainability consultancy, recycling, corporate sustainability and CSR.",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:36:54.521748"
+    },
+    {
+      "id": "0351a8ba-8fd6-4920-9851-37df2508d719",
+      "url": "https://www.greenjobs.co.uk/",
+      "title": "GreenJobs, Environmental Jobs and Renewable Energy Jobs in the UK",
+      "body": "GreenJobs lets you find Environmental Jobs and Renewable Energy Jobs from top employers and recruitment agencies. Search the latest jobs and apply today!",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:36:54.521742"
+    },
+    {
+      "id": "3af614b1-dca9-4050-9ae0-aa74bb3b88ef",
+      "url": "https://www.environmentjob.co.uk/jobs/34-Conservation?page=1",
+      "title": "Link to environmentjob.co.uk",
+      "body": "The site owner hides the web page description.",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:36:54.521736"
+    },
+    {
+      "id": "f373866d-f8ce-496c-a3aa-e80b2635146c",
+      "url": "https://www.reed.co.uk/jobs/sustainability-jobs",
+      "title": "Sustainability Jobs - Sustainability Vacancies | Reed.co.uk",
+      "body": "Find Sustainability jobs with Reed.co.uk. Discover Sustainability vacancies on offer, across the UK, helping you ❤ Mondays.",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:36:54.521729"
+    },
+    {
+      "id": "7d315018-9eca-433a-9f8f-7f37d54acf64",
+      "url": "https://www.greenjobs.co.uk/browse-jobs/sustainability-jobs/",
+      "title": "Sustainability Jobs in the UK",
+      "body": "Sustainability Jobs and Careers from GreenJobs - the number one job board for Sustainability Jobs in the United Kingdom and globally. Candidates register now.",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:36:54.521720"
+    },
+    {
+      "id": "0fa1838d-fb34-4eac-9a37-29d7d4a5e654",
+      "url": "https://www.greenjobs.co.uk/browse-jobs/sustainability-jobs/london/",
+      "title": "Sustainability Jobs, London in the UK",
+      "body": "Sustainability Jobs, London and Careers from GreenJobs - the number one job board for Sustainability Jobs, London in the United Kingdom and globally. Candidates register now.",
+      "type": "jobs",
+      "location": "MK9 1GD",
+      "saved_at": "2026-07-17T10:36:54.521698"
+    }
+  ],
+  "hobby_skill_map": [],
+  "skill_validations": {
+    "ai": {
+      "status": "validated",
+      "updated_at": "2026-07-17T11:07:25.058503",
+      "cert_file": "null_cv.pdf"
+    }
+  },
+  "profile_complete": false,
+  "onboarding_done": false,
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "excited",
+        "ts": "2026-07-16T09:49:54.143126"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-16T09:54:33.873278"
+      },
+      {
+        "emotion": "anxious",
+        "ts": "2026-07-16T10:02:19.856481"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-17T10:38:16.931611"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-17T10:42:55.654171"
+      },
+      {
+        "emotion": "confident",
+        "ts": "2026-07-17T10:47:16.358039"
+      },
+      {
+        "emotion": "stuck",
+        "ts": "2026-07-17T11:04:10.134933"
+      }
+    ],
+    "blockers": [
+      "transitioning to a new industry",
+      "uncertainty about career transition"
+    ],
+    "preferred_tone": "warm",
+    "response_depth": "balanced",
+    "milestones_mentioned": [
+      "found a free course on sustainability near them using FutureLearn"
+    ],
+    "total_exchanges": 7,
+    "encouragement_count": 2,
+    "key_insights": [
+      "The user is transitioning from Renewable Energy and wants to enter the Solar/EV Industry role, but hasn't specified their current position or any known blockers.",
+      "The user is excited about transitioning into the Solar/EV industry, but concerned about adapting to a new field.",
+      "The user is anxious about a potential career transition to the Solar/EV Industry and is uncertain about how to overcome their current blockers.",
+      "User is interested in transitioning to the Solar/EV industry and requires help finding relevant volunteering and free courses in sustainability.",
+      "The user is excited about transitioning into the Solar/EV industry and needs help finding volunteering and free courses in sustainability near their location.",
+      "The user has shown confidence in their career transition plans and is actively seeking new skills to support their goal of entering the Solar/EV industry.",
+      "The user is feeling stuck in their career transition, particularly with transitioning to a new industry and uncertainty about the change."
+    ],
+    "current_emotion": "stuck"
+  },
+  "journey": {
+    "xp": 75,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [
+      {
+        "id": "7d6afda6-0608-443f-af7c-7eb23bd061ff",
+        "title": "found a free course on sustainability near them using FutureLearn",
+        "type": "achievement",
+        "icon": "🏅",
+        "xp": 75,
+        "earned_at": "2026-07-17T10:47:16.696787"
+      }
+    ],
+    "weekly_checkins": [
+      {
+        "date": "2026-07-17T11:03:16.072514",
+        "mood": "stuck",
+        "note": ""
+      }
+    ],
+    "streak_days": 1,
+    "last_active_date": "2026-07-19",
+    "current_mood": "stuck"
+  },
+  "chat_sessions": {}
+}

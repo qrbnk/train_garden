@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>My Journey — Train Garden</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
+<style>
+  * { font-family:'Inter',sans-serif; }
+  body { background:#f8f9fa; height:100vh; overflow:hidden; }
+  .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 300; font-size:18px; }
+  .fill { font-variation-settings:'FILL' 1,'wght' 400; }
+
+  ::-webkit-scrollbar { width:4px; }
+  ::-webkit-scrollbar-thumb { background:#d1d5db; border-radius:99px; }
+  .scroll-hide::-webkit-scrollbar { display:none; }
+
+  /* Nav */
+  .nav-item { display:flex; align-items:center; gap:12px; padding:8px 16px; color:#6b7280; border-radius:8px; cursor:pointer; font-size:14px; transition:all .15s; width:100%; text-align:left; }
+  .nav-item:hover { background:#f3f4f6; color:#111827; }
+  .nav-item.active { background:#f3f4f6; color:#111827; font-weight:500; }
+
+  /* XP bar */
+  .xp-bar { height:8px; background:#e5e7eb; border-radius:99px; overflow:hidden; }
+  .xp-fill { height:100%; background:linear-gradient(90deg,#005d42,#10b981); border-radius:99px; transition:width .8s cubic-bezier(.34,1.56,.64,1); }
+
+  /* Skill card */
+  .skill-card { background:white; border:1px solid #e5e7eb; border-radius:12px; padding:16px; transition:all .15s; }
+  .skill-card:hover { border-color:#d1d5db; box-shadow:0 2px 12px rgba(0,0,0,.06); }
+
+  /* Skill level dots */
+  .lvl-dot { width:10px; height:10px; border-radius:50%; border:2px solid #e5e7eb; background:white; transition:all .3s; }
+  .lvl-dot.filled { background:#005d42; border-color:#005d42; }
+  .lvl-dot.gap    { background:#fef3c7; border-color:#f59e0b; }
+
+  /* Progress ring SVG */
+  .ring-track { fill:none; stroke:#e5e7eb; stroke-width:8; }
+  .ring-fill  { fill:none; stroke:#005d42; stroke-width:8; stroke-linecap:round;
+                transform:rotate(-90deg); transform-origin:50% 50%;
+                transition:stroke-dashoffset 1s cubic-bezier(.34,1.56,.64,1); }
+
+  /* Radar chart */
+  .radar-polygon { fill:rgba(0,93,66,.15); stroke:#005d42; stroke-width:2; transition:all .5s; }
+  .radar-target  { fill:none; stroke:#e5e7eb; stroke-width:1; stroke-dasharray:4,4; }
+  .radar-axis    { stroke:#d1d5db; stroke-width:1; }
+  .radar-label   { font-size:10px; fill:#6b7280; font-family:'Inter',sans-serif; }
+
+  /* Mood button */
+  .mood-btn { padding:10px 16px; border:2px solid #e5e7eb; border-radius:10px; background:white; cursor:pointer; transition:all .15s; font-size:18px; }
+  .mood-btn:hover { border-color:#9ca3af; transform:scale(1.05); }
+  .mood-btn.selected { border-color:#005d42; background:#f0fdf4; }
+
+  /* Milestone badge */
+  .badge { display:flex; align-items:center; gap:10px; padding:10px 14px; background:white; border:1px solid #e5e7eb; border-radius:10px; }
+  .badge-icon { width:36px; height:36px; border-radius:8px; background:#f0fdf4; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+
+  /* Celebration modal */
+  #celebration { transition:opacity .3s, transform .3s; }
+  #celebration.hidden { opacity:0; pointer-events:none; transform:scale(.9); }
+  @keyframes confetti-fall { 0%{transform:translateY(-100%) rotate(0)} 100%{transform:translateY(110vh) rotate(720deg)} }
+  .confetti-piece { position:fixed; top:-20px; width:8px; height:8px; border-radius:2px; animation:confetti-fall linear forwards; pointer-events:none; z-index:9999; }
+
+  /* Chat bubbles */
+  .cbubble-user { background:#111827; color:white; border-radius:16px 16px 4px 16px; }
+  .cbubble-bot { background:white; border:1px solid #e5e7eb; border-radius:16px 16px 16px 4px; color:#111827; }
+  .cbubble-bot a { color:#005d42; text-decoration:underline; }
+  .cbubble-bot strong { font-weight:600; }
+
+  /* Typing dots */
+  .dot { width:6px; height:6px; background:#9ca3af; border-radius:50%; animation:bounce 1.2s infinite; display:inline-block; }
+  .dot:nth-child(2){animation-delay:.2s}.dot:nth-child(3){animation-delay:.4s}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+  /* Resource chip */
+  .res-chip { display:inline-flex; align-items:center; gap:5px; padding:4px 10px; border-radius:99px; font-size:11px; font-weight:500; border:1px solid; cursor:pointer; transition:all .15s; text-decoration:none; }
+  .res-free     { background:#f0fdf4; border-color:#86efac; color:#166534; }
+  .res-vol      { background:#eff6ff; border-color:#93c5fd; color:#1e40af; }
+  .res-comm     { background:#fef3c7; border-color:#fcd34d; color:#92400e; }
+  .res-tool     { background:#f5f3ff; border-color:#c4b5fd; color:#5b21b6; }
+
+  @keyframes slideUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+  .slide-up { animation:slideUp .3s ease-out; }
+
+  /* Assessment form */
+  .afield { width:100%; padding:10px 14px; border:1.5px solid #e5e7eb; border-radius:8px; font-size:14px; outline:none; transition:border-color .15s; background:white; }
+  .afield:focus { border-color:#005d42; }
+</style>
+</head>
+<body class="flex h-screen overflow-hidden bg-gray-50">
+
+<!-- ═══════════════════════════════════════
+     LEFT — Nav + XP + Milestones
+═══════════════════════════════════════ -->
+<aside class="w-64 h-full bg-white border-r border-gray-200 flex flex-col flex-shrink-0">
+  <!-- Brand -->
+  <div class="px-5 py-4 border-b border-gray-100">
+    <a href="/chat" class="flex items-center gap-2 text-gray-900">
+      <span class="material-symbols-outlined" style="font-size:16px">arrow_back</span>
+      <span class="font-bold text-sm">Train Garden</span>
+    </a>
+  </div>
+
+  <!-- User + XP -->
+  <div class="px-4 py-4 border-b border-gray-100">
+    <div class="flex items-center gap-3 mb-3">
+      <div id="user-avatar" class="w-9 h-9 rounded-full bg-emerald-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">?</div>
+      <div class="flex-1 min-w-0">
+        <p id="user-name" class="text-sm font-semibold text-gray-900 truncate">Loading…</p>
+        <p id="user-target" class="text-xs text-gray-400 truncate">No target set</p>
+      </div>
+    </div>
+    <!-- XP -->
+    <div class="flex items-center justify-between mb-1.5">
+      <span class="text-xs font-semibold text-gray-600 flex items-center gap-1">
+        <span class="text-yellow-500">⚡</span> Level <span id="user-level" class="ml-0.5">1</span>
+      </span>
+      <span id="xp-display" class="text-xs text-gray-400">0 XP</span>
+    </div>
+    <div class="xp-bar"><div id="xp-fill" class="xp-fill" style="width:0%"></div></div>
+    <p id="xp-to-next" class="text-xs text-gray-400 mt-1">200 XP to next level</p>
+  </div>
+
+  <!-- Nav -->
+  <nav class="px-3 py-3 space-y-0.5">
+    <button onclick="showSection('overview')" id="nav-overview" class="nav-item active">
+      <span class="material-symbols-outlined">map</span> Overview
+    </button>
+    <button onclick="showSection('skills')" id="nav-skills" class="nav-item">
+      <span class="material-symbols-outlined">insights</span> Skills Gap
+    </button>
+    <button onclick="showSection('resources')" id="nav-resources" class="nav-item">
+      <span class="material-symbols-outlined">school</span> Resources
+    </button>
+    <button onclick="showSection('milestones')" id="nav-milestones" class="nav-item">
+      <span class="material-symbols-outlined">workspace_premium</span> Milestones
+    </button>
+  </nav>
+
+  <!-- Streak + mood summary -->
+  <div class="mx-3 mt-2 p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+    <div class="flex items-center justify-between mb-1">
+      <span class="text-xs font-semibold text-emerald-800 flex items-center gap-1">
+        <span>🔥</span> <span id="streak-count">0</span>-day streak
+      </span>
+      <span id="current-mood-emoji" class="text-base">😊</span>
+    </div>
+    <p id="mood-label" class="text-xs text-emerald-700">Keep it up!</p>
+  </div>
+
+  <!-- Milestone feed -->
+  <div class="flex-1 overflow-y-auto px-3 py-3">
+    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-1 mb-2">Recent wins</p>
+    <div id="milestone-feed" class="space-y-2">
+      <p class="text-xs text-gray-400 px-1 italic">Complete your first task to earn a milestone.</p>
+    </div>
+  </div>
+</aside>
+
+<!-- ═══════════════════════════════════════
+     CENTRE — Main Content Sections
+═══════════════════════════════════════ -->
+<main class="flex-1 flex flex-col h-full overflow-hidden min-w-0">
+
+  <!-- Section header -->
+  <div class="flex-shrink-0 px-6 py-4 bg-white border-b border-gray-100 flex items-center justify-between">
+    <div>
+      <h1 id="section-title" class="text-lg font-bold text-gray-900">My Career Journey</h1>
+      <p id="section-sub" class="text-xs text-gray-400 mt-0.5">Your personalised path to the green economy</p>
+    </div>
+    <div class="flex gap-2">
+      <button onclick="showCheckin()" class="flex items-center gap-1.5 px-3 py-1.5 border border-gray-200 rounded-lg text-xs text-gray-600 hover:border-gray-400 transition-colors">
+        <span class="material-symbols-outlined" style="font-size:14px">mood</span> Check in
+      </button>
+      <button onclick="showSection('skills'); document.getElementById('assess-panel').classList.remove('hidden')"
+        class="flex items-center gap-1.5 px-3 py-1.5 bg-gray-900 text-white rounded-lg text-xs font-medium hover:bg-gray-800 transition-colors">
+        <span class="material-symbols-outlined" style="font-size:14px">refresh</span> Re-assess
+      </button>
+    </div>
+  </div>
+
+  <div class="flex-1 overflow-y-auto">
+
+    <!-- ═══ OVERVIEW ═══ -->
+    <div id="section-overview" class="p-6 space-y-6">
+
+      <!-- If not assessed yet -->
+      <div id="not-assessed-banner" class="hidden bg-emerald-50 border border-emerald-200 rounded-xl p-5">
+        <div class="flex items-start gap-4">
+          <span class="text-3xl">🌱</span>
+          <div class="flex-1">
+            <h3 class="font-semibold text-emerald-900 mb-1">Let's map your journey</h3>
+            <p class="text-sm text-emerald-700 mb-3">Tell me where you are now and where you want to go. I'll build your personalised skills gap map and step-by-step path.</p>
+            <button onclick="showSection('skills'); document.getElementById('assess-panel').classList.remove('hidden')"
+              class="px-4 py-2 bg-emerald-700 text-white rounded-lg text-sm font-medium hover:bg-emerald-800 transition-colors">
+              Start my assessment →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress ring + stats -->
+      <div id="overview-stats" class="grid grid-cols-3 gap-4">
+        <!-- Progress ring -->
+        <div class="col-span-1 bg-white rounded-xl border border-gray-200 p-5 flex flex-col items-center justify-center">
+          <svg width="100" height="100" viewBox="0 0 100 100">
+            <circle class="ring-track" cx="50" cy="50" r="40"/>
+            <circle id="ring-fill" class="ring-fill" cx="50" cy="50" r="40"
+              stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+          </svg>
+          <p id="ring-pct" class="text-2xl font-bold text-gray-900 -mt-2">0%</p>
+          <p class="text-xs text-gray-400 mt-1">to target</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="col-span-2 grid grid-cols-2 gap-3">
+          <div class="bg-white rounded-xl border border-gray-200 p-4">
+            <p class="text-xs text-gray-400 mb-1">Skills mastered</p>
+            <p id="stat-skills-done" class="text-2xl font-bold text-gray-900">0</p>
+            <p id="stat-skills-total" class="text-xs text-gray-500">of 0 identified</p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4">
+            <p class="text-xs text-gray-400 mb-1">Est. timeline</p>
+            <p id="stat-months" class="text-2xl font-bold text-gray-900">—</p>
+            <p class="text-xs text-gray-500">months</p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4">
+            <p class="text-xs text-gray-400 mb-1">Milestones earned</p>
+            <p id="stat-milestones" class="text-2xl font-bold text-yellow-500">0</p>
+            <p class="text-xs text-gray-500">keep going!</p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4">
+            <p class="text-xs text-gray-400 mb-1">XP earned</p>
+            <p id="stat-xp" class="text-2xl font-bold text-emerald-600">0</p>
+            <p class="text-xs text-gray-500">points</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Journey summary from AI -->
+      <div id="journey-summary-block" class="hidden bg-white rounded-xl border border-gray-200 p-5">
+        <h3 class="text-sm font-semibold text-gray-900 mb-2 flex items-center gap-2">
+          <span class="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center text-xs">🌿</span>
+          Your Transition Story
+        </h3>
+        <p id="journey-summary-text" class="text-sm text-gray-600 leading-relaxed"></p>
+      </div>
+
+      <!-- Top priority skills -->
+      <div id="priority-skills" class="hidden">
+        <h3 class="text-sm font-semibold text-gray-900 mb-3">🎯 Priority skills this week</h3>
+        <div id="priority-list" class="space-y-3"></div>
+      </div>
+
+      <!-- Radar chart -->
+      <div id="radar-block" class="hidden bg-white rounded-xl border border-gray-200 p-5">
+        <h3 class="text-sm font-semibold text-gray-900 mb-4">Skills Radar</h3>
+        <div class="flex justify-center">
+          <svg id="radar-svg" width="300" height="300" viewBox="0 0 300 300">
+            <g id="radar-grid"></g>
+            <polygon id="radar-target-poly" class="radar-target" points=""/>
+            <polygon id="radar-current-poly" class="radar-polygon" points=""/>
+            <g id="radar-labels"></g>
+          </svg>
+        </div>
+        <div class="flex items-center justify-center gap-6 mt-2">
+          <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-emerald-200 border border-emerald-500 inline-block"></span><span class="text-xs text-gray-500">Current</span></div>
+          <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-white border border-gray-400 border-dashed inline-block"></span><span class="text-xs text-gray-500">Target</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ SKILLS GAP ═══ -->
+    <div id="section-skills" class="hidden p-6 space-y-5">
+
+      <!-- Assessment panel (shown before first assessment) -->
+      <div id="assess-panel" class="bg-white rounded-xl border border-gray-200 p-5">
+        <h3 class="font-semibold text-gray-900 mb-1">Career Transition Assessment</h3>
+        <p class="text-sm text-gray-500 mb-4">I'll analyse your current background against your target role and build a personalised skills map.</p>
+        <div class="space-y-3">
+          <div>
+            <label class="text-xs font-medium text-gray-500 uppercase tracking-wider block mb-1.5">I currently work in / my background is</label>
+            <input id="assess-current" class="afield" placeholder="e.g. Software engineer, 5 years in tech startups"/>
+          </div>
+          <div>
+            <label class="text-xs font-medium text-gray-500 uppercase tracking-wider block mb-1.5">I want to become / transition to</label>
+            <input id="assess-target" class="afield" placeholder="e.g. EV Programme Manager at an automotive company"/>
+          </div>
+          <button onclick="runAssessment()" id="assess-btn"
+            class="w-full py-2.5 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">
+            Analyse my transition →
+          </button>
+        </div>
+      </div>
+
+      <!-- Skills list — injected -->
+      <div id="skills-list" class="space-y-4"></div>
+
+      <!-- Add evidence box -->
+      <div id="evidence-box" class="hidden bg-white rounded-xl border border-gray-200 p-5">
+        <h3 class="text-sm font-semibold text-gray-900 mb-2">📝 Report your progress</h3>
+        <p class="text-xs text-gray-400 mb-3">Tell me what you've done and I'll update your skills map automatically.</p>
+        <div class="flex gap-2">
+          <input id="evidence-input" class="afield flex-1" placeholder="e.g. I finished the free EV Fundamentals course on Coursera"/>
+          <button onclick="submitEvidence()" class="px-4 py-2 bg-emerald-700 text-white rounded-lg text-sm font-medium hover:bg-emerald-800 flex-shrink-0">Update</button>
+        </div>
+        <p id="evidence-feedback" class="text-xs text-emerald-700 mt-2 hidden"></p>
+      </div>
+    </div>
+
+    <!-- ═══ RESOURCES ═══ -->
+    <div id="section-resources" class="hidden p-6 space-y-5">
+      <div class="grid grid-cols-2 gap-3">
+        <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
+          <span class="text-xl block mb-2">🎓</span>
+          <h4 class="text-sm font-semibold text-gray-900">Free Courses</h4>
+          <p class="text-xs text-gray-500 mt-0.5">Curated for your target role</p>
+        </div>
+        <div class="bg-blue-50 border border-blue-100 rounded-xl p-4">
+          <span class="text-xl block mb-2">🤝</span>
+          <h4 class="text-sm font-semibold text-gray-900">London Volunteering</h4>
+          <p class="text-xs text-gray-500 mt-0.5">Build skills while giving back</p>
+        </div>
+        <div class="bg-yellow-50 border border-yellow-100 rounded-xl p-4">
+          <span class="text-xl block mb-2">👥</span>
+          <h4 class="text-sm font-semibold text-gray-900">Community Groups</h4>
+          <p class="text-xs text-gray-500 mt-0.5">Network with peers</p>
+        </div>
+        <div class="bg-purple-50 border border-purple-100 rounded-xl p-4">
+          <span class="text-xl block mb-2">🛠️</span>
+          <h4 class="text-sm font-semibold text-gray-900">Tools & Frameworks</h4>
+          <p class="text-xs text-gray-500 mt-0.5">Learn the industry standards</p>
+        </div>
+      </div>
+      <div id="resources-list" class="space-y-4">
+        <p class="text-sm text-gray-400 text-center py-8">Complete your skills assessment to see personalised resources.</p>
+      </div>
+    </div>
+
+    <!-- ═══ MILESTONES ═══ -->
+    <div id="section-milestones" class="hidden p-6 space-y-4">
+      <div id="milestones-grid" class="space-y-3">
+        <p class="text-sm text-gray-400 text-center py-12">Complete tasks to earn your first milestone!</p>
+      </div>
+      <!-- Locked badges preview -->
+      <div class="mt-6">
+        <h3 class="text-sm font-semibold text-gray-900 mb-3 flex items-center gap-2">🔒 Badges to unlock</h3>
+        <div id="locked-badges" class="grid grid-cols-2 gap-3"></div>
+      </div>
+    </div>
+
+  </div><!-- end sections -->
+</main>
+
+<!-- ═══════════════════════════════════════
+     RIGHT — Companion Chat
+═══════════════════════════════════════ -->
+<aside class="w-80 h-full bg-white border-l border-gray-200 flex flex-col flex-shrink-0">
+
+  <div class="px-4 py-4 border-b border-gray-100 flex-shrink-0">
+    <div class="flex items-center gap-2 mb-0.5">
+      <span class="w-2 h-2 rounded-full bg-green-400"></span>
+      <h3 class="text-sm font-semibold text-gray-900">Your Companion</h3>
+    </div>
+    <p class="text-xs text-gray-400">I'm here to listen, guide, and celebrate with you.</p>
+  </div>
+
+  <!-- Mood quick check -->
+  <div id="mood-bar" class="px-4 py-3 border-b border-gray-100 flex-shrink-0">
+    <p class="text-xs font-medium text-gray-500 mb-2">How are you feeling right now?</p>
+    <div class="flex gap-1.5">
+      <button onclick="quickMood('great')"   class="mood-btn" title="Great">😄</button>
+      <button onclick="quickMood('good')"    class="mood-btn" title="Good">🙂</button>
+      <button onclick="quickMood('okay')"    class="mood-btn" title="Okay">😐</button>
+      <button onclick="quickMood('hard')"    class="mood-btn" title="Hard day">😔</button>
+      <button onclick="quickMood('stuck')"   class="mood-btn" title="Stuck">😤</button>
+    </div>
+  </div>
+
+  <!-- Chat messages -->
+  <div id="companion-chat" class="flex-1 overflow-y-auto px-4 py-3 space-y-3"></div>
+
+  <!-- Input -->
+  <div class="flex-shrink-0 px-4 pb-4 pt-2 border-t border-gray-100">
+    <div class="flex items-end gap-2 bg-gray-50 rounded-xl px-3 py-2 border border-gray-200 focus-within:border-gray-400 transition-colors">
+      <textarea id="companion-input" rows="1" placeholder="Talk to me…"
+        class="flex-1 bg-transparent border-none outline-none resize-none text-sm text-gray-800 placeholder-gray-400 max-h-24"></textarea>
+      <button onclick="sendCompanion()" class="w-7 h-7 bg-gray-900 rounded-full flex items-center justify-center text-white hover:bg-gray-700 flex-shrink-0 transition-colors">
+        <span class="material-symbols-outlined fill" style="font-size:14px">arrow_upward</span>
+      </button>
+    </div>
+
+    <!-- Quick prompts -->
+    <div class="flex gap-1.5 mt-2 flex-wrap">
+      <button onclick="companionMsg('I feel stuck and don\'t know how to move forward')" class="text-xs px-2.5 py-1 border border-gray-200 rounded-full text-gray-500 hover:border-gray-400 transition-colors">I'm stuck</button>
+      <button onclick="companionMsg('I just completed something and want to share!')" class="text-xs px-2.5 py-1 border border-gray-200 rounded-full text-gray-500 hover:border-gray-400 transition-colors">Share a win 🎉</button>
+      <button onclick="companionMsg('What should I focus on this week?')" class="text-xs px-2.5 py-1 border border-gray-200 rounded-full text-gray-500 hover:border-gray-400 transition-colors">This week's focus</button>
+    </div>
+  </div>
+</aside>
+
+<!-- ═══════════════════════════════════════
+     MODALS
+═══════════════════════════════════════ -->
+
+<!-- Celebration modal -->
+<div id="celebration" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+  <div class="absolute inset-0 bg-black bg-opacity-50" onclick="closeCelebration()"></div>
+  <div class="relative bg-white rounded-2xl p-8 max-w-sm w-full mx-4 text-center shadow-2xl">
+    <div id="celebration-icon" class="text-6xl mb-4">🎉</div>
+    <h2 id="celebration-title" class="text-2xl font-bold text-gray-900 mb-2">Amazing!</h2>
+    <p id="celebration-desc" class="text-gray-500 mb-4"></p>
+    <div id="celebration-xp" class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-50 border border-yellow-200 rounded-full text-yellow-700 font-semibold text-sm mb-5">
+      ⚡ +0 XP
+    </div>
+    <button onclick="closeCelebration()" class="w-full py-2.5 bg-gray-900 text-white rounded-xl font-medium hover:bg-gray-800 transition-colors">
+      Keep going! →
+    </button>
+  </div>
+</div>
+
+<!-- Mood check-in modal -->
+<div id="checkin-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+  <div class="absolute inset-0 bg-black bg-opacity-40" onclick="document.getElementById('checkin-modal').classList.add('hidden')"></div>
+  <div class="relative bg-white rounded-2xl p-6 max-w-sm w-full mx-4 shadow-2xl">
+    <h3 class="font-bold text-gray-900 mb-1">Weekly check-in</h3>
+    <p class="text-sm text-gray-400 mb-4">How has your career journey been going?</p>
+    <div class="flex justify-between mb-4">
+      <button onclick="selectCheckinMood('great')"   id="cm-great"   class="mood-btn">😄</button>
+      <button onclick="selectCheckinMood('good')"    id="cm-good"    class="mood-btn">🙂</button>
+      <button onclick="selectCheckinMood('okay')"    id="cm-okay"    class="mood-btn">😐</button>
+      <button onclick="selectCheckinMood('hard')"    id="cm-hard"    class="mood-btn">😔</button>
+      <button onclick="selectCheckinMood('stuck')"   id="cm-stuck"   class="mood-btn">😤</button>
+    </div>
+    <textarea id="checkin-note" rows="2" placeholder="Anything you want to share? (optional)"
+      class="afield mb-3 resize-none"></textarea>
+    <button onclick="submitCheckin()" class="w-full py-2 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800">Share with Garden</button>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════
+// AUTH + STATE
+// ═══════════════════════════════════════════════
+const userId = sessionStorage.getItem('user_id');
+if (!userId) { window.location.href = '/'; }
+
+let journeyData    = {};
+let skillsGaps     = [];
+let milestones     = [];
+let checkinMood    = 'okay';
+let isCompanionBusy = false;
+
+// ═══════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', async () => {
+  setupCompanionInput();
+  await loadJourney();
+  sendCompanionInit();
+});
+
+async function loadJourney() {
+  try {
+    const res  = await fetch(`/api/get-journey?user_id=${userId}`);
+    const data = await res.json();
+    journeyData = data;
+    skillsGaps  = data.journey?.skills_gaps || [];
+    milestones  = data.journey?.milestones  || [];
+
+    hydrateUserUI(data);
+    hydrateXP(data);
+    hydrateOverview(data);
+    hydrateSkills(skillsGaps);
+    hydrateResources(skillsGaps);
+    hydrateMilestones(milestones);
+    hydrateMilestoneFeed(milestones);
+
+    if (!data.journey?.assessed) {
+      document.getElementById('not-assessed-banner').classList.remove('hidden');
+    }
+  } catch(e) { console.error('loadJourney:', e); }
+}
+
+// ═══════════════════════════════════════════════
+// HYDRATION
+// ═══════════════════════════════════════════════
+function hydrateUserUI(data) {
+  const name   = data.profile?.name || data.profile?.email?.split('@')[0] || 'You';
+  const target = data.profile?.target_role || 'No target set';
+  const init   = name[0].toUpperCase();
+  document.getElementById('user-avatar').textContent = init;
+  document.getElementById('user-name').textContent   = name;
+  document.getElementById('user-target').textContent = target;
+}
+
+function hydrateXP(data) {
+  const xp    = data.xp    || 0;
+  const level = data.level || 1;
+  const xpInLevel = xp % 200;
+  const pct   = Math.min((xpInLevel / 200) * 100, 100);
+  document.getElementById('xp-fill').style.width    = pct + '%';
+  document.getElementById('xp-display').textContent = xp + ' XP';
+  document.getElementById('user-level').textContent = level;
+  document.getElementById('xp-to-next').textContent = (200 - xpInLevel) + ' XP to level ' + (level+1);
+  document.getElementById('stat-xp').textContent    = xp;
+  document.getElementById('streak-count').textContent = data.streak || 0;
+}
+
+function hydrateOverview(data) {
+  const j = data.journey || {};
+  const pct = j.progress_pct || 0;
+
+  // Ring
+  const circumference = 251.2;
+  const offset = circumference - (pct / 100) * circumference;
+  document.getElementById('ring-fill').style.strokeDashoffset = offset;
+  document.getElementById('ring-pct').textContent = pct + '%';
+
+  // Stats
+  const done  = (j.skills_gaps||[]).filter(g => g.status === 'complete').length;
+  const total = (j.skills_gaps||[]).length;
+  document.getElementById('stat-skills-done').textContent  = done;
+  document.getElementById('stat-skills-total').textContent = 'of ' + total + ' identified';
+  document.getElementById('stat-months').textContent       = j.estimated_months || '—';
+  document.getElementById('stat-milestones').textContent   = milestones.length;
+
+  // Summary
+  if (j.summary) {
+    document.getElementById('journey-summary-block').classList.remove('hidden');
+    document.getElementById('journey-summary-text').textContent = j.summary;
+  }
+
+  // Priority skills (top 3 high priority, not complete)
+  const priority = (j.skills_gaps||[])
+    .filter(g => g.priority === 'high' && g.status !== 'complete')
+    .slice(0,3);
+
+  if (priority.length) {
+    document.getElementById('priority-skills').classList.remove('hidden');
+    document.getElementById('priority-list').innerHTML = priority.map(g =>
+      buildMiniSkillCard(g)
+    ).join('');
+  }
+
+  // Radar
+  if (total > 0) {
+    document.getElementById('radar-block').classList.remove('hidden');
+    drawRadar(j.skills_gaps || []);
+  }
+}
+
+function buildMiniSkillCard(g) {
+  const pct = g.target_level > 0 ? Math.round((g.current_level / g.target_level) * 100) : 0;
+  const dots = Array.from({length:5}, (_,i) => {
+    let cls = 'lvl-dot';
+    if (i < g.current_level) cls += ' filled';
+    else if (i < g.target_level) cls += ' gap';
+    return `<span class="${cls}"></span>`;
+  }).join('');
+  return `
+  <div class="skill-card slide-up">
+    <div class="flex items-start justify-between mb-2">
+      <div>
+        <h4 class="text-sm font-semibold text-gray-900">${esc(g.skill)}</h4>
+        <p class="text-xs text-gray-400 mt-0.5">${esc(g.why_matters||'')}</p>
+      </div>
+      <span class="text-xs px-2 py-0.5 rounded-full font-medium ${priorityBadge(g.priority)}">${g.priority}</span>
+    </div>
+    <div class="flex items-center gap-2 mb-2">
+      <div class="flex gap-1">${dots}</div>
+      <span class="text-xs text-gray-400">${g.current_level}/${g.target_level}</span>
+    </div>
+    <div class="w-full bg-gray-100 rounded-full h-1.5 mb-3">
+      <div class="bg-emerald-500 h-1.5 rounded-full transition-all duration-700" style="width:${pct}%"></div>
+    </div>
+    <button onclick="companionMsg('I want to work on ${esc(g.skill)}, what should I do this week?')"
+      class="text-xs text-emerald-700 hover:underline">Get guidance →</button>
+  </div>`;
+}
+
+function hydrateSkills(gaps) {
+  if (!gaps.length) return;
+  document.getElementById('assess-panel').classList.add('hidden');
+  document.getElementById('evidence-box').classList.remove('hidden');
+  document.getElementById('skills-list').innerHTML = gaps.map(g => buildSkillCard(g)).join('');
+}
+
+function buildSkillCard(g) {
+  const pct = g.target_level > 0 ? Math.round((g.current_level / g.target_level) * 100) : 0;
+  const dots = Array.from({length:5}, (_,i) => {
+    let cls = 'lvl-dot';
+    if (i < g.current_level) cls += ' filled';
+    else if (i < g.target_level) cls += ' gap';
+    return `<span class="${cls}"></span>`;
+  }).join('');
+
+  const statusColour = {
+    complete:    'bg-emerald-100 text-emerald-700',
+    in_progress: 'bg-blue-100 text-blue-700',
+    not_started: 'bg-gray-100 text-gray-500'
+  }[g.status] || 'bg-gray-100 text-gray-500';
+
+  const resources = (g.resources||[]).map(r => {
+    const cls = {free_course:'res-free', volunteering:'res-vol',
+                 community:'res-comm', tool:'res-tool'}[r.type] || 'res-free';
+    const icons = {free_course:'🎓', volunteering:'🤝', community:'👥', tool:'🛠️'};
+    return `<a href="${esc(r.url)}" target="_blank" class="res-chip ${cls}">
+      ${icons[r.type]||'🔗'} ${esc(r.title)}
+    </a>`;
+  }).join('');
+
+  return `
+  <div class="skill-card slide-up" id="skill-${esc(g.skill).replace(/\s+/g,'-')}">
+    <div class="flex items-start justify-between mb-3">
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center gap-2 mb-0.5">
+          <h4 class="text-sm font-semibold text-gray-900">${esc(g.skill)}</h4>
+          <span class="text-xs px-2 py-0.5 rounded-full font-medium ${statusColour}">${(g.status||'not_started').replace('_',' ')}</span>
+          <span class="text-xs px-1.5 py-0.5 rounded-full font-medium ${priorityBadge(g.priority)}">${g.priority}</span>
+        </div>
+        <p class="text-xs text-gray-400">${esc(g.why_matters||'')}</p>
+      </div>
+    </div>
+
+    <!-- Level dots -->
+    <div class="flex items-center gap-3 mb-3">
+      <div class="flex gap-1.5">${dots}</div>
+      <div class="flex-1">
+        <div class="flex justify-between text-xs text-gray-400 mb-1">
+          <span>Level ${g.current_level}</span><span>Target: ${g.target_level}</span>
+        </div>
+        <div class="w-full bg-gray-100 rounded-full h-2">
+          <div class="bg-emerald-500 h-2 rounded-full transition-all duration-700" style="width:${pct}%"></div>
+        </div>
+      </div>
+      <span class="text-sm font-bold text-gray-600">${pct}%</span>
+    </div>
+
+    <!-- Inline level updater -->
+    <div class="flex items-center gap-2 mb-3">
+      <span class="text-xs text-gray-400">Update my level:</span>
+      <div class="flex gap-1">
+        ${Array.from({length: g.target_level+1}, (_,i) => `
+          <button onclick="updateSkill('${esc(g.skill)}',${i})"
+            class="w-7 h-7 rounded-full text-xs font-semibold transition-all
+            ${i <= g.current_level ? 'bg-emerald-600 text-white' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}">
+            ${i}
+          </button>`).join('')}
+      </div>
+    </div>
+
+    <!-- Resources -->
+    ${resources ? `<div class="flex flex-wrap gap-1.5 mb-2">${resources}</div>` : ''}
+
+    <button onclick="companionMsg('Help me level up my ${esc(g.skill)} skills. I am currently at level ${g.current_level} out of ${g.target_level}')"
+      class="text-xs text-emerald-700 hover:underline mt-1 flex items-center gap-1">
+      <span class="material-symbols-outlined" style="font-size:12px">psychology</span>
+      Ask companion for help
+    </button>
+  </div>`;
+}
+
+function hydrateResources(gaps) {
+  const c = document.getElementById('resources-list');
+  if (!gaps.length) return;
+  let html = '';
+  gaps.forEach(g => {
+    if (!g.resources?.length) return;
+    html += `<div class="bg-white rounded-xl border border-gray-200 p-4">
+      <h4 class="text-sm font-semibold text-gray-900 mb-2">${esc(g.skill)}</h4>
+      <div class="flex flex-wrap gap-2">
+        ${g.resources.map(r => {
+          const cls = {free_course:'res-free',volunteering:'res-vol',community:'res-comm',tool:'res-tool'}[r.type]||'res-free';
+          const icons = {free_course:'🎓',volunteering:'🤝',community:'👥',tool:'🛠️'};
+          return `<a href="${esc(r.url)}" target="_blank" class="res-chip ${cls}">${icons[r.type]||'🔗'} ${esc(r.title)}</a>`;
+        }).join('')}
+      </div>
+    </div>`;
+  });
+  if (html) c.innerHTML = html;
+}
+
+function hydrateMilestones(ms) {
+  const g = document.getElementById('milestones-grid');
+  if (!ms.length) return;
+  g.innerHTML = ms.map(m => `
+    <div class="badge slide-up">
+      <div class="badge-icon">${m.icon||'🏅'}</div>
+      <div class="flex-1">
+        <p class="text-sm font-semibold text-gray-900">${esc(m.title)}</p>
+        ${m.desc ? `<p class="text-xs text-gray-400">${esc(m.desc)}</p>` : ''}
+        <p class="text-xs text-gray-300 mt-0.5">${new Date(m.earned_at).toLocaleDateString('en-GB',{day:'2-digit',month:'short'})}</p>
+      </div>
+      ${m.xp ? `<span class="text-xs font-bold text-yellow-500">+${m.xp} XP</span>` : ''}
+    </div>`).join('');
+
+  // Locked badges
+  const BADGES_LIST = [
+    {key:'first_step',icon:'🌱',title:'First Step',desc:'Start your journey'},
+    {key:'skill_master',icon:'⚡',title:'Skill Spark',desc:'Complete your first skill'},
+    {key:'job_hunter',icon:'🎯',title:'Job Hunter',desc:'Track 5 roles'},
+    {key:'road_builder',icon:'🗺️',title:'Road Builder',desc:'Generate a roadmap'},
+    {key:'week_warrior',icon:'🔥',title:'Week Warrior',desc:'7-day streak'},
+    {key:'trailblazer',icon:'🏆',title:'Trailblazer',desc:'Reach 500 XP'},
+  ];
+  const earned = ms.map(m => m.badge_key).filter(Boolean);
+  document.getElementById('locked-badges').innerHTML = BADGES_LIST
+    .filter(b => !earned.includes(b.key))
+    .map(b => `
+      <div class="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-xl opacity-60">
+        <div class="w-9 h-9 rounded-lg bg-gray-100 flex items-center justify-center text-lg grayscale">${b.icon}</div>
+        <div><p class="text-xs font-semibold text-gray-500">${b.title}</p>
+        <p class="text-xs text-gray-400">${b.desc}</p></div>
+      </div>`).join('');
+}
+
+function hydrateMilestoneFeed(ms) {
+  const f = document.getElementById('milestone-feed');
+  if (!ms.length) return;
+  f.innerHTML = ms.slice(0,5).map(m => `
+    <div class="flex items-center gap-2 px-1">
+      <span class="text-base">${m.icon||'🏅'}</span>
+      <div>
+        <p class="text-xs font-medium text-gray-700">${esc(m.title)}</p>
+        <p class="text-xs text-gray-400">${new Date(m.earned_at).toLocaleDateString('en-GB',{day:'2-digit',month:'short'})}</p>
+      </div>
+    </div>`).join('');
+}
+
+// ═══════════════════════════════════════════════
+// RADAR CHART (pure SVG, no libs)
+// ═══════════════════════════════════════════════
+function drawRadar(gaps) {
+  if (!gaps.length) return;
+  const cx = 150, cy = 150, maxR = 100;
+  const n  = Math.min(gaps.length, 8);
+  const items = gaps.slice(0, n);
+  const svg = document.getElementById('radar-svg');
+
+  // Grid circles
+  const grid = document.getElementById('radar-grid');
+  grid.innerHTML = [1,2,3,4,5].map(lvl => {
+    const r = (lvl/5)*maxR;
+    return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#f3f4f6" stroke-width="1"/>`;
+  }).join('');
+
+  // Axes
+  const axisG = document.getElementById('radar-grid');
+  items.forEach((_,i) => {
+    const angle = (i / n) * Math.PI * 2 - Math.PI/2;
+    const x = cx + maxR * Math.cos(angle);
+    const y = cy + maxR * Math.sin(angle);
+    axisG.innerHTML += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" class="radar-axis"/>`;
+  });
+
+  // Polygon points function
+  const pts = (levelFn) => items.map((g,i) => {
+    const angle = (i/n)*Math.PI*2 - Math.PI/2;
+    const r = (levelFn(g)/5) * maxR;
+    return `${cx + r*Math.cos(angle)},${cy + r*Math.sin(angle)}`;
+  }).join(' ');
+
+  document.getElementById('radar-target-poly').setAttribute('points', pts(g => g.target_level));
+  document.getElementById('radar-current-poly').setAttribute('points', pts(g => g.current_level));
+
+  // Labels
+  const lG = document.getElementById('radar-labels');
+  lG.innerHTML = items.map((g,i) => {
+    const angle = (i/n)*Math.PI*2 - Math.PI/2;
+    const r = maxR + 18;
+    const x = cx + r*Math.cos(angle);
+    const y = cy + r*Math.sin(angle);
+    const anchor = x < cx-5 ? 'end' : x > cx+5 ? 'start' : 'middle';
+    const words = g.skill.split(' ');
+    const lines = words.length > 2 ? [words.slice(0,2).join(' '), words.slice(2).join(' ')] : [g.skill];
+    return lines.map((l,li) =>
+      `<text x="${x}" y="${y + li*12}" class="radar-label" text-anchor="${anchor}">${l}</text>`
+    ).join('');
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════
+// ASSESSMENT
+// ═══════════════════════════════════════════════
+async function runAssessment() {
+  const current = document.getElementById('assess-current').value.trim();
+  const target  = document.getElementById('assess-target').value.trim();
+  if (!current || !target) {
+    alert('Please fill in both fields.');
+    return;
+  }
+  const btn = document.getElementById('assess-btn');
+  btn.textContent = 'Analysing your transition…';
+  btn.disabled = true;
+
+  companionMsg(`I'm transitioning from ${current} to become a ${target}. Can you guide me?`);
+
+  try {
+    const res  = await fetch('/api/assess-skills', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({user_id:userId, current_role:current, target_role:target})
+    });
+    const data = await res.json();
+    if (data.success) {
+      await loadJourney();
+      showSection('overview');
+      triggerCelebration('🌱', 'Assessment Complete!',
+        `I've mapped your path from ${current} to ${target}. Let's get started!`, 50);
+    }
+  } catch(e) {
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+  }
+}
+
+// ═══════════════════════════════════════════════
+// SKILL UPDATE
+// ═══════════════════════════════════════════════
+async function updateSkill(skill, level) {
+  try {
+    const res  = await fetch('/api/update-skill', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({user_id:userId, skill, level})
+    });
+    const data = await res.json();
+    if (data.success) {
+      hydrateXP({xp:data.xp, level:Math.floor(data.xp/200)+1, streak:journeyData.streak||0});
+      document.getElementById('stat-xp').textContent = data.xp;
+      if (data.milestones?.length) {
+        const newest = data.milestones[0];
+        triggerCelebration(newest.icon||'🏅', newest.title, newest.desc||'', newest.xp||75);
+      }
+      await loadJourney();
+    }
+  } catch(e) { console.error('updateSkill:', e); }
+}
+
+async function submitEvidence() {
+  const msg = document.getElementById('evidence-input').value.trim();
+  if (!msg) return;
+  const fb = document.getElementById('evidence-feedback');
+  fb.textContent = 'Analysing…';
+  fb.classList.remove('hidden');
+  try {
+    const res  = await fetch('/api/add-evidence', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({user_id:userId, message:msg})
+    });
+    const data = await res.json();
+    if (data.success) {
+      fb.textContent = `✓ Detected progress in "${data.detected_skill}" — level updated to ${data.new_level}!`;
+      document.getElementById('evidence-input').value = '';
+      hydrateXP({xp:data.xp, level:Math.floor(data.xp/200)+1, streak:journeyData.streak||0});
+      if (data.milestones?.length) triggerCelebration('🎉','Progress recorded!','Keep going!', 40);
+      await loadJourney();
+    } else {
+      fb.textContent = 'Could not detect which skill — please be more specific.';
+    }
+  } catch(e) { fb.textContent = 'Error: ' + e.message; }
+}
+
+// ═══════════════════════════════════════════════
+// COMPANION CHAT (SSE)
+// ═══════════════════════════════════════════════
+function setupCompanionInput() {
+  const ta = document.getElementById('companion-input');
+  ta.addEventListener('input', () => { ta.style.height='0'; ta.style.height=Math.min(ta.scrollHeight,96)+'px'; });
+  ta.addEventListener('keydown', e => { if (e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendCompanion();} });
+}
+
+function companionMsg(text) {
+  document.getElementById('companion-input').value = text;
+  sendCompanion();
+}
+
+async function sendCompanionInit() {
+  addCompanionBubble('bot', "Hi! I'm your Garden companion 🌱 I'm here to guide, listen, and celebrate with you on your career journey. Tell me about yourself — what's your big goal?");
+}
+
+function sendCompanion() {
+  const ta = document.getElementById('companion-input');
+  const text = ta.value.trim();
+  if (!text || isCompanionBusy) return;
+  ta.value = ''; ta.style.height = 'auto';
+  addCompanionBubble('user', text);
+  streamCompanion(text);
+}
+
+async function streamCompanion(text) {
+  isCompanionBusy = true;
+  const typingId = addCompanionTyping();
+
+  try {
+    const res = await fetch('/api/chat', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({text, user_id:userId})
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    const ct = res.headers.get('content-type')||'';
+    if (ct.includes('application/json')) {
+      removeCompanionTyping(typingId);
+      const d = await res.json();
+      if (d.response) addCompanionBubble('bot', d.response);
+      return;
+    }
+
+    const reader = res.body.getReader(), dec = new TextDecoder();
+    let buf = '';
+    while (true) {
+      const {done, value} = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, {stream:true});
+      const lines = buf.split('\n'); buf = lines.pop();
+      for (const line of lines) {
+        const t = line.trim();
+        if (!t.startsWith('data:')) continue;
+        let p; try { p = JSON.parse(t.slice(5).trim()); } catch { continue; }
+        if (p.response !== undefined) {
+          removeCompanionTyping(typingId);
+          addCompanionBubble('bot', p.response);
+          // Check for new milestones after response
+          setTimeout(() => checkNewMilestones(), 1000);
+        }
+      }
+    }
+  } catch(e) {
+    removeCompanionTyping(typingId);
+    addCompanionBubble('bot', 'Connection error: ' + e.message);
+  } finally {
+    isCompanionBusy = false;
+  }
+}
+
+async function checkNewMilestones() {
+  try {
+    const res  = await fetch(`/api/get-journey?user_id=${userId}`);
+    const data = await res.json();
+    const newMs = data.journey?.milestones || [];
+    if (newMs.length > milestones.length) {
+      const newest = newMs[0];
+      triggerCelebration(newest.icon||'🏅', newest.title, newest.desc||'Well done!', newest.xp||75);
+      milestones = newMs;
+      hydrateMilestoneFeed(milestones);
+      hydrateXP(data);
+    }
+  } catch(e) {}
+}
+
+function addCompanionBubble(sender, text) {
+  const c = document.getElementById('companion-chat');
+  const w = document.createElement('div');
+  w.className = `flex ${sender==='user'?'justify-end':'justify-start'}`;
+  const b = document.createElement('div');
+  b.className = `max-w-[85%] px-3 py-2 text-sm leading-relaxed ${sender==='user'?'cbubble-user':'cbubble-bot'}`;
+  b.innerHTML = sender==='bot' ? renderMD(text) : esc(text);
+  w.appendChild(b); c.appendChild(w);
+  c.scrollTop = c.scrollHeight;
+}
+
+function addCompanionTyping() {
+  const id = 'ct_'+Math.random().toString(36).slice(2);
+  const c  = document.getElementById('companion-chat');
+  const el = document.createElement('div');
+  el.id = id; el.className = 'flex justify-start';
+  el.innerHTML = `<div class="cbubble-bot px-3 py-2 flex items-center gap-1">
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+  </div>`;
+  c.appendChild(el); c.scrollTop = c.scrollHeight;
+  return id;
+}
+function removeCompanionTyping(id) { document.getElementById(id)?.remove(); }
+
+// ═══════════════════════════════════════════════
+// MOOD
+// ═══════════════════════════════════════════════
+const moodEmojis = {great:'😄', good:'🙂', okay:'😐', hard:'😔', stuck:'😤'};
+
+async function quickMood(mood) {
+  document.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('selected'));
+  event.target.classList.add('selected');
+  document.getElementById('current-mood-emoji').textContent = moodEmojis[mood]||'😊';
+  const labels = {great:'Feeling great!', good:'Good energy', okay:'Taking it one step at a time',
+                  hard:'Hard day — I\'m here for you', stuck:'Stuck but not stopped'};
+  document.getElementById('mood-label').textContent = labels[mood]||'';
+
+  try {
+    const res  = await fetch('/api/checkin', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({user_id:userId, mood, note:''})
+    });
+    const data = await res.json();
+    if (data.response) addCompanionBubble('bot', data.response);
+  } catch(e) {}
+}
+
+function selectCheckinMood(mood) {
+  checkinMood = mood;
+  document.querySelectorAll('[id^="cm-"]').forEach(b => b.classList.remove('selected'));
+  document.getElementById('cm-'+mood)?.classList.add('selected');
+}
+
+function showCheckin() { document.getElementById('checkin-modal').classList.remove('hidden'); }
+
+async function submitCheckin() {
+  const note = document.getElementById('checkin-note').value.trim();
+  document.getElementById('checkin-modal').classList.add('hidden');
+  try {
+    const res  = await fetch('/api/checkin', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({user_id:userId, mood:checkinMood, note})
+    });
+    const data = await res.json();
+    if (data.response) addCompanionBubble('bot', data.response);
+  } catch(e) {}
+}
+
+// ═══════════════════════════════════════════════
+// CELEBRATION
+// ═══════════════════════════════════════════════
+function triggerCelebration(icon, title, desc, xp) {
+  document.getElementById('celebration-icon').textContent  = icon;
+  document.getElementById('celebration-title').textContent = title;
+  document.getElementById('celebration-desc').textContent  = desc;
+  document.getElementById('celebration-xp').innerHTML      = `⚡ +${xp} XP`;
+  document.getElementById('celebration').classList.remove('hidden');
+  launchConfetti();
+  // Companion message
+  addCompanionBubble('bot', `🎉 **${title}** — ${desc} ${xp ? `You earned +${xp} XP!` : ''} Every step counts, keep going! 🌱`);
+}
+
+function closeCelebration() {
+  document.getElementById('celebration').classList.add('hidden');
+}
+
+function launchConfetti() {
+  const colours = ['#005d42','#10b981','#f59e0b','#3b82f6','#ec4899','#8b5cf6'];
+  for (let i=0; i<30; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti-piece';
+    c.style.cssText = `left:${Math.random()*100}vw; background:${colours[Math.floor(Math.random()*colours.length)]};
+      animation-duration:${1.5+Math.random()*2}s; animation-delay:${Math.random()*0.5}s;
+      width:${6+Math.random()*6}px; height:${6+Math.random()*6}px;`;
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(), 3000);
+  }
+}
+
+// ═══════════════════════════════════════════════
+// SECTION NAV
+// ═══════════════════════════════════════════════
+const sectionMeta = {
+  overview:   {title:'My Career Journey', sub:'Your personalised path to the green economy'},
+  skills:     {title:'Skills Gap Map',    sub:'Track your progress skill by skill'},
+  resources:  {title:'Free Resources',   sub:'Courses, volunteering & community in London'},
+  milestones: {title:'Milestones',       sub:'Your achievements and badges earned'},
+};
+
+function showSection(id) {
+  ['overview','skills','resources','milestones'].forEach(s => {
+    document.getElementById('section-'+s).classList.add('hidden');
+    document.getElementById('nav-'+s)?.classList.remove('active');
+  });
+  document.getElementById('section-'+id).classList.remove('hidden');
+  document.getElementById('nav-'+id)?.classList.add('active');
+  const m = sectionMeta[id];
+  if (m) {
+    document.getElementById('section-title').textContent = m.title;
+    document.getElementById('section-sub').textContent   = m.sub;
+  }
+}
+
+// ═══════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════
+function priorityBadge(p) {
+  return {high:'bg-red-100 text-red-700', medium:'bg-yellow-100 text-yellow-700',
+          low:'bg-gray-100 text-gray-500'}[p]||'bg-gray-100 text-gray-500';
+}
+
+function renderMD(text) {
+  return text
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g,'<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2" target="_blank">$1</a>')
+    .replace(/^- (.+)$/gm,'<li>$1</li>')
+    .replace(/(<li>.*<\/li>)/s, m=>`<ul class="list-disc pl-4 my-1">${m}</ul>`)
+    .replace(/\n\n/g,'</p><p>').replace(/\n/g,'<br>');
+}
+
+function esc(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>

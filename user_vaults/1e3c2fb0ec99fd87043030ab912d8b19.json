@@ -1,0 +1,122 @@
+{
+  "user_id": "1e3c2fb0ec99fd87043030ab912d8b19",
+  "email": "admin3@test.com",
+  "name": "Admin3",
+  "first_seen": "2026-07-17T11:53:23.556936",
+  "last_seen": "2026-07-17T12:06:52.892856",
+  "sector": "digital ai transformation",
+  "experience_years": "8",
+  "target_role": "solar programme manager",
+  "goals": [
+    "growth",
+    "helping people",
+    "climate",
+    "humanity",
+    "planet"
+  ],
+  "skills": [
+    "ai",
+    "tech",
+    "projects",
+    "sales",
+    "leadership"
+  ],
+  "cv_summary": "",
+  "messages": [],
+  "reports": [
+    {
+      "id": "46280f84-60a1-4535-beef-77bebf45a137",
+      "name": "CV Gap Analysis",
+      "path": "/view-skill/analysis-1784285865/report",
+      "type": "cv_analysis",
+      "timestamp": "2026-07-17 11:57",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "78fa51d1-803a-4fbc-8176-748510f7fa4a",
+      "name": "Daryna Vakulenko - CV -  copy.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-17 11:57"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "mk168jj",
+  "aspirations": [],
+  "hobbies": [
+    "running",
+    "languages",
+    "learning",
+    "reading",
+    "philosophy"
+  ],
+  "dream_job": "",
+  "values": [
+    "impact"
+  ],
+  "salary_range": "£65000",
+  "work_type": "Flexible",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [
+    {
+      "hobby": "Running",
+      "skills": [
+        "Physical stamina",
+        "Time management",
+        "Goal setting",
+        "Resilience",
+        "Discipline"
+      ]
+    },
+    {
+      "hobby": "Languages",
+      "skills": [
+        "Communication",
+        "Cultural competence",
+        "Problem-solving",
+        "Attention to detail",
+        "Adaptability"
+      ]
+    },
+    {
+      "hobby": "Learning",
+      "skills": [
+        "Curiosity",
+        "Critical thinking",
+        "Analytical reasoning",
+        "Creativity",
+        "Continuous learning"
+      ]
+    },
+    {
+      "hobby": "Reading",
+      "skills": [
+        "Research skills",
+        "Critical thinking",
+        "Analytical reasoning",
+        "Communication",
+        "Information synthesis"
+      ]
+    },
+    {
+      "hobby": "Philosophy",
+      "skills": [
+        "Critical thinking",
+        "Ethical reasoning",
+        "Problem-solving",
+        "Systems thinking",
+        "Holistic understanding"
+      ]
+    }
+  ],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false
+}

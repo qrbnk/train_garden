@@ -1,0 +1,130 @@
+{
+  "company_id": "0720970ebc32c95379577a2f947ba4e5",
+  "email": "compan2.com",
+  "account_type": "company",
+  "first_seen": "2026-07-27T10:31:44.096367",
+  "last_seen": "2026-07-30T10:45:36.687939",
+  "profile": {
+    "name": "name",
+    "website": "name",
+    "sector": "name",
+    "sub_sectors": [],
+    "company_size": "201-1000",
+    "stage": "Seed",
+    "hq_location": "Luton",
+    "remote_policy": "Hybrid",
+    "description": "energy",
+    "culture_tags": [],
+    "onboarding_done": true
+  },
+  "team_members": [],
+  "documents": [
+    {
+      "id": "6396f08d-9bc6-462c-8914-8628809da179",
+      "name": "Pasted JD",
+      "type": "jd",
+      "role_id": "10ab69f1-08b2-4662-8d52-467112570585",
+      "timestamp": "2026-07-27 10:37"
+    }
+  ],
+  "roles": [
+    {
+      "id": "10ab69f1-08b2-4662-8d52-467112570585",
+      "title": "energy advisor",
+      "department": "energy",
+      "seniority": "senior",
+      "employment_type": "full-time",
+      "location": "london",
+      "remote_policy": "flexible",
+      "salary_range": "55k",
+      "sector_tags": [
+        "Sustainability",
+        "Green Economy",
+        "Renewable Energy",
+        "Energy Efficiency"
+      ],
+      "required_skills": [
+        "Proficiency in renewable energy technologies (solar, wind, hydro)",
+        "In-depth knowledge of energy efficiency strategies and best practices",
+        "Familiarity with energy policy and regulatory frameworks at national and international levels",
+        "Excellent analytical and problem-solving skills to assess complex energy systems",
+        "Strong communication and stakeholder engagement skills for effective collaboration",
+        "Ability to develop and implement sustainable energy solutions for clients or communities",
+        "Proficiency in energy data analysis tools (e.g. EnergyPlus, eQUEST) and software packages",
+        "Understanding of energy storage technologies and their applications"
+      ],
+      "nice_to_have_skills": [],
+      "responsibilities": [],
+      "summary": "",
+      "raw_jd_text": "energy advisor",
+      "status": "open",
+      "created_at": "2026-07-27T10:37:20.558965",
+      "updated_at": "2026-07-30T10:32:40.646995",
+      "brief": {
+        "must_haves": [],
+        "nice_to_haves": [],
+        "deal_breakers": [],
+        "notes": ""
+      },
+      "pipeline": [],
+      "ai_filled_skills": true
+    }
+  ],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "b8b5df09-b3e7-41eb-83f3-a6a74e37cd17",
+      "text": "Generated 0 proposed matches for energy advisor",
+      "type": "matching",
+      "ts": "2026-07-30T10:45:36.687924"
+    },
+    {
+      "id": "7246db93-16c2-4fb3-b9d5-7ca5ae08d850",
+      "text": "Generated 0 proposed matches for energy advisor",
+      "type": "matching",
+      "ts": "2026-07-30T10:45:17.124148"
+    },
+    {
+      "id": "4da46b78-694b-4563-9cff-1845e960710c",
+      "text": "Generated 0 proposed matches for energy advisor",
+      "type": "matching",
+      "ts": "2026-07-30T10:38:45.734821"
+    },
+    {
+      "id": "d841f153-a7d8-4858-894c-d23b0c45c307",
+      "text": "Generated 0 proposed matches for energy advisor",
+      "type": "matching",
+      "ts": "2026-07-30T10:32:44.317319"
+    },
+    {
+      "id": "c824dab5-2d10-4509-8884-000d572af8ce",
+      "text": "Generated 0 proposed matches for energy advisor",
+      "type": "matching",
+      "ts": "2026-07-30T10:32:42.714158"
+    },
+    {
+      "id": "685224b8-888e-4938-8dcf-92ac05a00ec2",
+      "text": "Generated 0 proposed matches for energy advisor",
+      "type": "matching",
+      "ts": "2026-07-30T10:31:43.877319"
+    },
+    {
+      "id": "ba9f3353-54c4-48c7-aaad-99a091802ddb",
+      "text": "Generated 0 proposed matches for energy advisor",
+      "type": "matching",
+      "ts": "2026-07-30T10:31:37.544920"
+    },
+    {
+      "id": "b95dfe66-b859-4bc6-9b8c-9bd5657ff11f",
+      "text": "Parsed new role: New role",
+      "type": "role_created",
+      "ts": "2026-07-27T10:37:20.560401"
+    },
+    {
+      "id": "f772e0e9-8756-4d3c-b853-a17767cdf042",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-07-27T10:35:25.681030"
+    }
+  ]
+}

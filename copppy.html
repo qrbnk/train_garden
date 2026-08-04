@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Train Garden | AI Companion</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+.chat-scroll::-webkit-scrollbar { width: 4px; }
+.chat-scroll::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+.hide { display: none !important; }
+.btn-option { border: 1px solid #e2e8f0; transition: all 0.2s; text-align: left; padding: 12px 16px; border-radius: 12px; background: white; font-size: 14px; font-weight: 500; }
+.btn-option:hover { border-color: #208a65; background-color: #f0fdf4; color: #208a65; }
+.tab-active { border-bottom: 2px solid #ff6b3d; color: #091747 !important; }
+/* New UI Elements */
+.job-card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; transition: shadow 0.3s; }
+.job-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.profile-section-header { border-bottom: 1px solid #f1f5f9; padding-bottom: 8px; margin-bottom: 16px; }
+</style>
+</head>
+<body class="overflow-hidden">
+
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-gray-100 px-8 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-extrabold text-[#091747] text-xl tracking-tighter">TRAIN GARDEN</span>
+<span class="bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded text-[10px] font-bold uppercase">Companion</span>
+</div>
+<div id="user-display" class="text-sm font-medium text-slate-500">Guest</div>
+</nav>
+
+<main class="pt-16 h-screen flex">
+<section class="w-full lg:w-[480px] border-r border-slate-200 bg-white flex flex-col">
+<div id="chat-window" class="flex-1 p-6 overflow-y-auto chat-scroll space-y-4">
+<div id="greeting-msg" class="bg-slate-100 p-4 rounded-2xl rounded-tl-none text-sm leading-relaxed text-slate-700">
+Welcome! I am your <b>Train Garden Companion</b>. I’ll guide you from motivation to skill assessment, direction, and follow-ups.
+</div>
+</div>
+
+<div class="p-4 border-t border-slate-100 bg-slate-50">
+<div id="panel-auth" class="space-y-2">
+<input type="text" id="reg-name" placeholder="Full Name" class="w-full p-3 rounded-xl border-slate-200 text-sm">
+<input type="email" id="reg-email" placeholder="Email" class="w-full p-3 rounded-xl border-slate-200 text-sm">
+<input type="tel" id="reg-phone" placeholder="Phone Number" class="w-full p-3 rounded-xl border-slate-200 text-sm">
+<button onclick="sendMagicLink()" class="w-full bg-[#091747] text-white py-3 rounded-xl font-bold shadow-lg">Send Magic Link</button>
+</div>
+
+<div id="panel-chat" class="hide flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<input type="text" id="omni-input" placeholder="Type anything or pick an option..." class="flex-1 p-3 rounded-full border-slate-200 text-sm focus:ring-2 focus:ring-emerald-500 outline-none">
+<button onclick="handleOmniInput()" class="bg-[#091747] text-white p-3 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+<div class="flex gap-4 px-2">
+<button onclick="resetToMotivation()" class="text-[10px] font-bold text-slate-400 uppercase hover:text-[#ff6b3d]">Changed my mind? Go Back</button>
+</div>
+</div>
+<div id="panel-cv" class="hide mt-2 p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+<p class="text-[10px] font-bold text-emerald-700 uppercase mb-2">Upload CV (PDF/DOCX)</p>
+<input type="file" id="cv-file" class="text-xs">
+</div>
+</div>
+</section>
+
+<section class="flex-1 p-8 overflow-y-auto bg-[#fcfcfc]">
+<div class="max-w-4xl mx-auto space-y-6">
+<div id="empty-dash" class="text-center py-20 opacity-20">
+<span class="material-symbols-outlined text-8xl">dashboard_customize</span>
+<p class="mt-4 font-bold uppercase tracking-widest text-xs">Unlock your dashboard after Magic Link</p>
+</div>
+
+<div id="active-dash" class="hide space-y-6">
+<div class="flex border-b border-slate-200 gap-6 mb-4">
+<button onclick="switchTab('diagnostic')" id="tab-btn-diagnostic" class="pb-2 text-xs font-bold uppercase tracking-widest text-slate-400 tab-active">Profile Overview</button>
+<button onclick="switchTab('skills')" id="tab-btn-skills" class="pb-2 text-xs font-bold uppercase tracking-widest text-slate-400">Skills Alignment</button>
+<button onclick="switchTab('resources')" id="tab-btn-resources" class="pb-2 text-xs font-bold uppercase tracking-widest text-slate-400">Opportunities & Jobs</button>
+</div>
+
+<div id="tab-diagnostic" class="space-y-6">
+<div id="profile-container" class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hide">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center text-2xl font-bold text-[#091747]" id="profile-initials">DV</div>
+<div>
+<h2 class="text-xl font-bold text-[#091747]" id="profile-display-name">Daryna Vakulenko</h2>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded-full">Actively Looking</span>
+<span class="text-xs text-slate-400" id="profile-role-title">Sustainability Strategist</span>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<h3 class="profile-section-header text-xs font-bold text-slate-400 uppercase tracking-widest">Summary</h3>
+<p class="text-sm text-slate-600 leading-relaxed" id="profile-summary">Strategic leader focusing on bridging the gap between domain expertise and sustainable solutions.</p>
+</div>
+<div>
+<h3 class="profile-section-header text-xs font-bold text-slate-400 uppercase tracking-widest">What they're looking for</h3>
+<p class="text-sm text-slate-600 italic" id="profile-looking-for">Seeking mid-to-senior level roles in sustainability strategy, delivery, and change management.</p>
+</div>
+</div>
+</div>
+<div id="match-status-box" class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Diagnostic Match</h3>
+<div id="match-result" class="text-2xl font-black text-[#091747]">--</div>
+<div id="match-salary" class="text-sm font-semibold text-emerald-600 mt-1"></div>
+</div>
+</div>
+
+<div id="tab-skills" class="hide space-y-6">
+<div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Skills Alignment</h3>
+<div class="flex flex-wrap gap-2" id="skill-badges">
+<span class="text-slate-300 text-xs italic">Awaiting CV Analysis...</span>
+</div>
+</div>
+</div>
+
+<div id="tab-resources" class="hide space-y-6">
+<div id="work-log-area" class="hide bg-[#091747] p-6 rounded-3xl text-white mb-6">
+<h3 class="text-xs font-bold uppercase opacity-60 mb-2">Daily Volunteering Log</h3>
+<p class="text-sm mb-4">Input what you did today to reflect it on your CV automatically.</p>
+<textarea id="daily-input" class="w-full bg-white/10 border border-white/20 rounded-xl p-3 text-sm text-white placeholder:text-white/30" placeholder="e.g. Conducted site survey for solar installation..."></textarea>
+<button onclick="saveWorkLog()" class="mt-2 bg-emerald-500 text-white px-4 py-2 rounded-lg text-xs font-bold">Save Log</button>
+</div>
+<div id="resource-container" class="space-y-4">
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<script>
+// --- REAL WORLD JOB & SKILL RESEARCH DATA ---
+const ROLE_DB = {
+"strategy": {
+name: "Sustainability Consultant",
+skills: ["ESG Reporting (GRI/SASB)", "Carbon Accounting", "Strategic Planning", "Stakeholder Management"],
+salary: "£45k - £65k",
+summary: "Lead sustainability delivery for corporate transformations, focusing on ESG compliance and strategic roadmapping."
+},
+"technical": {
+name: "Solar Operations Engineer",
+skills: ["Field Maintenance", "Electrical Safety (HV/LV)", "PVsyst Technical Analysis", "AutoCAD"],
+salary: "£38k - £55k",
+summary: "Specialist in renewable energy infrastructure maintenance and technical performance optimization."
+},
+"people": {
+name: "Sustainability Lead",
+skills: ["Change Management", "GRI Stakeholder Engagement", "Public Speaking", "ISO 14001 Implementation"],
+salary: "£50k - £75k",
+summary: "Driving organizational culture shifts and community engagement to reach Net Zero milestones."
+},
+"craft": {
+name: "Retrofit Technician",
+skills: ["Building Science (PAS 2035)", "Thermal Imaging", "Renewable Installation", "Energy Auditing"],
+salary: "£28k - £40k",
+summary: "Hands-on implementation of energy efficiency measures in residential and commercial properties."
+},
+"generalist": {
+name: "Sustainability Generalist",
+skills: ["Waste Management", "Employee Engagement", "Supply Chain Awareness", "Sustainability Policy"],
+salary: "£30k - £45k",
+summary: "Support organizational sustainability initiatives across various departments and operations."
+}
+};
+
+const VOLUNTEER_DB = [
+{ role: "Retrofit Assistant", email: "providers@retrofit.org", skills: "Building Science, Thermal Imaging", company: "Retrofit UK", link: "https://www.traingarden.co.uk/volunteering/retrofit" },
+{ role: "Community Solar Lead", email: "energy@communitysolar.org", skills: "Stakeholder Engagement, PV Analysis", company: "GreenGrid", link: "https://www.google.com/search?q=solar+volunteering+uk" },
+{ role: "ESG Auditor Apprentice", email: "info@greenverify.org", skills: "ESG Reporting, Data Integrity", company: "GreenVerify", link: "https://www.traingarden.co.uk/volunteering/audit" }
+];
+
+let state = {
+user: null,
+step: 'auth',
+diagnostic: {},
+matchedRole: null,
+cvAnalyzed: false,
+subscription: null,
+followUpTimer: null,
+localHubs: [] // Added for dynamic resource loading
+};
+
+// --- DYNAMIC DATA LOADER FROM RESOURCES_PAGE.HTML ---
+async function syncHubDatabase() {
+    try {
+        const response = await fetch('resources_page.html');
+        const htmlText = await response.text();
+        
+        // Find the 'const hubs = [...];' block using Regex
+        const hubRegex = /const hubs = (\[[\s\S]*?\]);/;
+        const match = htmlText.match(hubRegex);
+        
+        if (match && match[1]) {
+            // Convert JS-object-literal string to valid JSON by quoting keys
+            const validJsonString = match[1]
+                .replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2":')
+                .replace(/'/g, '"')
+                .replace(/,(\s*\])/g, '$1'); // Remove trailing comma
+            
+            state.localHubs = JSON.parse(validJsonString);
+            console.log("Database Synced: " + state.localHubs.length + " hubs loaded.");
+        }
+    } catch (error) {
+        console.warn("Could not sync with resources_page.html. Ensure you are running on a server.", error);
+    }
+}
+
+// --- CORE UI ---
+function switchTab(tabName) {
+['diagnostic', 'skills', 'resources'].forEach(t => {
+document.getElementById(`tab-${t}`).classList.add('hide');
+document.getElementById(`tab-btn-${t}`).classList.remove('tab-active');
+});
+document.getElementById(`tab-${tabName}`).classList.remove('hide');
+document.getElementById(`tab-btn-${tabName}`).classList.add('tab-active');
+}
+
+function addBotMsg(text) {
+const win = document.getElementById('chat-window');
+const div = document.createElement('div');
+div.className = "bg-slate-100 p-4 rounded-2xl rounded-tl-none text-sm shadow-sm max-w-[90%]";
+div.innerHTML = text;
+win.appendChild(div);
+win.scrollTop = win.scrollHeight;
+}
+
+function addUserMsg(text) {
+const win = document.getElementById('chat-window');
+const div = document.createElement('div');
+div.className = "flex justify-end";
+div.innerHTML = `<div class="bg-[#091747] text-white p-4 rounded-2xl rounded-tl-none text-sm shadow-sm max-w-[90%]">${text}</div>`;
+win.appendChild(div);
+win.scrollTop = win.scrollHeight;
+}
+
+function renderOptions(options, callback) {
+const win = document.getElementById('chat-window');
+const container = document.createElement('div');
+container.className = "grid grid-cols-1 gap-2 mt-2";
+options.forEach(opt => {
+const btn = document.createElement('button');
+btn.className = "btn-option";
+btn.innerText = opt;
+btn.onclick = () => {
+container.remove();
+addUserMsg(opt);
+callback(opt);
+};
+container.appendChild(btn);
+});
+win.appendChild(container);
+win.scrollTop = win.scrollHeight;
+}
+
+// --- LOGIC FLOWS ---
+function sendMagicLink() {
+const name = document.getElementById('reg-name').value;
+const email = document.getElementById('reg-email').value;
+const phone = document.getElementById('reg-phone').value;
+if(!name || !email || !phone) return alert("Please fill all details to record your profile.");
+
+state.user = { name, email, phone };
+document.getElementById('panel-auth').classList.add('hide');
+document.getElementById('panel-chat').classList.remove('hide');
+document.getElementById('empty-dash').classList.add('hide');
+document.getElementById('active-dash').classList.remove('hide');
+document.getElementById('user-display').innerText = name;
+// Set Profile Initials
+document.getElementById('profile-initials').innerText = name.split(' ').map(n => n[0]).join('').toUpperCase();
+document.getElementById('profile-display-name').innerText = name;
+
+addBotMsg(`Welcome ${name}! I am your companion. I'll help you find your path in sustainability, analyze your CV, and follow up on your progress.`);
+addBotMsg(`The process is simple: We diagnose your motivation, match a role, verify your skills via CV, and then connect you to courses or volunteering.`);
+setTimeout(() => {
+addBotMsg("What is your primary motivation today?");
+renderOptions([
+"Career Change",
+"Want to work in sustainability",
+"Want to volunteer",
+"Coaching session (CV/Job search)",
+"What can I earn?",
+"Just browsing / Don't know"
+], handleMotivation);
+}, 1000);
+}
+
+function handleMotivation(choice) {
+if(choice === "Career Change") startDiagnostic();
+else if (choice.includes("work in sustainability")) startCVFlow();
+else if (choice.includes("volunteer")) showVolunteeringPage();
+else if (choice.includes("Coaching")) requestCoaching();
+else if (choice.includes("earn")) showEarningsAnalysis();
+else handleOmniInput("don't know");
+}
+
+function resetToMotivation() {
+addBotMsg("No problem, let's take a step back. What would you like to focus on now?");
+handleMotivation("Just browsing");
+}
+
+function startDiagnostic() {
+switchTab('diagnostic');
+addBotMsg("Let's map your sustainability career. What <b>Role or Seniority</b> level are you targeting?");
+renderOptions(["Entry Level / Junior", "Experienced Professional", "Senior / Managerial", "Not Sure"], (val) => {
+state.diagnostic.role = val;
+addBotMsg("What is your target <b>Compensation</b> range?");
+renderOptions(["£25k - £40k", "£40k - £65k", "£65k+", "Not Sure"], (val) => {
+state.diagnostic.comp = val;
+addBotMsg("What is your preferred <b>Work Location</b>?");
+renderOptions(["London (Hybrid)", "Remote (UK)", "On-site / Field", "Not Sure"], (val) => {
+state.diagnostic.location = val;
+addBotMsg("Which <b>Sustainability Sector</b> or company type interests you?");
+renderOptions(["Strategy & ESG", "Technical / Energy", "Supply Chain / Retail", "Not Sure"], (val) => {
+state.diagnostic.sector = val;
+finalizeDiagnostic();
+});
+});
+});
+});
+}
+
+function finalizeDiagnostic() {
+let roleKey = "strategy";
+// Logic mapping based on thorough sector/role preference
+if(state.diagnostic.sector.includes("Technical")) roleKey = "technical";
+if(state.diagnostic.sector.includes("Retail")) roleKey = "craft";
+if(state.diagnostic.sector.includes("Not Sure") || state.diagnostic.role === "Not Sure") roleKey = "generalist";
+
+state.matchedRole = ROLE_DB[roleKey];
+document.getElementById('match-result').innerText = state.matchedRole.name;
+document.getElementById('match-salary').innerText = state.diagnostic.comp !== "Not Sure" ? `Target: ${state.diagnostic.comp}` : `Est: ${state.matchedRole.salary}`;
+
+// Update Profile View
+document.getElementById('profile-container').classList.remove('hide');
+document.getElementById('profile-role-title').innerText = state.matchedRole.name;
+document.getElementById('profile-summary').innerText = state.matchedRole.summary;
+document.getElementById('profile-looking-for').innerText = `Targeting ${state.diagnostic.role} roles in ${state.diagnostic.sector} (${state.diagnostic.location}). Priority on matching skills from CV.`;
+
+addBotMsg(`YOUR DIAGNOSTIC MATCH: <b>${state.matchedRole.name}</b>. Are you happy with this role?`);
+renderOptions(["Yes, move to CV Analysis", "No, Restart Diagnostic", "No, Start CV Analysis anyway"], (val) => {
+if(val.includes("Yes") || val.includes("anyway")) startCVFlow();
+else startDiagnostic();
+});
+}
+
+function startCVFlow() {
+switchTab('skills');
+document.getElementById('panel-cv').classList.remove('hide');
+addBotMsg("Please upload your CV (.pdf or .docx). I will analyze your skills alignment.");
+document.getElementById('cv-file').onchange = (e) => {
+analyzeCV(e.target.files[0].name);
+};
+}
+
+function analyzeCV(fileName) {
+addBotMsg(`Analyzing <b>${fileName}</b>...`);
+setTimeout(() => {
+const skills = state.matchedRole ? state.matchedRole.skills : ["General ESG", "Data Analysis"];
+const badges = document.getElementById('skill-badges');
+badges.innerHTML = "";
+skills.forEach((s, i) => {
+const isMatch = i < 2;
+badges.innerHTML += `<span class="px-3 py-1 rounded-full text-[10px] font-bold ${isMatch ? 'bg-emerald-100 text-emerald-700' : 'bg-red-50 text-red-600'}">
+${isMatch ? '✓' : '!'} ${s}</span>`;
+});
+
+addBotMsg("CV Analysis complete. Here are your options next:");
+renderOptions(["Get resources for missing skills", "Suggest volunteering available", "Talk to a career coach", "Apply for matching jobs"], (val) => {
+if(val.includes("volunteering")) showVolunteeringPage();
+if(val.includes("coach")) requestCoaching();
+if(val.includes("resources")) showResources();
+if(val.includes("Apply")) window.open("https://traingarden.co.uk/jobs", "_blank");
+});
+}, 2000);
+}
+
+function showVolunteeringPage() {
+switchTab('resources');
+addBotMsg("Here are current volunteering opportunities and the skills you can gain:");
+const container = document.getElementById('resource-container');
+container.innerHTML = `<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Volunteering & Training Feed</h3>`;
+VOLUNTEER_DB.forEach(v => {
+container.innerHTML += `
+<div class="job-card p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-lg font-bold text-[#091747]">${v.role}</h4>
+<p class="text-sm text-slate-500">${v.company} • Hybrid • <span class="text-emerald-600 font-bold">Training Included</span></p>
+</div>
+<span class="bg-orange-100 text-[#ff6b3d] text-[10px] font-bold px-2 py-1 rounded">Featured</span>
+</div>
+<div class="space-y-2 mb-6">
+<p class="text-xs text-slate-600 leading-relaxed italic">"Excellent opportunity to gain direct experience in ${v.skills}."</p>
+</div>
+<div class="flex justify-between items-center border-t border-slate-50 pt-4">
+<div class="flex gap-2">
+<span class="text-[9px] bg-slate-100 px-2 py-1 rounded border border-slate-100">Skills: ${v.skills}</span>
+</div>
+<div class="flex gap-2">
+<button onclick="window.open('${v.link}', '_blank')" class="text-xs font-bold text-slate-400 px-4 py-2">Info</button>
+<button onclick="applyToVolunteer('${v.role}', '${v.email}')" class="bg-[#091747] text-white px-4 py-2 rounded-xl text-xs font-bold">Apply Now</button>
+</div>
+</div>
+</div>
+`;
+});
+}
+
+function applyToVolunteer(role, provEmail) {
+const mailText = `Name: ${state.user.name}%0D%0AMotivation: Volunteering for ${role}%0D%0AEmail: ${state.user.email}%0D%0APhone: ${state.user.phone}`;
+window.open(`mailto:info@traingarden.co.uk?subject=Volunteer Application&body=${mailText}`);
+window.open(`mailto:${provEmail}?subject=Application: ${role}&body=${mailText}`);
+
+addBotMsg("Application sent! System records your choice. Would you like a follow up from me regarding progress?");
+renderOptions(["Yes", "No"], (val) => {
+if(val === "Yes") {
+addBotMsg("Pick frequency for reminders:");
+renderOptions(["Daily", "Weekly", "Hourly"], (freq) => {
+state.subscription = freq;
+addBotMsg(`Noted. I'll check in. If the Skill Hub hasn't responded within 48h, I'll prompt you to be proactive.`);
+startFollowUpLoop(0);
+});
+}
+});
+}
+
+function startFollowUpLoop(hours) {
+setTimeout(() => {
+if(!state.subscription) return;
+addBotMsg("<b>Follow-up:</b> Has the Skill Hub responded to your application yet?");
+renderOptions(["Yes, I got a spot!", "No response yet", "No longer interested (Cancel)"], (val) => {
+if(val.includes("Cancel")) {
+state.subscription = null;
+addBotMsg("Subscription cancelled.");
+} else if(val === "No response yet") {
+addBotMsg("Proactive Motivation: You should email them again or call. Or would you like Train Garden to call?");
+renderOptions(["Email again", "Ask Train Garden member to call"], (choice) => {
+if(choice.includes("Train Garden")) {
+window.open(`mailto:info@traingarden.co.uk?subject=User assistance required&body=User ${state.user.name} needs help with volunteer follow up.`);
+} else {
+addBotMsg("Email sent again.");
+}
+startFollowUpLoop(48);
+});
+} else {
+handleVolunteeringStart();
+}
+});
+}, 3000);
+}
+
+function handleVolunteeringStart() {
+addBotMsg("When do you start and for how long?");
+addBotMsg("I've unlocked your **Work Log** in the dashboard. Input your daily tasks there so I can update your CV later.");
+document.getElementById('work-log-area').classList.remove('hide');
+switchTab('resources');
+setTimeout(() => {
+addBotMsg("Once your course/volunteering is over, what's next?");
+renderOptions(["Analyse CV again", "Help with CV", "Apply for a job", "Coaching call"], (val) => {
+if(val.includes("Analyse")) startCVFlow();
+if(val.includes("Coaching")) requestCoaching();
+});
+}, 2000);
+}
+
+function saveWorkLog() {
+const text = document.getElementById('daily-input').value;
+if(text) {
+alert("Daily tasks saved to system profile.");
+document.getElementById('daily-input').value = "";
+}
+}
+
+function showEarningsAnalysis() {
+addBotMsg("Role Comparison: Pick roles and I'll compare skills and salaries based on your CV.");
+addBotMsg("Sustainability Consultant (£55k) vs Retrofit Technician (£35k). Based on your background, Consultant has a 70% skill match.");
+addBotMsg("Would you like assistance with anything else?");
+renderOptions(["Back to Motivations", "Coaching Session"], (v) => handleMotivation(v));
+}
+
+function requestCoaching() {
+const body = `Name: ${state.user.name}%0D%0AMotivation: Coaching Session%0D%0AEmail: ${state.user.email}%0D%0APhone: ${state.user.phone}`;
+window.open(`mailto:info@traingarden.co.uk?subject=Coaching Request&body=${body}`);
+addBotMsg("Coaching request sent. We'll be in touch!");
+}
+
+function showResources() {
+    switchTab('resources');
+    const container = document.getElementById('resource-container');
+    container.innerHTML = `<h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Local Hubs Matching Your Gaps</h3>`;
+
+    if (!state.localHubs || state.localHubs.length === 0) {
+        container.innerHTML += `<p class="text-xs text-slate-400 italic">Syncing local database... If you are seeing this, ensure the files are hosted on a server.</p>`;
+        // Fallback for demo purposes if fetch fails
+        return;
+    }
+
+    // Identify missing skills from the role comparison (using index 2+ as "gaps")
+    const targetSkills = state.matchedRole ? state.matchedRole.skills : ["Sustainability"];
+    const skillGaps = targetSkills.slice(2); 
+
+    // Search the dynamic database for matches
+    const matches = state.localHubs.filter(hub => 
+        skillGaps.some(gap => 
+            hub.hard.toLowerCase().includes(gap.toLowerCase().split(' ')[0]) ||
+            hub.soft.toLowerCase().includes(gap.toLowerCase().split(' ')[0])
+        )
+    );
+
+    // Render results
+    const resultsToDisplay = matches.length > 0 ? matches : state.localHubs.slice(0, 5);
+
+    resultsToDisplay.forEach(item => {
+        container.innerHTML += `
+        <div class="job-card p-6 border-l-4 border-emerald-500 hover:shadow-md transition-all">
+            <div class="flex justify-between items-start mb-2">
+                <div>
+                    <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">${item.type}</span>
+                    <h4 class="text-sm font-bold text-[#091747]">${item.name}</h4>
+                </div>
+                <div class="text-right">
+                    <span class="text-[9px] text-slate-400 block">${item.loc}</span>
+                    <span class="text-[9px] font-bold text-slate-500">${item.dates}</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 my-3">
+                <div>
+                    <p class="text-[9px] font-bold text-slate-400 uppercase">Skill Gap Focus</p>
+                    <p class="text-[11px] text-slate-700 font-medium">${item.hard}</p>
+                </div>
+                <div>
+                    <p class="text-[9px] font-bold text-slate-400 uppercase">Development</p>
+                    <p class="text-[11px] text-slate-700">${item.soft}</p>
+                </div>
+            </div>
+            <div class="flex gap-2 pt-2 border-t border-slate-100">
+                <a href="${item.url}" target="_blank" class="flex-1 bg-primary text-white text-center py-2 rounded-xl text-xs font-bold">View Hub</a>
+                <a href="volunteer_application.html?opportunity=${encodeURIComponent(item.name)}" class="flex-1 border border-slate-200 text-center py-2 rounded-xl text-xs font-bold">Apply</a>
+            </div>
+        </div>
+        `;
+    });
+
+    addBotMsg(`I've dynamically pulled **${resultsToDisplay.length} resources** from the Train Garden directory that specifically help with your missing skills.`);
+}
+
+function handleOmniInput(override = null) {
+const val = override || document.getElementById('omni-input').value;
+if(!val) return;
+if(!override) addUserMsg(val);
+document.getElementById('omni-input').value = "";
+if(val.toLowerCase().includes("don't know") || val.toLowerCase().includes("browsing")) {
+addBotMsg("No problem! Let's start with a career diagnostic to see where you fit best.");
+startDiagnostic();
+} else {
+addBotMsg("I've noted that! Pick a direction from the menu below.");
+handleMotivation("Just browsing");
+}
+}
+
+// Start database sync on load
+syncHubDatabase();
+</script>
+</body>
+</html>

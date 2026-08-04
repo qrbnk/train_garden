@@ -1,0 +1,67 @@
+{
+  "company_id": "8d5e0aec2149883866ba2fc13e30d14e",
+  "email": "company45",
+  "account_type": "company",
+  "first_seen": "2026-07-28T09:10:31.800755",
+  "last_seen": "2026-07-28T09:12:34.677520",
+  "profile": {
+    "name": "ocean",
+    "company_number": "12345",
+    "registered_address": "brighton",
+    "website": "name",
+    "sector": "sustainability",
+    "sub_sectors": [],
+    "company_size": "1000+",
+    "stage": "Public",
+    "hq_location": "Brighton",
+    "work_types": [
+      "Full-time",
+      "Part-time",
+      "Contract",
+      "Internship"
+    ],
+    "remote_policy": "Hybrid",
+    "description": "Accelerating the global transition to a regenerative and restorative economy by harnessing the power of nature and human ingenuity.",
+    "culture_tags": [],
+    "account_manager": {
+      "name": "name",
+      "position": "hr",
+      "email": "hr.com"
+    },
+    "onboarding_done": true
+  },
+  "team_members": [
+    {
+      "id": "3efb83ae-af8d-432f-8553-136aa177e42a",
+      "name": "name",
+      "email": "hr.com",
+      "access_level": "admin",
+      "added_at": "2026-07-28T09:11:48.889654"
+    }
+  ],
+  "documents": [
+    {
+      "id": "e06ba4c5-832f-426d-ae15-6a29cb27702e",
+      "name": "null_cv.pdf",
+      "type": "general",
+      "timestamp": "2026-07-28 09:12"
+    }
+  ],
+  "roles": [],
+  "skills": [],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "051df93b-839b-4571-8a17-8a20951e710d",
+      "text": "Uploaded document: null_cv.pdf",
+      "type": "document",
+      "ts": "2026-07-28T09:12:18.417658"
+    },
+    {
+      "id": "6fa0eac2-5277-4b6e-8e13-22aeadbea46a",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-07-28T09:11:48.890314"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Summary</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>SUMMARY</strong>
+Based on the provided CV, Alexander R. Rivera's background is NOT already in sustainability/green-economy roles. His actual work history is in solar installation and electrical work.</p>
+<p><strong>TRANSFERABLE/MATCHED SKILLS</strong></p>
+<ul>
+<li>Project management</li>
+<li>Team leadership</li>
+<li>Electrical work (wiring, conduit bending)</li>
+<li>Safety protocols (OSHA 30-Hour Construction Safety)</li>
+<li>Time management (completing projects ahead of schedule)</li>
+<li>Budgeting (coordinating with utility reps and municipal inspectors to secure rapid Permission to Operate)</li>
+</ul>
+<p><strong>SKILL GAPS</strong></p>
+<ul>
+<li>Sustainability-specific knowledge: e.g., understanding of climate change impacts, carbon footprint analysis, life cycle assessment</li>
+<li>ESG (Environmental, Social, Governance) considerations in project planning and execution</li>
+<li>Familiarity with green economy policies and regulations</li>
+</ul>
+<p><strong>ALL SKILLS</strong>
+{
+  "all_skills": [
+    "PV System Design",
+    "AC/DC Wiring",
+    "NEC Code (Art. 690)",
+    "Conduit Bending",
+    "Roof Mount Racking",
+    "Battery Storage (ESS)",
+    "SolarEdge &amp; Enphase",
+    "Thermal Imaging",
+    "IV Curve Tracing",
+    "Panel Upgrades (MPU)",
+    "Grid Interconnection",
+    "Fall Protection",
+    "Crew Leadership",
+    "NABCEP PV Installation Professional",
+    "OSHA 30-Hour Construction Safety",
+    "Licensed Journeyman Electrician",
+    "Tesla Powerwall Certified Installer",
+    "Enphase Certified Field Specialist",
+    "CPR / First Aid / AED Certified",
+    "Fluke 1587 FC Insulation Tester",
+    "FLIR Thermal Camera &amp; Analysis",
+    "Seaward Solar Utility Tester",
+    "Torque Wrench &amp; Calibrated Tools",
+    "Aerial Lifts &amp; Scaffold Safety"
+  ],
+  "matched": [
+    "Project management",
+    "Team leadership",
+    "Electrical work (wiring, conduit bending)",
+    "Safety protocols (OSHA 30-Hour Construction Safety)",
+    "Time management",
+    "Budgeting"
+  ],
+  "gaps": [
+    "Sustainability-specific knowledge: e.g., understanding of climate change impacts, carbon footprint analysis, life cycle assessment",
+    "ESG (Environmental, Social, Governance) considerations in project planning and execution",
+    "Familiarity with green economy policies and regulations"
+  ]
+}</p>
+<p><strong>TOP 3 NEXT STEPS</strong></p>
+<ol>
+<li>Develop basic sustainability knowledge through online courses or certifications.</li>
+<li>Gain experience working on projects that incorporate ESG considerations and green economy principles.</li>
+<li>Network with professionals in the sustainability sector to gain insights into industry best practices.</li>
+</ol>
+<p><strong>JSON OUTPUT</strong>
+{
+  "name": "Alexander R. Rivera",
+  "sector": "Solar Installation/Electrical Work",
+  "experience_years": "6+ years",
+  "suggested_target_role": "Sustainability Specialist or Project Manager with a focus on renewable energy projects",
+  "location": "Austin, TX",
+  "goals": "",
+  "hobbies": "",
+  "headline": "Lead Solar Field Technician",
+  "experience": [
+    {"title": "Lead Solar Field Technician", "company": "Apex Clean Energy Solutions", "start_date": "2022", "end_date": "Present"},
+    {"title": "Solar PV Installer &amp; Maintenance Tech", "company": "SunRay Electric &amp; Renewables", "start_date": "2019", "end_date": "2022"},
+    {"title": "Electrical Apprentice &amp; Solar Assistant", "company": "Lone Star Power Systems", "start_date": "2018", "end_date": "2019"}
+  ]
+}</p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

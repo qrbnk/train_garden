@@ -1,0 +1,74 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Summary</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>Summary</strong>
+Robert Smith's background is NOT already in sustainability. His work history suggests he has experience in grounds maintenance and janitorial services, but no direct connection to sustainability or green economy roles.</p>
+<p><strong>Transferable/Matched Skills</strong></p>
+<ul>
+<li>Physical labor and manual dexterity</li>
+<li>Equipment maintenance and repair (e.g., Toro Z master, John Deere mower)</li>
+<li>Basic construction and carpentry skills (e.g., building boardwalks, fixing decks)</li>
+<li>Teamwork and collaboration (e.g., working with colleagues to improve customer experience)</li>
+<li>Problem-solving and adaptability (e.g., handling emergencies like flooding)</li>
+</ul>
+<p><strong>Skill Gaps</strong></p>
+<ul>
+<li>Sustainability knowledge and concepts: familiarity with environmental impact assessments, sustainable practices, and green infrastructure</li>
+<li>Environmental policy and regulations: understanding of relevant laws and regulations in the green economy sector</li>
+<li>Data analysis and reporting: ability to collect and analyze data on sustainability performance metrics</li>
+</ul>
+<p><strong>Top 3 Next Steps</strong></p>
+<ol>
+<li><strong>Take online courses or certification programs</strong>: Robert should explore foundational courses in sustainability, environmental policy, and green infrastructure to fill knowledge gaps.</li>
+<li><strong>Network with professionals</strong>: He should connect with people working in the green economy sector through networking events, job fairs, or professional associations.</li>
+<li><strong>Highlight transferable skills</strong>: Emphasize his relevant work experience and matched skills on his CV and online profiles to demonstrate potential for a sustainability role.</li>
+</ol>
+<p><strong>SKILLS_JSON</strong>
+<code>json
+{
+  "matched": [
+    {"name": "Physical labor", "description": ""},
+    {"name": "Equipment maintenance", "description": ""}
+  ],
+  "gaps": [
+    {"name": "Sustainability knowledge", "description": ""},
+    {"name": "Environmental policy and regulations", "description": ""}
+  ],
+  "summary": "",
+  "name": "Robert Smith",
+  "sector": "Janitorial and Grounds Maintenance",
+  "experience_years": "8-10 years",
+  "suggested_target_role": "Sustainability Specialist or Green Infrastructure Coordinator",
+  "location": "Alabama",
+  "goals": [],
+  "hobbies": ["Climbing", "Snowboarding", "Cooking", "Reading"],
+  "headline": "Grounds Maintenance Worker/Consultant",
+  "experience": [
+    {
+      "title": "Grounds Maintenance Worker/Consultant",
+      "company": "DNR Mistletoe State Park",
+      "start_date": "May 2015",
+      "end_date": "2019"
+    },
+    {
+      "title": "Grounds Maintenance Worker",
+      "company": "Irons Oaks Environmental Learning Center",
+      "start_date": "2011",
+      "end_date": "2015"
+    }
+  ]
+}</code></p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

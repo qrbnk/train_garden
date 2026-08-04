@@ -1,0 +1,53 @@
+{
+  "company_id": "551dd567c3b1cb0446629206e59a6ee5",
+  "email": "03companies.com",
+  "account_type": "company",
+  "first_seen": "2026-08-03T10:58:38.015159",
+  "last_seen": "2026-08-03T10:59:09.190138",
+  "profile": {
+    "name": "03compamnies",
+    "company_number": "",
+    "registered_address": "",
+    "website": "",
+    "sector": "solar.ev",
+    "sub_sectors": [],
+    "company_size": "",
+    "stage": "",
+    "hq_location": "",
+    "work_types": [
+      "Full-time",
+      "Part-time",
+      "Contract"
+    ],
+    "remote_policy": "",
+    "description": "A leading provider of solar energy solutions, delivering efficient and cost-effective solar installations to homes and businesses nationwide.",
+    "culture_tags": [],
+    "account_manager": {
+      "name": "craig",
+      "position": "ceo",
+      "email": "ceo.com"
+    },
+    "onboarding_done": true
+  },
+  "team_members": [
+    {
+      "id": "2a73e307-651f-4fb4-b31d-da88e8cafbd5",
+      "name": "craig",
+      "email": "ceo.com",
+      "access_level": "owner",
+      "added_at": "2026-08-03T10:59:09.189566"
+    }
+  ],
+  "documents": [],
+  "roles": [],
+  "skills": [],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "b6f42c87-9327-4d14-abbf-4eb1db88343c",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:59:09.190130"
+    }
+  ]
+}

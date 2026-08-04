@@ -1,0 +1,56 @@
+
+<html>
+<head>
+    <style>
+        body { font-family: 'Inter', sans-serif; padding: 40px; color: #1e293b; background: #fff; line-height: 1.7; }
+        h1 { color: #091747; font-size: 24px; margin-bottom: 25px; }
+        .day-card {
+            background: #f8fafc; border: 1px solid #e2e8f0; padding: 25px;
+            border-radius: 20px; margin-bottom: 20px; list-style: none;
+            transition: transform 0.2s;
+        }
+        .day-card:hover { transform: translateY(-3px); border-color: #091747; }
+        .tag {
+            font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 6px;
+            text-transform: uppercase; margin-right: 10px; display: inline-block;
+            margin-bottom: 10px;
+        }
+        .tag-learn { background: #dbeafe; color: #1e40af; }
+        .tag-read  { background: #fef3c7; color: #92400e; }
+        .tag-apply { background: #dcfce7; color: #166534; }
+        .header-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 30px; border-bottom: 2px solid #f1f5f9; padding-bottom: 15px;
+        }
+        .btn-export {
+            background: #091747; color: white; border: none; padding: 10px 20px;
+            border-radius: 8px; font-weight: 700; font-size: 12px; cursor: pointer;
+        }
+        @media print { .no-print { display: none !important; } body { padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="header-bar no-print">
+        <h1>🚀 Career Accelerator: Sustainability Career Trends</h1>
+        <button class="btn-export" onclick="window.print()">Export PDF</button>
+    </div>
+    <div id="roadmap-container"><p>Welcome to the Career Placement Office in London! I'm excited to help you develop skills in sustainability career trends. Here are your daily tasks to get you started:</p>
+<p><strong>Day 1</strong></p>
+<ul>
+<li>LEARN: Familiarize yourself with the fundamentals of sustainable development and environmental policy by studying courses on online platforms like Coursera or edX, focusing on topics such as climate change, sustainable business practices, and eco-system services.</li>
+<li>READ: Read articles from reputable sources like The Guardian's Sustainable Business section (https://www.theguardian.com/sustainable-business) or London-based organizations such as the Greater London Authority's (GLA) sustainability initiatives (https://www.london.gov.uk/what-we-do/environment).</li>
+<li>APPLY: Volunteer for a local environmental organization, such as the London Environmental Network, which offers opportunities to participate in conservation efforts and community engagement projects (Volunteer - London Environmental Network: https://www.londonenvironment.net/volunteer_opportunities).</li>
+</ul>
+<p>How can I assist you further?</p></div>
+    <script>
+        document.querySelectorAll('li').forEach(item => {
+            item.classList.add('day-card');
+            let content = item.innerHTML;
+            if (content.includes('LEARN')) content = '<span class="tag tag-learn">Course</span>' + content;
+            if (content.includes('READ'))  content = '<span class="tag tag-read">Insight</span>' + content;
+            if (content.includes('APPLY')) content = '<span class="tag tag-apply">Action</span>' + content;
+            item.innerHTML = content;
+        });
+    </script>
+</body>
+</html>

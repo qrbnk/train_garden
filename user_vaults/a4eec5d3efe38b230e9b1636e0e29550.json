@@ -1,0 +1,686 @@
+{
+  "user_id": "a4eec5d3efe38b230e9b1636e0e29550",
+  "email": "24admin@test.com",
+  "name": "thomas",
+  "first_seen": "2026-07-24T18:23:02.474813",
+  "last_seen": "2026-07-24T18:45:56.161786",
+  "sector": "Renewable Energy/EV",
+  "experience_years": "",
+  "target_role": "Renewable energy / EV roles",
+  "goals": [
+    "Find jobs near me for my target role"
+  ],
+  "skills": [
+    "Project delivery",
+    "Regulatory literacy",
+    "Project delivery and execution expertise",
+    "Stakeholder management and communication skills",
+    "Data analysis and interpretation skills",
+    "Stakeholder management",
+    "Project Management"
+  ],
+  "skill_sources": {
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Bridges technical execution and commercial growth — In a sustainability role, Daryna can leverage her experience in bridging technical and commercial aspects to deliver projects that meet both business and environmental goals.",
+        "ts": "2026-07-24T18:24:34.556512"
+      },
+      {
+        "type": "inferred",
+        "detail": "Project management experience — This skill is directly applicable to managing renewable energy projects from planning to implementation, ensuring they meet timelines, budgets, and quality standards.",
+        "ts": "2026-07-24T18:33:10.953258"
+      }
+    ],
+    "Regulatory literacy": [
+      {
+        "type": "inferred",
+        "detail": "Digital transformation strategist with a humancentric innovation focus — As a digital transformation expert, Daryna has likely worked with regulatory bodies or understood the impact of regulations on business; this experience can be applied",
+        "ts": "2026-07-24T18:24:34.556551"
+      },
+      {
+        "type": "inferred",
+        "detail": "Technical execution expertise (bridging technical and commercial aspects) — Your experience in bridging technical and commercial aspects suggests you have a good understanding of regulatory requirements, which is essential for navigating th",
+        "ts": "2026-07-24T18:33:10.953305"
+      }
+    ],
+    "Project delivery and execution expertise": [
+      {
+        "type": "inferred",
+        "detail": "Digital transformation strategist — In the renewable energy sector, effective project delivery is crucial to meet tight deadlines and budgets, and Daryna's experience as a digital transformation strategist can be leveraged to manage complex",
+        "ts": "2026-07-24T18:30:42.698063"
+      }
+    ],
+    "Stakeholder management and communication skills": [
+      {
+        "type": "inferred",
+        "detail": "bridges technical execution, commercial growth, and humancentric innovation — Daryna's ability to balance technical, business, and human-centered aspects of digital transformation can be applied to managing stakeholders in the renewable ene",
+        "ts": "2026-07-24T18:30:42.698101"
+      }
+    ],
+    "Data analysis and interpretation skills": [
+      {
+        "type": "inferred",
+        "detail": "Work in tech at [Previous sector: not stated] — In the renewable energy sector, data-driven decision-making is critical for optimizing energy production and consumption, and Daryna's experience working in tech likely involves data analysis ",
+        "ts": "2026-07-24T18:30:42.698112"
+      }
+    ],
+    "Stakeholder management": [
+      {
+        "type": "inferred",
+        "detail": "Digital transformation strategist with a focus on human-centric innovation — As a digital transformation strategist, you have likely worked with diverse stakeholders to drive change, which is essential in renewable energy and EV roles where",
+        "ts": "2026-07-24T18:33:10.953293"
+      },
+      {
+        "type": "inferred",
+        "detail": "Cross-functional collaboration (bridging technical execution and commercial growth) — This skill demonstrates your ability to work effectively with diverse teams, which is critical in renewable energy and EV roles where you will need to col",
+        "ts": "2026-07-24T18:33:10.953319"
+      }
+    ]
+  },
+  "cv_summary": "                 Daryna Vakulenko           London, UK, Phone number: +447442476374, Email: info@darynavakulenko.com          Professional Profile           Digital transformation strategist who bridges technical execution, commercial growth, and humancentric innovation. With a foundational backgrou",
+  "messages": [
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "user",
+      "content": "I'm completely new to sustainability",
+      "ts": "2026-07-24T18:28:11.072617"
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. What kind of role are you looking for? Any specific job titles, sectors, or type of work on your radar — and what's the \"why\" behind the search?",
+      "ts": "2026-07-24T18:28:15.776961",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not sure yet — help me explore",
+        "Renewable energy / EV roles",
+        "Sustainability / ESG roles"
+      ]
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "user",
+      "content": "Renewable energy / EV roles",
+      "ts": "2026-07-24T18:28:24.769630"
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "What's your ideal salary range? Knowing your floor and target helps me filter out roles that aren't the right fit.",
+      "ts": "2026-07-24T18:28:35.688405",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Under £30k",
+        "£30k–£50k",
+        "£50k–£70k",
+        "£70k+"
+      ]
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "user",
+      "content": "£30k–£50k",
+      "ts": "2026-07-24T18:28:39.058289"
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "Do you need this to be remote, hybrid, or onsite?",
+      "ts": "2026-07-24T18:28:54.915511",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Remote",
+        "Hybrid",
+        "Onsite"
+      ]
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "user",
+      "content": "Onsite",
+      "ts": "2026-07-24T18:29:01.503864"
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-07-24T18:29:01.508051",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "user",
+      "content": "No strong preference",
+      "ts": "2026-07-24T18:29:04.937045"
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "It sounds like we're on the same page about your ideal work environment, Thomas - no strong preference for company culture. I'm curious to know more about your current situation though. What are you currently doing in terms of work?",
+      "ts": "2026-07-24T18:29:49.488941",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Can you tell us more?",
+        "What motivated your decision?",
+        "Open to learning more?"
+      ]
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "user",
+      "content": "I work in tech",
+      "ts": "2026-07-24T18:30:14.248445"
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "Now that we have your ideal work environment figured out, Thomas, I'm curious to know more about what you're doing currently in the tech sector. What specific areas of technology are you working with - is it software development, data analysis, or something else?",
+      "ts": "2026-07-24T18:30:57.210368",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "How's the industry impact on climate?",
+        "Transitioning to renewable tech interests",
+        "Electric vehicle developments in your work?"
+      ]
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "user",
+      "content": "Find jobs near me for my target role",
+      "ts": "2026-07-24T18:31:55.116360"
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "I think there's been a misunderstanding, Thomas! You mentioned you wanted to find jobs near you for your target role in renewable energy/EV roles, but I'm still curious about what you're currently doing in the tech sector. Can you tell me more about your current job responsibilities and how they relate to technology? What specific areas of tech are you working with on a daily basis?",
+      "ts": "2026-07-24T18:32:14.398683",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Search renewable jobs in my area",
+        "Find EV career opportunities nearby",
+        "Discover local green job openings"
+      ]
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "user",
+      "content": "project managent",
+      "ts": "2026-07-24T18:32:40.136102"
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "Thomas, I sense a hint of frustration in your brief message. You mentioned \"project managent\", which suggests that you might be feeling overwhelmed or stuck in your current role. Can you tell me more about what's been on your mind lately? What are the specific challenges you're facing in your project management work that makes you think about transitioning into renewable energy and EV roles?",
+      "ts": "2026-07-24T18:33:27.479636",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Can you define project management?",
+        "Need help with renewable job search",
+        "EV industry has a lot"
+      ]
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "As we dive into exploring job opportunities in renewable energy/EV roles, I want to acknowledge the unique transition you're making. You've got a solid background in technology, but now you're eager to pivot into the exciting field of renewable energy and electric vehicles. This isn't just about applying your existing skills to a new industry; it's an opportunity to build on your strengths while developing new expertise.\n\nLet's take a closer look at some roles that I believe will be a great fit for you. Firstly, the **Community Renewables Development Officer** role at [CharityJob.co.uk](https://www.charityjob.co.uk/jobs/south-east-london-community-energy/community-renewables-development-officer/1075889) is an excellent match, considering your project delivery and stakeholder management skills. Your ability to communicate effectively with various stakeholders will be valuable in this role.\n\nAnother role that catches my eye is the **Renewable Energy Engineering** position listed on [GreenJobs.co.uk](https://www.greenjobs.co.uk/browse-jobs/energy-jobs/renewable-energy-engineering/). Given your project delivery and regulatory literacy expertise, I think you'll excel in this field. The role requires a strong understanding of renewable energy systems and technologies, which will allow you to contribute meaningfully.\n\nLastly, the **Sales & Business Development** role in renewable energy on [GreenJobs.co.uk](https://www.greenjobs.co.uk/browse-jobs/renewable-energy-jobs/sales-business-development/) is another promising opportunity. Your project management skills will be essential in driving business growth and developing new opportunities. While you may need to develop your sales and business development expertise, I believe this role offers a great chance for growth and learning.\n\nThese roles offer exciting challenges that align with your skills and interests. Now, let's discuss the next steps in your job search journey!",
+      "ts": "2026-07-24T18:35:01.787661",
+      "job_cards": [
+        {
+          "type": "job_card",
+          "title": "Solar Power in Bangladesh: Clean Energy and Jobs",
+          "company": "YouTube",
+          "url": "https://www.youtube.com/watch?v=CGgEivChtCE",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Analyzing renewable energy trends to identify opportunities for growth",
+            "Developing strategies to increase energy access and job creation",
+            "Collaborating on projects that promote sustainable development and investment"
+          ],
+          "snippet": "Renewable energy in Bangladesh is helping deliver reliable, clean, and affordable electricity while creating jobs and attracting private investment.",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "Renewable Energy jobs in the UK",
+          "company": "",
+          "url": "https://www.greenjobs.co.uk/browse-jobs/renewable-energy-jobs/",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Here are three bullet points:",
+            "Develops innovative solutions for digital transformation in renewable energy sector.",
+            "Leverages expertise to drive business growth and sustainability in industry."
+          ],
+          "snippet": "Renewable Energy jobs and Careers from GreenJobs - the number one job board for Renewable Energy jobs in the United Kingdom and globally. Candidates register now.",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "greenjobs.co.uk/browse-jobs/renewable-energy-jobs/sales-business...",
+          "company": "",
+          "url": "https://www.greenjobs.co.uk/browse-jobs/renewable-energy-jobs/sales-business-development/",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Leverages digital expertise to drive sales in renewable energy.",
+            "Applies strategic thinking to accelerate business growth in sector.",
+            "Utilizes industry knowledge to develop innovative sales approaches."
+          ],
+          "snippet": "Renewable Energy jobs (6).",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "greenjobs.co.uk/browse-jobs/energy-jobs/renewable-energy...",
+          "company": "",
+          "url": "https://www.greenjobs.co.uk/browse-jobs/energy-jobs/renewable-energy-engineering/",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Develops strategies for digital transformation in renewable energy.",
+            "Analyzes data to optimize energy production and consumption.",
+            "Implements innovative solutions to drive industry growth sustainably."
+          ],
+          "snippet": "Renewable Energy Engineering (3).",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        },
+        {
+          "type": "job_card",
+          "title": "Community Renewables Development Officer",
+          "company": "South East London ...",
+          "url": "https://www.charityjob.co.uk/jobs/south-east-london-community-energy/community-renewables-development-officer/1075889",
+          "location": "London",
+          "salary": "",
+          "posted": "",
+          "bullets": [
+            "Leverages digital expertise to drive community-led renewable energy projects forward.",
+            "Develops innovative solutions to overcome technical and financial project challenges.",
+            "Utilizes strategic thinking to maximize community benefits from renewable energy initiatives."
+          ],
+          "snippet": "Jul 9, 2026 · South East London Community Energy (SELCE) is looking for a Community Renewable Energy Project Developer to help deliver one of London's most exciting community-owned renewable energy programmes.",
+          "match_pct": 60,
+          "match_label": "Good stretch",
+          "missing_skills": []
+        }
+      ],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me tailor my CV for one of these",
+        "What skills do I need for these roles?",
+        "Generate a 30-day plan to get there",
+        "Prep me for an interview for one of these"
+      ]
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "user",
+      "content": "Find volunteering opportunities near me for my target role",
+      "ts": "2026-07-24T18:37:42.548009"
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "**Welcome, Thomas!**\n\nYou're taking the first step towards gaining relevant experience in your target role by volunteering in areas related to renewable energy and electric vehicles. I'm excited to help you find opportunities near SE1 2DA.\n\n### Volunteering Opportunities\n\n#### 1. [Hand on London](https://www.handsonlondon.org.uk/volunteer)\n**What they do:** Hand on London connects volunteers with charities across London, promoting community development and social justice. As a volunteer, you'll have the opportunity to work with organizations focused on environmental conservation, sustainability, and renewable energy.\n\n* Participate in beach cleanups or park restoration projects\n* Assist with administrative tasks for local environmental groups\n* Join a community garden project focused on sustainable food systems\n* Attend environmental workshops and events as a volunteer facilitator\n\n**How to reach out:** Fill out the volunteer application form on their website, specifying your interest in environmental roles. You can also contact them via email at [info@handsonlondon.org.uk](mailto:info@handsonlondon.org.uk) with any questions.\n\n#### 2. [GoVo - Flexible Volunteering Opportunities](https://govo.org/)\n**What they do:** GoVo offers flexible, inclusive volunteering opportunities tailored to your interests and location. As a volunteer in renewable energy or electric vehicles, you'll contribute to projects that promote sustainable living and community engagement.\n\n* Participate in EV charging point installations as part of their Community Energy Team\n* Assist with research on sustainable transportation initiatives\n* Help plan environmental events and workshops for local communities\n* Join online forums discussing renewable energy and sustainability issues\n\n**How to reach out:** Search for opportunities on the GoVo website, selecting \"SE1 2DA\" as your location. Once you find a role that interests you, click \"Apply Now\" to send an application.\n\n#### 3. [Simply Volunteer London](https://simplyvolunteerlondon.uk/roles-search)\n**What they do:** Simply Volunteer London connects volunteers with opportunities in the city's boroughs, promoting community development and social responsibility. As a volunteer in renewable energy or electric vehicles, you'll contribute to projects that support sustainable living.\n\n* Assist with renewable energy audits for local businesses\n* Join a team of EV enthusiasts working on transportation initiatives\n* Participate in environmental education workshops for schools\n* Help plan community events focused on sustainability and climate action\n\n**How to reach out:** Search for opportunities on the Simply Volunteer London website, selecting \"SE1 2DA\" as your location. Once you find a role that interests you, click \"Express Interest\" to send an application.\n\n#### 4. [GoVo - Search For Volunteering Opportunities](https://govo.org/search)\n**What they do:** GoVo offers flexible, inclusive volunteering opportunities tailored to your interests and location. As a volunteer in renewable energy or electric vehicles, you'll contribute to projects that promote sustainable living and community engagement.\n\n* Participate in EV charging point installations as part of their Community Energy Team\n* Assist with research on sustainable transportation initiatives\n* Help plan environmental events and workshops for local communities\n* Join online forums discussing renewable energy and sustainability issues\n\n**How to reach out:** Search for opportunities on the GoVo website, selecting \"SE1 2DA\" as your location. Once you find a role that interests you, click \"Apply Now\" to send an application.\n\n### Next Steps\n\n**Step 1: Contact Organizations**\nReach out to the organizations that interest you, specifying your availability and relevant skills. Be clear about your goals in volunteering and how this experience will help you transition into renewable energy/EV roles.\n\n**Step 2: Follow-up After 7 Days**\nIf you don't receive a response within 7 days, send a polite follow-up email to inquire about the status of your application.\n\n**Step 3: Mapping Your Experience to Your CV and Target Role**\nWhen reflecting on your volunteer experience, consider how it maps to your target role. Highlight transferable skills such as project management, community engagement, or research analysis. Be prepared to discuss these experiences during interviews.\n\n### Next Question\nWhat specific aspects of the volunteering process are you most interested in exploring further?",
+      "ts": "2026-07-24T18:38:54.707806",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from jobs in SE1 2DA?",
+        "Find Renewable energy / EV roles jobs near SE1 2DA",
+        "Build me a 30-day action plan around this"
+      ]
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "user",
+      "content": "Find community groups near me for my target role",
+      "ts": "2026-07-24T18:41:53.454665"
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "**Let's find community groups near you that align with your goals in the renewable energy and EV sector!**\n\nHere are some relevant results:\n\n### 1. GatherUK\n[GatherUK](https://gatheruk.org/group-directory/)\nGatherUK is a platform where you can connect with like-minded individuals who share your interests in sustainability and environmental issues. As someone transitioning into the renewable energy/EV field, joining local groups on GatherUK can provide opportunities for networking, skill-sharing, and community engagement.\n* Browse groups by postcode (SE1 2DA) to find relevant groups\n* Search for keywords like \"sustainability\", \"renewable energy\", or \"EV\" to discover related groups\n* RSVP to gatherings and events to meet new people with similar interests\n* Join free and start connecting with your community\n\nTo reach out, click on a group that interests you and follow the 'Join Group' button. Fill in your details and send a message introducing yourself and expressing your interest in the group.\n\n### 2. Friends of the Earth\n[Join a group near you | Friends of the Earth](https://friendsoftheearth.uk/take-action/join-group-near-you)\nFriends of the Earth has over 200 local action groups working to protect people and planet. As someone passionate about renewable energy and EVs, joining their local group can help you stay updated on climate and environmental issues in your area.\n* Find out if there's a Friends of the Earth group near SE1 2DA\n* Contact the group coordinator via email (contact details provided on the website) to introduce yourself and inquire about upcoming events or meetings\n* Attend a meeting to learn more about the group's activities and how you can get involved\n* Join their online community to stay updated on local campaigns and initiatives\n\nTo reach out, click on 'Contact' at the bottom of the webpage and fill in the form with your details. Introduce yourself, mention the group you're interested in joining, and ask about opportunities to get involved.\n\n### 3. Meetup\n[Meetup](https://www.meetup.com/)\nMeetup is a platform where you can find local groups and events aligned with your interests. As someone looking to network and build connections in the renewable energy/EV sector, Meetup can provide valuable opportunities for growth.\n* Search for keywords like \"sustainability\", \"renewable energy\", or \"EV\" in the SE1 2DA area\n* Browse through group listings and attend events that match your interests\n* Join groups and RSVP to gatherings to meet new people with similar passions\n* Start discussions and connect with members who share your interests\n\nTo reach out, search for groups on Meetup using the above keywords. Click on a group that interests you and join as a member. Attend an event or meeting to get started.\n\n### 4. Local Action | Friends of the Earth\n[Local action](https://groups.friendsoftheearth.uk/join)\nFriends of the Earth's local action groups campaign for people and planet in their communities. As someone transitioning into renewable energy/EV roles, joining a local group can provide hands-on experience and opportunities to build connections.\n* Find out if there's a Friends of the Earth group near SE1 2DA\n* Contact the group coordinator via email (contact details provided on the website) to introduce yourself and inquire about upcoming events or meetings\n* Attend a meeting to learn more about the group's activities and how you can get involved\n* Join their online community to stay updated on local campaigns and initiatives\n\nTo reach out, click on 'Contact' at the bottom of the webpage and fill in the form with your details. Introduce yourself, mention the group you're interested in joining, and ask about opportunities to get involved.\n\n**Next Steps:**\n\n1. **Contact**: Reach out to one or more groups that interest you, introducing yourself and expressing your enthusiasm for their work.\n2. **Follow-up**: If no reply after 7 days, send a gentle follow-up email to reiterate your interest and inquire about next steps.\n3. **Update your CV**: Reflect on the experience and skills gained from joining local groups. Update your CV with relevant information that showcases your networking, community engagement, and sustainability skills.\n\nWhat specific concerns or needs do you have regarding connecting with these community groups?",
+      "ts": "2026-07-24T18:43:09.017016",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from community in SE1 2DA?",
+        "Find Renewable energy / EV roles jobs near SE1 2DA",
+        "Build me a 30-day action plan around this"
+      ]
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "user",
+      "content": "I am feeling anxious and uncertain about my career change into sustainability. Can we talk?",
+      "ts": "2026-07-24T18:45:16.559692"
+    },
+    {
+      "uid": "a4eec5d3efe38b230e9b1636e0e29550",
+      "role": "assistant",
+      "content": "**Thomas, I'm so glad you felt comfortable enough to share your anxiety and uncertainty with me.** It takes a lot of courage to acknowledge those feelings, especially when it comes to something as significant as career change. I can sense that the idea of transitioning into sustainability is both thrilling and intimidating for you.\n\nBefore we explore strategies to navigate this transition together, I'd love to understand more about what's causing your anxiety. Can you tell me more about specific concerns or doubts that are holding you back from fully embracing this new path?",
+      "ts": "2026-07-24T18:45:46.395433",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "What's holding you back from transition?",
+        "How can I support your shift?",
+        "Discussing sustainability roles, let's start"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "21dd3d0c-1a69-4e57-86da-57a6cc7ef2c9",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1784913874/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-24 18:24",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [
+    {
+      "type": "job_card",
+      "title": "greenjobs.co.uk/browse-jobs/renewable-energy-jobs/sales-business...",
+      "company": "",
+      "url": "https://www.greenjobs.co.uk/browse-jobs/renewable-energy-jobs/sales-business-development/",
+      "location": "London",
+      "salary": "",
+      "posted": "",
+      "bullets": [
+        "Leverages digital expertise to drive sales in renewable energy.",
+        "Applies strategic thinking to accelerate business growth in sector.",
+        "Utilizes industry knowledge to develop innovative sales approaches."
+      ],
+      "snippet": "Renewable Energy jobs (6).",
+      "match_pct": 60,
+      "match_label": "Good stretch",
+      "missing_skills": [],
+      "tracked_at": "2026-07-24T18:36:31.496104",
+      "status": "interested"
+    }
+  ],
+  "documents": [
+    {
+      "id": "c6ef1227-edae-4cbf-8ea3-158a0292ef85",
+      "name": "Daryna Vakulenko - CV -  copy.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-24 18:24"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [
+    {
+      "id": "61952ae1-c2fb-44d2-af14-b20de72263a5",
+      "content": "",
+      "colour": "#fef3c7",
+      "created_at": "2026-07-24T18:34:58.100932",
+      "updated_at": "2026-07-24T18:34:58.100944"
+    }
+  ],
+  "community_posts": [],
+  "location": "SE1 2DA",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "No strong preference",
+  "salary_range": "£30k–£50k",
+  "work_type": "Onsite",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [
+    {
+      "id": "f13663a2-9aee-46f8-b9bf-19d39753c6ea",
+      "url": "https://groups.friendsoftheearth.uk/",
+      "title": "Local Action | Friends of the Earth",
+      "body": "Local action groups campaign for people and planet in their communities. Find out what they do and if there's one in your area.",
+      "type": "community",
+      "location": "SE1 2DA",
+      "status": "not_started",
+      "saved_at": "2026-07-24T18:43:09.013075"
+    },
+    {
+      "id": "f05a947e-a549-4838-b3e5-74bb444f154c",
+      "url": "https://groups.friendsoftheearth.uk/join",
+      "title": "Get Involved Join (or start) a group near you | Local action",
+      "body": "Find out how to get involved in climate and environmental action in your area.",
+      "type": "community",
+      "location": "SE1 2DA",
+      "status": "not_started",
+      "saved_at": "2026-07-24T18:43:09.013056"
+    },
+    {
+      "id": "6b7fa040-e3fb-4456-9739-5e16387dd059",
+      "url": "https://www.meetup.com/",
+      "title": "Meetup | Find Local Groups, Events, and Activities Near You",
+      "body": "Find Meetup events, join groups, or start your own. Make new friends and connect with like-minded people. Meet people near you who share your interests.",
+      "type": "community",
+      "location": "SE1 2DA",
+      "status": "not_started",
+      "saved_at": "2026-07-24T18:43:09.013038"
+    },
+    {
+      "id": "2ea4c546-8ff5-42e5-bd92-2487f8ce4d9d",
+      "url": "https://gatheruk.org/",
+      "title": "Find Local Groups Near You | Free UK Meetup Alternative ...",
+      "body": "Find local groups and events near you on GatherUK — the UK's member-first Meetup alternative. Search by postcode, join free, RSVP to gatherings, and connect with your community.",
+      "type": "community",
+      "location": "SE1 2DA",
+      "status": "not_started",
+      "saved_at": "2026-07-24T18:43:09.013019"
+    },
+    {
+      "id": "13ba1e2a-e0e9-4c51-a2b6-1404c0deed9d",
+      "url": "https://friendsoftheearth.uk/take-action/join-group-near-you",
+      "title": "Join a group near you | Friends of the Earth",
+      "body": "Friends of the Earth England, Wales and Northern Ireland has more than 200 local action groups working to protect people and planet. Find out if there's a group near you.",
+      "type": "community",
+      "location": "SE1 2DA",
+      "status": "not_started",
+      "saved_at": "2026-07-24T18:43:09.012998"
+    },
+    {
+      "id": "3d435f5d-0966-4e20-b880-d6266beaeaa3",
+      "url": "https://gatheruk.org/group-directory/",
+      "title": "Find Local Groups Near You — UK Group Directory | GatherUK",
+      "body": "Browse UK community groups by postcode, county, or interest. Free to join — walking clubs, hobbies, volunteers, and local meetups. The member-friendly Meetup alternative.",
+      "type": "community",
+      "location": "SE1 2DA",
+      "status": "not_started",
+      "saved_at": "2026-07-24T18:43:09.012952"
+    },
+    {
+      "id": "7a314bda-39fc-4622-8d94-e918bc30223f",
+      "url": "https://simplyvolunteerlondon.uk/roles-search",
+      "title": "Find Volunteer Roles | Simply Volunteer London",
+      "body": "Explore volunteer opportunities across the city/borough with Simply Volunteer London. Search by interest, location, or skill and make a difference in your community.",
+      "type": "jobs",
+      "location": "SE1 2DA",
+      "status": "not_started",
+      "saved_at": "2026-07-24T18:38:54.705003"
+    },
+    {
+      "id": "ab5b9302-87cc-43e5-ae42-020a3159f403",
+      "url": "https://govo.org/search",
+      "title": "Search For Volunteering Opportunities | GoVo",
+      "body": "Search GoVo for volunteering opportunities that match your interests and location. Browse flexible roles across all causes and charities.",
+      "type": "jobs",
+      "location": "SE1 2DA",
+      "status": "not_started",
+      "saved_at": "2026-07-24T18:38:54.704986"
+    },
+    {
+      "id": "edd15868-0636-441a-ab73-377709a62771",
+      "url": "https://govo.org/",
+      "title": "Flexible Volunteering Opportunities with Charities | GoVo",
+      "body": "With GoVo, volunteering is flexible, inclusive and tailored to you. Search by postcode to see local and remote roles across the causes you care about.",
+      "type": "jobs",
+      "location": "SE1 2DA",
+      "status": "not_started",
+      "saved_at": "2026-07-24T18:38:54.704963"
+    },
+    {
+      "id": "621d7773-c420-4605-9244-6b720d3d3bb5",
+      "url": "https://www.handsonlondon.org.uk/volunteer",
+      "title": "Volunteering in London | Volunteer with charities across ...",
+      "body": "Browse volunteering opportunities all over London and apply to the perfect one for you. We have charity and NGO volunteering opportunities from dozens of London charities.",
+      "type": "jobs",
+      "location": "SE1 2DA",
+      "status": "not_started",
+      "saved_at": "2026-07-24T18:38:54.704909"
+    }
+  ],
+  "hobby_skill_map": [],
+  "skill_validations": {
+    "Project delivery": {
+      "status": "validated",
+      "updated_at": "2026-07-24T18:25:59.893688"
+    }
+  },
+  "profile_complete": true,
+  "onboarding_done": true,
+  "headline": "Tech Project Manager transitioning to Renewable Energy/EV roles",
+  "experience": [
+    {
+      "id": "8bb0e68d",
+      "title": "Renewable energy / EV roles (Target Role)",
+      "company": "",
+      "start_date": "",
+      "end_date": "Present",
+      "description": "",
+      "source": "chat"
+    }
+  ],
+  "how_heard": "Event",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Project management experience",
+      "skill": "Project delivery",
+      "relevance": "This skill is directly applicable to managing renewable energy projects from planning to implementation, ensuring they meet timelines, budgets, and quality standards."
+    },
+    {
+      "source": "Digital transformation strategist with a focus on human-centric innovation",
+      "skill": "Stakeholder management",
+      "relevance": "As a digital transformation strategist, you have likely worked with diverse stakeholders to drive change, which is essential in renewable energy and EV roles where managing stakeholder relationships with community groups, investors, and regulatory bodies is crucial."
+    },
+    {
+      "source": "Technical execution expertise (bridging technical and commercial aspects)",
+      "skill": "Regulatory literacy",
+      "relevance": "Your experience in bridging technical and commercial aspects suggests you have a good understanding of regulatory requirements, which is essential for navigating the complex regulatory landscape of renewable energy and EV industries."
+    },
+    {
+      "source": "Cross-functional collaboration (bridging technical execution and commercial growth)",
+      "skill": "Stakeholder management",
+      "relevance": "This skill demonstrates your ability to work effectively with diverse teams, which is critical in renewable energy and EV roles where you will need to collaborate with engineers, project managers, investors, and regulatory bodies."
+    }
+  ],
+  "journey": {
+    "xp": 0,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-24",
+    "last_checkin_date": ""
+  },
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "neutral",
+        "ts": "2026-07-24T18:29:58.804258"
+      },
+      {
+        "emotion": "neutral",
+        "ts": "2026-07-24T18:31:06.239132"
+      },
+      {
+        "emotion": "frustrated",
+        "ts": "2026-07-24T18:32:24.885980"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-24T18:35:11.960503"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-24T18:43:19.028342"
+      },
+      {
+        "emotion": "anxious",
+        "ts": "2026-07-24T18:45:56.060399"
+      }
+    ],
+    "blockers": [
+      "current job responsibilities not mentioned",
+      "current job responsibilities",
+      "uncertainty about career change into sustainability"
+    ],
+    "preferred_tone": "warm",
+    "response_depth": "balanced",
+    "milestones_mentioned": [],
+    "total_exchanges": 6,
+    "encouragement_count": 1,
+    "key_insights": [
+      "User has no strong preference for company culture, and is currently in an unspecified role with target roles in renewable energy/EV",
+      "User is working in tech but has a target role in renewable energy/EV roles, indicating career transition aspirations.",
+      "The user is trying to find jobs near them for their target role in renewable energy/EV roles, but they haven't provided enough information about their current job or skills.",
+      "The user is excited to transition into renewable energy and EV roles, but may need guidance on how to leverage their existing tech background.",
+      "The user is excited to find community groups near them and is motivated to take action towards their target role in the renewable energy and EV sector.",
+      "The user is anxious and uncertain about their career change into sustainability, indicating a need for support and guidance."
+    ],
+    "current_emotion": "anxious"
+  }
+}

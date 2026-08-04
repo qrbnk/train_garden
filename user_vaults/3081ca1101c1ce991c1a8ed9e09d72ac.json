@@ -1,0 +1,688 @@
+{
+  "user_id": "3081ca1101c1ce991c1a8ed9e09d72ac",
+  "email": "23admin@test.com",
+  "name": "steven",
+  "first_seen": "2026-07-23T11:56:14.853258",
+  "last_seen": "2026-07-25T18:05:19.977514",
+  "sector": "sustainability",
+  "experience_years": "0 (changing career from tech)",
+  "target_role": "sustainability",
+  "goals": [
+    "Career change from Tech to Sustainability",
+    "career change to sustainability",
+    "career change into sustainability"
+  ],
+  "skills": [
+    "Project delivery",
+    "Regulatory literacy",
+    "Data analysis and interpretation",
+    "Stakeholder management",
+    "volunteering"
+  ],
+  "skill_sources": {
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Delivering AI-driven solutions across complex industries — This experience can be applied to leading and delivering projects related to sustainability initiatives, such as green infrastructure development or climate resilience planning.",
+        "ts": "2026-07-23T11:57:28.788558"
+      },
+      {
+        "type": "inferred",
+        "detail": "Ran product launches at a tech startup — Effective project management is crucial in sustainability initiatives, where complex projects require coordination with various stakeholders.",
+        "ts": "2026-07-23T11:59:14.310043"
+      }
+    ],
+    "Regulatory literacy": [
+      {
+        "type": "inferred",
+        "detail": "Strategic leader and MD (Physical) — In a sustainability role, being familiar with regulatory requirements can help navigate complex environmental laws and policies.",
+        "ts": "2026-07-23T11:57:28.788602"
+      }
+    ],
+    "Data analysis and interpretation": [
+      {
+        "type": "inferred",
+        "detail": "Digital transformation strategist — Sustainability professionals need to analyze data to inform decisions and measure the impact of their initiatives, making data analysis a valuable skill in this field.",
+        "ts": "2026-07-23T11:59:14.310087"
+      }
+    ],
+    "Stakeholder management": [
+      {
+        "type": "inferred",
+        "detail": "Commercial growth experience — Understanding how to engage with diverse stakeholders, including business leaders, is essential for sustainability professionals who need to develop and implement strategies that balance economic and environme",
+        "ts": "2026-07-23T11:59:14.310101"
+      }
+    ],
+    "volunteering": [
+      {
+        "type": "chat",
+        "detail": "yes",
+        "ts": "2026-07-23T12:43:13.607813"
+      }
+    ]
+  },
+  "cv_summary": "                 Daryna Vakulenko           London, UK, Phone number: +447442476374, Email: info@darynavakulenko.com          Professional Profile           Digital transformation strategist who bridges technical execution, commercial growth, and humancentric innovation. With a foundational backgrou",
+  "messages": [
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "user",
+      "content": "I want to do a full career assessment. Let us map my journey from where I am now to my target role in sustainability. Please ask me everything you need to know.",
+      "ts": "2026-07-23T11:59:55.863620"
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "assistant",
+      "content": "What's your ideal salary range? Knowing your floor and target helps me filter out roles that aren't the right fit.",
+      "ts": "2026-07-23T12:00:06.385656",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Under £30k",
+        "£30k–£50k",
+        "£50k–£70k",
+        "£70k+"
+      ]
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "user",
+      "content": "£50k–£70k",
+      "ts": "2026-07-23T12:00:15.594787"
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "assistant",
+      "content": "Do you need this to be remote, hybrid, or onsite?",
+      "ts": "2026-07-23T12:00:20.930246",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Remote",
+        "Hybrid",
+        "Onsite"
+      ]
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "user",
+      "content": "Hybrid",
+      "ts": "2026-07-23T12:01:30.580607"
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-07-23T12:01:30.586268",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "assistant",
+      "content": "I'm so glad you're excited about mapping your journey to a sustainability role! I've saved that you want to do a full career assessment, and I'll make sure to tailor our conversation to your needs. To help me better understand where you are right now in your sustainability career, can you tell me more about what's been the most fulfilling part of your work so far?",
+      "ts": "2026-07-23T12:02:06.444453",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Can you elaborate on this?",
+        "What factors influence your decision?",
+        "How can we improve?"
+      ]
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "user",
+      "content": "i've been working in tech and now i want to chnage career into sustainability but i have no experience",
+      "ts": "2026-07-23T12:03:12.076845"
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "assistant",
+      "content": "**You're taking the first step towards a fulfilling career in sustainability!**\n\nCongratulations on recognizing your passion for sustainability and wanting to make a change from tech. I'm excited to help you navigate this transition.\n\nLet's explore some relevant resources to get you started:\n\n### 1. **How to get a job in sustainability | Prospects.ac.uk** [https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/environment-and-agriculture/how-to-get-a-job-in-sustainability/](https://www.proscepts.ac.uk/jobs-and-work-experience/job-sectors/environment-and-agriculture/how-to-get-a-job-in-sustainability/)\nProspects provides expert advice on breaking into the sustainability sector. Relevant to you, as you have no direct experience.\n\n* Volunteer for environmental projects to gain hands-on experience\n* Participate in sustainability-focused online communities and forums\n* Network with professionals in the field through events and conferences\n* Consider taking courses or certifications to build your knowledge\n\n**How to reach out:**\nEmail [info@prospects.ac.uk](mailto:info@prospects.ac.uk) with a brief introduction, stating you're interested in transitioning into sustainability.\n\n### 2. **Going green, getting hired: a guide to sustainable careers | Prospects.ac.uk** [https://www.prospects.ac.uk/the-topic/going-green-getting-hired-a-guide-to-sustainable-careers/](https://www.prospects.ac.uk/the-topic/going-green-getting-hired-a-guide-to-sustainable-careers/)\nThis comprehensive guide offers practical steps to start your sustainability career.\n\n* Explore green job opportunities on websites like GreenJobs and EnvironmentJob\n* Research necessary qualifications and certifications in the field\n* Network with professionals through events and online communities\n* Consider internships or volunteer work to gain experience\n\n**How to reach out:**\nUse the contact form on [https://www.prospects.ac.uk/](https://www.prospects.ac.uk/) to inquire about their guide and resources.\n\n### 3. **Sustainability Jobs in the UK | GreenJobs** [https://www.greenjobs.co.uk/browse-jobs/sustainability-jobs/](https://www.greenjobs.co.uk/browse-jobs/sustainability-jobs/)\nGreenJobs is a leading platform for sustainability job listings.\n\n* Search for entry-level positions and internships\n* Filter by location (considering your MK16 8JJ location)\n* Network with professionals through their online community\n* Consider registering as a candidate to receive tailored job recommendations\n\n**How to reach out:**\nRegister on GreenJobs and explore the platform's features.\n\n### 4. **Sustainability Jobs in North West England | Reed.co.uk** [https://www.reed.co.uk/jobs/sustainability-jobs-in-north-west-england](https://www.reed.co.uk/jobs/sustainability-jobs-in-north-west-england)\nReed provides job listings, including senior roles.\n\n* Search for positions matching your interests and skills\n* Consider applying for entry-level or graduate programs\n* Network with professionals through their online community\n* Reach out to recruiters directly to discuss opportunities\n\n**How to reach out:**\nContact Reed's customer service team via phone (0800 078 4001) or email ([customerservice@reed.co.uk](mailto:customerservice@reed.co.uk)).\n\n### Next Steps:\n\n#### Step 1: **Contact organizations and express your interest**.\nSend a brief introduction to the organization, stating you're interested in sustainability roles and looking for guidance. Be clear about your goals and ask how they can assist you.\n\n#### Step 2: **Follow up after 7 days if no response**.\nIf you haven't received a reply within a week, consider sending a polite follow-up email or making a phone call to inquire about the status of your message.\n\n#### Step 3: **Map your experience to your CV and target role**.\nKeep track of any relevant experiences, skills, and knowledge gained through these interactions. This will help you tailor your application materials for future sustainability roles.\n\n### What's next?\nHow do you envision using this experience to transition into a sustainable career? Are there specific areas within sustainability that interest you the most (e.g., renewable energy, environmental conservation)?",
+      "ts": "2026-07-23T12:04:33.800985",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from jobs in MK16 8JJ?",
+        "Find sustainability jobs near MK16 8JJ",
+        "Build me a 30-day action plan around this"
+      ]
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "user",
+      "content": "What skills will I gain from jobs in MK16 8JJ?",
+      "ts": "2026-07-23T12:08:27.216657"
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "assistant",
+      "content": "**You're taking huge strides towards a fulfilling career in sustainability!**\n\nI'm loving the enthusiasm and readiness for change that you brought into our conversation, Steven!\n\nNow that we've got some resources to get you started, let's dive deeper into what skills you can gain from jobs in MK16 8JJ. Considering your background in tech and desire to transition into sustainability, I think you'll find these local opportunities incredibly valuable.\n\n*   The **Free Online Environment & Nature Courses** on FutureLearn will introduce you to circular economy practices that can be applied to various industries.\n*   The **Training: boost your sustainability knowledge** workshop at the University of Edinburgh will help you identify and build key sustainability skills relevant to the field.\n*   Coursera's **Best Sustainability Courses & Certificates [2026]** offer a range of courses that can help you learn sustainability on a flexible schedule.\n\nWhat do you think would be a great next step for you in terms of applying these resources and exploring job opportunities?",
+      "ts": "2026-07-23T12:09:40.828692",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "879d7356-cd2f-4155-8394-1235617a151f",
+          "title": "Free Online Environment & Nature Courses - FutureLearn",
+          "url": "https://www.futurelearn.com/subjects/nature-and-environment-courses",
+          "body": "Adopt circular economy practices into your business to help cities thrive through smart design and sustainable strategy. ... Become an advocate for change as you gain the crucial communication skills ",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "43017c40-7563-4edf-ac13-31fad609330c",
+          "title": "Training: boost your sustainability knowledge",
+          "url": "https://sustainability.ed.ac.uk/take-action/training",
+          "body": "This interactive workshop for students teaches you how to identify and build key sustainability skills, how to boost your CV and market yourself for jobs in the sustainability sector, and how to pursu",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "adfcd765-4a1f-4d70-9340-833680605b85",
+          "title": "Best Sustainability Courses & Certificates [2026] | Coursera",
+          "url": "https://www.coursera.org/courses?query=sustainability",
+          "body": "Yes. You can start learning sustainability on Coursera for free in two ways:",
+          "type": "courses",
+          "type_label": "Resource"
+        }
+      ],
+      "suggestions": [
+        "Project Management",
+        "Time Management",
+        "Community Engagement"
+      ]
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "user",
+      "content": "Help me map my career transition into sustainability. I want to understand the steps involved.",
+      "ts": "2026-07-23T12:11:47.447055"
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "assistant",
+      "content": "**You're taking huge strides towards a fulfilling career in sustainability!**\n\nSteven, I'm loving the enthusiasm and readiness for change that you brought into our conversation!\n\nTo help you map your career transition, let's break it down into smaller steps:\n\n• **Step 1: Identify your strengths and transferable skills**: You've mentioned your background in tech and skills like project delivery, regulatory literacy, data analysis, and stakeholder management. Think about how these can be applied to a sustainability role.\n• **Step 2: Explore local job opportunities**: We can use the BRE Sustainability Course - Site Sustainability Training as a starting point. This course is CITB friendly and has 4.0-star reviews (134 reviews).\n• **Step 3: Network with professionals in your desired field**: Reach out to sustainability professionals in London, perhaps through events or online groups like Africa Green Skills Institute | Green Skills & Sustainability Training.\n\nWhat would you like to focus on first?",
+      "ts": "2026-07-23T12:13:00.393996",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "79e5f00f-d80f-4795-8a82-dccc20c9217a",
+          "title": "Sustainability Training - Environmental Awareness",
+          "url": "https://www.bing.com/aclick?ld=e8YSrHwmNLMnSwpssP5xYWXTVUCUxQK0CH_2AYED2zqS_XCtR951DnzkBuDjA87D_RYobxqup1gWivtSqjmuH-soq5ctDff_kWnaVWqNj2DMJfmLp7IKfQkf3SrKWs70atQ4FndaSylhoUt-Yi2nYQf1UjY2ttXhgL55s4KUl7zIT40NbK-Ukp365fKnYJ9hDg3i5bBQ&u=aHR0cHMlM2ElMmYlMmZzaG9wLnNqYS5vcmcudWslMmZwcm9kdWN0cyUyZmVudmlyb25tZW50YWwtYXdhcmVuZXNzLWNvdXJzZS1lbGVhcm5pbmclM2Z0d19zb3VyY2UlM2RiaW5nJTI2dHdfY2FtcGFpZ24lM2Q2Nzc3NDIzNDIlMjZ0d19hZGlkJTNkNzIyOTMzNjA0MDM2MTElMjZtc2Nsa2lkJTNkMWU0Zjk5MGZkNWViMWU1Mjk2OWZmMzZlMjMxMDA3MjAlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2QlMjU1QlNLJTI1NUQlMjUyMFNlYXJjaCUyNTIwJTI1N0MlMjUyMEUtTGVhcm5pbmclMjUyMCUyNTdDJTI1MjBTcGVjaWFsaXN0JTI1MjAlMjUyNiUyNTIwSW5kdXN0cnktU3BlY2lmaWMlMjUyMCUyNTdDJTI1MjBHZW4lMjZ1dG1fdGVybSUzZGVudmlyb25tZW50YWwlMjUyMGF3YXJlbmVzcyUyNTIwY291cnNlJTI1MjBvbmxpbmUlMjZ1dG1fY29udGVudCUzZEVudmlyb25tZW50YWwlMjUyMEF3YXJlbmVzcw&rlid=1e4f990fd5eb1e52969ff36e23100720",
+          "body": "Workplace environmental training. Learn sustainability in 45 minutes online. 45-minute environmental awareness course. Reduce workplace impact for £32.50. All Profit to Charity · Trusted NHS Partner ·",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "8fd528e7-2001-4463-8237-c153c417a88b",
+          "title": "BRE Sustainability Course - Site Sustainability Training",
+          "url": "https://www.bing.com/aclick?ld=e88ZkrSpL24_OY-zkpouLVBzVUCUxmBXIe4UpTX8rLfyPpgMj_4E8QH1Uxj60QAhzgEO-Tj5YJ2Zs_qaycI5qoTQKVkIeSRPVrSlH1njlN-egsks_adeSZCGDOAN-WED3-ywwh1oclVkp_-BXzt_PfTWQ2F0hailuDGIOOQR90p1HmI7r6qnipvPc2UTzTJ-rM7-CXnA&u=aHR0cHMlM2ElMmYlMmZicmUuYWMlMmZjb3Vyc2UlMmZzc20lM2ZpbmZpbml0eSUzZGljdDIlN2VuZXQlN2VnYXclN2VjbXAlN2U0ODY4MjEyMjQlN2VhZyU3ZTEyMjcwNTYxNTQ2ODQwOTglN2VhciU3ZSU3ZWt3JTdlZW52aXJvbm1lbnRhbCUyNTIwc3VzdGFpbmFiaWxpdHklMjUyMHRyYWluaW5nJTdlbXQlN2VwJTdlYWNyJTdlMzYyNjExMjIwMSUyNm1zY2xraWQlM2RlZGQyZDJmZTJkNDYxY2E4NDI2NGI4OWZkYmJkYTQzNyUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZFNlYXJjaCUyNTIwLSUyNTIwQiUyNTIwLSUyNTIwR2VuZXJpYyUyNTIwLSUyNTIwQUMlMjUyMC0lMjUyMFN1c3RhaW5hYmlsaXR5JTI2dXRtX3Rlcm0lM2RlbnZpcm9ubWVudGFsJTI1MjBzdXN0YWluYWJpbGl0eSUyNTIwdHJhaW5pbmclMjZ1dG1fY29udGVudCUzZEVudmlyb25tZW50YWwlMjUyMFN1c3RhaW5hYmlsaXR5JTI1MjBUcmFpbmluZyUyNTIwLSUyNTIwJTI1NUJQTSUyNTVE&rlid=edd2d2fe2d461ca84264b89fdbbda437",
+          "body": "4.0 (134 reviews) Become a certified Sustainability Site Manager with BRE expert-led, CITB friendly training. Flexible BRE training for Sustainability Site Managers. Online & classroom options.",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "d0430d2b-30d3-4d29-88f7-3c2372d8c60e",
+          "title": "Africa Green Skills Institute | Green Skills & Sustainability Training",
+          "url": "https://agsi.africa/",
+          "body": "Africa Green Skills Institute (AGSI) develops green skills, climate leadership and sustainability programmes that empower Africa's workforce for a just transition and green economy.",
+          "type": "courses",
+          "type_label": "Resource"
+        }
+      ],
+      "suggestions": [
+        "Explore Sustainability Careers with Online Courses",
+        "Identify Transferable Skills for Sustainable Roles",
+        "Network with Professionals in the Field"
+      ]
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "user",
+      "content": "I am feeling anxious and uncertain about my career change into sustainability. Can we talk?",
+      "ts": "2026-07-23T12:19:34.339241"
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "assistant",
+      "content": "**I can sense the anxiety and uncertainty you're feeling about your career change into sustainability, Steven. It's completely normal to feel this way when stepping into a new field with no direct experience.**\n\nCan you tell me more about what specifically is causing these feelings for you? Is it the fear of not having relevant experience, or something else entirely?",
+      "ts": "2026-07-23T12:20:01.177443",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Let's discuss your eco-passion today!",
+        "I'm excited to help you thrive",
+        "Sustainability career path mapped out"
+      ]
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "user",
+      "content": "yes",
+      "ts": "2026-07-23T12:42:05.043927"
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "assistant",
+      "content": "**Let's Explore Volunteering Opportunities in Sustainability near MK16 8JJ**\n\nHi Steven! I'm excited that you're interested in volunteering opportunities in sustainability near your location (MK16 8JJ). This is a fantastic way to gain experience, network with like-minded professionals, and contribute to the community while exploring potential roles in sustainability.\n\n**Here are four organizations offering relevant volunteering experiences:**\n\n### 1. [Friends of the Earth](https://www.foe.co.uk)\nFriends of the Earth is an environmental organization that campaigns for sustainable living, green energy, and a reduced carbon footprint. Their work aligns perfectly with your goal of pursuing a sustainability career.\n* Get involved:\n\t+ Join their local group to participate in events and activities\n\t+ Volunteer for community outreach and education programs\n\t+ Help with event planning and coordination\n\t+ Participate in citizen science projects\n* How to reach out: Visit their website, fill out the volunteer form, and specify your interests. You can also email [volunteer@foe.co.uk](mailto:volunteer@foe.co.uk) with questions.\n\n### 2. [Milton Keynes Community Transport](https://www.mkcommunitytransport.org)\nMilton Keynes Community Transport provides transportation services for vulnerable groups, promoting social inclusion and sustainability in the community.\n* Get involved:\n\t+ Volunteer as a driver or helper on their transport services\n\t+ Assist with passenger support and fundraising events\n\t+ Help with administrative tasks and community outreach\n\t+ Participate in environmental projects to reduce carbon emissions from transport\n* How to reach out: Contact [admin@mkcommunitytransport.org](mailto:admin@mkcommunitytransport.org) or phone 01908 557700 to discuss volunteering opportunities.\n\n### 3. [Milton Keynes Council's Environmental Services](https://www.milton-keynes.gov.uk/environment)\nThe council's environmental services team works on initiatives such as recycling, waste management, and green infrastructure projects.\n* Get involved:\n\t+ Join their volunteer program for community events and activities\n\t+ Assist with environmental education programs in schools\n\t+ Help with citizen science projects, such as air quality monitoring\n\t+ Participate in local conservation efforts\n* How to reach out: Email [environmentalservices@milton-keynes.gov.uk](mailto:environmentalservices@milton-keynes.gov.uk) or phone 01908 253500 to discuss volunteering opportunities.\n\n### 4. [Milton Keynes Living Streets](https://www.mklivingstreets.org)\nLiving Streets is a charity promoting walkable neighborhoods, sustainable transport, and community engagement.\n* Get involved:\n\t+ Volunteer for local events, such as clean-ups or community walks\n\t+ Help with fundraising activities and campaigns\n\t+ Assist with research and policy work related to sustainable transport\n\t+ Participate in public engagement and awareness-raising initiatives\n* How to reach out: Email [info@mklivingstreets.org](mailto:info@mklivingstreets.org) or phone 01908 557700 to discuss volunteering opportunities.\n\n**Next Steps**\n\n1. **Contact the organizations**: Reach out to each organization via email or phone, introducing yourself and expressing your interest in their work.\n2. **Wait and follow up**: If you don't receive a response within 7 days, send a polite follow-up email to inquire about the status of your application.\n3. **Map your experience**: As you participate in volunteering activities, think about how these experiences align with your CV and target role in sustainability. Update your skills section and prepare examples to demonstrate your growth.\n\n**What do you need next?**\n\nWhat specific aspects of volunteering or sustainability are you concerned about, Steven? Are there any particular organizations or roles that interest you the most?",
+      "ts": "2026-07-23T12:43:04.473668",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from volunteering in MK16 8JJ?",
+        "Find sustainability jobs near MK16 8JJ",
+        "Build me a 30-day action plan around this"
+      ]
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "user",
+      "content": "Help me explore which sustainability career paths suit my background and interests",
+      "ts": "2026-07-23T12:48:34.540902"
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "assistant",
+      "content": "**You're taking huge strides towards a fulfilling career in sustainability!**\n\nI've noticed you've been exploring volunteering opportunities near MK16 8JJ and that's fantastic! Volunteering is an excellent way to gain hands-on experience, build your network, and contribute to the sustainability community.\n\nLet's dive into some specific job roles that align with your background and interests. Have you considered **Sustainability Project Coordinator** or **Environmental Consultant**? These roles would allow you to utilize your project delivery skills and regulatory literacy in a sustainable context.\n\nTo get started, I recommend checking out **[Build Your ESG Career: 5 Free Sustainability Courses Worth Taking](https://careersandopportunities.com/2026/06/13/free-sustainability-courses/)**. This resource will provide you with the foundational knowledge needed to excel in a sustainability role.\n\nWhat do you think about exploring these courses and job roles further? Are there any specific areas within sustainability that interest you most?",
+      "ts": "2026-07-23T12:49:52.038814",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "e9dc5b01-116d-4b02-842f-b2f94d7a7de9",
+          "title": "Build Your ESG Career: 5 Free Sustainability Courses Worth ...",
+          "url": "https://careersandopportunities.com/2026/06/13/free-sustainability-courses/",
+          "body": "Jun 13, 2026 · Whether you are entering sustainability, transitioning into ESG, or strengthening your understanding of climate and sustainable finance, these five free sustainability courses provide a",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "2d7f7457-1ad6-412e-90ba-04961a190afc",
+          "title": "Foundations of Sustainability and ESG - Coursera",
+          "url": "https://www.coursera.org/learn/introduction-to-sustainable-finance",
+          "body": "Offered by Saïd Business School, University of Oxford. This course introduces you to the fundamental concepts of sustainability and ... Enroll for free.",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "374df4bb-e548-49e1-93b8-348f933d0df1",
+          "title": "Sustainability Education - Coursera",
+          "url": "https://www.coursera.org/learn/sustainability-education",
+          "body": "Sustainability Education is reshaping how we teach—and how we act—in a rapidly changing world. In this MOOC, you’ll explore the emerging field of Sustainability Education (SE) and learn how it connect",
+          "type": "courses",
+          "type_label": "Resource"
+        }
+      ],
+      "suggestions": [
+        "Explore Green Tech Innovation Jobs",
+        "Discuss Sustainable Business Roles Opportunities",
+        "Discover Environmental Consulting Career Paths"
+      ]
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "user",
+      "content": "Explore Green Tech Innovation Jobs",
+      "ts": "2026-07-23T12:55:53.190584"
+    },
+    {
+      "uid": "3081ca1101c1ce991c1a8ed9e09d72ac",
+      "role": "assistant",
+      "content": "**Let's explore Green Tech Innovation Jobs together!**\n\nI'm excited to help you find your next career step in the field of sustainability. Here are some relevant job opportunities that caught my attention:\n\n### 1. **Green Technology jobs at [LinkedIn](https://uk.linkedin.com/jobs/green-technology-jobs)**\n\nLinkedin offers a vast array of green technology jobs, from renewable energy to sustainable infrastructure. As someone interested in innovation, you'll appreciate the opportunity to work with companies that are pushing the boundaries of sustainability.\n\n*   Explore job openings on LinkedIn's Green Technology Jobs page\n*   Network with professionals already working in this field through LinkedIn groups (e.g., \"Sustainability Professionals\")\n*   Get certified in green technology and sustainable practices through online courses or training programs\n*   Join industry events and conferences to stay updated on the latest trends and innovations\n\n**How to reach out:** Simply click on a job posting that interests you, and follow the application instructions. No need to write an email or make a phone call.\n\n### 2. **GreenJobs at [GreenJobs.co.uk](https://www.greenjobs.co.uk/latest-jobs/)**\n\nGreenJobs is a platform that connects professionals with environmental jobs in the UK. With over 1,000 green technology jobs listed, you're sure to find something that aligns with your goals.\n\n*   Browse job listings on GreenJobs and filter by location (MK16 8JJ), job title, or company\n*   Create a profile to showcase your skills and experience to potential employers\n*   Join the GreenJobs community to connect with other professionals in the field\n*   Apply for jobs that match your interests and qualifications\n\n**How to reach out:** Click on the \"Details/Apply\" button next to each job posting to view more information and apply online.\n\n### 3. **Sustainability Jobs at [EnvironmentJob.co.uk](https://environmentjob.co.uk/jobs/50-sustainability)**\n\nEnvironmentJob.co.uk specializes in environmental and sustainability jobs, including green technology and renewable energy roles. As someone passionate about sustainability, you'll appreciate the range of opportunities available.\n\n*   Browse job listings on EnvironmentJob.co.uk and filter by location (MK16 8JJ), job title, or company\n*   Create a profile to showcase your skills and experience to potential employers\n*   Join the EnvironmentJob.co.uk community to connect with other professionals in the field\n*   Apply for jobs that match your interests and qualifications\n\n**How to reach out:** Click on the \"Details/Apply\" button next to each job posting to view more information and apply online.\n\n### 4. **Climate Tech Jobs at [ClimateTechList.com](https://www.climatetechlist.com/jobs?location=UK)**\n\nClimateTechList is a platform that connects professionals with climate, clean tech, and green jobs in the UK. With over 9,000 job openings listed, you're sure to find something that aligns with your goals.\n\n*   Browse job listings on ClimateTechList and filter by location (MK16 8JJ), job title, or company\n*   Create a profile to showcase your skills and experience to potential employers\n*   Join the ClimateTechList community to connect with other professionals in the field\n*   Apply for jobs that match your interests and qualifications\n\n**How to reach out:** Click on the \"Apply\" button next to each job posting to view more information and apply online.\n\n### Next Steps:\n\n1.  **Contact organizations directly**: Reach out to the companies or organizations listed above via their website's contact form, email address, or phone number.\n2.  **Follow up after 7 days**: If you haven't received a response within a week, send a follow-up email to inquire about the status of your application.\n3.  **Update your CV and online profiles**: Ensure that your resume and professional online presence accurately reflect your experience and skills in sustainability.\n\nNow, I'd like to ask: What specific aspect of green tech innovation are you most interested in exploring further?",
+      "ts": "2026-07-23T12:57:17.218597",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from jobs in MK16 8JJ?",
+        "Find sustainability jobs near MK16 8JJ",
+        "Build me a 30-day action plan around this"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "688e5337-077a-42de-a3ab-d5822980878e",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1784804354/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-23 11:59",
+      "pinned": false
+    },
+    {
+      "id": "c4cd627f-069b-45b9-a48c-818d442ba174",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1784804248/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-23 11:57",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "d73b9116-80c3-4e19-b8f3-2d1eebad8a02",
+      "name": "Daryna Vakulenko - CV -  copy.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-23 11:58"
+    },
+    {
+      "id": "4fcabac1-0dfe-45c0-99f2-782013c5a557",
+      "name": "null_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-23 11:57"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JJ",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "i've been working in tech and now i want to chnage career into sustainability but i have no experience",
+  "salary_range": "£50k–£70k",
+  "work_type": "Hybrid",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [
+    {
+      "id": "82e56b17-aa2b-4320-a787-f97fb52323f9",
+      "url": "https://environmentjob.co.uk/50-sustainability",
+      "title": "Sustainability Jobs, Volunteering, Courses... | Environmentjob.co.uk",
+      "body": "Sustainability. Sustainable Transport. Other.Posted 16 days ago. Fisheries Science and Policy Lead. Cornish Fish Producers Organisation.",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:57:17.214983"
+    },
+    {
+      "id": "385fc987-0e78-49e8-8e87-a6a1db09fba0",
+      "url": "https://www.climatetechlist.com/jobs?location=UK",
+      "title": "Latest UK Jobs from 500+ Climate Tech Companies — ClimateTechList",
+      "body": "ClimateTechList is the web's most comprehensive climate, climate tech, clean tech, and green jobs site for professionals looking to work on climate change. Access our live job tracker with 9,000+ job ",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:57:17.214971"
+    },
+    {
+      "id": "abd48920-6d6a-4a70-a55c-020a731bc287",
+      "url": "https://environmentjob.co.uk/jobs/50-Sustainability",
+      "title": "Jobs in the Sustainability Sector",
+      "body": "The latest sustainability jobs. About. This sector covers sustainability consultancy, recycling, corporate sustainability and CSR.",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:57:17.214961"
+    },
+    {
+      "id": "051da8ab-1fee-433e-817d-ae3fef1ec648",
+      "url": "https://environmentjob.co.uk/jobs/50-sustainability?order=closing_date_asc",
+      "title": "Sustainability jobs | Environmentjob.co.uk",
+      "body": "The latest sustainability jobs - 25 found.The latest sustainability jobs. About. This sector covers sustainability consultancy, recycling, corporate sustainability and CSR.",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:57:17.214950"
+    },
+    {
+      "id": "5db46127-468c-4f81-9044-9ee6b62e3228",
+      "url": "https://www.greenjobs.co.uk/latest-jobs/",
+      "title": "in the UK - GreenJobs",
+      "body": "Click on the Details/Apply button next to each job to see the full posting, or check the boxes next to the jobs that interest you and click View Selected to see several jobs together.",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:57:17.214931"
+    },
+    {
+      "id": "a22062ef-32af-49f3-95a1-72adbf47f8ce",
+      "url": "https://uk.linkedin.com/jobs/green-technology-jobs",
+      "title": "1,000+ Green Technology jobs in United Kingdom - LinkedIn",
+      "body": "Today's top 1,000+ Green Technology jobs in United Kingdom. Leverage your professional network, and get hired. New Green Technology jobs added daily.",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:57:17.214856"
+    },
+    {
+      "id": "d5d3e5f6-0c3a-49fd-81cf-695dabc56b9e",
+      "url": "https://www.google.com/search?q=volunteering+yes+MK16+8JJ",
+      "title": "Search Google for: volunteering yes MK16 8JJ",
+      "body": "We couldn't confirm a specific live resource for this yet — here's a search to help you find current options yourself.",
+      "type": "volunteering",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:43:04.471384"
+    },
+    {
+      "id": "86d32a15-7b6f-46b0-89a9-9c7d79aa6644",
+      "url": "https://www.greenjobs.co.uk/",
+      "title": "GreenJobs, Environmental Jobs and Renewable Energy Jobs in the UK",
+      "body": "GreenJobs lets you find Environmental Jobs and Renewable Energy Jobs from top employers and recruitment agencies. Search the latest jobs and apply today!",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:04:33.798307"
+    },
+    {
+      "id": "db1c3268-db91-4114-b429-2be51058d915",
+      "url": "https://www.reed.co.uk/jobs/sustainability-jobs-in-bristol",
+      "title": "Sustainability Jobs in Bristol | Reed.co.uk",
+      "body": "Ecologist (Construction/land Management) Bristol 45,000 - 55,000 Flexitime Hybrid Working Unlimited Training budget Company Bonuses Relocation Package Are you a Ecologist or similar looking to join a ",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:04:33.798266"
+    },
+    {
+      "id": "ba9dc965-5707-4e5a-bae0-2bf33d7dc731",
+      "url": "https://www.reed.co.uk/jobs/sustainability-jobs-in-north-west-england",
+      "title": "Sustainability Jobs in North West England | Reed.co.uk",
+      "body": "Senior/ Principal Consultant - Renewables Manchester or Glasgow – Hybrid, 3 days a week in-office Salary – up to 75,000 DOE Plus Benefits Bonus Our client is seeking a Senior or Principal Power System",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:04:33.797164"
+    },
+    {
+      "id": "8a0ac6a7-e2d6-4355-bded-68e69c922cd1",
+      "url": "https://environmentjob.co.uk/jobs/50-sustainability",
+      "title": "Jobs in the Sustainability Sector",
+      "body": "3 days ago - Looking for jobs in the sustainability sector? Browse 29 jobs on environmentjob. Apply today!",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:04:33.797153"
+    },
+    {
+      "id": "879043a7-b9d6-481d-89b9-c15d3beae7c5",
+      "url": "https://www.hays.co.uk/jobs/sustainability",
+      "title": "Sustainability Jobs: from Graduate to Consultant | Hays - Hays UK - Hays PLC",
+      "body": "Find sustainability job roles in the UK. From graduate sustainability jobs to sustainability consultants, browse our list of jobs hiring now and submit your CV.",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:04:33.797143"
+    },
+    {
+      "id": "752abc98-1f4b-4b79-9b17-7b5b2feadea8",
+      "url": "https://www.greenjobs.co.uk/browse-jobs/sustainability-jobs/",
+      "title": "Sustainability Jobs in the UK",
+      "body": "Sustainability Jobs and Careers from GreenJobs - the number one job board for Sustainability Jobs in the United Kingdom and globally. Candidates register now.",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:04:33.797132"
+    },
+    {
+      "id": "c2cdf2d5-2eea-4d30-99eb-7eed5c348788",
+      "url": "https://www.prospects.ac.uk/the-topic/going-green-getting-hired-a-guide-to-sustainable-careers/",
+      "title": "Going green, getting hired: a guide to sustainable careers | Prospects.ac.uk",
+      "body": "January 21, 2026 - Explore green job opportunities, necessary qualifications, and practical steps to kickstart your journey towards a greener future.",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:04:33.797118"
+    },
+    {
+      "id": "cdf99aeb-4a87-4d2f-ac4f-ddfeceea7145",
+      "url": "https://www.prospects.ac.uk/jobs-and-work-experience/job-sectors/environment-and-agriculture/how-to-get-a-job-in-sustainability/",
+      "title": "How to get a job in sustainability | Prospects.ac.uk",
+      "body": "April 30, 2026 - Even if you have a directly related degree, practical work experience is often essential when applying for sustainability roles. Employers want to see how you've applied sustainabilit",
+      "type": "jobs",
+      "location": "MK16 8JJ",
+      "status": "not_started",
+      "saved_at": "2026-07-23T12:04:33.797014"
+    }
+  ],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": true,
+  "onboarding_done": true,
+  "headline": "Sustainability Specialist",
+  "experience": [
+    {
+      "id": "5cc6cda0",
+      "title": "",
+      "company": "Tech industry",
+      "start_date": "",
+      "end_date": "",
+      "description": "working in tech",
+      "source": "chat"
+    },
+    {
+      "id": "34d7ebab",
+      "title": "Tech professional (now changing career)",
+      "company": "",
+      "start_date": "",
+      "end_date": "",
+      "description": "",
+      "source": "chat"
+    },
+    {
+      "id": "d10f06ad",
+      "title": "",
+      "company": "Stealth Startup (in MK16 8JJ)",
+      "start_date": "",
+      "end_date": "Present",
+      "description": "",
+      "source": "chat"
+    },
+    {
+      "id": "ac65fceb",
+      "title": "",
+      "company": "stealth startup",
+      "start_date": "",
+      "end_date": "",
+      "description": "",
+      "source": "chat"
+    }
+  ],
+  "how_heard": "Other",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "Ran product launches at a tech startup",
+      "skill": "Project delivery",
+      "relevance": "Effective project management is crucial in sustainability initiatives, where complex projects require coordination with various stakeholders."
+    },
+    {
+      "source": "Digital transformation strategist",
+      "skill": "Data analysis and interpretation",
+      "relevance": "Sustainability professionals need to analyze data to inform decisions and measure the impact of their initiatives, making data analysis a valuable skill in this field."
+    },
+    {
+      "source": "Commercial growth experience",
+      "skill": "Stakeholder management",
+      "relevance": "Understanding how to engage with diverse stakeholders, including business leaders, is essential for sustainability professionals who need to develop and implement strategies that balance economic and environmental considerations."
+    }
+  ],
+  "journey": {
+    "xp": 75,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [
+      {
+        "id": "bbe24a9c-8064-4e0b-8932-34e51ed2b5e9",
+        "title": "volunteering opportunities near MK16 8JJ",
+        "type": "achievement",
+        "icon": "🏅",
+        "xp": 75,
+        "earned_at": "2026-07-23T12:50:03.263385",
+        "verification_status": "pending",
+        "verified": false,
+        "evidence": ""
+      }
+    ],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-23",
+    "last_checkin_date": ""
+  },
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "excited",
+        "ts": "2026-07-23T12:02:15.560544"
+      },
+      {
+        "emotion": "anxious",
+        "ts": "2026-07-23T12:20:11.109473"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-23T12:43:13.565171"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-23T12:50:03.192913"
+      }
+    ],
+    "blockers": [
+      "uncertainty about career change",
+      "lack of direct experience in sustainability"
+    ],
+    "preferred_tone": "motivational",
+    "response_depth": "balanced",
+    "milestones_mentioned": [
+      "volunteering opportunities near MK16 8JJ"
+    ],
+    "total_exchanges": 4,
+    "encouragement_count": 1,
+    "key_insights": [
+      "The user is excited and ready to move forward with a career assessment for a sustainability role.",
+      "The user is feeling anxious and uncertain about their career change into sustainability due to a lack of direct experience.",
+      "The user is excited about exploring volunteering opportunities in sustainability and seems motivated to take action",
+      "The user is excited to explore sustainability career paths, but struggles with uncertainty and lack of direct experience."
+    ],
+    "current_emotion": "excited"
+  }
+}

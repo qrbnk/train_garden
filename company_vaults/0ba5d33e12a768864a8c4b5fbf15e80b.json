@@ -1,0 +1,258 @@
+{
+  "company_id": "0ba5d33e12a768864a8c4b5fbf15e80b",
+  "email": "company2@test.com",
+  "account_type": "company",
+  "first_seen": "2026-07-30T10:46:51.126138",
+  "last_seen": "2026-07-31T15:30:46.853995",
+  "profile": {
+    "name": "Solar Energy Installation and Maintenance Bro",
+    "company_number": "12345",
+    "registered_address": "Hackney Central",
+    "website": "name",
+    "sector": "solar",
+    "sub_sectors": [],
+    "company_size": "51-200",
+    "stage": "Growth",
+    "hq_location": "London",
+    "work_types": [
+      "Contract",
+      "Part-time",
+      "Full-time"
+    ],
+    "remote_policy": "Hybrid",
+    "description": "We specialize in designing, installing, and maintaining solar energy systems for residential and commercial clients to maximize their renewable power potential.",
+    "culture_tags": [],
+    "account_manager": {
+      "name": "BRO",
+      "position": "Director",
+      "email": "director_solar.com"
+    },
+    "onboarding_done": true
+  },
+  "team_members": [
+    {
+      "id": "55911d0d-035b-4a65-b1e9-b45936775332",
+      "name": "BRO",
+      "email": "director_solar.com",
+      "access_level": "owner",
+      "added_at": "2026-07-30T10:48:22.628717"
+    }
+  ],
+  "documents": [
+    {
+      "id": "eac7d58e-8f0b-4e61-ad83-ddcd1ce5e0eb",
+      "name": "renewables-electrical-installer-job-description.pdf",
+      "type": "skills",
+      "stored_filename": "0ba5d33e12a768864a8c4b5fbf15e80b_92e047d0_renewables-electrical-installer-job-description.pdf",
+      "timestamp": "2026-07-30 10:58"
+    },
+    {
+      "id": "63c2b7a0-46bc-4d87-a2e0-0cc9baaffdde",
+      "name": "renewables-electrical-installer-job-description.pdf",
+      "type": "jd",
+      "role_id": "6ed302f2-a47b-4a66-850b-647e764ff0c4",
+      "timestamp": "2026-07-30 10:50"
+    }
+  ],
+  "roles": [
+    {
+      "id": "6ed302f2-a47b-4a66-850b-647e764ff0c4",
+      "title": "renewables-electrical-installer",
+      "department": "Engineering",
+      "seniority": "Junior",
+      "employment_type": "Full-time",
+      "location": "Hackney",
+      "remote_policy": "Onsite",
+      "salary_range": "31k",
+      "sector_tags": [
+        "Sustainability",
+        "Green Economy",
+        "Renewable Energy",
+        "Solar Power"
+      ],
+      "required_skills": [
+        "Safety protocols for working at heights",
+        "Electrical principles and circuit analysis",
+        "Experience with solar panel system installation",
+        "Troubleshooting electrical issues in complex systems",
+        "Understanding of relevant building codes and regulations",
+        "Ability to work at heights using personal protective equipment",
+        "Familiarity with electrical testing and diagnostic tools",
+        "Collaborative team player with excellent communication skills"
+      ],
+      "nice_to_have_skills": [],
+      "responsibilities": [],
+      "summary": "As a key member of our installation team, you will be responsible for safely and efficiently installing solar panel systems on residential and commercial rooftops and grounds. A solid understanding of electrical principles and experience working at heights is required.",
+      "raw_jd_text": "Renewables Electrician / Electrical Installer Job Description 17/04/2025 Page 1 of 3 \n \n \nJOB DESCRIPTION: Renewables Electrician / Electrical Installer \n \nLOCATION: Head Office, Units 1-6, Old Station, Higham, Bury St Edmunds \nREPORTING TO: Technical Manager \nRESPONSIBLE FOR: Electrical installations within domestic properties. \n \nThe Company \nAran Insulation, part of AgilityEco, is an award-winning, industry leading organisation striving to improve \nenergy efficiency of homes throughout the UK. Passionate about improving quality of life and reducing for \ncustomers the cost of living, the company’s goal is to reduce carbon emissions of UK households. A dynamic \ncompany going through a growth and development period. Aran Insulation is committed to developing its \nstaff through training and progression, giving them the tools and opportunities to excel. \n \nJob Role \nThe role of the Renewables Electrician / Electrical Installer will be responsible for undertaking installations of \nSolar PV, Mechanical ventilation and Electric Storage heaters. Together with our team assisting in all \npaperwork being completed and lodged ensuring full compliance to MCS and Building Regulations.  \nYour skills and qualifications also will also initially be required to survey, design and install your own jobs.  \n \nReporting into the Technical Manager you will be responsible for delivering installation projects on time and \nto budget. A keen eye for detail and ability to handle multiple projects and customers is required. A positive, \nproactive, professional and process driven attitude are key to you succeeding in this role \n \nKey Responsibilities \n• Install, test, and commission photovoltaic (PV) solar panel systems to industry standards. \n• Assist with the layout, mounting, and wiring of solar PV systems on rooftops and ground-mounted \nstructures.  \n• Design of heating systems and Solar PV systems to customer parameters  \n• Carry out electrical modifications including the installation, relocation, or amendment of plug sockets, \nswitches, and lighting. \n• Ensure compliance with MCS regulations and complete the registration of installations \n• Install and commission mechanical ventilation systems, electrical storage heaters as required. \n• Perform electrical safety checks and ensure full compliance with BS7671 Wiring Regulations. \n• Troubleshoot and diagnose issues in existing electrical systems, including solar systems. \n• Work closely with office staff and installers to ensure smooth workflow and timely project completion. \n• Maintain accurate records of installations, maintenance, and repairs. \n• Adhere strictly to health and safety regulations and risk assessments on-site. \n• Stay up to date with latest industry practices and technologies in renewable energy and general \nelectrical work. \n \n \nRenewables Electrician / Electrical Installer Job Description 17/04/2025 Page 2 of 3 \nPerson Specification \nCriteria Essential Desirable \nExperience / Knowledge \nKnowledge of Installing Solar PV and MCS \nregulations \n \nFamiliar with MEV, ESH, ASHP \n \nConfident in testing, fault-finding, and \ncommissioning electrical systems. \n \nUnderstanding of Health and Safety \nrequirements on site \n \nExperience installing within domestic customer \nhomes \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nSkills \nExcellent communication skills \n \nProfessionalism \n \nTeam player \n \nSelf-motivated \n \n \n \n \n \n \n \n \n \nQualifications \nNICEIC qualified Electrician \n \nBS 7671: 2018 Requirements for Electrical \nInstallations (18th Edition) qualification \n \nBPEC Solar PV systems  \n \n \n \n \n \n \n \n \n \n \n \n \nNote: \nThis is a description of the job as it is constituted at the date shown. It is the practice of Aran Insulation \nLimited to periodically examine Job Descriptions, update them and ensure that they relate to the job \nperformed, or to incorporate any proposed changes. The MD, and management team of Aran Insulation \nLimited will conduct this procedure in consultation with the post holder. \n \nIn these circumstances it will be the aim to reach agreement on reasonable changes, but if agreement is not \npossible, management reserves the right to make changes to your job description following consultation. \n \nAran Insulation Limited is fully committed to Equality, Diversity and Inclusion in all areas of our business \nincluding the appointment of staff. We ensure that applicants who meet our shortlisting criteria are invited \nto our recruitment process. \n \nDue to the nature of our work, we undertake criminal record checks with the Disclosure and Barring \nService for all successful applicants, and periodically thereafter. Should an applicant not satisfy our \nbackground checks any conditional offer of employment or employment may be withdrawn. Renewables Electrician / Electrical Installer Job Description 17/04/2025 Page 3 of 3 \n \nDescription prepared by: Craig Thomson (Director of Operations) \nDescription approved by: Mark Randall (Managing Director) Date: 17/04/2025 \n ",
+      "pitch_template": "Hi {name}, \n\nWe've been following your profile and believe you might be a great fit for our team at Solar Energy Installation and Maintenance Bro. We're currently looking to fill an opening for a {role} role in Hackney, where you'll play a key part in designing, installing, and maintaining solar energy systems.\n\nAs someone with your background and expertise, we'd love the opportunity to discuss this further and see if our goals align. If you're open to it, could you introduce us? We'd appreciate any insight into why you might be interested in joining our team.",
+      "status": "open",
+      "created_at": "2026-07-30T10:50:54.993114",
+      "updated_at": "2026-07-30T10:54:28.587730",
+      "brief": {
+        "must_haves": [
+          "Ability to work at heights (rooftops) for extended periods and in various weather conditions",
+          "2+ years of experience as an electrical installer, preferably in the solar industry",
+          "Familiarity with electrical codes and regulations (e.g. NEC, local building codes)"
+        ],
+        "nice_to_haves": [
+          "Certification in solar panel installation (e.g. NABCEP)",
+          "Ability to lift up to 50 lbs and navigate complex rooftop layouts"
+        ],
+        "deal_breakers": [
+          "Lack of a valid driver's license (for transportation to job sites)",
+          "Criminal background that includes dishonesty or theft-related charges"
+        ],
+        "notes": ""
+      },
+      "pipeline": [
+        {
+          "candidate_user_id": "284c38140faac88ceb8ba0d47209281c",
+          "match_pct": 43,
+          "match_reasons": [
+            "Matches on: Experience with solar panel system installation"
+          ],
+          "status": "intro_requested",
+          "added_at": "2026-07-30T10:54:46.239482"
+        }
+      ],
+      "ai_filled_skills": true
+    }
+  ],
+  "skills": [
+    {
+      "id": "1bba779c-4ce9-4121-a1fb-0005d8749896",
+      "name": "Solar PV system installation",
+      "category": "Technical",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993580"
+    },
+    {
+      "id": "4f5dcbf0-9a89-41ae-b3ef-19f1f2dbac99",
+      "name": "MCS regulations compliance",
+      "category": "Compliance",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993655"
+    },
+    {
+      "id": "eada6f71-cdfb-4042-8dad-3d33a199ca3b",
+      "name": "Design of heating systems and Solar PV systems",
+      "category": "Technical",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993663"
+    },
+    {
+      "id": "d4c8cd2b-bcfd-4b8b-b18b-b7b1636419b9",
+      "name": "Electrical modifications",
+      "category": "Technical",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993668"
+    },
+    {
+      "id": "fe8e4d4f-8f8a-45c2-8fa6-6776ed3291eb",
+      "name": "Health and Safety regulations compliance",
+      "category": "Compliance",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993675"
+    },
+    {
+      "id": "a72ade10-58ea-4035-aca1-e580c9731854",
+      "name": "Troubleshooting and fault-finding",
+      "category": "Technical",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993681"
+    },
+    {
+      "id": "00abd64a-f0c9-481a-aaf1-0ce01f3617a8",
+      "name": "Communication skills",
+      "category": "Commercial",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993686"
+    },
+    {
+      "id": "d1b21bff-f0cb-4516-91a2-d4e0380357d1",
+      "name": "Professionalism",
+      "category": "Commercial",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993690"
+    },
+    {
+      "id": "29ea707a-8e43-49a6-9a6d-12e9d0c9be5e",
+      "name": "Teamwork",
+      "category": "Commercial",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993695"
+    },
+    {
+      "id": "3b5638df-8254-4591-9f02-cbbc58255f81",
+      "name": "Self-motivation",
+      "category": "Commercial",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993700"
+    },
+    {
+      "id": "246be259-3ad6-4933-8654-de27d832f498",
+      "name": "Testing and commissioning electrical systems",
+      "category": "Technical",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993705"
+    },
+    {
+      "id": "c1e30a41-ce52-4349-9796-899ed0dd4025",
+      "name": "BS7671 Wiring Regulations compliance",
+      "category": "Compliance",
+      "notes": "",
+      "source": "upload",
+      "added_at": "2026-07-30T10:58:07.993709"
+    }
+  ],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "184656d0-78c8-400e-9c9a-9784df371bd0",
+      "text": "Requested Train Garden team support for renewables-electrical-installer",
+      "type": "pipeline",
+      "ts": "2026-07-31T11:44:14.875283"
+    },
+    {
+      "id": "24df067c-c862-4f3b-8ccc-9dbaca9fd864",
+      "text": "Extracted 12 skill(s) from an upload",
+      "type": "skill",
+      "ts": "2026-07-30T10:58:07.994794"
+    },
+    {
+      "id": "379e8579-89b5-4dec-97be-fbab0b08f583",
+      "text": "Added a candidate to pipeline for renewables-electrical-installer",
+      "type": "pipeline",
+      "ts": "2026-07-30T10:54:46.240572"
+    },
+    {
+      "id": "0fa8a175-5153-43ed-8cef-8ac791d838d4",
+      "text": "Generated 2 proposed matches for renewables-electrical-installer",
+      "type": "matching",
+      "ts": "2026-07-30T10:54:29.026459"
+    },
+    {
+      "id": "363e3b57-55f1-4549-9971-1446eacedd7b",
+      "text": "Parsed new role: renewables-electrical-installer-job-description.pdf",
+      "type": "role_created",
+      "ts": "2026-07-30T10:50:54.994789"
+    },
+    {
+      "id": "b52772f5-5a5f-41e5-92fd-859e30bb1e6c",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-07-30T10:48:22.629428"
+    }
+  ]
+}

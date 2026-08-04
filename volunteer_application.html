@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#005ab4",
+              "emerald-green": "#208a65",
+              "surface-container-high": "#e6e8f1",
+              "on-surface": "#181c22",
+              "surface-container-low": "#f2f3fd",
+              "on-surface-variant": "#414753",
+              "surface": "#f9f9ff",
+              "outline-variant": "#c1c6d5",
+              "background": "#ffffff"
+            },
+            fontFamily: {
+              "sans": ["Inter", "Arial", "sans-serif"],
+              "body": ["Inter", "Arial", "sans-serif"],
+              "headline": ["Inter", "Arial", "sans-serif"],
+              "label": ["Inter", "Arial", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- Shared Header -->
+<header class="flex justify-between items-center px-8 py-4 w-full sticky top-0 z-50 bg-white border-b border-slate-200">
+<div class="flex items-center">
+    <a href="index.html" class="block hover:opacity-90 transition-opacity">
+        <img alt="Train Garden Logo" class="h-6 md:h-7 w-auto" src="logo.png"/>
+    </a>
+</div>
+<div class="flex flex-1 justify-end items-center gap-8">
+ <nav class="hidden md:flex items-center gap-8">
+            <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-medium tracking-tight text-sm" href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-medium tracking-tight text-sm" href="jobseekers_page.html" target="_blank" rel="noopener noreferrer">Jobseekers</a>
+            <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-medium tracking-tight text-sm" href="partners_page.html" target="_blank" rel="noopener noreferrer">Partners</a>
+            <a class="text-white bg-primary px-4 py-2 rounded-lg hover:bg-primary-container transition-all font-headline font-medium tracking-tight text-sm" href="mailto:thomas@traingarden.co.uk" target="_blank" rel="noopener noreferrer">Contact Us</a>
+        </nav>
+
+         <button id="menu-toggle" class="md:hidden p-2 text-brand-navy">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-emerald-100/20 px-6 py-6 space-y-4 shadow-xl">
+        <a class="block text-slate-600 dark:text-slate-400 font-headline font-semibold text-lg" href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+        <a class="block text-slate-600 dark:text-slate-400 font-headline font-semibold text-lg" href="jobseekers_page.html" target="_blank" rel="noopener noreferrer">Jobseekers</a>
+        <a class="block text-slate-600 dark:text-slate-400 font-headline font-semibold text-lg" href="partners_page.html" target="_blank" rel="noopener noreferrer">Partners</a>
+        <a class="block text-slate-600 dark:text-slate-400 font-headline font-semibold text-lg" href="resources_page.html" target="_blank" rel="noopener noreferrer">Resources</a>
+        <a class="block text-primary dark:text-emerald-400 font-headline font-bold text-lg" href="mailto:thomas@traingarden.co.uk" target="_blank" rel="noopener noreferrer">Contact Us</a>
+    </div>
+</header>
+<main class="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] p-6 bg-white">
+<!-- Hero Section -->
+<div class="w-full max-w-2xl mb-10 text-center">
+<h1 class="text-4xl md:text-5xl font-extrabold text-[#181c22] tracking-tight mb-4 font-headline">Volunteer Application</h1>
+<p class="text-on-surface-variant text-lg max-w-lg mx-auto leading-relaxed">
+                Join our digital arboretum and help us grow sustainable communities through technology and nature.
+            </p>
+</div>
+<!-- Form Container -->
+<section class="w-full max-w-xl bg-white rounded-xl border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden mb-12">
+<div class="p-8">
+<form action="https://formspree.io/f/xbdpkzvz" 
+    method="POST" 
+  class="flex flex-col gap-6"
+  id="volunteerForm">
+  <!-- Your Full Name -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-on-surface px-1 font-label" for="name">Your Full Name</label>
+<input class="flex w-full px-4 h-14 bg-white border border-outline-variant rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-emerald-green text-on-surface transition-all placeholder:text-outline-variant" id="name" name="name" placeholder="John Appleseed" required="" type="text"/>
+</div>
+<!-- Opportunity Name -->
+<div class="flex flex-col gap-2"><label class="text-sm font-bold text-on-surface px-1 font-label" for="opportunity">Opportunity Name</label>
+<input class="flex w-full px-4 h-14 bg-white border border-outline-variant rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-emerald-green text-on-surface transition-all placeholder:text-outline-variant font-medium" id="opportunity" name="opportunity" placeholder="Digital Gardener Lead" required="" type="text" value="Digital Gardener Lead"/></div>
+<!-- Email Address -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-on-surface px-1 font-label" for="email">Email</label>
+<input class="flex w-full px-4 h-14 bg-white border border-outline-variant rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-emerald-green text-on-surface transition-all placeholder:text-outline-variant" id="email" name="email" placeholder="hello@example.com" required="" type="email"/>
+</div>
+<!-- Phone Number -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-on-surface px-1 font-label" for="phone">Phone Number</label>
+<input class="flex w-full px-4 h-14 bg-white border border-outline-variant rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-emerald-green text-on-surface transition-all placeholder:text-outline-variant" id="phone" name="phone" placeholder="+44 7700 900000" required="" type="tel"/>
+</div>
+<!-- Submit Button -->
+<button class="mt-4 flex items-center justify-center gap-3 w-full h-14 bg-emerald-green hover:bg-emerald-700 text-white font-bold text-lg rounded-lg transition-all shadow-md active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined text-xl" data-icon="send">send</span>
+                        Submit Application
+                    </button>
+<p class="text-center text-[11px] text-on-surface-variant mt-2 font-medium">
+                        By submitting, you agree to our digital stewardship terms.
+                    </p>
+</form>
+</div>
+<!-- Bottom decorative card element -->
+<div class="h-1.5 w-full bg-gradient-to-r from-emerald-green via-primary to-primary/80"></div>
+</section>
+</main>
+<footer class="py-12 px-10 border-t border-outline-variant bg-white mt-auto">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-3">
+<p class="text-on-surface text-sm font-semibold">© 2026 Train Garden Ltd.</p>
+</div>
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2 text-slate-500 hover:text-[#091747] transition-colors group" href="https://substack.com" target="_blank" rel="noopener noreferrer">
+<svg class="w-5 h-5 fill-current text-[#ff6719]" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.078v2.836zM1.46 10.812V24L12 18.11L22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.078V0z"></path></svg>
+<span class="font-publicSans text-sm font-medium">Substack</span>
+</a>
+<a class="flex items-center gap-2 text-slate-500 hover:text-[#091747] transition-colors group" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+<svg class="w-5 h-5 fill-current text-[#1877F2]" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+<span class="font-publicSans text-sm font-medium">Facebook</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</body></html>

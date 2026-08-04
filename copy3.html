@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Train Garden | Professional Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { "primary": "#091747", "tertiary": "#208a65", "surface": "#f8fafc" }
+                }
+            }
+        };
+    </script>
+    <style>
+        .chat-bubble { max-width: 85%; padding: 1rem; border-radius: 1.25rem; font-size: 0.875rem; line-height: 1.5; }
+        .bot { background: #f1f5f9; color: #1e293b; border-bottom-left-radius: 0; }
+        .user { background: #091747; color: white; border-bottom-right-radius: 0; align-self: flex-end; }
+        .hide { display: none !important; }
+        .shimmer { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+    </style>
+</head>
+<body class="bg-surface font-sans text-slate-900 overflow-hidden">
+
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-slate-100 px-8 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+        <span class="font-black text-primary text-xl">TRAIN GARDEN</span>
+        <span id="auth-status" class="text-[10px] bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-bold">UNVERIFIED</span>
+    </div>
+    <button onclick="logout()" class="text-xs font-bold text-slate-400 hover:text-red-600 transition-colors uppercase">Logout</button>
+</nav>
+
+<main class="pt-16 h-screen flex flex-col lg:flex-row">
+    
+    <section class="w-full lg:w-[450px] bg-white border-r border-slate-200 flex flex-col">
+        <div id="chat-stream" class="flex-1 overflow-y-auto p-6 flex flex-col gap-4">
+            </div>
+
+        <div class="p-4 bg-slate-50 border-t border-slate-100">
+            <div id="auth-box" class="space-y-3">
+                <input type="text" id="auth-name" placeholder="Full Name" class="w-full p-3 rounded-xl border-slate-200 text-sm">
+                <input type="email" id="auth-email" placeholder="Email Address" class="w-full p-3 rounded-xl border-slate-200 text-sm">
+                <button onclick="handleAuth()" id="auth-btn" class="w-full bg-primary text-white py-3 rounded-xl font-bold shadow-lg">Register</button>
+            </div>
+
+            <div id="chat-box" class="hide flex items-center gap-2">
+                <input type="text" id="free-text" placeholder="Tell me anything, e.g. 'I don't know'..." class="flex-1 p-3 bg-white rounded-full border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-tertiary">
+                <button onclick="handleFreeText()" class="bg-primary text-white p-3 rounded-full hover:scale-105 transition-transform">
+                    <span class="material-symbols-outlined text-sm">send</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex-1 p-8 overflow-y-auto">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <header>
+                <h1 id="welcome-text" class="text-3xl font-bold text-primary">Nurturing Excellence</h1>
+                <p class="text-slate-500">Your Green Economy Dashboard</p>
+            </header>
+
+            <div id="dash-content" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
+                    <h3 class="font-bold text-primary mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-tertiary">psychology</span> Current Match
+                    </h3>
+                    <div id="match-display" class="space-y-4">
+                        <div class="p-4 bg-slate-50 rounded-2xl text-slate-400 text-sm italic">Complete diagnostic to see match...</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-primary mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-tertiary">description</span> CV Analysis
+                    </h3>
+                    <div id="cv-logic-area" class="space-y-4">
+                        <input type="file" id="cv-file-input" class="text-xs text-slate-500 block w-full file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-tertiary file:text-white">
+                        <button id="analyze-btn" disabled onclick="runActualAnalysis()" class="w-full bg-slate-100 text-slate-400 py-3 rounded-xl font-bold transition-all">Upload CV First</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-primary mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-tertiary">bookmark</span> Recommended for You
+                </h3>
+                <div id="resources-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+// --- CONFIG & DATABASE ---
+const RESOURCES = [
+    { title: "Sustainability Foundational Course", type: "Internal", link: "resources_page.html#course1" },
+    { title: "Volunteering: Zero Waste Initiative", type: "Volunteer", link: "resources_page.html#volunteer" },
+    { title: "UK Green Jobs Market Report", type: "External", link: "https://www.google.com/search?q=UK+green+jobs+market+trends+2026" },
+    { title: "Solar Engineering Basics", type: "External", link: "https://www.google.com/search?q=free+solar+engineering+courses" }
+];
+
+const ROLES = {
+    "strategy": { name: "Sustainability Consultant", skills: ["ESG", "Reporting", "Planning"] },
+    "technical": { name: "Solar Engineer", skills: ["Electrical", "On-site", "Technical"] }
+};
+
+let appState = {
+    user: JSON.parse(localStorage.getItem('tg_user')) || null,
+    isVerified: localStorage.getItem('tg_verified') === 'true',
+    currentMatch: null,
+    step: 'auth'
+};
+
+// --- AUTHENTICATION LOGIC (Point #1) ---
+function handleAuth() {
+    const name = document.getElementById('auth-name').value;
+    const email = document.getElementById('auth-email').value;
+    
+    if(!email) return;
+
+    if(!appState.user) {
+        // Registering
+        appState.user = { name, email };
+        localStorage.setItem('tg_user', JSON.stringify(appState.user));
+        addMsg("Registration received! I've sent a 'Magic Link' to your email. Please click it to verify your account.");
+        
+        // Simulating the email click after 3 seconds
+        setTimeout(() => {
+            addMsg("Email Verified! Your account is now active. Logging you in...");
+            appState.isVerified = true;
+            localStorage.setItem('tg_verified', 'true');
+            initApp();
+        }, 3000);
+    } else {
+        // Login path
+        addMsg(`Welcome back! Sending login code to ${email}...`);
+        setTimeout(() => {
+            addMsg("Access granted.");
+            initApp();
+        }, 1500);
+    }
+}
+
+function initApp() {
+    document.getElementById('auth-box').classList.add('hide');
+    document.getElementById('chat-box').classList.remove('hide');
+    document.getElementById('auth-status').innerText = "ACTIVE ACCOUNT";
+    document.getElementById('auth-status').className = "text-[10px] bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-bold";
+    document.getElementById('welcome-text').innerText = `Hello, ${appState.user.name || 'Explorer'}`;
+    
+    addMsg("I'm ready. Pick an option below or just type your thoughts in the chat box.");
+    renderOptions(["Career Change", "Volunteer", "Coaching", "Salary Search"]);
+    renderResources();
+    enableCVButton();
+}
+
+// --- CHAT LOGIC (Point #2) ---
+function handleFreeText() {
+    const input = document.getElementById('free-text');
+    const val = input.value.toLowerCase();
+    if(!val) return;
+
+    addMsg(val, true);
+    input.value = "";
+
+    if(val.includes("don't know") || val.includes("dont know") || val.includes("help")) {
+        addMsg("That's okay! Many people start here. Let's try the Career Explorer to find what fits you.");
+        startDiagnostic();
+    } else if(val.includes("volunteer")) {
+        showVolunteering();
+    } else {
+        addMsg("Interesting! Let me process that. Based on that, I think you should look at our sustainability resources.");
+    }
+}
+
+// --- CV ANALYSIS FIX (Point #3) ---
+function enableCVButton() {
+    const input = document.getElementById('cv-file-input');
+    const btn = document.getElementById('analyze-btn');
+    
+    input.onchange = () => {
+        if(input.files.length > 0) {
+            btn.disabled = false;
+            btn.className = "w-full bg-tertiary text-white py-3 rounded-xl font-bold hover:scale-[1.02] shadow-lg shadow-tertiary/20";
+            btn.innerText = "Analyze My CV";
+        }
+    };
+}
+
+function runActualAnalysis() {
+    const file = document.getElementById('cv-file-input').files[0];
+    addMsg("Extracting data from " + file.name + "...");
+    
+    setTimeout(() => {
+        const skills = ["Planning", "Communication"]; // Mock extraction
+        const match = appState.currentMatch || ROLES.strategy;
+        
+        addMsg(`CV Analysis Complete. You align 65% with ${match.name}. You need to build skills in: ${match.skills[2]}.`);
+        updateDashboard(match, 65);
+    }, 2000);
+}
+
+// --- DASHBOARD & RESOURCES (Point #4 & #5) ---
+function renderResources() {
+    const container = document.getElementById('resources-container');
+    container.innerHTML = "";
+    RESOURCES.forEach(res => {
+        container.innerHTML += `
+            <a href="${res.link}" target="_blank" class="p-4 border border-slate-100 rounded-2xl hover:bg-slate-50 transition-all flex justify-between items-center group">
+                <div>
+                    <p class="text-[10px] font-bold text-tertiary uppercase">${res.type}</p>
+                    <p class="text-sm font-semibold text-primary group-hover:underline">${res.title}</p>
+                </div>
+                <span class="material-symbols-outlined text-slate-300">open_in_new</span>
+            </a>
+        `;
+    });
+}
+
+function updateDashboard(match, alignment) {
+    const display = document.getElementById('match-display');
+    display.innerHTML = `
+        <div>
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Target Role</p>
+            <p class="text-xl font-black text-primary">${match.name}</p>
+        </div>
+        <div>
+            <div class="flex justify-between text-[10px] font-bold mb-1">
+                <span>ALIGNMENT</span>
+                <span>${alignment}%</span>
+            </div>
+            <div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-tertiary transition-all duration-1000" style="width: ${alignment}%"></div>
+            </div>
+        </div>
+    `;
+    
+    // PUSH USER TO UPDATE (Point #5)
+    setTimeout(() => {
+        addMsg("Your dashboard is now live. Please check the 'Current Match' widget and tell me if you'd like to adjust your career background.");
+    }, 1000);
+}
+
+// --- UTILS ---
+function addMsg(t, isUser=false) {
+    const stream = document.getElementById('chat-stream');
+    const d = document.createElement('div');
+    d.className = `chat-bubble ${isUser ? 'user' : 'bot shadow-sm'}`;
+    d.innerText = t;
+    stream.appendChild(d);
+    stream.scrollTop = stream.scrollHeight;
+}
+
+function renderOptions(opts) {
+    const stream = document.getElementById('chat-stream');
+    const wrap = document.createElement('div');
+    wrap.className = "flex flex-wrap gap-2 py-2";
+    opts.forEach(o => {
+        const b = document.createElement('button');
+        b.className = "px-4 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-tertiary transition-all";
+        b.innerText = o;
+        b.onclick = () => { wrap.remove(); addMsg(o, true); handleMenuChoice(o); };
+        wrap.appendChild(b);
+    });
+    stream.appendChild(wrap);
+}
+
+function logout() {
+    localStorage.clear();
+    location.reload();
+}
+
+window.onload = () => { if(appState.isVerified) initApp(); };
+</script>
+</body>
+</html>

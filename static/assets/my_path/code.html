@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Train Garden - My Path</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#6f7973",
+                    "primary": "#00432f",
+                    "on-surface-variant": "#3f4943",
+                    "on-tertiary-container": "#4bdca0",
+                    "inverse-on-surface": "#ebf1ff",
+                    "surface-container-low": "#f0f3ff",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#8ad6b3",
+                    "border-subtle": "#e5e7eb",
+                    "secondary-container": "#d9dff5",
+                    "surface-gray": "#f9fafb",
+                    "success-dark": "#166534",
+                    "on-tertiary": "#ffffff",
+                    "warning-light": "#fef3c7",
+                    "inverse-surface": "#2a313d",
+                    "primary-container": "#005d42",
+                    "surface-tint": "#1a6b4f",
+                    "on-surface": "#151c27",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#dce2f3",
+                    "on-secondary-container": "#5c6274",
+                    "surface-container-high": "#e2e8f8",
+                    "background": "#f9f9ff",
+                    "secondary-fixed": "#dce2f7",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "surface-container-highest": "#dce2f3",
+                    "surface-container": "#e7eefe",
+                    "surface-bright": "#f9f9ff",
+                    "on-error-container": "#93000a",
+                    "success-light": "#dcfce7",
+                    "on-background": "#151c27",
+                    "warning-amber": "#d97706",
+                    "info-light": "#dbeafe",
+                    "on-tertiary-fixed": "#002113",
+                    "tertiary-fixed": "#6ffbbe",
+                    "on-primary-fixed": "#002115",
+                    "inverse-primary": "#8ad6b3",
+                    "secondary": "#575e70",
+                    "tertiary-container": "#005d3f",
+                    "surface-container-lowest": "#ffffff",
+                    "info-blue": "#3b82f6",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#141b2b",
+                    "on-primary-fixed-variant": "#005139",
+                    "tertiary-fixed-dim": "#4edea3",
+                    "tertiary": "#00432c",
+                    "on-primary-container": "#88d3b1",
+                    "surface": "#f9f9ff",
+                    "primary-fixed": "#a6f2cf",
+                    "surface-dim": "#d3daea",
+                    "on-secondary-fixed-variant": "#404758",
+                    "secondary-fixed-dim": "#c0c6db",
+                    "outline-variant": "#bec9c1",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gap-lg": "16px",
+                    "sidebar-default": "256px",
+                    "padding-card": "16px",
+                    "gap-xs": "8px",
+                    "vault-panel-default": "420px",
+                    "padding-chat-h": "24px",
+                    "base": "4px",
+                    "gap-md": "12px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "section-header": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "chat-bubble": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "section-header": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+                    "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "chat-bubble": ["14px", {"lineHeight": "1.625", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .timeline-line {
+            width: 2px;
+            background: linear-gradient(to bottom, #dce2f3 0%, #dce2f3 50%, transparent 50%);
+            background-size: 100% 8px;
+        }
+        .timeline-line-active {
+            width: 2px;
+            background: #00432f;
+        }
+    </style>
+</head>
+<body class="bg-surface-gray text-on-surface font-body-md antialiased flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-screen fixed left-0 top-0 py-6 w-sidebar-default bg-surface-container-lowest border-r border-border-subtle z-20">
+<div class="px-6 mb-8">
+<h1 class="text-headline-md font-headline-md font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+                Train Garden
+            </h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Career Growth</p>
+</div>
+<div class="flex flex-col gap-2 px-4 flex-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md scale-98 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">psychology</span>
+                Garden AI
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md scale-98 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">work</span>
+                Job Board
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-primary font-bold border-r-4 border-primary bg-surface-container-low text-label-md font-label-md scale-98 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">moving</span>
+                My Path
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md scale-98 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+                Vault
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md scale-98 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">groups</span>
+                Community
+            </a>
+</div>
+<div class="px-6 mt-auto">
+<button class="w-full bg-on-surface text-on-primary rounded-lg py-2.5 text-label-md font-label-md hover:bg-on-surface/90 transition-colors">
+                Analyze CV
+            </button>
+</div>
+<div class="flex flex-col gap-2 px-4 mt-6 border-t border-border-subtle pt-4">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined">help</span>
+                Support
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 ml-0 md:ml-sidebar-default flex flex-col h-screen relative overflow-y-auto">
+<!-- TopAppBar (Mobile & Web) -->
+<header class="flex justify-between items-center w-full px-padding-chat-h h-16 sticky top-0 bg-surface-container-lowest border-b border-border-subtle z-10 opacity-90 hover:opacity-100 transition-opacity">
+<div class="flex items-center md:hidden">
+<h1 class="text-headline-lg font-headline-lg font-black text-primary">Train Garden</h1>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<!-- Navigation links hidden on My Path as it's active in side nav, but standard top app bar structure included -->
+<span class="text-headline-md font-headline-md font-bold text-on-surface">Career Roadmap</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<img alt="Sustainability Professional Profile" class="w-8 h-8 rounded-full border border-border-subtle object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNUPa4O3GnDfVRYHy_qpYfzLsmbQmMZkCw9CgApiAEKTJyFDd0SGy5aibt-HbCHLEhG95SQFiK23GaqZyTz7CisB1hSumyPXHkmz71YikbgCwBcpdMzJT4aIntby39MtBd6GEyYGV6Uwpcedt6GWm9g6FcfIf8SZrOHOZigAmFdY5XZa4mc8UDuqOYsFO5Z-G0CykZCxvps20dRjozXh_G0yT6uqAh7MF3Ki5SjapdaCJTpeImgSNJ9eulfwD2VSspIw2pbO-MZfk4"/>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 p-6 md:p-8 max-w-7xl mx-auto w-full">
+<div class="mb-8">
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-2">Your Sustainability Path</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Track your progress from Junior Analyst to Senior Manager.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Timeline Column -->
+<div class="lg:col-span-2">
+<div class="bg-surface-container-lowest rounded-xl border border-border-subtle p-6 relative h-full">
+<div class="absolute left-[39px] top-10 bottom-10 timeline-line"></div>
+<div class="absolute left-[39px] top-10 h-1/2 timeline-line-active"></div>
+<div class="space-y-12 relative z-10">
+<!-- Milestone 1: Completed -->
+<div class="flex gap-6 items-start">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 border-4 border-surface-container-lowest shadow-sm mt-1">
+<span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="bg-surface-gray rounded-lg p-5 border border-border-subtle w-full opacity-70">
+<h3 class="text-section-header font-section-header text-on-surface">Junior ESG Analyst</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 mb-3">Completed Dec 2023</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded-full bg-surface-container-high text-on-secondary-container text-label-sm font-label-sm">Data Collection</span>
+<span class="px-2 py-1 rounded-full bg-surface-container-high text-on-secondary-container text-label-sm font-label-sm">Basic Reporting</span>
+</div>
+</div>
+</div>
+<!-- Milestone 2: Active -->
+<div class="flex gap-6 items-start">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest border-4 border-primary flex items-center justify-center shrink-0 shadow-sm mt-1">
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-5 border border-primary shadow-[0_2px_8px_rgba(0,0,0,0.06)] w-full">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-section-header font-section-header text-primary">Sustainability Specialist</h3>
+<span class="px-2.5 py-1 rounded-full bg-success-light text-success-dark text-label-sm font-label-sm">In Progress</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Focus on framework implementation and cross-functional strategy.</p>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-body-sm font-body-sm mb-1">
+<span class="text-on-surface">GRI Framework Mastery</span>
+<span class="text-on-surface-variant">75%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm font-body-sm mb-1">
+<span class="text-on-surface">Stakeholder Engagement</span>
+<span class="text-on-surface-variant">40%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 40%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Milestone 3: Future -->
+<div class="flex gap-6 items-start">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-outline-variant flex items-center justify-center shrink-0 mt-1">
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-5 border border-border-subtle w-full border-dashed">
+<h3 class="text-section-header font-section-header text-on-surface-variant">Senior Sustainability Manager</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 mb-3">Target: Q3 2025</p>
+<div class="flex flex-wrap gap-2 opacity-60">
+<span class="px-2 py-1 rounded-full bg-surface-container-high text-on-secondary-container text-label-sm font-label-sm">Strategy Leadership</span>
+<span class="px-2 py-1 rounded-full bg-surface-container-high text-on-secondary-container text-label-sm font-label-sm">Board Reporting</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Intelligence / Side Panel Column -->
+<div class="lg:col-span-1 space-y-6">
+<!-- Coaching Sticky Note -->
+<div class="bg-warning-light border-t-4 border-warning-amber rounded-lg p-5 shadow-[0_4px_12px_rgba(0,0,0,0.12)]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-warning-amber text-lg">lightbulb</span>
+<h4 class="text-section-header font-section-header text-on-surface">Coach's Tip</h4>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                            You're making great progress on GRI frameworks. Consider adding a Life Cycle Assessment (LCA) module to round out your analytical skills for the Senior Manager role.
+                        </p>
+</div>
+<!-- Skills Matrix -->
+<div class="bg-surface-container-lowest rounded-xl border border-border-subtle p-5">
+<h4 class="text-section-header font-section-header text-on-surface mb-4 border-b border-border-subtle pb-2">Core Competencies</h4>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-label-md font-label-md mb-1">
+<span class="text-on-surface">ESG Reporting</span>
+<span class="text-primary font-bold">Level 3</span>
+</div>
+<div class="flex gap-1">
+<div class="h-2 flex-1 bg-primary rounded-sm"></div>
+<div class="h-2 flex-1 bg-primary rounded-sm"></div>
+<div class="h-2 flex-1 bg-primary rounded-sm"></div>
+<div class="h-2 flex-1 bg-surface-variant rounded-sm"></div>
+<div class="h-2 flex-1 bg-surface-variant rounded-sm"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-label-md font-label-md mb-1">
+<span class="text-on-surface">Carbon Accounting</span>
+<span class="text-primary font-bold">Level 2</span>
+</div>
+<div class="flex gap-1">
+<div class="h-2 flex-1 bg-primary rounded-sm"></div>
+<div class="h-2 flex-1 bg-primary rounded-sm"></div>
+<div class="h-2 flex-1 bg-surface-variant rounded-sm"></div>
+<div class="h-2 flex-1 bg-surface-variant rounded-sm"></div>
+<div class="h-2 flex-1 bg-surface-variant rounded-sm"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-label-md font-label-md mb-1">
+<span class="text-on-surface">Life Cycle Assessment</span>
+<span class="text-outline-variant font-bold">Level 1</span>
+</div>
+<div class="flex gap-1">
+<div class="h-2 flex-1 bg-primary rounded-sm"></div>
+<div class="h-2 flex-1 bg-surface-variant rounded-sm"></div>
+<div class="h-2 flex-1 bg-surface-variant rounded-sm"></div>
+<div class="h-2 flex-1 bg-surface-variant rounded-sm"></div>
+<div class="h-2 flex-1 bg-surface-variant rounded-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Earned Badges -->
+<div class="bg-surface-container-lowest rounded-xl border border-border-subtle p-5">
+<h4 class="text-section-header font-section-header text-on-surface mb-4">Earned Credentials</h4>
+<div class="grid grid-cols-2 gap-3">
+<div class="border border-border-subtle rounded-lg p-3 text-center hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition-shadow">
+<span class="material-symbols-outlined text-3xl text-primary mb-2" style="font-variation-settings: 'FILL' 1;">eco</span>
+<div class="text-label-sm font-label-sm text-on-surface">Climate Basics</div>
+</div>
+<div class="border border-border-subtle rounded-lg p-3 text-center hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition-shadow">
+<span class="material-symbols-outlined text-3xl text-primary mb-2" style="font-variation-settings: 'FILL' 1;">dataset</span>
+<div class="text-label-sm font-label-sm text-on-surface">Data Pioneer</div>
+</div>
+</div>
+</div>
+<!-- Next Steps -->
+<div class="bg-surface-container-lowest rounded-xl border border-border-subtle p-5">
+<h4 class="text-section-header font-section-header text-on-surface mb-3">Recommended Next Steps</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-outline mt-0.5 text-sm">play_circle</span>
+<a class="text-body-sm font-body-sm text-primary hover:underline" href="#">Complete Module: Scope 3 Emissions</a>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-outline mt-0.5 text-sm">article</span>
+<a class="text-body-sm font-body-sm text-primary hover:underline" href="#">Read: Transitioning to Circular Economy</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

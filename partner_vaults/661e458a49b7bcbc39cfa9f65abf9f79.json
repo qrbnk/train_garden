@@ -1,0 +1,102 @@
+{
+  "partner_id": "661e458a49b7bcbc39cfa9f65abf9f79",
+  "email": "partner21@test.com",
+  "account_type": "partner",
+  "first_seen": "2026-07-29T09:57:59.070375",
+  "last_seen": "2026-07-30T11:01:28.228827",
+  "profile": {
+    "org_name": "Solar Volunteers",
+    "org_type": "non_profit",
+    "cause_areas": [
+      "Solar",
+      "Climate"
+    ],
+    "website": "solar_volunteers.com",
+    "hq_location": "Brighton",
+    "description": "volunteering, events, community action resources",
+    "onboarding_done": true
+  },
+  "team_members": [],
+  "documents": [],
+  "resources": [
+    {
+      "id": "a06b8a90-27d4-44b5-856b-8277c6d22688",
+      "title": "Volunteering Solar",
+      "resource_type": "cause",
+      "description": "a volunteering event in Brighton to help with solar installation and admin",
+      "skills": [
+        "environment",
+        "team work",
+        "climate",
+        "organisation"
+      ],
+      "location": "hackney",
+      "remote_policy": "in-person",
+      "duration": "1 day",
+      "capacity": "2",
+      "status": "active",
+      "created_at": "2026-07-29T10:00:13.239510"
+    }
+  ],
+  "connections": [
+    {
+      "candidate_id": "284c38140faac88ceb8ba0d47209281c",
+      "resource_id": "a06b8a90-27d4-44b5-856b-8277c6d22688",
+      "match_pct": 28,
+      "match_reasons": [
+        "General profile similarity — no specific skill matched yet"
+      ],
+      "status": "reviewed",
+      "connected_at": "2026-07-30T11:01:28.227605"
+    }
+  ],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "4f224831-4181-4508-9d03-0c3b13af37c4",
+      "text": "Connected a candidate to Volunteering Solar",
+      "type": "connection",
+      "ts": "2026-07-30T11:01:28.228810"
+    },
+    {
+      "id": "97299e1f-71b0-45e4-a673-63cca0fe3e92",
+      "text": "Generated 2 proposed matches for Volunteering Solar",
+      "type": "matching",
+      "ts": "2026-07-30T11:01:22.330504"
+    },
+    {
+      "id": "0cc41088-019f-4d72-abe4-0fa35b66775b",
+      "text": "Generated 2 proposed matches for Volunteering Solar",
+      "type": "matching",
+      "ts": "2026-07-29T10:00:40.103278"
+    },
+    {
+      "id": "11a0d9a5-a6b0-4abc-9939-823c63b8889b",
+      "text": "Added skill: Solar",
+      "type": "skill",
+      "ts": "2026-07-29T10:00:30.486491"
+    },
+    {
+      "id": "ebae57f1-04fe-470f-9849-08c7eeade606",
+      "text": "Added resource: Volunteering Solar",
+      "type": "resource",
+      "ts": "2026-07-29T10:00:13.240324"
+    },
+    {
+      "id": "1cc95f44-51c5-47b7-9992-4a23a5d6fac6",
+      "text": "Updated organisation profile",
+      "type": "onboarding",
+      "ts": "2026-07-29T09:58:52.836070"
+    }
+  ],
+  "skills": [
+    {
+      "id": "8e72d903-71ee-4b63-b487-0f54616f3b6d",
+      "name": "Solar",
+      "category": "",
+      "notes": "",
+      "source": "manual",
+      "added_at": "2026-07-29T10:00:30.485443"
+    }
+  ]
+}

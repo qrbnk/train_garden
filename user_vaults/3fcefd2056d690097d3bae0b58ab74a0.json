@@ -1,0 +1,98 @@
+{
+  "user_id": "3fcefd2056d690097d3bae0b58ab74a0",
+  "email": "nnnntest@.com",
+  "name": "ll",
+  "first_seen": "2026-07-25T18:05:51.172146",
+  "last_seen": "2026-07-25T18:06:31.937897",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [],
+  "skill_sources": {},
+  "cv_summary": "            Daryna Vakulenko      M: +447442476374, Email: dashalolvakulenko@gmail.com, London         Professional Profile       AI Transformation Lead & Digital Strategy Consultant with 8 years of experience delivering AI-driven solutions across complex industries. Strategic leader and MD (Physici",
+  "messages": [
+    {
+      "uid": "3fcefd2056d690097d3bae0b58ab74a0",
+      "role": "user",
+      "content": "I'm completely new to sustainability",
+      "ts": "2026-07-25T18:06:31.929892"
+    },
+    {
+      "uid": "3fcefd2056d690097d3bae0b58ab74a0",
+      "role": "assistant",
+      "content": "Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. What kind of role are you looking for? Any specific job titles, sectors, or type of work on your radar — and what's the \"why\" behind the search?",
+      "ts": "2026-07-25T18:06:31.937426",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not sure yet — help me explore",
+        "Renewable energy / EV roles",
+        "Sustainability / ESG roles"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "d8201c93-2af9-41b7-af76-e708bdfa6d45",
+      "name": "CV Received",
+      "path": "/view-skill/analysis-1784999171/report",
+      "type": "cv_upload",
+      "timestamp": "2026-07-25 18:06",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "68b4236a-4b3e-4405-9b4b-ef1d00683516",
+      "name": "null_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-25 18:06"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JJ",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "",
+  "experience": [],
+  "how_heard": "Other",
+  "onboarding_seen": true,
+  "intake_pending": "target_role",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "journey": {
+    "xp": 0,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-25",
+    "last_checkin_date": ""
+  }
+}

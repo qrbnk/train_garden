@@ -1,0 +1,563 @@
+{
+  "user_id": "55557c2c1e1f97eec1a1765171fce386",
+  "email": "john_snow@gmail.com",
+  "name": "John Snow",
+  "first_seen": "2026-07-29T10:01:42.616448",
+  "last_seen": "2026-08-03T12:46:43.015252",
+  "sector": "Solar Energy Installation and Maintenance",
+  "experience_years": "unknown",
+  "target_role": "solar installation",
+  "goals": [
+    "align with career goals",
+    "Find volunteering opportunities near me",
+    "to work in solar installation sector",
+    "Career goal: work in solar installation",
+    "career advancement",
+    "career goals align with passion for solar installation",
+    "List webinars for solar installers",
+    "Transition into Solar Installation"
+  ],
+  "skills": [
+    "Safety Compliance",
+    "Quality Control",
+    "Solar Panel Installation"
+  ],
+  "skill_sources": {},
+  "cv_summary": "",
+  "messages": [
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "new",
+      "ts": "2026-07-29T10:03:13.885790"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. What kind of role are you looking for? Any specific job titles, sectors, or type of work on your radar — and what's the \"why\" behind the search?",
+      "ts": "2026-07-29T10:03:13.888343",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not sure yet — help me explore",
+        "Renewable energy / EV roles",
+        "Sustainability / ESG roles"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "solar installation",
+      "ts": "2026-07-29T10:03:47.902467"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "What's your ideal salary range? Knowing your floor and target helps me filter out roles that aren't the right fit.",
+      "ts": "2026-07-29T10:04:29.305129",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Under £30k",
+        "£30k–£50k",
+        "£50k–£70k",
+        "£70k+"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "£30k–£50k",
+      "ts": "2026-08-03T12:29:44.768662"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "Do you need this to be remote, hybrid, or onsite?",
+      "ts": "2026-08-03T12:29:52.765549",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Remote",
+        "Hybrid",
+        "Onsite"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "Onsite",
+      "ts": "2026-08-03T12:30:12.521737"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-08-03T12:30:12.524776",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "It's lovely to finally get some time to chat with you, John! Before we dive into any job opportunities or resources, I want to make sure I understand what drives your passion for solar installation. You've shared that it's not just a job, but a sector that aligns with your career goals. Can you tell me what specifically motivates you about transitioning from maintenance and installation work to a more focused role in solar installation? What are some key aspects of this field that excite or challenge you the most?\n\nI've noted down your current background as Solar Energy Installation and Maintenance, by the way!",
+      "ts": "2026-08-03T12:30:53.525488",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm open to learning about solar",
+        "Show me a job description example",
+        "What does a typical day look like"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "You asked to see a job description example, John! I'd be happy to share some examples of solar installation roles that might give you an idea of what's out there. However, before I do, can you tell me a bit more about your current situation? What are your work hours like right now, and is there anything specific that's making it challenging for you to make the transition into solar installation from your current role in maintenance?",
+      "ts": "2026-08-03T12:31:44.436990",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Show me solar installation job openings",
+        "Explain what a typical day looks like",
+        "Give me an example resume"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "Find volunteering opportunities near me for my target role",
+      "ts": "2026-08-03T12:32:11.509522"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-08-03T12:32:19.970214",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "Find volunteering opportunities near me for my target role",
+      "ts": "2026-08-03T12:32:34.717114"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-08-03T12:32:44.514189",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "Find volunteering opportunities near me for my target role",
+      "ts": "2026-08-03T12:32:57.766827"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "Last one for now: what kind of company culture are you after — an early-stage, all-hands-on-deck startup, or a more established company with more structure?",
+      "ts": "2026-08-03T12:33:06.095005",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Early-stage startup",
+        "Established company",
+        "No strong preference"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "No strong preference",
+      "ts": "2026-08-03T12:33:09.061485"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "It's lovely to continue our conversation, John! I noted that you mentioned you don't have a strong preference for company culture. That gives us flexibility as we explore opportunities together.\n\nI'd like to get a better understanding of your current situation. Can you tell me a bit more about your caring responsibilities? Do you have any family or dependents that might impact your availability for work or volunteering?",
+      "ts": "2026-08-03T12:33:45.269361",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Show me solar engineer job openings",
+        "What's a typical day like?",
+        "How much training required"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "John, I love how direct you are! You mentioned earlier that you don't have a strong preference for company culture. However, I'd like to learn more about your daily life as you transition into solar installation. Can you tell me a bit about your caring responsibilities? Do you have any family or dependents that might impact your work schedule or availability for opportunities?",
+      "ts": "2026-08-03T12:34:29.663581",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "I'm not interested in that role",
+        "Can I explore other options?",
+        "Solar industry not for me"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "Find volunteering opportunities near me for my target role",
+      "ts": "2026-08-03T12:36:04.171636"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "**You're taking a fantastic step towards transitioning into Solar Installation by exploring volunteering opportunities!**\n\nHere are some relevant results for you:\n\n### 1. **[NCVO](https://www.ncvo.org.uk/ncvo-volunteering/i-want-to-volunteer)**: \"Find a Volunteering Opportunity\"\n\n* What they do and why it's relevant to your goals:\n\t+ NCVO is the UK's largest charity working with voluntary sector organizations. They have resources for volunteering opportunities, including CharityJob, which is the UK’s largest and most specialized job board for the voluntary sector.\n\t+ This platform can connect you with various charities and organizations that may offer solar-related projects or hands-on experience in installation.\n* Ways to get involved:\n\t+ Browse through their \"I want to volunteer\" section\n\t+ Search for solar-related opportunities on CharityJob\n\t+ Reach out to NCVO's Volunteering Team via [this contact form](https://www.ncvo.org.uk/contact-us) with your specific interest in solar installation\n* How to reach out: Follow the contact form, mentioning that you're looking for solar-related volunteering opportunities as part of your transition into Solar Installation.\n\n### 2. **[Royal Voluntary Service](https://www.royalvoluntaryservice.org.uk/volunteering/)**\n\n* What they do and why it's relevant to your goals:\n\t+ Royal Voluntary Service is an independent charity providing support and services in local communities across England, Scotland & Wales.\n\t+ Their volunteering opportunities might include projects related to sustainable energy or community initiatives that could align with your solar installation goals.\n* Ways to get involved:\n\t+ Browse through their \"Volunteering\" section\n\t+ Search for volunteer opportunities on their website\n\t+ Contact their Volunteering Team via [this email](volunteering@royalvoluntaryservice.org.uk) mentioning your interest in solar-related volunteering\n* How to reach out: Email the above address, introducing yourself and expressing interest in finding a suitable volunteer role that aligns with your goals.\n\n### 3. **[Get Volunteering](https://getvolunteering.co.uk/)**\n\n* What they do and why it's relevant to your goals:\n\t+ Get Volunteering is a national charity connecting people to volunteering opportunities across the UK.\n\t+ Their platform can help you find solar-related projects or organizations that offer hands-on experience in installation, which could be valuable for your career transition.\n* Ways to get involved:\n\t+ Search for local volunteering opportunities on their website\n\t+ Filter results by location and category (e.g., environment, energy)\n\t+ Contact them via [this contact form](https://getvolunteering.co.uk/contact) with a message specifying your interest in solar installation volunteering\n* How to reach out: Follow the contact form, stating that you're seeking solar-related volunteer opportunities for career development.\n\n### 4. **[VolunteerMatch](https://www.volunteermatch.org/)**\n\n* What they do and why it's relevant to your goals:\n\t+ VolunteerMatch is a global organization connecting volunteers with non-profit organizations.\n\t+ You can search for solar-related projects or organizations that might offer hands-on experience in installation, which could be beneficial for your career transition into Solar Installation.\n* Ways to get involved:\n\t+ Search for volunteer opportunities on their website\n\t+ Filter results by location and category (e.g., environment, energy)\n\t+ Reach out to the organization directly via email or phone mentioned in each listing\n* How to reach out: Follow the instructions for each opportunity you're interested in, introducing yourself and expressing your interest in finding a suitable volunteer role.\n\n**Next Steps**\n\n1. **Contact Organizations**: Reach out to the organizations that align with your goals, using the specific steps outlined above.\n2. **Follow Up**: If you don't receive a response after 7 days, try sending a polite follow-up email to inquire about potential opportunities.\n3. **Map Experience to CV and Target Role**: Reflect on how each volunteer experience can be highlighted on your CV or applied to your target role in Solar Installation.\n\nWhat specific area within solar installation are you most interested in gaining hands-on experience with through volunteering?",
+      "ts": "2026-08-03T12:37:17.336217",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from jobs in me for my target role?",
+        "Find solar installation jobs near me for my target role",
+        "Build me a 30-day action plan around this"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "Find community groups near me for my target role",
+      "ts": "2026-08-03T12:39:46.976665"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "**A Community to Call Your Own!**\n\nJohn Snow, I'm thrilled to help you find a community that aligns with your transition into solar installation! You're not just looking for any group; you want one that shares your passion for renewable energy and offers opportunities to connect with like-minded individuals.\n\n**Let's Explore Some Options:**\n\n### 1. **Friends of the Earth**\n[Friends of the Earth](https://friendsoftheearth.uk/take-action/join-group-near-you)\n\nFriends of the Earth is a well-established organization that campaigns for climate justice and sustainability. As someone transitioning into solar installation, this group's work on renewable energy and environmental conservation will resonate with you.\n\n• Attend local events and campaigns\n• Join their advocacy team to influence policy changes\n• Participate in community outreach and education programs\n• Volunteer at their office or participate in citizen science projects\n\nTo get involved:\n1. Enter your postcode on the map on their website.\n2. Click on the group nearest you, then click \"Join this group\" on the right-hand side.\n3. Fill out the membership form with a brief introduction and interests.\n\n### 2. **Solar Citizens**\n[Solar Citizens](https://www.solarcitizens.org.uk/join-a-local-group)\n\nSolar Citizens is a grassroots organization that advocates for community-led renewable energy projects. As someone looking to transition into solar installation, you'll appreciate their focus on empowering communities through clean energy.\n\n• Attend local group meetings and events\n• Join the advocacy team to push for policy changes supporting community-led renewables\n• Participate in training sessions and workshops on solar installations and energy management\n• Volunteer at community events promoting renewable energy\n\nTo get involved:\n1. Visit the Solar Citizens website.\n2. Click on \"Join a Local Group\" and enter your postcode.\n3. Fill out the membership form with your interests.\n\n### 3. **Transition Network**\n[Transition Network](https://transitionnetwork.org/local-groups)\n\nThe Transition Network is a global movement that supports community-led initiatives for sustainability and resilience. As someone transitioning into solar installation, you'll appreciate their focus on building local capacity and expertise in renewable energy.\n\n• Attend local events and meetings\n• Join the transition team to help build momentum around solar installations\n• Participate in training sessions and workshops on sustainable living and energy management\n• Volunteer at community projects promoting renewable energy\n\nTo get involved:\n1. Visit the Transition Network website.\n2. Click on \"Local Groups\" and enter your postcode.\n3. Fill out the membership form with your interests.\n\n### 4. **The Green Team**\n[Green Team](https://www.thegreenteam.org.uk/join-us/)\n\nThe Green Team is a community-led organization that promotes environmental conservation and sustainability in your area. As someone transitioning into solar installation, you'll appreciate their focus on local action and community empowerment.\n\n• Attend local events and campaigns\n• Join the advocacy team to push for policy changes supporting renewable energy\n• Participate in training sessions and workshops on sustainable living and energy management\n• Volunteer at community projects promoting renewable energy\n\nTo get involved:\n1. Visit The Green Team website.\n2. Click on \"Join Us\" and enter your postcode.\n3. Fill out the membership form with a brief introduction.\n\n**Next Steps:**\n\n### Step 1: Contact a Group\nReach out to one of these groups, expressing your interest in getting involved and learning more about their work. You can say something like:\n\n\"Hello [Group Name], I'm John Snow, a solar energy professional transitioning into installation. I came across your group while researching local organizations working on renewable energy projects. I'd love to learn more about your initiatives and see how I can contribute my skills.\"\n\n### Step 2: Follow Up\nIf you don't receive a response after 7 days, send a follow-up email or phone call to check in.\n\n### Step 3: Mapping Your Experience\nAs you participate with these groups, remember to track your experiences, skills, and achievements. This will help you build a strong CV and map your progress towards your target role in solar installation.\n\n**What's Next?**\nNow that we've explored some community options, what specific challenges or questions do you have about getting involved and making connections in the solar industry?",
+      "ts": "2026-08-03T12:41:02.649173",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "Help me write an outreach email to one of these",
+        "What skills will I gain from community in me for my target role?",
+        "Find solar installation jobs near me for my target role",
+        "Build me a 30-day action plan around this"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "Find webinars near me for my target role",
+      "ts": "2026-08-03T12:41:40.825952"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "I love how direct you are! You mentioned earlier that you don't have a strong preference for company culture. However, I'd like to learn more about your daily life as you transition into solar installation. Can you tell me a bit about your work hours? Do you currently have a set schedule for your Solar Installation Specialist role?",
+      "ts": "2026-08-03T12:42:05.265744",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [],
+      "suggestions": [
+        "List webinars for solar installers near me",
+        "Find online courses on solar installation",
+        "Show me webinar schedules for next month"
+      ]
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "List webinars for solar installers near me",
+      "ts": "2026-08-03T12:42:36.723540"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "user",
+      "content": "List webinars for solar installers near me",
+      "ts": "2026-08-03T12:42:57.112237"
+    },
+    {
+      "uid": "55557c2c1e1f97eec1a1765171fce386",
+      "role": "assistant",
+      "content": "**Huge congratulations on taking the first step towards transitioning into Solar Installation, John!**\n\nI love that you're actively searching for webinars related to your target role. Here are some relevant resources I found:\n\n* **Small Solar Photovoltaic Systems qualifications and training**: This City & Guilds qualification is a great way to enhance your skills in solar installation.\n* **Solar Installer | Generation United Kingdom**: This 6-week programme will give you the knowledge and skills needed to kickstart your career as a solar installer.\n* **Solar Installer Certification: Train Online for Free**: You can train online for free with this certification course, which is a fantastic opportunity to learn at your own pace.\n\nWhich one of these resources resonates with you the most, John?",
+      "ts": "2026-08-03T12:44:19.822336",
+      "job_cards": [],
+      "report_path": null,
+      "resource_cards": [
+        {
+          "id": "ffa7112b-a6a3-4af6-ab38-87451b1e020a",
+          "title": "Small Solar Photovoltaic Systems qualifications and training ...",
+          "url": "https://www.cityandguilds.com/qualifications-and-apprenticeships/building-services-industry/electrical-installation/2922-small-solar-photovoltaic-systems",
+          "body": "May 25, 2026 · This qualification is designed as CPD for qualified electricians to be able to install and maintain small solar PV systems. By completing this qualification, electricians can enhance th",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "848c639d-70af-49ca-a7e6-a3a65d57ffaa",
+          "title": "Solar Installer | Generation United Kingdom",
+          "url": "https://uk.generation.org/programs/solar-installer/",
+          "body": "On this 6-week programme you’ll get all the knowledge and skills you need to kickstart your career and land your first solar role. To help you get ready for your job search, we’ll help you with CV wri",
+          "type": "courses",
+          "type_label": "Resource"
+        },
+        {
+          "id": "337c6bb4-01e2-47bd-8645-c83dbcae65d6",
+          "title": "Solar Installer Certification: Train Online for Free",
+          "url": "https://insiderbits.com/courses/solar-installer/",
+          "body": "Jul 23, 2025 · Fortunately, you don’t need to attend a physical school or invest heavily in tuition to begin. Nowadays, we all can find free online training that offers the fundamentals of solar energ",
+          "type": "courses",
+          "type_label": "Resource"
+        }
+      ],
+      "suggestions": [
+        "Show me solar installer jobs",
+        "List nearby solar company openings",
+        "Find a training program near me"
+      ]
+    }
+  ],
+  "reports": [],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "8dbcc57d-4872-4c85-8cc6-372157dbb68e",
+      "name": "Volunteering | Voluntary Work | Volunteer with Royal Voluntary Service",
+      "type": "completed_resource",
+      "timestamp": "2026-08-03 12:39"
+    }
+  ],
+  "saved_items": [
+    {
+      "type": "resource",
+      "title": "Solar Installer Certification: Train Online for Free",
+      "url": "https://insiderbits.com/courses/solar-installer/",
+      "folder_id": "resources",
+      "user_id": "55557c2c1e1f97eec1a1765171fce386",
+      "saved_at": "2026-08-03T12:46:12.382203",
+      "id": "a6e7f3d2-ff41-4e17-8311-8b5d6b4d81f1"
+    },
+    {
+      "type": "resource",
+      "title": "Solar Installer | Generation United Kingdom",
+      "url": "https://uk.generation.org/programs/solar-installer/",
+      "folder_id": "resources",
+      "user_id": "55557c2c1e1f97eec1a1765171fce386",
+      "saved_at": "2026-08-03T12:45:58.432130",
+      "id": "cd0257ca-5798-44c5-84c1-3a5432a2a937"
+    },
+    {
+      "type": "resource",
+      "title": "Small Solar Photovoltaic Systems qualifications and training ...",
+      "url": "https://www.cityandguilds.com/qualifications-and-apprenticeships/building-services-industry/electrical-installation/2922-small-solar-photovoltaic-systems",
+      "folder_id": "resources",
+      "user_id": "55557c2c1e1f97eec1a1765171fce386",
+      "saved_at": "2026-08-03T12:45:57.314989",
+      "id": "7a40a14c-f38d-4e44-b95b-34e6055bfd5c"
+    }
+  ],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "nw25ab",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "solar installation",
+  "values": [],
+  "culture_preference": "No strong preference",
+  "salary_range": "£30k–£50k",
+  "work_type": "Onsite",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [
+    {
+      "id": "1969535b-9615-4f95-b0db-920220411bab",
+      "url": "https://friendsoftheearth.uk/take-action/join-group-near-you",
+      "title": "Join a group near you - Friends of the Earth",
+      "body": "Our network spans over 200 groups across England, Wales and Northern Ireland. So whether you’re interested in working on climate solutions or keen to join a local campaign, enter your postcode in the ",
+      "type": "community",
+      "location": "me for my target role",
+      "status": "not_started",
+      "saved_at": "2026-08-03T12:41:02.646641"
+    },
+    {
+      "id": "ec7939f2-d201-416f-9b87-d78f3beca571",
+      "url": "https://www.meetup.com/find/",
+      "title": "Find Events & Groups | Meetup",
+      "body": "Find Meetup events and groups so you can do more of what matters to you and meet people near you who share your interests.All events. people1 icon. New Groups.",
+      "type": "community",
+      "location": "me for my target role",
+      "status": "not_started",
+      "saved_at": "2026-08-03T12:41:02.646549"
+    },
+    {
+      "id": "e6a7e1e3-a4b8-40a9-a320-c12b4a27514a",
+      "url": "https://www.royalvoluntaryservice.org.uk/volunteering/",
+      "title": "Volunteering | Voluntary Work | Volunteer with Royal Voluntary Service",
+      "body": "There’s a volunteering opportunity waiting for you in your local community and in NHS settings across England, Scotland & Wales.",
+      "type": "jobs",
+      "location": "me for my target role",
+      "status": "completed",
+      "saved_at": "2026-08-03T12:37:17.334393",
+      "completed_at": "2026-08-03T12:39:20.316664"
+    },
+    {
+      "id": "427643ba-cba7-4091-93a3-060ffb362f34",
+      "url": "https://www.ncvo.org.uk/ncvo-volunteering/i-want-to-volunteer",
+      "title": "Find a volunteering opportunity | NCVO",
+      "body": "There are lots of places to look for volunteering opportunities. You could: ... NCVO doesn't manage or control the third-party websites featured on this page. ... CharityJob is the UK’s largest and mo",
+      "type": "jobs",
+      "location": "me for my target role",
+      "status": "in_progress",
+      "saved_at": "2026-08-03T12:37:17.334330"
+    }
+  ],
+  "hobby_skill_map": [],
+  "skill_validations": {
+    "Safety Compliance": {
+      "status": "in_progress",
+      "updated_at": "2026-08-03T12:31:22.046926",
+      "history": [
+        {
+          "status": "in_progress",
+          "evidence_note": "",
+          "cert_file": "",
+          "at": "2026-08-03T12:31:22.047280"
+        }
+      ]
+    },
+    "Solar Panel Installation": {
+      "status": "validated",
+      "updated_at": "2026-08-03T12:31:34.980485",
+      "cert_file": "solar_installation_technician_cv.pdf",
+      "cert_path": "55557c2c1e1f97eec1a1765171fce386_solar-panel-installation_c77920d0_solar_installation_technician_cv.pdf",
+      "history": [
+        {
+          "status": "validated",
+          "evidence_note": "",
+          "cert_file": "solar_installation_technician_cv.pdf",
+          "at": "2026-08-03T12:31:34.982293"
+        }
+      ]
+    }
+  },
+  "profile_complete": true,
+  "onboarding_done": true,
+  "headline": "solar installation technician",
+  "experience": [
+    {
+      "id": "aa1edc34",
+      "title": "Solar Installation Specialist",
+      "company": "",
+      "start_date": "",
+      "end_date": "Present",
+      "description": "",
+      "source": "manual"
+    },
+    {
+      "id": "b4bfe753",
+      "title": "",
+      "company": "Stealth startup (Solar)",
+      "start_date": "",
+      "end_date": "Present",
+      "description": "Working on solar installation",
+      "source": "chat"
+    }
+  ],
+  "how_heard": "Google search",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": true,
+  "visible_to_companies_at": "2026-08-03T12:25:58.291195",
+  "journey": {
+    "xp": 190,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [
+      {
+        "id": "8319ac0b-5d35-4142-a892-18921f31047d",
+        "title": "Completed: Volunteering | Voluntary Work | Volunteer with Royal Voluntary Service",
+        "type": "achievement",
+        "icon": "🏅",
+        "xp": 75,
+        "earned_at": "2026-08-03T12:39:20.317830",
+        "verification_status": "auto",
+        "verified": true,
+        "evidence": ""
+      },
+      {
+        "id": "3708826b-4de7-4968-89c8-262df85f8d8a",
+        "title": "finished a role in solar energy installation and maintenance",
+        "type": "achievement",
+        "icon": "🏅",
+        "xp": 75,
+        "earned_at": "2026-08-03T12:31:55.155670",
+        "verification_status": "verified",
+        "verified": true,
+        "evidence": ""
+      }
+    ],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-08-03",
+    "last_checkin_date": ""
+  },
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "confident",
+        "ts": "2026-08-03T12:31:54.898244"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-08-03T12:42:15.118572"
+      }
+    ],
+    "blockers": [
+      "none known"
+    ],
+    "preferred_tone": "direct",
+    "response_depth": "balanced",
+    "milestones_mentioned": [
+      "finished a role in solar energy installation and maintenance"
+    ],
+    "total_exchanges": 2,
+    "encouragement_count": 0,
+    "key_insights": [
+      "User is seeking to transition within their current field and seems confident about their abilities.",
+      "The user is looking for webinars related to their target role and has a current role in solar energy installation and maintenance."
+    ],
+    "current_emotion": "excited"
+  }
+}

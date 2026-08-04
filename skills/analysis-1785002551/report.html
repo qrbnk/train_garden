@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Summary</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>SUMMARY</strong>: This individual's background is NOT already in sustainability; they have worked in various tech-related roles, including AI transformation, digital health, and sales.</p>
+<p><strong>TRANSFERABLE/MATCHED SKILLS</strong>:</p>
+<ul>
+<li>Cross-functional management: demonstrated ability to manage high-value portfolios, operate as a strategic bridge between different teams (e.g., clinical staff, IT developers, commercial partners)</li>
+<li>Stakeholder management: worked with C-suite leaders, founders, government stakeholders, and institutional investors</li>
+<li>Data-driven decision making: distilled complex market data to define key account metrics and translated analytics into actionable insights</li>
+<li>Solution delivery: managed solution delivery in collaboration with engineers, marketing, and finance teams</li>
+<li>Business development: drove business development by building B2B sales pipelines and identifying high-impact transformation opportunities</li>
+<li>Technical expertise: demonstrated proficiency in AI/ML (NLP, LLMs), Python, JavaScript, CRM management (Salesforce)</li>
+</ul>
+<p><strong>SKILL GAPS</strong>:</p>
+<ul>
+<li>Sustainability-specific knowledge: no explicit mention of experience or training in sustainability, green economy, climate change, ESG, etc.</li>
+<li>Policy or regulatory understanding: no indication of familiarity with relevant policies, regulations, or standards related to sustainability</li>
+<li>Sector-specific expertise: limited exposure to the specific challenges and opportunities within the sustainability sector</li>
+</ul>
+<p><strong>TOP 3 NEXT STEPS</strong>:</p>
+<ol>
+<li>Develop a deeper understanding of sustainability principles, practices, and regulations through online courses, certifications, or workshops.</li>
+<li>Seek out mentorship or guidance from experienced professionals in the sustainability sector to gain insights into industry-specific challenges and best practices.</li>
+<li>Highlight transferable skills and demonstrate how they can be applied to sustainability roles, emphasizing adaptability, problem-solving, and stakeholder management.</li>
+</ol>
+<p>**</p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

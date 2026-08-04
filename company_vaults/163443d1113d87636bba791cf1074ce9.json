@@ -1,0 +1,254 @@
+{
+  "company_id": "163443d1113d87636bba791cf1074ce9",
+  "email": "03company@test.com",
+  "account_type": "company",
+  "first_seen": "2026-08-03T10:04:46.898268",
+  "last_seen": "2026-08-03T10:35:13.779545",
+  "profile": {
+    "name": "03 company",
+    "company_number": "123",
+    "registered_address": "Wolverton Road",
+    "website": "",
+    "sector": "ev solar",
+    "sub_sectors": [],
+    "company_size": "1-10",
+    "stage": "",
+    "hq_location": "",
+    "work_types": [
+      "Full-time",
+      "Part-time",
+      "Contract",
+      "Apprenticeship"
+    ],
+    "remote_policy": "",
+    "description": "We design, install, and maintain solar panel systems for homes and businesses, harnessing the power of renewable energy to make a sustainable impact.",
+    "culture_tags": [],
+    "account_manager": {
+      "name": "craig",
+      "position": "ceo",
+      "email": "crain.com"
+    },
+    "onboarding_done": false
+  },
+  "team_members": [
+    {
+      "id": "14fadfc8-a27f-4a95-8d2a-ff9190ac2324",
+      "name": "03 john",
+      "email": "03@ceo.com",
+      "access_level": "owner",
+      "added_at": "2026-08-03T10:10:27.406209"
+    },
+    {
+      "id": "022e8d26-cd17-4802-a616-5a7487ec1d78",
+      "name": "craig",
+      "email": "ceo@test.com",
+      "access_level": "owner",
+      "added_at": "2026-08-03T10:17:40.987068"
+    },
+    {
+      "id": "43007e30-ac72-4c7b-b89b-90b0493392f1",
+      "name": "craig",
+      "email": "crain.com",
+      "access_level": "owner",
+      "added_at": "2026-08-03T10:29:30.281842"
+    }
+  ],
+  "documents": [],
+  "roles": [],
+  "skills": [],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "e0c3bdde-2542-4a5f-ab8a-92fe0ad2b161",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:35:13.779538"
+    },
+    {
+      "id": "a0bebd17-5325-477d-a49b-7a52df624695",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:34:15.571875"
+    },
+    {
+      "id": "28025025-e74f-44d9-be63-4a43c5c01043",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:32:11.229371"
+    },
+    {
+      "id": "31b7b9bc-a23e-489a-867c-68530e147ee3",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:30:33.884766"
+    },
+    {
+      "id": "860f45c6-15c4-41fb-b0a2-0849c9c3c38b",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:30:25.990163"
+    },
+    {
+      "id": "b5814478-3fb1-410d-9a6e-d0c70814897c",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:30:19.697553"
+    },
+    {
+      "id": "d4451916-e081-49e7-b633-94f8d678b03d",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:30:15.582509"
+    },
+    {
+      "id": "cdb44913-c11c-4065-bdd1-1f8e25082705",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:29:58.575351"
+    },
+    {
+      "id": "28cf4efb-38e2-4812-b514-faf360d062f5",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:29:57.754511"
+    },
+    {
+      "id": "3869ffc0-f532-41f6-959c-31ffec24d2a1",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:29:57.107829"
+    },
+    {
+      "id": "ac592035-35b6-4935-b14d-b3ed319b4f70",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:29:40.443271"
+    },
+    {
+      "id": "93f2f764-2d6b-405e-8bc7-22bd9560236c",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:29:39.819535"
+    },
+    {
+      "id": "b82fc11e-ed7b-440e-9451-1058bbd85700",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:29:39.600580"
+    },
+    {
+      "id": "14c48150-8248-4a93-a0c9-5ec78ccbb76c",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:29:30.282650"
+    },
+    {
+      "id": "cb55e2fa-1463-4d32-b150-8386fd5954f2",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:23:05.114763"
+    },
+    {
+      "id": "fa94945b-dad2-4b69-9bed-27a311a76821",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:23:04.546103"
+    },
+    {
+      "id": "a3516c20-91d6-4be5-ab45-a04180311f09",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:17:40.988544"
+    },
+    {
+      "id": "5b1f701d-c23d-45ac-8289-ec8d0ea51f55",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:11:40.776597"
+    },
+    {
+      "id": "c87582e1-bdb1-47e9-99bd-e89c27c82790",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:11:40.345138"
+    },
+    {
+      "id": "e0225af6-e989-4185-b36b-f898845f97b6",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:11:39.415174"
+    },
+    {
+      "id": "1852334a-733b-4cea-9d46-d1e3834579f1",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:11:38.698069"
+    },
+    {
+      "id": "0749898d-cb2d-420e-98fd-f6d419f138df",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:11:37.977409"
+    },
+    {
+      "id": "698c5f42-5a79-4527-a3c8-97034c08a83b",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:11:37.163452"
+    },
+    {
+      "id": "f1018114-0eb3-490f-8096-d317dd64bfcf",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:11:18.389332"
+    },
+    {
+      "id": "0132a4e3-010c-45e4-8a96-ae2be50b4e00",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:11:14.624068"
+    },
+    {
+      "id": "803b5e19-2b0b-4cf8-95c3-2f23e1d1acde",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:10:50.107424"
+    },
+    {
+      "id": "51bcdd47-9f7d-49c9-807b-b9d60c9a66c7",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:10:31.784622"
+    },
+    {
+      "id": "4f71dc9e-5a13-4184-b4e2-fe0aaecab2eb",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:10:31.645462"
+    },
+    {
+      "id": "a430bb2a-7c60-450f-a695-d1c451074ac4",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:10:31.479057"
+    },
+    {
+      "id": "c3abef5f-e0c3-4e37-a0ef-6725e190ab48",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:10:30.968917"
+    },
+    {
+      "id": "23ae4a1b-da8e-4c81-b1de-f87435f37068",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:10:30.269526"
+    },
+    {
+      "id": "6cee331c-6da9-495b-a0f6-a35b13322145",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-08-03T10:10:27.407339"
+    }
+  ]
+}

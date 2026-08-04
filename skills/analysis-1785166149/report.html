@@ -1,0 +1,68 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Summary</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>SUMMARY</strong>
+Ethan Martinez's background is NOT already in sustainability; he has a decade of experience as a solar technician in the installation and maintenance of photovoltaic systems.</p>
+<p><strong>TRANSFERABLE/MATCHED SKILLS</strong></p>
+<ul>
+<li>Troubleshooting Techniques</li>
+<li>System Optimization</li>
+<li>Teamwork (implied by collaboration with a team to complete projects)</li>
+<li>Leadership/Project Management (implied by leading teams and managing projects)</li>
+</ul>
+<p>These skills are transferable because they demonstrate the ability to work efficiently, manage complex systems, and lead teams, which are valuable in many industries beyond sustainability.</p>
+<p><strong>SKILL GAPS</strong></p>
+<ul>
+<li>Sustainability-specific knowledge: Ethan's experience is limited to solar energy technology, but he may not have a deep understanding of broader sustainability principles, climate change, or ESG considerations.</li>
+<li>Policy and regulation: While he mentions adhering to safety standards and regulations, his CV does not suggest expertise in policy development, regulatory compliance, or advocacy.</li>
+<li>Communication and stakeholder engagement: Ethan's experience is focused on technical installation and maintenance, but he may need to develop skills in communicating sustainability concepts to diverse stakeholders.</li>
+</ul>
+<p><strong>TOP 3 NEXT STEPS</strong></p>
+<ol>
+<li><strong>Develop a stronger foundation in sustainability principles</strong>: Ethan should explore courses, workshops, or certifications that introduce him to the broader context of sustainability, climate change, and ESG considerations.</li>
+<li><strong>Build expertise in policy and regulation</strong>: He should research and familiarize himself with relevant policies, regulations, and standards governing sustainability and renewable energy.</li>
+<li><strong>Enhance communication and stakeholder engagement skills</strong>: Ethan should focus on developing his ability to communicate complex sustainability concepts to diverse audiences, including policymakers, business leaders, and community stakeholders.</li>
+</ol>
+<p><strong>SKILLS_JSON</strong>
+{
+"matched": ["Troubleshooting Techniques", "System Optimization", "Teamwork"],
+"gaps": ["Sustainability-specific knowledge", "Policy and regulation", "Communication and stakeholder engagement"],
+"summary": "",
+"name": "Ethan Martinez",
+"sector": "Solar Energy Technology",
+"experience_years": "10 years",
+"suggested_target_role": "",
+"location": "Los Angeles",
+"goals": [
+],
+"hobbies": ["Scuba Diving", "E-sports", "Reading Fiction", "Puzzle Solving"],
+"headline": "Lead Solar Technician",
+"experience": [
+{
+"title": "Lead Solar Technician",
+"company": "Maple Leaf Consulting",
+"start_date": "Jan 2018",
+"end_date": "Present"
+},
+{
+"title": "Solar Technician",
+"company": "Cactus Creek Solutions",
+"start_date": "Jan 2015",
+"end_date": "Jan 2018"
+}
+]
+}</p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

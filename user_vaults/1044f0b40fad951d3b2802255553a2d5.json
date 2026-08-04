@@ -1,0 +1,106 @@
+{
+  "user_id": "1044f0b40fad951d3b2802255553a2d5",
+  "email": "brandon352@test.com",
+  "name": "brandon",
+  "first_seen": "2026-07-31T21:41:51.134295",
+  "last_seen": "2026-07-31T21:43:54.310938",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [
+    "Regulatory literacy",
+    "Risk assessment and mitigation",
+    "Project delivery"
+  ],
+  "skill_sources": {
+    "Regulatory literacy": [
+      {
+        "type": "inferred",
+        "detail": "NABCEP Certified Lead Solar Technician — This certification demonstrates knowledge of solar installation regulations, which can be applied to understanding and navigating environmental regulations in a sustainability role.",
+        "ts": "2026-07-31T21:43:39.391152"
+      }
+    ],
+    "Risk assessment and mitigation": [
+      {
+        "type": "inferred",
+        "detail": "OSHA 30 Safety — As a safety-focused lead technician, Alexander has experience identifying and mitigating potential hazards, a skill that is valuable in sustainability roles where assessing and managing environmental risks is crucial.",
+        "ts": "2026-07-31T21:43:39.391251"
+      }
+    ],
+    "Project delivery": [
+      {
+        "type": "inferred",
+        "detail": "Licensed Electrician — Alexander's experience working on complex electrical systems can translate to project management skills, including coordinating with teams, meeting deadlines, and ensuring successful outcomes in sustainability project",
+        "ts": "2026-07-31T21:43:39.391259"
+      }
+    ]
+  },
+  "cv_summary": "ALEXANDER R. RIVERA\nNABCEP CERTIFIED LEAD SOLAR TECHNICIAN\n📍 Austin, TX 78745\n📱 (512) 555-0194\n✉️ a.rivera.solar@example.com\n🔗 linkedin.com/in/alex-rivera-pv\nNABCEP PVIP Certified\nOSHA 30 Safety\nLicensed Electrician\nProfessional Profile: Resourceful and safety-focused Lead Solar Installation Technic",
+  "messages": [],
+  "reports": [
+    {
+      "id": "4f3f5710-e830-46ab-90f6-78f0fd75fb10",
+      "name": "CV Summary",
+      "path": "/view-skill/analysis-1785530619/report",
+      "type": "cv_summary",
+      "timestamp": "2026-07-31 21:43",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "4a408670-71db-4f5d-9b66-4c9bf7d32ef2",
+      "name": "solar_installation_technician_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-31 21:43"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JH",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "culture_preference": "",
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "headline": "",
+  "experience": [],
+  "how_heard": "Event",
+  "onboarding_seen": true,
+  "intake_pending": "",
+  "intake_skipped": [],
+  "account_type": "candidate",
+  "visible_to_companies": false,
+  "visible_to_companies_at": "",
+  "cv_uploaded": true,
+  "transferable_skills": [
+    {
+      "source": "NABCEP Certified Lead Solar Technician",
+      "skill": "Regulatory literacy",
+      "relevance": "This certification demonstrates knowledge of solar installation regulations, which can be applied to understanding and navigating environmental regulations in a sustainability role."
+    },
+    {
+      "source": "OSHA 30 Safety",
+      "skill": "Risk assessment and mitigation",
+      "relevance": "As a safety-focused lead technician, Alexander has experience identifying and mitigating potential hazards, a skill that is valuable in sustainability roles where assessing and managing environmental risks is crucial."
+    },
+    {
+      "source": "Licensed Electrician",
+      "skill": "Project delivery",
+      "relevance": "Alexander's experience working on complex electrical systems can translate to project management skills, including coordinating with teams, meeting deadlines, and ensuring successful outcomes in sustainability projects."
+    }
+  ]
+}

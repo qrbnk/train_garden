@@ -1,0 +1,194 @@
+{
+  "user_id": "32324072fa43f855c313771c8fcfe681",
+  "email": "admin21@test.com",
+  "name": "",
+  "first_seen": "2026-07-20T08:36:55.072645",
+  "last_seen": "2026-07-20T08:39:00.302878",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [],
+  "skills": [],
+  "cv_summary": "",
+  "messages": [],
+  "reports": [
+    {
+      "id": "5f4b9df2-a096-449c-8ab1-2370ef2912f6",
+      "name": "CV Gap Analysis",
+      "path": "/view-skill/analysis-1784533140/report",
+      "type": "cv_analysis",
+      "timestamp": "2026-07-20 08:39",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "f747371e-b07a-48db-b2ac-0eb99e3cbdc9",
+      "name": "Daryna Vakulenko - CV -  copy.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-20 08:38"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JJ",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": false,
+  "journey": {
+    "xp": 10,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": true,
+    "progress_pct": 10,
+    "skills_gaps": [
+      {
+        "skill": "Environmental Policy Knowledge",
+        "current_level": 2,
+        "target_level": 4,
+        "gap": 2,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Understanding of environmental policies and regulations is crucial for a sustainability role.",
+        "resources": [
+          {
+            "title": "Sustainability Profession Skills for 2026",
+            "url": "https://sustainability-academy.org/sustainability-profession-2026/",
+            "type": "courses"
+          },
+          {
+            "title": "Why Sustainability Strategies Fail Without Workforce Training...",
+            "url": "https://www.winssolutions.org/sustainability-strategies-fail-without-workforce-training-infrastructure/",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Sustainable Business Models",
+        "current_level": 1,
+        "target_level": 4,
+        "gap": 3,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Knowledge of sustainable business models is essential for driving organizational change and innovation.",
+        "resources": [
+          {
+            "title": "Build Your ESG Career: 5 Free Sustainability Courses Worth ...",
+            "url": "https://careersandopportunities.com/2026/06/13/free-sustainability-courses/",
+            "type": "courses"
+          },
+          {
+            "title": "3200+ Sustainability Online Courses for 2026 | Explore Free ...",
+            "url": "https://www.classcentral.com/subject/sustainability",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Climate Change Science",
+        "current_level": 0,
+        "target_level": 4,
+        "gap": 4,
+        "priority": "high",
+        "status": "open",
+        "why_matters": "Understanding of climate change science is critical for developing effective sustainability strategies.",
+        "resources": [
+          {
+            "title": "Sustainability Profession Skills for 2026",
+            "url": "https://sustainability-academy.org/sustainability-profession-2026/",
+            "type": "courses"
+          },
+          {
+            "title": "Why Sustainability Strategies Fail Without Workforce Training...",
+            "url": "https://www.winssolutions.org/sustainability-strategies-fail-without-workforce-training-infrastructure/",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Stakeholder Engagement",
+        "current_level": 3,
+        "target_level": 5,
+        "gap": 2,
+        "priority": "medium",
+        "status": "open",
+        "why_matters": "Effective stakeholder engagement is key to building support for sustainability initiatives.",
+        "resources": [
+          {
+            "title": "Sustainability Profession Skills for 2026",
+            "url": "https://sustainability-academy.org/sustainability-profession-2026/",
+            "type": "courses"
+          },
+          {
+            "title": "Why Sustainability Strategies Fail Without Workforce Training...",
+            "url": "https://www.winssolutions.org/sustainability-strategies-fail-without-workforce-training-infrastructure/",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Data Analysis and Visualization",
+        "current_level": 0,
+        "target_level": 4,
+        "gap": 4,
+        "priority": "medium",
+        "status": "open",
+        "why_matters": "Ability to collect, analyze, and visualize data is essential for measuring sustainability performance.",
+        "resources": [
+          {
+            "title": "Sustainability Profession Skills for 2026",
+            "url": "https://sustainability-academy.org/sustainability-profession-2026/",
+            "type": "courses"
+          },
+          {
+            "title": "Why Sustainability Strategies Fail Without Workforce Training...",
+            "url": "https://www.winssolutions.org/sustainability-strategies-fail-without-workforce-training-infrastructure/",
+            "type": "courses"
+          }
+        ]
+      },
+      {
+        "skill": "Communication and Storytelling",
+        "current_level": 2,
+        "target_level": 4,
+        "gap": 2,
+        "priority": "low",
+        "status": "open",
+        "why_matters": "Effective communication of sustainability messages is critical for engaging stakeholders and driving behavior change.",
+        "resources": [
+          {
+            "title": "Careers in Sustainability - CourseraFoundations of Sustainability and ESG - CourseraSustainability Analyst Fundamentals | CourseraIntroduction to Sustainability Course by University of ...Foundational Sustainability Skills & Competencies - Coursera",
+            "url": "https://www.coursera.org/learn/sustainability-careers",
+            "type": "courses"
+          },
+          {
+            "title": "Foundations of Sustainability and ESG - Coursera",
+            "url": "https://www.coursera.org/learn/introduction-to-sustainable-finance",
+            "type": "courses"
+          }
+        ]
+      }
+    ],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 0,
+    "last_active_date": "",
+    "last_checkin_date": "",
+    "summary": "Transitioning from a [current role] to a sustainability role requires developing expertise in environmental policy, sustainable business models, climate change science, stakeholder engagement, data analysis, and effective communication. With a focus on building these skills, I can make a meaningful impact in the sustainability sector.",
+    "estimated_months": 12
+  }
+}

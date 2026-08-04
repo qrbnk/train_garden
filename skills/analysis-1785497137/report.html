@@ -1,0 +1,66 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Summary</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>SUMMARY</strong>
+Ethan Martinez's background is NOT already in sustainability, but rather in solar energy installation and maintenance.</p>
+<p><strong>TRANSFERABLE/MATCHED SKILLS</strong></p>
+<ul>
+<li>Troubleshooting techniques: can be applied to identifying and resolving environmental or social issues</li>
+<li>System optimization: can be applied to improving the efficiency of sustainability systems</li>
+<li>Teamwork: essential for collaboration with stakeholders in a sustainability role</li>
+<li>Tenacity: critical for driving change and implementing sustainability initiatives</li>
+<li>Electrical codes knowledge: relevant for working with electrical systems in a sustainable energy context</li>
+</ul>
+<p><strong>SKILL GAPS</strong></p>
+<ul>
+<li>Sustainability principles and practices: lack of direct experience in sustainability-specific roles or education</li>
+<li>Climate change mitigation and adaptation strategies: no evidence of direct experience or training in climate-related issues</li>
+<li>Environmental policy and regulation: no mention of familiarity with environmental laws or regulations</li>
+</ul>
+<p><strong>TOP 3 NEXT STEPS</strong></p>
+<ol>
+<li>Take a course or certification program in sustainability principles, such as the Certified Sustainability Practitioner (CSP) designation.</li>
+<li>Seek out mentorship or coaching from an experienced sustainability professional to gain insight into industry best practices.</li>
+<li>Explore roles that combine solar energy installation with sustainability initiatives, such as renewable energy project management.</li>
+</ol>
+<p><strong>SKILLS_JSON</strong>
+{
+  "matched": ["Troubleshooting Techniques", "System Optimization", "Teamwork", "Tenacity"],
+  "all_skills": [
+    "Troubleshooting Techniques",
+    "Photovoltaic System Troubleshooting",
+    "Solar Energy Principles",
+    "Electrical Codes Knowledge",
+    "System Optimization",
+    "Swahili",
+    "French"
+  ],
+  "gaps": ["Sustainability Principles and Practices", "Climate Change Mitigation and Adaptation Strategies", "Environmental Policy and Regulation"],
+  "summary":"",
+  "name":"Ethan Martinez",
+  "sector":"Solar Energy Installation",
+  "experience_years":"",
+  "suggested_target_role":"",
+  "location":"Los Angeles",
+  "goals":[],
+  "hobbies":["Scuba Diving","E-sports","Reading Fiction","Puzzle Solving"],
+  "headline":"Lead Solar Technician",
+  "experience": [
+    {"title":"Lead Solar Technician", "company":"Maple Leaf Consulting", "start_date":"Jan / 2018", "end_date":"Ongoing"},
+    {"title":"Solar Technician", "company":"Cactus Creek Solutions", "start_date":"Jan / 2015", "end_date":"Jan / 2018"}
+  ]
+}</p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

@@ -1,0 +1,106 @@
+{
+    "sustainability_esg": [
+        {
+            "role": "Sustainability Consultant",
+            "sector": "Strategy & ESG",
+            "skills": [
+                "Carbon Accounting",
+                "ESG Reporting",
+                "GRI/SASB Compliance",
+                "Stakeholder Engagement"
+            ],
+            "suggested_intent": "Drafting a CSRD-compliant sustainability report for a mid-sized enterprise.",
+            "success_criteria": "Report includes Scope 1, 2, and 3 data and aligns with GRI 305 standards."
+        },
+        {
+            "role": "ESG Data Analyst",
+            "sector": "Strategy & ESG",
+            "skills": [
+                "Data Visualization",
+                "GHG Protocol",
+                "Climate Risk Modeling",
+                "SQL/Python"
+            ],
+            "suggested_intent": "Analyzing historical emissions data to forecast 2030 Net Zero pathways.",
+            "success_criteria": "Forecast includes 3 distinct decarbonization scenarios with quantitative ROI."
+        }
+    ],
+    "waste_management": [
+        {
+            "role": "Circular Economy Specialist",
+            "sector": "Waste & Circularity",
+            "skills": [
+                "Waste Stream Auditing",
+                "Life Cycle Assessment (LCA)",
+                "Cradle-to-Cradle Design",
+                "Supply Chain Optimization"
+            ],
+            "suggested_intent": "Optimizing material recovery for manufacturing byproduct waste.",
+            "success_criteria": "Strategy achieves a minimum 25% reduction in landfill diversion within 12 months."
+        },
+        {
+            "role": "Hazardous Waste Manager",
+            "sector": "Waste & Circularity",
+            "skills": [
+                "RCRA Compliance",
+                "Chemical Safety",
+                "Disposal Logistics",
+                "Emergency Response"
+            ],
+            "suggested_intent": "Creating a compliance framework for lab-scale chemical waste disposal.",
+            "success_criteria": "Framework covers all local legal tracking requirements (e.g., Waste Transfer Notes)."
+        }
+    ],
+    "construction": [
+        {
+            "role": "BREEAM/LEED Assessor",
+            "sector": "Green Construction",
+            "skills": [
+                "Sustainable Site Management",
+                "Thermal Bridging Analysis",
+                "Material Procurement",
+                "Energy Modeling"
+            ],
+            "suggested_intent": "Auditing building blueprints for LEED Platinum certification eligibility.",
+            "success_criteria": "Audit identifies at least 5 design optimizations to improve energy efficiency credits."
+        },
+        {
+            "role": "Sustainable Materials Coordinator",
+            "sector": "Green Construction",
+            "skills": [
+                "EPD Verification",
+                "Supply Chain Ethics",
+                "Embodied Carbon Calculation",
+                "LCA Software"
+            ],
+            "suggested_intent": "Sourcing low-carbon alternatives for structural steel and concrete.",
+            "success_criteria": "Selected materials reduce project embodied carbon by 15% compared to baseline."
+        }
+    ],
+    "landscaping_ecology": [
+        {
+            "role": "Biodiversity & Ecology Officer",
+            "sector": "Ecological Landscaping",
+            "skills": [
+                "BNG (Biodiversity Net Gain) Calc",
+                "Native Species Mapping",
+                "Habitat Restoration",
+                "GIS Mapping"
+            ],
+            "suggested_intent": "Calculating the 10% Biodiversity Net Gain for a new residential development.",
+            "success_criteria": "Calculation follows the statutory biodiversity metric and suggests viable on-site offsets."
+        },
+        {
+            "role": "Urban Forestry Consultant",
+            "sector": "Ecological Landscaping",
+            "skills": [
+                "Tree Canopy Analysis",
+                "i-Tree Modeling",
+                "Pest/Disease Management",
+                "Urban Planning"
+            ],
+            "suggested_intent": "Designing a municipal street tree plan to mitigate the Urban Heat Island effect.",
+            "success_criteria": "Plan increases canopy cover by 20% in high-heat vulnerability zones."
+        }
+    ]
+}

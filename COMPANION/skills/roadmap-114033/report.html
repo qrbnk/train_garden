@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+        <style>
+            body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; }
+            .report-card { background: white; border-radius: 1.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); padding: 2.5rem; }
+            table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin: 1.5rem 0; }
+            th { background: #f8fafc; padding: 12px; text-align: left; font-size: 11px; text-transform: uppercase; color: #64748b; letter-spacing: 0.05em; }
+            td { padding: 12px; border-top: 1px solid #e2e8f0; font-size: 14px; color: #1e293b; }
+            .day-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 20px; border-radius: 1rem; margin-bottom: 12px; list-style: none; transition: all 0.2s; }
+            .tag { font-size: 10px; font-weight: 800; padding: 4px 8px; border-radius: 6px; text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+            @media print { .no-print { display: none !important; } body { background: white; padding: 0; } .report-card { border: none; box-shadow: none; } }
+        </style>
+    </head>
+    <body class="p-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-between items-start mb-6 no-print">
+                <div>
+                    <h1 class="text-3xl font-black text-[#091747] tracking-tight">Learning Roadmap</h1>
+                    <p class="text-slate-400 text-sm font-bold uppercase tracking-widest mt-1">Skill: Create A 5-Day</p>
+                </div>
+                <button onclick="window.print()" class="flex items-center gap-2 bg-[#091747] text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 transition-all">
+                    <span class="material-symbols-outlined text-sm">download</span> Export PDF
+                </button>
+            </div>
+
+            <div class="report-card">
+                <div class="prose prose-slate max-w-none prose-headings:text-[#091747]">
+                    <p>To create a concise yet comprehensive 5-day learning roadmap, I've adjusted the plan to a 5-day format while maintaining the structure you requested with LEARN, READ, and APPLY sections for each day.</p>
+<p><strong>Day 1 - Introduction to the Topic</strong></p>
+<p><em>LEARN:</em>
+- Understand the basics of the topic: What is it all about? Key concepts and terminologies.
+- Familiarize yourself with essential resources that will support your learning process.</p>
+<p><em>READ:</em>
+- "Introduction to [Topic]" - Research online or find a beginner's guide book/article.</p>
+<p><em>APPLY:</em>
+- Jot down notes, create a mind map, or summarize the main points in your own words to solidify your understanding of the topic.</p>
+<p><strong>Day 2 - Deep Dive into Core Concepts</strong></p>
+<p><em>LEARN:</em>
+- Delve deeper into core concepts and principles related to the topic.
+- Identify connections between different aspects of the subject matter.</p>
+<p><em>READ:</em>
+- Read relevant articles, book chapters, or watch online videos that focus on these core concepts.</p>
+<p><em>APPLY:</em>
+- Attempt some practice exercises or problems related to the core concepts you've learned to reinforce your understanding.</p>
+<p><strong>Day 3 - Explore Real-world Applications</strong></p>
+<p><em>LEARN:</em>
+- Discover how the topic is applied in real-world scenarios and industries.
+- Identify potential projects or case studies that could benefit from applying the learned concepts.</p>
+<p><em>READ:</em>
+- Read case studies, industry reports, or articles showcasing practical applications of the topic.</p>
+<p><em>APPLY:</em>
+- Work on a small project related to one of the real-world scenarios you've read about or brainstorm possible project ideas for further exploration.</p>
+<p><strong>Day 4 - Advanced Topics and Techniques</strong></p>
+<p><em>LEARN:</em>
+- Learn about advanced topics and techniques that can enhance your proficiency in the subject matter.
+- Identify which aspects of the topic are most relevant to your goals or interests.</p>
+<p><em>READ:</em>
+- Read articles, books, or watch videos that delve into these advanced topics.</p>
+<p><em>APPLY:</em>
+- Apply what you've learned by working on more complex problems or projects related to the advanced topics.</p>
+<p><strong>Day 5 - Reflect and Review</strong></p>
+<p><em>LEARN:</em>
+- Reflect on your progress throughout the learning journey so far.
+- Identify areas that need further exploration or improvement.</p>
+<p><em>READ:</em>
+- Review key resources, notes, or summaries of the material you've covered.</p>
+<p><em>APPLY:</em>
+- Work on a final project or presentation showcasing your understanding of the topic and its applications. This can also serve as a foundation for future learning in the same area.</p>
+                </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-emerald-50 border border-emerald-100 rounded-2xl flex items-center justify-between no-print">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined">explore</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-[#00714d]">Interactive Resources</h4>
+                        <p class="text-emerald-700 text-sm opacity-80">We found relevant volunteering and projects near you.</p>
+                    </div>
+                </div>
+                <a href="https://www.google.com/search?q=volunteering+london+career" target="_blank" class="bg-[#10b981] text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider">View Resources</a>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('li').forEach(li => {
+                let text = li.innerText.toUpperCase();
+                if(text.includes('LEARN') || text.includes('READ') || text.includes('APPLY')) {
+                    li.classList.add('day-card');
+                    let html = li.innerHTML;
+                    html = html.replace(/LEARN:/gi, '<span class="tag bg-blue-100 text-blue-700">Course</span><br>');
+                    html = html.replace(/READ:/gi, '<span class="tag bg-amber-100 text-amber-700">Reading</span><br>');
+                    html = html.replace(/APPLY:/gi, '<span class="tag bg-emerald-100 text-emerald-700">Action</span><br>');
+                    li.innerHTML = html;
+                }
+            });
+        </script>
+    </body>
+    </html>
+    

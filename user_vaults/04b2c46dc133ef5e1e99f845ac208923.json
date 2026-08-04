@@ -1,0 +1,224 @@
+{
+  "user_id": "04b2c46dc133ef5e1e99f845ac208923",
+  "email": "33admin@test.com",
+  "name": "Steve",
+  "first_seen": "2026-07-22T09:51:12.255629",
+  "last_seen": "2026-07-22T10:04:45.613812",
+  "sector": "",
+  "experience_years": "",
+  "target_role": "",
+  "goals": [
+    "renewable energy",
+    "solar",
+    "EV"
+  ],
+  "skills": [],
+  "cv_summary": "",
+  "messages": [
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "user",
+      "content": "I'm completely new to sustainability",
+      "ts": "2026-07-22T09:52:05.826721"
+    },
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "assistant",
+      "content": "[AI error: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [Errno 61] Connection refused\"))]",
+      "ts": "2026-07-22T09:52:05.872269",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Tell me more",
+        "Help me plan next steps",
+        "Find me relevant jobs"
+      ]
+    },
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "user",
+      "content": "I'm completely new to sustainability",
+      "ts": "2026-07-22T09:52:29.675537"
+    },
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "assistant",
+      "content": "I'm so glad you reached out about sustainability! I have to say, it's exciting to meet someone who's just starting their journey. Can you tell me a bit more about what brings you to this field? What kind of work were you doing before considering sustainability (or is this a completely new path for you)?",
+      "ts": "2026-07-22T09:52:53.831195",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "What's sparked your interest in sustainability?",
+        "Let's start with the basics.",
+        "Where do you want to begin?"
+      ]
+    },
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "user",
+      "content": "yes totally new",
+      "ts": "2026-07-22T09:53:28.170831"
+    },
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "assistant",
+      "content": "I'm so glad you're starting your sustainability journey, Steve! It's amazing that you're taking this bold step. I've saved that you're completely new to sustainability - don't worry, we'll take it one step at a time!\n\nLet's get started with some local resources in Milton Keynes (MK16 8JJ) that can help you get familiar with the field. Have you checked out the [Milton Keynes Environmental Action Group](https://www.mkenvironment.org.uk/) website? They have a wealth of information on sustainability initiatives and events happening in your area.\n\nNext, I'd love to know: What aspect of sustainability interests you the most (e.g., renewable energy, sustainable transportation, waste management)?",
+      "ts": "2026-07-22T09:53:48.407295",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "What do you mean?",
+        "Tell me more about",
+        "That's fascinating, how"
+      ]
+    },
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "user",
+      "content": "I'm interested in renewable energy , solar, and ev",
+      "ts": "2026-07-22T10:00:23.524735"
+    },
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "assistant",
+      "content": "I can see you're excited about renewable energy, solar, and EVs! I love it when people get enthusiastic about making a difference. Since you're new to sustainability, let's break down these topics into manageable chunks. **Renewable Energy** is a broad field with many opportunities - are you leaning more towards the technical side (e.g., solar panel installation) or the policy/consulting side?\n\nTo get started, I've got some local resources for you in Milton Keynes:\n* The University of Bedfordshire's [Environmental Sustainability Research Centre](https://www.beds.ac.uk/research/research-centres/environmental-sustainability-research-centre/) has a wealth of knowledge on renewable energy and sustainability.\n* You can also check out the **MK Energy Hub** which promotes sustainable living in Milton Keynes. They often have workshops and events that might interest you.\n\nWhat do you think about reaching out to these organizations for more information?",
+      "ts": "2026-07-22T10:00:58.523340",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Explore solar panels for your home",
+        "Learn about EV incentives nearby",
+        "Discuss renewable energy solutions together"
+      ]
+    },
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "user",
+      "content": "Find me jobs matching my profile and goals",
+      "ts": "2026-07-22T10:03:07.876310"
+    },
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "assistant",
+      "content": "Hi Steve! Before I go find jobs, courses, or resources for you, I want to make sure I get you the *right* ones — not generic ones. Could you tell me: **what green/sustainability role are you aiming for**, or what you're hoping to move into? If you're not sure yet, I can help you figure that out first.",
+      "ts": "2026-07-22T10:03:14.828006",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Upload my CV so you can suggest a target role",
+        "Help me explore which sustainability roles fit me",
+        "My target role is …"
+      ]
+    },
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "user",
+      "content": "something in ev or solar",
+      "ts": "2026-07-22T10:03:44.113969"
+    },
+    {
+      "uid": "04b2c46dc133ef5e1e99f845ac208923",
+      "role": "assistant",
+      "content": "**Woohoo, Steve! You're taking huge strides in your sustainability journey!** I just love how enthusiastic you are about renewable energy, solar, and EVs! Milton Keynes is an amazing hub for innovation, and I'm excited to help you tap into local resources.\n\nTo get started with job opportunities matching your profile, I've got a few leads:\n\n* Check out the **Milton Keynes Council's Careers Portal**, which features various sustainability roles, including some related to renewable energy and transportation: https://www.milton-keynes.gov.uk/careers\n* Look at the job listings on the **Sustainable Energy Association (SEA) website**, specifically their \"Jobs\" page, where you can find opportunities in the solar and EV sectors: https://www.sustainability.co.uk/about-us/jobs/\n* Don't forget to explore the local startups and businesses working on sustainability projects – I've saved that you're based in Milton Keynes, so let's search for companies in your area!\n\nWhat do you want to tackle next? Do you have a specific role or project in mind that you'd like me to help with?",
+      "ts": "2026-07-22T10:04:18.146929",
+      "job_cards": [],
+      "report_path": null,
+      "suggestions": [
+        "Let's look into EV charging!",
+        "EV and solar panel system",
+        "Solar powered electric vehicle reviews"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "id": "a1f9a706-6130-4a12-91db-238041b91a5c",
+      "name": "CV Gap Analysis",
+      "path": "/view-skill/analysis-1784710306/report",
+      "type": "cv_analysis",
+      "timestamp": "2026-07-22 09:51",
+      "pinned": false
+    }
+  ],
+  "tracked_jobs": [],
+  "documents": [
+    {
+      "id": "101f03c8-ce17-4429-b9b0-c659a58e7145",
+      "name": "null_cv.pdf",
+      "type": "cv",
+      "timestamp": "2026-07-22 09:51"
+    }
+  ],
+  "saved_items": [],
+  "folders": [],
+  "sticky_notes": [],
+  "community_posts": [],
+  "location": "MK16 8JJ",
+  "aspirations": [],
+  "hobbies": [],
+  "dream_job": "",
+  "values": [],
+  "salary_range": "",
+  "work_type": "",
+  "limitations": [],
+  "conversation_context": "",
+  "saved_resources": [],
+  "hobby_skill_map": [],
+  "skill_validations": {},
+  "profile_complete": false,
+  "onboarding_done": true,
+  "headline": "New to Sustainability",
+  "experience": [
+    {
+      "id": "6d604d70",
+      "title": "General Sustainability Enthusiast / Newbie",
+      "company": "",
+      "start_date": "",
+      "end_date": "",
+      "description": "in renewable energy, solar, and ev",
+      "source": "chat"
+    }
+  ],
+  "how_heard": "Other",
+  "onboarding_seen": true,
+  "journey": {
+    "xp": 0,
+    "level": 1,
+    "current_role": "",
+    "target_role": "",
+    "assessed": false,
+    "progress_pct": 0,
+    "skills_gaps": [],
+    "milestones": [],
+    "weekly_checkins": [],
+    "streak_days": 1,
+    "last_active_date": "2026-07-22",
+    "last_checkin_date": ""
+  },
+  "learning": {
+    "emotion_history": [
+      {
+        "emotion": "excited",
+        "ts": "2026-07-22T09:53:02.842286"
+      },
+      {
+        "emotion": "excited",
+        "ts": "2026-07-22T09:53:57.744671"
+      }
+    ],
+    "blockers": [
+      "completely new to sustainability"
+    ],
+    "preferred_tone": "warm",
+    "response_depth": "balanced",
+    "milestones_mentioned": [],
+    "total_exchanges": 2,
+    "encouragement_count": 2,
+    "key_insights": [
+      "User is starting a new journey in sustainability, with no prior experience",
+      "The user is eager and willing to start their sustainability journey, but lacks experience."
+    ],
+    "current_emotion": "excited"
+  },
+  "role_cta_shown": true
+}

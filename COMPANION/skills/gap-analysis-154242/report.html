@@ -1,0 +1,144 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Stitch AI | Career Gap Analysis</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+        <style>
+            body { font-family: 'Inter', sans-serif; background: #f8f9ff; padding: 20px; }
+            .skill-card { transition: all 0.3s ease; cursor: pointer; border: 1px solid #e2e8f0; background: white; padding: 20px; border-radius: 16px; margin-bottom: 12px; }
+            .skill-card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-color: #10b981; }
+            .gap-content { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e2e8f0; color: #64748b; font-size: 0.9rem; }
+            .hidden-table { display: none; }
+        </style>
+    </head>
+    <body class="max-w-4xl mx-auto">
+        <div class="flex justify-between items-center mb-8 bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+            <div>
+                <h1 class="text-2xl font-black text-[#091747]">Career Gap Analysis</h1>
+                <p class="text-slate-400 text-sm font-medium">User ID: 66fe74e6e5c1</p>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="window.print()" class="bg-slate-100 text-slate-600 px-4 py-2 rounded-xl font-bold text-xs hover:bg-slate-200">PDF EXPORT</button>
+                <button onclick="generateRoadmap()" class="bg-[#091747] text-white px-4 py-2 rounded-xl font-bold text-xs shadow-lg hover:opacity-90">BUILD ROADMAP</button>
+            </div>
+        </div>
+
+        <div id="raw-content" class="hidden-table">
+            <p>Here's a gap analysis for Daryna Vakulenko in the context of a Landscaping Manager role:</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>CV Skills</th>
+<th>Needed Skills/Experience</th>
+<th>Gap Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Industry Knowledge</td>
+<td>AI Strategy, Digital Transformation Specialist</td>
+<td>Horticulture, Landscape Design</td>
+<td>Daryna has experience in AI strategy and digital transformation across various industries but lacks specific knowledge and experience in the landscaping industry.</td>
+</tr>
+<tr>
+<td>Technical Skills</td>
+<td>Python, JavaScript, NLP</td>
+<td>Turf Management, Landscape Architecture Software (e.g., AutoCAD, SketchUp), Irrigation Systems</td>
+<td>Daryna's technical skills are more focused on AI development using Python and JavaScript rather than specific landscaping-related software or technology like irrigation systems or landscape architecture tools.</td>
+</tr>
+<tr>
+<td>Work Experience</td>
+<td>Co-Founder &amp; CTO, Consultant, Digital Health Lead</td>
+<td>Landscaping Management, Supervision of Landscape Teams, Project Estimating, Client Relations</td>
+<td>Daryna has experience in starting and managing tech companies but lacks direct landscaping management experience, including supervising landscape teams, project estimating, and client relations.</td>
+</tr>
+<tr>
+<td>Education (if relevant)</td>
+<td>Not provided</td>
+<td>Horticulture, Landscape Architecture</td>
+<td>No specific horticulture or landscape architecture education is listed on the CV, which could be a gap in the candidate's qualifications for a landscaping manager position.</td>
+</tr>
+</tbody>
+</table>
+<p>To better align Daryna's skills with the role of a Landscaping Manager, she may consider gaining knowledge and experience in the following areas:</p>
+<ol>
+<li>Horticulture and landscape design principles</li>
+<li>Landscape architecture software (e.g., AutoCAD, SketchUp)</li>
+<li>Irrigation systems and turf management</li>
+<li>Landscaping management best practices, including supervision of landscape teams, project estimating, and client relations.</li>
+</ol>
+        </div>
+
+        <div id="interactive-grid" class="space-y-4"></div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const rawContainer = document.getElementById('raw-content');
+                const table = rawContainer.querySelector('table');
+                
+                if (!table) {
+                    // If no table exists, just show the raw content
+                    rawContainer.classList.remove('hidden-table');
+                    return;
+                }
+
+                const rows = Array.from(table.querySelectorAll('tr')).slice(1);
+                const grid = document.getElementById('interactive-grid');
+                
+                rows.forEach(row => {
+                    const cols = row.querySelectorAll('td');
+                    if (cols.length >= 3) {
+                        const card = document.createElement('div');
+                        card.className = 'skill-card shadow-sm';
+                        card.innerHTML = `
+                            <div class="flex justify-between items-center">
+                                <span class="font-black text-slate-700 uppercase text-xs tracking-widest">${cols[0].innerText}</span>
+                                <span class="text-[#10b981] text-xs font-bold">VIEW ANALYSIS</span>
+                            </div>
+                            <div class="gap-content">
+                                <p class="mb-2 text-slate-800"><strong>Requirement:</strong> ${cols[1] ? cols[1].innerText : 'N/A'}</p>
+                                <p class="text-slate-500 italic">"${cols[2] ? cols[2].innerText : 'No specific gap details provided.'}"</p>
+                            </div>
+                        `;
+                        card.onclick = () => {
+                            const content = card.querySelector('.gap-content');
+                            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                        };
+                        grid.appendChild(card);
+                    }
+                });
+            });
+
+            async function generateRoadmap() {
+                const btn = event.target;
+                const originalText = btn.innerText;
+                btn.innerText = "PLANNING...";
+                btn.disabled = true;
+
+                try {
+                    const res = await fetch('/api/chat', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({ 
+                            text: "Build a roadmap based on my analysis.",
+                            user_id: "66fe74e6e5c1" 
+                        })
+                    });
+                    alert("Roadmap request sent! Check your dashboard.");
+                } catch (e) {
+                    alert("Error connecting to server.");
+                } finally {
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                }
+            }
+        </script>
+    </body>
+    </html>
+    

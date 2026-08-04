@@ -1,0 +1,142 @@
+
+    <html>
+    <head>
+        <style>
+            body { font-family: 'Inter', sans-serif; padding: 40px; color: #1e293b; background: #fff; line-height: 1.7; }
+            h1 { color: #091747; font-size: 24px; margin-bottom: 25px; }
+            .day-card { 
+                background: #f8fafc; border: 1px solid #e2e8f0; padding: 25px; 
+                border-radius: 20px; margin-bottom: 20px; list-style: none;
+                transition: transform 0.2s;
+            }
+            .day-card:hover { transform: translateY(-3px); border-color: #091747; }
+            .tag { 
+                font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 6px; 
+                text-transform: uppercase; margin-right: 10px; display: inline-block;
+                margin-bottom: 10px;
+            }
+            .tag-learn { background: #dbeafe; color: #1e40af; }
+            .tag-read { background: #fef3c7; color: #92400e; }
+            .tag-apply { background: #dcfce7; color: #166534; }
+        </style>
+    </head>
+    <body>
+        <h1>🚀 Career Accelerator: Create A 5-Day   Esg</h1>
+        <div id="roadmap-container"><p><strong>Day 1: Introduction to ESG</strong></p>
+<ol>
+<li>
+<p>LEARN:</p>
+<ul>
+<li><a href="https://www.coursera.org/learn/introduction-to-sustainability">Introduction to Sustainability</a> - Coursera (Free Course by University of Illinois)</li>
+</ul>
+</li>
+<li>
+<p>READ:</p>
+<ul>
+<li><a href="https://www.investopedia.com/terms/e/esg.asp">What is ESG Investing?</a> - Investopedia</li>
+</ul>
+</li>
+<li>
+<p>APPLY:</p>
+<ul>
+<li>Research and compare ESG ratings of top companies in your industry. Analyze their performance and identify potential areas for improvement.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Day 2: Understanding ESG Performance Indicators</strong></p>
+<ol>
+<li>
+<p>LEARN:</p>
+<ul>
+<li><a href="https://www.edx.org/course/esg-fundamentals">ESG Fundamentals</a> - edX (Free Course by University of Pennsylvania)</li>
+</ul>
+</li>
+<li>
+<p>READ:</p>
+<ul>
+<li><a href="https://sustainability.global/reporting/">Global Reporting Initiative (GRI) Sustainability Reporting Standards</a></li>
+</ul>
+</li>
+<li>
+<p>APPLY:</p>
+<ul>
+<li>Develop a list of key ESG performance indicators for your own organization or a hypothetical one. Identify data sources and methods for measuring these indicators.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Day 3: Integrating ESG into Strategy &amp; Decision Making</strong></p>
+<ol>
+<li>
+<p>LEARN:</p>
+<ul>
+<li><a href="https://mooncamp.vercel.app/blog/esg-strategy">How to Implement an ESG Strategy with OKRs (2026 Guide)</a></li>
+</ul>
+</li>
+<li>
+<p>READ:</p>
+<ul>
+<li><a href="https://www.bsr.org/en/resources/publications/integrating-esg-into-corporate-strategy">Integrating ESG into Corporate Strategy</a> - BSR (Business for Social Responsibility)</li>
+</ul>
+</li>
+<li>
+<p>APPLY:</p>
+<ul>
+<li>Create a mock ESG-aligned OKR framework for your organization or a hypothetical one. Present this to a small group and seek feedback.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Day 4: ESG Reporting &amp; Communications</strong></p>
+<ol>
+<li>
+<p>LEARN:</p>
+<ul>
+<li><a href="https://www.coursera.org/learn/corporate-sustainability-reporting">Corporate Sustainability Reporting</a> - Coursera (Free Course by University of Cambridge)</li>
+</ul>
+</li>
+<li>
+<p>READ:</p>
+<ul>
+<li><a href="https://www.cdp.net/en/research">CDP Global Reports</a> - CDP (Carbon Disclosure Project)</li>
+</ul>
+</li>
+<li>
+<p>APPLY:</p>
+<ul>
+<li>Draft a sample ESG report for your organization or a hypothetical one, focusing on key findings and recommendations.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Day 5: Stakeholder Engagement &amp; Collaboration</strong></p>
+<ol>
+<li>
+<p>LEARN:</p>
+<ul>
+<li><a href="https://www.udemy.com/course/stakeholder-engagement-strategies">Stakeholder Engagement Strategies</a> - Udemy (Free Course)</li>
+</ul>
+</li>
+<li>
+<p>READ:</p>
+<ul>
+<li><a href="https://www.mckinsey.com/business-functions/sustainability/our-insights/engaging-stakeholders-on-esg-issues">Engaging Stakeholders on ESG Issues</a> - McKinsey &amp; Company</li>
+</ul>
+</li>
+<li>
+<p>APPLY:</p>
+<ul>
+<li>Identify key stakeholders relevant to your organization's ESG performance. Develop a plan for engaging with these stakeholders, including proposed communication methods and expected outcomes. Consider volunteering time or resources to collaborate on ESG initiatives with local organizations or NGOs.</li>
+</ul>
+</li>
+</ol></div>
+        <script>
+            document.querySelectorAll('li').forEach(item => {
+                item.classList.add('day-card');
+                let content = item.innerHTML;
+                if(content.includes('LEARN')) content = '<span class="tag tag-learn">Course</span>' + content;
+                if(content.includes('READ')) content = '<span class="tag tag-read">Insight</span>' + content;
+                if(content.includes('APPLY')) content = '<span class="tag tag-apply">Action</span>' + content;
+                item.innerHTML = content;
+            });
+        </script>
+    </body>
+    </html>
+    

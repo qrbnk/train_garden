@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Train Garden - Job Board</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#6f7973",
+                      "primary": "#00432f",
+                      "on-surface-variant": "#3f4943",
+                      "on-tertiary-container": "#4bdca0",
+                      "inverse-on-surface": "#ebf1ff",
+                      "surface-container-low": "#f0f3ff",
+                      "error": "#ba1a1a",
+                      "primary-fixed-dim": "#8ad6b3",
+                      "border-subtle": "#e5e7eb",
+                      "secondary-container": "#d9dff5",
+                      "surface-gray": "#f9fafb",
+                      "success-dark": "#166534",
+                      "on-tertiary": "#ffffff",
+                      "warning-light": "#fef3c7",
+                      "inverse-surface": "#2a313d",
+                      "primary-container": "#005d42",
+                      "surface-tint": "#1a6b4f",
+                      "on-surface": "#151c27",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#dce2f3",
+                      "on-secondary-container": "#5c6274",
+                      "surface-container-high": "#e2e8f8",
+                      "background": "#f9f9ff",
+                      "secondary-fixed": "#dce2f7",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "surface-container-highest": "#dce2f3",
+                      "surface-container": "#e7eefe",
+                      "surface-bright": "#f9f9ff",
+                      "on-error-container": "#93000a",
+                      "success-light": "#dcfce7",
+                      "on-background": "#151c27",
+                      "warning-amber": "#d97706",
+                      "info-light": "#dbeafe",
+                      "on-tertiary-fixed": "#002113",
+                      "tertiary-fixed": "#6ffbbe",
+                      "on-primary-fixed": "#002115",
+                      "inverse-primary": "#8ad6b3",
+                      "secondary": "#575e70",
+                      "tertiary-container": "#005d3f",
+                      "surface-container-lowest": "#ffffff",
+                      "info-blue": "#3b82f6",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#141b2b",
+                      "on-primary-fixed-variant": "#005139",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "tertiary": "#00432c",
+                      "on-primary-container": "#88d3b1",
+                      "surface": "#f9f9ff",
+                      "primary-fixed": "#a6f2cf",
+                      "surface-dim": "#d3daea",
+                      "on-secondary-fixed-variant": "#404758",
+                      "secondary-fixed-dim": "#c0c6db",
+                      "outline-variant": "#bec9c1",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gap-lg": "16px",
+                      "sidebar-default": "256px",
+                      "padding-card": "16px",
+                      "gap-xs": "8px",
+                      "vault-panel-default": "320px",
+                      "padding-chat-h": "24px",
+                      "base": "4px",
+                      "gap-md": "12px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "section-header": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "chat-bubble": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "section-header": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "22px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "11px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "chat-bubble": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.625",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body { background-color: #f9fafb; }
+        /* Ambient Shadows */
+        .card-shadow { box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .card-shadow:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-1px); transition: all 0.2s ease; }
+        .sticky-note-shadow { box-shadow: 0 4px 6px rgba(0,0,0,0.05), 0 10px 15px rgba(0,0,0,0.1); }
+        /* Scrollbar styling for vault */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #dce2f3; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #bec9c1; }
+    </style>
+</head>
+<body class="text-on-surface font-body-md antialiased overflow-hidden flex h-screen">
+<!-- Top App Bar (Mobile & Tablet) - Hidden on md+ -->
+<header class="md:hidden flex justify-between items-center w-full px-4 h-16 bg-surface-container-lowest border-b border-border-subtle fixed top-0 z-50">
+<div class="text-headline-md font-headline-md font-bold text-primary">Train Garden</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant">account_circle</span>
+</div>
+</header>
+<!-- SideNavBar (Fixed, Left) -->
+<nav class="hidden md:flex flex-col h-screen fixed left-0 top-0 py-6 bg-surface-container-lowest border-r border-border-subtle w-sidebar-default z-40">
+<!-- Brand Header -->
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div>
+<h1 class="text-headline-md font-headline-md font-bold text-primary">Train Garden</h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Career Growth</p>
+</div>
+</div>
+<!-- Main Navigation -->
+<ul class="flex-1 px-4 space-y-1">
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined">psychology</span>
+                    Garden AI
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-primary font-bold border-r-4 border-primary bg-surface-container-low text-label-md font-label-md scale-98 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">work</span>
+                    Job Board
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined">moving</span>
+                    My Path
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+                    Vault
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined">groups</span>
+                    Community
+                </a>
+</li>
+</ul>
+<!-- Primary CTA & Footer Nav -->
+<div class="px-4 mt-auto space-y-4">
+<button class="w-full bg-primary text-on-primary py-2 px-4 rounded-lg text-label-md font-label-md hover:bg-primary-container transition-colors shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+                Analyze CV
+            </button>
+<ul class="space-y-1 border-t border-border-subtle pt-4">
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined text-sm">settings</span>
+                        Settings
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 text-label-md font-label-md" href="#">
+<span class="material-symbols-outlined text-sm">help</span>
+                        Support
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Area (Fluid) -->
+<main class="flex-1 flex flex-col md:ml-sidebar-default h-screen overflow-hidden bg-surface-gray pt-16 md:pt-0">
+<!-- Desktop Top App Bar -->
+<header class="hidden md:flex justify-between items-center w-full px-padding-chat-h h-16 bg-surface-container-lowest border-b border-border-subtle sticky top-0 z-30">
+<div class="flex items-center gap-8">
+<!-- Breadcrumbs / Context -->
+<div class="text-label-md font-label-md text-on-surface-variant flex items-center gap-2">
+<span>Job Board</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-on-surface font-semibold">Sustainability Roles</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-2 text-on-surface-variant text-sm">search</span>
+<input class="w-full pl-9 pr-4 py-1.5 bg-surface-container-low border-border-subtle rounded-full text-body-sm focus:ring-1 focus:ring-primary focus:border-primary transition-all" placeholder="Search roles..." type="text"/>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="bg-gray-900 text-white px-4 py-1.5 rounded-md text-label-md font-label-md hover:bg-gray-800 transition-colors">
+                    Upgrade
+                </button>
+<img alt="Profile" class="w-8 h-8 rounded-full border border-border-subtle object-cover cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-z0aZrjWxWdLeGaXco1R06JEn0N8d0kCXaAZfbNmxXwZhmzOCn561laQd0hTuUKSOzTGW7MjOHE0C2IQpIN3NNJzPpA7QZTGUr5ZaEUiSikxNFvhq4Q2cK-Ne7HguUJdf05nCU59-mab0Q5RgrLCAxPDMCb_4xKVgQ39VCqiOmfOlwJ4R0N6j2lFqQMXJ72KYtsnl-Hnl4jAlr8PKpOSEYkPS3eTOPSWf7H7DHQTyQVwgo7TYikOFjRtkkYNps1G6kRoCeoh3itq3"/>
+</div>
+</header>
+<!-- Scrollable Action Pane -->
+<div class="flex-1 overflow-y-auto p-4 md:p-padding-chat-h flex flex-col gap-6 lg:flex-row">
+<!-- Left Side: Search & Results -->
+<div class="flex-1 flex flex-col gap-6">
+<!-- Search & Filter Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-border-subtle card-shadow">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-4">Find Your Next Impact Role</h2>
+<div class="flex flex-col md:flex-row gap-4 mb-4">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 border border-border-subtle rounded-lg text-body-md focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Job title, keywords, or company" type="text"/>
+</div>
+<div class="md:w-1/3 relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant">location_on</span>
+<input class="w-full pl-10 pr-4 py-2.5 border border-border-subtle rounded-lg text-body-md focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Location or Remote" type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg text-label-md font-label-md hover:bg-primary-container transition-colors shadow-sm">
+                            Search
+                        </button>
+</div>
+<!-- Quick Filters -->
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 bg-surface-container-high border border-border-subtle rounded-full text-body-sm flex items-center gap-1 hover:bg-surface-variant transition-colors">
+                            Sector <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container-high border border-border-subtle rounded-full text-body-sm flex items-center gap-1 hover:bg-surface-variant transition-colors">
+                            Salary <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container-high border border-border-subtle rounded-full text-body-sm flex items-center gap-1 hover:bg-surface-variant transition-colors">
+                            Experience <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<span class="px-3 py-1.5 bg-success-light text-success-dark rounded-full text-label-sm flex items-center gap-1 border border-success-dark/20 cursor-pointer">
+                            Remote Only <span class="material-symbols-outlined text-[14px]">close</span>
+</span>
+</div>
+</div>
+<!-- Results Grid -->
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-section-header font-section-header text-on-surface">240 Open Roles</h3>
+<div class="flex items-center gap-2 text-body-sm text-on-surface-variant">
+<span>Sort by:</span>
+<select class="border-none bg-transparent py-0 pl-1 pr-6 text-on-surface font-medium focus:ring-0 cursor-pointer">
+<option>Most Relevant</option>
+<option>Newest</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-border-subtle card-shadow flex flex-col gap-4 relative group">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-green-50 border border-green-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-700">eco</span>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-on-surface font-bold leading-tight">ESG Data Analyst</h4>
+<p class="text-body-sm text-on-surface-variant mt-0.5">TerraMetrics Inc.</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded text-[11px] font-medium flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Remote, US</span>
+<span class="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded text-[11px] font-medium flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">payments</span> $85k - $110k</span>
+<span class="px-2 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded text-[11px] font-medium">Mid-Level</span>
+</div>
+<p class="text-body-sm text-on-surface-variant line-clamp-2 mt-2">
+                            Looking for a data-driven professional to analyze supply chain sustainability metrics and help shape our clients' carbon reduction strategies.
+                        </p>
+<div class="mt-auto pt-4 border-t border-border-subtle flex justify-between items-center">
+<span class="text-label-sm text-on-surface-variant">Posted 2d ago</span>
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-1.5 rounded-md text-label-md font-label-md transition-colors border border-gray-200">
+                                Track
+                            </button>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-border-subtle card-shadow flex flex-col gap-4 relative group">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-700">water_drop</span>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-on-surface font-bold leading-tight">Sustainability Manager</h4>
+<p class="text-body-sm text-on-surface-variant mt-0.5">Oceanic Solutions</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded text-[11px] font-medium flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Seattle, WA (Hybrid)</span>
+<span class="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded text-[11px] font-medium flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">payments</span> $120k - $145k</span>
+<span class="px-2 py-1 bg-purple-50 text-purple-700 border border-purple-100 rounded text-[11px] font-medium">Senior</span>
+</div>
+<p class="text-body-sm text-on-surface-variant line-clamp-2 mt-2">
+                            Lead our internal sustainability initiatives, focusing on water conservation and circular economy practices across all our manufacturing facilities.
+                        </p>
+<div class="mt-auto pt-4 border-t border-border-subtle flex justify-between items-center">
+<span class="text-label-sm text-on-surface-variant">Posted 5h ago</span>
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-1.5 rounded-md text-label-md font-label-md transition-colors border border-gray-200">
+                                Track
+                            </button>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-border-subtle card-shadow flex flex-col gap-4 relative group">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-orange-50 border border-orange-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-700">solar_power</span>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-on-surface font-bold leading-tight">Renewable Energy Consultant</h4>
+<p class="text-body-sm text-on-surface-variant mt-0.5">BrightFuture Partners</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded text-[11px] font-medium flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Austin, TX</span>
+<span class="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded text-[11px] font-medium flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">payments</span> $90k - $125k</span>
+<span class="px-2 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded text-[11px] font-medium">Mid-Level</span>
+</div>
+<p class="text-body-sm text-on-surface-variant line-clamp-2 mt-2">
+                            Advise commercial clients on transitioning to solar and wind power arrays. Require deep knowledge of grid integration and incentives.
+                        </p>
+<div class="mt-auto pt-4 border-t border-border-subtle flex justify-between items-center">
+<span class="text-label-sm text-on-surface-variant">Posted 1d ago</span>
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-1.5 rounded-md text-label-md font-label-md transition-colors border border-gray-200">
+                                Track
+                            </button>
+</div>
+</div>
+<!-- Job Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-border-subtle card-shadow flex flex-col gap-4 relative group">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-teal-50 border border-teal-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-teal-700">forest</span>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-on-surface font-bold leading-tight">Carbon Project Developer</h4>
+<p class="text-body-sm text-on-surface-variant mt-0.5">EarthTrust</p>
+</div>
+</div>
+<button class="text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded text-[11px] font-medium flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Remote, Global</span>
+<span class="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded text-[11px] font-medium flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">payments</span> $100k - $130k</span>
+<span class="px-2 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded text-[11px] font-medium">Mid-Level</span>
+</div>
+<p class="text-body-sm text-on-surface-variant line-clamp-2 mt-2">
+                            Develop and manage nature-based carbon offset projects in South America. Fluent Spanish required.
+                        </p>
+<div class="mt-auto pt-4 border-t border-border-subtle flex justify-between items-center">
+<span class="text-label-sm text-primary font-bold">Matched Profile</span>
+<button class="bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-1.5 rounded-md text-label-md font-label-md transition-colors border border-gray-200">
+                                Track
+                            </button>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="flex justify-center mt-4 mb-8">
+<button class="px-6 py-2 border border-border-subtle rounded-lg text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-lowest hover:text-on-surface transition-colors bg-white">
+                        Load More Roles
+                    </button>
+</div>
+</div>
+<!-- Right Side: Intelligence/Vault Pane (Hidden on mobile unless toggled) -->
+<aside class="hidden lg:flex flex-col w-vault-panel-default bg-surface-container-lowest border-l border-border-subtle h-full -mt-4 -mb-4 -mr-4 py-4 px-4 overflow-y-auto z-20">
+<!-- Match Score Sticky Note -->
+<div class="bg-warning-light border-t-4 border-warning-amber p-4 rounded-b-lg mb-6 sticky-note-shadow relative">
+<span class="material-symbols-outlined absolute top-2 right-2 text-warning-amber opacity-50">push_pin</span>
+<h3 class="text-label-md font-label-md text-gray-800 font-bold mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+                         Profile Insight
+                     </h3>
+<p class="text-body-sm text-gray-700">Your profile is a strong match for <strong class="text-gray-900">ESG Data Analyst</strong> roles. Consider adding specific Python libraries (Pandas, NumPy) to your skills section to increase visibility by 24%.</p>
+<button class="mt-3 text-label-sm text-warning-amber font-bold hover:underline">Update Profile →</button>
+</div>
+<div class="mb-8">
+<h3 class="text-section-header font-section-header text-on-surface mb-3">Recommended for You</h3>
+<div class="space-y-3">
+<!-- Rec Item -->
+<div class="p-3 border border-border-subtle rounded-lg bg-surface-gray hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-label-md font-label-md text-on-surface group-hover:text-primary transition-colors">Junior ESG Consultant</h4>
+<p class="text-body-sm text-on-surface-variant">GreenStep Advisory • Remote</p>
+</div>
+<span class="bg-success-light text-success-dark text-[10px] px-1.5 py-0.5 rounded font-bold">92% Match</span>
+</div>
+</div>
+<!-- Rec Item -->
+<div class="p-3 border border-border-subtle rounded-lg bg-surface-gray hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-label-md font-label-md text-on-surface group-hover:text-primary transition-colors">Sustainability Analyst</h4>
+<p class="text-body-sm text-on-surface-variant">EcoCorp • New York, NY</p>
+</div>
+<span class="bg-success-light text-success-dark text-[10px] px-1.5 py-0.5 rounded font-bold">88% Match</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-section-header font-section-header text-on-surface mb-3 flex items-center justify-between">
+                        Recent Searches
+                        <button class="text-[11px] text-on-surface-variant hover:text-primary font-normal">Clear</button>
+</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-surface-variant text-on-surface-variant rounded-md text-body-sm flex items-center gap-2 cursor-pointer hover:bg-surface-dim transition-colors">
+<span class="material-symbols-outlined text-[14px]">history</span>
+                            ESG Analyst Remote
+                        </span>
+<span class="px-3 py-1.5 bg-surface-variant text-on-surface-variant rounded-md text-body-sm flex items-center gap-2 cursor-pointer hover:bg-surface-dim transition-colors">
+<span class="material-symbols-outlined text-[14px]">history</span>
+                            Renewable Energy
+                        </span>
+<span class="px-3 py-1.5 bg-surface-variant text-on-surface-variant rounded-md text-body-sm flex items-center gap-2 cursor-pointer hover:bg-surface-dim transition-colors">
+<span class="material-symbols-outlined text-[14px]">history</span>
+                            Climate Tech
+                        </span>
+</div>
+</div>
+<!-- Vault integration teaser -->
+<div class="mt-auto bg-surface-container-high rounded-lg p-4 border border-border-subtle">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">inventory_2</span>
+<h4 class="text-label-md font-label-md text-on-surface">Vault Documents</h4>
+</div>
+<p class="text-body-sm text-on-surface-variant mb-3">You have 2 targeted CVs saved. Attach them instantly when tracking a role.</p>
+<button class="w-full py-1.5 bg-white border border-border-subtle rounded text-label-sm font-label-sm text-on-surface hover:bg-gray-50 transition-colors">
+                        Manage Vault
+                    </button>
+</div>
+</aside>
+</div>
+</main>
+</body></html>

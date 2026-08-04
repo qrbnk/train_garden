@@ -1,0 +1,94 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<style>
+body{font-family:'Inter',sans-serif;padding:40px;color:#1e293b;background:#fff;line-height:1.7;max-width:860px;margin:0 auto}
+h1{color:#005d42;font-size:22px;border-bottom:2px solid #005d42;padding-bottom:10px;margin-bottom:25px}
+h2,h3{color:#005d42} a{color:#005d42}
+.day-card{background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #005d42;padding:20px;margin-bottom:16px;list-style:none}
+.tag{font-size:10px;font-weight:800;padding:3px 8px;text-transform:uppercase;margin-right:8px;display:inline-block;margin-bottom:8px}
+.tag-learn{background:#dbeafe;color:#1e40af}.tag-read{background:#fef3c7;color:#92400e}.tag-apply{background:#dcfce7;color:#166534}
+.btn{background:#005d42;color:white;border:none;padding:10px 20px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:.05em}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;border-bottom:2px solid #f1f5f9;padding-bottom:15px">
+<h1>CV Summary</h1><button class="btn" onclick="window.print()">Export PDF</button></div>
+<div><p><strong>SUMMARY</strong>
+Ethan Martinez's background is NOT already in sustainability; his actual work history is in solar energy technology installation and maintenance, but not directly related to sustainability roles.</p>
+<p><strong>TRANSFERABLE/MATCHED SKILLS</strong></p>
+<ul>
+<li>Troubleshooting techniques: demonstrated through "Troubleshooting Techniques" skill (level 8) and role descriptions</li>
+<li>Photovoltaic system troubleshooting: demonstrated through specific tasks in role descriptions</li>
+<li>System optimization: demonstrated through specific tasks in role descriptions</li>
+<li>Teamwork: listed as a strength, indicating ability to collaborate with others</li>
+<li>Tenacity: listed as a strength, indicating persistence and determination</li>
+</ul>
+<p><strong>SKILL GAPS</strong></p>
+<ul>
+<li>Sustainability policy knowledge</li>
+<li>ESG (Environmental, Social, Governance) framework understanding</li>
+<li>Climate change mitigation strategies</li>
+<li>Stakeholder engagement and community outreach</li>
+<li>Sustainable development principles</li>
+</ul>
+<p><strong>ALL SKILLS</strong></p>
+<p>"all_skills": [
+  "Troubleshooting Techniques",
+  "Photovoltaic System Troubleshooting",
+  "Solar Energy Principles",
+  "Electrical Codes Knowledge",
+  "System Optimization",
+  "Scuba Diving",
+  "E-sports",
+  "Reading Fiction",
+  "Puzzle Solving"
+]</p>
+<p><strong>TOP 3 NEXT STEPS</strong></p>
+<ol>
+<li>Develop a deeper understanding of sustainability policy and ESG frameworks</li>
+<li>Build relationships with professionals in the sustainability industry to gain insights into best practices</li>
+<li>Pursue further education or training in sustainability-related topics</li>
+</ol>
+<p><strong>SKILLS_JSON</strong>
+<code>{
+  "matched": ["Troubleshooting Techniques", "Photovoltaic System Troubleshooting", "System Optimization"],
+  "all_skills": [
+    "Troubleshooting Techniques",
+    "Photovoltaic System Troubleshooting",
+    "Solar Energy Principles",
+    "Electrical Codes Knowledge",
+    "System Optimization",
+    "Scuba Diving",
+    "E-sports",
+    "Reading Fiction",
+    "Puzzle Solving"
+  ],
+  "gaps": ["Sustainability policy knowledge", "ESG framework understanding", "Climate change mitigation strategies"],
+  "summary": "Not already in sustainability; actual work history is in solar energy technology installation and maintenance.",
+  "name": "Ethan Martinez",
+  "sector": "Solar Energy Technology Installation and Maintenance",
+  "experience_years": "10+ years",
+  "suggested_target_role": "Sustainability Consultant",
+  "location": "Los Angeles",
+  "goals": [],
+  "hobbies": ["Scuba Diving", "E-sports", "Reading Fiction", "Puzzle Solving"],
+  "headline": "Solar Technician",
+  "experience": [
+    {
+      "title": "Lead Solar Technician",
+      "company": "Maple Leaf Consulting",
+      "start_date": "Jan / 2018",
+      "end_date": "Present",
+      "description": "Installed and maintained photovoltaic systems, ensuring optimal performance and compliance with safety standards."
+    },
+    {
+      "title": "Solar Technician",
+      "company": "Cactus Creek Solutions",
+      "start_date": "Jan / 2015",
+      "end_date": "Jan / 2018",
+      "description": "Executed the assembly and installation of solar panels, ensuring adherence to specifications and safety standards."
+    }
+  ]
+}</code></p></div>
+<script>document.querySelectorAll('li').forEach(i=>{i.classList.add('day-card');let c=i.innerHTML;
+if(c.includes('LEARN'))c='<span class="tag tag-learn">Learn</span>'+c;
+if(c.includes('READ'))c='<span class="tag tag-read">Read</span>'+c;
+if(c.includes('APPLY'))c='<span class="tag tag-apply">Apply</span>'+c;
+i.innerHTML=c;});</script></body></html>

@@ -1,0 +1,112 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+        <style>
+            body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; }
+            .report-card { background: white; border-radius: 1.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); padding: 2.5rem; }
+            table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin: 1.5rem 0; }
+            th { background: #f8fafc; padding: 12px; text-align: left; font-size: 11px; text-transform: uppercase; color: #64748b; letter-spacing: 0.05em; }
+            td { padding: 12px; border-top: 1px solid #e2e8f0; font-size: 14px; color: #1e293b; }
+            .day-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 20px; border-radius: 1rem; margin-bottom: 12px; list-style: none; transition: all 0.2s; }
+            .tag { font-size: 10px; font-weight: 800; padding: 4px 8px; border-radius: 6px; text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+            @media print { .no-print { display: none !important; } body { background: white; padding: 0; } .report-card { border: none; box-shadow: none; } }
+        </style>
+    </head>
+    <body class="p-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-between items-start mb-6 no-print">
+                <div>
+                    <h1 class="text-3xl font-black text-[#091747] tracking-tight">Career Intelligence</h1>
+                    <p class="text-slate-400 text-sm font-bold uppercase tracking-widest mt-1">Target: landscaping manager</p>
+                </div>
+                <button onclick="window.print()" class="flex items-center gap-2 bg-[#091747] text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 transition-all">
+                    <span class="material-symbols-outlined text-sm">download</span> Export PDF
+                </button>
+            </div>
+
+            <div class="report-card">
+                <div class="prose prose-slate max-w-none prose-headings:text-[#091747]">
+                    <table>
+<thead>
+<tr>
+<th>Skills/Qualifications Needed for a Landscaping Manager Role</th>
+<th>Current Skills/Qualifications</th>
+<th>Gap Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Practical experience in landscaping and horticulture</td>
+<td>No direct experience in landscaping or horticulture</td>
+<td>Daryna Vakulenko has no practical experience in landscaping, which is a significant gap for the role of a Landscaping Manager. However, her background in AI strategy and digital transformation might still offer valuable skills in terms of project management, strategy development, and collaboration with stakeholders.</td>
+</tr>
+<tr>
+<td>Knowledge of plants, trees, shrubs, and grasses</td>
+<td>Limited knowledge</td>
+<td>Daryna Vakulenko has limited knowledge about various types of plants, trees, shrubs, and grasses, which is essential for a Landscaping Manager. This gap can be addressed through self-study or formal education in horticulture.</td>
+</tr>
+<tr>
+<td>Physical ability to perform manual labor</td>
+<td>Unknown</td>
+<td>It's unclear if Daryna Vakulenko has the physical ability to perform manual labor required in landscaping. This would need to be assessed during an interview or hands-on assessment.</td>
+</tr>
+<tr>
+<td>Understanding of soil types, drainage, and irrigation systems</td>
+<td>Limited understanding</td>
+<td>While Daryna Vakulenko may not have a deep understanding of soil types, drainage, and irrigation systems, her problem-solving skills from her AI work could be beneficial in finding solutions to these issues. This gap can be addressed through education or practical experience.</td>
+</tr>
+<tr>
+<td>Ability to lead a team</td>
+<td>Demonstrated leadership skills</td>
+<td>Daryna Vakulenko has demonstrated leadership skills as Co-Founder &amp; CTO at Train Garden and Digital Health Lead at Sirkka Health. However, leading a landscaping team may require specific knowledge and skills that she does not yet possess. This gap can be addressed through on-the-job training or mentorship.</td>
+</tr>
+<tr>
+<td>Knowledge of safety protocols in landscaping</td>
+<td>Unknown</td>
+<td>It's unclear if Daryna Vakulenko is familiar with safety protocols in landscaping. This would need to be assessed during an interview or training.</td>
+</tr>
+<tr>
+<td>Understanding of local regulations and permits for landscaping projects</td>
+<td>Limited understanding</td>
+<td>Daryna Vakulenko likely has limited understanding of local regulations and permits for landscaping projects, which is crucial for a Landscaping Manager. This gap can be addressed through education or practical experience.</td>
+</tr>
+</tbody>
+</table>
+<p>In summary, while Daryna Vakulenko's background in AI strategy and digital transformation offers valuable skills in terms of project management, strategy development, and collaboration with stakeholders, she lacks direct experience and specific knowledge in the field of landscaping and horticulture. To bridge this gap, she would need to gain practical experience, learn about various types of plants, trees, shrubs, and grasses, understand soil types, drainage, and irrigation systems, acquire knowledge of safety protocols in landscaping, and become familiar with local regulations and permits for landscaping projects.</p>
+                </div>
+            </div>
+            
+            <div class="mt-6 p-6 bg-emerald-50 border border-emerald-100 rounded-2xl flex items-center justify-between no-print">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined">explore</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-[#00714d]">Interactive Resources</h4>
+                        <p class="text-emerald-700 text-sm opacity-80">We found relevant volunteering and projects near you.</p>
+                    </div>
+                </div>
+                <a href="https://www.google.com/search?q=volunteering+london+career" target="_blank" class="bg-[#10b981] text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider">View Resources</a>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('li').forEach(li => {
+                let text = li.innerText.toUpperCase();
+                if(text.includes('LEARN') || text.includes('READ') || text.includes('APPLY')) {
+                    li.classList.add('day-card');
+                    let html = li.innerHTML;
+                    html = html.replace(/LEARN:/gi, '<span class="tag bg-blue-100 text-blue-700">Course</span><br>');
+                    html = html.replace(/READ:/gi, '<span class="tag bg-amber-100 text-amber-700">Reading</span><br>');
+                    html = html.replace(/APPLY:/gi, '<span class="tag bg-emerald-100 text-emerald-700">Action</span><br>');
+                    li.innerHTML = html;
+                }
+            });
+        </script>
+    </body>
+    </html>
+    

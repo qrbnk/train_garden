@@ -1,0 +1,73 @@
+{
+  "company_id": "f0f27f6b1ea626c4a3360045b57342fe",
+  "email": "kkk@company.com",
+  "account_type": "company",
+  "first_seen": "2026-07-25T13:19:02.246907",
+  "last_seen": "2026-07-25T13:24:47.293807",
+  "profile": {
+    "name": "green energy",
+    "website": "https://test.com",
+    "sector": "ev/solar",
+    "sub_sectors": [],
+    "company_size": "201-1000",
+    "stage": "Public",
+    "hq_location": "London",
+    "remote_policy": "Hybrid",
+    "description": "ev / solar installations",
+    "culture_tags": [],
+    "onboarding_done": true
+  },
+  "team_members": [],
+  "documents": [
+    {
+      "id": "46740791-5714-41a1-8a69-faddbbe3b22e",
+      "name": "renewables-electrical-installer-job-description-2.pdf",
+      "type": "jd",
+      "role_id": "76a8e7b5-0808-4818-b402-1cb902480ef6",
+      "timestamp": "2026-07-25 13:23"
+    }
+  ],
+  "roles": [
+    {
+      "id": "76a8e7b5-0808-4818-b402-1cb902480ef6",
+      "title": "renewables-electrical-installer-job-description-2.pdf",
+      "department": "solar installation",
+      "seniority": "junior",
+      "employment_type": "full-time",
+      "location": "london, e12",
+      "remote_policy": "no",
+      "salary_range": "£33000",
+      "sector_tags": [],
+      "required_skills": [],
+      "nice_to_have_skills": [],
+      "responsibilities": [],
+      "summary": "",
+      "raw_jd_text": "Renewables Electrician / Electrical Installer Job Description 17/04/2025 Page 1 of 3 \n \n \nJOB DESCRIPTION: Renewables Electrician / Electrical Installer \n \nLOCATION: Head Office, Units 1-6, Old Station, Higham, Bury St Edmunds \nREPORTING TO: Technical Manager \nRESPONSIBLE FOR: Electrical installations within domestic properties. \n \nThe Company \nAran Insulation, part of AgilityEco, is an award-winning, industry leading organisation striving to improve \nenergy efficiency of homes throughout the UK. Passionate about improving quality of life and reducing for \ncustomers the cost of living, the company’s goal is to reduce carbon emissions of UK households. A dynamic \ncompany going through a growth and development period. Aran Insulation is committed to developing its \nstaff through training and progression, giving them the tools and opportunities to excel. \n \nJob Role \nThe role of the Renewables Electrician / Electrical Installer will be responsible for undertaking installations of \nSolar PV, Mechanical ventilation and Electric Storage heaters. Together with our team assisting in all \npaperwork being completed and lodged ensuring full compliance to MCS and Building Regulations.  \nYour skills and qualifications also will also initially be required to survey, design and install your own jobs.  \n \nReporting into the Technical Manager you will be responsible for delivering installation projects on time and \nto budget. A keen eye for detail and ability to handle multiple projects and customers is required. A positive, \nproactive, professional and process driven attitude are key to you succeeding in this role \n \nKey Responsibilities \n• Install, test, and commission photovoltaic (PV) solar panel systems to industry standards. \n• Assist with the layout, mounting, and wiring of solar PV systems on rooftops and ground-mounted \nstructures.  \n• Design of heating systems and Solar PV systems to customer parameters  \n• Carry out electrical modifications including the installation, relocation, or amendment of plug sockets, \nswitches, and lighting. \n• Ensure compliance with MCS regulations and complete the registration of installations \n• Install and commission mechanical ventilation systems, electrical storage heaters as required. \n• Perform electrical safety checks and ensure full compliance with BS7671 Wiring Regulations. \n• Troubleshoot and diagnose issues in existing electrical systems, including solar systems. \n• Work closely with office staff and installers to ensure smooth workflow and timely project completion. \n• Maintain accurate records of installations, maintenance, and repairs. \n• Adhere strictly to health and safety regulations and risk assessments on-site. \n• Stay up to date with latest industry practices and technologies in renewable energy and general \nelectrical work. \n \n \nRenewables Electrician / Electrical Installer Job Description 17/04/2025 Page 2 of 3 \nPerson Specification \nCriteria Essential Desirable \nExperience / Knowledge \nKnowledge of Installing Solar PV and MCS \nregulations \n \nFamiliar with MEV, ESH, ASHP \n \nConfident in testing, fault-finding, and \ncommissioning electrical systems. \n \nUnderstanding of Health and Safety \nrequirements on site \n \nExperience installing within domestic customer \nhomes \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nSkills \nExcellent communication skills \n \nProfessionalism \n \nTeam player \n \nSelf-motivated \n \n \n \n \n \n \n \n \n \nQualifications \nNICEIC qualified Electrician \n \nBS 7671: 2018 Requirements for Electrical \nInstallations (18th Edition) qualification \n \nBPEC Solar PV systems  \n \n \n \n \n \n \n \n \n \n \n \n \nNote: \nThis is a description of the job as it is constituted at the date shown. It is the practice of Aran Insulation \nLimited to periodically examine Job Descriptions, update them and ensure that they relate to the job \nperformed, or to incorporate any proposed changes. The MD, and management team of Aran Insulation \nLimited will conduct this procedure in consultation with the post holder. \n \nIn these circumstances it will be the aim to reach agreement on reasonable changes, but if agreement is not \npossible, management reserves the right to make changes to your job description following consultation. \n \nAran Insulation Limited is fully committed to Equality, Diversity and Inclusion in all areas of our business \nincluding the appointment of staff. We ensure that applicants who meet our shortlisting criteria are invited \nto our recruitment process. \n \nDue to the nature of our work, we undertake criminal record checks with the Disclosure and Barring \nService for all successful applicants, and periodically thereafter. Should an applicant not satisfy our \nbackground checks any conditional offer of employment or employment may be withdrawn. Renewables Electrician / Electrical Installer Job Description 17/04/2025 Page 3 of 3 \n \nDescription prepared by: Craig Thomson (Director of Operations) \nDescription approved by: Mark Randall (Managing Director) Date: 17/04/2025 \n ",
+      "status": "open",
+      "created_at": "2026-07-25T13:23:45.825748",
+      "updated_at": "2026-07-25T13:24:47.293793",
+      "brief": {
+        "must_haves": [],
+        "nice_to_haves": [],
+        "deal_breakers": [],
+        "notes": ""
+      },
+      "pipeline": []
+    }
+  ],
+  "notifications": [],
+  "activity_log": [
+    {
+      "id": "719ba35b-8401-44fd-92b2-c4361fa4653f",
+      "text": "Parsed new role: renewables-electrical-installer-job-description-2.pdf",
+      "type": "role_created",
+      "ts": "2026-07-25T13:23:45.827112"
+    },
+    {
+      "id": "46a9eeb0-4c55-497e-bedc-a40eb433b04c",
+      "text": "Updated company profile",
+      "type": "onboarding",
+      "ts": "2026-07-25T13:19:42.197572"
+    }
+  ]
+}

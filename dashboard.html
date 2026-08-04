@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard — Train Garden</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Chivo:wght@700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      "on-primary": "#ffffff", background: "#f9f9ff", "surface-container": "#ededf3",
+      "surface-container-low": "#f3f3f9", "surface-container-lowest": "#ffffff",
+      "surface-container-high": "#e7e8ee", "surface-container-highest": "#e2e2e8",
+      "on-background": "#191c20", "on-surface": "#191c20", "on-surface-variant": "#3e4943",
+      outline: "#6e7a73", "outline-variant": "#bdc9c1", "secondary-container": "#b8c4fd",
+      "border-muted": "#E5E5E5", primary: "#005d42", "surface-alt": "#F8F8F8", error: "#ba1a1a"
+    },
+    fontFamily: { display: ["Chivo"], body: ["Inter"] },
+    spacing: { "stack-sm": "8px", "stack-md": "24px", "stack-lg": "48px", gutter: "24px",
+      "margin-desktop": "40px", "margin-mobile": "16px" }
+  }}
+};
+</script>
+<style>
+  * { border-radius: 0 !important; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-thumb { background: #005d42; }
+  @keyframes countUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .count-up { animation: countUp 0.5s ease-out forwards; }
+  .status-dot { width: 8px; height: 8px; background: #005d42; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+</style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex antialiased font-body">
+
+<!-- ══════════════════════════════════════════
+     SIDEBAR
+════════════════════════════════════════════ -->
+<nav class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low border-r border-outline-variant flex flex-col py-stack-md px-stack-sm z-50">
+  <!-- Brand -->
+  <div class="mb-stack-lg px-2">
+    <a href="/" class="font-display font-black text-xl text-primary tracking-tighter block">TRAIN GARDEN</a>
+    <p class="text-[10px] text-on-surface-variant uppercase tracking-widest mt-1">Intelligence Platform</p>
+  </div>
+
+  <!-- User badge -->
+  <div class="mb-stack-md px-2 border border-outline-variant p-3 bg-surface-container-highest flex items-center gap-3">
+    <div id="user-avatar" class="w-9 h-9 bg-primary flex items-center justify-center text-on-primary font-display font-bold text-sm flex-shrink-0">?</div>
+    <div class="min-w-0">
+      <p id="user-email-display" class="text-[10px] font-bold text-primary truncate uppercase">Loading…</p>
+      <div class="flex items-center gap-1 mt-1">
+        <div class="status-dot"></div>
+        <span class="text-[9px] text-on-surface-variant uppercase tracking-widest">Online</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <a href="/chat" class="w-full bg-primary text-on-primary text-[11px] font-bold uppercase tracking-widest py-3 px-4 border-2 border-primary hover:bg-background hover:text-primary transition-colors mb-stack-md flex items-center justify-center gap-2 text-center">
+    <span class="material-symbols-outlined text-[16px]">add</span> New Session
+  </a>
+
+  <!-- Nav links -->
+  <ul class="flex flex-col gap-1 flex-grow">
+    <li>
+      <a href="/dashboard" class="flex items-center gap-3 px-4 py-3 bg-primary text-on-primary text-[11px] font-bold uppercase tracking-widest">
+        <span class="material-symbols-outlined text-[18px]" style="font-variation-settings:'FILL' 1;">dashboard</span> Dashboard
+      </a>
+    </li>
+    <li>
+      <a href="/chat" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest">
+        <span class="material-symbols-outlined text-[18px]">psychology</span> Garden AI
+      </a>
+    </li>
+    <li>
+      <a href="/strategist" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest">
+        <span class="material-symbols-outlined text-[18px]">chat</span> Strategist
+      </a>
+    </li>
+    <li>
+      <a href="/roadmap" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest">
+        <span class="material-symbols-outlined text-[18px]">alt_route</span> Roadmaps
+      </a>
+    </li>
+    <li>
+      <a href="/chat" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest">
+        <span class="material-symbols-outlined text-[18px]">description</span> CV Analysis
+      </a>
+    </li>
+  </ul>
+
+  <!-- Footer links -->
+  <ul class="flex flex-col gap-1 border-t border-outline-variant pt-stack-sm">
+    <li>
+      <button onclick="logout()" class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-secondary-container hover:text-primary transition-colors text-[11px] uppercase tracking-widest w-full text-left">
+        <span class="material-symbols-outlined text-[18px]">logout</span> Sign Out
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════════ -->
+<main class="ml-64 w-full p-margin-desktop bg-background flex flex-col gap-16 min-h-screen">
+
+  <!-- Page header -->
+  <header class="border-b-2 border-primary pb-stack-sm flex justify-between items-end pt-stack-md">
+    <div>
+      <p class="text-[11px] text-on-surface-variant uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
+        <span class="w-4 h-px bg-primary inline-block"></span> Live Intelligence Feed
+      </p>
+      <h1 class="font-display font-black text-[48px] text-primary leading-none tracking-tighter uppercase">Intelligence<br/>Overview</h1>
+    </div>
+    <div class="flex gap-3 items-center">
+      <button onclick="refreshData()" class="border border-outline text-on-surface-variant px-4 py-2 text-[11px] uppercase tracking-widest hover:border-primary hover:text-primary transition-colors flex items-center gap-2">
+        <span class="material-symbols-outlined text-[16px]">refresh</span> Refresh
+      </button>
+      <div id="notifications-btn" class="w-10 h-10 bg-surface-container-high border border-outline flex items-center justify-center cursor-pointer hover:border-primary transition-colors">
+        <span class="material-symbols-outlined text-primary">notifications</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── STATS GRID ── -->
+  <section class="grid grid-cols-12 gap-gutter">
+    <!-- Total Reports -->
+    <article class="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container-low border border-outline p-stack-lg flex flex-col justify-between min-h-[260px]">
+      <h3 class="text-[11px] text-on-surface-variant uppercase tracking-widest border-b border-outline-variant pb-2">Total Reports Generated</h3>
+      <div class="mt-auto">
+        <span id="stat-reports" class="font-display font-black text-[80px] text-primary tracking-tighter block leading-none count-up">—</span>
+        <p id="stat-reports-sub" class="text-[13px] text-on-surface-variant mt-3">Loading…</p>
+      </div>
+    </article>
+
+    <!-- Sessions -->
+    <article class="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container-low border border-outline p-stack-lg flex flex-col justify-between min-h-[260px]">
+      <h3 class="text-[11px] text-on-surface-variant uppercase tracking-widest border-b border-outline-variant pb-2">Pinned Reports</h3>
+      <div class="mt-auto">
+        <span id="stat-pinned" class="font-display font-black text-[80px] text-primary tracking-tighter block leading-none">—</span>
+        <p class="text-[13px] text-on-surface-variant mt-3">Saved to vault</p>
+      </div>
+    </article>
+
+    <!-- Action CTA -->
+    <article class="col-span-12 lg:col-span-4 bg-primary p-stack-lg flex flex-col justify-between min-h-[260px]">
+      <h3 class="text-[11px] text-on-primary opacity-70 uppercase tracking-widest border-b border-on-primary border-opacity-20 pb-2">Next Recommended Action</h3>
+      <div class="mt-auto">
+        <h4 class="text-xl text-on-primary font-bold leading-tight mb-4">Scan your CV against a new role and generate a 30-day roadmap.</h4>
+        <a href="/chat" class="w-full block bg-background text-primary text-[11px] font-bold uppercase tracking-widest py-3 px-4 hover:bg-secondary-container transition-colors text-center">
+          Open Garden AI →
+        </a>
+      </div>
+    </article>
+  </section>
+
+  <!-- ── RECENT ACTIVITY ── -->
+  <section class="border-t border-outline-variant pt-stack-lg">
+    <div class="flex justify-between items-baseline mb-stack-lg">
+      <h2 class="font-display font-black text-2xl text-primary uppercase tracking-tighter">Recent Activity</h2>
+      <span class="text-[11px] text-on-surface-variant uppercase tracking-widest" id="activity-count">Loading…</span>
+    </div>
+    <div id="activity-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Injected by JS -->
+      <div class="border border-outline-variant p-stack-md animate-pulse">
+        <div class="h-3 bg-surface-container w-1/2 mb-3"></div>
+        <div class="h-4 bg-surface-container w-full mb-2"></div>
+        <div class="h-3 bg-surface-container w-2/3"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REPORT VAULT ── -->
+  <section class="border-t border-outline-variant pt-stack-lg mb-16">
+    <div class="flex justify-between items-baseline mb-stack-lg">
+      <h2 class="font-display font-black text-2xl text-primary uppercase tracking-tighter">Report Vault</h2>
+      <a href="/chat" class="text-[11px] text-primary uppercase tracking-widest hover:underline flex items-center gap-1">
+        New report <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+      </a>
+    </div>
+
+    <!-- Column headers -->
+    <div class="grid grid-cols-12 gap-4 px-4 pb-2 border-b-2 border-primary">
+      <div class="col-span-5 text-[11px] text-on-surface-variant uppercase tracking-widest">Report</div>
+      <div class="col-span-3 text-[11px] text-on-surface-variant uppercase tracking-widest">Date</div>
+      <div class="col-span-2 text-[11px] text-on-surface-variant uppercase tracking-widest">Status</div>
+      <div class="col-span-2 text-[11px] text-on-surface-variant uppercase tracking-widest text-right">Actions</div>
+    </div>
+
+    <!-- Vault list — injected by JS -->
+    <div id="vault-list" class="flex flex-col border-t border-primary">
+      <div class="py-8 text-center text-on-surface-variant text-[13px] uppercase tracking-widest">
+        Loading reports…
+      </div>
+    </div>
+
+    <!-- Empty state (shown when no reports) -->
+    <div id="vault-empty" class="hidden py-16 text-center border border-dashed border-outline">
+      <span class="material-symbols-outlined text-[48px] text-outline mb-4 block">folder_open</span>
+      <p class="text-[13px] text-on-surface-variant uppercase tracking-widest mb-4">No reports yet.</p>
+      <a href="/chat" class="bg-primary text-on-primary text-[11px] uppercase tracking-widest px-6 py-3 inline-block hover:bg-surface-container-highest hover:text-primary transition-colors">
+        Start Your First Analysis
+      </a>
+    </div>
+  </section>
+</main>
+
+<script>
+// ── Auth guard ────────────────────────────────
+const userId = sessionStorage.getItem('user_id');
+if (!userId) { window.location.href = '/'; }
+
+// ── Hydrate user UI ───────────────────────────
+const email = sessionStorage.getItem('user_email') || '';
+const initials = email ? email[0].toUpperCase() : 'U';
+document.getElementById('user-avatar').textContent = initials;
+document.getElementById('user-email-display').textContent = email || userId.substring(0, 12) + '…';
+
+// ── Load dashboard ────────────────────────────
+async function loadDashboard() {
+  await Promise.all([loadStats(), loadHistory()]);
+}
+
+async function loadStats() {
+  try {
+    const res = await fetch(`/api/dashboard-stats?user_id=${userId}`);
+    const data = await res.json();
+    document.getElementById('stat-reports').textContent = data.total_reports ?? 0;
+    const sub = data.total_reports > 0
+      ? `${data.total_reports} report${data.total_reports !== 1 ? 's' : ''} in vault`
+      : 'Generate your first report';
+    document.getElementById('stat-reports-sub').textContent = sub;
+  } catch (e) {
+    document.getElementById('stat-reports').textContent = '—';
+    document.getElementById('stat-reports-sub').textContent = 'Could not load stats';
+  }
+}
+
+async function loadHistory() {
+  try {
+    const res = await fetch(`/api/dashboard-stats?user_id=${userId}`);
+const data = await res.json();
+const history = data.recent_activity; // Use this array to populate your list!
+
+    // Pinned count
+    const pinned = history.filter(h => h.pinned).length;
+    document.getElementById('stat-pinned').textContent = pinned;
+
+    // Activity count
+    document.getElementById('activity-count').textContent =
+      `${history.length} total item${history.length !== 1 ? 's' : ''}`;
+
+    // Activity grid (3 most recent)
+    const activityGrid = document.getElementById('activity-grid');
+    const recent = history.slice(0, 3);
+    if (recent.length === 0) {
+      activityGrid.innerHTML = '<div class="col-span-3 text-center text-on-surface-variant text-[13px] uppercase tracking-widest py-8">No recent activity</div>';
+    } else {
+      activityGrid.innerHTML = recent.map(item => `
+        <a href="${item.path || '#'}" class="border border-outline-variant p-stack-md hover:border-primary transition-colors group block">
+          <p class="text-[10px] text-on-surface-variant uppercase tracking-widest mb-2">${item.timestamp || ''}</p>
+          <h4 class="font-bold text-primary text-[14px] group-hover:underline">${item.name || 'Untitled'}</h4>
+          ${item.pinned ? '<span class="text-[10px] text-primary uppercase tracking-widest mt-2 inline-block">📌 Pinned</span>' : ''}
+        </a>
+      `).join('');
+    }
+
+    // Vault list (all)
+    renderVault(history);
+  } catch (e) {
+    document.getElementById('vault-list').innerHTML =
+      '<div class="py-8 text-center text-red-600 text-[13px] uppercase">Error loading data. Is the backend running?</div>';
+  }
+}
+
+function renderVault(history) {
+  const list = document.getElementById('vault-list');
+  const empty = document.getElementById('vault-empty');
+
+  if (history.length === 0) {
+    list.innerHTML = '';
+    empty.classList.remove('hidden');
+    return;
+  }
+  empty.classList.add('hidden');
+
+  // Sort: pinned first
+  const sorted = [...history].sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
+
+  list.innerHTML = sorted.map((item, i) => `
+    <div class="grid grid-cols-12 gap-4 items-center py-4 border-b border-border-muted hover:bg-surface-container-low transition-colors px-4 -mx-4 group" data-path="${item.path || ''}">
+      <div class="col-span-5">
+        <h4 class="font-bold text-primary text-[15px] flex items-center gap-2">
+          ${item.pinned ? '<span class="text-[12px]">📌</span>' : ''}
+          ${item.name || 'Untitled Report'}
+        </h4>
+      </div>
+      <div class="col-span-3">
+        <span class="text-[12px] text-on-surface-variant">${item.timestamp || '—'}</span>
+      </div>
+      <div class="col-span-2">
+        <span class="text-[11px] ${item.pinned ? 'bg-primary text-on-primary' : 'border border-outline text-on-surface-variant'} px-2 py-1 uppercase tracking-widest">
+          ${item.pinned ? 'Pinned' : 'Saved'}
+        </span>
+      </div>
+      <div class="col-span-2 flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+        ${item.path
+          ? `<a href="${item.path}" class="border border-primary text-primary px-3 py-1 text-[11px] uppercase hover:bg-primary hover:text-on-primary transition-colors">View</a>`
+          : ''
+        }
+        <button onclick="togglePin('${item.path || item.id || ''}', ${i})" class="border border-outline text-on-surface-variant px-3 py-1 text-[11px] uppercase hover:border-primary hover:text-primary transition-colors" title="${item.pinned ? 'Unpin' : 'Pin'}">
+  ${item.pinned ? 'Unpin' : 'Pin'}
+</button>
+        <button onclick="deleteItem('${item.id || item.path || ''}', ${i})" class="border border-red-300 text-red-600 px-2 py-1 text-[11px] uppercase hover:bg-red-600 hover:text-white transition-colors" title="Delete">
+  <span class="material-symbols-outlined text-[14px]">delete</span>
+</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+async function togglePin(path, idx) {
+  try {
+    await fetch('/api/manage-history', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: userId, action: 'pin', path })
+    });
+    await loadHistory();
+  } catch (e) {
+    console.error('Pin error:', e);
+  }
+}
+
+async function deleteItem(path, idx) {
+  if (!confirm('Delete this report from your vault?')) return;
+  try {
+    await fetch('/api/manage-history', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id: userId, action: 'delete', path })
+    });
+    await loadHistory();
+  } catch (e) {
+    console.error('Delete error:', e);
+  }
+}
+
+function refreshData() { loadDashboard(); }
+
+function logout() {
+  sessionStorage.clear();
+  window.location.href = '/';
+}
+
+// ── Init ──────────────────────────────────────
+window.addEventListener('DOMContentLoaded', loadDashboard);
+</script>
+</body>
+</html>
